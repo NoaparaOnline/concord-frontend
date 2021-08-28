@@ -1,0 +1,12 @@
+.cards {
+  margin-bottom: 7rem !important;
+}
+
+.evenspace{
+    display: flex;
+    justify-content:space-between;
+ }
+
+.maxminHeight{
+    max-height: '170px';
+}
