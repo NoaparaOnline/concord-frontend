@@ -6,53 +6,56 @@ import 'font-awesome/css/font-awesome.min.css';
 
 const Footer = () => {
   return (
-    <footer className="page-footer font-small blue pt-4 backg">
+    <div>
+    <div className="backg">
+   <div className="container">
+<footer className="page-footer font-small blue pt-4 ">
       <div className="container-fluid text-center text-md-left">
         <div className="row">
           <div className="col-md-3 mb-md-0 mb-3 centcol">
             <h3 className="fhead  centcolul">Quick Links</h3>
             <ul className="list-unstyled centcolul">
               <li>
-                <Router>
+              
                   <Link to="/" className="linkFoot">
                     Home
                   </Link>
-                </Router>
+                
               </li>
               <li>
-                <Router>
+              
                   <Link to="/" className="linkFoot">
                     About Us
                   </Link>
-                </Router>
+                
               </li>
               <li>
-                <Router>
+              
                   <Link to="/" className="linkFoot">
                     Our Facility
                   </Link>
-                </Router>
+                
               </li>
               <li>
-                <Router>
+              
                   <Link to="/" className="linkFoot">
                     Tele Medicine
                   </Link>
-                </Router>
+                
               </li>
               <li>
-                <Router>
+              
                   <Link to="/" className="linkFoot">
                     Media
                   </Link>
-                </Router>
+                
               </li>
               <li>
-                <Router>
+              
                   <Link to="/" className="linkFoot">
                     Contact Us
                   </Link>
-                </Router>
+                
               </li>
             </ul>
           </div>
@@ -61,32 +64,32 @@ const Footer = () => {
             <h3 className="fhead centcolul fmar">Our Products</h3>
             <ul className="list-unstyled centcolul">
               <li>
-                <Router>
+              
                   <Link to="/" className="linkFoot">
                     By Trade Name
                   </Link>
-                </Router>
+                
               </li>
               <li>
-                <Router>
+              
                   <Link to="/" className="linkFoot">
                     By Generic Name
                   </Link>
-                </Router>
+                
               </li>
               <li>
-                <Router>
+              
                   <Link to="/" className="linkFoot">
                     By Therapeutic Class
                   </Link>
-                </Router>
+                
               </li>
               <li>
-                <Router>
+              
                   <Link to="/" className="linkFoot">
                     First Class Launching
                   </Link>
-                </Router>
+                
               </li>
             </ul>
           </div>
@@ -138,20 +141,20 @@ const Footer = () => {
                 title="Click to see detail of visits and stats for this site"
               /> */}
                <li >
-               <Router>
+              
                   <Link to="/" className="linkFoot">
                   <i className="fas fa-phone"></i>
                     Enquiry
                   </Link>
-                </Router>
+                
               </li>
               <li >
-              <Router>
+            
                   <Link to="/" className="linkFoot">
                   <i className="fas fa-globe"></i>
                     Distribution Center
                   </Link>
-                </Router>
+                
               </li>
               </ul>
           
@@ -159,25 +162,40 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="FooterlastContainer ">
-        <div
-          className="container "
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
-          <p className="FooterlastContainercolor m-1">
-            © Copyright 2021. All Right reserved.
-          </p>
-          <p className="FooterlastContainercolor m-1">
-            Designed and Developed by{" "}
-            <Router>
-              <Link to="#" style={{ textDecoration: "none" }}>
-                <span style={{ color: "#fff" }}>Ripple Intra</span>
-              </Link>
-            </Router>
-          </p>
-        </div>
-      </div>
+
+    
+
+
+
+
     </footer>
+    </div>
+    </div>
+
+     
+<div className="FooterlastContainer ">
+  <div
+    className="container"
+    style={{ display: "flex", justifyContent: "space-between" }}
+  >
+    <p className="FooterlastContainercolor m-1">
+      © Copyright 2021. All Right reserved.
+    </p>
+    <p className="FooterlastContainercolor m-1">
+      Designed and Developed by{" "}
+    
+        <Link to="#" style={{ textDecoration: "none" }}>
+          <span style={{ color: "#fff" }}>Ripple Intra</span>
+        </Link>
+      
+    </p>
+  </div>
+</div>
+
+</div>
+
+
+    
   );
 };
 

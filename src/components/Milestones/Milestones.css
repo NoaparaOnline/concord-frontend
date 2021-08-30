@@ -1,6 +1,7 @@
 .vl {
+    font-size: 8vw;
     border-left: 1px solid black;
-  }
+}
 .colrbck{
     background-color: #f3f3f3;
 }
@@ -30,5 +31,14 @@
     color: #0066b3!important;
     text-decoration: none;
     /* font-weight: 550 !important; */
+    
+}
 
+.Typography_text{
+    font-size:27px;
+    font-weight: 500;
+    min-width: 1vw;
+}
+.Typography_year{
+    font-size:20px;
 }

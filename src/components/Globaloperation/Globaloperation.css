@@ -1,0 +1,20 @@
+.colrry{
+    color:#fff;
+}
+.colr_btn{
+    color:#0066b3;
+    width:80%;
+}
+.card_custom{
+    border-radius: 5%!important;
+    background: linear-gradient(to top, #f3f3f3  80%,  #0066b3 20%)!important;   
+}
+
+.text-title{
+    font-size: 16px;
+    color:#000000;
+}
+
+.Typography_styling{
+    font-style: italic;
+}

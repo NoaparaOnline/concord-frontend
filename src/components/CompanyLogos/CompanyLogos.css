@@ -1,3 +1,10 @@
 .colrbck{
     background-color: #f3f3f3;
 }
+
+.img_height_width{
+    max-width:130px;
+    max-height:130px;
+    min-height:auto;
+    min-width: auto;
+}

@@ -56,7 +56,7 @@ const Cards = () => {
                 <p className="text-start">{ob.text}</p>
           
              
-                  <Link to={ob.link} style={{textDecoration:'none',fontWeight:550,marginTop: 0}} className="dd"><span>Read Me</span></Link>
+                  <Link to={ob.link} style={{textDecoration:'none',fontWeight:500,marginTop: 0, height:'45px' ,width:'130px'}} className="dd"><span>Read Me</span></Link>
                 </div>
               </div>
             );

@@ -23,7 +23,7 @@ const card = [
     {
         title:'ConziSyrup',
         text1:'Vitamin & Minerals',
-        text2:'Zinc Sulphate 10 mg/5ml',
+        text2:'Zinc 10 mg/5ml',
         img:[{
             imgf:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Conzi-100-ml.jpg',
             imge:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/ban-Conzi-100-ml.jpg',
@@ -33,7 +33,7 @@ const card = [
     {
         title:'Dopagut',
         text1:'Suspension',
-        text2:'Gastroprokinetic Agent ',
+        text2:'Gastroprokinetic',
         img:[{
             imgf:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Dopagut-60-ml.jpg',
             imge:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/ban-Dopagut-60-ml.jpg',
@@ -44,7 +44,7 @@ const card = [
     {
         title:'Unilor 5 mg Tablet',
         text1:'Anti-histamine',
-        text2:'Desloratadine 5 mg',
+        text2:'',
         img:[{
             imgf:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/eng-Anti-histamine.jpg',
             imge:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Anti-histamine.jpg',

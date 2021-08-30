@@ -1,7 +1,6 @@
 import React from 'react'
-import third from '../../assets/warehouse-1.jpg';
 import './FlipCard.css'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
@@ -12,10 +11,10 @@ const FlipCard = ({card}) => {
   
   
   return (
-<div>
+<div >
       
       
-      <div className="flip-card" style={{width:'232px'}}>
+      <div className="flip-card">
   <div className="flip-card-inner">
     <div className="flip-card-front">
     
@@ -28,12 +27,10 @@ const FlipCard = ({card}) => {
         </div>
         {card.img.map(ob => {
             return (
-              <img src={ob.imgf} className="card-img-top p-4" alt="..." />
+              <img src={ob.imgf} className="card-img-top p-3" alt="..." />
               );
             })}
-          <Router>
           <Link to='/' className="btn btn-primary rounded-pill mx-5 mb-4">{btn}</Link>
-          </Router>
     </div>
 
 
@@ -51,12 +48,10 @@ const FlipCard = ({card}) => {
         </div>
         {card.img.map(ob => {
             return (
-              <img src={ob.imge} className="card-img-top p-4" alt="..." />
+              <img src={ob.imge} className="card-img-top p-3" alt="..." />
               );
             })}
-          <Router>
           <Link to='/' className="btn btn-primary rounded-pill mx-5 mb-4">{btn}</Link>
-          </Router>
     </div>
 
 

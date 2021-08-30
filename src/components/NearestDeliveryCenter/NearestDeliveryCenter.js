@@ -26,7 +26,7 @@ const NearestDeliveryCenter = ({heading}) => {
 
             </div>
             <div className="col-md-6 my-5" >
-            <video autoplay loop width="520" height="350" controls>
+            <video controls autoplay muted loop width="100%">
             <source src="https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/video.mp4" type="video/mp4"/>
             Your browser does not support the video tag.
             </video>             
