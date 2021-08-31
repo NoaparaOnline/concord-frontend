@@ -14,3 +14,12 @@
 .custome-card-test{
   margin-top: 100px !important;
 }
+
+
+@media (max-width: 570px) 
+{
+  .custome_xs_screen{
+    display:block !important;
+  }
+  
+}

@@ -15,6 +15,7 @@ import {
   TextSectionContainer,
   Globaloperation,
 } from "./components";
+import SingleCard from "./components/FlipCard/SingleCard";
 
 
 import card from "./components/FlipCardsHome/CardData";
@@ -57,6 +58,7 @@ function App() {
       <NearestDeliveryCenter heading={label} />
 
       <CompanyLogos/>
+
 
       <Footer />
     </div>

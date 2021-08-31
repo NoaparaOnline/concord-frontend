@@ -1,0 +1,15 @@
+.flipcard_custom {
+    background: linear-gradient(to top, #f3f3f3 70%, #0066b3 20%) !important;
+  }
+  
+  
+  .flip-card_height{
+    height: 300px;
+    width: 100%;
+  }
+
+
+
+  .cardstyle{
+    background: linear-gradient(to top, #f3f3f3 70%, #0066b3 20%) !important;
+  }
