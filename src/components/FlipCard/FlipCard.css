@@ -1,5 +1,4 @@
 .flip-card {
-    width: 190px;
     height: 300px;
   }
   
@@ -21,4 +20,8 @@
   
   .flip-card-back {
     transform: rotateY(180deg);
+  }
+
+  .flipcard_custom{
+    background: linear-gradient(to top, #f3f3f3  70%,  #0066b3 20%)!important;   
   }

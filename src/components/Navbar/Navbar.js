@@ -31,9 +31,12 @@ const Navbars = () => {
         </li>
      <div className="col-sm-3">
      <div className="input-group my-1">
-  <input style={{height:'28px' ,borderRadius:0,borderColor:'none'}} type="text" className="form-control " placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+  <input style={{height:'28px' ,borderRadius:0,borderColor:'none'}} type="text" className="form-control " placeholder="Enter here" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
   <div className="input-group-append">
-    <span style={{height:'28px' ,borderRadius:0}} className="input-group-text" id="basic-addon2">@</span>
+          
+    <span style={{height:'28px' ,borderRadius:0}} className="input-group-text" id="basic-addon2">
+    <i class="fa fa-search"></i>
+    </span>
   </div>
 </div>
      </div>

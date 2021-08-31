@@ -76,7 +76,7 @@ const Slideshow = () => {
                   <div col-lg-12 col-xs-6 col-md-6 col-sm-6>
                    
                       <img className="spacing img-fluid " src={each.logo} />
-                      <span className="mb-2 ">{each.title}</span>
+                      <span className="mb-2">{each.title}</span>
                   </div>
                 </div>
                    
@@ -84,8 +84,8 @@ const Slideshow = () => {
 
                     <p className={index === 0 ? `typograpy_title0` : `typograpy_title`}> {each.text}</p>
                   </div>
-                  <Link to='/' className="btn btn-primary rounded-pill me-auto px-5 py-3 typograpy_btn SliderButton-tb" >
-                    {each.btn}
+                  <Link to='/' className="btn btn-primary rounded-pill me-auto pt-3 pb-3  typograpy_btn " >
+                    <span btn_text_typography>{each.btn}</span>
                   </Link>
                 </div>
               </div>

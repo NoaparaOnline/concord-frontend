@@ -4,7 +4,7 @@ const Heading = ({heading}) => {
  
     return (
         <div>
-            <h2 className="siz" style={{color:'#0066b3',padding:'20px'}}>{heading}</h2>
+            <h2 className="siz text-center" style={{color:'#0066b3',padding:'20px'}}>{heading}</h2>
         </div>
     )
 }

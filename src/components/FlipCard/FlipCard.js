@@ -19,11 +19,11 @@ const FlipCard = ({card}) => {
     <div className="flip-card-front">
     
     
-    <div className="card" >
+    <div className="card flipcard_custom" >
         <div className="card-body">
-          <h5 className="card-title">{title}</h5>
-          <h6 className="card-title">{text1}</h6>
-          <h6 className="card-title">{text2}</h6>
+          <h5 className="card-title text-white">{title}</h5>
+          <h6 className="card-title text-white">{text1}</h6>
+          <h6 className="card-title text-white">{text2}</h6>
         </div>
         {card.img.map(ob => {
             return (
@@ -40,11 +40,11 @@ const FlipCard = ({card}) => {
     <div className="flip-card-back">
 
 
-    <div className="card"  >
+    <div className="card flipcard_custom">
         <div className="card-body">
-          <h5 className="card-title">{title}</h5>
-          <h6 className="card-title">{text1}</h6>
-          <h6 className="card-title">{text2}</h6>
+          <h5 className="card-title text-white">{title}</h5>
+          <h6 className="card-title text-white">{text1}</h6>
+          <h6 className="card-title text-white">{text2}</h6>
         </div>
         {card.img.map(ob => {
             return (

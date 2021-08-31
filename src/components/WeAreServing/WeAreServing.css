@@ -56,3 +56,9 @@
     left: 0;
   }
 }
+
+.container_inside{
+  height:270px;
+  position:relative;
+  width:300px;
+}

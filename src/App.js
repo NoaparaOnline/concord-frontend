@@ -45,11 +45,12 @@ function App() {
 
       <Heading heading={label.Our_Affiliates} />
       <Affiliates />
-
+      <Globaloperation/>
       <Heading heading={label.HeadOurProduct} />
       <HomeCards card={card} />
 
-      <Globaloperation/>
+
+  
 
       <Milestones heading={label} />
 

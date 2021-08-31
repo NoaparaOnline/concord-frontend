@@ -8,21 +8,12 @@ const NearestDeliveryCenter = ({heading}) => {
 
         <div className="container">
         <div className="row">
-            <div className="col-md-6 my-5 text-left">
+            <div className="col-md-6 my-2 text-left">
              <Heading heading={heading.NearestDeliveryCenter}/>
              <p>We serve the whole nation by covering entire Bangladesh. You can track the nearest delivery center simply by selecting the area</p>
-             <p>Select Area:</p><div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-             <p>For more details please call at our TOLLFREE number.</p>
-             <i className="fas fa-phone"></i><p>+8801991145006</p>
+             <p>Select Area:</p><span></span>
+             <p className="typography_text">For more details please call at our TOLLFREE number.</p>
+             <span className="ms-4"><i className="fa fa-phone"></i></span><span className="typography_text">+8801991145006</span>
 
             </div>
             <div className="col-md-6 my-5" >

@@ -10,7 +10,7 @@ const HomeCards = ({card}) => {
             
         {card.map((ob,index) => {
             return (
-                <div className={index === 0 ? `col-lg-2 offset-lg-1 col-md-4  col-sm-6 col-xs-6  mx-auto  mt-5` : `col-lg-2 col-md-4  col-sm-6 col-xs-6  mx-auto mt-5`}><FlipCard card={ob}/></div>
+                <div className={index === 0 ? `col-lg-2 offset-lg-1 col-md-4  col-sm-6 col-xs-6  mx-3 mt-5` : `col-lg-2 col-md-4  col-sm-6 col-xs-6 mx-3  mt-5`}><FlipCard card={ob}/></div>
                 );
         })} 
         </div>

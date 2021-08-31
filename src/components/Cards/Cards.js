@@ -40,7 +40,7 @@ const Cards = () => {
              <div className="row" style={{padding:'10px'}}>
         {cards.map(ob => {
             return (
-                    <div className="row col-sm-6 mx-auto"  style={{display:'flex',flexDirection:'row' ,padding:'10px' }}>
+                    <div className="row col-sm-6 col-md-6 mx-auto"  style={{display:'flex',flexDirection:'row' ,padding:'10px' }}>
                
                 <div className="col-sm-6 ">
                 <img src={ob.imageURL} className="img-fluid"/>
