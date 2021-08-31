@@ -41,17 +41,17 @@ const card = [
         btn:'Read More',
 
     },
-    {
-        title:'Unilor 5 mg Tablet',
-        text1:'Anti-histamine',
-        text2:'',
-        img:[{
-            imgf:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/eng-Anti-histamine.jpg',
-            imge:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Anti-histamine.jpg',
-        }],
-        btn:'Read More',
+    // {
+    //     title:'Unilor 5 mg Tablet',
+    //     text1:'Anti-histamine',
+    //     text2:'',
+    //     img:[{
+    //         imgf:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/eng-Anti-histamine.jpg',
+    //         imge:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Anti-histamine.jpg',
+    //     }],
+    //     btn:'Read More',
 
-    },
+    // },
 
 ];
 export default card;

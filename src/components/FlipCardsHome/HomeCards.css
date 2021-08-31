@@ -11,3 +11,6 @@
 .maxminHeight{
     max-height: '170px';
 }
+.custome-card-test{
+  margin-top: 100px !important;
+}
