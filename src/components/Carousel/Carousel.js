@@ -1,9 +1,5 @@
 import React from "react";
-import first from "../../assets/fac-QC.jpg";
 import Slider from "react-slick";
-import second from "../../assets/fac-RD.jpg";
-import third from "../../assets/warehouse-1.jpg";
-import fourth from "../../assets/fac-production.jpg";
 import whitebglogo from "../../assets/concordlogo.png";
 import carousel1 from "../../assets/carousel1.jpg";
 import carousel2 from "../../assets/carousel2.jpg";
@@ -50,9 +46,7 @@ const Slideshow = () => {
     cssEase:'ease-in-out',
     loop: true,
   };
-  const zoomInProperties = {
-    scale: 5.6,
-  };
+  
   return (
     <div >
       <Slider {...autoInProperties}>
@@ -61,6 +55,7 @@ const Slideshow = () => {
             <div className="slider-wrapper">
               <div className="slider zoom-in-zoom-out">
                 <img
+                  alt=""
                   className="img-fluid"
                   style={{ objectFit: "cover", height: '600px', width: "100%" }}
                   src={each.img}
@@ -72,10 +67,10 @@ const Slideshow = () => {
                   <div className="caption mb-5 ">
                    
                     <div className="d-flex align-baseline typography_Heading">
-                  <div row>
-                  <div col-lg-12 col-xs-6 col-md-6 col-sm-6>
+                  <div>
+                  <div >
                    
-                      <img className="spacing img-fluid " src={each.logo} />
+                      <img alt="" className="spacing img-fluid " src={each.logo} />
                       <span className="mb-2">{each.title}</span>
                   </div>
                 </div>
@@ -85,7 +80,7 @@ const Slideshow = () => {
                     <p className={index === 0 ? `typograpy_title0` : `typograpy_title`}> {each.text}</p>
                   </div>
                   <Link to='/' className="btn btn-primary rounded-pill me-auto pt-3 pb-3  typograpy_btn " >
-                    <span btn_text_typography>{each.btn}</span>
+                    <span className="btn_text_typography">{each.btn}</span>
                   </Link>
                 </div>
               </div>

@@ -97,25 +97,25 @@ const Footer = () => {
               </Link>
             
           </li>
-          <ul class="list-unstyled list-inline mt-3">
-          <li class="list-inline-item">
-        <a href="#!" class="sbtn btn-large mx-1 text-white" title="Facebook">
-          <i class="fa fa-facebook-square fa-2x "></i>
+          <ul className="list-unstyled list-inline mt-3">
+          <li className="list-inline-item">
+        <a href="#!" className="sbtn btn-large mx-1 text-white" title="Facebook">
+          <i className="fa fa-facebook-square fa-2x "></i>
         </a>
       </li>
-      <li class="list-inline-item">
-        <a href="#!" class="sbtn btn-large mx-1 text-white" title="Linkedin">
-          <i class="fa fa-linkedin fa-2x"></i>
+      <li className="list-inline-item">
+        <a href="#!" className="sbtn btn-large mx-1 text-white" title="Linkedin">
+          <i className="fa fa-linkedin fa-2x"></i>
         </a>
       </li>
-      <li class="list-inline-item">
-        <a href="#!" class="sbtn btn-large mx-1 text-white" title="Twitter">
-          <i class="fa fa-twitter-square fa-2x"></i>
+      <li className="list-inline-item">
+        <a href="#!" className="sbtn btn-large mx-1 text-white" title="Twitter">
+          <i className="fa fa-twitter-square fa-2x"></i>
         </a>
       </li>
-      <li class="list-inline-item">
-        <a href="#!" class="sbtn btn-large mx-1 text-white" title="Youtube">
-          <i class="fa fa-youtube-square fa-2x"></i>
+      <li className="list-inline-item">
+        <a href="#!" className="sbtn btn-large mx-1 text-white" title="Youtube">
+          <i className="fa fa-youtube-square fa-2x"></i>
         </a>
       </li>
       </ul>
@@ -126,9 +126,9 @@ const Footer = () => {
                   <h5 className="text-uppercase fhead">Subscribe for Newsletter</h5>
 
 
-                  <div class="form-row">
-                                        <div class="col dk-footer-form">
-                                            <input type="email" class="form-control" placeholder="Your Email..."/>
+                  <div className="form-row">
+                                        <div className="col dk-footer-form">
+                                            <input type="email" className="form-control" placeholder="Your Email..."/>
                                             <button type="submit">
                                                 SUBSCRIBE
                                             </button>
@@ -141,6 +141,7 @@ const Footer = () => {
             <Link to='/' >
              
               <img
+              alt=""
                 loading="lazy"
                 src={
                   "https://www.ri-demo.co/concord/final/wp-content/uploads/2019/06/ios.png"
@@ -153,6 +154,7 @@ const Footer = () => {
 
               <Link to='/' >
               <img
+              alt=""
                 loading="lazy"
                 src={
                   "https://www.ri-demo.co/concord/final/wp-content/uploads/2019/06/android.png"

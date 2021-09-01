@@ -1,34 +1,44 @@
 .flip-card {
-  height: 300px;
-
+    height: 400px;
+    
 }
 
 .flip-card-inner {
-  position: relative;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
+    position: relative;
+    height: 100%;
+    width: 105%;
+    text-align: center;
+    transition: transform 0.1s;
+   
+    transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    transition: 1s;
 }
 
 .flip-card-front,
 .flip-card-back {
-  position: absolute;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 .flip-card-back {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .flipcard_custom {
-  background: linear-gradient(to top, #f3f3f3 70%, #0066b3 20%) !important;
+    background: linear-gradient(350deg, #f3f3f3 70%, #0066b3 30%) !important;
+    /* Measure Big Card Height and Assign to Min Height then all card will be same height  */
+    min-height: 420px !important;
+    border-radius: 4% !important;
+    border-bottom: none !important;
 }
 
-
-.flip-card_height{
-  height: 300px;
-  width: 100%;
-  background: linear-gradient(to top, #f3f3f3 70%, #0066b3 20%) !important;
-}
+.colr_btn:hover {
+    background: #fff !important;
+    color: #0066b3 !important;
+    border: 1px solid transparent !important;
+  }

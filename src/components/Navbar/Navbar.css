@@ -15,6 +15,16 @@
 .firstnav:hover {
     color: #ea4a34 !important; 
     }
+
+
+.secnav {
+        color: rgba(0,0,0,.55) !important; 
+        }
+.firstnav{
+        color: rgba(0,0,0,.55) !important; 
+        }
+
+
 .dropdown-toggle::after {
         display: none !important;
 }

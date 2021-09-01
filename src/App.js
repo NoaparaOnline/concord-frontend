@@ -15,7 +15,6 @@ import {
   TextSectionContainer,
   Globaloperation,
 } from "./components";
-import SingleCard from "./components/FlipCard/SingleCard";
 
 
 import card from "./components/FlipCardsHome/CardData";
@@ -26,10 +25,7 @@ function App() {
     HeadOurProduct: "Our Products",
     Milestones: "Milestones",
     Our_Affiliates: "Our Affiliates",
-    NearestDeliveryCenter: "Nearest Delivery Center",
   };
-  console.log(card[0].img.imge);
-  // const {title,text1,text2,text3,btn,img} = card;
 
   return (
     <div className="App">
@@ -49,9 +45,6 @@ function App() {
       <Globaloperation/>
       <Heading heading={label.HeadOurProduct} />
       <HomeCards card={card} />
-
-
-  
 
       <Milestones heading={label} />
 

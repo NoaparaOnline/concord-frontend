@@ -51,11 +51,12 @@
   }
   .card_custom {
     border-radius: 5% !important;
+    min-height: 500px !important;
     background: linear-gradient(to top, #f3f3f3 80%, #0066b3 20%) !important;
     border: none !important;
   }
   .card-img-top {
-    margin-top: -1%;
+    margin-top: 4%;
   }
   .text-title {
     font-size: 16px;
@@ -104,3 +105,21 @@
   .test-subHead {
     text-decoration: 2px underline;
   }
+
+
+
+
+  @media (max-width: 575.98px) 
+{
+  .test-heading {
+    font-weight: 600 !important;
+    font-size: 18px;
+  }
+ }
+@media (max-width: 767.98px)
+{ 
+  .test-heading {
+    font-weight: 600 !important;
+    font-size: 28px;
+  }
+}

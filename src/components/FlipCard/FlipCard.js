@@ -16,12 +16,12 @@ const FlipCard = ({ card }) => {
                 <h6 className="card-title text-white">{text1}</h6>
                 <h6 className="card-title text-white">{text2}</h6>
               </div>
-              {card.img.map((ob) => {
+              {card.img.map((ob,index) => {
                 return (
-                  <img src={ob.imgf} className="card-img-top p-3" alt="..." />
+                  <img key={ob.id} src={ob.imgf} className="card-img-top p-3" alt="..." />
                 );
               })}
-              <Link to="/" className="btn btn-primary rounded-pill mx-5 mb-4">
+              <Link to="/" className="btn btn-primary rounded-pill colr_btn me-4 mb-4">
                 {btn}
               </Link>
             </div>
@@ -34,12 +34,12 @@ const FlipCard = ({ card }) => {
                 <h6 className="card-title text-white">{text1}</h6>
                 <h6 className="card-title text-white">{text2}</h6>
               </div>
-              {card.img.map((ob) => {
+              {card.img.map((ob,index) => {
                 return (
-                  <img src={ob.imge} className="card-img-top p-3" alt="..." />
+                  <img key={ob.id} src={ob.imge} className="card-img-top p-3" alt="..." />
                 );
               })}
-              <Link to="/" className="btn btn-primary rounded-pill mx-5 mb-4">
+              <Link to="/" className="btn btn-primary rounded-pill colr_btn mx-4 mb-4">
                 {btn}
               </Link>
             </div>

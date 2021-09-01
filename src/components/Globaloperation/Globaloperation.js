@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import "./Globaloperation.css";
 const Globaloperation = () => {
   return (
+
+    
     <div className="container my-5">
       <div className="row">
         <div className="col-lg-8 test-border">
@@ -33,12 +35,9 @@ const Globaloperation = () => {
               <strong className="Typography_styling">
                 Concord Pharmaceuticals Limited (CPL)
               </strong>
-              , leading human medicine manufacturer in....
+              , a leading human medicine manufacturer in Bangladesh. We always thrive to introduce top notch quality
             </h4>
-            <Link
-              to="/"
-              className="btn btn-primary d-flex justify-content-center rounded-pill colr_btn m-auto mb-3"
-            >
+            <Link to="/" className="btn btn-primary d-flex justify-content-center rounded-pill colr_btn m-auto mb-3">
               Read More
             </Link>
           </div>
