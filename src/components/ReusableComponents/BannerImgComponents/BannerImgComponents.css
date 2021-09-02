@@ -1,0 +1,11 @@
+
+.Typograpy_Text_h1{
+    font-size: 60px;
+    font-weight: 500 !important;
+    text-transform: capitalize;
+}
+.Typograpy_Text_h4{
+    font-size: 18px;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+}

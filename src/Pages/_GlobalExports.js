@@ -1,0 +1,11 @@
+export {default as About} from  './About';
+export {default as Careers} from  './Careers';
+export {default as Contact} from  './Contact';
+export {default as Facilities} from  './Facilities';
+export {default as GlobalOperations} from  './GlobalOperations';
+export {default as Home} from  './Home';
+export {default as Login} from  './Login';
+export {default as Media} from  './Media';
+export {default as Products} from  './Products';
+export {default as Sitemap} from  './Sitemap';
+export {default as TeleMedicine} from  './TeleMedicine';

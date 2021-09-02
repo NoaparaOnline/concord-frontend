@@ -1,0 +1,125 @@
+.colrry {
+    /* background: #0066b3; */
+    width: 100%;
+    /* height: 120px; */
+    float: left;
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+  
+    font-weight: 500;
+    border: none !important;
+    /* display: block; */
+  }
+  .colr_btn {
+    width: 130px;
+    line-height: 30px !important;
+    margin-top: 20px;
+    padding-top: 4px;
+    font-size: 14px;
+    padding-bottom: 5px;
+    display: block;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    border-radius: 50px;
+    color: #fff;
+    background: #0066b3;
+  }
+  .btn-test {
+    width: 130px;
+    line-height: 30px !important;
+    margin-top: 20px;
+    padding-top: 4px;
+    font-size: 14px;
+    padding-bottom: 5px;
+    display: block;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    border-radius: 50px;
+    color: #fff;
+    background: #0066b3;
+  }
+  .btn-test:hover {
+    color: black;
+  }
+  .colr_btn:hover {
+    background: #fff !important;
+    color: #0066b3 !important;
+    border: 1px solid transparent !important;
+  }
+  .card_custom {
+    border-radius: 5% !important;
+    min-height: 500px !important;
+    background: linear-gradient(to top, #f3f3f3 80%, #0066b3 20%) !important;
+    border: none !important;
+  }
+  .card-img-top {
+    margin-top: 4%;
+  }
+  .text-title {
+    font-size: 16px;
+    color: #000000;
+  }
+  
+  .Typography_styling {
+    font-style: italic;
+  }
+  .test-back {
+    background-image: url("../../../assets/bigCardimag1.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    background-clip: border-box;
+    width: 100%;
+    height: 500px;
+    position: relative;
+  }
+  .test-border {
+    border-radius: 32px;
+    border: 15px solid white;
+  }
+  .test-position {
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    width: 70%;
+  }
+  .test-overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    color: white;
+    /* padding: 50px; */
+    background-color: rgba(0, 102, 179, 0.3);
+    width: auto;
+    padding: 10px 25px;
+    text-align: left;
+  }
+  .test-heading {
+    color: #fff;
+    font-weight: 600 !important;
+    font-size: 42px;
+    font-family: "Montserrat", sans-serif !important;
+    box-shadow: none;
+  }
+  .test-subHead {
+    text-decoration: 2px underline;
+  }
+
+
+
+
+  @media (max-width: 575.98px) 
+{
+  .test-heading {
+    font-weight: 600 !important;
+    font-size: 18px;
+  }
+ }
+@media (max-width: 767.98px)
+{ 
+  .test-heading {
+    font-weight: 600 !important;
+    font-size: 28px;
+  }
+}
