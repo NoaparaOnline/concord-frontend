@@ -33,7 +33,6 @@
     background: linear-gradient(350deg, #f3f3f3 65%, #0066b3 35%) !important;
     /* Measure Big Card Height and Assign to Min Height then all card will be same height  */
     min-height: 420px !important;
-    border-radius: 4% !important;
     border-bottom: none !important;
 }
 

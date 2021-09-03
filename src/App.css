@@ -9,23 +9,29 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
 }
 
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
+
+
+.zoom {
+  transition: transform 0.5s ease-in-out; 
+  margin: 0 auto;
 }
-@media (min-width: 1680px) {
-  .container {
-    width: 2000px;
-  }
+
+.zoom:hover {
+  transform: scale(1.09);
 }
-@media (min-width: 1800px) {
-  .container {
-    width: 1800px;
-  }
-}
-@media (min-width: 1020px) {
-  .container {
-    width: 900px;
-  }
+
+
+/* Facilities_Qualities */
+.productionbx
+{
+      min-height: 260px;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      background: #f9f9f9;
+      box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 9%);
+      padding: 25px;
+      border-radius: 3px!important;
+      margin-top: 15px;
+      margin-bottom: 15px;
 }
