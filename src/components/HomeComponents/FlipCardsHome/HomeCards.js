@@ -5,7 +5,7 @@ import "./HomeCards.css";
 const HomeCards = ({ card }) => {
   return (
     <div className="container my-5">
-      <div className="container cards mx-1 ">
+      <div className="container cards Responsive_Margin_Screen">
         <div className="row ">
           {card.map((ob, index) => (
             <React.Fragment key={ob.id}>

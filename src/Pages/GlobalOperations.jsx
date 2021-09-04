@@ -58,12 +58,23 @@ const GlobalOPerations = () => {
     },
   ];
 
+  const LinksBan = [
+    {
+      subLinkName: 'Home',
+      subDash: '/',
+      subLink: '/'
+    },
+    
+
+  ];
+
   return (
     <div>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Global Operation"}
-        subHeading={`HOME / GLOBAL OPERATION`}
+        subHeading={`GLOBAL OPERATION`}
+        LinksBan={LinksBan}
       />
 
       <div className="container">
@@ -74,7 +85,7 @@ const GlobalOPerations = () => {
                 return (
                   <>
                     <div className="col-lg-5 col-md-6 col-sm-6 me-3  d-flex justify-content-center ">
-                      <img className="mb-3 me-5 img-fluid " src={ob.imageURL} />
+                      <img className="mb-3 me-5 img-fluid boxImgShadow" src={ob.imageURL} />
                     </div>
                   </>
                 );

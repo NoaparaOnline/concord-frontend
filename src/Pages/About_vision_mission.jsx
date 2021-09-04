@@ -21,12 +21,28 @@ const About_vision_mission = () => {
     },
   ];
 
+ // BannerWithText Wale Ki Links Ka Object
+ const LinksBan = [
+  {
+    subLinkName: 'Home',
+    subDash: '/',
+    subLink: '/'
+  },
+  {
+    subLinkName: 'About Us',
+    subDash: '/',
+    subLink: '/about'
+  },
+
+];
+
   return (
     <div>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Vision & Mission"}
-        subHeading={`HOME /  ABOUT US  /  VISION & MISSION`}
+        subHeading={`VISION & MISSION`}
+        LinksBan={LinksBan}
       />
 
       {/* vision cards */}

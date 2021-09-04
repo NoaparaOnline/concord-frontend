@@ -25,8 +25,11 @@
         }
 
 
-.dropdown-toggle::after {
-        display: none !important;
+.secnav::after {
+    display: none !important;
+}
+.firstnav::after {
+    display: none !important;
 }
 
 .dropdown:hover .dropdown-menu {

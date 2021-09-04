@@ -40,11 +40,24 @@ const Products = () => {
       },
     ];
     
+
+    const LinksBan = [
+      {
+        subLinkName: 'Home',
+        subDash: '/',
+        subLink: '/'
+      },
+     
+  
+    ];
+
     return (
 
     
     <div>
-    <BannerWithText imgSrc={bannerimg} heading={'Products'} subHeading={`HOME / PRODUCTS`}/>
+    <BannerWithText imgSrc={bannerimg} heading={'Products'} subHeading={`PRODUCTS`}
+    LinksBan={LinksBan}
+    />
     <Heading heading={"Products"}/>
         
         

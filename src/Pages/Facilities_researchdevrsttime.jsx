@@ -5,12 +5,27 @@ import facrd from "../assets/fac-RD.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 
 const Facilities_researchdevrsttime = () => {
+  
+    // BannerWithText Wale Ki Links Ka Object
+    const LinksBan=[
+      {
+       subLinkName:'Home',
+       subDash:'/',
+       subLink:'/'
+      },
+      {
+       subLinkName:'Facilities',
+       subDash:'/',
+       subLink:'/facilities'
+      },
+    ];
   return (
     <div>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Research & Development"}
-        subHeading={`HOME /FACILITIES/ RESEARCH & DEVELOPMENT`}
+        subHeading={`RESEARCH & DEVELOPMENT`}
+        LinksBan={LinksBan}
       />
 
       <div className="container my-5">

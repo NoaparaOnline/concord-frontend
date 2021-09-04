@@ -13,7 +13,7 @@ const Navbars = () => {
  <div className="container">
 
  <img alt="" src={logo} style={{width:280,height:60}}></img>
-  <button className="navbar-toggler ms-auto mt-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button className="navbar-toggler toggle-iconcustome ms-auto mt-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
 
@@ -44,7 +44,7 @@ const Navbars = () => {
           <Link  className="nav-link secnav" aria-current="page" to="/login">login</Link>
         </li>
         <li className="nav-item dropdown">
-          <Link className="nav-link firstnav dropdown-toggle" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <Link className="nav-link firstnav dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             ABOUT-US
           </Link>
           <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
@@ -122,7 +122,7 @@ const Navbars = () => {
             contact
           </Link>
           <ul className="dropdown-menu hovercolr" aria-labelledby="navbarDropdown">
-            <li><Link className="dropdown-item" to="/contact_ourdistribution">our distribution network</Link></li>
+            <li><Link className="dropdown-item" to="/facilities_ourdistribution">our distribution network</Link></li>
             <li><Link className="dropdown-item" to="/contact_contactus">contact us</Link></li>
           </ul>
         </li>

@@ -1,5 +1,7 @@
 import React from "react";
 import './BannerImgComponents.css'
+import { Link } from 'react-router-dom'
+
 const BannerWithText = (props) => {
   return (
     <>
@@ -15,7 +17,15 @@ const BannerWithText = (props) => {
         >
           <div className="mt-5 pt-5">
             <h1 className="text-center Typograpy_Text_h1">{props?.heading}</h1>
-            <p className="text-center mt-3 Typograpy_Text_h4"> {props?.subHeading}</p>
+            <p className="text-center mt-3 Typograpy_Text_h4">
+            {props?.LinksBan.map((ob,index) => {
+            return (  
+              <>
+              <Link className="linkhov" style={{ textDecoration: "none", color: "#fff" }} to={ob?.subLink}><span>{ob?.subLinkName} </span></Link><span>{ob?.subDash}</span>
+              </> 
+               );
+              })}
+               {props?.subHeading}</p>
           </div>
         </div>
       </div>

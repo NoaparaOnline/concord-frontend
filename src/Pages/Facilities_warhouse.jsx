@@ -4,12 +4,26 @@ import bannerimg from "../assets/warehouse-1.jpg";
 import facrd from "../assets/warehouse-1.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 const Facilities_warhouse = () => {
+  const LinksBan=[
+    {
+     subLinkName:'Home',
+     subDash:'/',
+     subLink:'/'
+    },
+    {
+     subLinkName:'Facilities',
+     subDash:'/',
+     subLink:'/facilities'
+    },
+  ];
+ 
   return (
     <div>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Warehouse"}
-        subHeading={`HOME /FACILITIES/ WAREHOUSE`}
+        subHeading={`WAREHOUSE`}
+        LinksBan={LinksBan}
       />
 
       <div className="container my-5">

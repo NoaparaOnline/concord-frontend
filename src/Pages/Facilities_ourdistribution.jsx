@@ -149,12 +149,28 @@ const Facilities_ourdistribution = () => {
     },
   ];
 
+  // BannerWithText Wale Ki Links Ka Object
+   const LinksBan=[
+     {
+      subLinkName:'Home',
+      subDash:'/',
+      subLink:'/'
+     },
+     {
+      subLinkName:'Contacts',
+      subDash:'/',
+      subLink:'/contact'
+     },
+   ];
+
   return (
     <div>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Our Distribution Network"}
-        subHeading={`HOME /CONTACT/ OUR DISTRIBUTION NETWORK`}
+        subHeading={`OUR DISTRIBUTION NETWORK`}
+        LinksBan={LinksBan}
+
       />
       <div className="container">
         <img alt="" src={mapimage} className="img-fluid" />

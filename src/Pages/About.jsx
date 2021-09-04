@@ -1,5 +1,5 @@
 import React from 'react'
-import { CompanyLogos,Heading } from '../components'
+import { CompanyLogos, Heading } from '../components'
 import bannerimg from '../assets/AboutBanner.jpg';
 import BannerWithText from '../components/ReusableComponents/BannerImgComponents/BannerImgComponents'
 import ZoominCards from '../components/ReusableComponents/ZoominCards';
@@ -10,57 +10,71 @@ import Aboutcard4 from '../assets/Chairman-message4.svg'
 
 
 const About = () => {
-  
+
   // Zoomcards Map Data
   const aboutcard = [
     {
-      id:0,
+      id: 0,
       imageURL: Aboutcard1,
       text: "Vision & Mission",
       link: "/about_vision_mission",
     },
     {
-      id:1,
+      id: 1,
       imageURL: Aboutcard2,
       text: "Health Associates",
       link: "#",
     },
     {
-      id:2,
+      id: 2,
       imageURL: Aboutcard3,
       text: "Chairman's Profile",
       link: "#",
     },
     {
-      id:3,
+      id: 3,
       imageURL: Aboutcard4,
       text: "Message from Chairman",
       link: "/about_message_chairmen",
     },
   ];
-  
+
+  // BannerWithText Wale Ki Links Ka Object
+  const LinksBan = [
+    {
+      subLinkName: 'Home',
+      subDash: '/',
+      subLink: '/'
+    },
+
+  ];
+
   return (
-        <div>
-           <BannerWithText imgSrc={bannerimg} heading={'About Us'} subHeading={`hello / about us`}/>
-           <Heading heading={"About Us"}/>
-           
-           
+    <div>
+      <BannerWithText imgSrc={bannerimg}
+        heading={'About Us'}
+        subHeading={`about us`}
+        LinksBan={LinksBan}
+        />
+      <Heading heading={"About Us"} />
 
 
 
-        {/* Zoom Cards */}
-        <div className="container my-5">
+
+
+      {/* Zoom Cards */}
+      <div className="container my-5">
         <div className="row ">
 
-        {aboutcard.map((ob, index) => (
+          {aboutcard.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className='col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-3'>
-                <ZoominCards abcard={ob}/>                  
+              <div className='col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-3'>
+                <ZoominCards abcard={ob} />
               </div>
             </React.Fragment>
           )
-          )} 
-           
+          )}
+
 
         </div>
       </div>
@@ -71,9 +85,9 @@ const About = () => {
 
 
 
-           <CompanyLogos/> 
-        </div>
-    )
+      <CompanyLogos />
+    </div>
+  )
 }
 
 export default About

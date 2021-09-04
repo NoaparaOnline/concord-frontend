@@ -46,11 +46,21 @@ const Facilities = () => {
     },
   ];
 
+  const LinksBan = [
+    {
+      subLinkName: 'Home',
+      subDash: '/',
+      subLink: '/'
+    },
+    
 
+  ];
     return (
        
     <div>
-    <BannerWithText imgSrc={bannerimg} heading={'Facilities'} subHeading={`HOME / FACILITIES`}/>
+    <BannerWithText imgSrc={bannerimg} heading={'Facilities'} subHeading={`FACILITIES`}
+    LinksBan={LinksBan}
+    />
     <Heading heading={"Facilities"}/>
         
         

@@ -6,10 +6,10 @@ const FlipCard = ({ card }) => {
   const { title, text1, text2, img, btn } = card;
 
   return (
-    <div>
-      <div className="flip-card">
+    <div >
+      <div className="flip-card" style={{marginBottom:'30%'}}>
         <div className="flip-card-inner ">
-          <div className="flip-card-front">
+          <div className="flip-card-front ">
             <div className="card flipcard_custom">
               <div className="card-body">
                 <h5 className="card-title text-white">{title}</h5>
@@ -21,7 +21,7 @@ const FlipCard = ({ card }) => {
                   <img key={ob.id} src={ob.imgf} className="card-img-top p-3" alt="..." />
                 );
               })}
-              <Link to="/" className="btn btn-primary rounded-pill colr_btn me-4 mb-4">
+              <Link to="/" className="btn btn-primary rounded-pill colr_btn">
                 {btn}
               </Link>
             </div>
@@ -39,7 +39,7 @@ const FlipCard = ({ card }) => {
                   <img key={ob.id} src={ob.imge} className="card-img-top p-3" alt="..." />
                 );
               })}
-              <Link to="/" className="btn btn-primary rounded-pill colr_btn me-4 mb-4">
+              <Link to="/" className="btn btn-primary rounded-pill colr_btn">
                 {btn}
               </Link>
             </div>

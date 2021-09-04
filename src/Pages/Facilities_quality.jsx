@@ -4,12 +4,26 @@ import bannerimg from "../assets/fac-QC.jpg";
 import facrd from "../assets/fac-QC.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 const Facilities_quality = () => {
+  const LinksBan=[
+    {
+     subLinkName:'Home',
+     subDash:'/',
+     subLink:'/'
+    },
+    {
+     subLinkName:'Facilities',
+     subDash:'/',
+     subLink:'/facilities'
+    },
+  ];
+ 
   return (
     <div>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Quality Control"}
-        subHeading={`HOME /FACILITIES/ QUALITY CONTROL`}
+        subHeading={`QUALITY CONTROL`}
+        LinksBan={LinksBan}
       />
 
       <div className="container my-5">

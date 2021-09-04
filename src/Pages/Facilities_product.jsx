@@ -5,12 +5,27 @@ import facrd from "../assets/fac-production.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 
 const Facilities_product = () => {
-    return (
+    
+   // BannerWithText Wale Ki Links Ka Object
+   const LinksBan=[
+    {
+     subLinkName:'Home',
+     subDash:'/',
+     subLink:'/'
+    },
+    {
+     subLinkName:'Facilities',
+     subDash:'/',
+     subLink:'/facilities'
+    },
+  ];
+  return (
         <div>
         <BannerWithText
           imgSrc={bannerimg}
           heading={"Production"}
-          subHeading={`HOME /FACILITIES/ PRODUCTION`}
+          subHeading={`PRODUCTION`}
+          LinksBan={LinksBan}
         />
   
         <div className="container my-5">
