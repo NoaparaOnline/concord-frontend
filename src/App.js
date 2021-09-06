@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import { Navbar, Footer } from "./components";
+import { Navbar, Footer, FixedRight} from "./components";
 import About from "./Pages/About";
 import Careers from "./Pages/Careers";
 import Contact from "./Pages/Contact";
@@ -62,6 +62,11 @@ function App() {
 
         <Route exact path="/home">
           <Home />
+        </Route>
+        {/*          FixedRight             */}
+
+        <Route exact path="/:page">
+          <FixedRight/>
         </Route>
 
         {/*          Login Page             */}

@@ -12,4 +12,5 @@ export {default as NearestDeliveryCenter} from  './HomeComponents/NearestDeliver
 export {default as WeAreServing} from  './HomeComponents/WeAreServing/WeAreServing';
 export {default as TextSectionContainer} from  './HomeComponents/TextSectionContainer/TextSectionContainer';
 export {default as Globaloperation} from  './HomeComponents/Globaloperation/Globaloperation';
+export {default as FixedRight} from  './HomeComponents/SocialMedia/FixedRight/FixedRight';
 

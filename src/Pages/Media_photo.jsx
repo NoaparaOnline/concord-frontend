@@ -1,11 +1,9 @@
 import React,{useState} from 'react'
 import { CompanyLogos } from "../components";
 import bannerimg from "../assets/mediaphotobanner.jpg";
-import facrd from "../assets/mediaphotobanner.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Modal from 'react-bootstrap/Modal'
-import {Button} from "react-bootstrap";
 import { Link } from 'react-router-dom';
 const Media_photo = () => {
 
@@ -77,7 +75,7 @@ function importAll(data) {
                     </div>
                   ))}
 
-                    <Modal show={show} onHide={handleClose} size="lg">
+                    <Modal show={show} onHide={handleClose} centered size="lg">
                         <Modal.Header closeButton>
                         </Modal.Header>
                         <Modal.Body >
