@@ -1,7 +1,11 @@
 import React from 'react'
 import './Navbar.css';
 import logo from '../../../assets/logo.png';
-import { Link } from 'react-router-dom'
+import langlogo from '../../../assets/languagelogo.png';
+import enlang from '../../../assets/languages/english.jpg';
+import arlang from '../../../assets/languages/arbic.jpg';
+import bnlang from '../../../assets/languages/bangali.jpg';
+import { NavLink,Link } from 'react-router-dom'
 
 const Navbars = () => {
 
@@ -12,7 +16,10 @@ const Navbars = () => {
  
  <div className="container">
 
- <img alt="" src={logo} style={{width:280,height:60}}></img>
+<Link to='/'>
+ <img alt="" src={logo} style={{width:280,height:60}}/>
+ </Link>
+
   <button className="navbar-toggler toggle-iconcustome ms-auto mt-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
@@ -24,14 +31,14 @@ const Navbars = () => {
 <ul className="navbar-nav  justify-content-end text-uppercase fontsizefamily">
 
         <li className="nav-item ">
-          <Link className="nav-link firstnav" aria-current="page" to="/sitemap">Sitemap</Link>
+          <NavLink className="nav-link firstnav" aria-current="page" to="/sitemap">Sitemap</NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link firstnav" aria-current="page" to="/careers">careers</Link>
+          <NavLink className="nav-link firstnav" aria-current="page" to="/careers">careers</NavLink>
         </li>
      <div className="col-sm-3">
      <div className="input-group my-1">
-  <input style={{height:'28px' ,borderRadius:0,borderColor:'none'}} type="text" className="form-control " placeholder="Enter here" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+  <input style={{height:'28px' ,borderRadius:0,borderColor:'none'}} type="text" className="form-control " placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
   <div className="input-group-append">
           
     <span style={{height:'28px' ,borderRadius:0}} className="input-group-text" id="basic-addon2">
@@ -40,17 +47,18 @@ const Navbars = () => {
   </div>
 </div>
      </div>
-        <li className="nav-item">
-          <Link  className="nav-link secnav" aria-current="page" to="/login">login</Link>
+        <li className="nav-item ">
+          <i className="fa fa-user fs-5 ms-3" aria-hidden="true"></i>
+        <NavLink  className="nav-link secnav text-capitalize " style={{clear: 'both' , marginTop:'-10px'}} aria-current="page" to="/login">login</NavLink>
         </li>
         <li className="nav-item dropdown">
-          <Link className="nav-link firstnav dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            ABOUT-US
-          </Link>
+          <span className="nav-link firstnav dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src={langlogo} alt="language" style={{width:'23px'}} />
+          </span>
           <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
-            <li><Link className="dropdown-item conCapitalized " to="/">english</Link></li>
-            <li><Link className="dropdown-item conCapitalized" to="/">arabic</Link></li>
-            <li><Link className="dropdown-item conCapitalized" to="/">bengali</Link></li>
+            <li><NavLink className="dropdown-item conCapitalized " to="/"><span> <img src={enlang} alt="english" style={{width:'22px',marginRight:'10px'}}/> english</span></NavLink></li>
+            <li><NavLink className="dropdown-item conCapitalized" to="/"><span> <img src={arlang} alt="arabic"   style={{width:'22px',marginRight:'10px'}}/>arabic </span></NavLink></li>
+            <li><NavLink className="dropdown-item conCapitalized" to="/"><span> <img src={bnlang} alt="bengali"  style={{width:'22px',marginRight:'10px'}}/>bengali</span></NavLink></li>
           </ul>
         </li>
         </ul>
@@ -61,69 +69,73 @@ const Navbars = () => {
 <ul className="navbar-nav mb-auto mt-1 mb-lg-0 ms-auto pt-1 text-uppercase fontsizefamily aa">
 
         <li className="nav-item ">
-          <Link className="nav-link secnav active" aria-current="page" to="/home">HOME</Link>
+          <NavLink className="nav-link secnav " aria-current="page" to="/home">HOME</NavLink>
         </li>
         <li className="nav-item dropdown">
-          <Link className="nav-link secnav dropdown-toggle" to="/about" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <NavLink className="nav-link secnav dropdown-toggle" to="/about" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             ABOUT-US
-          </Link>
+          </NavLink>
           <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
-            <li><Link className="dropdown-item" to="/about_vision_mission">Vision & Mission</Link></li>
-            <li><Link className="dropdown-item" to="/">Health Associates    </Link></li>
-            <li><Link className="dropdown-item" to="/">Chairman’s Profile   </Link></li>
-            <li><Link className="dropdown-item" to="/about_message_chairmen">Message from Chairman</Link></li>
+            <li><NavLink className="dropdown-item" to="/about_vision_mission">Vision & Mission</NavLink></li>
+            <li><NavLink className="dropdown-item" to="#">Health Associates    </NavLink></li>
+            <li><NavLink className="dropdown-item" to="#">Chairman’s Profile   </NavLink></li>
+            <li><NavLink className="dropdown-item" to="/about_message_chairmen">Message from Chairman</NavLink></li>
           </ul>
         </li>
         <li className="nav-item">
-          <Link className="nav-link secnav" to="/globalOperations">global operation</Link>
+          <NavLink className="nav-link secnav" to="/globalOperations">global operation</NavLink>
         </li>
       
     
         <li className="nav-item dropdown">
-          <Link className="nav-link secnav dropdown-toggle" to="/products" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <NavLink className="nav-link secnav dropdown-toggle" to="/products" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Products
-          </Link>
+          </NavLink>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><Link className="dropdown-item" to="/products_bytrade">By trade name</Link></li>
-            <li><Link className="dropdown-item" to="/products_bygeneric">By generic name</Link></li>
-            <li><Link className="dropdown-item" to="/products_therapeutic">By therapeutic class</Link></li>
-            <li><Link className="dropdown-item" to="/products_firsttime">first time launching</Link></li>
+            <li><NavLink className="dropdown-item" to="/products_bytrade">By trade name</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/products_bygeneric">By generic name</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/products_therapeutic">By therapeutic class</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/products_firsttime">first time launching</NavLink></li>
           </ul>
         </li>
         <li className="nav-item dropdown">
-          <Link className="nav-link secnav dropdown-toggle" to="/facilities" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <NavLink className="nav-link secnav dropdown-toggle" to="/facilities" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Facilities
-          </Link>
+          </NavLink>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><Link className="dropdown-item" to="/facilities_researchdevrsttime">Research and Development</Link></li>
-            <li><Link className="dropdown-item" to="/facilities_product">Product</Link></li>
-            <li><Link className="dropdown-item" to="/facilities_quality">Quality Control</Link></li>
-            <li><Link className="dropdown-item" to="/facilities_warhouse">Warehouse</Link></li>
-            <li><Link className="dropdown-item" to="/facilities_ourdistribution">Our distribution network</Link></li>
+            <li><NavLink className="dropdown-item" to="/facilities_researchdevrsttime">Research and Development</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/facilities_product">Product</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/facilities_quality">Quality Control</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/facilities_warhouse">Warehouse</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/facilities_ourdistribution">Our distribution network</NavLink></li>
           </ul>
         </li>
         <li className="nav-item">
-          <Link className="nav-link secnav" to="/teleMedicine">Tele-Medicine</Link>
+          {/* TeleMedicine Routing Path = /teleMedicine */}
+          <Link className="nav-link secnav" to="#">Tele-Medicine</Link>
         </li>
         <li className="nav-item dropdown">
-          <Link className="nav-link secnav dropdown-toggle" to="/media" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <NavLink className="nav-link secnav dropdown-toggle" to="/media" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             media
-          </Link>
+          </NavLink>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><Link className="dropdown-item" to="/media_video">video</Link></li>
-            <li><Link className="dropdown-item" to="/media_photo">photo</Link></li>
-            <li><Link className="dropdown-item" to="/media_socialmedia">social media post</Link></li>
-            <li><Link className="dropdown-item" to="/media_milestone">mile stones</Link></li>
-            <li><Link className="dropdown-item" to="/media_socialresponsiblities">social responsibilities</Link></li>
+          {/* Video Routing Path = /media_video */}
+          {/* social responsibilities Routing Path = /media_socialresponsiblities */}
+
+            <li><Link className="dropdown-item" to="#">video</Link></li>
+            <li><NavLink className="dropdown-item" to="/media_photo">photo</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/media_socialmedia">social media post</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/media_milestone">mile stones</NavLink></li>
+            <li><Link className="dropdown-item" to="#">social responsibilities</Link></li>
           </ul>
         </li>
         <li className="nav-item dropdown">
-          <Link className="nav-link secnav dropdown-toggle" to="/contact" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <NavLink className="nav-link secnav dropdown-toggle" to="/contact" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             contact
-          </Link>
+          </NavLink>
           <ul className="dropdown-menu hovercolr" aria-labelledby="navbarDropdown">
-            <li><Link className="dropdown-item" to="/facilities_ourdistribution">our distribution network</Link></li>
-            <li><Link className="dropdown-item" to="/contact_contactus">contact us</Link></li>
+            <li><NavLink className="dropdown-item" to="/facilities_ourdistribution">our distribution network</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/contact_contactus">contact us</NavLink></li>
           </ul>
         </li>
       </ul>

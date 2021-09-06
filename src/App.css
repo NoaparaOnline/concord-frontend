@@ -127,3 +127,13 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
     border-radius: 10px;
     box-shadow: 0 0 5px rgb(0 0 0 / 36%);
 }
+
+
+.socialmediapostlink:hover{
+  text-decoration-color: #0066b2;
+}
+.socialmediapostlink{
+ text-decoration: underline;
+ text-decoration-color: transparent;
+ transition: 0.8s ease-in-out;
+}

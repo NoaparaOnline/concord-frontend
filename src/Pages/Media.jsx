@@ -67,12 +67,12 @@ const Media = () => {
   
   
         {/* Zoom Cards */}
-        <div className="container my-5">
-          <div className="row ">
+        <div className="mb-5">
+          <div className="row">
   
             {mediacard.map((ob, index) => (
               <React.Fragment key={ob.id}>
-                <div className='col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-3'>
+                <div className={index===0 ? `col-lg-2 offset-lg-1 col-md-3 mt-4`:`col-lg-2 col-md-3 mt-4`}>
                   <ZoominCards abcard={ob} />
                 </div>
               </React.Fragment>
