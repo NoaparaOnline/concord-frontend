@@ -52,10 +52,10 @@
  .fontsizefamily{
     font-family: 'Monsterrat' !important;
     font-weight: 600 !important;
-    font-size: 12px !important;
+    font-size: 13px !important;
     text-transform: uppercase;
     transition: none;
-    padding: 0;
+    padding: 5px 10px;
     letter-spacing: 0.5px !important;
  }
  .custom-nav{

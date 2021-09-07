@@ -1,16 +1,16 @@
 import React from "react";
 import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/parallax_contact.jpg";
-import flag1 from "../Statics/assets/flags/f1.jpg";
-import flag2 from "../Statics/assets/flags/f2.jpg";
-import flag3 from "../Statics/assets/flags/f3.jpg";
-import flag4 from "../Statics/assets/flags/f4.jpg";
-import flag5 from "../Statics/assets/flags/f5.jpg";
-import flag6 from "../Statics/assets/flags/f6.jpg";
-import flag7 from "../Statics/assets/flags/f7.jpg";
-import flag8 from "../Statics/assets/flags/f8.jpg";
-import flag9 from "../Statics/assets/flags/f9.jpg";
-import flag10 from "../Statics/assets/flags/f10.jpg";
+import flag1 from "../Statics/assets/flags/fl1.jpg";
+import flag2 from "../Statics/assets/flags/fl2.jpg";
+import flag3 from "../Statics/assets/flags/fl3.jpg";
+import flag4 from "../Statics/assets/flags/fl4.jpg";
+import flag5 from "../Statics/assets/flags/fl5.jpg";
+import flag6 from "../Statics/assets/flags/fl6.jpg";
+import flag7 from "../Statics/assets/flags/fl7.jpg";
+import flag8 from "../Statics/assets/flags/fl8.jpg";
+import flag9 from "../Statics/assets/flags/fl9.jpg";
+import flag10 from "../Statics/assets/flags/fl10.jpg";
 import { Link } from 'react-router-dom'
 
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";

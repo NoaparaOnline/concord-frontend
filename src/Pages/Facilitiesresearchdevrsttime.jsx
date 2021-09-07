@@ -35,8 +35,10 @@ const Facilities_researchdevrsttime = () => {
       <div className="container my-5">
         <div className="row">
 
-          <div className="col-sm-12 col-lg-5" style={{ border: '1px solid #f3f3f3', overflow: 'hidden' }} >
+          <div className="col-sm-12 col-lg-5" >
+            <div className="allborder">
             <img alt="" src={facrd} className="img-fluid zoom" />
+            </div>
           </div>
 
           <div

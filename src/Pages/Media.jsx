@@ -16,7 +16,7 @@ const Media = () => {
           id: 0,
           imageURL: mediacard1,
           text: "Video",
-          link: "/media_video",
+          link: "#",
         },
         {
           id: 1,
@@ -40,7 +40,7 @@ const Media = () => {
           id: 4,
           imageURL: mediacard5,
           text: "Social Responsibilities",
-          link: "/media_socialresponsiblities",
+          link: "#",
         },
       ];
     

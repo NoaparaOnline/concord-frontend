@@ -4,19 +4,19 @@ import bannerimg from "../Statics/assets/fac-QC.jpg";
 import facrd from "../Statics/assets/fac-QC.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 const Facilities_quality = () => {
-  const LinksBan=[
+  const LinksBan = [
     {
-     subLinkName:'Home',
-     subDash:'/',
-     subLink:'/'
+      subLinkName: "Home",
+      subDash: "/",
+      subLink: "/",
     },
     {
-     subLinkName:'Facilities',
-     subDash:'/',
-     subLink:'/facilities'
+      subLinkName: "Facilities",
+      subDash: "/",
+      subLink: "/facilities",
     },
   ];
- 
+
   return (
     <div>
       <BannerWithText
@@ -31,13 +31,11 @@ const Facilities_quality = () => {
       />
 
       <div className="container my-5">
-        
         <div className="row">
-          <div
-            className="col-sm-12 col-lg-5"
-            style={{ border: "1px solid #f3f3f3", overflow: "hidden" }}
-          >
+          <div className="col-sm-12 col-lg-5">
+            <div className="allborder">
             <img alt="" src={facrd} className="img-fluid zoom" />
+            </div>
           </div>
 
           <div className="col-sm-12 col-lg-7">
@@ -60,48 +58,42 @@ const Facilities_quality = () => {
             </div>
           </div>
         </div>
-      
-        <div className="productionbx">
-        <h5 style={{color: '#0066b3',fontSize:'24px' }}>
-          The System of Quality Control in Concord Pharmaceuticals ensures that:
-        </h5>
-        <ul >
-          <li className="mt-3">
-            The Pharmaceutical Products are designed and developed in a way that
-            takes into account the requirements of Good Manufacturing Practices
-            (cGMP)
-          </li>
-          <li className="mt-3">
-            Adequate arrangements are made for Manufacture, Supply and Use of
-            correct starting and packaging materials
-          </li>
-          <li className="mt-3">
-            Adequate Controls on starting materials, Intermediate products and
-            Bulk Products. Calibrations and Validations are carried out.
-          </li>
-          <li className="mt-3">
-            The Finished products are correctly processed and checked in
-            accordance with established procedures.
-          </li>
-          <li className="mt-3">
-            The Products are not released for sale or supplied before authorized
-            persons have certified that each production batch has been produced
-            and controlled in accordance with the requirements of the label
-            claim and any other provisions relevant to Production, Control and
-            Release of products.
-          </li>
-        </ul>
-      </div>
-      
-     
-      </div>
 
+        <div className="productionbx">
+          <h5 style={{ color: "#0066b3", fontSize: "24px" }}>
+            The System of Quality Control in Concord Pharmaceuticals ensures
+            that:
+          </h5>
+          <ul>
+            <li className="mt-3">
+              The Pharmaceutical Products are designed and developed in a way
+              that takes into account the requirements of Good Manufacturing
+              Practices (cGMP)
+            </li>
+            <li className="mt-3">
+              Adequate arrangements are made for Manufacture, Supply and Use of
+              correct starting and packaging materials
+            </li>
+            <li className="mt-3">
+              Adequate Controls on starting materials, Intermediate products and
+              Bulk Products. Calibrations and Validations are carried out.
+            </li>
+            <li className="mt-3">
+              The Finished products are correctly processed and checked in
+              accordance with established procedures.
+            </li>
+            <li className="mt-3">
+              The Products are not released for sale or supplied before
+              authorized persons have certified that each production batch has
+              been produced and controlled in accordance with the requirements
+              of the label claim and any other provisions relevant to
+              Production, Control and Release of products.
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <CompanyLogos />
-
-
-
-
     </div>
   );
 };

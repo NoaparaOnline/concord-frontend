@@ -190,3 +190,13 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
   color:red;
   cursor: pointer;
 }
+
+/* Facilities */
+.allborder {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 5px;
+  border: 1px #eee solid;
+  margin-top: 5px;
+}

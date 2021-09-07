@@ -34,7 +34,7 @@ const Facilities_warhouse = () => {
         <div className="row">
           <div className="col-sm-12 col-lg-5">
             
-              <div style={{ border: "1px solid #f3f3f3", overflow: "hidden" }}>
+              <div className="allborder">
                 <img alt="" src={facrd} className="img-fluid zoom" />   
               </div>
     
