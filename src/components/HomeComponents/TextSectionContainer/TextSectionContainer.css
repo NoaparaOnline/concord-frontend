@@ -1,0 +1,16 @@
+.text_shadow {
+    box-shadow: 2px 3px 20px -11px rgb(0 0 0 / 55%);
+    border-radius: 20px;
+    /* background: #fdfdfd; */
+    width: 100%;
+    bottom: 15px;
+    top: 0%;
+    height: max-content !important;
+}
+
+.text_typography {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #565656;
+    padding: 20px;
+    text-overflow: ellipsis;
+}

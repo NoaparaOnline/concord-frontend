@@ -1,0 +1,35 @@
+.evenspace{
+    display: flex;
+    justify-content:space-between;
+ }
+
+.maxminHeight{
+    max-height: '170px';
+}
+
+
+
+@media (max-width: 570px) 
+{
+  .custome_xs_screen{
+    display:block !important;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  .container {
+     max-width: 1200px;
+   }
+}
+/* extra large devices */
+@media screen and (min-width: 1800px) {
+  .container {
+    max-width: 1800px !important;
+  }
+}
+@media screen and (min-width: 2500px) {
+  .container {
+    max-width: 2500px !important;
+  }
+}

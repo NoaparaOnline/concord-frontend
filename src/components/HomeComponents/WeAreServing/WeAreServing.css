@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 30px
+}
+
+.static-txt {
+    margin: 10px;
+    color: #0066b3;
+    font-size: 42px;
+    font-weight: 600;
+}

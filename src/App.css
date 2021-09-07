@@ -7,3 +7,186 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
 .colrbck{
   background-color: #f3f3f3;
 }
+
+
+
+
+.zoom {
+  transition: transform 0.5s ease-in-out; 
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.09);
+}
+
+
+/* Facilities_Qualities */
+.productionbx
+{
+      min-height: 260px;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      background: #f9f9f9;
+      box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 9%);
+      padding: 25px;
+      border-radius: 3px!important;
+      margin-top: 15px;
+      margin-bottom: 15px;
+}
+/* GlobalOperation.jsx */
+.boxImgShadow{
+  box-shadow: -1px -1px 11px rgb(0 0 0 / 27%);
+}
+
+/* Product ByTrade */
+
+.productFilterContent{
+  border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #f8f8f8;
+    padding: 15px 20px;
+    margin-top: 20px 0px 0px ;
+    position: sticky;
+    top: 120px;
+}
+.productFilterContent h3 {
+  font-size: 24px;
+  color: #565656;
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+
+
+@media (max-width: 575.98px) 
+{
+    
+  .Responsive_Margin_Screen{
+        margin: 30px;
+  }
+ }
+@media (max-width: 767.98px)
+{ 
+  .Responsive_Margin_Screen{
+    margin: 30px;
+  }
+ }
+
+@media (max-width: 991.98px) { 
+
+  .Responsive_Margin_Screen{
+    margin: 30px;
+  }
+ }
+
+
+ /* Contact Us Page */
+ .serviceBox1{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+ }
+.service-content1{
+  background: #f3f0f0;
+  border-bottom: 3px solid #0066b2 !important;
+  border-radius: 3px 0 0 3px;
+  padding: 18px 8px;
+  width: 73% !important;
+  margin: 10px 0;
+  text-align: center !important;
+  font-weight: 500 !important;
+}
+.service-icon1{
+  background: #0066b2;
+  border-bottom: 3px solid #0066b2;
+  color: #ffffff;
+  font-size: 25px;
+  padding: 35px 0 0;
+  text-align: center;
+  width: 80px;
+}
+.service-content1 h3 {
+  color: hsl(0, 0%, 7%);
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.mappadns{
+  padding-left: 15px!important;
+  padding-right: 15px!important;
+  }
+.form-div {
+    padding: 60px 30px 2px 30px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 36%);
+}
+
+
+.socialmediapostlink:hover{
+  text-decoration-color: #0066b2;
+}
+.socialmediapostlink{
+ text-decoration: underline;
+ text-decoration-color: transparent;
+ transition: 0.8s ease-in-out;
+}
+
+
+/* Login Modal Css */
+.cardlogmodel {
+  border: none;
+  width:70%;
+  height: 70%;
+}
+
+.btr {
+  border-top-right-radius: 5px !important
+}
+
+
+.btl {
+  border-top-left-radius: 5px !important
+}
+
+
+
+.nav-pills {
+  display: table !important;
+  width: 100%
+}
+
+
+
+.nav-item {
+  display: table-cell;
+}
+
+.logform {
+  padding: 10px;
+  height: 300px
+}
+
+.logform input {
+  margin-bottom: 12px;
+  border-radius: 3px
+}
+
+.logform input:focus {
+  box-shadow: none
+}
+
+.logform button {
+  margin-top: 20px;
+}
+
+.iconhover:hover{
+  color:red;
+  cursor: pointer;
+}

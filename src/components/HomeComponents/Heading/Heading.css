@@ -1,0 +1,11 @@
+.siz{
+    font-size: 48px !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+}
+.Typograpy_subheading{
+    color:'#333333';
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif !important;
+    margin: 0px 0px 16px;    
+}

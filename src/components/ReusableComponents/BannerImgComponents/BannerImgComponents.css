@@ -1,0 +1,26 @@
+.linkhov:hover{
+        color:#0066b3 !important;
+        text-decoration: none !important;
+}
+.Typograpy_Text_h1{
+    font-weight: 500 !important;
+    text-transform: capitalize;
+}
+.Typograpy_Text_h4{
+    font-size: 18px;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 575.98px) 
+{
+    
+    .Typograpy_Text_h1{
+        font-size: 40px;
+    }
+    .Typograpy_Text_h4{
+        font-size: 12px;
+    }
+
+}
