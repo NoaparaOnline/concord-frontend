@@ -57,9 +57,10 @@ const About_vision_mission = () => {
               <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3">
                 <div className="card d-flex justify-content-center" style={{ border: 'none' }}>
                   <img alt="" src={ob.imageURL} className="img-fluid" />
-                  <h5 className="text-center mb-4" style={{ color: "#337ab7", fontWeight: '500', fontSize: '36px' }}>{ob.name}</h5>
+                  <h5 className="text-center mb-4" style={{ color: "#0066b3", fontWeight: '600', fontSize: '36px',fontFamily: 'Montserrat, sans-serif '}}>{ob.name}</h5>
                   <p className="text-start" style={{ color: "#565656", fontWeight: '400', fontSize: '17px' }}>{ob.text}</p>
                 </div>
+                
               </div>
             </React.Fragment>
           ))}

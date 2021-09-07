@@ -9,17 +9,29 @@
     width: 105%;
     text-align: center;
     transition: transform 0.1s;
-   
+    
+    
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg) ; 
+    -o-transform:rotateY(180deg) ; 
+    -ms-transform:rotateY(180deg) ; 
     transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    -ms-transition: 1s;
 }
 
 .flip-card-front,
 .flip-card-back {
+    
     position: absolute;
     height: 100%;
     width: 100%;
@@ -27,6 +39,10 @@
 
 .flip-card-back {
     transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg) ; 
+    -o-transform:rotateY(180deg) ; 
+    -ms-transform:rotateY(180deg) ; 
 }
 
 .flipcard_custom {

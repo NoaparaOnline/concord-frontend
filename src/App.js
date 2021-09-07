@@ -31,6 +31,7 @@ import Productsbygeneric from "./Pages/Productsbygeneric";
 import Productsbytrade from "./Pages/Productsbytrade";
 import Productsfirsttime from "./Pages/Productsfirsttime";
 import Productstherapeutic from "./Pages/Productstherapeutic";
+import ScrollToTop from "./components/ReusableComponents/scrollTop";
 
 function App() {
 
@@ -38,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-
+      <ScrollToTop/>
         {/*          Root Page             */}
 
         <Route exact path="/">

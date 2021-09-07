@@ -111,7 +111,7 @@ const Navbars = () => {
                       />
                     </span>
                     <ul
-                      className="dropdown-menu "
+                      className="dropdown-menu dropdown-menu-right"
                       aria-labelledby="navbarDropdown"
                     >
                       <li>
@@ -184,8 +184,9 @@ const Navbars = () => {
                       className="dropdown-menu "
                       aria-labelledby="navbarDropdown"
                     >
-                      <li>
+                      <li >
                         <NavLink
+                          style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/about_vision_mission"
                         >
@@ -193,17 +194,18 @@ const Navbars = () => {
                         </NavLink>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="#">
+                        <Link style={{fontSize:'13px',fontWeight:'500'}} className="dropdown-item" to="#">
                           Health Associates{" "}
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="#">
+                        <Link style={{fontSize:'13px',fontWeight:'500'}} className="dropdown-item" to="#">
                           Chairman’s Profile{" "}
                         </Link>
                       </li>
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/about_message_chairmen"
                         >
@@ -235,6 +237,7 @@ const Navbars = () => {
                     >
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/products_bytrade"
                         >
@@ -243,6 +246,7 @@ const Navbars = () => {
                       </li>
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/products_bygeneric"
                         >
@@ -251,6 +255,7 @@ const Navbars = () => {
                       </li>
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/products_therapeutic"
                         >
@@ -259,6 +264,7 @@ const Navbars = () => {
                       </li>
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/products_firsttime"
                         >
@@ -284,6 +290,7 @@ const Navbars = () => {
                     >
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/facilities_researchdevrsttime"
                         >
@@ -292,6 +299,7 @@ const Navbars = () => {
                       </li>
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/facilities_product"
                         >
@@ -300,6 +308,7 @@ const Navbars = () => {
                       </li>
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/facilities_quality"
                         >
@@ -308,6 +317,7 @@ const Navbars = () => {
                       </li>
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/facilities_warhouse"
                         >
@@ -316,6 +326,7 @@ const Navbars = () => {
                       </li>
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/facilities_ourdistribution"
                         >
@@ -342,24 +353,25 @@ const Navbars = () => {
                       media
                     </NavLink>
                     <ul
-                      className="dropdown-menu"
+                      className="dropdown-menu dropdown-menu-right"
                       aria-labelledby="navbarDropdown"
                     >
                       {/* Video Routing Path = /media_video */}
                       {/* social responsibilities Routing Path = /media_socialresponsiblities */}
 
                       <li>
-                        <Link className="dropdown-item" to="#">
+                        <Link style={{fontSize:'13px',fontWeight:'500'}} className="dropdown-item" to="#">
                           video
                         </Link>
                       </li>
                       <li>
-                        <NavLink className="dropdown-item" to="/media_photo">
+                        <NavLink style={{fontSize:'13px',fontWeight:'500'}} className="dropdown-item" to="/media_photo">
                           photo
                         </NavLink>
                       </li>
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/media_socialmedia"
                         >
@@ -368,6 +380,7 @@ const Navbars = () => {
                       </li>
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/media_milestone"
                         >
@@ -375,7 +388,7 @@ const Navbars = () => {
                         </NavLink>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="#">
+                        <Link style={{fontSize:'13px',fontWeight:'500'}} className="dropdown-item" to="#">
                           social responsibilities
                         </Link>
                       </li>
@@ -393,11 +406,12 @@ const Navbars = () => {
                       contact
                     </NavLink>
                     <ul
-                      className="dropdown-menu hovercolr"
+                      className="dropdown-menu dropdown-menu-right hovercolr"
                       aria-labelledby="navbarDropdown"
                     >
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/facilities_ourdistribution"
                         >
@@ -406,6 +420,7 @@ const Navbars = () => {
                       </li>
                       <li>
                         <NavLink
+                        style={{fontSize:'13px',fontWeight:'500'}}
                           className="dropdown-item"
                           to="/contact_contactus"
                         >

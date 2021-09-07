@@ -23,8 +23,8 @@ const CompanyLogos = () => {
         },
     ]
     return (
-        <div className="colrbck">
-        <div className="container mh-100">
+        <div style={{backgroundColor:'#F5F0EA'}} className="py-2">
+        <div className="container mh-100 ">
         <div>
                 <div className="row">
                 {img.map((ob,index) => {
