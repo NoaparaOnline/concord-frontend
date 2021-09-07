@@ -18,7 +18,7 @@
 }
 
 .backg{
-    background: url(../../../assets/footerbg.jpg) center no-repeat;
+    background: url(../../../Statics/assets/footerbg.jpg) center no-repeat;
     background-size: cover;
     color: #565656;
     color: var(--black);
@@ -143,8 +143,8 @@ h1, h2, h3, h4, h5, h6 {
       padding: 10px 24px 14px 20px;
       border-top-right-radius: 25px;
       border-bottom-right-radius: 25px;
-      border: 1px solid #007bff;
-      background: #007bff;
+      border: 1px solid #0066b3;
+      background: #0066b3;
       color: #fff; }
     .dk-footer-form button:hover {
       cursor: pointer; }

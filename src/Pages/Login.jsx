@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
-import logmod from "../assets/loginmodal.jpg";
+import logmod from "../Statics/assets/loginmodal.jpg";
 
 const Login = (props) => {
   return (
@@ -10,6 +10,7 @@ const Login = (props) => {
           <div className="row ">
             <div className="col-lg-3  d-none d-lg-block  ">
               <img
+                alt=""
                 src={logmod}
                 className=""
                 style={{ minWidth: "50%", width: "375px", height: "500" }}
@@ -25,16 +26,16 @@ const Login = (props) => {
                   {" "}
                 </i>
               </div>
-              <div class="d-flex justify-content-end  me-3 mt-4">
+              <div className="d-flex justify-content-end  me-3 mt-4">
                 <div
-                  class="card cardlogmodel"
-                  style={{ minWidth: "50%", width: "375px", height: "500" }}
+                  className="card cardlogmodel"
+                  style={{ minWidth: "50%", width: "375px", height: "500"}}
                 >
-                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <li class="nav-item text-center">
+                  <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li className="nav-item text-center">
                       {" "}
                       <a
-                        class="nav-link active btl"
+                        className="nav-link active btl"
                         id="pills-home-tab"
                         data-toggle="pill"
                         href="#pills-home"
@@ -42,13 +43,13 @@ const Login = (props) => {
                         aria-controls="pills-home"
                         aria-selected="true"
                       >
-                        Login
+                        <span style={{fontWeight:'600'}}>Login</span>
                       </a>{" "}
                     </li>
-                    <li class="nav-item text-center">
+                    <li className="nav-item text-center">
                       {" "}
                       <a
-                        class="nav-link btr"
+                        className="nav-link btr"
                         id="pills-profile-tab"
                         data-toggle="pill"
                         href="#pills-profile"
@@ -56,109 +57,109 @@ const Login = (props) => {
                         aria-controls="pills-profile"
                         aria-selected="false"
                       >
-                        Signup
+                         <span style={{fontWeight:'600'}}>Sign Up</span>
                       </a>{" "}
                     </li>
                   </ul>
-                  <div class="tab-content" id="pills-tabContent">
+                  <div className="tab-content" id="pills-tabContent">
                     <div
-                      class="tab-pane fade show active"
+                      className="tab-pane fade show active"
                       id="pills-home"
                       role="tabpanel"
                       aria-labelledby="pills-home-tab"
                     >
-                      <div class="form logform px-4 pt-5">
+                      <div className="form logform px-4 pt-5">
                         {" "}
-                        <div class="input-group mb-3 mr-sm-2">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text"><i className="fa fa-user"style={{color:'#555'}}></i></div>
+                        <div className="input-group mb-3 mr-sm-2">
+                          <div className="input-group-prepend">
+                            <div className="input-group-text"><i className="fa fa-user"style={{color:'#555'}}></i></div>
                           </div>
                           <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="inlineFormInputGroupUsername2"
                             placeholder="Username/Email"
                           />
                           </div>
-                        <div class="input-group mb-3 mr-sm-2">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text"><i className="fa fa-lock"style={{color:'#555'}}></i></div>
+                        <div className="input-group mb-3 mr-sm-2">
+                          <div className="input-group-prepend">
+                            <div className="input-group-text"><i className="fa fa-lock"style={{color:'#555'}}></i></div>
                           </div>
                           <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="inlineFormInputGroupUsername2"
                             placeholder="Password"
                           />
                           </div>
 
 
-                          <div class="form-check">
+                          <div className="form-check">
                           <input
-                            class="form-check-input"
+                            className="form-check-input"
                             type="checkbox"
                             id="gridCheck1"
                           />
                           <div className="d-flex justify-content-between">
-                          <label class="form-check-label " for="gridCheck1" style={{fontSize:'14px'}}>
+                          <label className="form-check-label " for="gridCheck1" style={{fontSize:'14px'}}>
                             <strong>Remember me</strong>
                           </label>
-                          <label class="form-check-label" for="gridCheck1" style={{fontSize:'17px'}}>
+                          <label className="form-check-label" for="gridCheck1" style={{fontSize:'17px'}}>
                             Forgot Password ?
                           </label>
                           </div>
                         </div>
 
-                        <button class="btn btn-primary rounded-pill btn-block" style={{color:'#fff',backgroundColor:'#0066b3',fontSize:'15px' ,fontWeight:'500'}}>SIGN IN</button>{" "}
+                        <button className="btn btn-primary rounded-pill btn-block" style={{color:'#fff',backgroundColor:'#0066b3',fontSize:'15px' ,fontWeight:'500'}}>SIGN IN</button>{" "}
                       </div>
                     </div>
                     <div
-                      class="tab-pane fade"
+                      className="tab-pane fade"
                       id="pills-profile"
                       role="tabpanel"
                       aria-labelledby="pills-profile-tab"
                     >
-                      <div class="form logform px-4">
+                      <div className="form logform px-4">
                         {" "}
                         <label
-                          class="sr-only"
+                          className="sr-only"
                           for="inlineFormInputGroupUsername2"
                         >
                           Username
                         </label>
-                        <div class="input-group mb-3 mr-sm-2">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text"><i className="fa fa-envelstyle={{color:'#555'}}ope"></i></div>
+                        <div className="input-group mb-3 mr-sm-2">
+                          <div className="input-group-prepend">
+                            <div className="input-group-text"><i className="fa fa-envelope" style={{color:'#555'}}></i></div>
                           </div>
                           <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="inlineFormInputGroupUsername2"
                             placeholder="Email"
                           />
                         </div>{" "}
                         <div className="row">
                           <div className="col-lg-6">
-                            <div class="input-group mb-3 mr-sm-2">
-                              <div class="input-group-prepend">
-                                <div class="input-group-text"><i className="fa fa-user"style={{color:'#555'}}></i></div>
+                            <div className="input-group mb-3 mr-sm-2">
+                              <div className="input-group-prepend">
+                                <div className="input-group-text"><i className="fa fa-user"style={{color:'#555'}}></i></div>
                               </div>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="inlineFormInputGroupUsername2"
                                 placeholder="Firstname"
                               />
                             </div>{" "}
                           </div>
                           <div className="col-lg-6">
-                            <div class="input-group mb-3 mr-sm-2">
-                              <div class="input-group-prepend">
-                                <div class="input-group-text"><i className="fa fa-user"style={{color:'#555'}}></i></div>
+                            <div className="input-group mb-3 mr-sm-2">
+                              <div className="input-group-prepend">
+                                <div className="input-group-text"><i className="fa fa-user"style={{color:'#555'}}></i></div>
                               </div>
                               <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 id="inlineFormInputGroupUsername2"
                                 placeholder="Lastname"
                               />
@@ -166,56 +167,56 @@ const Login = (props) => {
                           </div>
                         </div>
                         <label
-                          class="sr-only"
+                          className="sr-only"
                           for="inlineFormInputGroupUsername2"
                         >
                           Username
                         </label>
-                        <div class="input-group mb-3 mr-sm-2">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text"><i className="fa fa-lock"style={{color:'#555'}} ></i></div>
+                        <div className="input-group mb-3 mr-sm-2">
+                          <div className="input-group-prepend">
+                            <div className="input-group-text"><i className="fa fa-lock"style={{color:'#555'}} ></i></div>
                           </div>
                           <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="inlineFormInputGroupUsername2"
                             placeholder="Password"
                           />
                         </div>{" "}
                         <label
-                          class="sr-only"
+                          className="sr-only"
                           for="inlineFormInputGroupUsername2"
                         >
                           Username
                         </label>
-                        <div class="input-group mb-3 mr-sm-2">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text"><i className="fa fa-lock"style={{color:'#555'}}></i></div>
+                        <div className="input-group mb-3 mr-sm-2">
+                          <div className="input-group-prepend">
+                            <div className="input-group-text"><i className="fa fa-lock"style={{color:'#555'}}></i></div>
                           </div>
                           <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             id="inlineFormInputGroupUsername2"
                             placeholder="Confirm Password"
                           />
                         </div>{" "}
-                        <div class="form-check">
+                        <div className="form-check">
                           <input
-                            class="form-check-input"
+                            className="form-check-input"
                             type="checkbox"
                             id="gridCheck1"
                           />
-                          <label class="form-check-label" for="gridCheck1" style={{fontSize:'14px'}}>
+                          <label className="form-check-label" for="gridCheck1" style={{fontSize:'14px'}}>
                             Subscribe to our newsletter
                           </label>
                         </div>
-                        <div class="form-check">
+                        <div className="form-check">
                           <input
-                            class="form-check-input"
+                            className="form-check-input"
                             type="checkbox"
                             id="gridCheck1"
                           />
-                          <label class="form-check-label" for="gridCheck1" style={{fontSize:'14px'}}>
+                          <label className="form-check-label" for="gridCheck1" style={{fontSize:'14px'}}>
                             I accept the Terms of Service and Privacy Policy
                           </label>
                         </div>
@@ -223,7 +224,7 @@ const Login = (props) => {
   
 
 
-                        <button class="btn btn-primary rounded-pill btn-block" style={{color:'#fff',backgroundColor:'#0066b3',fontSize:'15px' ,fontWeight:'500'}}>SIGN UP</button>{" "}
+                        <button className="btn btn-primary rounded-pill btn-block" style={{color:'#fff',backgroundColor:'#0066b3',fontSize:'15px' ,fontWeight:'500'}}>SIGN UP</button>{" "}
                       </div>
                     </div>
                   </div>

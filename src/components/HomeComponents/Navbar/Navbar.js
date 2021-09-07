@@ -1,10 +1,10 @@
 import React,{useState} from "react";
 import "./Navbar.css";
-import logo from "../../../assets/logo.png";
-import langlogo from "../../../assets/languagelogo.png";
-import enlang from "../../../assets/languages/english.jpg";
-import arlang from "../../../assets/languages/arbic.jpg";
-import bnlang from "../../../assets/languages/bangali.jpg";
+import logo from "../../../Statics/assets/logo.png";
+import langlogo from "../../../Statics/assets/languagelogo.png";
+import enlang from "../../../Statics/assets/languages/english.jpg";
+import arlang from "../../../Statics/assets/languages/arbic.jpg";
+import bnlang from "../../../Statics/assets/languages/bangali.jpg";
 import { NavLink, Link } from "react-router-dom";
 import Login from "../../../Pages/Login";
 
@@ -17,10 +17,10 @@ const Navbars = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top custom-nav ">
+      <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top custom-nav ">
         <div className="container">
           <Link to="/">
-            <img alt="" src={logo} style={{ width: 280, height: 60 }} />
+            <img alt="" src={logo} style={{ minWidth: '150px', minHeight: '40px',height:60 }} />
           </Link>
 
           <button

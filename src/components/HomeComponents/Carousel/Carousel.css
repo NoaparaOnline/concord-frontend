@@ -158,9 +158,12 @@
   color:#fff;
   font-family: 'Dancing Script', cursive !important;
 }
-.typograpy_btn{
-  font-weight: 700 !important;
+
+.btn_text_typography{
+  font-weight: 600 !important;
   text-transform: uppercase;
+  font-size: 12px !important;
+  padding: 12px 30px !important;
 }
 
 

@@ -24,10 +24,9 @@
 }
 
 .carddivslider {
-    height: 160px;
-    width: 150px;
+    height: 50%;
+    width: 60%;
     position: relative;
-    padding: 35px;
     border-radius: 12%;
     border: 2px solid rgb(204, 197, 197);
 }
@@ -48,37 +47,7 @@
     position: absolute;
 }
 
-@media (max-width: 575.98px) {
-    .carddivslider {
-        height: 130px;
-        width: 150px;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .carddivslider {
-        height: 100px;
-        width: 150px;
-    }
-}
-
-@media (max-width: 991.98px) {
-    .carddivslider {
-        height: 130px;
-        width: 150px;
-    }
-}
-
-@media screen and (device-width: 360px) and (device-width: 320px) {
-    .carddivslider {
-        height: 180px;
-        width: 70px;
-    }
-}
-
-@media (device-width: 411px) {
-    .carddivslider {
-        height: 200px;
-        width: 80px;
-    }
+.imag_style{
+    width: 150px;
+    height: 150px;
 }

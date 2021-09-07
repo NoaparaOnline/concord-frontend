@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import first from "../../../assets/fac-QC.jpg";
-import second from"../../../assets/fac-RD.jpg";
-import third from "../../../assets/warehouse-1.jpg";
-import fourth from"../../../assets/fac-production.jpg";
+import first from "../../../Statics/assets/fac-QC.jpg";
+import second from"../../../Statics/assets/fac-RD.jpg";
+import third from "../../../Statics/assets/warehouse-1.jpg";
+import fourth from"../../../Statics/assets/fac-production.jpg";
 import "./Cards.css";
 const Cards = () => {
   const cards = [
@@ -12,28 +12,28 @@ const Cards = () => {
       name: "Production",
       imageURL: first,
       text: "Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
-      link: "#",
+      link: "/facilities_product",
     },
     {
       id:1,
       name: "Research & Development",
       imageURL: second,
       text: "Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
-      link: "#",
+      link: "/facilities_researchdevrsttime",
     },
     {
       id:2,
       name: "Quality Control",
       imageURL: third,
       text: "Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
-      link: "#",
+      link: "/facilities_quality",
     },
     {
       id:3,
       name: "Warehouse",
       imageURL: fourth,
       text: "Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
-      link: "#",
+      link: "/facilities_warhouse",
     },
   ];
   return (

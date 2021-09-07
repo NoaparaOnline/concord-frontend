@@ -1,16 +1,16 @@
 import React from "react";
 import { CompanyLogos } from "../components";
-import bannerimg from "../assets/parallax_contact.jpg";
-import flag1 from "../assets/flags/f1.jpg";
-import flag2 from "../assets/flags/f2.jpg";
-import flag3 from "../assets/flags/f3.jpg";
-import flag4 from "../assets/flags/f4.jpg";
-import flag5 from "../assets/flags/f5.jpg";
-import flag6 from "../assets/flags/f6.jpg";
-import flag7 from "../assets/flags/f7.jpg";
-import flag8 from "../assets/flags/f8.jpg";
-import flag9 from "../assets/flags/f9.jpg";
-import flag10 from "../assets/flags/f10.jpg";
+import bannerimg from "../Statics/assets/parallax_contact.jpg";
+import flag1 from "../Statics/assets/flags/f1.jpg";
+import flag2 from "../Statics/assets/flags/f2.jpg";
+import flag3 from "../Statics/assets/flags/f3.jpg";
+import flag4 from "../Statics/assets/flags/f4.jpg";
+import flag5 from "../Statics/assets/flags/f5.jpg";
+import flag6 from "../Statics/assets/flags/f6.jpg";
+import flag7 from "../Statics/assets/flags/f7.jpg";
+import flag8 from "../Statics/assets/flags/f8.jpg";
+import flag9 from "../Statics/assets/flags/f9.jpg";
+import flag10 from "../Statics/assets/flags/f10.jpg";
 import { Link } from 'react-router-dom'
 
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
@@ -64,7 +64,7 @@ const GlobalOPerations = () => {
       subDash: '/',
       subLink: '/'
     },
-    
+
 
   ];
 
@@ -75,6 +75,10 @@ const GlobalOPerations = () => {
         heading={"Global Operation"}
         subHeading={`GLOBAL OPERATION`}
         LinksBan={LinksBan}
+        height={"400px"}
+        backgroundSize={"100% 400px"}
+        conmarpad={"mt-5 pt-5"}
+        fontsize={"60px"}
       />
 
       <div className="container">
@@ -85,7 +89,7 @@ const GlobalOPerations = () => {
                 return (
                   <>
                     <div className="col-lg-5 col-md-6 col-sm-6 me-3  d-flex justify-content-center ">
-                      <img className="mb-3 me-5 img-fluid boxImgShadow" src={ob.imageURL} />
+                      <img className="mb-3 me-5 img-fluid boxImgShadow" alt="" src={ob.imageURL} />
                     </div>
                   </>
                 );
@@ -93,33 +97,33 @@ const GlobalOPerations = () => {
             </div>
           </div>
           <div className="col-lg-7 col-sm-12">
-           
-
-                    <div className="mb-4">
-
-                    <strong className="Typography_styling">Concord Pharmaceuticals Limited (CPL),</strong> a leading human medicine manufacturer in Bangladesh. We always thrive to introduce top notch quality human medicine for the health & wellbeing of the nation worldwide. With the philosophy “Better medicine Better life…” CPL has started its export journey since 2015. Hence its efforts to improve quality never ends up. We continuously sets next level of standards and feels passionate to achieve all that. All the manufacturing processes are followed by <strong >ISO 9001:2015 & WHO-GMP</strong> guidelines to produce quality products.
-
-                    </div>
-                    <div className="mb-4">
-
-                    <strong >CPL</strong> has 112 dosage form of different therapeutic classes like Antibiotics, Antiviral, Antidiabetics, Anti-Ulcerants, Analgesics & Antipyretics, Antihistamine, Antidepressant, Cardiovascular, Vitamins & minerals, NSAIDs etc.
-                    </div>
-                    <div className="mb-4">
-
-                    Presently <strong >CPL</strong> products are exporting to Bhutan, Cambodia, Myanmar, Sri Lanka, Vietnam, Thailand, Liberia, Yemen, Afghanistan and Congo now. During this marvelous journey the company has achieved accreditation from Ministry of Health, Cambodia and currently holds the Yemen GMP certificate.
-                    </div>
-                    <div className="mb-4">
-
-                    We’ve consistently been recognized in the international arena for our exceptional outcomes and service for worldwide wholesalers, government agencies, major importers, chain of drug stores, contract manufacturing and relief organizations. We are concerned to tie-up with new business partners and we welcome prospective agents for our medicines.
-                    </div>
-                    <div className="mb-4">
-
-                    For any further information or export:
-                    <div><span>Email: <Link>Cplibd.export@gmail.com</Link></span></div>
-                    <div><span>Cell: +8801991145006 (Whatsapp & Viber associated)</span></div>
 
 
-                    </div>
+            <div className="mb-4">
+
+              <strong className="Typography_styling">Concord Pharmaceuticals Limited (CPL),</strong> a leading human medicine manufacturer in Bangladesh. We always thrive to introduce top notch quality human medicine for the health & wellbeing of the nation worldwide. With the philosophy “Better medicine Better life…” CPL has started its export journey since 2015. Hence its efforts to improve quality never ends up. We continuously sets next level of standards and feels passionate to achieve all that. All the manufacturing processes are followed by <strong >ISO 9001:2015 & WHO-GMP</strong> guidelines to produce quality products.
+
+            </div>
+            <div className="mb-4">
+
+              <strong >CPL</strong> has 112 dosage form of different therapeutic classes like Antibiotics, Antiviral, Antidiabetics, Anti-Ulcerants, Analgesics & Antipyretics, Antihistamine, Antidepressant, Cardiovascular, Vitamins & minerals, NSAIDs etc.
+            </div>
+            <div className="mb-4">
+
+              Presently <strong >CPL</strong> products are exporting to Bhutan, Cambodia, Myanmar, Sri Lanka, Vietnam, Thailand, Liberia, Yemen, Afghanistan and Congo now. During this marvelous journey the company has achieved accreditation from Ministry of Health, Cambodia and currently holds the Yemen GMP certificate.
+            </div>
+            <div className="mb-4">
+
+              We’ve consistently been recognized in the international arena for our exceptional outcomes and service for worldwide wholesalers, government agencies, major importers, chain of drug stores, contract manufacturing and relief organizations. We are concerned to tie-up with new business partners and we welcome prospective agents for our medicines.
+            </div>
+            <div className="mb-4">
+
+              For any further information or export:
+              <div><span>Email: <Link>Cplibd.export@gmail.com</Link></span></div>
+              <div><span>Cell: +8801991145006 (Whatsapp & Viber associated)</span></div>
+
+
+            </div>
 
 
           </div>

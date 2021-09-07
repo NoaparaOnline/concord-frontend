@@ -1,12 +1,12 @@
 import React from 'react'
 import { CompanyLogos,Heading } from '../components'
-import bannerimg from '../assets/AboutBanner.jpg';
+import bannerimg from '../Statics/assets/productsbanner.jpg';
 import BannerWithText from '../components/ReusableComponents/BannerImgComponents/BannerImgComponents'
 import ZoominCards from '../components/ReusableComponents/ZoominCards';
-import productscard1 from '../assets/products/p1.svg'
-import productscard2 from '../assets/products/p2.svg'
-import productscard3 from '../assets/products/p3.svg'
-import productscard4 from '../assets/products/p4.svg'
+import productscard1 from '../Statics/assets/products/p1.svg'
+import productscard2 from '../Statics/assets/products/p2.svg'
+import productscard3 from '../Statics/assets/products/p3.svg'
+import productscard4 from '../Statics/assets/products/p4.svg'
 
 
   
@@ -57,6 +57,10 @@ const Products = () => {
     <div>
     <BannerWithText imgSrc={bannerimg} heading={'Products'} subHeading={`PRODUCTS`}
     LinksBan={LinksBan}
+    height={"400px"}
+    backgroundSize={"100% 400px"}
+    conmarpad={"mt-5 pt-5"}
+    fontsize={"60px"}
     />
     <Heading heading={"Products"}/>
         

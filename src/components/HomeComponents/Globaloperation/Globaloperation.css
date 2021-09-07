@@ -67,7 +67,7 @@
     font-style: italic;
   }
   .test-back {
-    background-image: url("../../../assets/bigCardimag1.jpg");
+    background-image: url("../../../Statics/assets/bigCardimag1.jpg");
     background-size: cover;
     border-radius: 20px;
     background-clip: border-box;

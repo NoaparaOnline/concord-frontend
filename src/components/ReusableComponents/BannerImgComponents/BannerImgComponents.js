@@ -11,12 +11,12 @@ const BannerWithText = (props) => {
           style={{
             backgroundImage: `linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${props?.imgSrc})`,
             objectFit: "contain",
-            height: "400px",
-            backgroundSize: "100% 400px",
+            height: props?.height,
+            backgroundSize: props?.backgroundSize,
           }}
         >
-          <div className="mt-5 pt-5">
-            <h1 className="text-center Typograpy_Text_h1">{props?.heading}</h1>
+          <div className={props?.conmarpad}>
+            <h1 className="text-center Typograpy_Text_h1" style={{fontSize: props.fontsize}}>{props?.heading}</h1>
             <p className="text-center mt-3 Typograpy_Text_h4">
             {props?.LinksBan.map((ob,index) => {
             return (  

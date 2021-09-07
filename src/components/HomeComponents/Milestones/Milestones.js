@@ -1,7 +1,6 @@
 import React from 'react'
 import Heading from '../Heading/Heading'
 import './Milestones.css'
-import { Link } from 'react-router-dom'
 const Milestones = ({ heading ,milestone_data,button,colorclass}) => {
 
 

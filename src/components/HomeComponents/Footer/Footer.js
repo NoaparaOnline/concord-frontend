@@ -42,22 +42,22 @@ const Footer = () => {
             
           </li>
           <li>
-          
-              <Link to='/teleMedicine' className="linkFoot">
+          {/* Telemedicine Link */}
+              <Link to='#' className="linkFoot">
                 Tele Medicine
               </Link>
             
           </li>
           <li>
           
-              <Link to='/' className="linkFoot">
+              <Link to='/media' className="linkFoot">
                 Media
               </Link>
             
           </li>
           <li>
           
-              <Link to="/media" className="linkFoot">
+              <Link to="/contact" className="linkFoot">
                 Contact Us
               </Link>
             
@@ -130,7 +130,7 @@ const Footer = () => {
                                         <div className="col dk-footer-form">
                                             <input type="email" className="form-control" placeholder="Your Email..."/>
                                             <button type="submit">
-                                                SUBSCRIBE
+                                                <span style={{fontSize:'12px',padding:'8px 6px' ,fontWeight:'500'}}>SUBSCRIBE</span>
                                             </button>
                                         </div>
                                     </div>
@@ -138,7 +138,7 @@ const Footer = () => {
             <h5 className="fhead mt-2">Download Apps</h5>
             <figure style={{ display: "flex", margin: "12px" }}>
              
-            <Link to='/' >
+            <Link to='#' >
              
               <img
               alt=""
@@ -152,7 +152,7 @@ const Footer = () => {
 
 
 
-              <Link to='/' >
+              <Link to='#' >
               <img
               alt=""
                 loading="lazy"

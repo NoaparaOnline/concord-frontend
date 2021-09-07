@@ -1,5 +1,5 @@
 import React from "react";
-import imgss from '../../../assets/bigCardimag.jpg'
+import imgss from '../../../Statics/assets/bigCardimag.jpg'
 import { Link } from "react-router-dom";
 import "./Globaloperation.css";
 const Globaloperation = () => {
@@ -37,7 +37,7 @@ const Globaloperation = () => {
               </strong>
               , a leading human medicine manufacturer in Bangladesh. We always thrive to introduce top notch quality
             </h4>
-            <Link to="/" className="btn btn-primary d-flex justify-content-center rounded-pill colr_btn m-auto mb-3">
+            <Link to="/globalOperations" className="btn btn-primary d-flex justify-content-center rounded-pill colr_btn m-auto mb-3">
               Read More
             </Link>
           </div>

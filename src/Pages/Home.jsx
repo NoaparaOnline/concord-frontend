@@ -73,12 +73,12 @@ const Home = () => {
           <>
             <div className="row">
               <div className="col-md-12 d-flex justify-content-center my-4 text-primary">
-                <Link to='/' style={{ textDecoration: 'none', fontWeight: 550, marginTop: 0 }} className="dd rounded-pill"><span>VIEW MORE</span></Link>
+                <Link to='/media_milestone' style={{ textDecoration: 'none', fontWeight: 550, marginTop: 0 }} className="dd rounded-pill"><span>VIEW MORE</span></Link>
               </div>
             </div>
           </>
         }
-        colorclass={"colrbck"}
+        colorclassName={"colrbck"}
       />
 
       <NearestDeliveryCenter heading={label} />

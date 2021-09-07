@@ -13,24 +13,24 @@ import Media from "./Pages/Media";
 import Products from "./Pages/Products";
 import Sitemap from "./Pages/Sitemap";
 import TeleMedicine from "./Pages/TeleMedicine";
-import About_message_chairmen from "./Pages/About_message_chairmen";
-import About_vision_mission from "./Pages/About_vision_mission";
-import Contact_contactus from "./Pages/Contact_contactus";
-import Contact_ourdistribution from "./Pages/Contact_ourdistribution";
-import Facilities_ourdistribution from "./Pages/Facilities_ourdistribution";
-import Facilities_product from "./Pages/Facilities_product";
-import Facilities_quality from "./Pages/Facilities_quality";
-import Facilities_researchdevrsttime from "./Pages/Facilities_researchdevrsttime";
-import Facilities_warhouse from "./Pages/Facilities_warhouse";
-import Media_milestone from "./Pages/Media_milestone";
-import Media_photo from "./Pages/Media_photo";
-import Media_socialmedia from "./Pages/Media_socialmedia";
-import Media_socialresponsiblities from "./Pages/Media_socialresponsiblities";
-import Media_video from "./Pages/Media_video";
-import Products_bygeneric from "./Pages/Products_bygeneric";
-import Products_bytrade from "./Pages/Products_bytrade";
-import Products_firsttime from "./Pages/Products_firsttime";
-import Products_therapeutic from "./Pages/Products_therapeutic";
+import Aboutmessagechairmen from "./Pages/Aboutmessagechairmen";
+import Aboutvisionmission from "./Pages/Aboutvisionmission";
+import Contactcontactus from "./Pages/Contactcontactus";
+import Contactourdistribution from "./Pages/Contactourdistribution";
+import Facilitiesourdistribution from "./Pages/Facilitiesourdistribution";
+import Facilitiesproduct from "./Pages/Facilitiesproduct";
+import Facilitiesquality from "./Pages/Facilitiesquality";
+import Facilitiesresearchdevrsttime from "./Pages/Facilitiesresearchdevrsttime";
+import Facilitieswarhouse from "./Pages/Facilitieswarhouse";
+import Mediamilestone from "./Pages/Mediamilestone";
+import Mediaphoto from "./Pages/Mediaphoto";
+import Mediasocialmedia from "./Pages/Mediasocialmedia";
+import Mediasocialresponsiblities from "./Pages/Mediasocialresponsiblities";
+import Mediavideo from "./Pages/Mediavideo";
+import Productsbygeneric from "./Pages/Productsbygeneric";
+import Productsbytrade from "./Pages/Productsbytrade";
+import Productsfirsttime from "./Pages/Productsfirsttime";
+import Productstherapeutic from "./Pages/Productstherapeutic";
 
 function App() {
 
@@ -65,6 +65,9 @@ function App() {
         </Route>
         {/*          FixedRight             */}
 
+        <Route exact path="/">
+          <FixedRight/>
+        </Route>
         <Route exact path="/:page">
           <FixedRight/>
         </Route>
@@ -84,11 +87,11 @@ function App() {
         {/*          Main About Page SubMenu Page             */}
 
         <Route exact path="/about_vision_mission">
-          <About_vision_mission />
+          <Aboutvisionmission />
         </Route>
 
         <Route exact path="/about_message_chairmen">
-          <About_message_chairmen />
+          <Aboutmessagechairmen />
         </Route>
 
         {/*          Careers Page              */}
@@ -106,11 +109,11 @@ function App() {
         {/*          Contact Page SubMenu Page             */}
 
         <Route exact path="/contact_contactus">
-          <Contact_contactus />
+          <Contactcontactus />
         </Route>
 
         <Route exact path="/contact_ourdistribution">
-          <Contact_ourdistribution />
+          <Contactourdistribution />
         </Route>
 
         {/*          Facilities Page             */}
@@ -122,23 +125,23 @@ function App() {
         {/*          Facilities SubMenu Page          */}
 
         <Route exact path="/facilities_ourdistribution">
-          <Facilities_ourdistribution />
+          <Facilitiesourdistribution />
         </Route>
 
         <Route exact path="/facilities_product">
-          <Facilities_product />
+          <Facilitiesproduct />
         </Route>
 
         <Route exact path="/facilities_quality">
-          <Facilities_quality />
+          <Facilitiesquality />
         </Route>
 
         <Route exact path="/facilities_researchdevrsttime">
-          <Facilities_researchdevrsttime />
+          <Facilitiesresearchdevrsttime />
         </Route>
 
         <Route exact path="/facilities_warhouse">
-          <Facilities_warhouse />
+          <Facilitieswarhouse />
         </Route>
 
         {/*          GlobalOperation Page          */}
@@ -156,23 +159,23 @@ function App() {
         {/*          Media Submenu Page          */}
 
         <Route exact path="/media_milestone">
-          <Media_milestone />
+          <Mediamilestone />
         </Route>
 
         <Route exact path="/media_photo">
-          <Media_photo />
+          <Mediaphoto />
         </Route>
 
         <Route exact path="/media_socialmedia">
-          <Media_socialmedia />
+          <Mediasocialmedia />
         </Route>
 
         <Route exact path="/media_socialresponsiblities">
-          <Media_socialresponsiblities />
+          <Mediasocialresponsiblities />
         </Route>
 
         <Route exact path="/media_video">
-          <Media_video />
+          <Mediavideo />
         </Route>
 
 
@@ -186,19 +189,19 @@ function App() {
         {/*          Products Submenu Page          */}
 
         <Route exact path="/products_bygeneric">
-          <Products_bygeneric />
+          <Productsbygeneric />
         </Route>
 
         <Route exact path="/products_bytrade">
-          <Products_bytrade />
+          <Productsbytrade />
         </Route>
 
         <Route exact path="/products_firsttime">
-          <Products_firsttime />
+          <Productsfirsttime />
         </Route>
 
         <Route exact path="/products_therapeutic">
-          <Products_therapeutic />
+          <Productstherapeutic />
         </Route>
 
 

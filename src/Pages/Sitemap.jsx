@@ -1,7 +1,7 @@
 import React from "react";
-import { CompanyLogos, Heading } from "../components";
-import bannerimg from "../assets/sitemapbanner.jpg";
-import sitemap from "../assets/sitemap.jpg";
+import { CompanyLogos } from "../components";
+import bannerimg from "../Statics/assets/sitemapbanner.jpg";
+import sitemap from "../Statics/assets/sitemap.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Link } from "react-router-dom";
 
@@ -20,10 +20,14 @@ const Sitemap = () => {
         heading={"Site map"}
         subHeading={`SITE MAP`}
         LinksBan={LinksBan}
+        height={"400px"}
+        backgroundSize={"100% 400px"}
+        conmarpad={"mt-5 pt-5"}
+        fontsize={"60px"}
       />
       
       <div className="container mb-5" style={{textAlign:'center'}}>
-<img className="img-fluid" src={sitemap} usemap="#image-map"/>
+<img className="img-fluid" alt="" src={sitemap} usemap="#image-map"/>
 
 <map name="image-map">
     <Link to='/'><area target="_blank" alt="Home" title="Home" coords="628,0,751,40" shape="rect"/></Link>
@@ -48,11 +52,11 @@ const Sitemap = () => {
     <Link to='/facilities_quality'><area target="_blank" alt="Quality Control" title="Quality Control" coords="559,324,742,356" shape="rect"/></Link>
     <Link to='/facilities_warhouse'><area target="_blank" alt="Warehouse" title="Warehouse"  coords="559,398,742,433" shape="rect"/></Link>
     <Link to='/facilities_ourdistribution'><area target="_blank" alt="Our Distribution Network" title="Our Distribution Network" coords="560,474,743,509" shape="rect"/></Link>
-    <Link to='/media_video'><area target="_blank" alt="Video" title="Video"  coords="789,169,976,210" shape="rect"/></Link>
+    <Link to='#'><area target="_blank" alt="Video" title="Video"  coords="789,169,976,210" shape="rect"/></Link>
     <Link to='/media_photo'><area target="_blank" alt="Photo" title="Photo"  coords="787,247,977,284" shape="rect"/></Link>
     <Link to='/media_socialmedia'><area target="_blank" alt="Social Media Post" title="Social Media Post"  coords="788,322,977,360" shape="rect"/></Link>
     <Link to='/media_milestone'><area target="_blank" alt="Milestones" title="Milestones"  coords="788,401,975,434" shape="rect"/></Link>
-    <Link to='/media_socialresponsiblities'><area target="_blank" alt="Social Responsibilities" title="Social Responsibilities"  coords="786,472,977,508" shape="rect"/></Link>
+    <Link to='#'><area target="_blank" alt="Social Responsibilities" title="Social Responsibilities"  coords="786,472,977,508" shape="rect"/></Link>
     <Link to='/facilities_ourdistribution'><area target="_blank" alt="Our Distribution Network" title="Our Distribution Network"  coords="1018,172,1205,211" shape="rect"/></Link>
     <Link to='/contact_contactus'><area target="_blank" alt="Contact Us" title="Contact Us"  coords="1017,249,1207,282" shape="rect"/></Link>
 </map>

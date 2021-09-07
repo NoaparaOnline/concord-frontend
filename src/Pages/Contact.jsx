@@ -1,10 +1,10 @@
 import React from 'react'
 import { CompanyLogos, Heading } from '../components'
-import bannerimg from '../assets/ContactBanner.jpg';
+import bannerimg from '../Statics/assets/ContactBanner.jpg';
 import BannerWithText from '../components/ReusableComponents/BannerImgComponents/BannerImgComponents'
 import ZoominCards from '../components/ReusableComponents/ZoominCards';
-import contactcard1 from '../assets/contact/contact.svg'
-import contactcard2 from '../assets/contact/distribution.svg'
+import contactcard1 from '../Statics/assets/contact/contact.svg'
+import contactcard2 from '../Statics/assets/contact/distribution.svg'
 
 
 const Contact = () => {
@@ -41,6 +41,10 @@ const Contact = () => {
           heading={'Contact'}
           subHeading={`Contact`}
           LinksBan={LinksBan}
+          height={"400px"}
+          backgroundSize={"100% 400px"}
+          conmarpad={"mt-5 pt-5"}
+          fontsize={"60px"}
           />
         <Heading heading={"Contact"} />
   

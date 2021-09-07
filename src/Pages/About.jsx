@@ -1,12 +1,12 @@
 import React from 'react'
 import { CompanyLogos, Heading } from '../components'
-import bannerimg from '../assets/AboutBanner.jpg';
+import bannerimg from '../Statics/assets/AboutBanner.jpg';
 import BannerWithText from '../components/ReusableComponents/BannerImgComponents/BannerImgComponents'
 import ZoominCards from '../components/ReusableComponents/ZoominCards';
-import Aboutcard1 from '../assets/mission-vissioncard1.svg'
-import Aboutcard2 from '../assets/health-icon2.svg'
-import Aboutcard3 from '../assets/profile3.svg'
-import Aboutcard4 from '../assets/Chairman-message4.svg'
+import Aboutcard1 from '../Statics/assets/mission-vissioncard1.svg'
+import Aboutcard2 from '../Statics/assets/health-icon2.svg'
+import Aboutcard3 from '../Statics/assets/profile3.svg'
+import Aboutcard4 from '../Statics/assets/Chairman-message4.svg'
 
 
 const About = () => {
@@ -55,7 +55,11 @@ const About = () => {
         heading={'About Us'}
         subHeading={`about us`}
         LinksBan={LinksBan}
-        />
+        height={"400px"}
+        backgroundSize={"100% 400px"}
+        conmarpad={"mt-5 pt-5"}
+        fontsize={"60px"}
+      />
       <Heading heading={"About Us"} />
 
 

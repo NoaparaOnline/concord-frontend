@@ -1,8 +1,8 @@
 import React from 'react'
-import clogo1 from '../../../assets/clogo1.png'
-import clogo2 from '../../../assets/clogo2.png'
-import clogo3 from '../../../assets/clogo3.png'
-import clogo4 from '../../../assets/clogo4.png'
+import clogo1 from '../../../Statics/assets/clogo1.png'
+import clogo2 from '../../../Statics/assets/clogo2.png'
+import clogo3 from '../../../Statics/assets/clogo3.png'
+import clogo4 from '../../../Statics/assets/clogo4.png'
 const CompanyLogos = () => {
     const img = [
         {

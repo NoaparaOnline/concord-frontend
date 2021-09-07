@@ -1,13 +1,13 @@
 import React from 'react'
 import { CompanyLogos, Heading } from '../components'
-import bannerimg from '../assets/MediaBanner.jpg';
+import bannerimg from '../Statics/assets/MediaBanner.jpg';
 import BannerWithText from '../components/ReusableComponents/BannerImgComponents/BannerImgComponents'
 import ZoominCards from '../components/ReusableComponents/ZoominCards';
-import mediacard1 from '../assets/Media/Video.svg'
-import mediacard2 from '../assets/Media/photo.svg'
-import mediacard3 from '../assets/Media/post.svg'
-import mediacard4 from '../assets/Media/milestone.svg'
-import mediacard5 from '../assets/Media/responsibilities.svg'
+import mediacard1 from '../Statics/assets/Media/Video.svg'
+import mediacard2 from '../Statics/assets/Media/photo.svg'
+import mediacard3 from '../Statics/assets/Media/post.svg'
+import mediacard4 from '../Statics/assets/Media/milestone.svg'
+import mediacard5 from '../Statics/assets/Media/responsibilities.svg'
 
 const Media = () => {
    
@@ -61,6 +61,10 @@ const Media = () => {
           heading={'Media'}
           subHeading={`MEDIA`}
           LinksBan={LinksBan}
+          height={"400px"}
+          backgroundSize={"100% 400px"}
+          conmarpad={"mt-5 pt-5"}
+          fontsize={"60px"}
           />
         <Heading heading={"Media"} />
   

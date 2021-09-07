@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CompanyLogos, Heading } from "../components";
+import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 
 const Careers = () => {
@@ -38,6 +38,10 @@ const Careers = () => {
         heading={"ALL JOBS"}
         subHeading={`JOBS`}
         LinksBan={LinksBan}
+        height={""}
+        backgroundSize={""}
+        conmarpad={""}
+        fontsize={"60px"}
       />
 
       <div className="container mb-5">

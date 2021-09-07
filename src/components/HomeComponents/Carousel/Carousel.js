@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import whitebglogo from "../../../assets/concordlogo.png";
-import carousel1 from "../../../assets/carousel1.jpg";
-import carousel2 from "../../../assets/carousel2.jpg";
-import carousel4 from "../../../assets/carousel4.jpg";
+import whitebglogo from "../../../Statics/assets/concordlogo.png";
+import carousel1 from "../../../Statics/assets/carousel1.jpg";
+import carousel2 from "../../../Statics/assets/carousel2.jpg";
+import carousel4 from "../../../Statics/assets/carousel4.jpg";
 import { Link } from 'react-router-dom'
 
 import "./Carousel.css";
@@ -15,6 +15,7 @@ const Slideshow = () => {
       logo: whitebglogo,
       text: "Better Medicine Better Life",
       btn: "GET STARTED NOW",
+      btnlink: "#",
     },
     {
       title: "10 INTERNATIONAL DESTINATIONS",
@@ -22,6 +23,7 @@ const Slideshow = () => {
       logo: "",
       text: "Exporting Quality",
       btn: "Know More",
+      btnlink: "#",
     },
     {
       title: "NATIONWIDE DISTRIBUTION NETWORK",
@@ -29,6 +31,7 @@ const Slideshow = () => {
       logo: "",
       text: "Delivering all over the country",
       btn: "Know More",
+      btnlink: "/globalOperations",
     },
    
   ];
@@ -79,7 +82,7 @@ const Slideshow = () => {
 
                     <p className={index === 0 ? `typograpy_title0` : `typograpy_title`}> {each.text}</p>
                   </div>
-                  <Link to='/' className="btn btn-primary rounded-pill me-auto pt-3 pb-3  typograpy_btn " >
+                  <Link to={each.btnlink} className="btn btn-primary rounded-pill me-auto pt-2 pb-2  " >
                     <span className="btn_text_typography">{each.btn}</span>
                   </Link>
                 </div>
