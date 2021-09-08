@@ -14,7 +14,7 @@ const Products_bytrade = () => {
     {
       subLinkName: "Products",
       subDash: "/",
-      subLink: "/products0",
+      subLink: "/products",
     },
   ];
 

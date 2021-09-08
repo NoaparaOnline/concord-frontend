@@ -15,7 +15,7 @@ const Products_therapeutic = () => {
         {
           subLinkName: "Products",
           subDash: "/",
-          subLink: "/products0",
+          subLink: "/products",
         },
       ];
     

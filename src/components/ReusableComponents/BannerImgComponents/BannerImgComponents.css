@@ -1,6 +1,7 @@
 .linkhov:hover{
         color:#0066b3 !important;
         text-decoration: none !important;
+        transition:ease-in  0.7s !important;
 }
 .Typograpy_Text_h1{
     font-weight: 500 !important;

@@ -32,6 +32,7 @@ import Productsbytrade from "./Pages/Productsbytrade";
 import Productsfirsttime from "./Pages/Productsfirsttime";
 import Productstherapeutic from "./Pages/Productstherapeutic";
 import ScrollToTop from "./components/ReusableComponents/scrollTop";
+import ProductsCardInnerPage from "./Pages/ProductsCardInnerPage";
 
 function App() {
 
@@ -205,6 +206,10 @@ function App() {
           <Productstherapeutic />
         </Route>
 
+        {/*          Products Inner Pages         */}
+        <Route exact path="/acedol-tablet">
+          <ProductsCardInnerPage/>
+        </Route>
 
         {/*          Sitemap Page          */}
 

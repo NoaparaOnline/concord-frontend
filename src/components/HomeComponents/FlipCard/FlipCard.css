@@ -6,7 +6,7 @@
 .flip-card-inner {
     position: relative;
     height: 100%;
-    width: 105%;
+    width: 100%;
     text-align: center;
     transition: transform 0.1s;
     

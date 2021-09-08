@@ -15,7 +15,7 @@ const Products_firsttime = () => {
         {
           subLinkName: "Products",
           subDash: "/",
-          subLink: "/products0",
+          subLink: "/products",
         },
       ];
     

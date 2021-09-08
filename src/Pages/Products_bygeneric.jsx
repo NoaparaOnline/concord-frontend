@@ -14,7 +14,7 @@ const Products_bygeneric = () => {
     {
       subLinkName: "Products",
       subDash: "/",
-      subLink: "/products0",
+      subLink: "/products",
     },
   ];
 

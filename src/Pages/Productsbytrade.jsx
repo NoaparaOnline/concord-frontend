@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
+import acedolfr from "../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg";
+import acedolbk from "../Statics/assets/TabletsFrontBack/ban-Acedol-Tabletbk.jpg";
+import acubisfr from "../Statics/assets/TabletsFrontBack/Acubis-2.5fr.jpg";
+import acubisbk from "../Statics/assets/TabletsFrontBack/ban-Acubis-2bk.jpg";
+import conzifr from "../Statics/assets/TabletsFrontBack/Conzi-100-mlfr.jpg";
+import conzibk from "../Statics/assets/TabletsFrontBack/ban-Conzi-100-mlbk.jpg";
+import Dopagutfr from "../Statics/assets/TabletsFrontBack/Dopagut-60-mlfr.jpg";
+import Dopagutbk from "../Statics/assets/TabletsFrontBack/ban-Dopagut-60-mlbk.jpg";
+import histaminefr from "../Statics/assets/TabletsFrontBack/Anti-histaminefr.jpg";
+import histaminebk from "../Statics/assets/TabletsFrontBack/Anti-histaminebk.jpg";
 
 const Products_bytrade = () => {
   const LinksBan = [
@@ -14,7 +24,7 @@ const Products_bytrade = () => {
     {
       subLinkName: "Products",
       subDash: "/",
-      subLink: "/products0",
+      subLink: "/products",
     },
   ];
 
@@ -27,11 +37,13 @@ const Products_bytrade = () => {
       img: [
         {
           id: 0,
-          imgf: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Acedol-Tablet.jpg",
-          imge: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/ban-Acedol-Tablet.jpg",
+          imgf: acedolfr,
+          imge: acedolbk,
         },
       ],
       btn: "Read More",
+      btnlink: "/acedol-tablet",
+      type:'Syrup'
     },
     {
       id: 1,
@@ -41,53 +53,61 @@ const Products_bytrade = () => {
       img: [
         {
           id: 1,
-          imgf: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Acubis-2.5.jpg",
-          imge: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/ban-Acubis-2.jpg",
+          imgf: acubisfr,
+          imge: acubisbk,
         },
       ],
       btn: "Read More",
+      btnlink: "/acedol-tablet",
+      type:'Tablet'
     },
     {
       id: 2,
-      title: "Acubis 2.5 Tablet",
-      text1: "Cardiovascular",
-      text2: "Bisoprolo 2.5 mg",
-      img: [
-        {
-          id: 1,
-          imgf: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Acubis-2.5.jpg",
-          imge: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/ban-Acubis-2.jpg",
-        },
-      ],
-      btn: "Read More",
-    },
-    {
-      id: 3,
       title: "ConziSyrup",
       text1: "Vitamin & Minerals",
       text2: "Zinc 10 mg/5ml",
       img: [
         {
           id: 2,
-          imgf: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Conzi-100-ml.jpg",
-          imge: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/ban-Conzi-100-ml.jpg",
+          imgf: conzifr,
+          imge: conzibk,
         },
       ],
       btn: "Read More",
+      btnlink: "/acedol-tablet",
+      type:'Capsule'
     },
     {
-      id: 4,
+      id: 3,
       title: "Dopagut",
       text1: "Suspension",
       text2: "Gastroprokinetic",
       img: [
         {
           id: 3,
-          imgf: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Dopagut-60-ml.jpg",
-          imge: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/ban-Dopagut-60-ml.jpg",
+          imgf: Dopagutfr,
+          imge: Dopagutbk,
         },
       ],
       btn: "Read More",
+      btnlink: "/acedol-tablet",
+      type:'Hand Rub'
+    },
+    {
+      id: 4,
+      title: "Unilor 5 mg Tablet",
+      text1: "Anti-histamine",
+      text2: "Anti-histamine",
+      img: [
+        {
+          id: 4,
+          imgf: histaminefr,
+          imge: histaminebk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "/acedol-tablet",
+      type:'injection'
     },
     {
       id: 5,
@@ -97,11 +117,13 @@ const Products_bytrade = () => {
       img: [
         {
           id: 4,
-          imgf: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/eng-Anti-histamine.jpg",
-          imge: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Anti-histamine.jpg",
+          imgf: histaminefr,
+          imge: histaminebk,
         },
       ],
       btn: "Read More",
+      btnlink: "/acedol-tablet",
+      type:'injection'
     },
     {
       id: 6,
@@ -111,41 +133,22 @@ const Products_bytrade = () => {
       img: [
         {
           id: 4,
-          imgf: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/eng-Anti-histamine.jpg",
-          imge: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Anti-histamine.jpg",
+          imgf: histaminefr,
+          imge: histaminebk,
         },
       ],
       btn: "Read More",
-    },
-    {
-      id: 7,
-      title: "Unilor 5 mg Tablet",
-      text1: "Anti-histamine",
-      text2: "Anti-histamine",
-      img: [
-        {
-          id: 4,
-          imgf: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/eng-Anti-histamine.jpg",
-          imge: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Anti-histamine.jpg",
-        },
-      ],
-      btn: "Read More",
-    },
-    {
-      id: 8,
-      title: "Unilor 5 mg Tablet",
-      text1: "Anti-histamine",
-      text2: "Anti-histamine",
-      img: [
-        {
-          id: 4,
-          imgf: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/eng-Anti-histamine.jpg",
-          imge: "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Anti-histamine.jpg",
-        },
-      ],
-      btn: "Read More",
+      btnlink: "/acedol-tablet",
+      type:'injection'
     },
   ];
+
+  const [obj , setObj] = useState(card);
+  const filteredtype = () => {
+    const types = obj.filter(category => 
+      category.type === "injection" )
+      setObj(types)
+  }
 
   return (
     <div>
@@ -163,7 +166,9 @@ const Products_bytrade = () => {
         <div className="row">
           <div className="col-sm-12 col-lg-3 ">
             <div className="productFilterContent">
-              <h3 className="filterHeading" style={{fontWeight:'600'}}>Product Categories</h3>
+              <h3 className="filterHeading" style={{ fontWeight: "600" }}>
+                Product Categories
+              </h3>
               <form id="category-radio-btn">
                 <input
                   className="me-2"
@@ -171,7 +176,7 @@ const Products_bytrade = () => {
                   id="all"
                   name="product-category"
                   value="1"
-                  checked
+                  onChange={filteredtype}
                 />
                 <label for="all">All</label>
                 <br />
@@ -181,6 +186,7 @@ const Products_bytrade = () => {
                   id="injectables"
                   name="product-category"
                   value="2"
+                  onChange={filteredtype}
                 />
                 <label for="injectables">Injectables</label>
                 <br />
@@ -190,6 +196,7 @@ const Products_bytrade = () => {
                   id="syrup"
                   name="product-category"
                   value="3"
+                  onChange={filteredtype}
                 />
                 <label for="syrup">Syrup</label>
                 <br />
@@ -199,6 +206,7 @@ const Products_bytrade = () => {
                   id="tablet"
                   name="product-category"
                   value="4"
+                  onChange={filteredtype}
                 />
                 <label for="tablet">Tablet</label>
                 <br />
@@ -208,6 +216,7 @@ const Products_bytrade = () => {
                   id="capsule"
                   name="product-category"
                   value="5"
+                  onChange={filteredtype}
                 />
                 <label for="capsule">Capsule</label>
                 <br />
@@ -217,6 +226,7 @@ const Products_bytrade = () => {
                   id="handrub"
                   name="product-category"
                   value="6"
+                  onChange={filteredtype}
                 />
                 <label for="handrub">Hand Rub</label>
               </form>
@@ -224,24 +234,21 @@ const Products_bytrade = () => {
           </div>
 
           <div className="col-sm-12 col-lg-9 mt-0">
-
-      <div className="cards Responsive_Margin_Screen">
-            <div className="row">
-              {card.map((ob, index) => (
-                <React.Fragment key={ob.id}>
-                  
-                <>  
-                  <div className="col-lg-4 d-none d-lg-block d-md-none">
-                    <FlipCard card={ob} />
-                  </div>
-                  <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
-                    <SingleCard card={ob} />
-                  </div>
-                </>
-                
-                </React.Fragment>
-              ))}
-            </div>
+            <div className="cards ">
+              <div className="row">
+                {obj.map((ob, index) => (
+                  <React.Fragment key={ob.id}>
+                    <>
+                      <div className="col-lg-4 d-none d-lg-block d-md-none">
+                        <FlipCard card={ob} />
+                      </div>
+                      <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
+                        <SingleCard card={ob} />
+                      </div>
+                    </>
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
           </div>
         </div>
