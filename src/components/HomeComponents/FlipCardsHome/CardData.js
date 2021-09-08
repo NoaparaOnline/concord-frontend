@@ -1,3 +1,13 @@
+import acedolfr from '../../../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg';
+import acedolbk from '../../../Statics/assets/TabletsFrontBack/ban-Acedol-Tabletbk.jpg';
+import acubisfr from '../../../Statics/assets/TabletsFrontBack/Acubis-2.5fr.jpg';
+import acubisbk from '../../../Statics/assets/TabletsFrontBack/ban-Acubis-2bk.jpg';
+import conzifr from '../../../Statics/assets/TabletsFrontBack/Conzi-100-mlfr.jpg';
+import conzibk from '../../../Statics/assets/TabletsFrontBack/ban-Conzi-100-mlbk.jpg';
+import Dopagutfr from '../../../Statics/assets/TabletsFrontBack/Dopagut-60-mlfr.jpg';
+import Dopagutbk from '../../../Statics/assets/TabletsFrontBack/ban-Dopagut-60-mlbk.jpg';
+import histaminefr from '../../../Statics/assets/TabletsFrontBack/Anti-histaminefr.jpg';
+import histaminebk from '../../../Statics/assets/TabletsFrontBack/Anti-histaminebk.jpg';
 const card = [
 
     {
@@ -7,10 +17,11 @@ const card = [
         text2:'Aceclofenac 100 mg',
         img:[{
             id:0,
-            imgf:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Acedol-Tablet.jpg',
-            imge:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/ban-Acedol-Tablet.jpg',
+            imgf:acedolfr,
+            imge:acedolbk,
         }],
         btn:'Read More',
+        btnlink:'/acedol-tablet'
     },
     {
         id:1,
@@ -19,10 +30,11 @@ const card = [
         text2:'Bisoprolo 2.5 mg',
         img:[{
             id:1,
-            imgf:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Acubis-2.5.jpg',
-            imge:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/ban-Acubis-2.jpg',
+            imgf:acubisfr,
+            imge:acubisbk,
         }],
         btn:'Read More',
+        btnlink:'/acedol-tablet'
     },
     {
         id:2,
@@ -31,10 +43,11 @@ const card = [
         text2:'Zinc 10 mg/5ml',
         img:[{
             id:2,
-            imgf:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Conzi-100-ml.jpg',
-            imge:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/ban-Conzi-100-ml.jpg',
+            imgf:conzifr,
+            imge:conzibk,
         }],
         btn:'Read More',
+        btnlink:'/acedol-tablet'
     },
     {
         id:3,
@@ -43,10 +56,11 @@ const card = [
         text2:'Gastroprokinetic',
         img:[{
             id:3,
-            imgf:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Dopagut-60-ml.jpg',
-            imge:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/ban-Dopagut-60-ml.jpg',
+            imgf:Dopagutfr,
+            imge:Dopagutbk,
         }],
         btn:'Read More',
+        btnlink:'/acedol-tablet'
 
     },
     {
@@ -56,10 +70,11 @@ const card = [
         text2:'Anti-histamine',
         img:[{
             id:4,
-            imgf:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/eng-Anti-histamine.jpg',
-            imge:'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/Anti-histamine.jpg',
+            imgf:histaminefr,
+            imge:histaminebk,
         }],
         btn:'Read More',
+        btnlink:'/acedol-tablet'
 
     },
 

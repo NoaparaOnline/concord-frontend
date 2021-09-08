@@ -75,8 +75,29 @@
     height: 500px;
     position: relative;
   }
+
+  @media (max-width: 1920px) { 
+    .test-back {
+      min-height: 600px !important;
+    }
+    .card_custom {
+      min-height: 600px !important;
+    }
+   
+ }
+  @media (max-width: 1700px) { 
+    .test-back {
+      min-height: 500px !important;
+    }
+    .card_custom {
+      min-height: 500px !important;
+    }
+   
+ }
+
+
+
   .test-border {
-    min-height: 500px !important;
     border-radius: 32px;
     border: 15px solid white;
   }

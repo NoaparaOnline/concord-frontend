@@ -3,11 +3,11 @@ import "./FlipCard.css";
 import { Link } from "react-router-dom";
 
 const FlipCard = ({ card }) => {
-  const { title, text1, text2, img, btn } = card;
+  const { title, text1, text2, img, btn,btnlink } = card;
 
   return (
     <div >
-      <div className="flip-card" style={{marginBottom:'30%'}}>
+      <div className="flip-card" style={{marginBottom:'50%'}}>
         <div className="flip-card-inner ">
           <div className="flip-card-front ">
             <div className="card flipcard_custom">
@@ -21,7 +21,7 @@ const FlipCard = ({ card }) => {
                   <img key={ob.id} src={ob.imgf} className="card-img-top p-3" alt="..." />
                 );
               })}
-              <Link to="/" className="btn btn-primary rounded-pill colr_btn" style={{color:'#fff',backgroundColor:'#0066b3'}}>
+              <Link to={btnlink} className="btn btn-primary rounded-pill colr_btn" style={{color:'#fff',backgroundColor:'#0066b3'}}>
                 {btn}
               </Link>
             </div>
@@ -39,7 +39,7 @@ const FlipCard = ({ card }) => {
                   <img key={ob.id} src={ob.imge} className="card-img-top p-3" alt="..." />
                 );
               })}
-              <Link to="/" className="btn btn-primary rounded-pill colr_btn" style={{color:'#fff',backgroundColor:'#0066b3'}}>
+              <Link to={btnlink} className="btn btn-primary rounded-pill colr_btn" style={{color:'#fff',backgroundColor:'#0066b3'}}>
                 {btn}
               </Link>
             </div>
