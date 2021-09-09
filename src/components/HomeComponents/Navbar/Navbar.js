@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../../Statics/assets/logo.png";
 import langlogo from "../../../Statics/assets/languagelogo.png";
@@ -7,7 +7,6 @@ import arlang from "../../../Statics/assets/languages/arbic.jpg";
 import bnlang from "../../../Statics/assets/languages/bangali.jpg";
 import { NavLink, Link } from "react-router-dom";
 import Login from "../../../Pages/Login";
-
 
 const Navbars = () => {
   const [show, setShow] = useState(false);
@@ -20,7 +19,11 @@ const Navbars = () => {
       <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top custom-nav ">
         <div className="container">
           <Link to="/">
-            <img alt="" src={logo} style={{ minWidth: '150px', minHeight: '40px',height:60 }} />
+            <img
+              alt=""
+              src={logo}
+              style={{ minWidth: "150px", minHeight: "40px", height: 60 }}
+            />
           </Link>
 
           <button
@@ -101,7 +104,10 @@ const Navbars = () => {
                     <span
                       className="nav-link firstnav dropdown-toggle"
                       role="button"
-                      id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20"
+                      id="dropdownMenuOffset"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      data-bs-offset="10,20"
                     >
                       <img
                         src={langlogo}
@@ -109,50 +115,56 @@ const Navbars = () => {
                         style={{ width: "23px" }}
                       />
                     </span>
-                    <ul
-                      className="dropdown-menu dropdown-menu-right"
-                      aria-labelledby="dropdownMenuOffset"
-                    >
-                      <li>
-                        <Link className="dropdown-item conCapitalized " to="#">
-                          <span>
-                            {" "}
-                            <img
-                              src={enlang}
-                              alt="english"
-                              style={{ width: "22px", marginRight: "10px" }}
-                            />{" "}
-                            english
-                          </span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item conCapitalized" to="#">
-                          <span>
-                            {" "}
-                            <img
-                              src={arlang}
-                              alt="arabic"
-                              style={{ width: "22px", marginRight: "10px" }}
-                            />
-                            arabic{" "}
-                          </span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item conCapitalized" to="#">
-                          <span>
-                            {" "}
-                            <img
-                              src={bnlang}
-                              alt="bengali"
-                              style={{ width: "22px", marginRight: "10px" }}
-                            />
-                            bengali
-                          </span>
-                        </Link>
-                      </li>
-                    </ul>
+
+                   
+                      <ul
+                        className="dropdown-menu  dropdown-menu-right"
+                        aria-labelledby="dropdownMenuOffset"
+                        style={{ listStyle: "none", background: "white" }}
+                      >
+                        <li>
+                          <Link
+                            className="dropdown-item conCapitalized "
+                            to="#"
+                          >
+                            <span>
+                              {" "}
+                              <img
+                                src={enlang}
+                                alt="english"
+                                style={{ width: "22px", marginRight: "10px" }}
+                              />{" "}
+                              english
+                            </span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="dropdown-item conCapitalized" to="#">
+                            <span>
+                              {" "}
+                              <img
+                                src={arlang}
+                                alt="arabic"
+                                style={{ width: "22px", marginRight: "10px" }}
+                              />
+                              arabic{" "}
+                            </span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="dropdown-item conCapitalized" to="#">
+                            <span>
+                              {" "}
+                              <img
+                                src={bnlang}
+                                alt="bengali"
+                                style={{ width: "22px", marginRight: "10px" }}
+                              />
+                              bengali
+                            </span>
+                          </Link>
+                        </li>
+                      </ul>
                   </li>
                 </ul>
               </div>
@@ -173,43 +185,65 @@ const Navbars = () => {
                       className="nav-link secnav dropdown-toggle"
                       role="button"
                       to="/about"
-                      id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20"
+                      id="dropdownMenuOffset"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      data-bs-offset="10,20"
                     >
                       ABOUT-US
                     </NavLink>
+
                     <ul
                       className="dropdown-menu "
                       aria-labelledby="dropdownMenuOffset"
-
+                      style={{
+                        paddingTop: "15px",
+                        border: "none",
+                        background: "transparent",
+                      }}
                     >
-                      <li >
-                        <NavLink
-                          style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/about_vision_mission"
-                        >
-                          Vision & Mission
-                        </NavLink>
-                      </li>
-                      <li>
-                        <Link style={{fontSize:'13px',fontWeight:'500'}} className="dropdown-item" to="#">
-                          Health Associates{" "}
-                        </Link>
-                      </li>
-                      <li>
-                        <Link style={{fontSize:'13px',fontWeight:'500'}} className="dropdown-item" to="#">
-                          Chairman’s Profile{" "}
-                        </Link>
-                      </li>
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/about_message_chairmen"
-                        >
-                          Message from Chairman
-                        </NavLink>
-                      </li>
+                      <ul
+                        className="dropdown-menu "
+                        aria-labelledby="dropdownMenuOffset"
+                        style={{ listStyle: "none", background: "white" }}
+                      >
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/about_vision_mission"
+                          >
+                            Vision & Mission
+                          </NavLink>
+                        </li>
+                        <li>
+                          <Link
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="#"
+                          >
+                            Health Associates{" "}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="#"
+                          >
+                            Chairman’s Profile{" "}
+                          </Link>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/about_message_chairmen"
+                          >
+                            Message from Chairman
+                          </NavLink>
+                        </li>
+                      </ul>
                     </ul>
                   </li>
                   <li className="nav-item">
@@ -229,47 +263,58 @@ const Navbars = () => {
                     >
                       Products
                     </NavLink>
+
                     <ul
                       className="dropdown-menu "
-                      aria-labelledby="navbarDropdown"
+                      aria-labelledby="dropdownMenuOffset"
+                      style={{
+                        paddingTop: "15px",
+                        border: "none",
+                        background: "transparent",
+                      }}
                     >
-                      
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/products_bytrade"
-                        >
-                          By trade name
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/products_bygeneric"
-                        >
-                          By generic name
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/products_therapeutic"
-                        >
-                          By therapeutic class
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/products_firsttime"
-                        >
-                          first time launching
-                        </NavLink>
-                      </li>
+                      <ul
+                        className="dropdown-menu "
+                        aria-labelledby="dropdownMenuOffset"
+                        style={{ listStyle: "none", background: "white" }}
+                      >
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/products_bytrade"
+                          >
+                            By trade name
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/products_bygeneric"
+                          >
+                            By generic name
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/products_therapeutic"
+                          >
+                            By therapeutic class
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/products_firsttime"
+                          >
+                            first time launching
+                          </NavLink>
+                        </li>
+                      </ul>
                     </ul>
                   </li>
                   <li className="nav-item dropdown">
@@ -283,55 +328,67 @@ const Navbars = () => {
                     >
                       Facilities
                     </NavLink>
+
                     <ul
-                      className="dropdown-menu"
-                      aria-labelledby="navbarDropdown"
+                      className="dropdown-menu "
+                      aria-labelledby="dropdownMenuOffset"
+                      style={{
+                        paddingTop: "15px",
+                        border: "none",
+                        background: "transparent",
+                      }}
                     >
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/facilities_researchdevrsttime"
-                        >
-                          Research and Development
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/facilities_product"
-                        >
-                          Product
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/facilities_quality"
-                        >
-                          Quality Control
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/facilities_warhouse"
-                        >
-                          Warehouse
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/facilities_ourdistribution"
-                        >
-                          Our distribution network
-                        </NavLink>
-                      </li>
+                      <ul
+                        className="dropdown-menu "
+                        aria-labelledby="dropdownMenuOffset"
+                        style={{ listStyle: "none", background: "white" }}
+                      >
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/facilities_researchdevrsttime"
+                          >
+                            Research and Development
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/facilities_product"
+                          >
+                            Product
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/facilities_quality"
+                          >
+                            Quality Control
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/facilities_warhouse"
+                          >
+                            Warehouse
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/facilities_ourdistribution"
+                          >
+                            Our distribution network
+                          </NavLink>
+                        </li>
+                      </ul>
                     </ul>
                   </li>
                   <li className="nav-item">
@@ -351,46 +408,70 @@ const Navbars = () => {
                     >
                       media
                     </NavLink>
-                    <ul
-                      className="dropdown-menu dropdown-menu-right"
-                      aria-labelledby="navbarDropdown"
-                    >
-                      {/* Video Routing Path = /media_video */}
-                      {/* social responsibilities Routing Path = /media_socialresponsiblities */}
 
-                      <li>
-                        <Link style={{fontSize:'13px',fontWeight:'500'}} className="dropdown-item" to="#">
-                          video
-                        </Link>
-                      </li>
-                      <li>
-                        <NavLink style={{fontSize:'13px',fontWeight:'500'}} className="dropdown-item" to="/media_photo">
-                          photo
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/media_socialmedia"
-                        >
-                          social media post
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/media_milestone"
-                        >
-                          mile stones
-                        </NavLink>
-                      </li>
-                      <li>
-                        <Link style={{fontSize:'13px',fontWeight:'500'}} className="dropdown-item" to="#">
-                          social responsibilities
-                        </Link>
-                      </li>
+                    <ul
+                      className="dropdown-menu dropdown-menu-right hovercolr "
+                      aria-labelledby="dropdownMenuOffset"
+                      style={{
+                        paddingTop: "15px",
+                        border: "none",
+                        background: "transparent",
+                      }}
+                    >
+                      <ul
+                        className="dropdown-menu dropdown-menu-right  "
+                        aria-labelledby="dropdownMenuOffset"
+                        style={{ listStyle: "none", background: "white" }}
+                      >
+                        {/* Video Routing Path = /media_video */}
+                        {/* social responsibilities Routing Path = /media_socialresponsiblities */}
+
+                        <li>
+                          <Link
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="#"
+                          >
+                            video
+                          </Link>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/media_photo"
+                          >
+                            photo
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/media_socialmedia"
+                          >
+                            social media post
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/media_milestone"
+                          >
+                            mile stones
+                          </NavLink>
+                        </li>
+                        <li>
+                          <Link
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="#"
+                          >
+                            social responsibilities
+                          </Link>
+                        </li>
+                      </ul>
                     </ul>
                   </li>
                   <li className="nav-item dropdown">
@@ -404,28 +485,40 @@ const Navbars = () => {
                     >
                       contact
                     </NavLink>
+
                     <ul
-                      className="dropdown-menu dropdown-menu-right hovercolr"
-                      aria-labelledby="navbarDropdown"
+                      className="dropdown-menu  dropdown-menu-right hovercolr "
+                      aria-labelledby="dropdownMenuOffset"
+                      style={{
+                        paddingTop: "15px",
+                        border: "none",
+                        background: "transparent",
+                      }}
                     >
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/facilities_ourdistribution"
-                        >
-                          our distribution network
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                        style={{fontSize:'13px',fontWeight:'500'}}
-                          className="dropdown-item"
-                          to="/contact_contactus"
-                        >
-                          contact us
-                        </NavLink>
-                      </li>
+                      <ul
+                        className="dropdown-menu  dropdown-menu-right "
+                        aria-labelledby="dropdownMenuOffset"
+                        style={{ listStyle: "none", background: "white" }}
+                      >
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/facilities_ourdistribution"
+                          >
+                            our distribution network
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item"
+                            to="/contact_contactus"
+                          >
+                            contact us
+                          </NavLink>
+                        </li>
+                      </ul>
                     </ul>
                   </li>
                 </ul>
@@ -435,10 +528,7 @@ const Navbars = () => {
         </div>
       </nav>
 
-      <Login 
-      show={show} onHide={handleClose}
-      />
-
+      <Login show={show} onHide={handleClose} />
     </>
   );
 };
