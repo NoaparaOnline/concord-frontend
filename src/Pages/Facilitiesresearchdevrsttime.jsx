@@ -35,9 +35,9 @@ const Facilities_researchdevrsttime = () => {
       <div className="container my-5">
         <div className="row">
 
-          <div className="col-sm-12 col-lg-5" >
-            <div className="allborder">
-            <img alt="" src={facrd} className="img-fluid zoom" />
+          <div className="col-sm-12 col-lg-5 allborder" >
+            <div className="">
+            <img alt="" src={facrd} className="zoom" width="100%" height="100%" />
             </div>
           </div>
 

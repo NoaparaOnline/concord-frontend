@@ -31,6 +31,7 @@ const Navbars = () => {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+     
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -99,10 +100,8 @@ const Navbars = () => {
                   <li className="nav-item dropdown">
                     <span
                       className="nav-link firstnav dropdown-toggle"
-                      id="navbarDropdown"
                       role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
+                      id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20"
                     >
                       <img
                         src={langlogo}
@@ -112,7 +111,7 @@ const Navbars = () => {
                     </span>
                     <ul
                       className="dropdown-menu dropdown-menu-right"
-                      aria-labelledby="navbarDropdown"
+                      aria-labelledby="dropdownMenuOffset"
                     >
                       <li>
                         <Link className="dropdown-item conCapitalized " to="#">
@@ -172,17 +171,16 @@ const Navbars = () => {
                   <li className="nav-item dropdown">
                     <NavLink
                       className="nav-link secnav dropdown-toggle"
-                      to="/about"
-                      id="navbarDropdown"
                       role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
+                      to="/about"
+                      id="dropdownMenuOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20"
                     >
                       ABOUT-US
                     </NavLink>
                     <ul
                       className="dropdown-menu "
-                      aria-labelledby="navbarDropdown"
+                      aria-labelledby="dropdownMenuOffset"
+
                     >
                       <li >
                         <NavLink
@@ -232,9 +230,10 @@ const Navbars = () => {
                       Products
                     </NavLink>
                     <ul
-                      className="dropdown-menu"
+                      className="dropdown-menu "
                       aria-labelledby="navbarDropdown"
                     >
+                      
                       <li>
                         <NavLink
                         style={{fontSize:'13px',fontWeight:'500'}}

@@ -78,7 +78,7 @@ const Home = () => {
             </div>
           </>
         }
-        colorclassName={"colrbck"}
+        colorclass={"colrbck"}
       />
 
       <NearestDeliveryCenter heading={label} />

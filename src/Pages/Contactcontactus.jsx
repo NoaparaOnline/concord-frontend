@@ -29,7 +29,7 @@ const Contact_contactus = () => {
         fontsize={"60px"}
       />
 
-      <div className="container">
+      <div className="container my-5">
         <div className="row">
           <div className="col-lg-7 ">
             <div className="form-div">

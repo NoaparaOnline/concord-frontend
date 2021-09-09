@@ -51,3 +51,13 @@
     width: 150px;
     height: 150px;
 }
+
+
+@media (max-width: 2500px) { 
+    .centerbtnbigscreen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+ }

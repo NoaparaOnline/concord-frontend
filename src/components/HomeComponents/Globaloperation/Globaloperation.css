@@ -76,7 +76,7 @@
     position: relative;
   }
 
-  @media (max-width: 1920px) { 
+  @media (max-width: 2500px) { 
     .test-back {
       min-height: 600px !important;
     }
@@ -85,6 +85,7 @@
     }
    
  }
+
   @media (max-width: 1700px) { 
     .test-back {
       min-height: 500px !important;

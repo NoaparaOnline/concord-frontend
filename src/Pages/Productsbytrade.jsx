@@ -107,24 +107,9 @@ const Products_bytrade = () => {
       ],
       btn: "Read More",
       btnlink: "/acedol-tablet",
-      type:'injection'
+      type:'Injectables'
     },
-    {
-      id: 5,
-      title: "Unilor 5 mg Tablet",
-      text1: "Anti-histamine",
-      text2: "Anti-histamine",
-      img: [
-        {
-          id: 4,
-          imgf: histaminefr,
-          imge: histaminebk,
-        },
-      ],
-      btn: "Read More",
-      btnlink: "/acedol-tablet",
-      type:'injection'
-    },
+ 
     {
       id: 6,
       title: "Unilor 5 mg Tablet",
@@ -139,15 +124,56 @@ const Products_bytrade = () => {
       ],
       btn: "Read More",
       btnlink: "/acedol-tablet",
-      type:'injection'
+      type:'Injectables'
+    },
+    {
+      id: 7,
+      title: "Acubis 2.5 Tablet",
+      text1: "Cardiovascular",
+      text2: "Bisoprolo 2.5 mg",
+      img: [
+        {
+          id: 1,
+          imgf: acubisfr,
+          imge: acubisbk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "/acedol-tablet",
+      type:'Injectables'
     },
   ];
 
   const [obj , setObj] = useState(card);
-  const filteredtype = () => {
-    const types = obj.filter(category => 
-      category.type === "injection" )
-      setObj(types)
+  const filteredtype = (type) => {
+    if (type==="All") {
+      setObj(card)
+    }
+    else if (type==="Syrup") {
+      const filterd = card.filter(category => 
+        category.type === "Syrup" )
+      setObj(filterd);
+    }
+    else if (type==="Tablet") {
+      const filterd = card.filter(category => 
+        category.type === "Tablet" )
+      setObj(filterd);
+    }
+    else if (type==="Capsule") {
+      const filterd = card.filter(category => 
+        category.type === "Capsule" )
+      setObj(filterd);
+    }
+    else if (type==="Hand Rub") {
+      const filterd = card.filter(category => 
+        category.type === "Hand Rub" )
+      setObj(filterd);
+    }
+    else if (type==="Injectables") {
+      const filterd = card.filter(category => 
+        category.type === "Injectables" )
+      setObj(filterd);
+    }
   }
 
   return (
@@ -176,7 +202,7 @@ const Products_bytrade = () => {
                   id="all"
                   name="product-category"
                   value="1"
-                  onChange={filteredtype}
+                  onChange={()=>filteredtype("All")}
                 />
                 <label for="all">All</label>
                 <br />
@@ -186,7 +212,7 @@ const Products_bytrade = () => {
                   id="injectables"
                   name="product-category"
                   value="2"
-                  onChange={filteredtype}
+                  onChange={()=>filteredtype("Injectables")}
                 />
                 <label for="injectables">Injectables</label>
                 <br />
@@ -196,7 +222,7 @@ const Products_bytrade = () => {
                   id="syrup"
                   name="product-category"
                   value="3"
-                  onChange={filteredtype}
+                  onChange={()=>filteredtype("Syrup")}
                 />
                 <label for="syrup">Syrup</label>
                 <br />
@@ -206,7 +232,7 @@ const Products_bytrade = () => {
                   id="tablet"
                   name="product-category"
                   value="4"
-                  onChange={filteredtype}
+                  onChange={()=>filteredtype("Tablet")}
                 />
                 <label for="tablet">Tablet</label>
                 <br />
@@ -216,7 +242,7 @@ const Products_bytrade = () => {
                   id="capsule"
                   name="product-category"
                   value="5"
-                  onChange={filteredtype}
+                  onChange={()=>filteredtype("Capsule")}
                 />
                 <label for="capsule">Capsule</label>
                 <br />
@@ -226,7 +252,8 @@ const Products_bytrade = () => {
                   id="handrub"
                   name="product-category"
                   value="6"
-                  onChange={filteredtype}
+                  onChange={()=>filteredtype("Hand Rub")}
+
                 />
                 <label for="handrub">Hand Rub</label>
               </form>

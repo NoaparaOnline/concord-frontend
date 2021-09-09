@@ -1,6 +1,6 @@
 import React from "react";
 import { CompanyLogos } from "../components";
-import bannerimg from "../Statics/assets/parallax_contact.jpg";
+import bannerimg from "../Statics/assets/globalbanner.jpg";
 import flag1 from "../Statics/assets/flags/fl1.jpg";
 import flag2 from "../Statics/assets/flags/fl2.jpg";
 import flag3 from "../Statics/assets/flags/fl3.jpg";
