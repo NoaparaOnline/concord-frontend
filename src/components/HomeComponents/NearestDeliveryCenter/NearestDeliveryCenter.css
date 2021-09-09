@@ -8,3 +8,15 @@
     line-height: 1.2 !important;
     font-weight: 600 !important;
 }
+
+#area{
+    width: 250px;
+    height: 34px;
+    font-weight: 400;
+    font-size: 18px;
+    border-color: #a4a7a9;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    padding: 0 5px;
+    outline: 0 !important;
+}

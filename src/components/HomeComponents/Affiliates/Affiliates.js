@@ -7,7 +7,7 @@ const Affiliates = () => {
        
       
         const properties = {
-          duration: 500,
+          duration: 300,
           slidesToShow: 5,
           slidesToScroll: 2,
           autoplay: true,
@@ -44,9 +44,9 @@ const Affiliates = () => {
         };
     return (
         <div>
-            <div className="container-xl">
-                <div className="row d-flex justify-content-center ms-5 mt-0 mb-0">
-                    <div className="col-lg-6 col-md-6 ">
+            <div className="container">
+                <div className="row d-flex justify-content-center">
+                    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 d-xl-flex justify-content-center">
                   <Link to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>HOSPITALS</span></Link>
                   <Link to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>RETAILERS</span></Link>
                   <Link to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>CLINICS</span></Link>
