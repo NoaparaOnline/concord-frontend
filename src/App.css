@@ -5,9 +5,8 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
 
 
 .colrbck{
-  background-color: #f3f3f3;
+  background-color: #F5F0EA;
 }
-
 
 
 
@@ -135,29 +134,37 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
 .socialmediapostlink{
  text-decoration: underline;
  text-decoration-color: transparent;
- transition: 0.8s ease-in-out;
+ transition: 1s ease-in-out;
+ cursor: pointer;
 }
 
 
 /* Login Modal Css */
 .cardlogmodel {
-  border: none;
-  width:70%;
-  height: 70%;
+  border: none !important;
 }
 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff !important;
+  background-color: #0066b3 !important;
+  border: none !important;
+}
 .btr {
-  border-top-right-radius: 5px !important
+  color: #000000 !important;
 }
 
 
 .btl {
-  border-top-left-radius: 5px !important
+  color: #000000 !important;
 }
 
+.nav-pills .nav-link {
+  border-radius: 0 !important;
 
+}
 
 .nav-pills {
+  border: none !important;
   display: table !important;
   width: 100%
 }
@@ -165,6 +172,8 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
 
 
 .nav-item {
+  border: none !important;
+
   display: table-cell;
 }
 
@@ -206,3 +215,6 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
 .dropdown-item.active, .dropdown-item:active {
   background-color: #337ab7 !important;
 }
+
+
+
