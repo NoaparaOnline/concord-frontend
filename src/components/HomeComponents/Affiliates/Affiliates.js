@@ -46,7 +46,7 @@ const Affiliates = () => {
         <div>
             <div className="container">
                 <div className="row d-flex justify-content-center">
-                    <div className="col-lg-6 col-md-6 col-sm-3 col-xs-3 centerbtnbigscreen">
+                    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 d-xl-flex justify-content-center">
                   <Link to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>HOSPITALS</span></Link>
                   <Link to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>RETAILERS</span></Link>
                   <Link to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>CLINICS</span></Link>
