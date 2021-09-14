@@ -37,7 +37,7 @@ import Productstherapeutic from "./Pages/Productstherapeutic";
 import ScrollToTop from "./components/ReusableComponents/scrollTop";
 import ProductsCardInnerPage from "./Pages/ProductsCardInnerPage";
 import ResetPassword from "./Pages/ResetPassword";
-
+import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 function App() {
 
