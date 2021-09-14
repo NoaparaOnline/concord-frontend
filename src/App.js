@@ -1,7 +1,10 @@
 import React from "react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getUser } from "./Store/Actions/loginActions";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import { Navbar, Footer, FixedRight} from "./components";
+import { Navbar, Footer, FixedRight } from "./components";
 import About from "./Pages/About";
 import Careers from "./Pages/Careers";
 import Contact from "./Pages/Contact";
@@ -33,14 +36,39 @@ import Productsfirsttime from "./Pages/Productsfirsttime";
 import Productstherapeutic from "./Pages/Productstherapeutic";
 import ScrollToTop from "./components/ReusableComponents/scrollTop";
 import ProductsCardInnerPage from "./Pages/ProductsCardInnerPage";
+import ResetPassword from "./Pages/ResetPassword";
 
+import { ToastContainer } from "react-toastify";
 function App() {
+
+  
+
+
+
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getUser());
+  }, [dispatch]);
 
 
   return (
     <div className="App">
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+
       <Router>
-      <ScrollToTop/>
+        <ScrollToTop />
         {/*          Root Page             */}
 
         <Route exact path="/">
@@ -48,7 +76,6 @@ function App() {
         </Route>
 
         {/*          Front Home Page             */}
-
 
         <Route exact path="/">
           <Home />
@@ -65,13 +92,20 @@ function App() {
         <Route exact path="/home">
           <Home />
         </Route>
+
+        {/* Resest Password */}
+        {/* <Route path="/reset_password_link/uid=:uid/token=:token" render={(props)=>   <ResetPassword {...props}/>}/> */}
+        <Route to="/reset-password?uid=uid&token=token" render={(props)=>   <ResetPassword {...props}/>}/>
+  
+  
+
         {/*          FixedRight             */}
 
         <Route exact path="/">
-          <FixedRight/>
+          <FixedRight />
         </Route>
         <Route exact path="/:page">
-          <FixedRight/>
+          <FixedRight />
         </Route>
 
         {/*          Login Page             */}
@@ -180,13 +214,11 @@ function App() {
           <Mediavideo />
         </Route>
 
-
         {/*          Products Page          */}
 
         <Route exact path="/products">
           <Products />
         </Route>
-
 
         {/*          Products Submenu Page          */}
 
@@ -208,7 +240,7 @@ function App() {
 
         {/*          Products Inner Pages         */}
         <Route exact path="/acedol-tablet">
-          <ProductsCardInnerPage/>
+          <ProductsCardInnerPage />
         </Route>
 
         {/*          Sitemap Page          */}
@@ -217,13 +249,11 @@ function App() {
           <Sitemap />
         </Route>
 
-
         {/*          TeleMedicine          */}
 
         <Route exact path="/teleMedicine">
           <TeleMedicine />
         </Route>
-
 
         {/*          Footer             */}
 
@@ -233,7 +263,6 @@ function App() {
         <Route exact path="/">
           <Footer />
         </Route>
-
       </Router>
     </div>
   );

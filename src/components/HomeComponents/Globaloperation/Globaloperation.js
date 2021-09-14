@@ -2,6 +2,7 @@ import React from "react";
 import imgss from '../../../Statics/assets/bigCardimag.jpg'
 import { Link } from "react-router-dom";
 import "./Globaloperation.css";
+
 const Globaloperation = () => {
   return (
 
@@ -20,9 +21,8 @@ const Globaloperation = () => {
               <Link
                 to="/"
                 className="btn btn-primary d-flex justify-content-center rounded-pill btn-test m-0 mt-2 " style={{color:'#fff',backgroundColor:'#0066b3'}}
-              >
-                Read More
-              </Link>
+             >Read More
+             </Link>
           </div>
         </div>
         <div className="col-lg-4 mt-3">
