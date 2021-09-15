@@ -172,7 +172,9 @@ const Login = (props) => {
                             for="gridCheck1"
                             style={{ fontSize: "12px" }}
                           >
-                            <Link onClick={()=>setShowdiv(true)} to="#" style={{textDecoration:'none' ,color:'#0066b3'}}>Back To Login </Link>
+                            <Link onClick={()=>{
+                              setShowdiv(true);
+                              }} to="#" style={{textDecoration:'none' ,color:'#0066b3'}}>Back To Login </Link>
                           </label>
                         </div>
                       </div>

@@ -12,8 +12,7 @@ const initialState = {
             return { ...state, user: payload };
         case logInConstants.USER_TYPE:
             return { ...state, userRole: payload };
-        case logInConstants.GET_USER_FROM_LOCAL:
-            return { ...state, user: payload };
+       
       default:
         return state;
     }

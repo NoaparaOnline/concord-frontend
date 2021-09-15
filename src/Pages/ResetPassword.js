@@ -58,16 +58,15 @@ console.log(params.token)
 
     return (
 
-        <div className="row mb-5 mt-4">
         <div className="container d-flex justify-content-center mt-5 mb-5">
           <div className="col-lg-4">
-            <div class="card" style={{ width: "22rem" }}>
+            <div class="card" >
               <div class="card-body">
                 <h5 class="modal-title text-center">Reset Password</h5>
                 <div className="row px-3 mb-3">
                   <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="row mt-4">
-                      <div className="col-12">
+                      <div className="col-lg-12">
                         <span className="label-name-login">Password</span>
                         <input
                           className="input-login-modal"
@@ -88,8 +87,8 @@ console.log(params.token)
                         )}
                       </div>
                     </div>
-                    <div className="row mt-3 mb-3">
-                      <div className="col-12">
+                    <div className="row">
+                      <div className="col-lg-12">
                         <span className="label-name-login">Confirm Password</span>
                         <input
                           className="input-login-modal"
@@ -122,7 +121,6 @@ console.log(params.token)
               </div>
             </div>
           </div>
-        </div>
       </div>
     )
 }

@@ -1,7 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getUser } from "./Store/Actions/loginActions";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer, FixedRight } from "./components";
@@ -39,22 +36,11 @@ import ProductsCardInnerPage from "./Pages/ProductsCardInnerPage";
 import ResetPassword from "./Pages/ResetPassword";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import depotmanagerDashboard from "./Dashboards/depotmanagerDashboard/depotmanagerDashboard";
+import directorDashboard from "./Dashboards/directorDashboard/directorDashboard";
 function App() {
-
-  
-
-
-
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getUser());
-  }, [dispatch]);
-
-
   return (
     <div className="App">
-
       <ToastContainer
         position="top-right"
         autoClose={2000}
@@ -83,9 +69,9 @@ function App() {
 
         {/*          Navbar             */}
 
-        <Route exact path="/:page">
+        {/* <Route exact path="/:page">
           <Navbar />
-        </Route>
+        </Route> */}
 
         {/*          Home Page             */}
 
@@ -95,9 +81,10 @@ function App() {
 
         {/* Resest Password */}
         {/* <Route path="/reset_password_link/uid=:uid/token=:token" render={(props)=>   <ResetPassword {...props}/>}/> */}
-        <Route to="/reset-password?uid=uid&token=token" render={(props)=>   <ResetPassword {...props}/>}/>
-  
-  
+        <Route
+          path='/reset_password_link/uid=:uid/token=:token'
+          render={(props) => <ResetPassword {...props} />}
+        />
 
         {/*          FixedRight             */}
 
@@ -135,6 +122,10 @@ function App() {
         <Route exact path="/careers">
           <Careers />
         </Route>
+
+        {/* Dashboards */}
+        <Route exact path="/depotmanager-dashboard" component={depotmanagerDashboard} />
+        <Route exact path="/director-dashboard" component={directorDashboard} />
 
         {/*          Contact Page             */}
 
@@ -257,9 +248,9 @@ function App() {
 
         {/*          Footer             */}
 
-        <Route exact path="/:page">
+        {/* <Route exact path="/:page">
           <Footer />
-        </Route>
+        </Route> */}
         <Route exact path="/">
           <Footer />
         </Route>

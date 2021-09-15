@@ -44,14 +44,6 @@ export const loginUser = (data) => async (dispatch) => {
       console.log("Forgot Password error", error);
     }
   };
-  export const getUser = () => async (dispatch) => {
-    const getUserFromLocal = localStorage.getItem("user");
-    let user = JSON.parse(getUserFromLocal);
-    dispatch({
-      type: logInConstants.GET_USER_FROM_LOCAL,
-      payload: user,
-    });
-  };
 
   export const resetPassword = (data) => async (dispatch) => {
     try {
