@@ -7,103 +7,107 @@ import icon2 from '../../../Statics/assets/Sidebar/2.png'
 import icon3 from '../../../Statics/assets/Sidebar/3.png'
 import icon4 from '../../../Statics/assets/Sidebar/4.png'
 import icon5 from '../../../Statics/assets/Sidebar/5.png'
-const SidebarDashboard = () => {
-  useEffect(() => {
-    let sidebar = document.querySelector(".sidebar");
-    let closeBtn = document.querySelector("#btn");
-  
-    closeBtn.addEventListener("click", ()=>{
-      sidebar.classList.toggle("open");
-      menuBtnChange();//calling the function(optional)
-  },[]);
-  
-
-  
-    // following are the code to change sidebar button(optional)
-    function menuBtnChange() {
-     if(sidebar.classList.contains("open")){
-       closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
-     }else {
-       closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
-     }
-    }
-  }, []);
+const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
+ 
  
   return (
-    <div>
+    
+    <div className={sidebarOpen ? "sidebar_responsive " : ""} id="sidebar">
+    <div className="sidebar__title">
+      <div className="d-flex justify-content-center">
+        <img src={logo} alt="logo" />
+      </div>
+      <i
+        onClick={() => closeSidebar()}
+        className="fa fa-times"
+        id="sidebarIcon"
+        style={{color:'red'}}
+        aria-hidden="true"
+      ></i>
+      
+      
 
-<div class="sidebar">
-    <div class="logo-details">
-        <div class="logo_name">
-
-        <Link to="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none ">
-  <img alt="" className="ms-3" src={logo} />
-  </Link>
-
-        </div>
-        <i class='fa fa-bars' id="btn" style={{color:'red',fontSize:'24px'}} ></i>
     </div>
 
-    <ul className="logo-details flex-column">
-     
-    <li className="d-flex justify-content-end">
-      <span class="links_name" style={{fontSize:'12px'}}>Depot Manager</span>
+    <ul className="d-flex flex-column">
+    <li className="d-flex justify-content-center">
+      <span style={{fontSize:'11px'}}>Depot Manager</span>
     </li>
-    <li className="d-flex justify-content-end">
-      <span class="links_name" style={{fontSize:'12px'}}>Dhaka</span>
+    <li className="d-flex justify-content-center ms-5">
+      <span style={{fontSize:'11px'}}>Dhaka</span>
     </li>
-    
   </ul>
 
-    <ul class="nav-list">
-      
-      <li className="ms-2">
-        <a href="#">
+    <div className="sidebar__menu">
+      <div className="sidebar__link active_menu_link">
+      <li className="mt-4 ms-2">
+        <Link to="/">
           
-        <img src={icon1} alt=""/>
+        <img src={icon1} alt="" width="36" height="36"/>
           <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#089DA4'}}>Order History</span>
-        </a>
+        </Link>
       </li>
-      <li className="mt-5 ms-2">
-       <a href="#">
-        <img src={icon2} alt=""/>
+        
+      </div>
+      <div className="sidebar__link">
+      
+
+      <li className="mt-4 ms-2">
+       <Link to="/">
+        <img src={icon2} alt="" width="36" height="36"/>
         <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#CB912B'}}>New Order</span>
-       </a>
+       </Link>
      </li>
-     <li className="mt-5 ms-2">
-       <a href="#">
-       <img src={icon3} alt=""/>
+
+
+      </div>
+      <div className="sidebar__link">
+       
+
+      <li className="mt-4 ms-2">
+       <Link to="/">
+       <img src={icon3} alt="" width="36" height="36"/>
        <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#7F2987'}}>Stocks</span>
-       </a>
+       </Link>
      </li>
-     <li className="mt-5 ms-2">
-       <a href="#">
-       <img src={icon4} alt=""/>
+
+
+      </div>
+      <div className="sidebar__link">
+        
+      <li className="mt-4 ms-2">
+       <Link to="/">
+       <img src={icon4} alt="" width="36" height="36"/>
         <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#4B8F8C'}}>Delivery Status</span>
-       </a>
+       </Link>
      </li>
-     <li className="mt-5 ms-2">
-       <a href="#">
-       <img src={icon5} alt=""/>
+
+
+      </div>
+      <div className="sidebar__link">
+      <li className="mt-4 ms-2">
+       <Link to="/">
+       <img src={icon5} alt="" width="36" height="36"/>
          <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#BB2026'}}>Payment</span>
-       </a>
+       </Link>
        <span class="tooltip">Files</span>
      </li>
-     <li class="profile">
-         <div class="profile-details">
-           <i class="fa fa-user" style={{fontSize:'24px',color:'black'}}></i>
-           <div class="name_job" >
-             <div class="name">Concord</div>
-             <div class="job">Depot Manager</div>
-           </div>
-         </div>
-         <i class='fa fa-sign-out' style={{fontSize:'24px',color:'#0066b3'}} id="log_out" ></i>
+      </div>
+      <div className="sidebar__link">
+      <li className="mt-5 ms-2">
+       <Link to="/">
+         <i className="fa fa-sign-out" style={{fontSize:'20px',color:'red'}}></i>
+         <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'red'}}>Logout</span>
+       </Link>
      </li>
-    </ul>
-  </div>
-
+        
+      </div>
     </div>
+  </div>
   )
 }
 
 export default SidebarDashboard
+
+
+

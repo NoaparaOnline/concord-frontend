@@ -10,9 +10,13 @@ import Login from "../../../Pages/Login";
 
 const Navbars = () => {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
+  const handleClose = () => 
+  {
+      setShow(!show);
+
+  }
   const handleShow = () => {
-    setShow(true);
+    setShow(!show);
   };
   return (
     <>

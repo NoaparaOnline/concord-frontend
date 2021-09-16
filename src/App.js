@@ -36,7 +36,7 @@ import ProductsCardInnerPage from "./Pages/ProductsCardInnerPage";
 import ResetPassword from "./Pages/ResetPassword";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-import depotmanagerDashboard from "./Dashboards/depotmanagerDashboard/depotmanagerDashboard";
+import DepotmanagerDashboard from "./Dashboards/depotmanagerDashboard/depotmanagerDashboard";
 import directorDashboard from "./Dashboards/directorDashboard/directorDashboard";
 function App() {
   return (
@@ -91,9 +91,9 @@ function App() {
         <Route exact path="/">
           <FixedRight />
         </Route>
-        <Route exact path="/:page">
+        {/* <Route exact path="/:page">
           <FixedRight />
-        </Route>
+        </Route> */}
 
         {/*          Login Page             */}
 
@@ -125,7 +125,7 @@ function App() {
 
         {/* Dashboards */}
         
-        <Route exact path="/depotmanager-dashboard" component={depotmanagerDashboard} />
+        <Route exact path="/depotmanager-dashboard" component={DepotmanagerDashboard} />
         <Route exact path="/director-dashboard" component={directorDashboard} />
         
         {/*          Contact Page             */}
