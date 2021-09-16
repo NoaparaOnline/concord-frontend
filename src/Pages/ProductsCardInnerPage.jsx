@@ -131,7 +131,7 @@ const ProductsCardInnerPage = () => {
             <span > <strong>Acedol® SR Tablet:</strong> Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.</span></p>
           <div>
        {showText ?
-       <div className="d-flex justify-content-center">
+       <div className="d-flex flex-column justify-content-center">
    <Link
               to="#"
               onClick={onHide}

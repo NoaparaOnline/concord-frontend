@@ -59,7 +59,9 @@ const Affiliates = () => {
         
           <div>
         <Slider {...properties}  className={"slick-slide-affiliates"}>
-          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/roche.jpg'}/></div>
+          <div className="carddivslider">
+            <img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/roche.jpg'}/>
+            </div>
           <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/brist.jpg'}/></div>
           <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/johnson.jpg'}/></div>
           <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/novar.jpg'}/></div>

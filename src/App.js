@@ -82,7 +82,7 @@ function App() {
         {/* Resest Password */}
         {/* <Route path="/reset_password_link/uid=:uid/token=:token" render={(props)=>   <ResetPassword {...props}/>}/> */}
         <Route
-          path='/reset_password_link/uid=:uid/token=:token'
+          path='/reset-password'
           render={(props) => <ResetPassword {...props} />}
         />
 
@@ -124,9 +124,10 @@ function App() {
         </Route>
 
         {/* Dashboards */}
+        
         <Route exact path="/depotmanager-dashboard" component={depotmanagerDashboard} />
         <Route exact path="/director-dashboard" component={directorDashboard} />
-
+        
         {/*          Contact Page             */}
 
         <Route exact path="/contact">
@@ -247,6 +248,7 @@ function App() {
         </Route>
 
         {/*          Footer             */}
+
 
         {/* <Route exact path="/:page">
           <Footer />

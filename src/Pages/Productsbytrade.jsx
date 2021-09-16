@@ -14,6 +14,8 @@ import Dopagutbk from "../Statics/assets/TabletsFrontBack/ban-Dopagut-60-mlbk.jp
 import histaminefr from "../Statics/assets/TabletsFrontBack/Anti-histaminefr.jpg";
 import histaminebk from "../Statics/assets/TabletsFrontBack/Anti-histaminebk.jpg";
 
+
+
 const Products_bytrade = () => {
   const LinksBan = [
     {
@@ -29,6 +31,16 @@ const Products_bytrade = () => {
   ];
 
   const card = [
+    {
+      id: 0,
+      title: "Acedol Tablet",
+      text1: "NSAID",
+      text2: "Aceclofenac 100 mg",
+      img: acedolfr,
+      btn: "Read More",
+      btnlink: "/acedol-tablet",
+      type:'Syrup'
+    },
     {
       id: 0,
       title: "Acedol Tablet",
@@ -145,6 +157,8 @@ const Products_bytrade = () => {
   ];
 
   const [obj , setObj] = useState(card);
+
+
   const filteredtype = (type) => {
     if (type==="All") {
       setObj(card)

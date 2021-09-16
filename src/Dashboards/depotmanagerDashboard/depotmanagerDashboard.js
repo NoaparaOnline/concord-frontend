@@ -3,7 +3,8 @@ import SidebarDashboard from '../../components/ReusableComponents/SidebarDashboa
 
 const depotmanagerDashboard = () => {
     return (
-        <div style={{backgroundColor:'#EFFBEF'}}>
+        <div style={{background:'#EFFBEF'}}>
+          
             <SidebarDashboard/>
         </div>
     )

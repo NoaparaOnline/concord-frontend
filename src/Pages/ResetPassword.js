@@ -10,20 +10,9 @@ const ResetPassword = (props) => {
 
 
 
-  let queryStringParse = function(string) {
-    let parsed = {}
-    if(string != '') {
-        string = string.substring(string.indexOf('?')+1)
-        let p1 = string.split('&')
-        p1.map(function(value) {
-            let params = value.split('=')
-            parsed[params[0]] = params[1]
-        });
-    }
-    return parsed
-}
+ 
 
-const params = queryStringParse(props.location.search);
+const params = queryString.parse(props.location.search);
 console.log(params.uid)
 console.log(params.token)
 
