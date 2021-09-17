@@ -7,15 +7,18 @@ import arlang from "../../../Statics/assets/languages/arbic.jpg";
 import bnlang from "../../../Statics/assets/languages/bangali.jpg";
 import { NavLink, Link } from "react-router-dom";
 import Login from "../../../Pages/Login";
+import { useLocation } from 'react-router-dom';
 
 const Navbars = () => {
   const [show, setShow] = useState(false);
+  const [langbtnshow, setLangbtnshow] = useState(false);
   const handleClose = () => 
   {
       setShow(!show);
 
   }
   const handleShow = () => {
+
     setShow(!show);
   };
   return (
@@ -53,7 +56,8 @@ const Navbars = () => {
                       aria-current="page"
                       to="/sitemap"
                     >
-                      Sitemap
+                      <span className="">Sitemap</span>
+                      {/* <span className="custom_span_style"></span> */}
                     </NavLink>
                   </li>
                   <li className="nav-item">
@@ -104,7 +108,7 @@ const Navbars = () => {
                       login
                     </Link>
                   </li>
-                  <li className="nav-item dropdown">
+                  <li className="nav-item dropdown disablehover">
                     <span
                       className="nav-link firstnav dropdown-toggle"
                       role="button"
@@ -112,6 +116,7 @@ const Navbars = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                       data-bs-offset="10,20"
+                      onClick={()=>setLangbtnshow(!langbtnshow)}
                     >
                       <img
                         src={langlogo}
@@ -122,7 +127,7 @@ const Navbars = () => {
 
                    
                       <ul
-                        className="dropdown-menu  dropdown-menu-right"
+                        className={ langbtnshow ?`dropdown-menu enablehover-menu dropdown-menu-right` : `disablehover-menu dropdown-menu-right`}
                         aria-labelledby="dropdownMenuOffset"
                         style={{ listStyle: "none", background: "white" }}
                       >
@@ -179,24 +184,27 @@ const Navbars = () => {
                     <NavLink
                       className="nav-link secnav "
                       aria-current="page"
-                      to="/home"
+                      to="/" 
+                      exact={true}
+                      activeClassName="active"
+
                     >
                       HOME
                     </NavLink>
                   </li>
-                  <li className="nav-item dropdown">
+                  <li className="nav-item dropdown ">
                     <NavLink
-                      className="nav-link secnav dropdown-toggle"
+                      className="nav-link secnav dropdown-toggle "
                       role="button"
                       to="/about"
                       id="dropdownMenuOffset"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                       data-bs-offset="10,20"
+                      activeClassName="active"
                     >
                       ABOUT-US
                     </NavLink>
-
                     <ul
                       className="dropdown-menu "
                       aria-labelledby="dropdownMenuOffset"
@@ -207,23 +215,26 @@ const Navbars = () => {
                       }}
                     >
                       <ul
-                        className="dropdown-menu "
+                        className="dropdown-menu navmenu_custome "
                         aria-labelledby="dropdownMenuOffset"
-                        style={{ listStyle: "none", background: "white" }}
+                        style={{ listStyle: "none", background: "white"}}
                       >
                         <li>
                           <NavLink
-                            style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/about_vision_mission"
                           >
-                            Vision & Mission
+                           
+
+                           Vision & Mission
+
+                           
                           </NavLink>
                         </li>
                         <li>
                           <Link
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="#"
                           >
                             Health Associates{" "}
@@ -232,7 +243,7 @@ const Navbars = () => {
                         <li>
                           <Link
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="#"
                           >
                             Chairman’s Profile{" "}
@@ -241,7 +252,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/about_message_chairmen"
                           >
                             Message from Chairman
@@ -251,7 +262,7 @@ const Navbars = () => {
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link secnav" to="/globalOperations">
+                    <NavLink className="nav-link secnav" to="/globalOperations" activeClassName="active">
                       global operation
                     </NavLink>
                   </li>
@@ -264,6 +275,7 @@ const Navbars = () => {
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      activeClassName="active"
                     >
                       Products
                     </NavLink>
@@ -278,14 +290,14 @@ const Navbars = () => {
                       }}
                     >
                       <ul
-                        className="dropdown-menu "
+                        className="dropdown-menu navmenu_custome "
                         aria-labelledby="dropdownMenuOffset"
                         style={{ listStyle: "none", background: "white" }}
                       >
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/products_bytrade"
                           >
                             By trade name
@@ -294,7 +306,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/products_bygeneric"
                           >
                             By generic name
@@ -303,7 +315,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/products_therapeutic"
                           >
                             By therapeutic class
@@ -312,7 +324,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/products_firsttime"
                           >
                             first time launching
@@ -329,6 +341,7 @@ const Navbars = () => {
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      activeClassName="active"
                     >
                       Facilities
                     </NavLink>
@@ -343,14 +356,14 @@ const Navbars = () => {
                       }}
                     >
                       <ul
-                        className="dropdown-menu "
+                        className="dropdown-menu navmenu_custome"
                         aria-labelledby="dropdownMenuOffset"
                         style={{ listStyle: "none", background: "white" }}
                       >
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/facilities_researchdevrsttime"
                           >
                             Research and Development
@@ -359,7 +372,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/facilities_product"
                           >
                             Product
@@ -368,7 +381,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/facilities_quality"
                           >
                             Quality Control
@@ -377,7 +390,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/facilities_warhouse"
                           >
                             Warehouse
@@ -386,7 +399,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/facilities_ourdistribution"
                           >
                             Our distribution network
@@ -397,7 +410,7 @@ const Navbars = () => {
                   </li>
                   <li className="nav-item">
                     {/* TeleMedicine Routing Path = /teleMedicine */}
-                    <Link className="nav-link secnav" to="#">
+                    <Link className="nav-link secnav" to="#" >
                       Tele-Medicine
                     </Link>
                   </li>
@@ -409,6 +422,7 @@ const Navbars = () => {
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      activeClassName="active"
                     >
                       media
                     </NavLink>
@@ -423,7 +437,7 @@ const Navbars = () => {
                       }}
                     >
                       <ul
-                        className="dropdown-menu dropdown-menu-right  "
+                        className="dropdown-menu dropdown-menu-right navmenu_custome "
                         aria-labelledby="dropdownMenuOffset"
                         style={{ listStyle: "none", background: "white" }}
                       >
@@ -433,7 +447,7 @@ const Navbars = () => {
                         <li>
                           <Link
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="#"
                           >
                             video
@@ -442,7 +456,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/media_photo"
                           >
                             photo
@@ -451,7 +465,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/media_socialmedia"
                           >
                             social media post
@@ -460,7 +474,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/media_milestone"
                           >
                             mile stones
@@ -469,7 +483,7 @@ const Navbars = () => {
                         <li>
                           <Link
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="#"
                           >
                             social responsibilities
@@ -486,6 +500,7 @@ const Navbars = () => {
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      activeClassName="active"
                     >
                       contact
                     </NavLink>
@@ -500,14 +515,14 @@ const Navbars = () => {
                       }}
                     >
                       <ul
-                        className="dropdown-menu  dropdown-menu-right "
+                        className="dropdown-menu  dropdown-menu-right navmenu_custome"
                         aria-labelledby="dropdownMenuOffset"
                         style={{ listStyle: "none", background: "white" }}
                       >
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/facilities_ourdistribution"
                           >
                             our distribution network
@@ -516,7 +531,7 @@ const Navbars = () => {
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
-                            className="dropdown-item"
+                            className="dropdown-item navmenu_custome_li"
                             to="/contact_contactus"
                           >
                             contact us

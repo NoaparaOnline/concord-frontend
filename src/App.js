@@ -69,9 +69,10 @@ function App() {
 
         {/*          Navbar             */}
 
-        {/* <Route exact path="/:page">
-          <Navbar />
-        </Route> */}
+        <Route 
+        exact path="/:page"
+        render={(props) => (props.location.pathname !== '/depotmanager-dashboard') && <Navbar /> }
+        />
 
         {/*          Home Page             */}
 
@@ -91,9 +92,10 @@ function App() {
         <Route exact path="/">
           <FixedRight />
         </Route>
-        {/* <Route exact path="/:page">
-          <FixedRight />
-        </Route> */}
+        <Route exact path="/:page"
+        render={(props) => (props.location.pathname !== '/depotmanager-dashboard') && <FixedRight /> }
+        />
+        
 
         {/*          Login Page             */}
 
@@ -250,13 +252,14 @@ function App() {
         {/*          Footer             */}
 
 
-        {/* <Route exact path="/:page">
-          <Footer />
-        </Route> */}
+        <Route exact path="/:page"
+        render={(props) => (props.location.pathname !== '/depotmanager-dashboard') && <Footer/> }
+        />
         <Route exact path="/">
-          <Footer />
+      <Footer />
         </Route>
       </Router>
+
     </div>
   );
 }

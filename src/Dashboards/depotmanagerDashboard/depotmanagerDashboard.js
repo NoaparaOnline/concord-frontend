@@ -4,8 +4,8 @@ import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboa
 import TableDash from "../../components/ReusableComponents/TableDash/TableDash";
 import './depotmanagerDashboard.css'
 
-import { data } from '../../components/ReusableComponents/TableDash/mockData';
-import { tableConstants } from '../../components/ReusableComponents/TableDash/tableConstant';
+import { data,stockdata } from '../../components/ReusableComponents/TableDash/mockData';
+import { tableConstants,stocks } from '../../components/ReusableComponents/TableDash/tableConstant';
 
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 
@@ -26,24 +26,26 @@ const DepotmanagerDashboard = () => {
     // #EFFBEF
         <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
         <Router>
-        <NavbarDash sidebarOpen={sidebarOpen} openSidebar={openSidebar}  />
-        <div className="container" style={{backgroundColor:'#FFF'}}>
+       
           <Route exact path="/order-history">
+            <NavbarDash sidebarOpen={sidebarOpen} openSidebar={openSidebar}  Heading="Order Request"/>
             <TableDash cols={tableConstants(handleEdit)} data={data}  hoverable bordered={false}/>
           </Route>
           <Route exact path="/neworder">
+          <NavbarDash sidebarOpen={sidebarOpen} openSidebar={openSidebar} Heading="New Order"  />
             <TableDash cols={tableConstants(handleEdit)} data={data}  hoverable bordered={false}/>
           </Route>
           <Route exact path="/stocks">
-            <TableDash cols={tableConstants(handleEdit)} data={data}  hoverable bordered={false}/>
+          <NavbarDash sidebarOpen={sidebarOpen} openSidebar={openSidebar} Heading="Stocks"  />
+            <TableDash cols={stocks(handleEdit)} data={stockdata}  hoverable bordered={false}/>
           </Route>
           <Route exact path="/deliverystatus">
-            <TableDash cols={tableConstants(handleEdit)} data={data}  hoverable striped bordered={false}/>
-          </Route>
+          <NavbarDash sidebarOpen={sidebarOpen} openSidebar={openSidebar} Heading="Delivery Status"  />
+            <TableDash cols={tableConstants(handleEdit)} data={data}  hoverable bordered={false}/>          </Route>
           <Route exact path="/payment">
-            <TableDash cols={tableConstants(handleEdit)} data={data} isDark/>
+          <NavbarDash sidebarOpen={sidebarOpen} openSidebar={openSidebar} Heading="Payment" />
+            <TableDash cols={tableConstants(handleEdit)} data={data}  hoverable bordered={false}/>
           </Route>
-        </div>
 
         <SidebarDashboard sidebarOpen={sidebarOpen}  closeSidebar={closeSidebar}/>
         </Router>

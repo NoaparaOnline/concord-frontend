@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import first from "../../../Statics/assets/fac-QC.jpg";
+import third from "../../../Statics/assets/fac-QC.jpg";
 import second from"../../../Statics/assets/fac-RD.jpg";
-import third from "../../../Statics/assets/warehouse-1.jpg";
-import fourth from"../../../Statics/assets/fac-production.jpg";
+import fourth from "../../../Statics/assets/warehouse-1.jpg";
+import first from"../../../Statics/assets/fac-production.jpg";
 import "./Cards.css";
 const Cards = () => {
   const cards = [
@@ -63,16 +63,9 @@ const Cards = () => {
 
                   <Link
                     to={ob.link}
-                    style={{
-                      textDecoration: "none",
-                      fontWeight: 500,
-                      marginTop: 0,
-                      height: "45px",
-                      width: "130px",
-                    }}
                     className="dd"
                   >
-                    <span>Read Me</span>
+                    Read Me
                   </Link>
                 </div>
               </div>

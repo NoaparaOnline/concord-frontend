@@ -12,7 +12,7 @@ const WeAreServing = () => {
             <ReactTypingEffect
               text={["BANGLADESH", "YOU", "WORLD"]}
               cursorRenderer={(cursor) => (
-                <h1 style={{ backgroundColor: "#23A455", color: "#fff" }}>
+                <h1 style={{ backgroundColor: "#23A455", color: "#fff" ,lineHeight:'1.23'}}>
                   
                   {cursor}
                 </h1>

@@ -1,6 +1,6 @@
-import React,{useEffect} from 'react'
+import React,{useState} from 'react'
 import './SidebarDashboard.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import logo from '../../../Statics/assets/Sidebar/sidelogo.png'
 import icon1 from '../../../Statics/assets/Sidebar/1.png'
 import icon2 from '../../../Statics/assets/Sidebar/2.png'
@@ -9,9 +9,9 @@ import icon4 from '../../../Statics/assets/Sidebar/4.png'
 import icon5 from '../../../Statics/assets/Sidebar/5.png'
 const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
  
+  const [click, setClick] = useState(false);
  
   return (
-    
     <div className={sidebarOpen ? "sidebar_responsive " : ""} id="sidebar">
     <div className="sidebar__title">
       <div className="d-flex justify-content-center">
@@ -41,10 +41,14 @@ const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
     <div className="sidebar__menu">
       <div className="sidebar__link active_menu_link">
       <li className="mt-4 ms-2">
-        <Link to="/order-history">
+        <NavLink 
+        onClick={() => setClick(false)}
+        exact
+        activeClassName="active"
+        to="/order-history">
         <img src={icon1} alt="" width="36" height="36"/>
           <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#089DA4'}}>Order History</span>
-        </Link>
+        </NavLink>
       </li>
         
       </div>
@@ -52,10 +56,15 @@ const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
       
 
       <li className="mt-4 ms-2">
-       <Link to="/neworder">
+       <NavLink
+               onClick={() => setClick(false)}
+               exact
+               activeClassName="active"
+       
+       to="/neworder">
         <img src={icon2} alt="" width="36" height="36"/>
         <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#CB912B'}}>New Order</span>
-       </Link>
+       </NavLink>
      </li>
 
 
@@ -64,10 +73,15 @@ const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
        
 
       <li className="mt-4 ms-2">
-       <Link to="/stocks">
+       <NavLink
+               onClick={() => setClick(false)}
+               exact
+               activeClassName="active"
+       
+       to="/stocks">
        <img src={icon3} alt="" width="36" height="36"/>
        <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#7F2987'}}>Stocks</span>
-       </Link>
+       </NavLink>
      </li>
 
 
@@ -75,32 +89,42 @@ const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
       <div className="sidebar__link">
         
       <li className="mt-4 ms-2">
-       <Link to="/deliverystatus">
+       <NavLink
+               onClick={() => setClick(false)}
+               exact
+               activeClassName="active"
+       
+       to="/deliverystatus">
        <img src={icon4} alt="" width="36" height="36"/>
         <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#4B8F8C'}}>Delivery Status</span>
-       </Link>
+       </NavLink>
      </li>
 
 
       </div>
       <div className="sidebar__link">
       <li className="mt-4 ms-2">
-       <Link to="/payment">
+       <NavLink
+               onClick={() => setClick(false)}
+               exact
+               activeClassName="active"
+       
+       to="/payment">
        <img src={icon5} alt="" width="36" height="36"/>
          <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#BB2026'}}>Payment</span>
-       </Link>
+       </NavLink>
        <span class="tooltip">Files</span>
      </li>
       </div>
-      <div className="sidebar__link">
+      {/* <div className="sidebar__link">
       <li className="mt-5 ms-2">
-       <Link to="#">
+       <NavLink to="#">
          <i className="fa fa-sign-out" style={{fontSize:'20px',color:'red'}}></i>
          <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'red'}}>Logout</span>
-       </Link>
+       </NavLink>
      </li>
         
-      </div>
+      </div> */}
     </div>
   </div>
   )

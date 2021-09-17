@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import './TableDash.css'
 
 const TableDash = ({ cols, data, bordered, hoverable, striped, isDark }) => {
     return (
+        <div className="container style_custom" style={{backgroundColor:'#FFF',borderRadius:'10px',width:'96%',padding:'20px',height:'100%'}}>
         <div class="table-responsive">
             <table className={`table ${bordered ? 'table-bordered' : 'table-borderless'} ${hoverable && 'table-hover'} ${striped && 'table-striped'} ${isDark && 'table-dark'}`}>
-                <thead>
-                    <tr>
+                <thead style={{borderBottom:'hidden',borderTop:'hidden'}}>
+                    <tr style={{border:'none',color:'#707070',fontWeight:'500'}}>
                         {cols.map((headerItem, index) => (
                             <th key={index}>{headerItem.title}</th>
                         ))}
@@ -14,14 +16,15 @@ const TableDash = ({ cols, data, bordered, hoverable, striped, isDark }) => {
                 </thead>
                 <tbody>
                     {data.map((item, index) => (
-                        <tr key={index}>
+                        <tr key={index} style={{border:'none'}}>
                             {cols.map((col, key) => (
-                                <td key={key}>{col.render(item)}</td>
+                                <td key={key} style={{border:'none'}}>{col.render(item)}</td>
                             ))}
                         </tr>
                     ))}
                 </tbody>
             </table>
+        </div>
         </div>
     )
 }

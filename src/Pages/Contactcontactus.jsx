@@ -36,8 +36,8 @@ const Contact_contactus = () => {
               {/* Bootstrap Form */}
               <form style={{minHeight:'450px'}}>
                 <div className="form-group">
-                  <select className="form-control" id="exampleFormControlSelect1">
-                    <option>General Inquiry</option>
+                  <select className="form-control " id="exampleFormControlSelect1">
+                    <option >General Inquiry</option>
                     <option>Sales</option>
                     <option>Delivery Service</option>
                     <option>Complaints & Suggestions</option>

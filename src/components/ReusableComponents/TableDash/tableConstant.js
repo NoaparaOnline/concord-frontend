@@ -4,46 +4,67 @@ import React from 'react';
 export const tableConstants = (handleEdit) => {
   return [
     {
-      title: 'ID',
+      title: 'Orders ID',
       render: rowData => {
-        return <span>{rowData.id}</span>;
+        return <span>{rowData.orderid}</span>;
       },
     },
     {
-      title: 'Name',
+      title: 'Customer Name',
       render: rowData => {
-        return <span>{rowData.name}</span>;
+        return <span>{rowData.cusname}</span>;
       },
     },
     {
-      title: 'Username',
+      title: 'Market & Address',
       render: rowData => {
-        return <span>{rowData.username}</span>;
+        return <span>{rowData.marketadd}</span>;
       },
     },
     {
-      title: 'Email',
+      title: 'Order Date/Time',
       render: rowData => {
-        return <span>{rowData.email}</span>;
+        return <span>{rowData.orddate}</span>;
       },
     },
     {
-      title: 'Phone',
+      title: 'Proceed By',
       render: rowData => {
-        return <span>{rowData.phone}</span>;
+        return <span>{rowData.proceed}</span>;
+      },
+    },
+    
+  ];
+};
+
+
+
+export const stocks = (handleEdit) => {
+  return [
+    {
+      title: 'S.No',
+      render: rowData => {
+        return <span>{rowData.sno}</span>;
       },
     },
     {
-      title: 'Website',
+      title: 'Product Name',
       render: rowData => {
-        return <span>{rowData.website}</span>;
+        return <span>{rowData.prodname}</span>;
       },
     },
     {
-      title: 'Action',
+      title: 'Product Formula',
       render: rowData => {
-        return <button className='btn btn-warning' onClick={handleEdit(rowData)}>Edit</button>
+        return <span>{rowData.prodfor}</span>;
       },
     },
+    {
+      title: 'Quantity',
+      render: rowData => {
+        return <span>{rowData.quan}</span>;
+      },
+    },
+    
   ];
 };

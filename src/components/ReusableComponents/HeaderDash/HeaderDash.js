@@ -6,11 +6,11 @@ const HeaderDash = () => {
   const date = today.getFullYear() + " / " + (today.getMonth() + 1) + " / " + today.getDate();
   const day = days[today.getDay()];
   return (
-    <div className="card">
+    <div className="card style_custom" style={{backgroundColor:'#FFF',borderRadius:'10px',width:'120px',padding:'10px 20px',height:'60px'}}>
 
-        <div style={{backgroundColor:'#FFF'}} className="d-flex flex-column p-3">
-            <div style={{fontWeight:'bold',fontSize:'9px'}} className="ms-1">{day}</div>
-            <div style={{fontSize:'10px'}}>{date}</div>
+        <div className="d-flex flex-column">
+            <div style={{fontWeight:'bold',fontSize:'15px'}} className="ms-2">{day}</div>
+            <div style={{fontSize:'13px'}}>{date}</div>
             
         </div>
       </div>
