@@ -1,18 +1,8 @@
-.navbar {
-    background: #EFFBEF;
-    grid-area: nav;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px 0 30px;
-  }
-  
-  .nav_icon {
+ .nav_icon_custom {
     display: none;
   }
   
-  .nav_icon > i {
+  .nav_icon_custom > i {
     font-size: 26px;
     color: #a5aaad;
   }

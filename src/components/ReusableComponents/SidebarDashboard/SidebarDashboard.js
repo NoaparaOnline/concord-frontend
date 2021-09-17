@@ -41,8 +41,7 @@ const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
     <div className="sidebar__menu">
       <div className="sidebar__link active_menu_link">
       <li className="mt-4 ms-2">
-        <Link to="/">
-          
+        <Link to="/order-history">
         <img src={icon1} alt="" width="36" height="36"/>
           <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#089DA4'}}>Order History</span>
         </Link>
@@ -53,7 +52,7 @@ const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
       
 
       <li className="mt-4 ms-2">
-       <Link to="/">
+       <Link to="/neworder">
         <img src={icon2} alt="" width="36" height="36"/>
         <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#CB912B'}}>New Order</span>
        </Link>
@@ -65,7 +64,7 @@ const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
        
 
       <li className="mt-4 ms-2">
-       <Link to="/">
+       <Link to="/stocks">
        <img src={icon3} alt="" width="36" height="36"/>
        <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#7F2987'}}>Stocks</span>
        </Link>
@@ -76,7 +75,7 @@ const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
       <div className="sidebar__link">
         
       <li className="mt-4 ms-2">
-       <Link to="/">
+       <Link to="/deliverystatus">
        <img src={icon4} alt="" width="36" height="36"/>
         <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#4B8F8C'}}>Delivery Status</span>
        </Link>
@@ -86,7 +85,7 @@ const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
       </div>
       <div className="sidebar__link">
       <li className="mt-4 ms-2">
-       <Link to="/">
+       <Link to="/payment">
        <img src={icon5} alt="" width="36" height="36"/>
          <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'#BB2026'}}>Payment</span>
        </Link>
@@ -95,7 +94,7 @@ const SidebarDashboard = ({ sidebarOpen, closeSidebar }) => {
       </div>
       <div className="sidebar__link">
       <li className="mt-5 ms-2">
-       <Link to="/">
+       <Link to="#">
          <i className="fa fa-sign-out" style={{fontSize:'20px',color:'red'}}></i>
          <span class="links_name" style={{fontSize:'12px',padding:'10px',color:'red'}}>Logout</span>
        </Link>

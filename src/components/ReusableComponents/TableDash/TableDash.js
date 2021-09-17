@@ -1,44 +1,45 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types'
 
-const TableDash = () => {
+const TableDash = ({ cols, data, bordered, hoverable, striped, isDark }) => {
     return (
-        <div className="table-responsive">
-            <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Order Id</th>
-      <th scope="col">Customer Name</th>
-      <th scope="col">Market & Address</th>
-      <th scope="col">Order Date/Time</th>
-      <th scope="col">Proceed By</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+        <div class="table-responsive">
+            <table className={`table ${bordered ? 'table-bordered' : 'table-borderless'} ${hoverable && 'table-hover'} ${striped && 'table-striped'} ${isDark && 'table-dark'}`}>
+                <thead>
+                    <tr>
+                        {cols.map((headerItem, index) => (
+                            <th key={index}>{headerItem.title}</th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((item, index) => (
+                        <tr key={index}>
+                            {cols.map((col, key) => (
+                                <td key={key}>{col.render(item)}</td>
+                            ))}
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     )
 }
 
-export default TableDash
+TableDash.propTypes = {
+    cols: PropTypes.array.isRequired,
+    data: PropTypes.array.isRequired,
+    bordered: PropTypes.bool,
+    hoverable: PropTypes.bool,
+    striped: PropTypes.bool,
+    isDark: PropTypes.bool,
+}
+
+TableDash.defaultProps = {
+    bordered: true,
+    hoverable: false,
+    striped: false,
+    isDark: false,
+}
+
+export default TableDash;

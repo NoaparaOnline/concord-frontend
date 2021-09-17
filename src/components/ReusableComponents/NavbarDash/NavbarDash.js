@@ -6,7 +6,7 @@ import './NavbarDash.css'
 const NavbarDash = ({ sidebarOpen, openSidebar }) => {
     return (
         <nav className="navbar">
-        <div className="nav_icon" onClick={() => openSidebar()}>
+        <div className="nav_icon nav_icon_custom" onClick={() => openSidebar()}>
           <i className="fa fa-bars" aria-hidden="true"></i>
         </div>
         <div className="navbar__left">
