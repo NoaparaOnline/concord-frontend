@@ -3,3 +3,20 @@
   border-bottom: hidden;
 }
 
+
+
+form{
+  margin: 0 ;
+}
+
+input{
+  border:none !important ;
+  font-size:14px;
+  outline: none!important;
+}
+
+button> img{
+ background: transparent !important;
+ border:none !important;
+ outline: none !important;
+}

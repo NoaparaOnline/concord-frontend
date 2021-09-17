@@ -27,7 +27,7 @@ const DepotmanagerDashboard = () => {
         <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
         <Router>
        
-          <Route exact path="/order-history">
+          <Route exact path="/depotmanager-dashboard">
             <NavbarDash sidebarOpen={sidebarOpen} openSidebar={openSidebar}  Heading="Order Request"/>
             <TableDash cols={tableConstants(handleEdit)} data={data}  hoverable bordered={false}/>
           </Route>
