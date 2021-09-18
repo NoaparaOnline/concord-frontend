@@ -19,6 +19,7 @@ import icon5 from "../../Statics/assets/Sidebar/5.png";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
+import ColorFullDashCard from "../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard";
 
 const DepotmanagerDashboard = (props) => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
@@ -43,6 +44,7 @@ const DepotmanagerDashboard = (props) => {
             openSidebar={openSidebar}
             Heading="Order Request"
           />
+          <ColorFullDashCard/>
           <TableDash
             cols={tableConstants(handleEdit)}
             data={data}
