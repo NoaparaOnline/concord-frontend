@@ -68,3 +68,41 @@ export const stocks = (handleEdit) => {
     
   ];
 };
+
+
+
+export const tableinner = (handleEdit) => {
+  return [
+    {
+      title: 'S.No',
+      render: rowData => {
+        return <span>{rowData.sno}</span>;
+      },
+    },
+    {
+      title: 'Product Name',
+      render: rowData => {
+        return <span>{rowData.prodname}</span>;
+      },
+    },
+    {
+      title: 'Quantity',
+      render: rowData => {
+        return <span>{rowData.quantity}</span>;
+      },
+    },
+    {
+      title: 'Trade Price',
+      render: rowData => {
+        return <span>{rowData.tradeprice}</span>;
+      },
+    },
+    {
+      title: 'Amount',
+      render: rowData => {
+        return <span>{rowData.amount}</span>;
+      },
+    },
+    
+  ];
+};

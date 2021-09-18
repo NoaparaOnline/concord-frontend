@@ -4,16 +4,18 @@ import './TableDash.css'
 import search from '../../../Statics/assets/G1.png'
 import filter from '../../../Statics/assets/F1.png'
 import { useHistory } from "react-router-dom";
-const TableDash = ({ cols, data, bordered, hoverable, striped, isDark }) => {
+const TableDash = ({ cols, data, bordered, hoverable, striped, isDark , match,location,Total }) => {
     let history = useHistory();
+    console.log(history);
+    console.log(match,location);
     return (
-        <div className="container style_custom" style={{ backgroundColor: '#FFF', borderRadius: '10px', width: '96%', padding: '20px', height: '100%' }}>
+        <div className="container style_custom mt-3" style={{ backgroundColor: '#FFF', borderRadius: '10px', width: '96%', padding: '20px', height: '100%' }}>
 
              <div class="search-box mb-2" style={{width: '240px'}} >
-                <form style={{border:'1px solid #707070',borderRadius:'10px' }}>
-                <button style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
-                <input type="text" placeholder="Search" />
-                <button style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
                 </form>
             </div>
 
@@ -29,8 +31,9 @@ const TableDash = ({ cols, data, bordered, hoverable, striped, isDark }) => {
                     <tbody>
                         {data.map((item, index) => (
                             <tr key={index} style={{ border: 'none' }}
-                            onClick={() => history.push('/depotmanager-dashboard')}
+                            onClick={() => history.push('/innertablepage',item)}
                             >
+                                
                                 {cols.map((col, key) => (
                                     
                                     <td key={key} style={{ border: 'none' }}>{col.render(item)}</td>
@@ -38,8 +41,10 @@ const TableDash = ({ cols, data, bordered, hoverable, striped, isDark }) => {
                                 ))}
                             </tr>
                         ))}
+                        {Total}
                     </tbody>
                 </table>
+
             </div>
         </div>
     )

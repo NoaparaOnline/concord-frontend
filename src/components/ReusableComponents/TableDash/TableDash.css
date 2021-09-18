@@ -5,17 +5,17 @@
 
 
 
-form{
+.form_style_search{
   margin: 0 ;
 }
 
-input{
+.form_style_input{
   border:none !important ;
   font-size:14px;
   outline: none!important;
 }
 
-button> img{
+.form_style_btn> img{
  background: transparent !important;
  border:none !important;
  outline: none !important;

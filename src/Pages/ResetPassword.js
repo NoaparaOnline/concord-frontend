@@ -9,7 +9,7 @@ import { resetPassword } from "../Store/Actions/loginActions";
 const ResetPassword = (props) => {
 
 
-
+console.log(props);
  
 
 const params = queryString.parse(props.location.search);
@@ -47,9 +47,9 @@ console.log(params.token)
 
     return (
 
-        <div className="container d-flex justify-content-center mt-5 mb-5">
+        <div className="container-sm d-flex justify-content-center my-5" >
           <div className="col-lg-4">
-            <div class="card" >
+            <div class="card ">
               <div class="card-body">
                 <h5 class="modal-title text-center">Reset Password</h5>
                 <div className="row px-3 mb-3">

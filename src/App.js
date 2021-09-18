@@ -71,7 +71,7 @@ function App() {
 
         <Route 
         exact path="/:page"
-        render={(props) => (props.location.pathname !== '/depotmanager-dashboard') && <Navbar /> }
+        render={(props) => (props.location.pathname !== '/depotmanager-dashboard' && props.location.pathname !== '/director-dashboard') && <Navbar /> }
         />
 
         {/*          Home Page             */}
@@ -93,7 +93,7 @@ function App() {
           <FixedRight />
         </Route>
         <Route exact path="/:page"
-        render={(props) => (props.location.pathname !== '/depotmanager-dashboard') && <FixedRight /> }
+        render={(props) => (props.location.pathname !== '/depotmanager-dashboard' && props.location.pathname !== '/director-dashboard') && <FixedRight /> }
         />
         
 
@@ -253,11 +253,12 @@ function App() {
 
 
         <Route exact path="/:page"
-        render={(props) => (props.location.pathname !== '/depotmanager-dashboard') && <Footer/> }
+        render={(props) => (props.location.pathname !== '/depotmanager-dashboard' && props.location.pathname !== '/director-dashboard') && <Footer/> }
         />
         <Route exact path="/">
       <Footer />
         </Route>
+
       </Router>
 
     </div>
