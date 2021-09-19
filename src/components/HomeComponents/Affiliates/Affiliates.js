@@ -49,7 +49,7 @@ const Affiliates = () => {
                     <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 d-xl-flex justify-content-center">
                   <NavLink activeClassName="navactive" exact={true} to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>HOSPITALS</span></NavLink>
                   <NavLink activeClassName="navactive" exact to='/about' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>RETAILERS</span></NavLink>
-                  <NavLink activeClassName="navactive" exact to='/product' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>CLINICS</span></NavLink>
+                  <NavLink activeClassName="navactive" exact to='/products' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>CLINICS</span></NavLink>
                   <NavLink activeClassName="navactive" exact to='/contact' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>PHARMACIES</span></NavLink>
                     </div>
                 </div>
