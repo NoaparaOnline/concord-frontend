@@ -69,9 +69,14 @@ function App() {
 
         {/*          Navbar             */}
 
-        <Route 
-        exact path="/:page"
-        render={(props) => (props.location.pathname !== '/depotmanager-dashboard' && props.location.pathname !== '/director-dashboard') && <Navbar /> }
+        <Route
+          exact path="/:page"
+          render={(props) => 
+            (props.location.pathname !== '/depotmanager-dashboard' 
+            && props.location.pathname !== '/director-dashboard'
+            // && props.location.pathname !== '/reset-password'
+            ) 
+            && <Navbar />}
         />
 
         {/*          Home Page             */}
@@ -93,9 +98,14 @@ function App() {
           <FixedRight />
         </Route>
         <Route exact path="/:page"
-        render={(props) => (props.location.pathname !== '/depotmanager-dashboard' && props.location.pathname !== '/director-dashboard') && <FixedRight /> }
+          render={(props) =>
+          (props.location.pathname !== '/depotmanager-dashboard'
+            && props.location.pathname !== '/director-dashboard'
+            && props.location.pathname !== '/reset-password'
+            )
+            && <FixedRight /> }
         />
-        
+
 
         {/*          Login Page             */}
 
@@ -126,10 +136,10 @@ function App() {
         </Route>
 
         {/* Dashboards */}
-        
+
         <Route exact path="/depotmanager-dashboard" component={DepotmanagerDashboard} />
         <Route exact path="/director-dashboard" component={directorDashboard} />
-        
+
         {/*          Contact Page             */}
 
         <Route exact path="/contact">
@@ -253,10 +263,15 @@ function App() {
 
 
         <Route exact path="/:page"
-        render={(props) => (props.location.pathname !== '/depotmanager-dashboard' && props.location.pathname !== '/director-dashboard') && <Footer/> }
+          render={(props) => 
+            (props.location.pathname !== '/depotmanager-dashboard'
+             && props.location.pathname !== '/director-dashboard'
+            //  && props.location.pathname !== '/reset-password'
+             ) 
+             && <Footer />}
         />
         <Route exact path="/">
-      <Footer />
+          <Footer />
         </Route>
 
       </Router>

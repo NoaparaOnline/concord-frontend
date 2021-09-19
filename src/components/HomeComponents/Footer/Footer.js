@@ -97,7 +97,7 @@ const Footer = () => {
               </Link>
             
           </li>
-          <ul className="list-unstyled list-inline mt-3">
+           <ul className="list-unstyled list-inline mt-3">
           <li className="list-inline-item">
         <a href="#!" className="sbtn btn-large mx-1 text-white" title="Facebook">
           <i className="fa fa-facebook-square fa-2x "></i>
@@ -118,7 +118,18 @@ const Footer = () => {
           <i className="fa fa-youtube-square fa-2x"></i>
         </a>
       </li>
-      </ul>
+      </ul> 
+
+        {/* <div className="widget-area">
+              <div class="socialiconm">
+                <a className="soicon" href="https://www.facebook.com/concordbd/" title="Facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+                <a className="soicon" href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                <a className="soicon" href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+                <a className="soicon" href="#" title="Youtube"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div> */}
+
+
                   </ul>
                 </div>
 
@@ -128,9 +139,9 @@ const Footer = () => {
 
                   <div className="form-row">
                                         <div className="col dk-footer-form">
-                                            <input type="email" className="form-control" placeholder="Your Email..."/>
+                                            <input type="email" className="form-control form-control-custom" placeholder="Your Email..."/>
                                             <button type="submit">
-                                                <span style={{fontSize:'12px',padding:'8px 6px' ,fontWeight:'500'}}>SUBSCRIBE</span>
+                                                <span className="btn-style-custom" style={{fontSize:'12px',fontWeight:'500'}}>SUBSCRIBE</span>
                                             </button>
                                         </div>
                                     </div>
@@ -171,13 +182,13 @@ const Footer = () => {
                   <h5 className="text-uppercase fhead">Get In Touch</h5>
 
                   <ul className="list-unstyled">
-                  <li className="linkFoot">
+                  <li className="">
               <span className="Typograpy_lastblock_Span">Call :</span> <span>+8801991145006</span>
               </li>
-              <li className="linkFoot">
+              <li className="">
               <span className="Typograpy_lastblock_Span">Email:</span> info@concordpharma-bd.com
               </li>
-              <li className="linkFoot">
+              <li className="mb-2">
               <span className="Typograpy_lastblock_Span">Visitor Count</span>
               <span className="ms-2"><Link to='https://www.freecounterstat.com" title="website hits counter'>
               <img src="https://counter10.stat.ovh/private/freecounterstat.php?c=wg2el4krc3mzdqf834cy12ftxqsuyh4l" border="0" title="website hits counter" alt="website hits counter"/>
@@ -186,7 +197,7 @@ const Footer = () => {
               
                <li >
               
-                  <Link to='/' className="linkFoot">
+                  <Link to='/' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
                   <i className="fa fa-phone"></i>
                       <span className="ms-2">Enquiry</span>
                   </Link>
@@ -194,7 +205,7 @@ const Footer = () => {
               </li>
               <li >
             
-                  <Link to='/' className="linkFoot">
+                  <Link to='/' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
                   <i className="fa fa-globe"></i>
                   <span className="ms-2">Distribution Center</span>
                   </Link>

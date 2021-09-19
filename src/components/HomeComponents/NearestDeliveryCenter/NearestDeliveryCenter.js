@@ -6,10 +6,17 @@ const NearestDeliveryCenter = ({heading}) => {
         <div>
 
         <div className="container my-5">
-        <div className="row">
-            <div className="col-md-6 my-4 text-left">
+        <div className="row d-flex justify-content-center">
+            <div className="col-lg-6 ">
+             
+            <div className="row">
+            <div className="col-lg-12">
              <h1 className="siz text-left " style={{color:'#0066b3'}}>Nearest Delivery Center</h1>
-             <p style={{color:'#565656',fontSize:'20px',marginBottom:'15px',lineHeight:1.5}}>We serve the whole nation by covering entire Bangladesh. You can track the nearest delivery center simply by selecting the area</p>
+            </div>    
+            </div>
+            <div className="row">
+            <div className="col-lg-12">
+            <p style={{color:'#565656',fontSize:'20px',marginBottom:'15px',lineHeight:1.5}}>We serve the whole nation by covering entire Bangladesh. You can track the nearest delivery center simply by selecting the area</p>
              <label for="area" style={{color:'#565656',fontSize:'20px',marginBottom:'15px',lineHeight:1.5}}>Select Area:</label>
             <select name="area" id="area"  >
       <option value="1">Central</option> 
@@ -25,13 +32,17 @@ const NearestDeliveryCenter = ({heading}) => {
       <option value="11">Jhenaidah</option>
 </select>
 
-             <p className="typography_text" style={{color:'#565656',fontSize:'20px',marginBottom:'15px',lineHeight:1.5}}>For more details please call at our TOLLFREE number.</p>
+             <p className="typography_text text-justify" style={{color:'#565656',fontSize:'20px',marginBottom:'15px',lineHeight:1.5}}>For more details please call at our TOLLFREE number.</p>
              <span style={{color:'#0066b3'}}><i className="fa fa-phone"></i></span><span className="typography_text"
              style={{color:'#565656',fontSize:'18px',marginBottom:'15px',lineHeight:1.5}}>+8801991145006</span>
+                
+            </div>    
+            </div>
+             
 
             </div>
-            <div className="col-md-6" >
-            <video controls autoPlay muted loop width="100%" height="100%">
+            <div className="col-lg-6">
+            <video autoPlay muted loop width="100%" height="100%">
             <source src="https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/video.mp4" type="video/mp4"/>
             Your browser does not support the video tag.
             </video>             

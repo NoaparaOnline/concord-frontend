@@ -73,7 +73,20 @@ const Home = () => {
           <>
             <div className="row">
               <div className="col-md-12 d-flex justify-content-center my-4 text-primary">
-                <Link to='/media_milestone' style={{ textDecoration: 'none', fontWeight: 550, marginTop: 0 }} className="dd rounded-pill"><span>VIEW MORE</span></Link>
+                <Link to='/media_milestone' style={{ 
+                  textDecoration: 'none', 
+                  fontWeight: 500,
+                  fontSize:'12px',
+                  lineHeight:'1.7em',
+                  padding:'11px 30px' ,
+                  backgroundColor:'#0066b3',
+                  width:'170px',
+                  height:'50px',
+                  justifyContent:'center',
+                   }} 
+                  className="btn btn-primary rounded-pill d-flex align-items-center">
+                    <span>VIEW MORE</span>
+                </Link>
               </div>
             </div>
           </>

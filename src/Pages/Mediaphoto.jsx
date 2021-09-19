@@ -79,11 +79,11 @@ function importAll(data) {
                     </div>
                   ))}
 
-                    <Modal show={show} onHide={handleClose} centered size="lg">
+                    <Modal show={show} onHide={handleClose} centered size="xl">
                         <Modal.Header closeButton>
                         </Modal.Header>
                         <Modal.Body >
-                        <img alt="" src={imag} className="img-fluid "/>
+                        <img alt="" src={imag} width="100%" height="100%"/>
                         </Modal.Body>
                     </Modal>
 

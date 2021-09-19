@@ -46,6 +46,7 @@ console.log(params.token)
     };
 
     return (
+        <div className="container-xl d-flex flex-column justify-content-center" style={{height: '600px'}}>
 
         <div className="container-sm d-flex justify-content-center my-5" >
           <div className="col-lg-4">
@@ -110,6 +111,7 @@ console.log(params.token)
               </div>
             </div>
           </div>
+      </div>
       </div>
     )
 }

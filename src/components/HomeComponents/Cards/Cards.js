@@ -47,19 +47,19 @@ const Cards = () => {
               style={{ display: "flex", flexDirection: "row", padding: "10px" }}
             >
               <div className="row">
-                <div className="col-sm-12 col-lg-6 ">
-                  <img alt="" src={ob.imageURL} className="img-fluid" />
+                <div className="col-lg-6 col-md-6 col-sm-12 imgmargin">
+                  <img alt="" src={ob.imageURL} width="100%" height="100%"/>
                 </div>
                 <div
-                  className="col-sm-12 col-lg-6"
+                  className="col-lg-6 col-md-6 col-sm-12 smallscr_responsive"
                   style={{
                     alignItems: "flex-start",
                     flexDirection: "column",
                     display: "flex",
                   }}
                 >
-                  <h5 style={{ color: "#337ab7" }}>{ob.name}</h5>
-                  <p className="text-start">{ob.text}</p>
+                  <h5 style={{ color: "#337ab7",fontSize:'24px' }}>{ob.name}</h5>
+                  <p className="text-justify">{ob.text}</p>
 
                   <Link
                     to={ob.link}

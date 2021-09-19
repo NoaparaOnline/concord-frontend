@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 .imghightwidth
 {
     max-width: 130px;
-    height: auto;
+    max-height: 50px;
 }
 .centcol
 {
@@ -122,11 +122,17 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
  .dk-footer-form {
     position: relative;
+    
+    height: 42px!important;
+    width:320px !important;
+    max-width:360px!important;
+
 }
 .dk-footer-form input[type=email] {
-    padding: 12px 28px;
+    padding: 9px 21px;
       border-radius: 50px;
       background: #fff;
       border: 1px solid #000000; }
@@ -140,16 +146,26 @@ h1, h2, h3, h4, h5, h6 {
       position: absolute;
       top: 0;
       right: 0;
-      padding: 10px 24px 14px 20px;
+      padding: 8px 6px;
+      margin: 1px 5px 0px;
       border-top-right-radius: 25px;
       border-bottom-right-radius: 25px;
       border: 1px solid #0066b3;
+      letter-spacing:2px !important;
       background: #0066b3;
       color: #fff; }
     .dk-footer-form button:hover {
       cursor: pointer; }
-  
-
+  .btn-style-custom:hover{
+    color:#000000 !important;
+}
+    .form-control-custom{
+        border-color: #565656 !important;
+    }
+    .form-control-custom:focus{
+        border-color: #565656 !important;
+    }
 .Typograpy_lastblock_Span{
     font-weight: 700!important;
 }
+

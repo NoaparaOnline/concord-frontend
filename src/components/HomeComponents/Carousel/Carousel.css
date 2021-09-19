@@ -120,15 +120,15 @@
 
 /* Jumping Animation Bottom To Top */
 .ball {
-  animation: bounce 1s infinite alternate;
-  -webkit-animation: bounce 1s infinite alternate;
+  animation: opacity 0.5s, bounce 1.5s infinite alternate;
+  -webkit-animation: opacity 0.5s, bounce 1.5s infinite alternate;
 }
 @keyframes bounce {
   from {
     transform: translateY(0px);
   }
   to {
-    transform: translateY(40px);
+    transform: translateY(35px);
   }
 }
 @-webkit-keyframes bounce {
@@ -136,16 +136,25 @@
     transform: translateY(0px);
   }
   to {
-    transform: translateY(40px);
+    transform: translateY(35px);
   }
 }
 .typography_Heading{ 
   
   font-family: 'Montserrat', sans-serif;
   font-size: 3vw !important;
-  display:inline-block;
   font-weight: 600 !important;
     text-transform: uppercase;
+}
+.img-inline-res{
+  width: calc(100% - 70%);
+  margin: 0px 15px 0px 0px !important;
+}
+
+.btn-custom-animation:hover{
+    border: 1px solid #000013 !important;
+    color: #000 !important;
+    background-color:#fff !important;
 }
 
 .typograpy_title{
@@ -219,6 +228,7 @@
   text-align: center;
   color: red !important;
   overflow:hidden !important;
+  opacity: unset;
 }
 
 .slick-dots li.slick-active button:before {
@@ -237,3 +247,6 @@
   background-repeat: no-repeat !important;
   transition: background-size .5s, color .5s !important;
 } */
+.slick-initialized .slick-slide.slick-active {
+  z-index: 1 !important;
+}

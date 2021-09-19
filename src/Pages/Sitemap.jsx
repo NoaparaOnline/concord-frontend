@@ -27,7 +27,11 @@ const Sitemap = () => {
       />
       
       <div className="container mb-5" style={{textAlign:'center'}}>
-<img className="img-fluid" alt="" src={sitemap} usemap="#image-map"/>
+
+
+
+
+<img alt="" src={sitemap} usemap="#image-map" />
 
 <map name="image-map">
     <Link to='/'><area target="_blank" alt="Home" title="Home" coords="628,0,751,40" shape="rect"/></Link>
@@ -59,7 +63,7 @@ const Sitemap = () => {
     <Link to='#'><area target="_blank" alt="Social Responsibilities" title="Social Responsibilities"  coords="786,472,977,508" shape="rect"/></Link>
     <Link to='/facilities_ourdistribution'><area target="_blank" alt="Our Distribution Network" title="Our Distribution Network"  coords="1018,172,1205,211" shape="rect"/></Link>
     <Link to='/contact_contactus'><area target="_blank" alt="Contact Us" title="Contact Us"  coords="1017,249,1207,282" shape="rect"/></Link>
-</map>
+</map> 
 </div>
 
       <CompanyLogos />

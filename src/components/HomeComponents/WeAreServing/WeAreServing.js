@@ -7,7 +7,7 @@ const WeAreServing = () => {
     <div className="colrbck">
       <div className="container wrapper">
         <div className="row">
-          <div className="col-lg-12 col-md-12 col-sm-6 col-xs-6">
+          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-6">
             <span className="static-txt"> We are Serving you </span>
             <ReactTypingEffect
               text={["BANGLADESH", "YOU", "WORLD"]}

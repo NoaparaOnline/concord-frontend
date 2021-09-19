@@ -36,16 +36,6 @@ const Products_bytrade = () => {
       title: "Acedol Tablet",
       text1: "NSAID",
       text2: "Aceclofenac 100 mg",
-      img: acedolfr,
-      btn: "Read More",
-      btnlink: "/acedol-tablet",
-      type:'Syrup'
-    },
-    {
-      id: 0,
-      title: "Acedol Tablet",
-      text1: "NSAID",
-      text2: "Aceclofenac 100 mg",
       img: [
         {
           id: 0,

@@ -24,3 +24,17 @@
     /* font-weight: 550 !important; */
 
 }
+
+@media (max-width: 768px) { 
+   
+    .smallscr_responsive{
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .imgmargin{
+        margin-bottom: 20px !important;
+    }
+   
+ }
+

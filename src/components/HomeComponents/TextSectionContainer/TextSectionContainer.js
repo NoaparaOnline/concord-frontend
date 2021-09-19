@@ -4,7 +4,7 @@ const TextSectionContainer = () => {
   return (
     <div className="container container_inside">
         <div className="row">
-          <div className="col-12 p-4 text_shadow text-center ">
+          <div className="col-11 p-4 text_shadow text-center ">
               <p className="text_typography">
                 CONCORD Pharmaceuticals Ltd., a fast growing pharmaceutical
                 company is committed to manufacture quality medicines through
