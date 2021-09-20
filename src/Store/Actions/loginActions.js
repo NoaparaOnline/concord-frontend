@@ -76,3 +76,14 @@ export const loginUser = (data) => async (dispatch) => {
       console.log("Login error", error);
     }
   };
+
+  export const getUser = () => async (dispatch) => {
+    const getUserFromLocal = localStorage.getItem("user");
+    let user = JSON.parse(getUserFromLocal);
+    console.log(user,"from Actions");
+    dispatch({
+      type: logInConstants.GET_USER_FROM_LOCAL,
+      payload: user,
+    });
+  };
+  

@@ -1,4 +1,5 @@
-import React from "react";
+import React , { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer, FixedRight } from "./components";
@@ -34,11 +35,18 @@ import Productstherapeutic from "./Pages/Productstherapeutic";
 import ScrollToTop from "./components/ReusableComponents/scrollTop";
 import ProductsCardInnerPage from "./Pages/ProductsCardInnerPage";
 import ResetPassword from "./Pages/ResetPassword";
+import { getUser } from "./Store/Actions/loginActions";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import DepotmanagerDashboard from "./Dashboards/depotmanagerDashboard/depotmanagerDashboard";
 import directorDashboard from "./Dashboards/directorDashboard/directorDashboard";
 function App() {
+  // Get User From Local Storage
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getUser());
+  }, [dispatch]);
+
   return (
     <div className="App">
       <ToastContainer
@@ -57,10 +65,15 @@ function App() {
         <ScrollToTop />
         {/*          Root Page             */}
 
-        <Route exact path="/">
-          <Navbar />
-        </Route>
-
+       
+       
+        <Route
+          exact path="/"
+          render={(props) => <Navbar {...props}/> }
+        />
+       
+       
+       
         {/*          Front Home Page             */}
 
         <Route exact path="/">
@@ -76,7 +89,7 @@ function App() {
             && props.location.pathname !== '/director-dashboard'
             // && props.location.pathname !== '/reset-password'
             ) 
-            && <Navbar />}
+            && <Navbar {...props}/> }
         />
 
         {/*          Home Page             */}

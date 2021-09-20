@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
 import TableDash from "../../components/ReusableComponents/TableDash/TableDash";
@@ -20,11 +20,13 @@ import icon6 from "../../Statics/assets/Sidebar/logout.png";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 
 const DepotmanagerDashboard = (props) => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
+  const user = useSelector((state) => state?.logIn?.user);
+  console.log(user,"dashboard");
   const dispatch = useDispatch()
   const openSidebar = () => {
     setsidebarOpen(true);
@@ -32,10 +34,14 @@ const DepotmanagerDashboard = (props) => {
   const closeSidebar = () => {
     setsidebarOpen(false);
   };
-
+  useEffect(() => {
+    if(!user)
+    {
+      props.history.push('/');
+    }  
+  });
   const logouthandler = ()=>{
-    dispatch(logoutUser())
-    props.history.push('/');
+    dispatch(logoutUser())   
   }
 
   const handleEdit = (item) => () => {
