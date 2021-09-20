@@ -4,8 +4,10 @@ import { useDispatch } from "react-redux";
 import { loginUser } from "../Store/Actions/loginActions";
 import { Link } from "react-router-dom";
 import { forgotPassword } from "../Store/Actions/loginActions";
-
+import { useHistory } from "react-router";
 const Login = (props) => {
+  const history = useHistory();
+  console.log(history);
   const dispatch = useDispatch();
 
   const onSubmit = async () => {
@@ -16,7 +18,11 @@ const Login = (props) => {
     };
 
     const type = await dispatch(loginUser(apiData));
-    alert(type, "Login Hogaya Sahi");
+    console.log(type);
+    
+    if (type==="Succuss") {
+      history?.push('/depotmanager-dashboard')
+    }
   };
 
 
@@ -25,13 +31,12 @@ const Login = (props) => {
       email_address: email,
     };
     const type = await dispatch(forgotPassword(apiData));
-    alert(type, "Forgot Password Sahi Hit Hua hai");
+
     props.onHide();
   };
 
 
   const [email, setEmail] = useState("");
-  const [showdiv, setShowdiv] = useState(true);
   const [password, setPassword] = useState("");
 
   return (
@@ -41,7 +46,7 @@ const Login = (props) => {
        <Modal.Header>
      
          
-       {showdiv ?  
+       {props.showdiv ?  
         <span className="" style={{ fontWeight: "600" ,fontSize:'22px',color:'#0066b3' }}> Login  </span>
         :
         <span className="" style={{ fontWeight: "600" ,fontSize:'22px',color:'#0066b3' }}> Forgot Password </span>
@@ -61,7 +66,7 @@ const Login = (props) => {
                   style={{ minWidth: "50%", width: "375px", height: "500" }}
                 >
 
-                  {showdiv ?  
+                  {props.showdiv ?  
                   <div>
                      
                      
@@ -123,7 +128,7 @@ const Login = (props) => {
                             for="gridCheck1"
                             style={{ fontSize: "12px" }}
                           >
-                            <Link onClick={()=>setShowdiv(false)} to="#" style={{textDecoration:'none' ,color:'#0066b3'}}>Forgot Password ?</Link>
+                            <Link onClick={()=>props.setShowdiv(false)} to="#" style={{textDecoration:'none' ,color:'#0066b3'}}>Forgot Password ?</Link>
                           </label>
                         </div>
 
@@ -173,7 +178,7 @@ const Login = (props) => {
                             style={{ fontSize: "12px" }}
                           >
                             <Link onClick={()=>{
-                              setShowdiv(true);
+                              props.setShowdiv(true);
                               }} to="#" style={{textDecoration:'none' ,color:'#0066b3'}}>Back To Login </Link>
                           </label>
                         </div>

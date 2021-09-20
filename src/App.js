@@ -109,9 +109,10 @@ function App() {
 
         {/*          Login Page             */}
 
-        <Route exact path="/login">
-          <Login />
-        </Route>
+        <Route
+          path='/login'
+          render={(props) => <Login {...props} />}
+        />
 
         {/*          Main About Page             */}
 
@@ -137,7 +138,11 @@ function App() {
 
         {/* Dashboards */}
 
-        <Route exact path="/depotmanager-dashboard" component={DepotmanagerDashboard} />
+
+        <Route
+          path='/depotmanager-dashboard'
+          render={(props) => <DepotmanagerDashboard {...props} />}
+        />
         <Route exact path="/director-dashboard" component={directorDashboard} />
 
         {/*          Contact Page             */}
@@ -253,6 +258,8 @@ function App() {
           <Sitemap />
         </Route>
 
+            
+
         {/*          TeleMedicine          */}
 
         <Route exact path="/teleMedicine">
@@ -260,6 +267,17 @@ function App() {
         </Route>
 
         {/*          Footer             */}
+
+
+
+
+
+
+
+
+
+
+
 
 
         <Route exact path="/:page"
@@ -270,9 +288,21 @@ function App() {
              ) 
              && <Footer />}
         />
+
         <Route exact path="/">
           <Footer />
         </Route>
+
+
+
+
+
+
+
+
+
+
+
 
       </Router>
 

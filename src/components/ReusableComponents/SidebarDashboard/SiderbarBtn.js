@@ -11,6 +11,7 @@ const SiderbarBtn = (props) => {
               className="sidebar__link"
               exact={true}
               activeStyle={borderSidebtn}
+              onClick={props.onClick}
               to={`${match.path}/${btnroute}`}>
               <li className="mb-2 ms-4">
                 <img src={imgbtn} alt="" width="36" height="36" />

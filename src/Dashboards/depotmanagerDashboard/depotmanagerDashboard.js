@@ -16,19 +16,27 @@ import icon2 from "../../Statics/assets/Sidebar/2.png";
 import icon3 from "../../Statics/assets/Sidebar/3.png";
 import icon4 from "../../Statics/assets/Sidebar/4.png";
 import icon5 from "../../Statics/assets/Sidebar/5.png";
+import icon6 from "../../Statics/assets/Sidebar/logout.png";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
-import ColorFullDashCard from "../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard";
+import { useDispatch } from "react-redux";
+import { logoutUser } from "../../Store/Actions/loginActions";
 
 const DepotmanagerDashboard = (props) => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
+  const dispatch = useDispatch()
   const openSidebar = () => {
     setsidebarOpen(true);
   };
   const closeSidebar = () => {
     setsidebarOpen(false);
   };
+
+  const logouthandler = ()=>{
+    dispatch(logoutUser())
+    props.history.push('/');
+  }
 
   const handleEdit = (item) => () => {
     // write your logic
@@ -44,7 +52,6 @@ const DepotmanagerDashboard = (props) => {
             openSidebar={openSidebar}
             Heading="Order Request"
           />
-          <ColorFullDashCard/>
           <TableDash
             cols={tableConstants(handleEdit)}
             data={data}
@@ -96,6 +103,7 @@ const DepotmanagerDashboard = (props) => {
           />
         </Route>
         <Route path={`${props.match.path}/payment`}>
+            
           <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
@@ -160,6 +168,14 @@ const DepotmanagerDashboard = (props) => {
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 btnroute="payment"
                 btnName="Payment"
+              />
+              <SiderbarBtn
+                imgbtn={icon6}
+                Colr="#BB2026"
+                {...props}
+                borderSidebtn={{ borderRight: "6px solid #BB2026" }}
+                btnName="Logout"
+                onClick={logouthandler}
               />
             </>
           }

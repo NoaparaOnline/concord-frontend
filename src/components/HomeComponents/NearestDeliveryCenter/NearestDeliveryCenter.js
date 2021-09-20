@@ -7,17 +7,17 @@ const NearestDeliveryCenter = ({heading}) => {
 
         <div className="container my-5">
         <div className="row d-flex justify-content-center">
-            <div className="col-lg-6 ">
+            <div className="col-lg-5 ">
              
             <div className="row">
             <div className="col-lg-12">
-             <h1 className="siz text-left " style={{color:'#0066b3'}}>Nearest Delivery Center</h1>
+             <h1 className="siz text-left " style={{color:'#0066b3'}}>Nearest <br/> Delivery Center</h1>
             </div>    
             </div>
             <div className="row">
             <div className="col-lg-12">
             <p style={{color:'#565656',fontSize:'20px',marginBottom:'15px',lineHeight:1.5}}>We serve the whole nation by covering entire Bangladesh. You can track the nearest delivery center simply by selecting the area</p>
-             <label for="area" style={{color:'#565656',fontSize:'20px',marginBottom:'15px',lineHeight:1.5}}>Select Area:</label>
+             <label for="area" style={{color:'#565656',fontSize:'20px',marginBottom:'15px',lineHeight:1.5}}>Select Area: &nbsp;</label>
             <select name="area" id="area"  >
       <option value="1">Central</option> 
       <option value="2">Dhaka</option>      
@@ -41,7 +41,7 @@ const NearestDeliveryCenter = ({heading}) => {
              
 
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-5">
             <video autoPlay muted loop width="100%" height="100%">
             <source src="https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/video.mp4" type="video/mp4"/>
             Your browser does not support the video tag.

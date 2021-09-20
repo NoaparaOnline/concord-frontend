@@ -6,11 +6,16 @@ const SERVICE_URLS = {
   login: "users/login/web",
   resetPassword: "users/reset-password",
   forgotPassword: "users/forgot-password",
+  logout: "users/logout",
 };
 
 const login = (data) =>
   post(SERVICE_URLS.login, data, { feature: featureConstants.login });
-const resetPassword = (data) =>
+
+  const logout = () =>
+  post(SERVICE_URLS.logout, {}, { feature: featureConstants.login });
+
+  const resetPassword = (data) =>
   patch(SERVICE_URLS.resetPassword, data, {
     feature: featureConstants.static,
   });
@@ -23,5 +28,6 @@ const apiServices = {
   login,
   resetPassword,
   forgotPassword,
+  logout,
 };
 export default apiServices;

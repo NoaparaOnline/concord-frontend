@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="container">
 
           <footer className="text-center text-lg-start text-white">
-            <div className="container p-4">
+            <div className="container p-1">
               <div className="row mt-4">
                 <div className="col-lg-3 col-md-6 mb-4 mb-md-0 first1">
                   <h5 className="text-uppercase fhead">Quick Links</h5>
@@ -99,23 +99,23 @@ const Footer = () => {
           </li>
            <ul className="list-unstyled list-inline mt-3">
           <li className="list-inline-item">
-        <a href="#!" className="sbtn btn-large mx-1 text-white" title="Facebook">
-          <i className="fa fa-facebook-square fa-2x "></i>
+        <a href="#!" className="sbtn btn-large mx-1 text-white linkFoot" title="Facebook">
+          <i className="fa fa-facebook-square fa-2x" ></i>
         </a>
       </li>
       <li className="list-inline-item">
-        <a href="#!" className="sbtn btn-large mx-1 text-white" title="Linkedin">
-          <i className="fa fa-linkedin fa-2x"></i>
+        <a href="#!" className="sbtn btn-large mx-1 text-white linkFoot" title="Linkedin">
+          <i className="fa fa-linkedin-square fa-2x" ></i>
         </a>
       </li>
       <li className="list-inline-item">
-        <a href="#!" className="sbtn btn-large mx-1 text-white" title="Twitter">
-          <i className="fa fa-twitter-square fa-2x"></i>
+        <a href="#!" className="sbtn btn-large mx-1 text-white linkFoot" title="Twitter">
+          <i className="fa fa-twitter-square fa-2x" ></i>
         </a>
       </li>
       <li className="list-inline-item">
-        <a href="#!" className="sbtn btn-large mx-1 text-white" title="Youtube">
-          <i className="fa fa-youtube-square fa-2x"></i>
+        <a href="#!" className="sbtn btn-large mx-1 text-white linkFoot" title="Youtube">
+          <i className="fa fa-youtube-square fa-2x" ></i>
         </a>
       </li>
       </ul> 

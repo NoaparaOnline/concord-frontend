@@ -12,7 +12,7 @@ const Slideshow = () => {
     {
       id:0,
       title: "Pharmaceuticals Ltd.",
-      img: carousel1,
+      img: carousel2,
       logo: whitebglogo,
       text: "Better Medicine Better Life",
       btn: "GET STARTED NOW",
@@ -21,7 +21,7 @@ const Slideshow = () => {
     {
       id:1,
       title: "10 INTERNATIONAL DESTINATIONS",
-      img: carousel2,
+      img: carousel4,
       logo: "",
       text: "Exporting Quality",
       btn: "Know More",
@@ -30,7 +30,7 @@ const Slideshow = () => {
     {
       id:2,
       title: "NATIONWIDE DISTRIBUTION NETWORK",
-      img: carousel4,
+      img: carousel1,
       logo: "",
       text: "Delivering all over the country",
       btn: "Know More",

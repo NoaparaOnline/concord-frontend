@@ -72,7 +72,7 @@ const Home = () => {
         button={
           <>
             <div className="row">
-              <div className="col-md-12 d-flex justify-content-center my-4 text-primary">
+              <div className="col-md-12 d-flex justify-content-center my-5 text-primary">
                 <Link to='/media_milestone' style={{ 
                   textDecoration: 'none', 
                   fontWeight: 500,

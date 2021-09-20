@@ -19,6 +19,16 @@
 
 
 
+.navmenu_custome_li:focus, .navmenu_custome_li:hover {
+    color: #0066b3;
+    background-color: #fff;
+}
+.navmenu_custome:focus, .navmenu_custome:hover {
+    color: #0066b3;
+    background-color: #fff;
+}
+
+
 .navmenu_custome {
  
     padding: 0.8rem 1rem !important;
@@ -123,8 +133,3 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
     
   }
   
-.dropdown-menu>li>a:hover {
-    background-color: #337ab7 !important;
-    color: #fff !important;
- }
- 

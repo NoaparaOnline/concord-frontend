@@ -12,9 +12,12 @@ import { useLocation } from 'react-router-dom';
 const Navbars = () => {
   const [show, setShow] = useState(false);
   const [langbtnshow, setLangbtnshow] = useState(false);
+  const [showdiv, setShowdiv] = useState(true);
+
   const handleClose = () => 
   {
       setShow(!show);
+      setShowdiv(true);
 
   }
   const handleShow = () => {
@@ -212,6 +215,7 @@ const Navbars = () => {
                         paddingTop: "15px",
                         border: "none",
                         background: "transparent",
+
                       }}
                     >
                       <ul
@@ -547,7 +551,7 @@ const Navbars = () => {
         </div>
       </nav>
 
-      <Login show={show} onHide={handleClose} />
+      <Login show={show} onHide={handleClose} showdiv={showdiv} setShowdiv={setShowdiv} />
     </>
   );
 };
