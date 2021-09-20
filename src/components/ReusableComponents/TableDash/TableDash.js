@@ -28,7 +28,7 @@ const TableDash = ({ cols, data, bordered, hoverable, striped, isDark , match,lo
                             ))}
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody style={{cursor:'pointer'}}>
                         {data.map((item, index) => (
                             <tr key={index} style={{ border: 'none' }}
                             onClick={() => history.push('/innertablepage',item)}

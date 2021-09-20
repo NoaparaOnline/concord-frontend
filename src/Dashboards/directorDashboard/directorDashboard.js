@@ -20,7 +20,12 @@ import icon2 from "../../Statics/assets/Sidebar/2.png";
 import icon3 from "../../Statics/assets/Sidebar/3.png";
 import icon4 from "../../Statics/assets/Sidebar/4.png";
 import icon5 from "../../Statics/assets/Sidebar/5.png";
+import icon6 from "../../Statics/assets/Sidebar/logout.png";
+import { useDispatch } from "react-redux";
+import { logoutUser } from "../../Store/Actions/loginActions";
+
 const DirectorDashboard = (props) => {
+
   const [sidebarOpen, setsidebarOpen] = useState(false);
   const openSidebar = () => {
     setsidebarOpen(true);
@@ -28,6 +33,12 @@ const DirectorDashboard = (props) => {
   const closeSidebar = () => {
     setsidebarOpen(false);
   };
+  const dispatch = useDispatch()
+
+  const logouthandler = ()=>{
+    dispatch(logoutUser())   
+  }
+
 
   const handleEdit = (item) => () => {
     // write your logic
@@ -37,11 +48,11 @@ const DirectorDashboard = (props) => {
   return (
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
       <Router>
-        <Route exact path={`/depotmanager-dashboard`}>
+        <Route exact path={`/director-dashboard`}>
           <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="Order Request"
+            Heading="Reports"
           />
           <TableDash
             cols={tableConstants(handleEdit)}
@@ -51,11 +62,11 @@ const DirectorDashboard = (props) => {
             {...props}
           />
         </Route>
-        <Route path={`${props.match.path}/neworder`}>
+        <Route path={`${props.match.path}/schedule`}>
           <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="New Order"
+            Heading="Schedule"
           />
           <TableDash
             cols={tableConstants(handleEdit)}
@@ -65,11 +76,11 @@ const DirectorDashboard = (props) => {
             {...props}
           />
         </Route>
-        <Route path={`${props.match.path}/stocks`}>
+        <Route path={`${props.match.path}/products`}>
           <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="Stocks"
+            Heading="Products"
           />
           <TableDash
             cols={stocks(handleEdit)}
@@ -79,11 +90,11 @@ const DirectorDashboard = (props) => {
             {...props}
           />
         </Route>
-        <Route path={`${props.match.path}/deliverystatus`}>
+        <Route path={`${props.match.path}/newlylaunched`}>
           <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="Delivery Status"
+            Heading="Newly Launched"
           />
           <TableDash
             cols={tableConstants(handleEdit)}
@@ -93,11 +104,11 @@ const DirectorDashboard = (props) => {
             {...props}
           />
         </Route>
-        <Route path={`${props.match.path}/payment`}>
+        <Route path={`${props.match.path}/distributioncenter`}>
           <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="Payment"
+            Heading="Distribution Center"
           />
           <TableDash
             cols={tableConstants(handleEdit)}
@@ -107,6 +118,25 @@ const DirectorDashboard = (props) => {
             {...props}
           />
         </Route>
+
+
+
+        <Route path={`${props.match.path}/departmenthead`}>
+          <NavbarDash
+            sidebarOpen={sidebarOpen}
+            openSidebar={openSidebar}
+            Heading="Department Head"
+          />
+          <TableDash
+            cols={tableConstants(handleEdit)}
+            data={data}
+            hoverable
+            bordered={false}
+            {...props}
+          />
+        </Route>
+
+
 
         {/* Inner Pages Routes */}
         <Route path={`/innertablepage`}>
@@ -133,7 +163,7 @@ const DirectorDashboard = (props) => {
                 Colr="#CB912B"
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #CB912B" }}
-                btnroute="neworder"
+                btnroute="schedule"
                 btnName="Schedule"
               />
               <SiderbarBtn
@@ -141,7 +171,7 @@ const DirectorDashboard = (props) => {
                 Colr="#7F2987"
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #7F2987" }}
-                btnroute="stocks"
+                btnroute="products"
                 btnName="Products"
               />
               <SiderbarBtn
@@ -149,7 +179,7 @@ const DirectorDashboard = (props) => {
                 Colr="#4B8F8C"
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #4B8F8C" }}
-                btnroute="deliverystatus"
+                btnroute="newlylaunched"
                 btnName="Newly Launched"
               />
               <SiderbarBtn
@@ -157,18 +187,26 @@ const DirectorDashboard = (props) => {
                 Colr="#BB2026"
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
-                btnroute="payment"
+                btnroute="distributioncenter"
                 btnName="Distribution Center"
               />
 
-              {/* <SiderbarBtn
+              <SiderbarBtn
                 imgbtn={icon4}
-                Colr="#4B8F8C"
+                Colr="lightgreen"
                 {...props}
-                borderSidebtn={{ borderRight: "6px solid #4B8F8C" }}
-                btnroute="deliverystatus"
+                borderSidebtn={{ borderRight: "6px solid lightgreen" }}
+                btnroute="departmenthead"
                 btnName="Department Head"
-              /> */}
+              />
+              <SiderbarBtn
+                imgbtn={icon6}
+                Colr="#BB2026"
+                {...props}
+                borderSidebtn={{ borderRight: "6px solid #BB2026" }}
+                btnName="Logout"
+                onClick={logouthandler}
+              />
             </>
           }
           sidebarOpen={sidebarOpen}

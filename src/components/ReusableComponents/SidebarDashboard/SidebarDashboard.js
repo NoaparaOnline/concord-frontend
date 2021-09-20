@@ -2,19 +2,17 @@ import React, { useState } from 'react'
 import './SidebarDashboard.css'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../../../Statics/assets/Sidebar/sidelogo.png'
-import icon1 from '../../../Statics/assets/Sidebar/1.png'
-import icon2 from '../../../Statics/assets/Sidebar/2.png'
-import icon3 from '../../../Statics/assets/Sidebar/3.png'
-import icon4 from '../../../Statics/assets/Sidebar/4.png'
-import icon5 from '../../../Statics/assets/Sidebar/5.png'
 const SidebarDashboard = (props) => {
   const {sidebarOpen, closeSidebar}= props;
   console.log(props);
+  const homepage =()=>{
+      props.history.push('/');
+  }
   return (
       <div className={sidebarOpen ? "sidebar_responsive " : ""} id="sidebar">
         <div className="sidebar__title">
           <div className="d-flex justify-content-center">
-           <Link to="/">
+           <Link onClick={homepage} to="/">
             <img src={logo} alt="logo" />
             </Link>
           </div>

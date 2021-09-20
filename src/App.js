@@ -1,6 +1,6 @@
 import React , { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route , Switch } from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer, FixedRight } from "./components";
 import About from "./Pages/About";
@@ -39,7 +39,12 @@ import { getUser } from "./Store/Actions/loginActions";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import DepotmanagerDashboard from "./Dashboards/depotmanagerDashboard/depotmanagerDashboard";
-import directorDashboard from "./Dashboards/directorDashboard/directorDashboard";
+import DirectorDashboard from "./Dashboards/directorDashboard/directorDashboard";
+
+
+import PrivateRoute from './Routes/PrivateRoute';
+import PublicRoute from './Routes/PublicRoute';
+
 function App() {
   // Get User From Local Storage
   const dispatch = useDispatch();
@@ -90,7 +95,7 @@ function App() {
             // && props.location.pathname !== '/reset-password'
             ) 
             && <Navbar {...props}/> }
-        />
+            />
 
         {/*          Home Page             */}
 
@@ -103,7 +108,7 @@ function App() {
         <Route
           path='/reset-password'
           render={(props) => <ResetPassword {...props} />}
-        />
+          />
 
         {/*          FixedRight             */}
 
@@ -117,7 +122,7 @@ function App() {
             && props.location.pathname !== '/reset-password'
             )
             && <FixedRight /> }
-        />
+            />
 
 
         {/*          Login Page             */}
@@ -125,7 +130,7 @@ function App() {
         <Route
           path='/login'
           render={(props) => <Login {...props} />}
-        />
+          />
 
         {/*          Main About Page             */}
 
@@ -152,11 +157,14 @@ function App() {
         {/* Dashboards */}
 
 
-        <Route
-          path='/depotmanager-dashboard'
-          render={(props) => <DepotmanagerDashboard {...props} />}
+        <PrivateRoute
+          component={DepotmanagerDashboard} path="/depotmanager-dashboard"  />
+       
+       {/* Private Convert */}
+        <Route 
+        path="/director-dashboard"
+        render={(props) => <DirectorDashboard {...props} />}
         />
-        <Route exact path="/director-dashboard" component={directorDashboard} />
 
         {/*          Contact Page             */}
 

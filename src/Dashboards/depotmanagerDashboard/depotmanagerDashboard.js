@@ -34,12 +34,12 @@ const DepotmanagerDashboard = (props) => {
   const closeSidebar = () => {
     setsidebarOpen(false);
   };
-  useEffect(() => {
-    if(!user)
-    {
-      props.history.push('/');
-    }  
-  });
+  // useEffect(() => {
+  //   if(!user)
+  //   {
+  //     props.history.push('/');
+  //   }  
+  // });
   const logouthandler = ()=>{
     dispatch(logoutUser())   
   }
