@@ -16,7 +16,18 @@
     text-decoration: none;
 }
 
-.btncolrhov:hover {
+.btncolrhov:hover ,.navactive{
+    background: #f5f0ea!important;
+    color: #0066b3!important;
+    text-decoration: none;
+    border: none !important;
+    outline: none !important;
+    /* font-weight: 550 !important; */
+}
+
+
+
+.btncolaf {
     background: #f5f0ea!important;
     color: #0066b3!important;
     text-decoration: none;

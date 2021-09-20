@@ -2,7 +2,7 @@ import React from 'react'
 import './Affiliates.css'
 import Slider from "react-slick";
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 const Affiliates = () => {
        
       
@@ -47,10 +47,10 @@ const Affiliates = () => {
             <div className="container">
                 <div className="row d-flex justify-content-center">
                     <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 d-xl-flex justify-content-center">
-                  <Link to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>HOSPITALS</span></Link>
-                  <Link to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>RETAILERS</span></Link>
-                  <Link to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>CLINICS</span></Link>
-                  <Link to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>PHARMACIES</span></Link>
+                  <NavLink activeClassName="navactive" exact={true} to='/' style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>HOSPITALS</span></NavLink>
+                  <NavLink activeClassName="navactive" to style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>RETAILERS</span></NavLink>
+                  <NavLink activeClassName="navactive" to style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>CLINICS</span></NavLink>
+                  <NavLink activeClassName="navactive" to style={{textDecoration:'none',fontWeight:500,marginTop: 10,width:130}} className="btncolrhov rounded-pill mx-2 px-2"><span>PHARMACIES</span></NavLink>
                     </div>
                 </div>
                 <div className="row">
@@ -58,8 +58,10 @@ const Affiliates = () => {
           {/* <div className="carddivslider"><img className="image-fluid" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/roche.jpg'}/></div> */}
         
           <div>
-        <Slider {...properties}  className={"slick-slide-affiliates"}>
-          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/roche.jpg'}/></div>
+        <Slider {...properties}  className={"slick-slide-affiliates"} id="id_tog">
+          <div className="carddivslider">
+            <img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/roche.jpg'}/>
+            </div>
           <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/brist.jpg'}/></div>
           <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/johnson.jpg'}/></div>
           <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/novar.jpg'}/></div>

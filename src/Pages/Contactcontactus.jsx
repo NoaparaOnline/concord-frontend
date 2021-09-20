@@ -36,8 +36,8 @@ const Contact_contactus = () => {
               {/* Bootstrap Form */}
               <form style={{minHeight:'450px'}}>
                 <div className="form-group">
-                  <select className="form-control" id="exampleFormControlSelect1">
-                    <option>General Inquiry</option>
+                  <select className="form-control form-select" id="exampleFormControlSelect1">
+                    <option >General Inquiry</option>
                     <option>Sales</option>
                     <option>Delivery Service</option>
                     <option>Complaints & Suggestions</option>
@@ -88,7 +88,7 @@ const Contact_contactus = () => {
                 </div>
 
                 <button className="btn btn-primary rounded-pill px-5 colr" style={{fontWeight:'600',backgroundColor:'#0066b3'}}>
-                  SUBMIT
+                  <span>SUBMIT</span>
                 </button>
               </form>
             </div>
@@ -97,7 +97,7 @@ const Contact_contactus = () => {
             <div className="serviceBox1">
               <div className="service-content1">
                 <h3>For, International Business</h3>
-                Faysal Md. Shaheen Manager &amp; Head, Int’l Business Department
+                <span style={{color:'#565656'}}>Faysal Md. Shaheen Manager &amp; Head, Int’l Business Department</span>
               </div>
 
               <div className="service-icon1">
@@ -108,7 +108,7 @@ const Contact_contactus = () => {
             <div className="serviceBox1">
               <div className="service-content1">
                 <h3>Phone</h3>
-                88-02-9146311-13
+               <span style={{color:'#565656'}}>88-02-9146311-13</span> 
               </div>
               <div className="service-icon1">
                 <i className="fa fa-phone"></i>
@@ -116,9 +116,10 @@ const Contact_contactus = () => {
             </div>
 
             <div className="serviceBox1">
-              <div className="service-content1">
+              <div className="service-content1" 
+              >
                 <h3>Fax</h3>
-                +88-02-9146483
+                <span style={{color:'#565656'}}>+88-02-9146483</span>
               </div>
               <div className="service-icon1">
                 <i className="fa fa-fax" aria-hidden="true"></i>
@@ -128,7 +129,9 @@ const Contact_contactus = () => {
             <div className="serviceBox1">
               <div className="service-content1">
                 <h3>Email</h3>
-                <a href="mailto:info@concordpharma-bd.com">
+                <a  className="secnav" href="mailto:info@concordpharma-bd.com"
+                 style={{color:'#565656',textDecoration:'none'}}
+                >
                   info@concordpharma-bd.com
                 </a>
               </div>

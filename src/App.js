@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import { Navbar, Footer, FixedRight} from "./components";
+import { Navbar, Footer, FixedRight } from "./components";
 import About from "./Pages/About";
 import Careers from "./Pages/Careers";
 import Contact from "./Pages/Contact";
@@ -33,14 +33,28 @@ import Productsfirsttime from "./Pages/Productsfirsttime";
 import Productstherapeutic from "./Pages/Productstherapeutic";
 import ScrollToTop from "./components/ReusableComponents/scrollTop";
 import ProductsCardInnerPage from "./Pages/ProductsCardInnerPage";
-
+import ResetPassword from "./Pages/ResetPassword";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import DepotmanagerDashboard from "./Dashboards/depotmanagerDashboard/depotmanagerDashboard";
+import directorDashboard from "./Dashboards/directorDashboard/directorDashboard";
 function App() {
-
-
   return (
     <div className="App">
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+
       <Router>
-      <ScrollToTop/>
+        <ScrollToTop />
         {/*          Root Page             */}
 
         <Route exact path="/">
@@ -49,36 +63,56 @@ function App() {
 
         {/*          Front Home Page             */}
 
-
         <Route exact path="/">
           <Home />
         </Route>
 
         {/*          Navbar             */}
 
-        <Route exact path="/:page">
-          <Navbar />
-        </Route>
+        <Route
+          exact path="/:page"
+          render={(props) => 
+            (props.location.pathname !== '/depotmanager-dashboard' 
+            && props.location.pathname !== '/director-dashboard'
+            // && props.location.pathname !== '/reset-password'
+            ) 
+            && <Navbar />}
+        />
 
         {/*          Home Page             */}
 
         <Route exact path="/home">
           <Home />
         </Route>
+
+        {/* Resest Password */}
+        {/* <Route path="/reset_password_link/uid=:uid/token=:token" render={(props)=>   <ResetPassword {...props}/>}/> */}
+        <Route
+          path='/reset-password'
+          render={(props) => <ResetPassword {...props} />}
+        />
+
         {/*          FixedRight             */}
 
         <Route exact path="/">
-          <FixedRight/>
+          <FixedRight />
         </Route>
-        <Route exact path="/:page">
-          <FixedRight/>
-        </Route>
+        <Route exact path="/:page"
+          render={(props) =>
+          (props.location.pathname !== '/depotmanager-dashboard'
+            && props.location.pathname !== '/director-dashboard'
+            && props.location.pathname !== '/reset-password'
+            )
+            && <FixedRight /> }
+        />
+
 
         {/*          Login Page             */}
 
-        <Route exact path="/login">
-          <Login />
-        </Route>
+        <Route
+          path='/login'
+          render={(props) => <Login {...props} />}
+        />
 
         {/*          Main About Page             */}
 
@@ -101,6 +135,15 @@ function App() {
         <Route exact path="/careers">
           <Careers />
         </Route>
+
+        {/* Dashboards */}
+
+
+        <Route
+          path='/depotmanager-dashboard'
+          render={(props) => <DepotmanagerDashboard {...props} />}
+        />
+        <Route exact path="/director-dashboard" component={directorDashboard} />
 
         {/*          Contact Page             */}
 
@@ -180,13 +223,11 @@ function App() {
           <Mediavideo />
         </Route>
 
-
         {/*          Products Page          */}
 
         <Route exact path="/products">
           <Products />
         </Route>
-
 
         {/*          Products Submenu Page          */}
 
@@ -208,7 +249,7 @@ function App() {
 
         {/*          Products Inner Pages         */}
         <Route exact path="/acedol-tablet">
-          <ProductsCardInnerPage/>
+          <ProductsCardInnerPage />
         </Route>
 
         {/*          Sitemap Page          */}
@@ -217,6 +258,7 @@ function App() {
           <Sitemap />
         </Route>
 
+            
 
         {/*          TeleMedicine          */}
 
@@ -224,17 +266,46 @@ function App() {
           <TeleMedicine />
         </Route>
 
-
         {/*          Footer             */}
 
-        <Route exact path="/:page">
-          <Footer />
-        </Route>
+
+
+
+
+
+
+
+
+
+
+
+
+        <Route exact path="/:page"
+          render={(props) => 
+            (props.location.pathname !== '/depotmanager-dashboard'
+             && props.location.pathname !== '/director-dashboard'
+            //  && props.location.pathname !== '/reset-password'
+             ) 
+             && <Footer />}
+        />
+
         <Route exact path="/">
           <Footer />
         </Route>
 
+
+
+
+
+
+
+
+
+
+
+
       </Router>
+
     </div>
   );
 }

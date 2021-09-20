@@ -84,19 +84,19 @@ const GlobalOPerations = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-5 col-sm-12">
-            <div className="row">
+            <div className="row ">
               {flagsCol1.map((ob, index) => {
                 return (
                   <>
-                    <div className="col-lg-5 col-md-6 col-sm-6 me-3  d-flex justify-content-center ">
-                      <img className="mb-3 me-5 img-fluid boxImgShadow" alt="" src={ob.imageURL} />
+                    <div className="col-lg-5 col-md-5 col-sm-6  me-3  d-flex justify-content-center">
+                      <img className="mb-3 me-5  boxImgShadow" alt="" src={ob.imageURL} />
                     </div>
                   </>
                 );
               })}
             </div>
           </div>
-          <div className="col-lg-7 col-sm-12">
+          <div className="col-lg-7 col-sm-12 text-justify">
 
 
             <div className="mb-4">

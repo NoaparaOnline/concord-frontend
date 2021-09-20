@@ -10,9 +10,10 @@ const BannerWithText = (props) => {
           className="jumbotron text-white jumbotron-image shadow Banner_Size "
           style={{
             backgroundImage: `linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${props?.imgSrc})`,
-            objectFit: "contain",
             height: props?.height,
-            backgroundSize: props?.backgroundSize,
+            backgroundSize: "cover",
+            backgroundPosition:'100% 25%'
+
           }}
         >
           <div className={props?.conmarpad}>

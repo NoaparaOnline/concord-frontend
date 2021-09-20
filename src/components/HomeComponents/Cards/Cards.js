@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import first from "../../../Statics/assets/fac-QC.jpg";
+import third from "../../../Statics/assets/fac-QC.jpg";
 import second from"../../../Statics/assets/fac-RD.jpg";
-import third from "../../../Statics/assets/warehouse-1.jpg";
-import fourth from"../../../Statics/assets/fac-production.jpg";
+import fourth from "../../../Statics/assets/warehouse-1.jpg";
+import first from"../../../Statics/assets/fac-production.jpg";
 import "./Cards.css";
 const Cards = () => {
   const cards = [
@@ -47,32 +47,25 @@ const Cards = () => {
               style={{ display: "flex", flexDirection: "row", padding: "10px" }}
             >
               <div className="row">
-                <div className="col-sm-12 col-lg-6 ">
-                  <img alt="" src={ob.imageURL} className="img-fluid" />
+                <div className="col-lg-6 col-md-6 col-sm-12 imgmargin">
+                  <img alt="" src={ob.imageURL} width="100%" height="100%"/>
                 </div>
                 <div
-                  className="col-sm-12 col-lg-6"
+                  className="col-lg-6 col-md-6 col-sm-12 smallscr_responsive"
                   style={{
                     alignItems: "flex-start",
                     flexDirection: "column",
                     display: "flex",
                   }}
                 >
-                  <h5 style={{ color: "#337ab7" }}>{ob.name}</h5>
-                  <p className="text-start">{ob.text}</p>
+                  <h5 style={{ color: "#337ab7",fontSize:'24px' }}>{ob.name}</h5>
+                  <p className="text-justify">{ob.text}</p>
 
                   <Link
                     to={ob.link}
-                    style={{
-                      textDecoration: "none",
-                      fontWeight: 500,
-                      marginTop: 0,
-                      height: "45px",
-                      width: "130px",
-                    }}
                     className="dd"
                   >
-                    <span>Read Me</span>
+                    Read Me
                   </Link>
                 </div>
               </div>

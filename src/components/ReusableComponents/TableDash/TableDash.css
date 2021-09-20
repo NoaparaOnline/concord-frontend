@@ -1,0 +1,22 @@
+.table>tbody,
+.table>tbody {
+  border-bottom: hidden;
+}
+
+
+
+.form_style_search{
+  margin: 0 ;
+}
+
+.form_style_input{
+  border:none !important ;
+  font-size:14px;
+  outline: none!important;
+}
+
+.form_style_btn> img{
+ background: transparent !important;
+ border:none !important;
+ outline: none !important;
+}

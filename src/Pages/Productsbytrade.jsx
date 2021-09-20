@@ -14,6 +14,8 @@ import Dopagutbk from "../Statics/assets/TabletsFrontBack/ban-Dopagut-60-mlbk.jp
 import histaminefr from "../Statics/assets/TabletsFrontBack/Anti-histaminefr.jpg";
 import histaminebk from "../Statics/assets/TabletsFrontBack/Anti-histaminebk.jpg";
 
+
+
 const Products_bytrade = () => {
   const LinksBan = [
     {
@@ -145,6 +147,8 @@ const Products_bytrade = () => {
   ];
 
   const [obj , setObj] = useState(card);
+
+
   const filteredtype = (type) => {
     if (type==="All") {
       setObj(card)

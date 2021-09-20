@@ -26,7 +26,7 @@
     color: #fff;
     background: #0066b3;
   }
-  .btn-test {
+  .btn-section-card {
     width: 130px;
     line-height: 30px !important;
     margin-top: 20px;
@@ -41,8 +41,8 @@
     color: #fff;
     background: #0066b3;
   }
-  .btn-test:hover {
-    color: black;
+  .btn-section-card:hover {
+    color: #000000 !important;
   }
   .colr_btn:hover {
     background: #fff !important;
@@ -60,13 +60,13 @@
   }
   .text-title {
     font-size: 16px;
-    color: #000000;
+    color: #000000 !important;
   }
   
   .Typography_styling {
     font-style: italic;
   }
-  .test-back {
+  .section-card-back {
     background-image: url("../../../Statics/assets/bigCardimag1.jpg");
     background-size: cover;
     border-radius: 20px;
@@ -76,8 +76,26 @@
     position: relative;
   }
 
+  @media (max-width: 2800px) { 
+    .section-card-back {
+      min-height: 700px !important;
+    }
+    .card_custom {
+      min-height: 600px !important;
+    }
+   
+ }
   @media (max-width: 2500px) { 
-    .test-back {
+    .section-card-back {
+      min-height: 600px !important;
+    }
+    .card_custom {
+      min-height: 600px !important;
+    }
+   
+ }
+  @media (max-width: 2500px) { 
+    .section-card-back {
       min-height: 600px !important;
     }
     .card_custom {
@@ -87,7 +105,7 @@
  }
 
   @media (max-width: 1700px) { 
-    .test-back {
+    .section-card-back {
       min-height: 500px !important;
     }
     .card_custom {
@@ -96,19 +114,19 @@
    
  }
 
+ 
 
-
-  .test-border {
+  .section-card-border {
     border-radius: 32px;
     border: 15px solid white;
   }
-  .test-position {
+  .section-card-position {
     position: absolute;
     left: 10%;
     top: 25%;
     width: 70%;
   }
-  .test-overlay {
+  .section-card-overlay {
     display: -webkit-box;
     display: -ms-flexbox;
     color: white;
@@ -118,15 +136,23 @@
     padding: 10px 25px;
     text-align: left;
   }
-  .test-heading {
+  .section-card-heading {
     color: #fff;
     font-weight: 600 !important;
-    font-size: 42px;
+    font-size: 48px;
     font-family: "Montserrat", sans-serif !important;
     box-shadow: none;
   }
-  .test-subHead {
+  .section-card-subHead {
     text-decoration: 2px underline;
+    margin: 0px 0px 6px !important;
+    padding: 0px 0px 2px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
   }
 
 
@@ -134,14 +160,14 @@
 
   @media (max-width: 575.98px) 
 {
-  .test-heading {
+  .section-card-heading {
     font-weight: 600 !important;
     font-size: 18px;
   }
  }
 @media (max-width: 767.98px)
 { 
-  .test-heading {
+  .section-card-heading {
     font-weight: 600 !important;
     font-size: 28px;
   }

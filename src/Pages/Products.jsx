@@ -67,11 +67,11 @@ const Products = () => {
         
      {/* Zoom Cards */}
      <div className="container my-5">
-     <div className="row ">
+     <div className="row d-flex justify-content-center">
 
      {productscard.map((ob, index) => (
          <React.Fragment key={ob.id}>
-           <div  className='col-lg-3 col-md-6 col-sm-12 col-xs-12 mt-3'>
+           <div  className='col-xl-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3'>
              <ZoominCards abcard={ob}/>                  
            </div>
          </React.Fragment>

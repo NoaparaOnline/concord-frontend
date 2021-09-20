@@ -176,7 +176,7 @@ const Facilities_ourdistribution = () => {
 
       />
       <div className="container">
-        <img alt="" src={mapimage} className="img-fluid" />
+        <img alt="" src={mapimage} width="100%" height="100%"/>
       </div>
 
       <div className="my-5 mx-5">
