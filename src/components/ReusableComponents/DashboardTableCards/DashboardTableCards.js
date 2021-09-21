@@ -8,9 +8,7 @@ const DashboardTableCards = () => {
         style={{
           backgroundColor: "#FFF",
           borderRadius: "10px",
-          width: "280px",
-          padding: "10px 20px",
-          height: "240px",
+          padding: "20px",
         }}
       >
         <div className="container">

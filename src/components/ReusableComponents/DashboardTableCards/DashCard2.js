@@ -9,9 +9,8 @@ const DashCard = ({data}) => {
         style={{
           backgroundColor: "#FFF",
           borderRadius: "10px",
-          width: "290px",
-          padding: "10px 20px",
-          height: "230px",
+          padding: "20px",
+          maxHeight:'300px'
         }}
       >
         <div className="">

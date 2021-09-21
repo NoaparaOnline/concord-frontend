@@ -233,8 +233,9 @@ const DirectorDashboard = (props) => {
             hoverable
             reverse={true}
             SelectedButtons={
-              <>
-              <div className="mb-3 d-flex justify-content-center">
+              <div className="container">
+                <div className="row ms-5">
+              <div className="col mb-3">
              
               {["All", "Completed", "Pending","Due","Cancelled"].map(
           (item, index) => (
@@ -257,8 +258,8 @@ const DirectorDashboard = (props) => {
         )}
               </div>
         
-
-              </>
+              </div>
+              </div>
             }
             colorfulcards={
               <>
@@ -315,9 +316,9 @@ const DirectorDashboard = (props) => {
             data={directorproductbody}
 
             SearchBar={
-              <>
+              <div className="container">
               
-              <div class="search-box ms-5 my-4" style={{width: '240px'}} >
+              <div class="search-box ms-4 my-4" style={{width: '240px'}} >
                 <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />
@@ -325,15 +326,15 @@ const DirectorDashboard = (props) => {
                 </form>
             </div>
               
-              </>
+              </div>
             }
 
             reverse={selectedTab2 === "List" ? true : false}
             hoverable
            
             SelectedButtons={
-              <>
-              <div className="ms-5 mb-3">
+              <div className="container">
+              <div className="ms-4  mb-3">
 
               {["List", "Grid"].map(
           (item, index) => (
@@ -357,22 +358,22 @@ const DirectorDashboard = (props) => {
               </div>
         
 
-              </>
+              </div>
             }
             TableCardGrid={
-              <>
-             <div className="row">
+              <div className="container">
+             <div className="row ">
 
                {directorproductbody.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-lg-3 mb-3 d-flex justify-content-center">
+              <div  className="col-lg-3 mb-4 ">
               <DashboardTableCards/>
               </div>
               </React.Fragment>
           )
           )}
              </div>
-              </>
+              </div>
             }
             bordered={false}
             {...props}
@@ -391,9 +392,9 @@ const DirectorDashboard = (props) => {
             reverse={selectedTab2 === "List" ? true : false}
             hoverable
             SearchBar={
-              <>
+              <div className="container">
               
-              <div class="search-box ms-5 my-4" style={{width: '240px'}} >
+              <div class="search-box ms-4 my-4" style={{width: '240px'}} >
                 <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />
@@ -401,12 +402,12 @@ const DirectorDashboard = (props) => {
                 </form>
             </div>
               
-              </>
+              </div>
             }
 
             SelectedButtons={
-              <>
-              <div className="ms-5 mb-3">
+              <div className="container">
+              <div className="ms-4 mb-3">
 
               {["List", "Grid"].map(
           (item, index) => (
@@ -430,22 +431,22 @@ const DirectorDashboard = (props) => {
               </div>
         
 
-              </>
+              </div>
             }
             TableCardGrid={
-              <>
+              <div className="container">
              <div className="row">
 
                {directorproductbody.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-lg-3 mb-3 d-flex justify-content-center">
+              <div  className="col-lg-3 mb-3">
               <DashboardTableCards/>
               </div>
               </React.Fragment>
           )
           )}
              </div>
-              </>
+              </div>
             }
             bordered={false}
             {...props}
@@ -461,14 +462,26 @@ const DirectorDashboard = (props) => {
             cols={tableConstants(handleEdit)}
             data={selectedTabbledata}
             reverse={false}
-            
-            TableCardGrid={
+            SearchBar={
               <>
+              
+              <div class="search-box ms-3 my-4" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+            TableCardGrid={
+              <div className="container">
              <div className="row">
 
                {districards.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-lg-3 mb-3 d-flex justify-content-center">
+              <div  className="col-lg-3 mb-3 ">
   
               <DashCard data={ob}/>
 
@@ -477,7 +490,7 @@ const DirectorDashboard = (props) => {
           )
           )}
              </div>
-              </>
+              </div>
             }
             
             hoverable
@@ -496,13 +509,26 @@ const DirectorDashboard = (props) => {
             cols={tableConstants(handleEdit)}
             data={selectedTabbledata}
             hoverable
-            TableCardGrid={
+            SearchBar={
               <>
+              
+              <div class="search-box ms-3 my-4" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+            TableCardGrid={
+              <div className="container">
              <div className="row">
 
                {districards.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-lg-3 mb-3 d-flex justify-content-center">
+              <div  className="col-lg-3 mb-3 ">
               <DashCard data={ob}/>
 
               </div>
@@ -510,7 +536,7 @@ const DirectorDashboard = (props) => {
           )
           )}
              </div>
-              </>
+              </div>
             }
             bordered={false}
             {...props}
