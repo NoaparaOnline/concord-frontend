@@ -1,12 +1,11 @@
 import React from "react";
 import "./ColorFullDashCard.css";
-const ColorFullDashCard = () => {
+const ColorFullDashCard = ({classname,headtext,textl,textr}) => {
   return (
     <>
       <div
-        className="card style_custom"
+        className={`card style_custom ${classname}`}
         style={{
-          backgroundColor: "#FFF",
           borderRadius: "10px",
           width: "240px",
           padding: "10px 20px",
@@ -15,15 +14,15 @@ const ColorFullDashCard = () => {
       >
         
 
-          <div className="ms-2">Completed</div>
+          <div className="ms-2" style={{color:'#fff',fontSize:'15px',fontWeight:'400'}}>{headtext}</div>
         <nav className="navbar">
           <div className="navbar__left">
-            <h6>
-              1544
+            <h6 style={{color:'#fff',fontWeight:'600'}}>
+              {textl}
             </h6>
           </div>
           <div className="navbar__right">
-              64%
+              <span style={{color:'#fff',fontSize:'20px',fontWeight:'400',opacity:'0.5'}}>{textr}</span>
           </div>
         </nav>
       </div>

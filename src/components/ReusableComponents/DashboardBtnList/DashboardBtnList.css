@@ -1,0 +1,37 @@
+.dashboardBtnList-item {
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  .dashboardBtnList-item a {
+    font-weight: 500;
+    text-decoration: none;
+   
+  }
+  .dashboardBtnList-item-active {
+    background: #4B8F8C !important;
+    text-decoration: none;
+  
+}
+  .dashboardBtnList-item-active a {
+    color: #fff !important;
+    text-decoration: none;
+
+}
+  .default-color-and-hover {
+    background-color: #dfeffe;
+  }
+  .default-color-and-hover a {
+    color: grey !important;
+    text-decoration: none;
+
+}
+  .default-color-and-hover:hover {
+    background: #4B8F8C !important;
+  }
+  .default-color-and-hover:hover a {
+    text-decoration: none;
+
+    color: #fff !important;
+  }

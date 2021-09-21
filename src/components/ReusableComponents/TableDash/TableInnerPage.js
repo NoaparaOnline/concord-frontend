@@ -22,7 +22,7 @@ const TableInnerPage = () => {
           height: "100%",
         }}
       >
-        <table class="table table-borderless ">
+        <table class="table table-borderless ms-5">
           <tbody style={{ border: 'none' }}>
             <tr  style={{ border: 'none',padding:'10px'  }}>
               <td style={{ border: 'none' }}>OrderID:</td>
@@ -48,6 +48,7 @@ const TableInnerPage = () => {
         cols={tableinner(handleEdit)}
         data={tableinnerdata}
         hoverable
+        reverse={true}
         bordered={false}
         Total={
           <>

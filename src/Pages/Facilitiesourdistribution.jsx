@@ -4,7 +4,7 @@ import bannerimg from "../Statics/assets/Distributionbanner.jpg";
 import mapimage from "../Statics/assets/map.png";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 const Facilities_ourdistribution = () => {
-  const cards = [
+   const cards = [
     {
       id: 0,
       head: "Central",

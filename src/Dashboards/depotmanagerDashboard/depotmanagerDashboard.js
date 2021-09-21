@@ -23,6 +23,12 @@ import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/Si
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 
+
+// Search Bar Images Import
+
+import search from '../../Statics/assets/G1.png'
+import filter from '../../Statics/assets/F1.png'
+
 const DepotmanagerDashboard = (props) => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
   const user = useSelector((state) => state?.logIn?.user);
@@ -62,6 +68,21 @@ const DepotmanagerDashboard = (props) => {
             cols={tableConstants(handleEdit)}
             data={data}
             hoverable
+            SearchBar={
+              <>
+              
+              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+            reverse={true}
+          
             bordered={false}
             {...props}
           />
@@ -76,6 +97,23 @@ const DepotmanagerDashboard = (props) => {
             cols={tableConstants(handleEdit)}
             data={data}
             hoverable
+
+            reverse={true}
+            SearchBar={
+              <>
+              
+              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+
+
             bordered={false}
             {...props}
           />
@@ -89,6 +127,23 @@ const DepotmanagerDashboard = (props) => {
           <TableDash
             cols={stocks(handleEdit)}
             data={stockdata}
+            
+            reverse={true}
+            SearchBar={
+              <>
+              
+              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+            
+
             hoverable
             bordered={false}
             {...props}
@@ -103,6 +158,23 @@ const DepotmanagerDashboard = (props) => {
           <TableDash
             cols={tableConstants(handleEdit)}
             data={data}
+            
+            reverse={true}
+            SearchBar={
+              <>
+              
+              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+
+            
             hoverable
             bordered={false}
             {...props}
@@ -119,6 +191,21 @@ const DepotmanagerDashboard = (props) => {
             cols={tableConstants(handleEdit)}
             data={data}
             hoverable
+            reverse={true}
+            SearchBar={
+              <>
+              
+              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+
             bordered={false}
             {...props}
           />
