@@ -27,26 +27,23 @@ import profileLogo from "../../../Statics/assets/profile-logo.png";
 
 const Navbars = (props) => {
 
-  console.log(props);
-
-  const dispatch = useDispatch();
+const userRole = useSelector((state) => state?.logIn?.userRole);
+console.log(props);
+ const dispatch = useDispatch();
   const logoutHandler = () => {
     dispatch(logoutUser());
     props?.history?.push("/");
   };
 const user = useSelector((state) => state?.logIn?.user);
   const profileHandler = () => {
-      if (!user) {
-        props.history.push("/depotmanager-dashboard");
+    if (userRole === "depotmanager") {
+      props.history.push("/depotmanager-dashboard");
+    }  
+    else{
+        props.history.push('/director-dashboard')
       }
   };
-
-
-
-
-
-
-  const [show, setShow] = useState(false);
+ const [show, setShow] = useState(false);
   const [langbtnshow, setLangbtnshow] = useState(false);
   const [showdiv, setShowdiv] = useState(true);
 
@@ -157,8 +154,8 @@ const user = useSelector((state) => state?.logIn?.user);
                         <img
                           src={profileLogo}
                           alt=""
-                          width="40"
-                          height="40"
+                          width="25"
+                          height="25"
                           className="rounded-circle"
                         />
                       </Link>

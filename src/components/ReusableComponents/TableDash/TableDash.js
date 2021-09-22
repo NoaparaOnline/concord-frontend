@@ -21,7 +21,7 @@ const TableDash = ({
   reverse,
   SelectedButtons,
   TableCardGrid,
-  floatleftrightbutton
+  floatleftrightbutton,
 }) => {
   let history = useHistory();
   console.log(history);
@@ -29,7 +29,7 @@ const TableDash = ({
 
   // Table Component On True False Toogle
   const TableDiv = (
-    <div class="table-responsive ms-5">
+    <div class="table-responsive ms-5 d-flex justify-content-center">
       <table
         className={`table ${bordered ? "table-bordered" : "table-borderless"} ${
           hoverable && "table-hover"
@@ -76,7 +76,7 @@ const TableDash = ({
         backgroundColor: "#FFF",
         borderRadius: "10px",
         width: "96%",
-        alignItems:'center',
+        alignItems: "center",
         padding: "20px",
         height: "100%",
       }}
@@ -89,9 +89,7 @@ const TableDash = ({
       {SearchBar}
 
       {reverse ? (
-        <>
-          {TableDiv}
-        </>
+        <>{TableDiv}</>
       ) : (
         <>
           {DivCardComponent}

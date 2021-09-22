@@ -106,9 +106,6 @@ export const data = [
   },
 ]
 
-
-
-
 export const stockdata = [
   {
     "sno": 101,
@@ -196,8 +193,6 @@ export const stockdata = [
   },
 ]
 
-
-
 export const tableinnerdata = [
   {
     "sno": 101,
@@ -236,8 +231,6 @@ export const tableinnerdata = [
   },
  
 ]
-
-
 
 export const directorSchedulDataAll = [
   {
@@ -320,6 +313,7 @@ export const directorSchedulDataCompleted = [
   
  
 ]
+
 export const directorSchedulDataPending = [
   {
     "sno": 101,
@@ -402,7 +396,6 @@ export const directorSchedulDataDue = [
  
 ]
 
-
 export const directorSchedulCancelled = [
   {
     "sno": 101,
@@ -443,8 +436,6 @@ export const directorSchedulCancelled = [
   
  
 ]
-
-
 
 export const directorproductbody = [
   {
@@ -497,12 +488,6 @@ export const directorproductbody = [
    
  
 ]
-
-
-
-
-
-
 
 export const districards = [
   {

@@ -7,8 +7,9 @@ export const setToken = token => localStore.store_data('token', token);
 // export const setToken = userRole => localStore.store_data('userRole',userRole );
 
 export const getUser = () => localStore.get_data('user');
-
 export const saveUser = user => localStore.store_data('user', user);
+
+
 
 export const logout = async () => {
   await localStore.remove_data('token');

@@ -7,6 +7,7 @@ const DashboardBtnList = ({
   bntStyle,
   labelStyle,
   onClick,
+  iconclassname,
 }) => {
   return (
     <div
@@ -14,7 +15,8 @@ const DashboardBtnList = ({
       style={{ bntStyle }}
       onClick={onClick}
     >
-      <Link style={{ labelStyle }} >{label}</Link>
+      <i className={`${iconclassname}`} style={{color:'#565656'}}></i>
+      <Link style={{ labelStyle }} >&nbsp;{label}</Link>
      </div>
     
   );

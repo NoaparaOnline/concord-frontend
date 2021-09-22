@@ -47,7 +47,7 @@ import filter from '../../Statics/assets/F1.png'
 const DirectorDashboard = (props) => {
 
   // tabledata Toogle State
-  const [selectedTabbledata, setSelectedTabbledata] = useState(data);
+  const [selectedTabbledata, setSelectedTabbledata] = useState(directorSchedulDataAll);
   const tabledataHandler = (item) => {
     setSelectedTabbledata(item);
   };
@@ -107,7 +107,7 @@ const DirectorDashboard = (props) => {
   const dispatch = useDispatch();
 
   const logouthandler = () => {
-    dispatch(logoutUser());
+    props.history.push('/');
   };
 
   const handleEdit = (item) => () => {
@@ -130,8 +130,11 @@ const DirectorDashboard = (props) => {
             hoverable
             reverse={false}
             floatleftrightbutton={
-              <>
-              <div className="d-flex justify-content-end mb-4">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12 px-5">
+
+                <div className="d-flex justify-content-end mb-4 px-3">
 
               {["All", "Region"].map(
           (item, index) => (
@@ -153,7 +156,9 @@ const DirectorDashboard = (props) => {
           )
         )}
               </div> 
-              </>
+              </div> 
+              </div> 
+              </div>
             }
             colorfulcards={
               <>
@@ -235,7 +240,7 @@ const DirectorDashboard = (props) => {
             SelectedButtons={
               <div className="container">
                 <div className="row ms-5">
-              <div className="col mb-3">
+              <div className="col mb-3 p-0">
              
               {["All", "Completed", "Pending","Due","Cancelled"].map(
           (item, index) => (
@@ -262,10 +267,10 @@ const DirectorDashboard = (props) => {
               </div>
             }
             colorfulcards={
-              <>
-                <div className="container mb-5">
+              <div className="container mt-5">
+                <div className="container ms-5 mb-5">
                   <div className="row">
-                    <div className="col-lg-3 d-flex justify-content-center">
+                    <div className="col-lg-3 p-0">
                       <ColorFullDashCard
                       headtext="Completed"
                       textl="1544"
@@ -273,7 +278,7 @@ const DirectorDashboard = (props) => {
                       classname="colrcardblue"
                       />
                     </div>
-                    <div className="col-lg-3 d-flex justify-content-center">
+                    <div className="col-lg-3 p-0">
                       <ColorFullDashCard
                       headtext="Pending"
                       textl="2,478"
@@ -281,7 +286,7 @@ const DirectorDashboard = (props) => {
                       classname="colrcardseagreen"
                       />
                     </div>
-                    <div className="col-lg-3 d-flex justify-content-center">
+                    <div className="col-lg-3 p-0">
                       <ColorFullDashCard
                       headtext="Due"
                       textl="1,151"
@@ -289,7 +294,7 @@ const DirectorDashboard = (props) => {
                       classname="colrcardred"
                       />
                     </div>
-                    <div className="col-lg-3 d-flex justify-content-center">
+                    <div className="col-lg-3 p-0">
                       <ColorFullDashCard
                       headtext="Resheduled"
                       textl="1,200"
@@ -299,7 +304,7 @@ const DirectorDashboard = (props) => {
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             }
             bordered={false}
             {...props}
@@ -318,7 +323,7 @@ const DirectorDashboard = (props) => {
             SearchBar={
               <div className="container">
               
-              <div class="search-box ms-4 my-4" style={{width: '240px'}} >
+              <div class="search-box ms-2 my-4" style={{width: '240px'}} >
                 <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />
@@ -334,7 +339,7 @@ const DirectorDashboard = (props) => {
            
             SelectedButtons={
               <div className="container">
-              <div className="ms-4  mb-3">
+              <div className="ms-2  mb-3">
 
               {["List", "Grid"].map(
           (item, index) => (
@@ -345,6 +350,9 @@ const DirectorDashboard = (props) => {
             >
               <DashboardBtnList
                 label={item}
+                iconclassname={
+                  item === "List" ? "fa fa-list" : "fa fa-th" 
+                }
                 labelStyle={selectedTab2 === item ? { color: "#fff",borderRadius:'10px'} : ""}
                 className={
                   selectedTab2 === item
@@ -362,7 +370,7 @@ const DirectorDashboard = (props) => {
             }
             TableCardGrid={
               <div className="container">
-             <div className="row ">
+             <div className="row">
 
                {directorproductbody.map((ob, index) => (
             <React.Fragment key={ob.id}>
@@ -391,10 +399,11 @@ const DirectorDashboard = (props) => {
             data={directorproductbody}
             reverse={selectedTab2 === "List" ? true : false}
             hoverable
+            
             SearchBar={
               <div className="container">
               
-              <div class="search-box ms-4 my-4" style={{width: '240px'}} >
+              <div class="search-box ms-2 my-4" style={{width: '240px'}} >
                 <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />
@@ -407,7 +416,7 @@ const DirectorDashboard = (props) => {
 
             SelectedButtons={
               <div className="container">
-              <div className="ms-4 mb-3">
+              <div className="ms-2 mb-3">
 
               {["List", "Grid"].map(
           (item, index) => (
@@ -419,6 +428,9 @@ const DirectorDashboard = (props) => {
               <DashboardBtnList
                 label={item}
                 labelStyle={selectedTab2 === item ? { color: "#fff",borderRadius:'10px'} : ""}
+                iconclassname={
+                  item === "List" ? "fa fa-list" : "fa fa-th" 
+                }
                 className={
                   selectedTab2 === item
                     ? "dashboardBtnList-item-active py-2"
@@ -543,14 +555,7 @@ const DirectorDashboard = (props) => {
           />
         </Route>
 
-        {/* Inner Pages Routes */}
-        <Route path={`/innertablepage`}>
-          <InnerPage
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            {...props}
-          />
-        </Route>
+      
 
         <SidebarDashboard
           buttonSidebar={

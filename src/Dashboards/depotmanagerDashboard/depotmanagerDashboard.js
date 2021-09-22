@@ -32,7 +32,7 @@ import filter from '../../Statics/assets/F1.png'
 const DepotmanagerDashboard = (props) => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
   const user = useSelector((state) => state?.logIn?.user);
-  console.log(user,"dashboard");
+  console.log(user,"");
   const dispatch = useDispatch()
   const openSidebar = () => {
     setsidebarOpen(true);

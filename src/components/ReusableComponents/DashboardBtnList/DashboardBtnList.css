@@ -10,7 +10,7 @@
    
   }
   .dashboardBtnList-item-active {
-    background: #4B8F8C !important;
+    background: #22A6AC !important;
     text-decoration: none;
   
 }
@@ -28,7 +28,7 @@
 
 }
   .default-color-and-hover:hover {
-    background: #4B8F8C !important;
+    background: #22A6AC !important;
   }
   .default-color-and-hover:hover a {
     text-decoration: none;
