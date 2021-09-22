@@ -32,7 +32,7 @@
 .sidecontainer {
   display: grid;
   height: 100vh;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 300px 1fr;
   grid-template-rows: auto;
   grid-template-areas:
     "sidebar nav "
@@ -52,4 +52,21 @@
       "nav"
       "main";
   }
+}
+
+
+.colrcardblue{
+  background-color:#459ED8 ;
+}
+.colrcardseagreen{
+  background-color:#22A6AC ;
+  
+}
+.colrcardred{
+  background-color:#F05179 ;
+  
+}
+.colrcardorange{
+  background-color:#F89747 ;
+  
 }

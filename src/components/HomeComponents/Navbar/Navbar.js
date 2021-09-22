@@ -9,8 +9,41 @@ import { NavLink, Link } from "react-router-dom";
 import Login from "../../../Pages/Login";
 import { useLocation } from 'react-router-dom';
 
-const Navbars = () => {
-  const [show, setShow] = useState(false);
+
+
+// 
+import { useDispatch, useSelector } from "react-redux";
+import {
+  logoutUser,
+} from "../../../Store/Actions/loginActions";
+import profileLogo from "../../../Statics/assets/profile-logo.png";
+
+// 
+
+
+
+
+
+
+const Navbars = (props) => {
+
+const userRole = useSelector((state) => state?.logIn?.userRole);
+console.log(props);
+ const dispatch = useDispatch();
+  const logoutHandler = () => {
+    dispatch(logoutUser());
+    props?.history?.push("/");
+  };
+const user = useSelector((state) => state?.logIn?.user);
+  const profileHandler = () => {
+    if (userRole === "depotmanager") {
+      props.history.push("/depotmanager-dashboard");
+    }  
+    else{
+        props.history.push('/director-dashboard')
+      }
+  };
+ const [show, setShow] = useState(false);
   const [langbtnshow, setLangbtnshow] = useState(false);
   const [showdiv, setShowdiv] = useState(true);
 
@@ -97,20 +130,114 @@ const Navbars = () => {
                       </div>
                     </div>
                   </div>
-                  <li className="nav-item ">
-                    <i className="fa fa-user fs-5 ms-3" aria-hidden="true"></i>
-                    <Link
-                      className="nav-link secnav text-capitalize "
-                      onClick={() => {
-                        handleShow();
-                      }}
-                      style={{ clear: "both", marginTop: "-10px" }}
-                      aria-current="page"
-                      to="#"
-                    >
-                      login
-                    </Link>
-                  </li>
+
+
+
+
+
+
+
+                  {user ? (
+              <>
+                <div className="mr-4" id="navbar-list-4">
+                  <ul className="navbar-nav">
+                    <li className="nav-item dropdown ">
+                      <Link
+                        className="nav-link dropdown-toggle"
+                        // to="/patient-dashboard"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src={profileLogo}
+                          alt=""
+                          width="25"
+                          height="25"
+                          className="rounded-circle"
+                        />
+                      </Link>
+                      <div
+                        className="dropdown-menu profile-nav-dropdown"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <Link
+                          className="dropdown-item"
+                          to="/depotmanager-dashboard"
+                          onClick={() => profileHandler()}
+                        >
+                          <i
+                            className="fa fa-id-card ms-2"
+                            style={{ fontSize: "14.5px" }}
+                          ></i>{" "}
+                          Dashboard
+                        </Link>
+
+                        <Link
+                          className="dropdown-item"
+                          to="/"
+                          onClick={() => logoutHandler()}
+                        >
+                          <i
+                            className="fa fa-sign-out ms-2"
+                            style={{ fontSize: "14.5px" }}
+                          ></i>{" "}
+                          Log Out
+                        </Link>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </>
+            ) : (
+              <li className="nav-item ">
+              <i className="fa fa-user fs-5 ms-3" aria-hidden="true"></i>
+              <Link
+                className="nav-link secnav text-capitalize "
+                onClick={() => {
+                  handleShow();
+                }}
+                style={{ clear: "both", marginTop: "-10px" }}
+                aria-current="page"
+                to="#"
+              >
+                login
+              </Link>
+            </li>
+        
+            )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   <li className="nav-item dropdown disablehover">
                     <span
                       className="nav-link firstnav dropdown-toggle"

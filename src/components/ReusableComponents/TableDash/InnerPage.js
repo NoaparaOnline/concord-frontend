@@ -1,6 +1,5 @@
 import React from 'react'
 import NavbarDash from '../NavbarDash/NavbarDash'
-import TableDash from './TableDash'
 import {
   data,
   stockdata,

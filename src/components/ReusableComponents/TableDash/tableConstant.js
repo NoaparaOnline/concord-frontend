@@ -106,3 +106,79 @@ export const tableinner = (handleEdit) => {
     
   ];
 };
+
+
+
+
+
+
+export const Directordashschedule = (handleEdit) => {
+  return [
+    {
+      title: 'S.No',
+      render: rowData => {
+        return <span>{rowData.sno}</span>;
+      },
+    },
+    {
+      title: 'Schedule',
+      render: rowData => {
+        return <span>{rowData.schedule}</span>;
+      },
+    },
+    {
+      title: 'Doctor/Customer',
+      render: rowData => {
+        return <span>{rowData.doccus}</span>;
+      },
+    },
+    {
+      title: 'Status',
+      render: rowData => {
+        return <span>{rowData.status}</span>;
+      },
+    },
+    
+  ];
+};
+
+
+
+export const Directordashproducthead = (handleEdit) => {
+  return [
+    {
+      title: 'S.No',
+      render: rowData => {
+        return <span>{rowData.sno}</span>;
+      },
+    },
+    {
+      title: 'Name',
+      render: rowData => {
+        return <span>{rowData.name}</span>;
+      },
+    },
+    {
+      title: 'Trade Price',
+      render: rowData => {
+        return <span>{rowData.tr}</span>;
+      },
+    },
+    {
+      title: 'Retail Price',
+      render: rowData => {
+        return <span>{rowData.rp}</span>;
+      },
+    },
+    {
+      title: 'Added By',
+      render: rowData => {
+        return <span>{rowData.addby}</span>;
+      },
+    },
+    
+  ];
+
+};
+
+

@@ -1,5 +1,6 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React , { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { BrowserRouter as Router, Route , Switch } from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer, FixedRight } from "./components";
 import About from "./Pages/About";
@@ -34,11 +35,23 @@ import Productstherapeutic from "./Pages/Productstherapeutic";
 import ScrollToTop from "./components/ReusableComponents/scrollTop";
 import ProductsCardInnerPage from "./Pages/ProductsCardInnerPage";
 import ResetPassword from "./Pages/ResetPassword";
+import { getUser } from "./Store/Actions/loginActions";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import DepotmanagerDashboard from "./Dashboards/depotmanagerDashboard/depotmanagerDashboard";
-import directorDashboard from "./Dashboards/directorDashboard/directorDashboard";
+import DirectorDashboard from "./Dashboards/directorDashboard/directorDashboard";
+
+
+import PrivateRoute from './Routes/PrivateRoute';
+import PublicRoute from './Routes/PublicRoute';
+
 function App() {
+  // Get User From Local Storage
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getUser());
+  }, [dispatch]);
+
   return (
     <div className="App">
       <ToastContainer
@@ -57,10 +70,15 @@ function App() {
         <ScrollToTop />
         {/*          Root Page             */}
 
-        <Route exact path="/">
-          <Navbar />
-        </Route>
-
+       
+       
+        <Route
+          exact path="/"
+          render={(props) => <Navbar {...props}/> }
+        />
+       
+       
+       
         {/*          Front Home Page             */}
 
         <Route exact path="/">
@@ -76,8 +94,8 @@ function App() {
             && props.location.pathname !== '/director-dashboard'
             // && props.location.pathname !== '/reset-password'
             ) 
-            && <Navbar />}
-        />
+            && <Navbar {...props}/> }
+            />
 
         {/*          Home Page             */}
 
@@ -90,7 +108,7 @@ function App() {
         <Route
           path='/reset-password'
           render={(props) => <ResetPassword {...props} />}
-        />
+          />
 
         {/*          FixedRight             */}
 
@@ -104,7 +122,7 @@ function App() {
             && props.location.pathname !== '/reset-password'
             )
             && <FixedRight /> }
-        />
+            />
 
 
         {/*          Login Page             */}
@@ -112,7 +130,7 @@ function App() {
         <Route
           path='/login'
           render={(props) => <Login {...props} />}
-        />
+          />
 
         {/*          Main About Page             */}
 
@@ -139,11 +157,14 @@ function App() {
         {/* Dashboards */}
 
 
-        <Route
-          path='/depotmanager-dashboard'
-          render={(props) => <DepotmanagerDashboard {...props} />}
+        <PrivateRoute
+          component={DepotmanagerDashboard} path="/depotmanager-dashboard"  />
+       
+       {/* Private Convert */}
+        <Route 
+        path="/director-dashboard"
+        render={(props) => <DirectorDashboard {...props} />}
         />
-        <Route exact path="/director-dashboard" component={directorDashboard} />
 
         {/*          Contact Page             */}
 

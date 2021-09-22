@@ -3,7 +3,7 @@ import apiServices from "../../services/requestHandler";
 import { logout,saveUser,setToken } from "../../Utils/auth.util";
 import { toast } from "react-toastify";
 
-export const loginUser = (data) => async (dispatch) => {
+  export const loginUser = (data) => async (dispatch) => {
     try {
       const response = await apiServices.login(data);
       console.log(response);
@@ -18,10 +18,11 @@ export const loginUser = (data) => async (dispatch) => {
           type: logInConstants.LOGIN_IN,
           payload: response?.data?.response_data?.token?.user,
         });
-        // dispatch({
-        //   type: logInConstants.USER_TYPE,
-        //   payload: response?.data?.response_data?.session_token_type,
-        // });
+        dispatch({
+          type: logInConstants.USER_ROLES,
+          payload: response?.data?.response_data?.session_token_type,
+        });
+        
         toast.info("Login Successful");
         return "Succuss";
       } 
@@ -31,6 +32,7 @@ export const loginUser = (data) => async (dispatch) => {
     } catch (error) {
       console.log("Login error", error);
     }
+
   };
 
   export const forgotPassword = (data) => async (dispatch) => {
@@ -76,3 +78,14 @@ export const loginUser = (data) => async (dispatch) => {
       console.log("Login error", error);
     }
   };
+
+  export const getUser = () => async (dispatch) => {
+    const getUserFromLocal = localStorage.getItem("user");
+    let user = JSON.parse(getUserFromLocal);
+    console.log(user,"from Actions");
+    dispatch({
+      type: logInConstants.GET_USER_FROM_LOCAL,
+      payload: user,
+    });
+  };
+  

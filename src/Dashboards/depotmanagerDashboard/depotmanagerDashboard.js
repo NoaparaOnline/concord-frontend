@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
 import TableDash from "../../components/ReusableComponents/TableDash/TableDash";
@@ -20,11 +20,19 @@ import icon6 from "../../Statics/assets/Sidebar/logout.png";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
+
+
+// Search Bar Images Import
+
+import search from '../../Statics/assets/G1.png'
+import filter from '../../Statics/assets/F1.png'
 
 const DepotmanagerDashboard = (props) => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
+  const user = useSelector((state) => state?.logIn?.user);
+  console.log(user,"");
   const dispatch = useDispatch()
   const openSidebar = () => {
     setsidebarOpen(true);
@@ -32,10 +40,14 @@ const DepotmanagerDashboard = (props) => {
   const closeSidebar = () => {
     setsidebarOpen(false);
   };
-
+  // useEffect(() => {
+  //   if(!user)
+  //   {
+  //     props.history.push('/');
+  //   }  
+  // });
   const logouthandler = ()=>{
-    dispatch(logoutUser())
-    props.history.push('/');
+    dispatch(logoutUser())   
   }
 
   const handleEdit = (item) => () => {
@@ -56,6 +68,21 @@ const DepotmanagerDashboard = (props) => {
             cols={tableConstants(handleEdit)}
             data={data}
             hoverable
+            SearchBar={
+              <>
+              
+              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+            reverse={true}
+          
             bordered={false}
             {...props}
           />
@@ -70,6 +97,23 @@ const DepotmanagerDashboard = (props) => {
             cols={tableConstants(handleEdit)}
             data={data}
             hoverable
+
+            reverse={true}
+            SearchBar={
+              <>
+              
+              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+
+
             bordered={false}
             {...props}
           />
@@ -83,6 +127,23 @@ const DepotmanagerDashboard = (props) => {
           <TableDash
             cols={stocks(handleEdit)}
             data={stockdata}
+            
+            reverse={true}
+            SearchBar={
+              <>
+              
+              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+            
+
             hoverable
             bordered={false}
             {...props}
@@ -97,6 +158,23 @@ const DepotmanagerDashboard = (props) => {
           <TableDash
             cols={tableConstants(handleEdit)}
             data={data}
+            
+            reverse={true}
+            SearchBar={
+              <>
+              
+              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+
+            
             hoverable
             bordered={false}
             {...props}
@@ -113,6 +191,21 @@ const DepotmanagerDashboard = (props) => {
             cols={tableConstants(handleEdit)}
             data={data}
             hoverable
+            reverse={true}
+            SearchBar={
+              <>
+              
+              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
+                <input className="form_style_input" type="text" placeholder="Search" />
+                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
+                </form>
+            </div>
+              
+              </>
+            }
+
             bordered={false}
             {...props}
           />
