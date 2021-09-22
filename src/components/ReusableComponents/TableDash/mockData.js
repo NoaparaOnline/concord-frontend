@@ -605,31 +605,5 @@ export const districards = [
     maplink:
       "https://www.google.com/maps/search/25.757301352034393,+89.23122977681142?sa=X&#038;ved=2ahUKEwjx7tnRubDyAhVVgf0HHRCZAOMQ8gF6BAgCEAE",
   },
-  {
-    id: 9,
-    head: "Rajshahi",
-    name: "Md. Abdul Motin",
-    position: "DIC-Executive",
-    num: "01991-145401",
-    mailname: "cplrajshahi18@gmail.com",
-    mapname:
-      "Concord Pharmaceuticals Ltd.House No-115,Sector No-02,Road No-02,Uposhahor Rajshahi.",
-    maillink: "mailto:cplrajshahi18@gmail.com",
-    maplink:
-      "https://www.google.com/maps/search/24.380948395991037,+88.59667417394552?sa=X&#038;ved=2ahUKEwiO2omXurDyAhXtgf0HHTPpCH8Q8gF6BAgCEAE",
-  },
-  {
-    id: 10,
-    head: "Jhenaidah",
-    name: "Md.Ashraful Isalm",
-    position: "DIC-Executive",
-    num: "01991-146103",
-    mailname: "cpljhenaidahdepot@gmail.com",
-    mapname:
-      "Concord Pharmaceuticals Ltd.DR. Sheikh Mohammod Aminul Haque,30 Dukhi Mahmud sorok,Arappur, Jhenaidah. Bus Stand Dhaka Road , Bridze er Pase.",
-    maillink: "mailto:cpljhenaidahdepot@gmail.com",
-    maplink:
-      "https://www.google.com/maps/search/23.55209025693937,+89.17544639539432?sa=X&#038;ved=2ahUKEwj4lue9urDyAhWWhf0HHUMcASwQ8gF6BAgCEAE",
-  },
   
 ];
