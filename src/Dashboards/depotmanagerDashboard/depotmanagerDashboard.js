@@ -22,7 +22,9 @@ import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
-
+import {
+  getOrder
+} from "../../Store/Actions/deportmanagerActions";
 
 // Search Bar Images Import
 
@@ -46,6 +48,12 @@ const DepotmanagerDashboard = (props) => {
   //     props.history.push('/');
   //   }  
   // });
+  
+  useEffect(() => {
+    dispatch(getOrder());  
+  },[dispatch]);
+
+
   const logouthandler = ()=>{
     dispatch(logoutUser())   
   }

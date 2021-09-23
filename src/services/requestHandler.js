@@ -7,6 +7,7 @@ const SERVICE_URLS = {
   resetPassword: "users/reset-password",
   forgotPassword: "users/forgot-password",
   logout: "users/logout",
+  getOrders: 'orders/read',
 };
 
 const login = (data) =>
@@ -22,6 +23,8 @@ const login = (data) =>
 const forgotPassword = (data) =>
   post(SERVICE_URLS.forgotPassword, data, { feature: featureConstants.static });
 
+const getOrders = () =>
+  get(SERVICE_URLS.getOrders, {}, { feature: featureConstants.static });
 
 const apiServices = {
   // define variables
@@ -29,5 +32,6 @@ const apiServices = {
   resetPassword,
   forgotPassword,
   logout,
+  getOrders,
 };
 export default apiServices;

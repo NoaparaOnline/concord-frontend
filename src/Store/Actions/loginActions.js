@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
       if (response?.data?.response_code === 200) {
         setToken({
           key: response?.data?.response_data?.token?.access_token,
+          type: response?.data?.response_data?.token?.access_type,
       
         });
         saveUser(response?.data?.response_data?.token?.user);

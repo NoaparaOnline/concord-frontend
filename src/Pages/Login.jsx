@@ -11,8 +11,7 @@ const Login = (props) => {
   const dispatch = useDispatch();
 
   const onSubmit = async () => {
-    console.log("omSubmit")
-    const apiData = {
+       const apiData = {
       email_address: email,
       password: password,
     };
