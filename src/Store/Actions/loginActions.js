@@ -6,11 +6,11 @@ import { toast } from "react-toastify";
   export const loginUser = (data) => async (dispatch) => {
     try {
       const response = await apiServices.login(data);
-      console.log(response);
+      console.log("Yeh Response hai",response);
       if (response?.data?.response_code === 200) {
         setToken({
           key: response?.data?.response_data?.token?.access_token,
-          type: response?.data?.response_data?.token?.access_type,
+          type: response?.data?.response_data?.token.user?.role?.name,
       
         });
         saveUser(response?.data?.response_data?.token?.user);

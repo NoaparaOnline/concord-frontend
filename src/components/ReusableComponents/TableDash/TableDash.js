@@ -22,14 +22,22 @@ const TableDash = ({
   SelectedButtons,
   TableCardGrid,
   floatleftrightbutton,
+  td1,
+  td2,
+  td3,
+  td4,
+  td5,
 }) => {
   let history = useHistory();
   console.log(history);
   console.log(match, location);
 
   // Table Component On True False Toogle
+  const formatDate= (timestamp) => {
+    return new Intl.DateTimeFormat('en-US').format(timestamp);
+ }
   const TableDiv = (
-    <div class="table-responsive ms-5 d-flex justify-content-center">
+    <div class="table-responsive ">
       <table
         className={`table ${bordered ? "table-bordered" : "table-borderless"} ${
           hoverable && "table-hover"
@@ -41,26 +49,35 @@ const TableDash = ({
               border: "none",
               color: "#707070",
               fontWeight: "500",
-              fontSize: "18px",
+              fontSize: "16px",
             }}
           >
-            {cols.map((headerItem, index) => (
-              <th key={index}>{headerItem.title}</th>
+           
+
+            {cols?.map((item, index) => (
+              <th scope="col" key={index + 1} >
+                <span className=" patient-appointment-table-heading">
+                  {item}
+                </span>
+              </th>
             ))}
+
+
           </tr>
         </thead>
-        <tbody style={{ cursor: "pointer" }}>
+        <tbody>
           {data.map((item, index) => (
             <tr
-              key={index}
+              key={index+1}
               style={{ border: "none" }}
-              onClick={() => history.push("/innertablepage", item)}
             >
-              {cols.map((col, key) => (
-                <td key={key} style={{ border: "none" }}>
-                  {col.render(item)}
-                </td>
-              ))}
+               {item?.map((_item, index) => (
+                 <td style={_item === "Pending" ? { color:'#C0B627',fontWeight:'500',border:'none' ,fontSize:'14' }:
+                 (_item === "Cancelled" || _item === "Declined" ) ? { color:'red',fontWeight:'500',border:'none' ,fontSize:'14' }:
+                 (_item === "Paid" || _item === "Delivered") ? { color:'green',fontWeight:'500',border:'none' ,fontSize:'14' }
+                 :{ border:'none' ,fontSize:'14' }} key={index + 1}>{_item}</td>
+                 ))}
+                 {console.log("Table k Ander Wala Item Map",item)}
             </tr>
           ))}
           {Total}

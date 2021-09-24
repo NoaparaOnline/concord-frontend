@@ -27,7 +27,7 @@ import profileLogo from "../../../Statics/assets/profile-logo.png";
 
 const Navbars = (props) => {
 
-const userRole = useSelector((state) => state?.logIn?.userRole);
+// const userRole = useSelector((state) => state?.logIn?.userRole);
 console.log(props);
  const dispatch = useDispatch();
   const logoutHandler = () => {
@@ -36,12 +36,12 @@ console.log(props);
   };
 const user = useSelector((state) => state?.logIn?.user);
   const profileHandler = () => {
-    if (userRole === "depotmanager") {
+    if (user === "depotmanager") {
       props.history.push("/depotmanager-dashboard");
     }  
-    else{
-        props.history.push('/director-dashboard')
-      }
+    // else{
+    //     props.history.push('/director-dashboard')
+    //   }
   };
  const [show, setShow] = useState(false);
   const [langbtnshow, setLangbtnshow] = useState(false);
