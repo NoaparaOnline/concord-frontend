@@ -41,7 +41,6 @@ const DepotmanagerDashboard = (props) => {
     setsidebarOpen(false);
   };
   // useEffect(() => {
-  //   if(!user)
   //   {
   //     props.history.push('/');
   //   }  

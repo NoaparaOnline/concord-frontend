@@ -157,7 +157,7 @@ function App() {
         {/* Dashboards */}
 
 
-        <PrivateRoute
+        <Route
           component={DepotmanagerDashboard} path="/depotmanager-dashboard"  />
        
        {/* Private Convert */}
