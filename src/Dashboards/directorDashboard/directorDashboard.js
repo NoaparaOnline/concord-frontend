@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
-import TableDash from "../../components/ReusableComponents/TableDash/TableDash1";
+import TableDash from "../../components/ReusableComponents/TableDash/TableDash";
 import "../depotmanagerDashboard/depotmanagerDashboard.css";
 import DashCard from "../../components/ReusableComponents/DashboardTableCards/DashCard2";
 import {
@@ -21,7 +21,7 @@ import {
   stocks,
   Directordashschedule,
   Directordashproducthead,
-} from "../../components/ReusableComponents/TableDash/tableConstant1";
+} from "../../components/ReusableComponents/TableDash/tableConstant";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
@@ -32,7 +32,7 @@ import icon4 from "../../Statics/assets/Sidebar/9.png";
 import icon5 from "../../Statics/assets/Sidebar/10.png";
 import iconf from "../../Statics/assets/Sidebar/11.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 import DashCharts from "../../components/ReusableComponents/DashCharts/DashCharts";
 import ColorFullDashCard from "../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard";
@@ -51,14 +51,8 @@ const DirectorDashboard = (props) => {
   const tabledataHandler = (item) => {
     setSelectedTabbledata(item);
   };
-  const user = useSelector((state) => state?.logIn?.userRole);
 
-useEffect(() => {
-   if(!user)
-   {
-     props.history.push('/');
-      }  
-    });
+  // Selected Buttons
   const [selectedTab1, setSelectedTab1] = useState("All");
   const [selectedTab2, setSelectedTab2] = useState("List");
   
@@ -113,8 +107,7 @@ useEffect(() => {
   const dispatch = useDispatch();
 
   const logouthandler = () => {
-    dispatch(logoutUser());
-    props.history.push("/");
+    props.history.push('/');
   };
 
   const handleEdit = (item) => () => {
@@ -500,7 +493,7 @@ useEffect(() => {
 
                {districards.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-lg-3 col-md-4 col-sm-6 mb-3 ">
+              <div  className="col-lg-3 mb-3 ">
   
               <DashCard data={ob}/>
 
@@ -547,7 +540,7 @@ useEffect(() => {
 
                {districards.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-xl-3 col-lg-6 col-sm-12 mb-3 ">
+              <div  className="col-lg-3 mb-3 ">
               <DashCard data={ob}/>
 
               </div>

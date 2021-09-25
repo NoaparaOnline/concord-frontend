@@ -11,21 +11,18 @@ const Login = (props) => {
   const dispatch = useDispatch();
 
   const onSubmit = async () => {
-      const apiData = {
+    console.log("omSubmit")
+    const apiData = {
       email_address: email,
       password: password,
     };
-  
+
     const type = await dispatch(loginUser(apiData));
-    console.log("Type Login Modal Wala",type);
+    console.log(type);
     
-    if (type === "admin") {
-      history?.push("/depotmanager-dashboard");
-    }  
-    else if (type === "Director"){
-        history?.push('/director-dashboard')
-      }
-    props.onHide();
+    if (type==="Succuss") {
+      history?.push('/depotmanager-dashboard')
+    }
   };
 
 
@@ -33,6 +30,7 @@ const Login = (props) => {
     const apiData = {
       email_address: email,
     };
+    const type = await dispatch(forgotPassword(apiData));
 
     props.onHide();
   };

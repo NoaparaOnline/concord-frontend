@@ -1,32 +1,30 @@
 import {logInConstants} from '../Constants/loginConstant';
 import apiServices from "../../services/requestHandler";
-import { logout,saveUser,setToken,setUserRole } from "../../Utils/auth.util";
+import { logout,saveUser,setToken } from "../../Utils/auth.util";
 import { toast } from "react-toastify";
 
   export const loginUser = (data) => async (dispatch) => {
     try {
       const response = await apiServices.login(data);
-      console.log("Yeh Response hai",response);
+      console.log(response);
       if (response?.data?.response_code === 200) {
         setToken({
           key: response?.data?.response_data?.token?.access_token,
-          type: response?.data?.response_data?.token.user?.role?.name,
       
         });
         saveUser(response?.data?.response_data?.token?.user);
-        setUserRole(response?.data?.response_data?.token);
        
         dispatch({
           type: logInConstants.LOGIN_IN,
           payload: response?.data?.response_data?.token?.user,
         });
         dispatch({
-          type: logInConstants.USER_TYPE,
-          payload: response?.data?.response_data?.token?.user?.role?.name,
+          type: logInConstants.USER_ROLES,
+          payload: response?.data?.response_data?.session_token_type,
         });
         
         toast.info("Login Successful");
-        return response?.data?.response_data?.token.user?.role?.name;
+        return "Succuss";
       } 
       else {
         return "Fail";

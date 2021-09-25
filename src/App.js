@@ -157,14 +157,9 @@ function App() {
         {/* Dashboards */}
 
 
-        <Route
-           path="/depotmanager-dashboard"
-           render={(props) => <DepotmanagerDashboard {...props} />}/>
+        <PrivateRoute
+          component={DepotmanagerDashboard} path="/depotmanager-dashboard"  />
        
-        {/* <PrivateRoute
-           path="/depotmanager-dashboard"
-           component={DepotmanagerDashboard}/>
-        */}
        {/* Private Convert */}
         <Route 
         path="/director-dashboard"

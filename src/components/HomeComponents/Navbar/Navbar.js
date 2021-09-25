@@ -7,6 +7,7 @@ import arlang from "../../../Statics/assets/languages/arbic.jpg";
 import bnlang from "../../../Statics/assets/languages/bangali.jpg";
 import { NavLink, Link } from "react-router-dom";
 import Login from "../../../Pages/Login";
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -25,8 +26,8 @@ import profileLogo from "../../../Statics/assets/profile-logo.png";
 
 
 const Navbars = (props) => {
-  
-  const userRole = useSelector((state) => state?.logIn?.userRole);
+
+const userRole = useSelector((state) => state?.logIn?.userRole);
 console.log(props);
  const dispatch = useDispatch();
   const logoutHandler = () => {
@@ -35,17 +36,13 @@ console.log(props);
   };
 const user = useSelector((state) => state?.logIn?.user);
   const profileHandler = () => {
-    console.log(userRole, "UserRole");
-    if (userRole === "admin") {
+    if (userRole === "depotmanager") {
       props.history.push("/depotmanager-dashboard");
     }  
-    else if (userRole === "Director"){
+    else{
         props.history.push('/director-dashboard')
       }
   };
-
-
- 
  const [show, setShow] = useState(false);
   const [langbtnshow, setLangbtnshow] = useState(false);
   const [showdiv, setShowdiv] = useState(true);
@@ -147,6 +144,7 @@ const user = useSelector((state) => state?.logIn?.user);
                     <li className="nav-item dropdown ">
                       <Link
                         className="nav-link dropdown-toggle"
+                        // to="/patient-dashboard"
                         id="navbarDropdownMenuLink"
                         role="button"
                         data-toggle="dropdown"
@@ -167,6 +165,7 @@ const user = useSelector((state) => state?.logIn?.user);
                       >
                         <Link
                           className="dropdown-item"
+                          to="/depotmanager-dashboard"
                           onClick={() => profileHandler()}
                         >
                           <i
