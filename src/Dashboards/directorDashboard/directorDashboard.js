@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
 import TableDash from "../../components/ReusableComponents/TableDash/TableDash1";
@@ -32,7 +32,7 @@ import icon4 from "../../Statics/assets/Sidebar/9.png";
 import icon5 from "../../Statics/assets/Sidebar/10.png";
 import iconf from "../../Statics/assets/Sidebar/11.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 import DashCharts from "../../components/ReusableComponents/DashCharts/DashCharts";
 import ColorFullDashCard from "../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard";
@@ -51,8 +51,14 @@ const DirectorDashboard = (props) => {
   const tabledataHandler = (item) => {
     setSelectedTabbledata(item);
   };
+  const user = useSelector((state) => state?.logIn?.userRole);
 
-  // Selected Buttons
+useEffect(() => {
+   if(!user)
+   {
+     props.history.push('/');
+      }  
+    });
   const [selectedTab1, setSelectedTab1] = useState("All");
   const [selectedTab2, setSelectedTab2] = useState("List");
   
