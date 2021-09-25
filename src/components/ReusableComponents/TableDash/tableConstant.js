@@ -37,7 +37,6 @@ export const tableinner = (handleEdit) => {
   'Trade Price',
   'Amount',
    
-'Actions',  
 ];
 };
 

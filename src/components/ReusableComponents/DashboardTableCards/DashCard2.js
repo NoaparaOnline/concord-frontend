@@ -14,7 +14,7 @@ const DashCard = ({ data }) => {
       >
         <div className="">
           <div className="row mb-3">
-            Z
+            
             <div className="col">
               <div
                 className="text-left"

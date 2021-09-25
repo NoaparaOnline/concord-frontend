@@ -1,6 +1,6 @@
 import {logInConstants} from '../Constants/loginConstant';
 import apiServices from "../../services/requestHandler";
-import { logout,saveUser,setToken } from "../../Utils/auth.util";
+import { logout,saveUser,setToken,setUserRole } from "../../Utils/auth.util";
 import { toast } from "react-toastify";
 
   export const loginUser = (data) => async (dispatch) => {
@@ -14,18 +14,19 @@ import { toast } from "react-toastify";
       
         });
         saveUser(response?.data?.response_data?.token?.user);
+        setUserRole(response?.data?.response_data?.token);
        
         dispatch({
           type: logInConstants.LOGIN_IN,
           payload: response?.data?.response_data?.token?.user,
         });
         dispatch({
-          type: logInConstants.USER_ROLES,
-          payload: response?.data?.response_data?.session_token_type,
+          type: logInConstants.USER_TYPE,
+          payload: response?.data?.response_data?.token?.user?.role?.name,
         });
         
         toast.info("Login Successful");
-        return "Succuss";
+        return response?.data?.response_data?.token.user?.role?.name;
       } 
       else {
         return "Fail";

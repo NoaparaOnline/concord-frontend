@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
-import TableDash from "../../components/ReusableComponents/TableDash/TableDash";
+import TableDash from "../../components/ReusableComponents/TableDash/TableDash1";
 import "../depotmanagerDashboard/depotmanagerDashboard.css";
 import DashCard from "../../components/ReusableComponents/DashboardTableCards/DashCard2";
 import {
@@ -21,7 +21,7 @@ import {
   stocks,
   Directordashschedule,
   Directordashproducthead,
-} from "../../components/ReusableComponents/TableDash/tableConstant";
+} from "../../components/ReusableComponents/TableDash/tableConstant1";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
@@ -107,7 +107,8 @@ const DirectorDashboard = (props) => {
   const dispatch = useDispatch();
 
   const logouthandler = () => {
-    props.history.push('/');
+    dispatch(logoutUser());
+    props.history.push("/");
   };
 
   const handleEdit = (item) => () => {
@@ -493,7 +494,7 @@ const DirectorDashboard = (props) => {
 
                {districards.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-lg-3 mb-3 ">
+              <div  className="col-lg-3 col-md-4 col-sm-6 mb-3 ">
   
               <DashCard data={ob}/>
 
@@ -540,7 +541,7 @@ const DirectorDashboard = (props) => {
 
                {districards.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-lg-3 mb-3 ">
+              <div  className="col-xl-3 col-lg-6 col-sm-12 mb-3 ">
               <DashCard data={ob}/>
 
               </div>

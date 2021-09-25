@@ -4,7 +4,7 @@ import { updateHeaders } from '../services/HttpProvider';
 export const getToken = () => localStore.get_data('token');
 
 export const setToken = token => localStore.store_data('token', token);
-// export const setToken = userRole => localStore.store_data('userRole',userRole );
+export const setUserRole = token => localStore.store_data('userRole', token);
 
 export const getUser = () => localStore.get_data('user');
 export const saveUser = user => localStore.store_data('user', user);

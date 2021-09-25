@@ -23,7 +23,7 @@ import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/Si
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 import { getOrder } from "../../Store/Actions/deportmanagerActions";
-
+import { useHistory } from "react-router";
 // Search Bar Images Import
 
 import search from "../../Statics/assets/G1.png";
@@ -32,12 +32,14 @@ import filter from "../../Statics/assets/F1.png";
 const DepotmanagerDashboard = (props) => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
 
-  const user = useSelector((state) => state?.logIn?.user);
+
+  const history = useHistory();
+  const user = useSelector((state) => state?.logIn?.userRole);
   const order = useSelector((state) => state?.deport?.order);
 
   console.log("DepotReducer Order State",order);
 
-  console.log(user, "");
+  console.log(user, "user Roollee");
 
   const dispatch = useDispatch();
 
@@ -48,12 +50,7 @@ const DepotmanagerDashboard = (props) => {
   const closeSidebar = () => {
     setsidebarOpen(false);
   };
-  // useEffect(() => {
-  //   if(!user)
-  //   {
-  //     props.history.push('/');
-  //   }
-  // });
+
 
   useEffect(() => {
     if (order?.length < 1) {
@@ -76,6 +73,13 @@ const DepotmanagerDashboard = (props) => {
     // write your logic
     alert(JSON.stringify(item));
   };
+
+
+  const innertablepage =()=>{
+    alert("innerpage");
+    props.history.push('/depotmanager-dashboard/order-request/innerdetail');
+}
+
   return (
     // #EFFBEF
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
@@ -87,11 +91,12 @@ const DepotmanagerDashboard = (props) => {
             Heading="Order Request"
           />
           {console.log("order detail", order)}
+         
           <TableDash
             cols={tableConstants(handleEdit)}
             data={order?.map((item, index) => {
               return [
-                index + 1,
+                item?.order_id,
                 item?.customer?.name,
                 item?.customer?.market?.name,
                 formatDate(item?.order_datetime),
@@ -106,7 +111,7 @@ const DepotmanagerDashboard = (props) => {
                         className={` btn btn-primary`}
                         style={{backgroundColor:'#0066b3'}}
                       >
-                        <Link style={{color:'#ffffff',textDecoration:'none'}}>View</Link>
+                        <Link style={{color:'#ffffff',textDecoration:'none'}}  to={{pathname: "/depotmanager-dashboard/order-request/innerdetail", state:item}}>View</Link>
                       </div>
                     </div>
                   </div>
@@ -155,20 +160,32 @@ const DepotmanagerDashboard = (props) => {
             openSidebar={openSidebar}
             Heading="New Order"
           />
-          <TableDash
+             <TableDash
             cols={tableConstants(handleEdit)}
             data={order?.map((item, index) => {
               return [
-                index + 1,
+                item?.order_id,
                 item?.customer?.name,
                 item?.customer?.market?.name,
                 formatDate(item?.order_datetime),
+                item?.payment_type,
                 item?.delivery_status,
                 item?.payment_status,
                 item?.ordered_by?.name,
+                <>
+                  <div className="row">
+                    <div className="col pr-0">
+                      <div
+                        className={` btn btn-primary`}
+                        style={{backgroundColor:'#0066b3'}}
+                      >
+                        <Link style={{color:'#ffffff',textDecoration:'none'}}  to={{pathname: "/depotmanager-dashboard/order-request/innerdetail", state:item}}>View</Link>
+                      </div>
+                    </div>
+                  </div>
+                </>,
               ];
             })}
-            reverse={true}
             SearchBar={
               <>
                 <div class="search-box ms-5 mb-2" style={{ width: "240px" }}>
@@ -200,6 +217,7 @@ const DepotmanagerDashboard = (props) => {
                 </div>
               </>
             }
+            reverse={true}
             bordered={false}
             {...props}
           />
@@ -214,11 +232,22 @@ const DepotmanagerDashboard = (props) => {
             cols={stocks(handleEdit)}
             data={order?.map((item, index) => {
               return [
-                index + 1,
+                item?.order_id,
                 item?.customer?.name,
                 item?.customer?.market?.name,
                 formatDate(item?.order_datetime),
-                item?.ordered_by?.name,
+                <>
+                  <div className="row">
+                    <div className="col pr-0">
+                      <div
+                        className={` btn btn-primary`}
+                        style={{backgroundColor:'#0066b3'}}
+                      >
+                        <Link style={{color:'#ffffff',textDecoration:'none'}}  to={{pathname: "/depotmanager-dashboard/order-request/innerdetail", state:item}}>View</Link>
+                      </div>
+                    </div>
+                  </div>
+                </>,
               ];
             })}
             reverse={true}
@@ -272,6 +301,21 @@ const DepotmanagerDashboard = (props) => {
                 item?.customer?.market?.name,
                 formatDate(item?.order_datetime),
                 item?.ordered_by?.name,
+                item?.delivery_status,
+                item?.payment_status,
+                item?.ordered_by?.name,
+                <>
+                <div className="row">
+                  <div className="col pr-0">
+                    <div
+                      className={` btn btn-primary`}
+                      style={{backgroundColor:'#0066b3'}}
+                    >
+                      <Link style={{color:'#ffffff',textDecoration:'none'}}  to={{pathname: "/depotmanager-dashboard/order-request/innerdetail", state:item}}>View</Link>
+                    </div>
+                  </div>
+                </div>
+              </>,
               ];
             })}
             reverse={true}
@@ -325,6 +369,21 @@ const DepotmanagerDashboard = (props) => {
                 item?.customer?.market?.name,
                 formatDate(item?.order_datetime),
                 item?.ordered_by?.name,
+                item?.delivery_status,
+                item?.payment_status,
+                item?.ordered_by?.name,
+                <>
+                <div className="row">
+                  <div className="col pr-0">
+                    <div
+                      className={` btn btn-primary`}
+                      style={{backgroundColor:'#0066b3'}}
+                    >
+                      <Link style={{color:'#ffffff',textDecoration:'none'}}  to={{pathname: "/depotmanager-dashboard/order-request/innerdetail", state:item}}>View</Link>
+                    </div>
+                  </div>
+                </div>
+              </>,
               ];
             })}
             reverse={true}
@@ -365,7 +424,7 @@ const DepotmanagerDashboard = (props) => {
         </Route>
 
         {/* Inner Pages Routes */}
-        <Route path={`/innertablepage`}>
+        <Route path={`/depotmanager-dashboard/order-request/innerdetail`}>
           <InnerPage
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
