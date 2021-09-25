@@ -31,16 +31,15 @@
 
 .sidecontainer {
   display: grid;
-  height: 100vh;
+  height: 100%;
+  grid-gap: 1rem;
   grid-template-columns: 300px 1fr;
   grid-template-rows: auto;
+  grid-gap: 2rem;
   grid-template-areas:
     "sidebar nav "
-    "sidebar main"
-    "sidebar main"
-    "sidebar main"
-    "sidebar main"
-    "sidebar main"
+    "sidebar main "
+    "sidebar main "
     ;
 }
 

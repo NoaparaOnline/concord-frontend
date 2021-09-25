@@ -3,7 +3,7 @@ import { getToken } from "../Utils/auth.util";
 // const BASE_URL = "prod link";
 // https://dmfr-backend.herokuapp.com/api/v1/
 // https://concord-backend-m1.herokuapp.com/
-const BASE_URL = "https://concord-backend-m1.herokuapp.com/api";
+const BASE_URL = "http://concord-backend-m1.herokuapp.com/api";
 
 export async function getApiRequestHeader() {
   const authToken = await getToken();

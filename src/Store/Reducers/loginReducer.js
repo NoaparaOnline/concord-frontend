@@ -2,6 +2,7 @@ import {logInConstants} from '../Constants/loginConstant';
 
 const initialState = {
     user: null,
+    userRole : ''
   };
 
   export const loginReducer = (state = initialState, { type, payload }) => {
@@ -13,8 +14,6 @@ const initialState = {
         case logInConstants.LOG_OUT_USER:
               return { ...state, user: payload };
         case logInConstants.GET_USER_FROM_LOCAL:
-                return { ...state, user: payload };
-        case logInConstants.USER_ROLES:
                 return { ...state, user: payload };
       default:
         return state;
