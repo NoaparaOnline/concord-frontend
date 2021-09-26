@@ -29,7 +29,8 @@ const TableDash1 = ({
 
   // Table Component On True False Toogle
   const TableDiv = (
-    <div class="table-responsive ms-5 d-flex justify-content-center">
+   
+    <div class="table-responsive ">
       <table
         className={`table ${bordered ? "table-bordered" : "table-borderless"} ${
           hoverable && "table-hover"
@@ -70,6 +71,7 @@ const TableDash1 = ({
   );
 
   return (
+    <main>
     <div
       className="container style_custom mt-3"
       style={{
@@ -78,7 +80,6 @@ const TableDash1 = ({
         width: "96%",
         alignItems: "center",
         padding: "20px",
-        height: "100%",
       }}
     >
       {/* Colorful Cards */}
@@ -98,6 +99,7 @@ const TableDash1 = ({
         </>
       )}
     </div>
+    </main>
   );
 };
 

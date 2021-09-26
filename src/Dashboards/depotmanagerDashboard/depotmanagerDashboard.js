@@ -23,7 +23,6 @@ import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/Si
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 import { getOrder } from "../../Store/Actions/deportmanagerActions";
-import { useHistory } from "react-router";
 // Search Bar Images Import
 
 import search from "../../Statics/assets/G1.png";
@@ -33,7 +32,6 @@ const DepotmanagerDashboard = (props) => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
 
 
-  const history = useHistory();
   const user = useSelector((state) => state?.logIn?.userRole);
   const order = useSelector((state) => state?.deport?.order);
 
@@ -75,11 +73,6 @@ const DepotmanagerDashboard = (props) => {
   };
 
 
-  const innertablepage =()=>{
-    alert("innerpage");
-    props.history.push('/depotmanager-dashboard/order-request/innerdetail');
-}
-
   return (
     // #EFFBEF
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
@@ -90,7 +83,6 @@ const DepotmanagerDashboard = (props) => {
             openSidebar={openSidebar}
             Heading="Order Request"
           />
-          {console.log("order detail", order)}
          
           <TableDash
             cols={tableConstants(handleEdit)}
@@ -480,6 +472,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 btnName="Logout"
+                classlogout={"sidebar__logout"}
                 onClick={logouthandler}
               />
             </>

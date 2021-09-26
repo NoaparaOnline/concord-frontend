@@ -9,7 +9,8 @@ const DashCard = ({ data }) => {
           backgroundColor: "#FFF",
           borderRadius: "10px",
           padding: "20px",
-          maxHeight: "300px",
+          maxHeight: "280px",
+          minWidth:'230px',
         }}
       >
         <div className="">

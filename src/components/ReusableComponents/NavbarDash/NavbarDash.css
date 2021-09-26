@@ -1,4 +1,12 @@
- .nav_icon_custom {
+.navbar-customgrid{
+    background: #EFFBEF;
+    grid-area: nav;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_icon_custom {
     display: none;
   }
   
@@ -7,13 +15,6 @@
     color: #a5aaad;
   }
   
-  .navbar__left > a {
-    margin-right: 30px;
-    text-decoration: none;
-    color: #a5aaad;
-    font-size: 15px;
-    font-weight: 700;
-  }
   
   .navbar__left .active_link {
     color: #265acc;
@@ -48,8 +49,9 @@
   }
   
   @media only screen and (max-width: 480px) {
-    .navbar__left {
+    .navbar__right {
       display: none;
     }
+   
   }
   

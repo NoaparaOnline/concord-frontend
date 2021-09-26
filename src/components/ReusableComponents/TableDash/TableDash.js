@@ -88,6 +88,7 @@ TableDash = ({
   );
 
   return (
+    <main>
     <div
       className="container style_custom mt-3"
       style={{
@@ -96,7 +97,6 @@ TableDash = ({
         width: "96%",
         alignItems: "center",
         padding: "20px",
-        height: "100%",
       }}
     >
       {/* Colorful Cards */}
@@ -116,6 +116,7 @@ TableDash = ({
         </>
       )}
     </div>
+    </main>
   );
 };
 

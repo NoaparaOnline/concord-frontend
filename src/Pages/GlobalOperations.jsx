@@ -88,8 +88,8 @@ const GlobalOPerations = () => {
               {flagsCol1.map((ob, index) => {
                 return (
                   <>
-                    <div className="col-lg-5 col-md-5 col-sm-6  me-3  d-flex justify-content-center">
-                      <img className="mb-3 me-5  boxImgShadow" alt="" src={ob.imageURL} />
+                    <div className="col-lg-5 col-md-5 col-md-6  col-sm-6 col-xs-12 mb-4  d-flex justify-content-center">
+                      <img className="mb-3 me-5  boxImgShadow" alt="" width="100%" src={ob.imageURL} />
                     </div>
                   </>
                 );

@@ -2,13 +2,13 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './SidebarDashboard.css'
 const SiderbarBtn = (props) => {
-    const {borderSidebtn,btnroute,imgbtn,btnName,match,Colr} = props;
+    const {borderSidebtn,btnroute,imgbtn,btnName,match,Colr,classlogout} = props;
     return (
         <>
           <div className="mt-3">
             <NavLink
               activeClassName="sidebar__link"
-              className="sidebar__link"
+              className={`sidebar__link ${classlogout}`}
               exact={true}
               activeStyle={borderSidebtn}
               onClick={props.onClick}
