@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 // This is the table constant/settings which needed to render table elements
 export const tableConstants = (handleEdit) => {
@@ -7,9 +7,20 @@ export const tableConstants = (handleEdit) => {
       'Customer Name',
       'Market & Address',
       'Order Date/Time',
-      'Payment Status',
+      'Payment Type',
       'Delivery Status',
       'Payment Status',
+      'Proceed By',
+      'Actions',  
+    ];
+};
+export const deliverystatus = (handleEdit) => {
+  return [
+      'Orders ID',
+      'Customer Name',
+      'Market & Address',
+      'Order Date/Time',
+      'Delivery Status',
       'Proceed By',
       'Actions',  
     ];
@@ -22,7 +33,19 @@ export const stocks = (handleEdit) => {
    'S.No',
    'Product Name',
    'Product Formula',
+   'Price',
    'Quantity',
+  'Actions',
+  ];
+};
+
+
+export const payment = (handleEdit) => {
+  return [
+   'Orders ID',
+   'Customer Name',
+   'Made Of Payment',
+   'Payment Recieved',
   'Actions',
   ];
 };

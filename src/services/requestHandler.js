@@ -1,4 +1,4 @@
-import { get, patch, post, put } from "./HttpProvider";
+import { get, patch, post,put } from "./HttpProvider";
 import featureConstants from "./features-constants";
 
 const SERVICE_URLS = {
@@ -8,6 +8,8 @@ const SERVICE_URLS = {
   forgotPassword: "users/forgot-password",
   logout: "users/logout",
   getOrders: 'orders/read',
+  getStocksProducts: 'products/read',
+  statusChanges:'status-update',
 };
 
 const login = (data) =>
@@ -26,6 +28,14 @@ const forgotPassword = (data) =>
 const getOrders = () =>
   get(SERVICE_URLS.getOrders, {}, { feature: featureConstants.static });
 
+const getStocksProducts = () =>
+  get(SERVICE_URLS.getStocksProducts, {}, { feature: featureConstants.static });
+
+const statusChanges = (data) =>
+  put(SERVICE_URLS.statusChanges, data, { feature: featureConstants.static });
+
+
+
 const apiServices = {
   // define variables
   login,
@@ -33,5 +43,7 @@ const apiServices = {
   forgotPassword,
   logout,
   getOrders,
+  getStocksProducts,
+  statusChanges,
 };
 export default apiServices;

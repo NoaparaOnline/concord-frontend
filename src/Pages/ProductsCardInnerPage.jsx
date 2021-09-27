@@ -170,7 +170,7 @@ const ProductsCardInnerPage = () => {
       <div className="container mb-5">
         <Link to="/products_bytrade" style={{ textDecoration: "none" }}>
           <span style={{ fontSize: "22px", color: "#565656" }}>
-            <i class="fa fa-angle-left" aria-hidden="true"></i> Back
+            <i className="fa fa-angle-left" aria-hidden="true"></i> Back
           </span>
         </Link>
         <div className="row">
@@ -208,7 +208,7 @@ const ProductsCardInnerPage = () => {
           </div>
 
           <div className="col-lg-8 ">
-            <div class="productContentInfo">
+            <div className="productContentInfo">
               <h1
                 style={{
                   fontSize: "30px",
@@ -227,7 +227,7 @@ const ProductsCardInnerPage = () => {
               >
                 Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP
                 100 mg.
-                <span class="block">
+                <span className="block">
                   {" "}
                   Acedol® SR Tablet: Each sustained release tablet contains-
                   Aceclofenac BP 200 mg.
@@ -293,7 +293,7 @@ const ProductsCardInnerPage = () => {
                 }}
               >
                 Acedol® Tablet:<br/>
-                <span class="block">
+                <span className="block">
                   <strong>Adults:</strong> The recommended dose is 100 mg, twice
                   daily. Children: There are no clinical data on the use of
                   Aceclofenac in children.

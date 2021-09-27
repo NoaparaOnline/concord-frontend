@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./TableDash.css";
-import search from "../../../Statics/assets/G1.png";
-import filter from "../../../Statics/assets/F1.png";
-import { useHistory } from "react-router-dom";
+// import search from "../../../Statics/assets/G1.png";
+// import filter from "../../../Statics/assets/F1.png";
+// import { useHistory } from "react-router-dom";
 const 
 
 TableDash = ({
@@ -26,17 +26,16 @@ TableDash = ({
   floatleftrightbutton,
  
 }) => {
-  let history = useHistory();
-  console.log(history);
-  console.log(match, location);
+  // let history = useHistory();
 
   // Table Component On True False Toogle
-  const formatDate= (timestamp) => {
-    return new Intl.DateTimeFormat('en-US').format(timestamp);
- }
+
+//   const formatDate= (timestamp) => {
+//     return new Intl.DateTimeFormat('en-US').format(timestamp);
+//  }
   const TableDiv = (
-    <div class="table-responsive "
-    style={{height:'60vh',overflowY:'scroll' }}
+    <div className="table-responsive "
+    style={{overflowY:'scroll' }}
     >
       <table
         className={`table ${bordered ? "table-bordered" : "table-borderless"} ${
@@ -78,7 +77,6 @@ TableDash = ({
                  (_item === "Paid" || _item === "Delivered") ? { color:'green',fontWeight:'500',border:'none' ,fontSize:'14' }
                  :{ border:'none' ,fontSize:'14' }} key={index + 1}>{_item}</td>
                  ))}
-                 {console.log("Table k Ander Wala Item Map",item)}
             </tr>
           ))}
           {Total}

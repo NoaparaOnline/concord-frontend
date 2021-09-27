@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState } from "react";
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
 import TableDash from "../../components/ReusableComponents/TableDash/TableDash1";
@@ -16,12 +16,10 @@ import {
 } from "../../components/ReusableComponents/TableDash/mockData";
 import {
   tableConstants,
-  stocks,
   Directordashschedule,
   Directordashproducthead,
 } from "../../components/ReusableComponents/TableDash/tableConstant1";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
 import icon1 from "../../Statics/assets/Sidebar/6.png";
 import icon2 from "../../Statics/assets/Sidebar/7.png";
@@ -30,7 +28,7 @@ import icon4 from "../../Statics/assets/Sidebar/9.png";
 import icon5 from "../../Statics/assets/Sidebar/10.png";
 import iconf from "../../Statics/assets/Sidebar/11.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 import DashCharts from "../../components/ReusableComponents/DashCharts/DashCharts";
 import ColorFullDashCard from "../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard";
@@ -40,7 +38,6 @@ import DashboardTableCards from "../../components/ReusableComponents/DashboardTa
 // Search Bar Images Import
 
 import search from '../../Statics/assets/G1.png'
-import filter from '../../Statics/assets/F1.png'
 
 const DirectorDashboard = (props) => {
 
@@ -321,7 +318,7 @@ const DirectorDashboard = (props) => {
 
             SearchBar={
               
-              <div class="search-box my-4" style={{width: '230px'}} >
+              <div className="search-box my-4" style={{width: '230px'}} >
                 <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'0px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />
@@ -395,7 +392,7 @@ const DirectorDashboard = (props) => {
             SearchBar={
               <div className="">
               
-              <div class="search-box my-4" style={{width: '230px'}} >
+              <div className="search-box my-4" style={{width: '230px'}} >
                 <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'0px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />
@@ -464,7 +461,7 @@ const DirectorDashboard = (props) => {
             SearchBar={
               <>
               
-              <div class="search-box my-4" style={{width: '230px'}} >
+              <div className="search-box my-4" style={{width: '230px'}} >
                 <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'0px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />
@@ -509,7 +506,7 @@ const DirectorDashboard = (props) => {
             SearchBar={
               <>
               
-              <div class="search-box my-4" style={{width: '230px'}} >
+              <div className="search-box my-4" style={{width: '230px'}} >
                 <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'0px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />

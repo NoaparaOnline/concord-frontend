@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import "./Navbar.css";
 import logo from "../../../Statics/assets/logo.png";
 import langlogo from "../../../Statics/assets/languagelogo.png";
@@ -25,7 +25,6 @@ const Navbars = (props) => {
   const history = useHistory();
 
   const userRole = useSelector((state) => state?.logIn?.userRole);
-console.log(props);
  const dispatch = useDispatch();
   const logoutHandler = () => {
     dispatch(logoutUser());
@@ -33,11 +32,10 @@ console.log(props);
   };
 const user = useSelector((state) => state?.logIn?.user);
   const profileHandler = () => {
-    console.log(userRole, "UserRole");
-    if (userRole === "Depot Manager" ) {
+    if (userRole === "depot_manager" ) {
       history.push("/depotmanager-dashboard");
     }  
-    else if (userRole === "Director" ){
+    else if (userRole === "director" ){
         history.push('/director-dashboard')
       }
   };
@@ -313,7 +311,7 @@ const user = useSelector((state) => state?.logIn?.user);
                       className="nav-link secnav "
                       aria-current="page"
                       to="/" 
-                      exact={true}
+                      exact
                       activeClassName="active"
 
                     >

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import TableDash from "./TableDash";
 import "./TableDash.css";
 import { tableinner } from "../TableDash/tableConstant";
@@ -6,7 +6,6 @@ import { tableinner } from "../TableDash/tableConstant";
 const TableInnerPage = (props) => {
 
   const medicinesall =props?.location?.state;
-  console.log("medicinesall all",medicinesall)
 
   const handleEdit = (item) => () => {
     // write your logic
@@ -17,17 +16,17 @@ const TableInnerPage = (props) => {
   };
   return (
     <>
+       <main> 
       <div
         className="container style_custom"
         style={{
           backgroundColor: "#FFF",
           borderRadius: "10px",
-          width: "96%",
+          width:'96%',
           padding: "20px",
-          height: "100%",
         }}
       >
-        <table class="table table-borderless ms-5">
+        <table className="table table-borderless ms-5">
           <tbody style={{ border: "none" }}>
             <tr style={{ border: "none", padding: "10px" }}>
               <td style={{ border: "none" }}>OrderID:</td>
@@ -52,7 +51,7 @@ const TableInnerPage = (props) => {
           </tbody>
         </table>
       </div>
-
+   
       <TableDash
         cols={tableinner(handleEdit)}
         data={medicinesall?.medicines?.map((item, index) => {
@@ -102,6 +101,7 @@ const TableInnerPage = (props) => {
           </>
         }
       />
+         </main>
     </>
   );
 };

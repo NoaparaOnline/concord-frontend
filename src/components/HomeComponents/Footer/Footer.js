@@ -121,11 +121,11 @@ const Footer = () => {
       </ul> 
 
         {/* <div className="widget-area">
-              <div class="socialiconm">
-                <a className="soicon" href="https://www.facebook.com/concordbd/" title="Facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
-                <a className="soicon" href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
-                <a className="soicon" href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
-                <a className="soicon" href="#" title="Youtube"><i class="fa fa-youtube"></i></a>
+              <div className="socialiconm">
+                <a className="soicon" href="https://www.facebook.com/concordbd/" title="Facebook" target="_blank" rel="noopener"><i className="fa fa-facebook"></i></a>
+                <a className="soicon" href="#" title="Twitter"><i className="fa fa-twitter"></i></a>
+                <a className="soicon" href="#" title="Instagram"><i className="fa fa-instagram"></i></a>
+                <a className="soicon" href="#" title="Youtube"><i className="fa fa-youtube"></i></a>
             </div>
         </div> */}
 

@@ -1,6 +1,6 @@
 import React , { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { BrowserRouter as Router, Route , Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route  } from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer, FixedRight } from "./components";
 import About from "./Pages/About";
@@ -43,7 +43,7 @@ import DirectorDashboard from "./Dashboards/directorDashboard/directorDashboard"
 
 
 import PrivateRoute from './Routes/PrivateRoute';
-import PublicRoute from './Routes/PublicRoute';
+// import PublicRoute from './Routes/PublicRoute';
 
 function App() {
   // Get User From Local Storage

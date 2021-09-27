@@ -12,9 +12,9 @@ const SiderbarBtn = (props) => {
             <NavLink
             activeClassName="sidebar__link"
             className={`sidebar__link ${classlogout}`}
-            exact={true}
+            exact
             activeStyle={borderSidebtn}
-            onClick={props.onClick}
+            onClick={props.onClick}                                                                                                                
             to='/'
             >
             <li className="mb-2 ms-4">
@@ -26,7 +26,7 @@ const SiderbarBtn = (props) => {
               <NavLink
               activeClassName="sidebar__link"
               className={`sidebar__link ${classlogout}`}
-              exact={true}
+              exact
               activeStyle={borderSidebtn}
               onClick={props.onClick}
               to={`${match.path}/${btnroute}`} 

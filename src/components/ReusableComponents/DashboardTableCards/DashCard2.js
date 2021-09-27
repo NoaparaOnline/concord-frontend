@@ -1,5 +1,4 @@
 import React from "react";
-import icon from "../../../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg";
 const DashCard = ({ data }) => {
   return (
     <>
@@ -69,7 +68,7 @@ const DashCard = ({ data }) => {
                   </div>
                   <div className="mt-2">
                     <a
-                      href=""
+                      href="/#"
                       style={{ textDecoration: "none", color: "#0066b3" }}
                     >
                       <i className="fa fa-envelope" aria-hidden="true"></i>{" "}
@@ -88,7 +87,7 @@ const DashCard = ({ data }) => {
 
                   <div className="mt-2">
                     <a
-                      href=""
+                      href="/#"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ textDecoration: "none", color: "#0066b3" }}

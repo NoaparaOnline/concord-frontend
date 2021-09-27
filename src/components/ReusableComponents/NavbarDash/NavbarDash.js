@@ -1,6 +1,6 @@
 import React from 'react'
-import { Heading } from '../../../components'
-import icon1 from '../../../Statics/assets/Sidebar/1.png'
+// import { Heading } from '../../../components'
+// import icon1 from '../../../Statics/assets/Sidebar/1.png'
 import HeaderDash from '../HeaderDash/HeaderDash'
 import './NavbarDash.css'
 const NavbarDash = ({ openSidebar,Heading,BackBtn }) => {
