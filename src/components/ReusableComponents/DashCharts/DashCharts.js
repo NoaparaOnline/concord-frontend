@@ -29,7 +29,7 @@ export default class DashCharts extends React.Component {
   render() {
     return (
       <div>
-        <h5 className="text-center" style={{fontSize:"15px",color:"grey"}}>{this.props.heading}</h5>
+        <h5 className="text-center" style={{fontSize:"20px",color:"grey",fontWeight:'600'}}>{this.props.heading}</h5>
         <Line
           data={state}
           options={options}

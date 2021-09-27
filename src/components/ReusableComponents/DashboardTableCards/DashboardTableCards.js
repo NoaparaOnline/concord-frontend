@@ -4,14 +4,15 @@ const DashboardTableCards = () => {
   return (
     <>
       <div
-        className="card style_custom"
+        className="card style_custom1"
         style={{
           backgroundColor: "#FFF",
           borderRadius: "10px",
           padding: "20px",
+          minHeight:'230px',
+          minWidth:'230px',
         }}
       >
-        <div className="container">
             <div className="row mb-3">
                 <div className="col-6 d-flex">
                     <img src={icon} width="50px" height="50px" alt=""
@@ -55,7 +56,6 @@ const DashboardTableCards = () => {
              </div>
         </div>
       
-      </div>
     </>
   );
 };

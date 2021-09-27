@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
-import TableDash from "../../components/ReusableComponents/TableDash/TableDash";
+import TableDash from "../../components/ReusableComponents/TableDash/TableDash1";
 import "../depotmanagerDashboard/depotmanagerDashboard.css";
 import DashCard from "../../components/ReusableComponents/DashboardTableCards/DashCard2";
 import {
-  data,
-  stockdata,
   directorSchedulDataAll,
   directorSchedulDataCompleted,
   directorSchedulDataPending,
@@ -21,7 +19,7 @@ import {
   stocks,
   Directordashschedule,
   Directordashproducthead,
-} from "../../components/ReusableComponents/TableDash/tableConstant";
+} from "../../components/ReusableComponents/TableDash/tableConstant1";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
@@ -32,7 +30,7 @@ import icon4 from "../../Statics/assets/Sidebar/9.png";
 import icon5 from "../../Statics/assets/Sidebar/10.png";
 import iconf from "../../Statics/assets/Sidebar/11.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 import DashCharts from "../../components/ReusableComponents/DashCharts/DashCharts";
 import ColorFullDashCard from "../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard";
@@ -45,6 +43,16 @@ import search from '../../Statics/assets/G1.png'
 import filter from '../../Statics/assets/F1.png'
 
 const DirectorDashboard = (props) => {
+
+  // const user = useSelector((state) => state?.logIn?.user);
+  // useEffect(() => {
+  //   if (!user) {
+  //     props.history.push("/");
+  //   }
+    
+  // }, [user]);
+
+
 
   // tabledata Toogle State
   const [selectedTabbledata, setSelectedTabbledata] = useState(directorSchedulDataAll);
@@ -107,7 +115,8 @@ const DirectorDashboard = (props) => {
   const dispatch = useDispatch();
 
   const logouthandler = () => {
-    props.history.push('/');
+    dispatch(logoutUser());
+    props.history.push("/");
   };
 
   const handleEdit = (item) => () => {
@@ -130,11 +139,11 @@ const DirectorDashboard = (props) => {
             hoverable
             reverse={false}
             floatleftrightbutton={
-              <div className="container">
-                <div className="row">
-                  <div className="col-12 px-5">
+              <div className = "container">
+           <div className="row">
+                  <div className="col-lg-12 ">
 
-                <div className="d-flex justify-content-end mb-4 px-3">
+                <div className="d-flex justify-content-end mb-4 ">
 
               {["All", "Region"].map(
           (item, index) => (
@@ -157,14 +166,13 @@ const DirectorDashboard = (props) => {
         )}
               </div> 
               </div> 
-              </div> 
+              </div>
               </div>
             }
             colorfulcards={
-              <>
-                <div className="container mb-5">
-                  <div className="row">
-                    <div className="col-lg-3 d-flex justify-content-center">
+              <div className = "container">
+                  <div className="row d-flex justify-content-center mb-3">
+                    <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
                       <ColorFullDashCard
                       headtext="By Value"
                       textl="BTK 24,000"
@@ -172,7 +180,7 @@ const DirectorDashboard = (props) => {
                       classname="colrcardblue"
                       />
                     </div>
-                    <div className="col-lg-3 d-flex justify-content-center">
+                    <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
                       <ColorFullDashCard
                       headtext="By Product"
                       textl="2,478"
@@ -180,7 +188,7 @@ const DirectorDashboard = (props) => {
                       classname="colrcardseagreen"
                       />
                     </div>
-                    <div className="col-lg-3 d-flex justify-content-center">
+                    <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
                       <ColorFullDashCard
                       headtext="By Prescription"
                       textl="1,151"
@@ -188,7 +196,7 @@ const DirectorDashboard = (props) => {
                       classname="colrcardred"
                       />
                     </div>
-                    <div className="col-lg-3 d-flex justify-content-center">
+                    <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
                       <ColorFullDashCard
                       headtext="By Customer"
                       textl="1,200"
@@ -197,29 +205,26 @@ const DirectorDashboard = (props) => {
                       />
                     </div>
                   </div>
-                </div>
-              </>
+              </div>
             }
             DivChartComponent={
               <>
-                <div className="container">
                   <div className="row d-flex justify-content-center">
-                    <div className="col-lg-5 ">
+                    <div className="col-lg-6 mb-3 ">
                       <DashCharts heading="By Value" />
                     </div>
-                    <div className="col-lg-5 ms-5">
+                    <div className="col-lg-6 mb-3 ">
                       <DashCharts heading="By Prescription" />
                     </div>
                   </div>
-                  <div className="row d-flex justify-content-center mt-5">
-                    <div className="col-lg-5 ">
+                  <div className="row d-flex justify-content-center">
+                    <div className="col-lg-6 mb-3 ">
                       <DashCharts heading="By Product" />
                     </div>
-                    <div className="col-lg-5 ms-5">
+                    <div className="col-lg-6 mb-3 ">
                       <DashCharts heading="By Customer" />
                     </div>
                   </div>
-                </div>
               </>
             }
             bordered={false}
@@ -238,9 +243,8 @@ const DirectorDashboard = (props) => {
             hoverable
             reverse={true}
             SelectedButtons={
-              <div className="container">
-                <div className="row ms-5">
-              <div className="col mb-3 p-0">
+                <div className="row my-4">
+              <div className="col ">
              
               {["All", "Completed", "Pending","Due","Cancelled"].map(
           (item, index) => (
@@ -264,13 +268,10 @@ const DirectorDashboard = (props) => {
               </div>
         
               </div>
-              </div>
             }
             colorfulcards={
-              <div className="container mt-5">
-                <div className="container ms-5 mb-5">
-                  <div className="row">
-                    <div className="col-lg-3 p-0">
+                  <div className="row d-flex justify-content-center">
+                    <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
                       <ColorFullDashCard
                       headtext="Completed"
                       textl="1544"
@@ -278,7 +279,7 @@ const DirectorDashboard = (props) => {
                       classname="colrcardblue"
                       />
                     </div>
-                    <div className="col-lg-3 p-0">
+                    <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
                       <ColorFullDashCard
                       headtext="Pending"
                       textl="2,478"
@@ -286,7 +287,7 @@ const DirectorDashboard = (props) => {
                       classname="colrcardseagreen"
                       />
                     </div>
-                    <div className="col-lg-3 p-0">
+                    <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
                       <ColorFullDashCard
                       headtext="Due"
                       textl="1,151"
@@ -294,7 +295,7 @@ const DirectorDashboard = (props) => {
                       classname="colrcardred"
                       />
                     </div>
-                    <div className="col-lg-3 p-0">
+                    <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
                       <ColorFullDashCard
                       headtext="Resheduled"
                       textl="1,200"
@@ -303,8 +304,6 @@ const DirectorDashboard = (props) => {
                       />
                     </div>
                   </div>
-                </div>
-              </div>
             }
             bordered={false}
             {...props}
@@ -321,25 +320,21 @@ const DirectorDashboard = (props) => {
             data={directorproductbody}
 
             SearchBar={
-              <div className="container">
               
-              <div class="search-box ms-2 my-4" style={{width: '240px'}} >
-                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+              <div class="search-box my-4" style={{width: '230px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'0px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
                 </form>
             </div>
               
-              </div>
             }
 
             reverse={selectedTab2 === "List" ? true : false}
             hoverable
            
             SelectedButtons={
-              <div className="container">
-              <div className="ms-2  mb-3">
+              <div className="">
 
               {["List", "Grid"].map(
           (item, index) => (
@@ -356,8 +351,8 @@ const DirectorDashboard = (props) => {
                 labelStyle={selectedTab2 === item ? { color: "#fff",borderRadius:'10px'} : ""}
                 className={
                   selectedTab2 === item
-                    ? "dashboardBtnList-item-active py-2"
-                    : "default-color-and-hover py-2"
+                    ? "dashboardBtnList-item-active "
+                    : "default-color-and-hover "
                 }
               />
             </div>
@@ -366,22 +361,19 @@ const DirectorDashboard = (props) => {
               </div>
         
 
-              </div>
             }
             TableCardGrid={
-              <div className="container">
              <div className="row">
 
                {directorproductbody.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-lg-3 mb-4 ">
+              <div  className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
               <DashboardTableCards/>
               </div>
               </React.Fragment>
           )
           )}
              </div>
-              </div>
             }
             bordered={false}
             {...props}
@@ -401,13 +393,12 @@ const DirectorDashboard = (props) => {
             hoverable
             
             SearchBar={
-              <div className="container">
+              <div className="">
               
-              <div class="search-box ms-2 my-4" style={{width: '240px'}} >
-                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+              <div class="search-box my-4" style={{width: '230px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'0px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
                 </form>
             </div>
               
@@ -415,8 +406,7 @@ const DirectorDashboard = (props) => {
             }
 
             SelectedButtons={
-              <div className="container">
-              <div className="ms-2 mb-3">
+              <div className="">
 
               {["List", "Grid"].map(
           (item, index) => (
@@ -427,14 +417,14 @@ const DirectorDashboard = (props) => {
             >
               <DashboardBtnList
                 label={item}
-                labelStyle={selectedTab2 === item ? { color: "#fff",borderRadius:'10px'} : ""}
+                labelStyle={selectedTab2 === item ? { color: "#fff",borderRadius:'0px'} : ""}
                 iconclassname={
                   item === "List" ? "fa fa-list" : "fa fa-th" 
                 }
                 className={
                   selectedTab2 === item
-                    ? "dashboardBtnList-item-active py-2"
-                    : "default-color-and-hover py-2"
+                    ? "dashboardBtnList-item-active "
+                    : "default-color-and-hover "
                 }
               />
             </div>
@@ -443,22 +433,19 @@ const DirectorDashboard = (props) => {
               </div>
         
 
-              </div>
             }
             TableCardGrid={
-              <div className="container">
              <div className="row">
 
                {directorproductbody.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-lg-3 mb-3">
+              <div  className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
               <DashboardTableCards/>
               </div>
               </React.Fragment>
           )
           )}
              </div>
-              </div>
             }
             bordered={false}
             {...props}
@@ -477,23 +464,22 @@ const DirectorDashboard = (props) => {
             SearchBar={
               <>
               
-              <div class="search-box ms-3 my-4" style={{width: '240px'}} >
-                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+              <div class="search-box my-4" style={{width: '230px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'0px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
                 </form>
             </div>
               
               </>
             }
             TableCardGrid={
-              <div className="container">
              <div className="row">
 
                {districards.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-lg-3 mb-3 ">
+    
+              <div  className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
   
               <DashCard data={ob}/>
 
@@ -502,7 +488,6 @@ const DirectorDashboard = (props) => {
           )
           )}
              </div>
-              </div>
             }
             
             hoverable
@@ -524,23 +509,21 @@ const DirectorDashboard = (props) => {
             SearchBar={
               <>
               
-              <div class="search-box ms-3 my-4" style={{width: '240px'}} >
-                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
+              <div class="search-box my-4" style={{width: '230px'}} >
+                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'0px' }}>
                 <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
                 <input className="form_style_input" type="text" placeholder="Search" />
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
                 </form>
             </div>
               
               </>
             }
             TableCardGrid={
-              <div className="container">
              <div className="row">
 
                {districards.map((ob, index) => (
             <React.Fragment key={ob.id}>
-              <div  className="col-lg-3 mb-3 ">
+              <div  className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
               <DashCard data={ob}/>
 
               </div>
@@ -548,7 +531,6 @@ const DirectorDashboard = (props) => {
           )
           )}
              </div>
-              </div>
             }
             bordered={false}
             {...props}

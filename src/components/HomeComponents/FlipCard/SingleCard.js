@@ -19,7 +19,7 @@ const SingleCard = ({card}) => {
                   <img key={ob.id} src={ob.imgf} className="card-img-top p-3" alt="..." />
                 );
               })}
-              <Link to={btnlink} className="btn btn-primary rounded-pill mx-5 mb-4" style={{color:'#fff',backgroundColor:'#0066b3'}}>
+              <Link to={btnlink} type="button" className="btn btn-primary rounded-pill mx-5 mb-4" style={{color:'#fff',backgroundColor:'#0066b3'}}>
                 {btn}
               </Link>
             </div>

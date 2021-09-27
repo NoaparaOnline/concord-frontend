@@ -1,3 +1,23 @@
+/*  styling scrollbars  */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #a5aaad;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3ea175;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5aaad;
+}
+
 
 .text-primary-p {
   color: #a5aaad;
@@ -33,13 +53,9 @@
   display: grid;
   height: 100vh;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 0.1fr 3fr;
   grid-template-areas:
     "sidebar nav "
-    "sidebar main"
-    "sidebar main"
-    "sidebar main"
-    "sidebar main"
     "sidebar main"
     ;
 }

@@ -2,8 +2,14 @@
 .table>tbody {
   border-bottom: hidden;
 }
-
-
+.style_custom{
+  position:relative;
+}
+main {
+  background: #EFFBEF;
+  grid-area: main;
+  overflow-y: auto;
+}
 
 .form_style_search{
   margin: 0 ;

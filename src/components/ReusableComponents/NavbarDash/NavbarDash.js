@@ -6,7 +6,7 @@ import './NavbarDash.css'
 const NavbarDash = ({ openSidebar,Heading,BackBtn }) => {
     return (
       <div className="container" style={{backgroundColor:'#EFFBEF',borderRadius:'10px',width:'100%',padding:'20px',height:'100%'}}>
-        <nav className="navbar">
+        <nav className="navbar navbar-customgrid">
         {BackBtn}
         </nav>
         <nav className="navbar">

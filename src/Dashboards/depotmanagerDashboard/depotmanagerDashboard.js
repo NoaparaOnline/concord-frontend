@@ -1,12 +1,8 @@
-import React, { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
 import TableDash from "../../components/ReusableComponents/TableDash/TableDash";
 import "./depotmanagerDashboard.css";
-import {
-  data,
-  stockdata,
-} from "../../components/ReusableComponents/TableDash/mockData";
 import {
   tableConstants,
   stocks,
@@ -17,42 +13,65 @@ import icon3 from "../../Statics/assets/Sidebar/3.png";
 import icon4 from "../../Statics/assets/Sidebar/4.png";
 import icon5 from "../../Statics/assets/Sidebar/5.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
-
-
+import { getOrder } from "../../Store/Actions/deportmanagerActions";
 // Search Bar Images Import
 
-import search from '../../Statics/assets/G1.png'
-import filter from '../../Statics/assets/F1.png'
+import search from "../../Statics/assets/G1.png";
+import filter from "../../Statics/assets/F1.png";
 
 const DepotmanagerDashboard = (props) => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
+
+
   const user = useSelector((state) => state?.logIn?.user);
-  console.log(user,"");
-  const dispatch = useDispatch()
+  const order = useSelector((state) => state?.deport?.order);
+
+  console.log("DepotReducer Order State", order);
+
+  console.log(user, "user Roollee");
+
+  const dispatch = useDispatch();
+
   const openSidebar = () => {
     setsidebarOpen(true);
   };
+
   const closeSidebar = () => {
     setsidebarOpen(false);
   };
-  // useEffect(() => {
-  //   {
-  //     props.history.push('/');
-  //   }  
-  // });
-  const logouthandler = ()=>{
-    dispatch(logoutUser())   
-  }
+
+
+  useEffect(() => {
+    // if (!user) {
+    //   props.history.push("/");
+    // } ,[user]
+    if (order?.length < 1) {
+      dispatch(getOrder());
+    }
+  }, [dispatch, order ]);
+
+  console.log("Order Wala ", order);
+
+  const logouthandler = () => {
+    dispatch(logoutUser());
+    props.history.replace('/');
+  };
+
+  const formatDate = (timestamp) => {
+    return new Intl.DateTimeFormat("en-US").format(timestamp);
+  };
 
   const handleEdit = (item) => () => {
     // write your logic
     alert(JSON.stringify(item));
   };
+
+
   return (
     // #EFFBEF
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
@@ -63,25 +82,65 @@ const DepotmanagerDashboard = (props) => {
             openSidebar={openSidebar}
             Heading="Order Request"
           />
+
           <TableDash
             cols={tableConstants(handleEdit)}
-            data={data}
-            hoverable
+            data={order?.map((item, index) => {
+              return [
+                item?.order_id,
+                item?.customer?.name,
+                item?.customer?.market?.name,
+                formatDate(item?.order_datetime),
+                item?.payment_type,
+                item?.delivery_status,
+                item?.payment_status,
+                item?.ordered_by?.name,
+                <>
+                  <div className="row">
+                    <div className="col pr-0">
+                      <div
+                        className={` btn btn-primary`}
+                        style={{ backgroundColor: '#0066b3' }}
+                      >
+                        <Link style={{ color: '#ffffff', textDecoration: 'none' }} to={{ pathname: "/depotmanager-dashboard/order-request/innerdetail", state: item }}>View</Link>
+                      </div>
+                    </div>
+                  </div>
+                </>,
+              ];
+            })}
             SearchBar={
               <>
-              
-              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
-                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
-                <input className="form_style_input" type="text" placeholder="Search" />
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
-                </form>
-            </div>
-              
+                <div class="search-box mb-4" style={{ width: "240px", minWidth: '240px' }}>
+                  <form
+                    className="form_style_search"
+                    style={{
+                      border: "1px solid #707070",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <button
+                      className="form_style_btn"
+                      style={{ background: "transparent", border: "none" }}
+                    >
+                      <img src={search} alt="" />
+                    </button>
+                    <input
+                      className="form_style_input"
+                      type="text"
+                      placeholder="Search"
+                    />
+                    <button
+                      className="form_style_btn"
+                      style={{ background: "transparent", border: "none" }}
+                    >
+                      <img src={filter} alt="" />
+                    </button>
+                  </form>
+                </div>
               </>
             }
             reverse={true}
-          
             bordered={false}
             {...props}
           />
@@ -94,25 +153,62 @@ const DepotmanagerDashboard = (props) => {
           />
           <TableDash
             cols={tableConstants(handleEdit)}
-            data={data}
-            hoverable
-
-            reverse={true}
+            data={order?.map((item, index) => {
+              return [
+                item?.order_id,
+                item?.customer?.name,
+                item?.customer?.market?.name,
+                formatDate(item?.order_datetime),
+                item?.payment_type,
+                item?.delivery_status,
+                item?.payment_status,
+                item?.ordered_by?.name,
+                <>
+                  <div className="row">
+                    <div className="col pr-0">
+                      <div
+                        className={` btn btn-primary`}
+                        style={{ backgroundColor: '#0066b3' }}
+                      >
+                        <Link style={{ color: '#ffffff', textDecoration: 'none' }} to={{ pathname: "/depotmanager-dashboard/order-request/innerdetail", state: item }}>View</Link>
+                      </div>
+                    </div>
+                  </div>
+                </>,
+              ];
+            })}
             SearchBar={
               <>
-              
-              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
-                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
-                <input className="form_style_input" type="text" placeholder="Search" />
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
-                </form>
-            </div>
-              
+                <div class="search-box mb-4" style={{ width: "240px", minWidth: '240px' }}>
+                  <form
+                    className="form_style_search"
+                    style={{
+                      border: "1px solid #707070",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <button
+                      className="form_style_btn"
+                      style={{ background: "transparent", border: "none" }}
+                    >
+                      <img src={search} alt="" />
+                    </button>
+                    <input
+                      className="form_style_input"
+                      type="text"
+                      placeholder="Search"
+                    />
+                    <button
+                      className="form_style_btn"
+                      style={{ background: "transparent", border: "none" }}
+                    >
+                      <img src={filter} alt="" />
+                    </button>
+                  </form>
+                </div>
               </>
             }
-
-
+            reverse={true}
             bordered={false}
             {...props}
           />
@@ -125,25 +221,58 @@ const DepotmanagerDashboard = (props) => {
           />
           <TableDash
             cols={stocks(handleEdit)}
-            data={stockdata}
-            
+            data={order?.map((item, index) => {
+              return [
+                item?.order_id,
+                item?.customer?.name,
+                item?.customer?.market?.name,
+                formatDate(item?.order_datetime),
+                <>
+                  <div className="row">
+                    <div className="col pr-0">
+                      <div
+                        className={` btn btn-primary`}
+                        style={{ backgroundColor: '#0066b3' }}
+                      >
+                        <Link style={{ color: '#ffffff', textDecoration: 'none' }} to={{ pathname: "/depotmanager-dashboard/order-request/innerdetail", state: item }}>View</Link>
+                      </div>
+                    </div>
+                  </div>
+                </>,
+              ];
+            })}
             reverse={true}
             SearchBar={
               <>
-              
-              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
-                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
-                <input className="form_style_input" type="text" placeholder="Search" />
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
-                </form>
-            </div>
-              
+                <div class="search-box mb-4" style={{ width: "240px", minWidth: '240px' }}>
+                  <form
+                    className="form_style_search"
+                    style={{
+                      border: "1px solid #707070",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <button
+                      className="form_style_btn"
+                      style={{ background: "transparent", border: "none" }}
+                    >
+                      <img src={search} alt="" />
+                    </button>
+                    <input
+                      className="form_style_input"
+                      type="text"
+                      placeholder="Search"
+                    />
+                    <button
+                      className="form_style_btn"
+                      style={{ background: "transparent", border: "none" }}
+                    >
+                      <img src={filter} alt="" />
+                    </button>
+                  </form>
+                </div>
               </>
             }
-            
-
-            hoverable
             bordered={false}
             {...props}
           />
@@ -156,31 +285,67 @@ const DepotmanagerDashboard = (props) => {
           />
           <TableDash
             cols={tableConstants(handleEdit)}
-            data={data}
-            
+            data={order?.map((item, index) => {
+              return [
+                index + 1,
+                item?.customer?.name,
+                item?.customer?.market?.name,
+                formatDate(item?.order_datetime),
+                item?.ordered_by?.name,
+                item?.delivery_status,
+                item?.payment_status,
+                item?.ordered_by?.name,
+                <>
+                  <div className="row">
+                    <div className="col pr-0">
+                      <div
+                        className={` btn btn-primary`}
+                        style={{ backgroundColor: '#0066b3' }}
+                      >
+                        <Link style={{ color: '#ffffff', textDecoration: 'none' }} to={{ pathname: "/depotmanager-dashboard/order-request/innerdetail", state: item }}>View</Link>
+                      </div>
+                    </div>
+                  </div>
+                </>,
+              ];
+            })}
             reverse={true}
             SearchBar={
               <>
-              
-              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
-                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
-                <input className="form_style_input" type="text" placeholder="Search" />
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
-                </form>
-            </div>
-              
+                <div className="search-box mb-4" style={{ width: "240px", minWidth: '240px' }}>
+                  <form
+                    className="form_style_search"
+                    style={{
+                      border: "1px solid #707070",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <button
+                      className="form_style_btn"
+                      style={{ background: "transparent", border: "none" }}
+                    >
+                      <img src={search} alt="" />
+                    </button>
+                    <input
+                      className="form_style_input"
+                      type="text"
+                      placeholder="Search"
+                    />
+                    <button
+                      className="form_style_btn"
+                      style={{ background: "transparent", border: "none" }}
+                    >
+                      <img src={filter} alt="" />
+                    </button>
+                  </form>
+                </div>
               </>
             }
-
-            
-            hoverable
             bordered={false}
             {...props}
           />
         </Route>
         <Route path={`${props.match.path}/payment`}>
-            
           <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
@@ -188,30 +353,69 @@ const DepotmanagerDashboard = (props) => {
           />
           <TableDash
             cols={tableConstants(handleEdit)}
-            data={data}
-            hoverable
+            data={order?.map((item, index) => {
+              return [
+                index + 1,
+                item?.customer?.name,
+                item?.customer?.market?.name,
+                formatDate(item?.order_datetime),
+                item?.ordered_by?.name,
+                item?.delivery_status,
+                item?.payment_status,
+                item?.ordered_by?.name,
+                <>
+                  <div className="row">
+                    <div className="col pr-0">
+                      <div
+                        className={` btn btn-primary`}
+                        style={{ backgroundColor: '#0066b3' }}
+                      >
+                        <Link style={{ color: '#ffffff', textDecoration: 'none' }} to={{ pathname: "/depotmanager-dashboard/order-request/innerdetail", state: item }}>View</Link>
+                      </div>
+                    </div>
+                  </div>
+                </>,
+              ];
+            })}
             reverse={true}
             SearchBar={
               <>
-              
-              <div class="search-box ms-5 mb-2" style={{width: '240px'}} >
-                <form className="form_style_search"style={{border:'1px solid #707070',borderRadius:'10px' }}>
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={search} alt="" /></button>
-                <input className="form_style_input" type="text" placeholder="Search" />
-                <button className="form_style_btn" style={{ background:'transparent',border:'none'}}><img src={filter} alt="" /></button>
-                </form>
-            </div>
-              
+                <div class="search-box mb-4" style={{ width: "240px", minWidth: '240px' }}>
+                  <form
+                    className="form_style_search"
+                    style={{
+                      border: "1px solid #707070",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <button
+                      className="form_style_btn"
+                      style={{ background: "transparent", border: "none" }}
+                    >
+                      <img src={search} alt="" />
+                    </button>
+                    <input
+                      className="form_style_input"
+                      type="text"
+                      placeholder="Search"
+                    />
+                    <button
+                      className="form_style_btn"
+                      style={{ background: "transparent", border: "none" }}
+                    >
+                      <img src={filter} alt="" />
+                    </button>
+                  </form>
+                </div>
               </>
             }
-
             bordered={false}
             {...props}
           />
         </Route>
 
         {/* Inner Pages Routes */}
-        <Route path={`/innertablepage`}>
+        <Route path={`/depotmanager-dashboard/order-request/innerdetail`}>
           <InnerPage
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
@@ -266,7 +470,9 @@ const DepotmanagerDashboard = (props) => {
                 Colr="#BB2026"
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
+                disablelink={true}
                 btnName="Logout"
+                classlogout={"sidebar__logout"}
                 onClick={logouthandler}
               />
             </>

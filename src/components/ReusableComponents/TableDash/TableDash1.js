@@ -4,9 +4,7 @@ import "./TableDash.css";
 import search from "../../../Statics/assets/G1.png";
 import filter from "../../../Statics/assets/F1.png";
 import { useHistory } from "react-router-dom";
-const 
-
-TableDash = ({
+const TableDash1 = ({
   cols,
   data,
   bordered,
@@ -24,61 +22,46 @@ TableDash = ({
   SelectedButtons,
   TableCardGrid,
   floatleftrightbutton,
- 
 }) => {
   let history = useHistory();
   console.log(history);
   console.log(match, location);
 
   // Table Component On True False Toogle
-  const formatDate= (timestamp) => {
-    return new Intl.DateTimeFormat('en-US').format(timestamp);
- }
   const TableDiv = (
-    <div class="table-responsive "
-    style={{overflowY:'scroll' }}
-    >
+   
+    <div class="table-responsive ">
       <table
         className={`table ${bordered ? "table-bordered" : "table-borderless"} ${
           hoverable && "table-hover"
         } ${striped && "table-striped"} ${isDark && "table-dark"}`}
-        
-     >
+      >
         <thead style={{ borderBottom: "hidden", borderTop: "hidden" }}>
           <tr
             style={{
               border: "none",
               color: "#707070",
               fontWeight: "500",
-              fontSize: "16px",
+              fontSize: "18px",
             }}
           >
-           
-
-            {cols?.map((item, index) => (
-              <th scope="col" key={index + 1} >
-                <span className=" patient-appointment-table-heading">
-                  {item}
-                </span>
-              </th>
+            {cols.map((headerItem, index) => (
+              <th key={index}>{headerItem.title}</th>
             ))}
-
-
           </tr>
         </thead>
-        <tbody>
-          {data?.map((item, index) => (
+        <tbody style={{ cursor: "pointer" }}>
+          {data.map((item, index) => (
             <tr
-              key={index+1}
+              key={index}
               style={{ border: "none" }}
+              onClick={() => history.push("/innertablepage", item)}
             >
-               {item?.map((_item, index) => (
-                 <td style={_item === "Pending" ? { color:'#C0B627',fontWeight:'500',border:'none' ,fontSize:'14' }:
-                 (_item === "Cancelled" || _item === "Declined" ) ? { color:'red',fontWeight:'500',border:'none' ,fontSize:'14' }:
-                 (_item === "Paid" || _item === "Delivered") ? { color:'green',fontWeight:'500',border:'none' ,fontSize:'14' }
-                 :{ border:'none' ,fontSize:'14' }} key={index + 1}>{_item}</td>
-                 ))}
-                 {console.log("Table k Ander Wala Item Map",item)}
+              {cols.map((col, key) => (
+                <td key={key} style={{ border: "none" }}>
+                  {col.render(item)}
+                </td>
+              ))}
             </tr>
           ))}
           {Total}
@@ -120,7 +103,7 @@ TableDash = ({
   );
 };
 
-TableDash.propTypes = {
+TableDash1.propTypes = {
   cols: PropTypes.array.isRequired,
   data: PropTypes.array.isRequired,
   bordered: PropTypes.bool,
@@ -129,11 +112,11 @@ TableDash.propTypes = {
   isDark: PropTypes.bool,
 };
 
-TableDash.defaultProps = {
+TableDash1.defaultProps = {
   bordered: true,
   hoverable: false,
   striped: false,
   isDark: false,
 };
 
-export default TableDash;
+export default TableDash1;

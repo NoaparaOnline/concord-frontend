@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import logo from "../../../Statics/assets/logo.png";
 import langlogo from "../../../Statics/assets/languagelogo.png";
@@ -7,8 +7,8 @@ import arlang from "../../../Statics/assets/languages/arbic.jpg";
 import bnlang from "../../../Statics/assets/languages/bangali.jpg";
 import { NavLink, Link } from "react-router-dom";
 import Login from "../../../Pages/Login";
-import { useLocation } from 'react-router-dom';
 
+import { useHistory } from "react-router-dom";
 
 
 // 
@@ -21,28 +21,29 @@ import profileLogo from "../../../Statics/assets/profile-logo.png";
 // 
 
 
-
-
-
-
 const Navbars = (props) => {
+  const history = useHistory();
 
-const userRole = useSelector((state) => state?.logIn?.userRole);
+  const userRole = useSelector((state) => state?.logIn?.userRole);
 console.log(props);
  const dispatch = useDispatch();
   const logoutHandler = () => {
     dispatch(logoutUser());
-    props?.history?.push("/");
+    history?.push("/");
   };
 const user = useSelector((state) => state?.logIn?.user);
   const profileHandler = () => {
-    if (userRole === "depotmanager") {
-      props.history.push("/depotmanager-dashboard");
+    console.log(userRole, "UserRole");
+    if (userRole === "admin" ) {
+      history.push("/depotmanager-dashboard");
     }  
-    else{
-        props.history.push('/director-dashboard')
+    else if (userRole === "Director" ){
+        history.push('/director-dashboard')
       }
   };
+
+
+ 
  const [show, setShow] = useState(false);
   const [langbtnshow, setLangbtnshow] = useState(false);
   const [showdiv, setShowdiv] = useState(true);
@@ -139,12 +140,11 @@ const user = useSelector((state) => state?.logIn?.user);
 
                   {user ? (
               <>
-                <div className="mr-4" id="navbar-list-4">
+                <div className="me-4" id="navbar-list-4">
                   <ul className="navbar-nav">
                     <li className="nav-item dropdown ">
                       <Link
                         className="nav-link dropdown-toggle"
-                        // to="/patient-dashboard"
                         id="navbarDropdownMenuLink"
                         role="button"
                         data-toggle="dropdown"
@@ -165,7 +165,6 @@ const user = useSelector((state) => state?.logIn?.user);
                       >
                         <Link
                           className="dropdown-item"
-                          to="/depotmanager-dashboard"
                           onClick={() => profileHandler()}
                         >
                           <i
@@ -177,13 +176,12 @@ const user = useSelector((state) => state?.logIn?.user);
 
                         <Link
                           className="dropdown-item"
-                          to="/"
                           onClick={() => logoutHandler()}
                         >
                           <i
                             className="fa fa-sign-out ms-2"
                             style={{ fontSize: "14.5px" }}
-                          ></i>{" "}
+                          ></i>
                           Log Out
                         </Link>
                       </div>

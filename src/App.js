@@ -91,7 +91,9 @@ function App() {
           exact path="/:page"
           render={(props) => 
             (props.location.pathname !== '/depotmanager-dashboard' 
+            && props.location.pathname !== '/depotmanager-dashboard/'
             && props.location.pathname !== '/director-dashboard'
+            && props.location.pathname !== '/director-dashboard/'
             // && props.location.pathname !== '/reset-password'
             ) 
             && <Navbar {...props}/> }
@@ -117,8 +119,10 @@ function App() {
         </Route>
         <Route exact path="/:page"
           render={(props) =>
-          (props.location.pathname !== '/depotmanager-dashboard'
+          (props.location.pathname !== '/depotmanager-dashboard' 
+            && props.location.pathname !== '/depotmanager-dashboard/'
             && props.location.pathname !== '/director-dashboard'
+            && props.location.pathname !== '/director-dashboard/'
             && props.location.pathname !== '/reset-password'
             )
             && <FixedRight /> }
@@ -157,8 +161,13 @@ function App() {
         {/* Dashboards */}
 
 
-        <Route
-          component={DepotmanagerDashboard} path="/depotmanager-dashboard"  />
+        {/* <Route
+           path="/depotmanager-dashboard"
+           render={(props) => <DepotmanagerDashboard {...props} />}/>
+        */}
+        <PrivateRoute
+           path="/depotmanager-dashboard"
+           component={DepotmanagerDashboard}/>
        
        {/* Private Convert */}
         <Route 
@@ -304,7 +313,9 @@ function App() {
         <Route exact path="/:page"
           render={(props) => 
             (props.location.pathname !== '/depotmanager-dashboard'
-             && props.location.pathname !== '/director-dashboard'
+            && props.location.pathname !== '/depotmanager-dashboard/'
+            && props.location.pathname !== '/director-dashboard'
+            && props.location.pathname !== '/director-dashboard/'
             //  && props.location.pathname !== '/reset-password'
              ) 
              && <Footer />}

@@ -21,7 +21,7 @@ const FlipCard = ({ card }) => {
                   <img key={ob.id} src={ob.imgf} className="card-img-top p-3" alt="..." />
                 );
               })}
-              <Link to={btnlink} className="btn btn-primary rounded-pill colr_btn" style={{color:'#fff',backgroundColor:'#0066b3'}}>
+              <Link to={btnlink} type="button" className="btn btn-primary rounded-pill colr_btn" style={{color:'#fff',backgroundColor:'#0066b3'}}>
                 {btn}
               </Link>
             </div>
@@ -39,7 +39,7 @@ const FlipCard = ({ card }) => {
                   <img key={ob.id} src={ob.imge} className="card-img-top p-3" alt="..." />
                 );
               })}
-              <Link to={btnlink} className="btn btn-primary rounded-pill colr_btn" style={{color:'#fff',backgroundColor:'#0066b3'}}>
+              <Link to={btnlink} type="button" className="btn btn-primary rounded-pill colr_btn" style={{color:'#fff',backgroundColor:'#0066b3'}}>
                 {btn}
               </Link>
             </div>
