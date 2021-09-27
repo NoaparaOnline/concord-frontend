@@ -19,7 +19,7 @@ const Login = (props) => {
     const type = await dispatch(loginUser(apiData));
     console.log("Type Login Modal Wala",type);
     
-    if (type === "admin") {
+    if (type === "Depot Manager") {
       history?.push("/depotmanager-dashboard");
     }  
     else if (type === "Director"){

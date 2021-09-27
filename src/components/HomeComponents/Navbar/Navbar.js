@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import logo from "../../../Statics/assets/logo.png";
 import langlogo from "../../../Statics/assets/languagelogo.png";
@@ -8,6 +8,7 @@ import bnlang from "../../../Statics/assets/languages/bangali.jpg";
 import { NavLink, Link } from "react-router-dom";
 import Login from "../../../Pages/Login";
 
+import { useHistory } from "react-router-dom";
 
 
 // 
@@ -20,27 +21,24 @@ import profileLogo from "../../../Statics/assets/profile-logo.png";
 // 
 
 
-
-
-
-
 const Navbars = (props) => {
-  
+  const history = useHistory();
+
   const userRole = useSelector((state) => state?.logIn?.userRole);
 console.log(props);
  const dispatch = useDispatch();
   const logoutHandler = () => {
     dispatch(logoutUser());
-    props?.history?.push("/");
+    history?.push("/");
   };
 const user = useSelector((state) => state?.logIn?.user);
   const profileHandler = () => {
     console.log(userRole, "UserRole");
-    if (userRole === "admin") {
-      props.history.push("/depotmanager-dashboard");
+    if (userRole === "Depot Manager" ) {
+      history.push("/depotmanager-dashboard");
     }  
-    else if (userRole === "Director"){
-        props.history.push('/director-dashboard')
+    else if (userRole === "Director" ){
+        history.push('/director-dashboard')
       }
   };
 
@@ -142,7 +140,7 @@ const user = useSelector((state) => state?.logIn?.user);
 
                   {user ? (
               <>
-                <div className="mr-4" id="navbar-list-4">
+                <div className="me-4" id="navbar-list-4">
                   <ul className="navbar-nav">
                     <li className="nav-item dropdown ">
                       <Link
@@ -178,13 +176,12 @@ const user = useSelector((state) => state?.logIn?.user);
 
                         <Link
                           className="dropdown-item"
-                          to="/"
                           onClick={() => logoutHandler()}
                         >
                           <i
                             className="fa fa-sign-out ms-2"
                             style={{ fontSize: "14.5px" }}
-                          ></i>{" "}
+                          ></i>
                           Log Out
                         </Link>
                       </div>

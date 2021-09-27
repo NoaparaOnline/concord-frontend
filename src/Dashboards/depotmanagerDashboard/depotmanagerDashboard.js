@@ -4,10 +4,6 @@ import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboa
 import TableDash from "../../components/ReusableComponents/TableDash/TableDash";
 import "./depotmanagerDashboard.css";
 import {
-  data,
-  stockdata,
-} from "../../components/ReusableComponents/TableDash/mockData";
-import {
   tableConstants,
   stocks,
 } from "../../components/ReusableComponents/TableDash/tableConstant";
@@ -32,10 +28,10 @@ const DepotmanagerDashboard = (props) => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
 
 
-  const user = useSelector((state) => state?.logIn?.userRole);
+  const user = useSelector((state) => state?.logIn?.user);
   const order = useSelector((state) => state?.deport?.order);
 
-  console.log("DepotReducer Order State",order);
+  console.log("DepotReducer Order State", order);
 
   console.log(user, "user Roollee");
 
@@ -51,16 +47,19 @@ const DepotmanagerDashboard = (props) => {
 
 
   useEffect(() => {
+    // if (!user) {
+    //   props.history.push("/");
+    // } ,[user]
     if (order?.length < 1) {
       dispatch(getOrder());
     }
-  }, [dispatch, order]);
+  }, [dispatch, order ]);
 
   console.log("Order Wala ", order);
 
   const logouthandler = () => {
     dispatch(logoutUser());
-    props.history.push("/");
+    props.history.replace('/');
   };
 
   const formatDate = (timestamp) => {
@@ -83,7 +82,7 @@ const DepotmanagerDashboard = (props) => {
             openSidebar={openSidebar}
             Heading="Order Request"
           />
-         
+
           <TableDash
             cols={tableConstants(handleEdit)}
             data={order?.map((item, index) => {
@@ -101,9 +100,9 @@ const DepotmanagerDashboard = (props) => {
                     <div className="col pr-0">
                       <div
                         className={` btn btn-primary`}
-                        style={{backgroundColor:'#0066b3'}}
+                        style={{ backgroundColor: '#0066b3' }}
                       >
-                        <Link style={{color:'#ffffff',textDecoration:'none'}}  to={{pathname: "/depotmanager-dashboard/order-request/innerdetail", state:item}}>View</Link>
+                        <Link style={{ color: '#ffffff', textDecoration: 'none' }} to={{ pathname: "/depotmanager-dashboard/order-request/innerdetail", state: item }}>View</Link>
                       </div>
                     </div>
                   </div>
@@ -112,7 +111,7 @@ const DepotmanagerDashboard = (props) => {
             })}
             SearchBar={
               <>
-                <div class="search-box ms-5 mb-2" style={{ width: "240px" }}>
+                <div class="search-box mb-4" style={{ width: "240px", minWidth: '240px' }}>
                   <form
                     className="form_style_search"
                     style={{
@@ -152,7 +151,7 @@ const DepotmanagerDashboard = (props) => {
             openSidebar={openSidebar}
             Heading="New Order"
           />
-             <TableDash
+          <TableDash
             cols={tableConstants(handleEdit)}
             data={order?.map((item, index) => {
               return [
@@ -169,9 +168,9 @@ const DepotmanagerDashboard = (props) => {
                     <div className="col pr-0">
                       <div
                         className={` btn btn-primary`}
-                        style={{backgroundColor:'#0066b3'}}
+                        style={{ backgroundColor: '#0066b3' }}
                       >
-                        <Link style={{color:'#ffffff',textDecoration:'none'}}  to={{pathname: "/depotmanager-dashboard/order-request/innerdetail", state:item}}>View</Link>
+                        <Link style={{ color: '#ffffff', textDecoration: 'none' }} to={{ pathname: "/depotmanager-dashboard/order-request/innerdetail", state: item }}>View</Link>
                       </div>
                     </div>
                   </div>
@@ -180,7 +179,7 @@ const DepotmanagerDashboard = (props) => {
             })}
             SearchBar={
               <>
-                <div class="search-box ms-5 mb-2" style={{ width: "240px" }}>
+                <div class="search-box mb-4" style={{ width: "240px", minWidth: '240px' }}>
                   <form
                     className="form_style_search"
                     style={{
@@ -233,9 +232,9 @@ const DepotmanagerDashboard = (props) => {
                     <div className="col pr-0">
                       <div
                         className={` btn btn-primary`}
-                        style={{backgroundColor:'#0066b3'}}
+                        style={{ backgroundColor: '#0066b3' }}
                       >
-                        <Link style={{color:'#ffffff',textDecoration:'none'}}  to={{pathname: "/depotmanager-dashboard/order-request/innerdetail", state:item}}>View</Link>
+                        <Link style={{ color: '#ffffff', textDecoration: 'none' }} to={{ pathname: "/depotmanager-dashboard/order-request/innerdetail", state: item }}>View</Link>
                       </div>
                     </div>
                   </div>
@@ -245,7 +244,7 @@ const DepotmanagerDashboard = (props) => {
             reverse={true}
             SearchBar={
               <>
-                <div class="search-box ms-5 mb-2" style={{ width: "240px" }}>
+                <div class="search-box mb-4" style={{ width: "240px", minWidth: '240px' }}>
                   <form
                     className="form_style_search"
                     style={{
@@ -297,23 +296,23 @@ const DepotmanagerDashboard = (props) => {
                 item?.payment_status,
                 item?.ordered_by?.name,
                 <>
-                <div className="row">
-                  <div className="col pr-0">
-                    <div
-                      className={` btn btn-primary`}
-                      style={{backgroundColor:'#0066b3'}}
-                    >
-                      <Link style={{color:'#ffffff',textDecoration:'none'}}  to={{pathname: "/depotmanager-dashboard/order-request/innerdetail", state:item}}>View</Link>
+                  <div className="row">
+                    <div className="col pr-0">
+                      <div
+                        className={` btn btn-primary`}
+                        style={{ backgroundColor: '#0066b3' }}
+                      >
+                        <Link style={{ color: '#ffffff', textDecoration: 'none' }} to={{ pathname: "/depotmanager-dashboard/order-request/innerdetail", state: item }}>View</Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </>,
+                </>,
               ];
             })}
             reverse={true}
             SearchBar={
               <>
-                <div class="search-box ms-5 mb-2" style={{ width: "240px" }}>
+                <div className="search-box mb-4" style={{ width: "240px", minWidth: '240px' }}>
                   <form
                     className="form_style_search"
                     style={{
@@ -365,23 +364,23 @@ const DepotmanagerDashboard = (props) => {
                 item?.payment_status,
                 item?.ordered_by?.name,
                 <>
-                <div className="row">
-                  <div className="col pr-0">
-                    <div
-                      className={` btn btn-primary`}
-                      style={{backgroundColor:'#0066b3'}}
-                    >
-                      <Link style={{color:'#ffffff',textDecoration:'none'}}  to={{pathname: "/depotmanager-dashboard/order-request/innerdetail", state:item}}>View</Link>
+                  <div className="row">
+                    <div className="col pr-0">
+                      <div
+                        className={` btn btn-primary`}
+                        style={{ backgroundColor: '#0066b3' }}
+                      >
+                        <Link style={{ color: '#ffffff', textDecoration: 'none' }} to={{ pathname: "/depotmanager-dashboard/order-request/innerdetail", state: item }}>View</Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </>,
+                </>,
               ];
             })}
             reverse={true}
             SearchBar={
               <>
-                <div class="search-box ms-5 mb-2" style={{ width: "240px" }}>
+                <div class="search-box mb-4" style={{ width: "240px", minWidth: '240px' }}>
                   <form
                     className="form_style_search"
                     style={{
@@ -471,6 +470,7 @@ const DepotmanagerDashboard = (props) => {
                 Colr="#BB2026"
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
+                disablelink={true}
                 btnName="Logout"
                 classlogout={"sidebar__logout"}
                 onClick={logouthandler}

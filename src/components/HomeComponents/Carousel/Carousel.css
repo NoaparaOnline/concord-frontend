@@ -250,3 +250,13 @@
 .slick-initialized .slick-slide.slick-active {
   z-index: 1 !important;
 }
+
+
+@media (max-width: 480px) 
+{
+
+  .btn_text_typography{
+  font-size: 5px !important;
+  padding: 0 !important;
+  }
+}
