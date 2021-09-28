@@ -73,8 +73,9 @@ TableDash = ({
             >
                {item?.map((_item, index) => (
                  <td style={_item === "Pending" ? { color:'#C0B627',fontWeight:'500',border:'none' ,fontSize:'14' }:
-                 (_item === "Cancelled" || _item === "Declined" ) ? { color:'red',fontWeight:'500',border:'none' ,fontSize:'14' }:
-                 (_item === "Paid" || _item === "Delivered") ? { color:'green',fontWeight:'500',border:'none' ,fontSize:'14' }
+                 (_item === "Cancelled" || _item === "Declined"  ) ? { color:'red',fontWeight:'500',border:'none' ,fontSize:'14' }:
+                 (_item === "Paid" || _item === "Delivered" || _item === "Submitted") ? { color:'green',fontWeight:'500',border:'none' ,fontSize:'14' }:
+                 (_item === "Dispatched" || _item === "Unpaid") ? { color:'blue',fontWeight:'500',border:'none' ,fontSize:'14' }
                  :{ border:'none' ,fontSize:'14' }} key={index + 1}>{_item}</td>
                  ))}
             </tr>

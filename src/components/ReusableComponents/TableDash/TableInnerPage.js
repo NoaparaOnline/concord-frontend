@@ -74,21 +74,21 @@ const TableInnerPage = (props) => {
               <td></td>
               <td></td>
               <td></td>
-              <td>{props?.location?.state?.total_amount}</td>
+              <td>{props?.location?.state?.subtotal_amount}</td>
             </tr>
             <tr>
               <td>A value-added tax %</td>
               <td></td>
               <td></td>
               <td></td>
-              <td>15%</td>
+              <td>{(props?.location?.state?.vat_rate-1)*100}</td>
             </tr>
             <tr>
               <td>A value-added tax</td>
               <td></td>
               <td></td>
               <td></td>
-              <td>15050</td>
+              <td>{props?.location?.state?.vat_rate*props?.location?.state?.subtotal_amount}</td>
             </tr>
             <tr>
               <td>Payment Type</td>

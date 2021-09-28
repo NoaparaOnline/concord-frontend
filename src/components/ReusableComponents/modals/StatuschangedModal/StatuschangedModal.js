@@ -1,10 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Modal from "react-bootstrap/Modal";
-import { Link } from 'react-router-dom';
+import { getStocksProduct } from '../../../../Store/Actions/deportmanagerActions';
+import {
+   statusChange,
+} from "../../../../Store/Actions/deportmanagerActions";
+
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from 'react-toastify';
+
+
 
 const StatuschangedModal = (props) => {
-    return (
+  
+
+
+  
+  const dispatch = useDispatch();
+  
+  const  [dropdown1, setDropdown1] = useState(props?.location?.state?.delivery_status);
+  const  [dropdown2, setDropdown2] = useState(props?.location?.state?.payment_status);
+  
+  const neworder = useSelector((state) => state?.deport?.neworder);
+
+
+
+  console.log("Depo k Props",props);
+ 
+  const onSubmit =  () => {
+    console.log(props?.location?.state?.uid);
+    const apiData = {
+      delivery_status: dropdown1,
+      payment_status: dropdown2,
+      uid: props?.location?.state?.uid,
+      }
+      console.log("API DAta",apiData);
+    dispatch(statusChange(apiData));
+    console.log(neworder);
+   props.onHide();
+  };
+
+   
+  return (
+ 
+
         <>
+
+
           <Modal show={props.show} onHide={props.onHide} centered size="sm">
        
        <Modal.Header>
@@ -36,7 +77,9 @@ const StatuschangedModal = (props) => {
                     
                       <div className="form-group">
                           <label>Delivery Statuses</label>
-                  <select className="form-control form-select" id="exampleFormControlSelect1">
+                  <select className="form-control form-select" id="exampleFormControlSelect1" onChange={(e) => {setDropdown1(e.target.value)
+                  console.log(e.target.value);
+                  }}>
                     <option >Pending</option>
                     <option>Dispatched</option>
                     <option>Delivered</option>
@@ -46,7 +89,7 @@ const StatuschangedModal = (props) => {
                 </div>
                       <div className="form-group">
                       <label>Delivery Statuses</label>
-                  <select className="form-control form-select" id="exampleFormControlSelect1">
+                  <select className="form-control form-select" id="exampleFormControlSelect1" onChange={(e) => {setDropdown2(e.target.value)}}>
                     <option >Pending</option>
                     <option>Unpaid</option>
                     <option>Paid</option>
@@ -64,7 +107,7 @@ const StatuschangedModal = (props) => {
                             fontSize: "13px",
                             fontWeight: "500",
                           }}
-                        //   onClick={onSubmitEmail}
+                          onClick={onSubmit}
                         >
                           Change
                         </button>

@@ -21,22 +21,26 @@ import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/Si
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 import {
+  getnewOrder,
+  getoldOrder,
   getOrder,
   getStocksProduct,
-  statusChange,
+  statusChange
 } from "../../Store/Actions/deportmanagerActions";
 // Search Bar Images Import
 import search from "../../Statics/assets/G1.png";
 import filter from "../../Statics/assets/F1.png";
 import StatuschangedModal from "../../components/ReusableComponents/modals/StatuschangedModal/StatuschangedModal";
-import { toast } from "react-toastify";
 
 const DepotmanagerDashboard = (props) => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
 
   // const user = useSelector((state) => state?.logIn?.user);
+  const oldorder = useSelector((state) => state?.deport?.oldorder);
+  const neworder = useSelector((state) => state?.deport?.neworder);
   const order = useSelector((state) => state?.deport?.order);
   const stock = useSelector((state) => state?.deport?.stock);
+  // const productidstatestock = useSelector((state) => state?.deport?.stock);
 
   const dispatch = useDispatch();
 
@@ -49,17 +53,7 @@ const DepotmanagerDashboard = (props) => {
   };
 
 
-
-  const onSubmit = (data) => {
   
-    const apiData = {
-      delivery_status: data?.delivery_status,
-      payment_status: data?.payment_status,
-      uid : data?.uid
-      }
-    dispatch(statusChange(apiData));
-      toast.info("Status Updated Successfully");
-  };
 
 
   // const {pathname} = history?.location
@@ -70,12 +64,22 @@ const DepotmanagerDashboard = (props) => {
       if (stock?.length < 1) {
         dispatch(getStocksProduct());
       }
-    } else if (item === "orderhistory") {
+    } else if (item === "orderoldhistory") {
+      if (oldorder?.length < 1) {
+        dispatch(getoldOrder());
+      }
+    } else if (item === "Neworder") {
+      if (neworder?.length < 1) {
+        dispatch(getnewOrder());
+      }
+    } else if (item === "order") {
       if (order?.length < 1) {
         dispatch(getOrder());
       }
     }
   };
+
+  console.log("old order",oldorder);
 
   // useEffect(() => {
   //   // if (!user) {
@@ -125,7 +129,7 @@ const DepotmanagerDashboard = (props) => {
     setShow(!show);
   };
   const [show, setShow] = useState(false);
-
+  // const [stateitem,setStateitem]= useState(false);
   return (
     // #EFFBEF
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
@@ -139,7 +143,7 @@ const DepotmanagerDashboard = (props) => {
 
           <TableDash
             cols={tableConstants(handleEdit)}
-            data={order?.map((item, index) => {
+            data={oldorder?.map((item, index) => {
               return [
                 item?.order_id,
                 item?.customer?.name,
@@ -211,6 +215,7 @@ const DepotmanagerDashboard = (props) => {
             {...props}
           />
         </Route>
+        {console.log(neworder)}
         <Route path={`${props.match.path}/neworder`}>
           <NavbarDash
             sidebarOpen={sidebarOpen}
@@ -219,7 +224,7 @@ const DepotmanagerDashboard = (props) => {
           />
           <TableDash
             cols={tableConstants(handleEdit)}
-            data={order?.map((item, index) => {
+            data={neworder?.map((item, index) => {
               return [
                 item?.order_id,
                 item?.customer?.name,
@@ -241,9 +246,15 @@ const DepotmanagerDashboard = (props) => {
                         onClick={() => {
                           handleShow();
                         }}
-                        to="#"
-                      >
+                        to={{
+                          state: item,
+                          
+                        }}
+                        
+                        >
+                        
                         Status
+                        
                       </Link>
                     </div>
                   </div>
@@ -307,25 +318,46 @@ const DepotmanagerDashboard = (props) => {
                 // item?.formula,
                 formatDate(item?.order_datetime),
                 <>
-                  <div className="row">
-                    <div className="col pr-0">
-                      <div
-                        className={` btn btn-primary rounded-pill`}
-                        style={{ backgroundColor: "#0066b3" }}
+                <div className="row">
+                  <div className="col pr-0">
+                    <div
+                      className={` btn btn-primary rounded-pill`}
+                      style={{ backgroundColor: "#0066b3" }}
+                    >
+                      <Link
+                        style={{ color: "#ffffff", textDecoration: "none" }}
+                        to={{
+                          pathname:
+                            "/depotmanager-dashboard/order-request/innerdetail",
+                          state: item,
+                        }}
                       >
-                        <Link
-                          style={{ color: "#ffffff", textDecoration: "none" }}
-                          onClick={() => {
-                            handleShow();
-                          }}
-                          to="#"
-                        >
-                          Status Changed
-                        </Link>
-                      </div>
+                        View
+                      </Link>
                     </div>
                   </div>
-                </>,
+                </div>
+              </>,
+                // <>
+                //   <div className="row">
+                //     <div className="col pr-0">
+                //       <div
+                //         className={` btn btn-primary rounded-pill`}
+                //         style={{ backgroundColor: "#0066b3" }}
+                //       >
+                //         <Link
+                //           style={{ color: "#ffffff", textDecoration: "none" }}
+                //           onClick={() => {
+                //             handleShow();
+                //           }}
+                //           to="#"
+                //         >
+                //           Status Changed
+                //         </Link>
+                //       </div>
+                //     </div>
+                //   </div>
+                // </>,
                 // <>
                 //   <div className="row">
                 //     <div className="col pr-0">
@@ -596,7 +628,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #089DA4" }}
                 btnroute=""
-                onClick={ApiTabhandler("orderhistory")}
+                onClick={()=> ApiTabhandler("orderoldhistory")}
                 btnName="Order History"
               />
               <SiderbarBtn
@@ -605,7 +637,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #CB912B" }}
                 btnroute="neworder"
-                onClick={ApiTabhandler("orderhistory")}
+                onClick={()=> ApiTabhandler("Neworder")}
                 btnName="New Order"
               />
               <SiderbarBtn
@@ -614,7 +646,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #7F2987" }}
                 btnroute="stocks"
-                onClick={ApiTabhandler("stock")}
+                onClick={()=> ApiTabhandler("stock")}
                 btnName="Stocks"
               />
               <SiderbarBtn
@@ -623,7 +655,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #4B8F8C" }}
                 btnroute="deliverystatus"
-                onClick={ApiTabhandler("orderhistory")}
+                onClick={()=> ApiTabhandler("order")}
                 btnName="Delivery Status"
               />
               <SiderbarBtn
@@ -632,7 +664,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 btnroute="payment"
-                onClick={ApiTabhandler("orderhistory")}
+                onClick={()=> ApiTabhandler("orderhistory")}
                 btnName="Payment"
               />
               <SiderbarBtn
@@ -654,7 +686,8 @@ const DepotmanagerDashboard = (props) => {
           {...props}
         />
       </Router>
-      <StatuschangedModal show={show} onHide={handleClose}/>
+      <StatuschangedModal show={show} onHide={handleClose} {...props} />
+   
     </div>
   );
 };
