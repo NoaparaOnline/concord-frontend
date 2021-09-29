@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // 
 import BootstrapTable from 'react-bootstrap-table-next';
@@ -21,6 +21,7 @@ import {
   deliverystatus,
   DepomanagerOrder,
   deopdefaultSorted,
+  nameFormatter,
 } from "../../components/ReusableComponents/TableDash/tableConstant";
 import icon1 from "../../Statics/assets/Sidebar/1.png";
 import icon2 from "../../Statics/assets/Sidebar/2.png";
@@ -37,18 +38,23 @@ import {
   getnewOrder,
   getoldOrder,
   getOrder,
+  getSingleOrder,
+  getSingleUID,
   getStocksProduct,
 } from "../../Store/Actions/deportmanagerActions";
 // Search Bar Images Import
 import search from "../../Statics/assets/G1.png";
 import filter from "../../Statics/assets/F1.png";
 import StatuschangedModal from "../../components/ReusableComponents/modals/StatuschangedModal/StatuschangedModal";
+import Loader from "../../components/ReusableComponents/Loader/Loader";
+import moment from "moment";
+import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
 
 const DepotmanagerDashboard = (props) => {
 
   // Data Table Paginition and Search Functionality
   const pagination = paginationFactory({
-    page: 3,
+    page: 1,
     sizePerPage: 5,
     lastPageText: '>>',
     firstPageText: '<<',
@@ -66,7 +72,70 @@ const DepotmanagerDashboard = (props) => {
     }
   });
   const { SearchBar, ClearSearchButton } = Search;
-  // End Of Paginition And Search Functionality
+
+    
+
+ //Header Column DataFields And Constants
+  const DepomanagerOrder = [
+    {dataField:'order_id'        ,text:'Orders ID'    ,sort:true},
+    {dataField:'customer.name'  ,text:'Customer Name',},
+    // {dataField:(data) => moment('order_datetime').format("L")  ,text:'Customer Name',},
+    {dataField:'customer.market.name',text:'Market & Address',},
+    {dataField: 'order_datetime' ,text:'Order Date/Time' ,formatter: dateFormatter},
+    {dataField:'payment_type'    ,text:'Payment Type'    ,},
+    {dataField:'delivery_status' ,text:'Delivery Status' ,},
+    {dataField:'payment_status'  ,text:'Payment Status'  ,},
+    {dataField:'ordered_by.name'      ,text:'Proceed By'      ,},
+    {dataField:'customer'    ,formatter: btnFormatter     ,text:'Actions'         ,},  
+  ];
+  
+  console.log(DepomanagerOrder)
+
+  const deopdefaultSorted = [{
+    dataField: 'order_id',
+    order: 'asc'
+  }];
+  
+
+  function dateFormatter(cell) 
+  { 
+    return ( <span>{moment.unix(cell).format('MMM DD, YYYY')}</span> )
+  }
+  function btnFormatter(cell,row) 
+  { 
+    return ( 
+
+      <>
+                  <div className="row">
+                    <div className="col pr-0">
+                      <div
+                        className={` btn btn-primary rounded-pill`}
+                        style={{ backgroundColor: "#0066b3" }}
+                      >
+                        <Link
+                          style={{ color: "#ffffff", textDecoration: "none" }}
+                          to={{
+                            pathname:
+                              "/depotmanager-dashboard/order-request/innerdetail",
+                          }}
+                        onClick={()=> dispatch(getSingleOrder(row))}
+                        >
+                          View
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </>
+
+     )
+
+    }
+
+//Header Column DataFields And Constants And Functions
+
+
+
+ // End Of Paginition And Search Functionality
 
 
 
@@ -79,6 +148,8 @@ const DepotmanagerDashboard = (props) => {
   const stock = useSelector((state) => state?.deport?.stock);
   // const productidstatestock = useSelector((state) => state?.deport?.stock);
 
+
+
   const dispatch = useDispatch();
 
   const openSidebar = () => {
@@ -90,13 +161,11 @@ const DepotmanagerDashboard = (props) => {
   };
 
 
+ const [handle , setHandle] =useState("orderoldhistory"); 
 
-
-
-  // const {pathname} = history?.location
-  // const currentroute = props.match.path
 
   const ApiTabhandler = (item) => {
+    setHandle(item)
     if (item === "stock") {
       if (stock?.length < 1) {
         dispatch(getStocksProduct());
@@ -116,29 +185,17 @@ const DepotmanagerDashboard = (props) => {
     }
   };
 
+  useEffect(() => {
+    if (handle) {
+      dispatch(getoldOrder());
+    } 
+    
+  }, [dispatch,handle])
+
+
   console.log("old order", oldorder);
 
-  // useEffect(() => {
-  //   // if (!user) {
-  //   //   props.history.push("/");
-  //   // } ,[user]
-
-  //   if(pathname===`${currentroute}/neworder`)
-  //   {
-  //     alert("Stock First if")
-  //     if (stock?.length < 1) {
-  //       dispatch(getStocksProduct());
-  //     }
-  //   }
-  //   else if (pathname==='/depotmanager-dashboard')
-  //   {
-  //     alert("Order First if")
-  //     if (order?.length < 1) {
-  //       dispatch(getOrder());
-  //     }
-  //   }
-
-  //     }, [dispatch, order,stock,pathname ]);
+  
 
   console.log("Order Ka Data", order);
 
@@ -164,6 +221,7 @@ const DepotmanagerDashboard = (props) => {
 
     setShow(!show);
   };
+  const loader = useSelector((state) => state?.logIn?.loader);
   const [show, setShow] = useState(false);
   // const [stateitem,setStateitem]= useState(false);
   return (
@@ -178,11 +236,20 @@ const DepotmanagerDashboard = (props) => {
           />
 
 
+      
+      {loader ? (
+           <DashboardMainCard
+           TableDiv={
+          <Loader />
+           }
+           reverse="true"
+           />
+        ) :(
 
-
-
-        
-          <ToolkitProvider
+          <DashboardMainCard
+          TableDiv={
+            <>
+              <ToolkitProvider
             bootstrap4
             keyField='id'
             data={oldorder}
@@ -197,16 +264,25 @@ const DepotmanagerDashboard = (props) => {
                   <hr />
                   <BootstrapTable
                     { ...props.baseProps }
+                    
                     defaultSorted={deopdefaultSorted}
                     pagination={pagination}
                     bordered={ false }
-                  />
+                    condensed
+                  >
+                  </BootstrapTable>
                 </div>
               )
             }
           </ToolkitProvider>
+            </>
+          }
+          reverse='true'
+          />
 
+        
 
+)}
 
 
 
@@ -315,12 +391,10 @@ const DepotmanagerDashboard = (props) => {
                         <Link
                           style={{ color: "#ffffff", textDecoration: "none" }}
                           onClick={() => {
-                            handleShow();
+                            handleShow()
+                            dispatch(getSingleUID(item?.uid))
                           }}
-                          to={{
-                            state: item,
-
-                          }}
+                          
 
                         >
 

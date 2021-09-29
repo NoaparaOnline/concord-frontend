@@ -10,6 +10,8 @@ const initialState = {
 
 export const loginReducer = (state = initialState, { type, payload }) => {
   switch (type) {
+    case logInConstants.SET_LOADER:
+      return { ...state, loader: payload };
     case logInConstants.LOGIN_IN:
       return { ...state, user: payload };
     case logInConstants.USER_TYPE:

@@ -6,7 +6,6 @@ import {
 } from "../../../../Store/Actions/deportmanagerActions";
 
 import { useDispatch, useSelector } from "react-redux";
-import { toast } from 'react-toastify';
 
 
 
@@ -19,7 +18,7 @@ const StatuschangedModal = (props) => {
   
   const  [dropdown1, setDropdown1] = useState(props?.location?.state?.delivery_status);
   const  [dropdown2, setDropdown2] = useState(props?.location?.state?.payment_status);
-  
+  const productuid = useSelector((state) => state?.deport?.productuid);
   const neworder = useSelector((state) => state?.deport?.neworder);
 
 
@@ -31,7 +30,7 @@ const StatuschangedModal = (props) => {
     const apiData = {
       delivery_status: dropdown1,
       payment_status: dropdown2,
-      uid: props?.location?.state?.uid,
+      uid: productuid,
       }
       console.log("API DAta",apiData);
     dispatch(statusChange(apiData));

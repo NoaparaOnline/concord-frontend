@@ -5,5 +5,6 @@ export const deportConstants = {
     GET_STOCKS_PRODUCT: "GET_STOCKS_PRODUCT",
     STATUS_CHANGE: "STATUS_CHANGE",
     GET_PRODUCT_STATE: "GET_PRODUCT_STATE",
+    GET_UID: "GET_UID",
   };
   

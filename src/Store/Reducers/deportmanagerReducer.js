@@ -5,6 +5,7 @@ const initialState = {
     order : [],
     stock : [],
     productidstate : {},
+    productuid : '',
 };
 export const deportReducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -23,6 +24,9 @@ export const deportReducer = (state = initialState, { type, payload }) => {
     
     case deportConstants.GET_PRODUCT_STATE:
         return { ...state, productidstate : payload };
+
+    case deportConstants.GET_UID:
+        return { ...state, productuid : payload };
     
     default:
       return state;

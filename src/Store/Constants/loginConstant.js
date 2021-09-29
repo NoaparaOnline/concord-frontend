@@ -4,4 +4,5 @@ export const logInConstants = {
   LOG_OUT_USER: "LOG_OUT_USER",
   GET_USER_FROM_LOCAL: "GET_USER_LOCAL",
   SET_ERROR:"SET_ERROR",
+  SET_LOADER: "SET_LOADER",
 }
