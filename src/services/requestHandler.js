@@ -55,6 +55,5 @@ const apiServices = {
   getOrders,
   getStocksProducts,
   statusChanges,
-  getOrders
 };
 export default apiServices;

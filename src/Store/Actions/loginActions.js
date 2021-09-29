@@ -20,6 +20,10 @@ import { toast } from "react-toastify";
           payload: response?.data?.response_data?.token?.user,
         });
         dispatch({
+          type: logInConstants.SET_ERROR,
+          payload: null,
+        });
+        dispatch({
           type: logInConstants.USER_TYPE,
           payload: response?.data?.response_data?.token?.user?.role.category?.name,
         });
