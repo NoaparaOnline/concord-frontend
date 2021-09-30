@@ -47,7 +47,6 @@ function importAll(data) {
     require.context("../Statics/assets/mediaPhoto", false, /\.(png|jpe?g|svg)$/)
   );
 
-  console.log(imag);
   const imagesData = Object.keys(images);
     return (
 

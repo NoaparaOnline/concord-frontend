@@ -1,4 +1,4 @@
-import { get, patch, post, put } from "./HttpProvider";
+import { get, patch, post,put } from "./HttpProvider";
 import featureConstants from "./features-constants";
 
 const SERVICE_URLS = {
@@ -7,7 +7,11 @@ const SERVICE_URLS = {
   resetPassword: "users/reset-password",
   forgotPassword: "users/forgot-password",
   logout: "users/logout",
+  getoldOrders: 'orders/read/old',
   getOrders: 'orders/read',
+  getnewOrders: 'orders/read/new',
+  getStocksProducts: 'products/read',
+  statusChanges:'orders/status-update',
 };
 
 const login = (data) =>
@@ -23,8 +27,22 @@ const login = (data) =>
 const forgotPassword = (data) =>
   post(SERVICE_URLS.forgotPassword, data, { feature: featureConstants.static });
 
-const getOrders = () =>
+  const getoldOrders = () =>
+  get(SERVICE_URLS.getoldOrders, {}, { feature: featureConstants.static });
+  
+  const getOrders = () =>
   get(SERVICE_URLS.getOrders, {}, { feature: featureConstants.static });
+
+  const getnewOrders = () =>
+  get(SERVICE_URLS.getnewOrders, {}, { feature: featureConstants.static });
+
+const getStocksProducts = () =>
+  get(SERVICE_URLS.getStocksProducts, {}, { feature: featureConstants.static });
+
+const statusChanges = (data) =>
+  put(SERVICE_URLS.statusChanges, data, { feature: featureConstants.static });
+
+
 
 const apiServices = {
   // define variables
@@ -32,6 +50,10 @@ const apiServices = {
   resetPassword,
   forgotPassword,
   logout,
+  getoldOrders,
+  getnewOrders,
   getOrders,
+  getStocksProducts,
+  statusChanges,
 };
 export default apiServices;

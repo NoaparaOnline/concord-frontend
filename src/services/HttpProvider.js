@@ -52,9 +52,7 @@ export async function newRequest({ method, url, data, headers }) {
   let response;
   try {
     response = await promise;
-    console.log(response);
   } catch (error) {
-    console.log(error);
     throw error.response;
   }
 

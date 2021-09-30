@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./TableDash.css";
-import search from "../../../Statics/assets/G1.png";
-import filter from "../../../Statics/assets/F1.png";
+// import search from "../../../Statics/assets/G1.png";
+// import filter from "../../../Statics/assets/F1.png";
 import { useHistory } from "react-router-dom";
 const TableDash1 = ({
   cols,
@@ -24,13 +24,11 @@ const TableDash1 = ({
   floatleftrightbutton,
 }) => {
   let history = useHistory();
-  console.log(history);
-  console.log(match, location);
 
   // Table Component On True False Toogle
   const TableDiv = (
    
-    <div class="table-responsive ">
+    <div className="table-responsive ">
       <table
         className={`table ${bordered ? "table-bordered" : "table-borderless"} ${
           hoverable && "table-hover"

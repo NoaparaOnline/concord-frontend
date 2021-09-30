@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import './SidebarDashboard.css'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import logo from '../../../Statics/assets/Sidebar/sidelogo.png'
 const SidebarDashboard = (props) => {
   const {sidebarOpen, closeSidebar}= props;
-  console.log(props);
   const homepage =()=>{
       props.history.push('/');
   }

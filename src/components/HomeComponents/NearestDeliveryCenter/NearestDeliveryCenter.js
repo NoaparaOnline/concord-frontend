@@ -17,7 +17,7 @@ const NearestDeliveryCenter = ({heading}) => {
             <div className="row">
             <div className="col-lg-12">
             <p style={{color:'#565656',fontSize:'20px',marginBottom:'15px',lineHeight:1.5}}>We serve the whole nation by covering entire Bangladesh. You can track the nearest delivery center simply by selecting the area</p>
-             <label for="area" style={{color:'#565656',fontSize:'20px',marginBottom:'15px',lineHeight:1.5}}>Select Area: &nbsp;</label>
+             <label htmlFor="area" style={{color:'#565656',fontSize:'20px',marginBottom:'15px',lineHeight:1.5}}>Select Area: &nbsp;</label>
             <select name="area" id="area"  >
       <option value="1">Central</option> 
       <option value="2">Dhaka</option>      

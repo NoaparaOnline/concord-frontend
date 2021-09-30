@@ -86,3 +86,26 @@
   background-color:#F89747 ;
   
 }
+.react-bootstrap-table table {
+  table-layout: auto !important;
+}
+
+#filtersubmit {
+  position: absolute;
+  width: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  color: #7B7B7B;
+}
+/* .form-control {
+  padding: 0.375rem 2.5rem !important;
+  border-radius: 10px !important;
+} */
+
+.table-sm>:not(caption)>*>* {
+  padding: 1rem .25rem !important;
+  border-bottom-width: 0px;
+}
+.table {
+  color: #565656 !important;
+}

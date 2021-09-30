@@ -3,11 +3,10 @@ import Modal from "react-bootstrap/Modal";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../Store/Actions/loginActions";
 import { Link } from "react-router-dom";
-import { forgotPassword } from "../Store/Actions/loginActions";
+// import { forgotPassword } from "../Store/Actions/loginActions";
 import { useHistory } from "react-router";
 const Login = (props) => {
   const history = useHistory();
-  console.log(history);
   const dispatch = useDispatch();
 
   const onSubmit = async () => {
@@ -17,12 +16,11 @@ const Login = (props) => {
     };
   
     const type = await dispatch(loginUser(apiData));
-    console.log("Type Login Modal Wala",type);
     
-    if (type === "admin") {
+    if (type === "depot_manager") {
       history?.push("/depotmanager-dashboard");
     }  
-    else if (type === "Director"){
+    else if (type === "director"){
         history?.push('/director-dashboard')
       }
     props.onHide();
@@ -30,9 +28,9 @@ const Login = (props) => {
 
 
   const onSubmitEmail = async () => {
-    const apiData = {
-      email_address: email,
-    };
+    // const apiData = {
+    //   email_address: email,
+    // };
 
     props.onHide();
   };
@@ -127,7 +125,7 @@ const Login = (props) => {
                         <div className="">
                           <label
                             className="form-check-label"
-                            for="gridCheck1"
+                            htmlFor="gridCheck1"
                             style={{ fontSize: "12px" }}
                           >
                             <Link onClick={()=>props.setShowdiv(false)} to="#" style={{textDecoration:'none' ,color:'#0066b3'}}>Forgot Password ?</Link>
@@ -176,7 +174,7 @@ const Login = (props) => {
                         <div className="">
                           <label
                             className="form-check-label "
-                            for="gridCheck1"
+                            htmlFor="gridCheck1"
                             style={{ fontSize: "12px" }}
                           >
                             <Link onClick={()=>{

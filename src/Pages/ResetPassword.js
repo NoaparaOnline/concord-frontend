@@ -9,12 +9,9 @@ import { resetPassword } from "../Store/Actions/loginActions";
 const ResetPassword = (props) => {
 
 
-console.log(props);
  
 
 const params = queryString.parse(props.location.search);
-console.log(params.uid)
-console.log(params.token)
 
   // const qid = queryString.parse(new URLSearchParams(props.location.search)); 
   // console.log(qid.uid);
@@ -27,7 +24,6 @@ console.log(params.token)
       formState: { errors },
     } = useForm();
     const onSubmit = async (data) => {
-      console.log("submit")
       if (data.password === data.confirmPassword) {
         const apiData = {
           id: params.uid,
@@ -35,7 +31,6 @@ console.log(params.token)
           new_password: data.password,
         };
         const success = await dispatch(resetPassword(apiData));
-        console.log(success);
   
         if (success === "success") {
           props.history.push("/");
@@ -50,9 +45,9 @@ console.log(params.token)
 
         <div className="container-sm d-flex justify-content-center my-5" >
           <div className="col-lg-4">
-            <div class="card ">
-              <div class="card-body">
-                <h5 class="modal-title text-center">Reset Password</h5>
+            <div className="card ">
+              <div className="card-body">
+                <h5 className="modal-title text-center">Reset Password</h5>
                 <div className="row px-3 mb-3">
                   <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="row mt-4">

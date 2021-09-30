@@ -1,12 +1,16 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import TableDash from "./TableDash";
 import "./TableDash.css";
 import { tableinner } from "../TableDash/tableConstant";
+import { useSelector } from "react-redux";
 
 const TableInnerPage = (props) => {
 
-  const medicinesall =props?.location?.state;
-  console.log("medicinesall all",medicinesall)
+  const productidstate = useSelector((state) => state?.deport?.productidstate);
+  console.log('productidstate',productidstate);
+
+
+  const medicinesall =productidstate;
 
   const handleEdit = (item) => () => {
     // write your logic
@@ -27,27 +31,27 @@ const TableInnerPage = (props) => {
           padding: "20px",
         }}
       >
-        <table class="table table-borderless ms-5">
+        <table className="table table-borderless ms-5">
           <tbody style={{ border: "none" }}>
             <tr style={{ border: "none", padding: "10px" }}>
               <td style={{ border: "none" }}>OrderID:</td>
-              <td style={{ border: "none" }}>{props?.location?.state?.order_id}</td>
+              <td style={{ border: "none" }}>{productidstate?.order_id}</td>
               <td style={{ border: "none" }}>Customer Name:</td>
-              <td style={{ border: "none" }}>{props?.location?.state?.customer.name}</td>
+              <td style={{ border: "none" }}>{productidstate?.customer?.name}</td>
             </tr>
             <tr style={{ border: "none", padding: "10px" }}>
               <td style={{ border: "none" }}>Market & Address: </td>
               <td style={{ border: "none" }}>
-              {props?.location?.state?.customer?.market?.name}
+              {productidstate?.customer?.market?.name}
               </td>
               <td style={{ border: "none" }}>Order Date/Time:</td>
-              <td style={{ border: "none" }}>{formatDate(props?.location?.state?.order_datetime)}</td>
+              <td style={{ border: "none" }}>{formatDate(productidstate?.order_datetime)}</td>
             </tr>
             <tr style={{ border: "none", padding: "10px" }}>
               <td style={{ border: "none" }}>Proceed By: </td>
-              <td style={{ border: "none" }}>{props?.location?.state?.ordered_by.name}</td>
+              <td style={{ border: "none" }}>{productidstate?.ordered_by.name}</td>
               <td style={{ border: "none" }}>MPO:</td>
-              <td style={{ border: "none" }}>{props?.location?.state?.ordered_by.name}</td>
+              <td style={{ border: "none" }}>{productidstate?.ordered_by.name}</td>
             </tr>
           </tbody>
         </table>
@@ -75,28 +79,28 @@ const TableInnerPage = (props) => {
               <td></td>
               <td></td>
               <td></td>
-              <td>{props?.location?.state?.total_amount}</td>
+              <td>{productidstate.subtotal_amount}</td>
             </tr>
             <tr>
               <td>A value-added tax %</td>
               <td></td>
               <td></td>
               <td></td>
-              <td>15%</td>
+              <td>{Math.round((productidstate.vat_rate-1)*100)}%</td>
             </tr>
             <tr>
               <td>A value-added tax</td>
               <td></td>
               <td></td>
               <td></td>
-              <td>15050</td>
+              <td>{productidstate.vat_rate*productidstate.subtotal_amount}</td>
             </tr>
             <tr>
               <td>Payment Type</td>
               <td></td>
               <td></td>
               <td></td>
-              <td>{props?.location?.state?.payment_type}</td>
+              <td>{productidstate.payment_type}</td>
             </tr>
            
           </>

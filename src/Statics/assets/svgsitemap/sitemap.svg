@@ -8,9 +8,9 @@
 <image style="overflow:visible;" width="1380" height="511" xlink:href="../sitemap.jpg"  transform="matrix(1 0 0 1 239 284.5)">
 </image>
 <a xlink:href="/about" >
-	<rect x="245" y="367" class="st0" width="113" height="34"/>
+	<rect x="245" y="367" className="st0" width="113" height="34"/>
 </a>
 <a xlink:href="/" >
-	<rect x="870.5" y="286.5" class="st0" width="117" height="34.5"/>
+	<rect x="870.5" y="286.5" className="st0" width="117" height="34.5"/>
 </a>
 </svg>

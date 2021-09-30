@@ -6,33 +6,35 @@ import { toast } from "react-toastify";
   export const loginUser = (data) => async (dispatch) => {
     try {
       const response = await apiServices.login(data);
-      console.log("Yeh Response hai",response);
       if (response?.data?.response_code === 200) {
         setToken({
           key: response?.data?.response_data?.token?.access_token,
-          type: response?.data?.response_data?.token.user?.role?.name,
+          type: response?.data?.response_data?.token.user?.role?.category?.name,
       
         });
         saveUser(response?.data?.response_data?.token?.user);
-        setUserRole( response?.data?.response_data?.token?.user?.role?.name);
+        setUserRole( response?.data?.response_data?.token?.user?.role?.category?.name);
        
         dispatch({
           type: logInConstants.LOGIN_IN,
           payload: response?.data?.response_data?.token?.user,
         });
         dispatch({
+          type: logInConstants.SET_ERROR,
+          payload: null,
+        });
+        dispatch({
           type: logInConstants.USER_TYPE,
-          payload: response?.data?.response_data?.token?.user?.role?.name,
+          payload: response?.data?.response_data?.token?.user?.role.category?.name,
         });
         
         toast.info("Login Successful");
-        return response?.data?.response_data?.token.user?.role?.name;
+        return response?.data?.response_data?.token.user?.role.category?.name;
       } 
       else {
         return "Fail";
       }
     } catch (error) {
-      console.log("Login error", error);
     }
 
   };
@@ -77,7 +79,6 @@ import { toast } from "react-toastify";
       });
       toast.info("User Logout");
     } catch (error) {
-      console.log("Login error", error);
     }
   };
 
@@ -86,7 +87,6 @@ import { toast } from "react-toastify";
     let user = JSON.parse(getUserFromLocal);
     const getUserRoleFromLocal = localStorage.getItem("userRole");
     let userRole = JSON.parse(getUserRoleFromLocal);
-    console.log(user,"from Actions");
     dispatch({
       type: logInConstants.GET_USER_FROM_LOCAL,
       payload: user,

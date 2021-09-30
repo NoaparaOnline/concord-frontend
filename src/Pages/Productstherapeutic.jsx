@@ -203,7 +203,7 @@ const Products_therapeutic = () => {
                   value="1"
                   onChange={()=>filteredtype("All")}
                 />
-                <label for="all">All</label>
+                <label htmlFor="all">All</label>
                 <br />
                 <input
                   className="me-2"
@@ -213,7 +213,7 @@ const Products_therapeutic = () => {
                   value="2"
                   onChange={()=>filteredtype("Injectables")}
                 />
-                <label for="injectables">Injectables</label>
+                <label htmlFor="injectables">Injectables</label>
                 <br />
                 <input
                   className="me-2"
@@ -223,7 +223,7 @@ const Products_therapeutic = () => {
                   value="3"
                   onChange={()=>filteredtype("Syrup")}
                 />
-                <label for="syrup">Syrup</label>
+                <label htmlFor="syrup">Syrup</label>
                 <br />
                 <input
                   className="me-2"
@@ -233,7 +233,7 @@ const Products_therapeutic = () => {
                   value="4"
                   onChange={()=>filteredtype("Tablet")}
                 />
-                <label for="tablet">Tablet</label>
+                <label htmlFor="tablet">Tablet</label>
                 <br />
                 <input
                   className="me-2"
@@ -243,7 +243,7 @@ const Products_therapeutic = () => {
                   value="5"
                   onChange={()=>filteredtype("Capsule")}
                 />
-                <label for="capsule">Capsule</label>
+                <label htmlFor="capsule">Capsule</label>
                 <br />
                 <input
                   className="me-2"
@@ -254,7 +254,7 @@ const Products_therapeutic = () => {
                   onChange={()=>filteredtype("Hand Rub")}
 
                 />
-                <label for="handrub">Hand Rub</label>
+                <label htmlFor="handrub">Hand Rub</label>
               </form>
              </div>
           </div>
