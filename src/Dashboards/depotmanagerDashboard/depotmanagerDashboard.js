@@ -53,89 +53,118 @@ import DashboardMainCard from "../../components/ReusableComponents/DashboardMain
 const DepotmanagerDashboard = (props) => {
 
   // Data Table Paginition and Search Functionality
-  const pagination = paginationFactory({
-    page: 1,
-    sizePerPage: 5,
-    lastPageText: '>>',
-    firstPageText: '<<',
-    nextPageText: '>',
-    prePageText: '<',
-    showTotal: true,
-    alwaysShowAllBtns: true,
-    onPageChange: function (page, sizePerPage) {
-      console.log('page', page);
-      console.log('sizePerPage', sizePerPage);
-    },
-    onSizePerPageChange: function (page, sizePerPage) {
-      console.log('page', page);
-      console.log('sizePerPage', sizePerPage);
-    }
-  });
-  const { SearchBar, ClearSearchButton } = Search;
+  // const pagination = paginationFactory({
+  //   page: 1,
+  //   sizePerPage: 5,
+  //   lastPageText: '>>',
+  //   firstPageText: '<<',
+  //   nextPageText: '>',
+  //   prePageText: '<',
+  //   showTotal: true,
+  //   alwaysShowAllBtns: true,
+  //   onPageChange: function (page, sizePerPage) {
+  //     console.log('page', page);
+  //     console.log('sizePerPage', sizePerPage);
+  //   },
+  //   onSizePerPageChange: function (page, sizePerPage) {
+  //     console.log('page', page);
+  //     console.log('sizePerPage', sizePerPage);
+  //   }
+  // });
+  const { SearchBar } = Search;
 
-    
 
- //Header Column DataFields And Constants
+
+  //Header Column DataFields And Constants
   const DepomanagerOrder = [
-    {dataField:'order_id'        ,text:'Orders ID'    ,sort:true},
-    {dataField:'customer.name'  ,text:'Customer Name',},
+    { dataField: 'order_id', text: 'Orders ID', sort: true },
+    { dataField: 'customer.name', text: 'Customer Name', },
     // {dataField:(data) => moment('order_datetime').format("L")  ,text:'Customer Name',},
-    {dataField:'customer.market.name',text:'Market & Address',},
-    {dataField: 'order_datetime' ,text:'Order Date/Time' ,formatter: dateFormatter},
-    {dataField:'payment_type'    ,text:'Payment Type'    ,},
-    {dataField:'delivery_status' ,text:'Delivery Status' ,},
-    {dataField:'payment_status'  ,text:'Payment Status'  ,},
-    {dataField:'ordered_by.name'      ,text:'Proceed By'      ,},
-    {dataField:'customer'    ,formatter: btnFormatter     ,text:'Actions'         ,},  
+    { dataField: 'customer.market.name', text: 'Market & Address', },
+    { dataField: 'order_datetime', text: 'Order Date/Time', formatter: dateFormatter },
+    { dataField: 'payment_type', text: 'Payment Type', },
+    { dataField: 'delivery_status', text: 'Delivery Status', 
+    style:(cell,row) => {
+      if(cell === "Pending") 
+      return { color:'#C0B627',fontWeight:'500', }
+      else if(cell === "Cancelled" || cell === "Declined" )
+      return { color:'red',fontWeight:'500', }
+      else if(cell === "Paid" || cell === "Delivered" || cell === "Submitted")
+        return { color:'green',fontWeight:'500', }
+      else if (cell === "Dispatched" || cell === "Unpaid") 
+      return { color:'blue',fontWeight:'500', }
+      
+    }
+    },
+    { dataField: 'payment_status', text: 'Payment Status',
+    style:(cell,row) => {
+      if(cell === "Pending") 
+      return { color:'#C0B627',fontWeight:'500', }
+      else if(cell === "Cancelled" || cell === "Declined" )
+      return { color:'red',fontWeight:'500', }
+      else if(cell === "Paid" || cell === "Delivered" || cell === "Submitted")
+        return { color:'green',fontWeight:'500', }
+      else if (cell === "Dispatched" || cell === "Unpaid") 
+      return { color:'blue',fontWeight:'500', }
+      
+    }
+    },
+    { dataField: 'ordered_by.name', text: 'Proceed By', },
+    { dataField: 'customer', formatter: btnFormatter, text: 'Actions', },
   ];
-  
+
   console.log(DepomanagerOrder)
 
   const deopdefaultSorted = [{
     dataField: 'order_id',
     order: 'asc'
   }];
-  
 
-  function dateFormatter(cell) 
-  { 
-    return ( <span>{moment.unix(cell).format('MMM DD, YYYY')}</span> )
+
+//   const rowStyle = (row, rowIndex) => {
+//     if (row.delivery_status === "Delivered") {
+//         return {color: 'green' };
+//     }
+// };
+
+
+  function dateFormatter(cell) {
+    return (<span>{moment.unix(cell).format('MMM DD, YYYY')}</span>)
   }
-  function btnFormatter(cell,row) 
-  { 
-    return ( 
+  function btnFormatter(cell, row) {
+    return (
 
       <>
-                  <div className="row">
-                    <div className="col pr-0">
-                      <div
-                        className={` btn btn-primary rounded-pill`}
-                        style={{ backgroundColor: "#0066b3" }}
-                      >
-                        <Link
-                          style={{ color: "#ffffff", textDecoration: "none" }}
-                          to={{
-                            pathname:
-                              "/depotmanager-dashboard/order-request/innerdetail",
-                          }}
-                        onClick={()=> dispatch(getSingleOrder(row))}
-                        >
-                          View
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </>
+        <div className="row">
+          <div className="col pr-0">
+            <div
+              className={` btn btn-primary rounded-pill`}
+              style={{ backgroundColor: "#0066b3" }}
+            >
+              <Link
+                style={{ color: "#ffffff", textDecoration: "none" }}
+                to={{
+                  pathname:
+                    "/depotmanager-dashboard/order-request/innerdetail",
+                }}
+                onClick={() => dispatch(getSingleOrder(row))}
+              >
+                View
+              </Link>
+            </div>
+          </div>
+        </div>
+      </>
 
-     )
+    )
 
-    }
+  }
 
-//Header Column DataFields And Constants And Functions
+  //Header Column DataFields And Constants And Functions
 
 
 
- // End Of Paginition And Search Functionality
+  // End Of Paginition And Search Functionality
 
 
 
@@ -161,7 +190,7 @@ const DepotmanagerDashboard = (props) => {
   };
 
 
- const [handle , setHandle] =useState("orderoldhistory"); 
+  const [handle, setHandle] = useState("orderoldhistory");
 
 
   const ApiTabhandler = (item) => {
@@ -188,14 +217,14 @@ const DepotmanagerDashboard = (props) => {
   useEffect(() => {
     if (handle) {
       dispatch(getoldOrder());
-    } 
-    
-  }, [dispatch,handle])
+    }
+
+  }, [dispatch, handle])
 
 
   console.log("old order", oldorder);
 
-  
+
 
   console.log("Order Ka Data", order);
 
@@ -224,6 +253,8 @@ const DepotmanagerDashboard = (props) => {
   const loader = useSelector((state) => state?.logIn?.loader);
   const [show, setShow] = useState(false);
   // const [stateitem,setStateitem]= useState(false);
+  
+  
   return (
     // #EFFBEF
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
@@ -236,53 +267,54 @@ const DepotmanagerDashboard = (props) => {
           />
 
 
-      
-      {loader ? (
-           <DashboardMainCard
-           TableDiv={
-          <Loader />
-           }
-           reverse="true"
-           />
-        ) :(
 
-          <DashboardMainCard
-          TableDiv={
-            <>
-              <ToolkitProvider
-            bootstrap4
-            keyField='id'
-            data={oldorder}
-            columns={DepomanagerOrder}
-            search
-          >
-            {
-              props => (
-                <div>
-                  <SearchBar {...props.searchProps} />
-                  <ClearSearchButton {...props.searchProps} />
-                  <hr />
-                  <BootstrapTable
-                    { ...props.baseProps }
-                    
-                    defaultSorted={deopdefaultSorted}
-                    pagination={pagination}
-                    bordered={ false }
-                    condensed
+          {loader ? (
+            <DashboardMainCard
+              TableDiv={
+                <Loader />
+              }
+              reverse="true"
+            />
+          ) : (
+
+            <DashboardMainCard
+              TableDiv={
+                <>
+                  <ToolkitProvider
+                    bootstrap4
+                    keyField='id'
+                    data={oldorder}
+                    columns={DepomanagerOrder}
+                    search
                   >
-                  </BootstrapTable>
-                </div>
-              )
-            }
-          </ToolkitProvider>
-            </>
-          }
-          reverse='true'
-          />
+                    {
+                      props => (
+                        <div className="">
+                          <i className='fa fa-search' id='filtersubmit' style={{fontSize:'15px'}}/>
+                          <SearchBar {...props.searchProps} style={{padding:'0.375rem 2.5rem',borderRadius:'10px'}} />
+                          <BootstrapTable
+                            {...props.baseProps}
+                            // rowStyle={rowStyle}
+                            
+                            defaultSorted={deopdefaultSorted}
+                            // pagination={pagination}
+                            pagination={paginationFactory()}
+                            bordered={false}
+                            condensed
+                            wrapperClasses="table-responsive"
+                          />
+                        </div>
+                      )
+                    }
+                  </ToolkitProvider>
+                </>
+              }
+              reverse='true'
+            />
 
-        
 
-)}
+
+          )}
 
 
 
@@ -394,7 +426,7 @@ const DepotmanagerDashboard = (props) => {
                             handleShow()
                             dispatch(getSingleUID(item?.uid))
                           }}
-                          
+
 
                         >
 
@@ -838,3 +870,6 @@ const DepotmanagerDashboard = (props) => {
 };
 
 export default DepotmanagerDashboard;
+
+
+
