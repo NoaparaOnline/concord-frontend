@@ -11,17 +11,7 @@ import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
-import TableDash from "../../components/ReusableComponents/TableDash/TableDash";
 import "./depotmanagerDashboard.css";
-import {
-  tableConstants,
-  stocks,
-  payment,
-  deliverystatus,
-  DepomanagerOrder,
-  deopdefaultSorted,
-  nameFormatter,
-} from "../../components/ReusableComponents/TableDash/tableConstant";
 import icon1 from "../../Statics/assets/Sidebar/1.png";
 import icon2 from "../../Statics/assets/Sidebar/2.png";
 import icon3 from "../../Statics/assets/Sidebar/3.png";
@@ -40,14 +30,15 @@ import {
   getSingleOrder,
   getSingleUID,
   getStocksProduct,
+  getStocksMedicineProduct,
+  getStocksGiftProduct,
 } from "../../Store/Actions/deportmanagerActions";
 // Search Bar Images Import
-import search from "../../Statics/assets/G1.png";
-import filter from "../../Statics/assets/F1.png";
 import StatuschangedModal from "../../components/ReusableComponents/modals/StatuschangedModal/StatuschangedModal";
 import Loader from "../../components/ReusableComponents/Loader/Loader";
 import moment from "moment";
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
+import DashboardBtnList from "../../components/ReusableComponents/DashboardBtnList/DashboardBtnList";
 
 const DepotmanagerDashboard = (props) => {
 
@@ -55,25 +46,6 @@ const DepotmanagerDashboard = (props) => {
 
 
 
-  // Data Table Paginition and Search Functionality
-  // const pagination = paginationFactory({
-  //   page: 1,
-  //   sizePerPage: 5,
-  //   lastPageText: '>>',
-  //   firstPageText: '<<',
-  //   nextPageText: '>',
-  //   prePageText: '<',
-  //   showTotal: true,
-  //   alwaysShowAllBtns: true,
-  //   onPageChange: function (page, sizePerPage) {
-  //     console.log('page', page);
-  //     console.log('sizePerPage', sizePerPage);
-  //   },
-  //   onSizePerPageChange: function (page, sizePerPage) {
-  //     console.log('page', page);
-  //     console.log('sizePerPage', sizePerPage);
-  //   }
-  // });
   const { SearchBar } = Search;
 
   //Header Column DataFields And Constants
@@ -106,6 +78,7 @@ const DepotmanagerDashboard = (props) => {
         else if (cell === "Dispatched" || cell === "Unpaid")
           return { color: "blue", fontWeight: "500" };
       },
+      sort: true 
     },
     {
       dataField: "payment_status",
@@ -123,8 +96,9 @@ const DepotmanagerDashboard = (props) => {
         else if (cell === "Dispatched" || cell === "Unpaid")
           return { color: "blue", fontWeight: "500" };
       },
+      sort: true 
     },
-    { dataField: "ordered_by.name", text: "Proceed By" },
+    { dataField: "ordered_by.name", text: "Proceed By", },
     { dataField: "customer", formatter: btnFormatter, text: "Actions" },
   ];
 
@@ -156,6 +130,7 @@ const DepotmanagerDashboard = (props) => {
         else if (cell === "Dispatched" || cell === "Unpaid")
           return { color: "blue", fontWeight: "500" };
       },
+      sort: true
     },
     {
       dataField: "payment_status",
@@ -173,6 +148,7 @@ const DepotmanagerDashboard = (props) => {
         else if (cell === "Dispatched" || cell === "Unpaid")
           return { color: "blue", fontWeight: "500" };
       },
+      sort: true
     },
     { dataField: "ordered_by.name", text: "Proceed By" },
     { dataField: "customer", formatter: btnFormatterneworder, text: "Actions" },
@@ -207,18 +183,30 @@ const DepotmanagerDashboard = (props) => {
 
 
   // STOCKS COLUMN HEADERS
-  // const DepomanagerStock = [
-  //   { dataField: "name", text: "Product Name" },
+  const DepomanagerStock = [
+    
+    { dataField: "name", text: "Product Name" },
 
-  //   { dataField: "price", text: "Price" },
+    { dataField: "price", text: "Price" },
 
-  //   { dataField: "category.name", text: "Price" },
+    { dataField: "category.name", text: "Category Name" },
    
-  // ];
+  ];
 
   const deopdefaultSorted = [
     {
       dataField: "order_id",
+      
+      order: "asc",
+    },
+    {
+      dataField: "delivery_status",
+      
+      order: "asc",
+    },
+    {
+      dataField: "payment_status",
+
       order: "asc",
     },
   ];
@@ -349,7 +337,11 @@ const DepotmanagerDashboard = (props) => {
   const neworder = useSelector((state) => state?.deport?.neworder);
   const order = useSelector((state) => state?.deport?.order);
   const stock = useSelector((state) => state?.deport?.stock);
+  const stockmedicine = useSelector((state) => state?.deport?.stockmedicine);
+  const stockgift = useSelector((state) => state?.deport?.stockgift);
   // const productidstatestock = useSelector((state) => state?.deport?.stock);
+
+
 
   const dispatch = useDispatch();
 
@@ -390,23 +382,15 @@ const DepotmanagerDashboard = (props) => {
     }
   }, [dispatch, handle]);
 
-  console.log("old order", oldorder);
 
-  console.log("Order Ka Data", order);
 
   const logouthandler = () => {
     dispatch(logoutUser());
     props.history.replace("/");
   };
 
-  const formatDate = (timestamp) => {
-    return new Intl.DateTimeFormat("en-US").format(timestamp);
-  };
+ 
 
-  const handleEdit = (item) => () => {
-    // write your logic
-    alert(JSON.stringify(item));
-  };
 
   const handleClose = () => {
     setShow(!show);
@@ -418,6 +402,40 @@ const DepotmanagerDashboard = (props) => {
   const [show, setShow] = useState(false);
   // const [stateitem,setStateitem]= useState(false);
 
+
+ 
+
+
+// Tabhandler Medicine And Gift
+const tabHandler = (item) => {
+  setSelectedTab1(item);
+    if(item === "All")
+    {
+      tabledataHandler(stock);
+      dispatch(getStocksProduct());
+     
+    }
+    else if(item === "Medicine")
+    {
+      tabledataHandler(stockmedicine);
+      if (stockmedicine?.length < 1) {
+        dispatch(getStocksMedicineProduct());
+      }
+    }
+    else if(item === "Gift") {
+      tabledataHandler(stockgift);
+      if (stockgift?.length < 1) {
+        dispatch(getStocksGiftProduct());
+      }
+    }
+   
+};
+
+const [selectedTab1, setSelectedTab1] = useState("All");
+const [selectedTabbledata, setSelectedTabbledata] = useState(stock);
+const tabledataHandler = (item) => {
+  setSelectedTabbledata(item);
+};
 
 
 
@@ -690,16 +708,46 @@ const DepotmanagerDashboard = (props) => {
             Heading="Stocks"
           />
 
-          {/* {loader ? (
+
+
+  {loader ? (
             <DashboardMainCard TableDiv={<Loader />} reverse="true" />
           ) : (
             <DashboardMainCard
+            
+            SelectedButtons={
+              <div className="row my-4">
+            <div className="col ">
+           
+            {["All","Medicine", "Gift"].map(
+        (item, index) => (
+          <div
+            className="d-flex d-inline-flex "
+            key={index + 1}
+            onClick={() => tabHandler(item)}
+          >
+            <DashboardBtnList
+              label={item}
+              labelStyle={selectedTab1 === item ? { color: "#fff",borderRadius:'10px'} : ""}
+              className={
+                selectedTab1 === item
+                  ? "dashboardBtnList-item-active"
+                  : "default-color-and-hover "
+              }
+            />
+          </div>
+        )
+      )}
+            </div>
+      
+            </div>
+          }
               TableDiv={
                 <>
                   <ToolkitProvider
                     bootstrap4
                     keyField="id"
-                    data={stocks}
+                    data={selectedTabbledata}
                     columns={DepomanagerStock}
                     search
                   >
@@ -735,8 +783,8 @@ const DepotmanagerDashboard = (props) => {
               }
               reverse="true"
             />
-          )} */}
- {loader ? (
+          )}
+ {/* {loader ? (
             <DashboardMainCard TableDiv={<Loader />} reverse="true" />
           ) : (
           <TableDash
@@ -785,7 +833,7 @@ const DepotmanagerDashboard = (props) => {
             bordered={false}
             {...props}
           />
-          )}
+          )} */}
         </Route>
         <Route path={`${props.match.path}/deliverystatus`}>
           <NavbarDash

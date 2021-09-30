@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 const TableInnerPage = (props) => {
 
   const productidstate = useSelector((state) => state?.deport?.productidstate);
-  console.log('productidstate',productidstate);
 
 
   const medicinesall =productidstate;
@@ -69,7 +68,7 @@ const TableInnerPage = (props) => {
             
           ];
         })}
-        hoverable
+       
         reverse={true}
         bordered={false}
         Total={

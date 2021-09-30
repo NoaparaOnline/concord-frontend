@@ -4,6 +4,8 @@ const initialState = {
     neworder : [],
     order : [],
     stock : [],
+    stockmedicine : [],
+    stockgift : [],
     productidstate : {},
     productuid : '',
 };
@@ -21,6 +23,12 @@ export const deportReducer = (state = initialState, { type, payload }) => {
     
     case deportConstants.GET_STOCKS_PRODUCT:
         return { ...state, stock : payload };
+   
+    case deportConstants.GET_STOCKS_MEDICINE_PRODUCT:
+        return { ...state, stockmedicine : payload };
+   
+    case deportConstants.GET_STOCKS_GIFT_PRODUCT:
+        return { ...state, stockgift : payload };
     
     case deportConstants.GET_PRODUCT_STATE:
         return { ...state, productidstate : payload };

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Modal from "react-bootstrap/Modal";
-import { getStocksProduct } from '../../../../Store/Actions/deportmanagerActions';
 import {
    statusChange,
 } from "../../../../Store/Actions/deportmanagerActions";
@@ -19,22 +18,16 @@ const StatuschangedModal = (props) => {
   const  [dropdown1, setDropdown1] = useState(props?.location?.state?.delivery_status);
   const  [dropdown2, setDropdown2] = useState(props?.location?.state?.payment_status);
   const productuid = useSelector((state) => state?.deport?.productuid);
-  const neworder = useSelector((state) => state?.deport?.neworder);
 
 
-
-  console.log("Depo k Props",props);
  
   const onSubmit =  () => {
-    console.log(props?.location?.state?.uid);
     const apiData = {
       delivery_status: dropdown1,
       payment_status: dropdown2,
       uid: productuid,
       }
-      console.log("API DAta",apiData);
     dispatch(statusChange(apiData));
-    console.log(neworder);
    props.onHide();
   };
 
@@ -77,7 +70,6 @@ const StatuschangedModal = (props) => {
                       <div className="form-group">
                           <label>Delivery Statuses</label>
                   <select className="form-control form-select" id="exampleFormControlSelect1" onChange={(e) => {setDropdown1(e.target.value)
-                  console.log(e.target.value);
                   }}>
                     <option >Pending</option>
                     <option>Dispatched</option>

@@ -109,3 +109,26 @@
 .table {
   color: #565656 !important;
 }
+
+.btn-secondary {
+  color: #fff;
+  background-color: #0066b3 !important;
+  border-color: #0066b3 !important;
+}
+
+.page-link {
+  color: #0066b3 !important;
+}
+.page-item.active .page-link {
+  background-color: #0066b3 !important;
+  color: #fff !important;
+
+}
+
+.table>:not(:last-child)>:last-child>* {
+  border-bottom-color: #565656 !important;
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 1px solid #dee2e6 !important;
+}

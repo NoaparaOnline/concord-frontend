@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DashboardMainCard = ({TableDiv}) => {
+const DashboardMainCard = ({TableDiv,SelectedButtons}) => {
     return (
         <>
     <main>
@@ -14,7 +14,7 @@ const DashboardMainCard = ({TableDiv}) => {
         padding: "20px",
       }}
     >
-
+      {SelectedButtons}
         {TableDiv}
      </div>
     </main>   

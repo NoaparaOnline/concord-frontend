@@ -11,6 +11,8 @@ const SERVICE_URLS = {
   getOrders: 'orders/read',
   getnewOrders: 'orders/read/new',
   getStocksProducts: 'products/read',
+  getStocksMedicineProducts: 'products/read/medicine',
+  getStocksGiftProducts: 'products/read/gift',
   statusChanges:'orders/status-update',
 };
 
@@ -39,6 +41,12 @@ const forgotPassword = (data) =>
 const getStocksProducts = () =>
   get(SERVICE_URLS.getStocksProducts, {}, { feature: featureConstants.static });
 
+const getStocksMedicineProducts = () =>
+  get(SERVICE_URLS.getStocksMedicineProducts, {}, { feature: featureConstants.static });
+
+const getStocksGiftProducts = () =>
+  get(SERVICE_URLS.getStocksGiftProducts, {}, { feature: featureConstants.static });
+
 const statusChanges = (data) =>
   put(SERVICE_URLS.statusChanges, data, { feature: featureConstants.static });
 
@@ -55,5 +63,7 @@ const apiServices = {
   getOrders,
   getStocksProducts,
   statusChanges,
+  getStocksMedicineProducts,
+  getStocksGiftProducts,
 };
 export default apiServices;
