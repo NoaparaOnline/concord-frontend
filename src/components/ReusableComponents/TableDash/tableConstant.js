@@ -38,7 +38,6 @@ export const stocks = (handleEdit) => {
     'Product Formula',
     'Price',
     'Quantity',
-    'Actions',
   ];
 };
 

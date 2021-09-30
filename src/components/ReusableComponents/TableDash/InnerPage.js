@@ -38,6 +38,7 @@ const InnerPage = (props) => {
                   fontSize: "20px",
                   fontWeight: "600",
                   color: "#3F4254",
+                  marginBottom:'10px'
                 }}
               >
                 <i
@@ -47,6 +48,7 @@ const InnerPage = (props) => {
                     fontSize: "20px",
                     fontWeight: "600",
                     color: "#3F4254",
+                    
                   }}
                 ></i>{" "}
                 Back
