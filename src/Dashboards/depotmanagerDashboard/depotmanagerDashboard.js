@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-//
+//REACT-BOOTSTRAP-TABLE IMPORTS
 import BootstrapTable from "react-bootstrap-table-next";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.css";
 import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
@@ -35,10 +35,10 @@ import {
 } from "../../Store/Actions/deportmanagerActions";
 // Search Bar Images Import
 import StatuschangedModal from "../../components/ReusableComponents/modals/StatuschangedModal/StatuschangedModal";
-import Loader from "../../components/ReusableComponents/Loader/Loader";
 import moment from "moment";
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
 import DashboardBtnList from "../../components/ReusableComponents/DashboardBtnList/DashboardBtnList";
+import Loader from "react-loader-spinner";
 
 const DepotmanagerDashboard = (props) => {
 
@@ -54,8 +54,9 @@ const DepotmanagerDashboard = (props) => {
   const DepomanagerOrder = [
     { dataField: "order_id", text: "Orders ID", sort: true },
     { dataField: "customer.name", text: "Customer Name" },
-    // {dataField:(data) => moment('order_datetime').format("L")  ,text:'Customer Name',},
-    { dataField: "customer.market.name", text: "Market & Address" },
+    { dataField: "customer.market.name", text: "Market & Address",
+    formatter: appendtwoDatafields
+    },
     {
       dataField: "order_datetime",
       text: "Order Date/Time",
@@ -107,7 +108,7 @@ const DepotmanagerDashboard = (props) => {
     { dataField: "order_id", text: "Orders ID", sort: true },
     { dataField: "customer.name", text: "Customer Name" },
     // {dataField:(data) => moment('order_datetime').format("L")  ,text:'Customer Name',},
-    { dataField: "customer.market.name", text: "Market & Address" },
+    { dataField: "customer.market.name", text: "Market & Address" , formatter:appendtwoDatafields},
     {
       dataField: "order_datetime",
       text: "Order Date/Time",
@@ -182,17 +183,25 @@ const DepotmanagerDashboard = (props) => {
 ];
 
 
-  // STOCKS COLUMN HEADERS
+ // STOCKS COLUMN HEADERS
   const DepomanagerStock = [
     
     { dataField: "name", text: "Product Name" },
 
-    { dataField: "price", text: "Price" },
-
     { dataField: "category.name", text: "Category Name" },
+    
+    
+    { dataField: "quantity", text: "Quantity" ,formatter : nullChecker},
+    
+    
+    { dataField: "formula", text: "Formula" ,formatter : nullChecker},
+    
+    { dataField: "price", text: "Price" },
    
   ];
 
+
+ // SORTED DATAFIELDS TABLE
   const deopdefaultSorted = [
     {
       dataField: "order_id",
@@ -211,15 +220,12 @@ const DepotmanagerDashboard = (props) => {
     },
   ];
 
-  //   const rowStyle = (row, rowIndex) => {
-  //     if (row.delivery_status === "Delivered") {
-  //         return {color: 'green' };
-  //     }
-  // };
 
+ // EPOCH TO DATE FORMATE TABLE USING MOMENT PAKAGE
   function dateFormatter(cell) {
     return <span>{moment.unix(cell).format("MMM DD, YYYY")}</span>;
   }
+
   //OLD ORDER COLUMN BUTTON FORMATTER
   function btnFormatter(cell, row) {
     return (
@@ -246,32 +252,18 @@ const DepotmanagerDashboard = (props) => {
     );
   }
 
-  //STOCKS COLUMN BUTTON FORMATTER
-  // function btnFormatterstocks(cell, row) {
-  //   return (
-  //     <>
-  //       <div className="row">
-  //         <div className="col pr-0">
-  //           <div
-  //             className={` btn btn-primary rounded-pill`}
-  //             style={{ backgroundColor: "#0066b3" }}
-  //           >
-  //             <Link
-  //               style={{ color: "#ffffff", textDecoration: "none" }}
-  //               to={{
-  //                 pathname: "/depotmanager-dashboard/order-request/innerdetail",
-  //               }}
-  //               onClick={() => dispatch(getSingleOrder(row))}
-  //             >
-  //               View
-  //             </Link>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </>
-  //   );
-  // }
-  //NEW ORDER COLUMN BUTTON FORMATTER
+  //APPEND MARKET AND ADDRESS FIELDS
+  function appendtwoDatafields(cell,row){
+    
+    return (
+      <>
+        <div>{`${row.customer.market.name} ,`}</div>
+        <div>{`${row.customer.market.parent.name}`}</div>
+      </>
+    )
+  }
+
+  //ACTION BUTTON FIELDS
   function btnFormatterneworder(cell, row) {
     return (
       <>
@@ -285,8 +277,9 @@ const DepotmanagerDashboard = (props) => {
                 style={{ color: "#ffffff", textDecoration: "none" }}
                 onClick={() => {
                   handleShow();
-                  dispatch(getSingleUID(row.uid));
+                  dispatch(getSingleUID(row));
                 }}
+                
               >
                 Status
               </Link>
@@ -297,6 +290,14 @@ const DepotmanagerDashboard = (props) => {
     );
   }
 
+  //NULLABLE VALUE CHECKER FUNCTION TABLE DATA FIELDS
+  function nullChecker(cell) {
+    return (
+      <>
+        <div>{!cell ? "N/A" : cell}</div>
+      </>
+    );
+  }
 
   //PAYMENT COLUMN BUTTON FORMATTER
   function btnFormatterpayment(cell, row) {
@@ -324,15 +325,24 @@ const DepotmanagerDashboard = (props) => {
     );
   }
 
-
-
-  //Header Column DataFields And Constants And Functions
+ //Header Column DataFields And Constants And Functions
 
   // End Of Paginition And Search Functionality
 
-  const [sidebarOpen, setsidebarOpen] = useState(false);
 
+  // =================================================================//
+
+  // USE STATES 
+  const [sidebarOpen, setsidebarOpen] = useState(false);
+  const [handle, setHandle] = useState("orderoldhistory");
+  const [show, setShow] = useState(false);
+  const [selectedTab1, setSelectedTab1] = useState("All");
+  const [selectedTabbledata, setSelectedTabbledata] = useState(stock);
+  
+  
+  // REDUX STATES
   // const user = useSelector((state) => state?.logIn?.user);
+  const loader = useSelector((state) => state?.logIn?.loader);
   const oldorder = useSelector((state) => state?.deport?.oldorder);
   const neworder = useSelector((state) => state?.deport?.neworder);
   const order = useSelector((state) => state?.deport?.order);
@@ -345,23 +355,25 @@ const DepotmanagerDashboard = (props) => {
 
   const dispatch = useDispatch();
 
+  // SIDEBAR TOGGLE OPEN
   const openSidebar = () => {
     setsidebarOpen(true);
   };
 
+  // SIDEBAR TOGGLE CLOSE
   const closeSidebar = () => {
     setsidebarOpen(false);
   };
 
-  const [handle, setHandle] = useState("orderoldhistory");
-
+  // API HIT HANDLER ON SIDEBAR BUTTONS
   const ApiTabhandler = (item) => {
     setHandle(item);
-    if (item === "stock") {
-      if (stock?.length < 1) {
-        dispatch(getStocksProduct());
-      }
-    } else if (item === "orderoldhistory") {
+    // if (item === "stock") {
+    //   if (stock?.length < 1) {
+    //     dispatch(getStocksProduct());
+    //   }
+    // } else
+     if (item === "orderoldhistory") {
       if (oldorder?.length < 1) {
         dispatch(getoldOrder());
       }
@@ -376,6 +388,7 @@ const DepotmanagerDashboard = (props) => {
     }
   };
 
+  // USEEFFECT HOOK FOR INITIAL API RENDER ON DASHBOARD LOAD
   useEffect(() => {
     if (handle) {
       dispatch(getoldOrder());
@@ -383,65 +396,78 @@ const DepotmanagerDashboard = (props) => {
   }, [dispatch, handle]);
 
 
-
+  // LOGOUT HANDLER FUNCTION
   const logouthandler = () => {
     dispatch(logoutUser());
     props.history.replace("/");
   };
 
- 
 
-
+  // MODAL CLOSE FUCNTION
   const handleClose = () => {
     setShow(!show);
   };
+  // MODAL OPEN FUCNTION
   const handleShow = () => {
     setShow(!show);
   };
-  const loader = useSelector((state) => state?.logIn?.loader);
-  const [show, setShow] = useState(false);
-  // const [stateitem,setStateitem]= useState(false);
 
+  
+  
+  
+  
+  
+  // STOCKS SELECTED TAB HANDLER FUNCTION
+  const tabledataHandler = (item) => {
+    setSelectedTabbledata(item);
+    if(item === stock)
+    {
+      if (stock?.length < 1) {
+        dispatch(getStocksProduct());
+      }
+     
+    }
+    else if(item === stockmedicine)
+    {
+      if (stockmedicine?.length < 1) {
+        dispatch(getStocksMedicineProduct());
+      }
+    }
+    else if(item === stockgift) {
+      if (stockgift?.length < 1) {
+        dispatch(getStocksGiftProduct());
+      }
+    }
+  };
 
- 
-
-
-// Tabhandler Medicine And Gift
+  // Tabhandler Medicine And Gift
 const tabHandler = (item) => {
   setSelectedTab1(item);
     if(item === "All")
     {
       tabledataHandler(stock);
-      dispatch(getStocksProduct());
+      
      
     }
     else if(item === "Medicine")
     {
       tabledataHandler(stockmedicine);
-      if (stockmedicine?.length < 1) {
-        dispatch(getStocksMedicineProduct());
-      }
+      
     }
     else if(item === "Gift") {
       tabledataHandler(stockgift);
-      if (stockgift?.length < 1) {
-        dispatch(getStocksGiftProduct());
-      }
+      
     }
    
 };
 
-const [selectedTab1, setSelectedTab1] = useState("All");
-const [selectedTabbledata, setSelectedTabbledata] = useState(stock);
-const tabledataHandler = (item) => {
-  setSelectedTabbledata(item);
-};
+
 
 
 
 
   return (
-    // #EFFBEF
+   
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
       <Router>
         <Route exact path={`/depotmanager-dashboard`}>
@@ -452,7 +478,15 @@ const tabledataHandler = (item) => {
           />
 
           {loader ? (
-            <DashboardMainCard TableDiv={<Loader />} reverse="true" />
+            <DashboardMainCard TableDiv={      
+            <div className="d-flex justify-content-center">
+            <Loader
+              height={100} width={100}
+              type="Rings"
+              color="#0066b3"
+            />
+            </div>
+      } reverse="true" />
           ) : (
             <DashboardMainCard
               TableDiv={
@@ -499,81 +533,8 @@ const tabledataHandler = (item) => {
             />
           )}
 
-          {/* <TableDash
-            cols={tableConstants(handleEdit)}
-            data={oldorder?.map((item, index) => {
-              return [
-                item?.order_id,
-                item?.customer?.name,
-                item?.customer?.market?.name,
-                formatDate(item?.order_datetime),
-                item?.payment_type,
-                item?.delivery_status,
-                item?.payment_status,
-                item?.ordered_by?.name,
-                <>
-                  <div className="row">
-                    <div className="col pr-0">
-                      <div
-                        className={` btn btn-primary rounded-pill`}
-                        style={{ backgroundColor: "#0066b3" }}
-                      >
-                        <Link
-                          style={{ color: "#ffffff", textDecoration: "none" }}
-                          to={{
-                            pathname:
-                              "/depotmanager-dashboard/order-request/innerdetail",
-                            state: item,
-                          }}
-                        >
-                          View
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </>,
-              ];
-            })}
-            SearchBar={
-              <>
-                <div
-                  className="search-box mb-4"
-                  style={{ width: "240px", minWidth: "240px" }}
-                >
-                  <form
-                    className="form_style_search"
-                    style={{
-                      border: "1px solid #707070",
-                      borderRadius: "10px",
-                    }}
-                  >
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
-                    >
-                      <img src={search} alt="" />
-                    </button>
-                    <input
-                      className="form_style_input"
-                      type="text"
-                      placeholder="Search"
-                    />
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
-                    >
-                      <img src={filter} alt="" />
-                    </button>
-                  </form>
-                </div>
-              </>
-            }
-            reverse={true}
-            bordered={false}
-            {...props}
-          /> */}
+         
         </Route>
-        {console.log(neworder)}
         <Route path={`${props.match.path}/neworder`}>
           <NavbarDash
             sidebarOpen={sidebarOpen}
@@ -582,7 +543,17 @@ const tabledataHandler = (item) => {
           />
 
           {loader ? (
-            <DashboardMainCard TableDiv={<Loader />} reverse="true" />
+            <DashboardMainCard TableDiv={
+
+              <div className="d-flex justify-content-center">
+              <Loader
+                height={100} width={100}
+                type="Rings"
+                color="#0066b3"
+              />
+              </div>
+
+            } reverse="true" />
           ) : (
             <DashboardMainCard
               TableDiv={
@@ -702,16 +673,25 @@ const tabledataHandler = (item) => {
           /> */}
         </Route>
         <Route path={`${props.match.path}/stocks`}>
+         
           <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
             Heading="Stocks"
           />
 
-
-
   {loader ? (
-            <DashboardMainCard TableDiv={<Loader />} reverse="true" />
+            <DashboardMainCard TableDiv={
+
+              <div className="d-flex justify-content-center">
+              <Loader
+                height={100} width={100}
+                type="Rings"
+                color="#0066b3"
+              />
+              </div>
+
+            } reverse="true" />
           ) : (
             <DashboardMainCard
             
@@ -784,56 +764,6 @@ const tabledataHandler = (item) => {
               reverse="true"
             />
           )}
- {/* {loader ? (
-            <DashboardMainCard TableDiv={<Loader />} reverse="true" />
-          ) : (
-          <TableDash
-            cols={stocks(handleEdit)}
-            data={stock?.map((item, index) => {
-              return [
-                index + 1,
-                item?.name,
-                "N/A",
-                item?.price,
-                // item?.formula,
-                "N/A",
-              
-              ];
-            })}
-            reverse={true}
-            SearchBar={
-              <>
-                <div
-                  className="search-box mb-4"
-                  style={{ width: "250px", minWidth: "250px" }}
-                >
-                  <form
-                    className="form_style_search"
-                    style={{
-                      border: "1px solid #707070",
-                      borderRadius: "10px",
-                    }}
-                  >
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
-                    >
-                      <img src={search} alt="" />
-                    </button>
-                    <input
-                      className="form_style_input"
-                      type="text"
-                      placeholder="Search"
-                    />
-                   
-                  </form>
-                </div>
-              </>
-            }
-            bordered={false}
-            {...props}
-          />
-          )} */}
         </Route>
         <Route path={`${props.match.path}/deliverystatus`}>
           <NavbarDash
@@ -843,7 +773,17 @@ const tabledataHandler = (item) => {
           />
 
           {loader ? (
-            <DashboardMainCard TableDiv={<Loader />} reverse="true" />
+            <DashboardMainCard TableDiv={
+
+              <div className="d-flex justify-content-center">
+              <Loader
+                height={100} width={100}
+                type="Rings"
+                color="#0066b3"
+              />
+              </div>
+
+            } reverse="true" />
           ) : (
             <DashboardMainCard
               TableDiv={
@@ -969,7 +909,17 @@ const tabledataHandler = (item) => {
           />
 
           {loader ? (
-            <DashboardMainCard TableDiv={<Loader />} reverse="true" />
+            <DashboardMainCard TableDiv={
+
+              <div className="d-flex justify-content-center">
+              <Loader
+                height={100} width={100}
+                type="Rings"
+                color="#0066b3"
+              />
+              </div>
+
+            } reverse="true" />
           ) : (
             <DashboardMainCard
               TableDiv={
@@ -1121,7 +1071,7 @@ const tabledataHandler = (item) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #7F2987" }}
                 btnroute="stocks"
-                onClick={() => ApiTabhandler("stock")}
+                onClick={() => tabHandler('All')}
                 btnName="Stocks"
               />
               <SiderbarBtn

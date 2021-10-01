@@ -74,6 +74,7 @@ export const getStocksProduct = () => async (dispatch) => {
     });
   }
 };
+
 export const getStocksMedicineProduct = () => async (dispatch) => {
   dispatch({
     type: logInConstants.SET_LOADER,
