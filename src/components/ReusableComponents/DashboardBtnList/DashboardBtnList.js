@@ -12,7 +12,7 @@ const DashboardBtnList = ({
   return (
     <div
       className={`dashboardBtnList-item ${className}  btn `}
-      style={{ bntStyle }}
+      style={ bntStyle }
       onClick={onClick}
     >
       <i className={`${iconclassname}`} style={{color:'#565656'}}></i>

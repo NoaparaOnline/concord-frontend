@@ -1,47 +1,54 @@
 .flip-card {
-    height: 400px;
-    
+  height: 400px;
 }
 
 .flip-card-inner {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    transition: transform 0.1s;
-    
-    
-    transform-style: preserve-3d;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.1s;
+
+  transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-    transition: 1s;
+  transform: rotateY(180deg);
+  transition: 1s;
 }
 
 .flip-card-front,
 .flip-card-back {
-    
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-     backface-visibility: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: visible;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+ transform: translate3d(0, 0, 0);
 }
 
 .flip-card-back {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .flipcard_custom {
-    background: linear-gradient(350deg, #f3f3f3 65%, #0066b3 35%) !important;
-    /* Measure Big Card Height and Assign to Min Height then all card will be same height  */
-    min-height: 100% !important;
-    border-bottom: none !important;
+  background: linear-gradient(350deg, #f3f3f3 65%, #0066b3 35%) !important;
+  min-height: 55vh !important;
+  border-bottom: none !important;
+}
+
+.colr_btn {
+    background-color: #0066b3 !important;
+    color:#fff !important;
 }
 
 .colr_btn:hover {
-    background: #fff !important;
-    color: #0066b3 !important;
-    border: 1px solid transparent !important;
-  }
+  background: #fff !important;
+  color: #0066b3 !important;
+  border: 1px solid transparent !important;
+}
+_::-webkit-full-page-media, _:future, :root .panel {
+  background-color:#0065b3a5 !important
+}

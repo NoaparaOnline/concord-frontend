@@ -44,6 +44,7 @@ const DepotmanagerDashboard = (props) => {
 
 
 
+  const [langbtnshow, setLangbtnshow] = useState(false);
 
 
   const { SearchBar } = Search;
@@ -53,16 +54,17 @@ const DepotmanagerDashboard = (props) => {
   //OLD ORDER COLUMN HEADERS
   const DepomanagerOrder = [
     { dataField: "order_id", text: "Orders ID", sort: true },
-    { dataField: "customer.name", text: "Customer Name" },
+    { dataField: "customer.name", text: "Customer Name", sort: true },
     { dataField: "customer.market.name", text: "Market & Address",
-    formatter: appendtwoDatafields
+    formatter: appendtwoDatafields,sort: true
     },
     {
       dataField: "order_datetime",
       text: "Order Date/Time",
       formatter: dateFormatter,
+      sort: true
     },
-    { dataField: "payment_type", text: "Payment Type" },
+    { dataField: "payment_type", text: "Payment Type",sort:true },
     {
       dataField: "delivery_status",
       text: "Delivery Status",
@@ -99,22 +101,23 @@ const DepotmanagerDashboard = (props) => {
       },
       sort: true 
     },
-    { dataField: "ordered_by.name", text: "Proceed By", },
+    { dataField: "ordered_by.name", text: "Proceed By",sort: true },
     { dataField: "customer", formatter: btnFormatter, text: "Actions" },
   ];
 
   //NEW ORDER COLUMN HEADERS
   const DepomanagerNewOrder = [
     { dataField: "order_id", text: "Orders ID", sort: true },
-    { dataField: "customer.name", text: "Customer Name" },
+    { dataField: "customer.name", text: "Customer Name",sort: true },
     // {dataField:(data) => moment('order_datetime').format("L")  ,text:'Customer Name',},
-    { dataField: "customer.market.name", text: "Market & Address" , formatter:appendtwoDatafields},
+    { dataField: "customer.market.name", text: "Market & Address" , formatter:appendtwoDatafields ,sort: true},
     {
       dataField: "order_datetime",
       text: "Order Date/Time",
       formatter: dateFormatter,
+      sort: true
     },
-    { dataField: "payment_type", text: "Payment Type" },
+    { dataField: "payment_type", text: "Payment Type",sort: true },
     {
       dataField: "delivery_status",
       text: "Delivery Status",
@@ -151,16 +154,16 @@ const DepotmanagerDashboard = (props) => {
       },
       sort: true
     },
-    { dataField: "ordered_by.name", text: "Proceed By" },
+    { dataField: "ordered_by.name", text: "Proceed By" ,sort: true},
     { dataField: "customer", formatter: btnFormatterneworder, text: "Actions" },
   ];
 
 
  //PAYMENT COLUMN HEADERS
  const DepomanagerPayment = [
-  { dataField: "customer.name", text: "Customer Name" },
+  { dataField: "customer.name", text: "Customer Name" ,sort:true },
  
-  { dataField: "payment_type", text: "Payment Type" },
+  { dataField: "payment_type", text: "Payment Type" ,sort:true},
  
   {
     dataField: "payment_status",
@@ -177,7 +180,7 @@ const DepotmanagerDashboard = (props) => {
         return { color: "green", fontWeight: "500" };
       else if (cell === "Dispatched" || cell === "Unpaid")
         return { color: "blue", fontWeight: "500" };
-    },
+    },sort:true
   },
   { dataField: "customer", formatter: btnFormatterpayment, text: "Actions" },
 ];
@@ -186,17 +189,17 @@ const DepotmanagerDashboard = (props) => {
  // STOCKS COLUMN HEADERS
   const DepomanagerStock = [
     
-    { dataField: "name", text: "Product Name" },
+    { dataField: "name", text: "Product Name" ,sort:true},
 
-    { dataField: "category.name", text: "Category Name" },
+    { dataField: "category.name", text: "Category Name" ,sort:true},
     
     
-    { dataField: "quantity", text: "Quantity" ,formatter : nullChecker},
+    { dataField: "quantity", text: "Quantity" ,formatter : nullChecker,sort:true},
     
     
-    { dataField: "formula", text: "Formula" ,formatter : nullChecker},
+    { dataField: "formula", text: "Formula" ,formatter : nullChecker,sort:true},
     
-    { dataField: "price", text: "Price" },
+    { dataField: "price", text: "Price" ,sort:true},
    
   ];
 
@@ -209,12 +212,62 @@ const DepotmanagerDashboard = (props) => {
       order: "asc",
     },
     {
+      dataField: "customer.name",
+      
+      order: "asc",
+    },
+    {
+      dataField: "customer.market.name",
+      
+      order: "asc",
+    },
+    {
+      dataField: "order_datetime",
+      
+      order: "asc",
+    },
+    {
       dataField: "delivery_status",
       
       order: "asc",
     },
     {
+      dataField: "payment_type",
+      
+      order: "asc",
+    },
+    {
       dataField: "payment_status",
+
+      order: "asc",
+    },
+    {
+      dataField: "ordered_by.name",
+
+      order: "asc",
+    },
+    {
+      dataField: "name",
+
+      order: "asc",
+    },
+    {
+      dataField: "category.name",
+
+      order: "asc",
+    },
+    {
+      dataField: "quantity",
+
+      order: "asc",
+    },
+    {
+      dataField: "formula",
+
+      order: "asc",
+    },
+    {
+      dataField: "price",
 
       order: "asc",
     },
@@ -267,7 +320,7 @@ const DepotmanagerDashboard = (props) => {
   function btnFormatterneworder(cell, row) {
     return (
       <>
-        <div className="row">
+        {/* <div className="row">
           <div className="col pr-0">
             <div
               className={` btn btn-primary rounded-pill`}
@@ -285,7 +338,44 @@ const DepotmanagerDashboard = (props) => {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
+ <div class="btn-group">
+  <button type="button" class="btn btn-secondary">Action</button>
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+
+              <Link
+                style={{ color: "#0066b3",fontWeight:'600',fontSize:'14px', textDecoration: "none" }}
+                onClick={() => {
+                  handleShow();
+                  dispatch(getSingleUID(row));
+                }}
+                
+              >
+                Status
+              </Link>
+
+    </li>
+    <li>
+
+    <Link
+                style={{ color: "#0066b3",fontWeight:'600',fontSize:'14px', textDecoration: "none" }}
+                to={{
+                  pathname: "/depotmanager-dashboard/order-request/innerdetail",
+                }}
+                onClick={() => dispatch(getSingleOrder(row))}
+              >
+                View
+              </Link>    
+
+    </li>
+  </ul>
+</div>
+
       </>
     );
   }
@@ -331,13 +421,11 @@ const DepotmanagerDashboard = (props) => {
 
 
   // =================================================================//
+// USE STATES 
+const [sidebarOpen, setsidebarOpen] = useState(false);
+const [handle, setHandle] = useState("orderoldhistory");
+const [show, setShow] = useState(false);
 
-  // USE STATES 
-  const [sidebarOpen, setsidebarOpen] = useState(false);
-  const [handle, setHandle] = useState("orderoldhistory");
-  const [show, setShow] = useState(false);
-  const [selectedTab1, setSelectedTab1] = useState("All");
-  const [selectedTabbledata, setSelectedTabbledata] = useState(stock);
   
   
   // REDUX STATES
@@ -393,7 +481,10 @@ const DepotmanagerDashboard = (props) => {
     if (handle) {
       dispatch(getoldOrder());
     }
-  }, [dispatch, handle]);
+    if (stock.length < 1){
+      dispatch(getStocksProduct());
+    }
+  }, [dispatch, handle,stock]);
 
 
   // LOGOUT HANDLER FUNCTION
@@ -418,24 +509,33 @@ const DepotmanagerDashboard = (props) => {
   
   
   // STOCKS SELECTED TAB HANDLER FUNCTION
-  const tabledataHandler = (item) => {
-    setSelectedTabbledata(item);
-    if(item === stock)
+  const tabledataHandler = async (item) => {
+     setSelectedTabbledata(item);
+     if(item === stock)
     {
       if (stock?.length < 1) {
-        dispatch(getStocksProduct());
+        const stockapi = await dispatch(getStocksProduct());
+        if (stockapi === true) {
+          setSelectedTabbledata(stock);
+        } 
       }
      
     }
     else if(item === stockmedicine)
     {
       if (stockmedicine?.length < 1) {
-        dispatch(getStocksMedicineProduct());
+        const stockmedapi = await dispatch(getStocksMedicineProduct());
+        if (stockmedapi === true) {
+          setSelectedTabbledata(stock);
+        } 
       }
     }
     else if(item === stockgift) {
       if (stockgift?.length < 1) {
-        dispatch(getStocksGiftProduct());
+        const stockgiftapi = await dispatch(getStocksGiftProduct());
+        if (stockgiftapi === true) {
+          setSelectedTabbledata(stock);
+        } 
       }
     }
   };
@@ -458,12 +558,17 @@ const tabHandler = (item) => {
       tabledataHandler(stockgift);
       
     }
+
    
 };
 
+const buttonname =["All","Medicine", "Gift"]
 
 
+  // USE STATES 
 
+  const [selectedTab1, setSelectedTab1] = useState("All");
+  const [selectedTabbledata, setSelectedTabbledata] = useState(stock);
 
 
   return (
@@ -585,7 +690,7 @@ const tabHandler = (item) => {
 
                           defaultSorted={deopdefaultSorted}
                           // pagination={pagination}
-                          pagination={paginationFactory()}
+                          pagination={neworder.length > 10 ? paginationFactory() : null}  
                           bordered={false}
                           condensed
                           wrapperClasses="table-responsive"
@@ -599,78 +704,7 @@ const tabHandler = (item) => {
             />
           )}
 
-          {/* <TableDash
-            cols={tableConstants(handleEdit)}
-            data={neworder?.map((item, index) => {
-              return [
-                item?.order_id,
-                item?.customer?.name,
-                item?.customer?.market?.name,
-                formatDate(item?.order_datetime),
-                item?.payment_type,
-                item?.delivery_status,
-                item?.payment_status,
-                item?.ordered_by?.name,
-                <>
-                  <div className="row">
-                    <div className="col pr-0">
-                      <div
-                        className={` btn btn-primary rounded-pill`}
-                        style={{ backgroundColor: "#0066b3" }}
-                      >
-                        <Link
-                          style={{ color: "#ffffff", textDecoration: "none" }}
-                          onClick={() => {
-                            handleShow();
-                            dispatch(getSingleUID(item?.uid));
-                          }}
-                        >
-                          Status
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </>,
-              ];
-            })}
-            SearchBar={
-              <>
-                <div
-                  className="search-box mb-4"
-                  style={{ width: "240px", minWidth: "240px" }}
-                >
-                  <form
-                    className="form_style_search"
-                    style={{
-                      border: "1px solid #707070",
-                      borderRadius: "10px",
-                    }}
-                  >
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
-                    >
-                      <img src={search} alt="" />
-                    </button>
-                    <input
-                      className="form_style_input"
-                      type="text"
-                      placeholder="Search"
-                    />
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
-                    >
-                      <img src={filter} alt="" />
-                    </button>
-                  </form>
-                </div>
-              </>
-            }
-            reverse={true}
-            bordered={false}
-            {...props}
-          /> */}
+       
         </Route>
         <Route path={`${props.match.path}/stocks`}>
          
@@ -699,7 +733,7 @@ const tabHandler = (item) => {
               <div className="row my-4">
             <div className="col ">
            
-            {["All","Medicine", "Gift"].map(
+            {buttonname.map(
         (item, index) => (
           <div
             className="d-flex d-inline-flex "
@@ -708,7 +742,7 @@ const tabHandler = (item) => {
           >
             <DashboardBtnList
               label={item}
-              labelStyle={selectedTab1 === item ? { color: "#fff",borderRadius:'10px'} : ""}
+              bntStyle={{borderRadius:index=== 0 ? '10px 0px 0px 10px' : index=== buttonname.length-1 ? '0px 10px 10px 0px' : ''  }}
               className={
                 selectedTab1 === item
                   ? "dashboardBtnList-item-active"
@@ -751,7 +785,7 @@ const tabHandler = (item) => {
 
                           defaultSorted={deopdefaultSorted}
                           // pagination={pagination}
-                          pagination={paginationFactory()}
+                          pagination={selectedTabbledata.length > 10 ? paginationFactory() : null}  
                           bordered={false}
                           condensed
                           wrapperClasses="table-responsive"
@@ -815,7 +849,7 @@ const tabHandler = (item) => {
 
                           defaultSorted={deopdefaultSorted}
                           // pagination={pagination}
-                          pagination={paginationFactory()}
+                          pagination={oldorder.length > 10 ? paginationFactory() : null}  
                           bordered={false}
                           condensed
                           wrapperClasses="table-responsive"
@@ -829,77 +863,7 @@ const tabHandler = (item) => {
             />
           )}
 
-          {/* <TableDash
-            cols={deliverystatus(handleEdit)}
-            data={order?.map((item, index) => {
-              return [
-                item?.order_id,
-                item?.customer?.name,
-                item?.customer?.market?.name,
-                formatDate(item?.order_datetime),
-                item?.delivery_status,
-                item?.payment_status,
-                <>
-                  <div className="row">
-                    <div className="col pr-0">
-                      <div
-                        className={` btn btn-primary rounded-pill`}
-                        style={{ backgroundColor: "#0066b3" }}
-                      >
-                        <Link
-                          style={{ color: "#ffffff", textDecoration: "none" }}
-                          to={{
-                            pathname:
-                              "/depotmanager-dashboard/order-request/innerdetail",
-                            state: item,
-                          }}
-                        >
-                          View
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </>,
-              ];
-            })}
-            reverse={true}
-            SearchBar={
-              <>
-                <div
-                  className="search-box mb-4"
-                  style={{ width: "240px", minWidth: "240px" }}
-                >
-                  <form
-                    className="form_style_search"
-                    style={{
-                      border: "1px solid #707070",
-                      borderRadius: "10px",
-                    }}
-                  >
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
-                    >
-                      <img src={search} alt="" />
-                    </button>
-                    <input
-                      className="form_style_input"
-                      type="text"
-                      placeholder="Search"
-                    />
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
-                    >
-                      <img src={filter} alt="" />
-                    </button>
-                  </form>
-                </div>
-              </>
-            }
-            bordered={false}
-            {...props}
-          /> */}
+      
         </Route>
         <Route path={`${props.match.path}/payment`}>
           <NavbarDash
@@ -951,7 +915,7 @@ const tabHandler = (item) => {
 
                           defaultSorted={deopdefaultSorted}
                           // pagination={pagination}
-                          pagination={paginationFactory()}
+                          pagination={order.length > 10 ? paginationFactory() : null}  
                           bordered={false}
                           condensed
                           wrapperClasses="table-responsive"
@@ -965,75 +929,7 @@ const tabHandler = (item) => {
             />
           )}
 
-          {/* <TableDash
-            cols={payment(handleEdit)}
-            data={order?.map((item, index) => {
-              return [
-                index + 1,
-                item?.customer?.name,
-                item?.payment_type,
-                item?.payment_status,
-                <>
-                  <div className="row">
-                    <div className="col pr-0">
-                      <div
-                        className={`btn btn-primary rounded-pill`}
-                        style={{ backgroundColor: "#0066b3" }}
-                      >
-                        <Link
-                          style={{ color: "#ffffff", textDecoration: "none" }}
-                          to={{
-                            pathname:
-                              "/depotmanager-dashboard/order-request/innerdetail",
-                            state: item,
-                          }}
-                        >
-                          View
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </>,
-              ];
-            })}
-            reverse={true}
-            SearchBar={
-              <>
-                <div
-                  className="search-box mb-4"
-                  style={{ width: "240px", minWidth: "240px" }}
-                >
-                  <form
-                    className="form_style_search"
-                    style={{
-                      border: "1px solid #707070",
-                      borderRadius: "10px",
-                    }}
-                  >
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
-                    >
-                      <img src={search} alt="" />
-                    </button>
-                    <input
-                      className="form_style_input"
-                      type="text"
-                      placeholder="Search"
-                    />
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
-                    >
-                      <img src={filter} alt="" />
-                    </button>
-                  </form>
-                </div>
-              </>
-            }
-            bordered={false}
-            {...props}
-          /> */}
+         
         </Route>
 
         {/* Inner Pages Routes */}

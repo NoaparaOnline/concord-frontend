@@ -72,6 +72,7 @@ export const getStocksProduct = () => async (dispatch) => {
       type: logInConstants.SET_LOADER,
       payload: false,
     });
+    return true
   }
 };
 
@@ -91,6 +92,7 @@ export const getStocksMedicineProduct = () => async (dispatch) => {
       type: logInConstants.SET_LOADER,
       payload: false,
     });
+    return true
   }
 };
 export const getStocksGiftProduct = () => async (dispatch) => {
@@ -111,6 +113,7 @@ export const getStocksGiftProduct = () => async (dispatch) => {
       type: logInConstants.SET_LOADER,
       payload: false,
     });
+    return true
   }
 };
 
