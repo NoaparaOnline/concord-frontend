@@ -41,13 +41,7 @@ import search from '../../Statics/assets/G1.png'
 
 const DirectorDashboard = (props) => {
 
-  // const user = useSelector((state) => state?.logIn?.user);
-  // useEffect(() => {
-  //   if (!user) {
-  //     props.history.push("/");
-  //   }
-    
-  // }, [user]);
+
 
 
 

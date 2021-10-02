@@ -168,12 +168,15 @@ function App() {
         <PrivateRoute
            path="/depotmanager-dashboard"
            component={DepotmanagerDashboard}/>
+        <PrivateRoute
+           path="/director-dashboard"
+           component={DirectorDashboard}/>
        
        {/* Private Convert */}
-        <Route 
+        {/* <Route 
         path="/director-dashboard"
         render={(props) => <DirectorDashboard {...props} />}
-        />
+        /> */}
 
         {/*          Contact Page             */}
 

@@ -1,7 +1,5 @@
 // import React from 'react';
 
-import moment from "moment";
-import { Link } from "react-router-dom";
 
 // This is the table constant/settings which needed to render table elements
 export const tableConstants = (handleEdit) => {
@@ -114,7 +112,6 @@ export const Directordashproducthead = (handleEdit) => {
 //   { dataField: 'customer', formatter: btnFormatter, text: 'Actions', },
 // ];
 
-// console.log(DepomanagerOrder)
 
 // export const deopdefaultSorted = [{
 //   dataField: 'order_id',

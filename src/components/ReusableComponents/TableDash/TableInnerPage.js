@@ -3,11 +3,11 @@ import TableDash from "./TableDash";
 import "./TableDash.css";
 import { tableinner } from "../TableDash/tableConstant";
 import { useSelector } from "react-redux";
+import moment from "moment";
 
 const TableInnerPage = (props) => {
 
   const productidstate = useSelector((state) => state?.deport?.productidstate);
-  console.log('productidstate',productidstate);
 
 
   const medicinesall =productidstate;
@@ -16,9 +16,7 @@ const TableInnerPage = (props) => {
     // write your logic
     alert(JSON.stringify(item));
   };
-  const formatDate = (timestamp) => {
-    return new Intl.DateTimeFormat("en-US").format(timestamp);
-  };
+ 
   return (
     <>
        <main> 
@@ -34,23 +32,27 @@ const TableInnerPage = (props) => {
         <table className="table table-borderless ms-5">
           <tbody style={{ border: "none" }}>
             <tr style={{ border: "none", padding: "10px" }}>
-              <td style={{ border: "none" }}>OrderID:</td>
+              <td style={{ border: "none",fontWeight: "500" }}>OrderID:</td>
               <td style={{ border: "none" }}>{productidstate?.order_id}</td>
-              <td style={{ border: "none" }}>Customer Name:</td>
+              <td style={{ border: "none",fontWeight: "500" }}>Customer Name:</td>
               <td style={{ border: "none" }}>{productidstate?.customer?.name}</td>
             </tr>
             <tr style={{ border: "none", padding: "10px" }}>
-              <td style={{ border: "none" }}>Market & Address: </td>
+              <td style={{ border: "none" ,fontWeight: "500"}}>Market & Address: </td>
               <td style={{ border: "none" }}>
               {productidstate?.customer?.market?.name}
+              <br/>
+              {productidstate?.customer.market.parent.name}
               </td>
-              <td style={{ border: "none" }}>Order Date/Time:</td>
-              <td style={{ border: "none" }}>{formatDate(productidstate?.order_datetime)}</td>
+              <td style={{ border: "none",fontWeight: "500" }}>Order Date/Time:</td>
+              <td style={{ border: "none" }}>
+              {moment.unix(productidstate?.order_datetime).format("MMM DD, YYYY")}
+              </td>
             </tr>
             <tr style={{ border: "none", padding: "10px" }}>
-              <td style={{ border: "none" }}>Proceed By: </td>
+              <td style={{ border: "none",fontWeight: "500" }}>Proceed By: </td>
               <td style={{ border: "none" }}>{productidstate?.ordered_by.name}</td>
-              <td style={{ border: "none" }}>MPO:</td>
+              <td style={{ border: "none" ,fontWeight: "500"}}>MPO:</td>
               <td style={{ border: "none" }}>{productidstate?.ordered_by.name}</td>
             </tr>
           </tbody>
@@ -69,7 +71,7 @@ const TableInnerPage = (props) => {
             
           ];
         })}
-        hoverable
+       
         reverse={true}
         bordered={false}
         Total={
