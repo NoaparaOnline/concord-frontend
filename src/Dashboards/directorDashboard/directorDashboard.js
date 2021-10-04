@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
 import TableDash from "../../components/ReusableComponents/TableDash/TableDash1";
@@ -28,20 +28,116 @@ import icon4 from "../../Statics/assets/Sidebar/9.png";
 import icon5 from "../../Statics/assets/Sidebar/10.png";
 import iconf from "../../Statics/assets/Sidebar/11.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 import DashCharts from "../../components/ReusableComponents/DashCharts/DashCharts";
 import ColorFullDashCard from "../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard";
 import DashboardBtnList from "../../components/ReusableComponents/DashboardBtnList/DashboardBtnList";
 import DashboardTableCards from "../../components/ReusableComponents/DashboardTableCards/DashboardTableCards";
 
+
+
+
+//REACT-BOOTSTRAP-TABLE IMPORTS
+import BootstrapTable from "react-bootstrap-table-next";
+import "react-bootstrap-table-next/dist/react-bootstrap-table2.css";
+import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
+import paginationFactory from "react-bootstrap-table2-paginator";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
+//
+
+
+
+
+
+
 // Search Bar Images Import
 
 import search from '../../Statics/assets/G1.png'
+import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
+import Loader from "react-loader-spinner";
+import { getSchedule } from "../../Store/Actions/directorActions";
 
 const DirectorDashboard = (props) => {
 
 
+  const { SearchBar } = Search;
+
+ // SORTED DATAFIELDS TABLE
+ const deopdefaultSorted = [
+
+];
+
+
+
+
+//NEW ORDER COLUMN HEADERS
+// const DirectorSchedule222222222222222222222222 = [
+//   { dataField: "order_id", text: "Orders ID", sort: true },
+//   { dataField: "customer.name", text: "Customer Name",sort: true },
+//   { dataField: "customer.market.name", text: "Market & Address" , formatter:appendtwoDatafields ,sort: true},
+//   {
+//     dataField: "order_datetime",
+//     text: "Order Date/Time",
+//     formatter: dateFormatter,
+//     sort: true
+//   },
+//   { dataField: "payment_type", text: "Payment Type",sort: true },
+//   {
+//     dataField: "delivery_status",
+//     text: "Delivery Status",
+//     style: (cell, row) => {
+//       if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
+//       else if (cell === "Cancelled" || cell === "Declined")
+//         return { color: "red", fontWeight: "500" };
+//       else if (
+//         cell === "Paid" ||
+//         cell === "Delivered" ||
+//         cell === "Submitted"
+//       )
+//         return { color: "green", fontWeight: "500" };
+//       else if (cell === "Dispatched" || cell === "Unpaid")
+//         return { color: "blue", fontWeight: "500" };
+//     },
+//     sort: true
+//   },
+//   {
+//     dataField: "payment_status",
+//     text: "Payment Status",
+//     style: (cell, row) => {
+//       if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
+//       else if (cell === "Cancelled" || cell === "Declined")
+//         return { color: "red", fontWeight: "500" };
+//       else if (
+//         cell === "Paid" ||
+//         cell === "Delivered" ||
+//         cell === "Submitted"
+//       )
+//         return { color: "green", fontWeight: "500" };
+//       else if (cell === "Dispatched" || cell === "Unpaid")
+//         return { color: "blue", fontWeight: "500" };
+//     },
+//     sort: true
+//   },
+//   { dataField: "ordered_by.name", text: "Proceed By" ,sort: true},
+//   { dataField: "customer", formatter: btnFormatterneworder, text: "Actions" },
+// ];
+const DirectorSchedule = [
+  { dataField: "assigned_to.field_staff.manager.role", text: "Assigned To" ,sort: true},
+  { dataField: "customer", text: "Doctor/Customer" ,formatter:DocorCus,sort: true},
+  { dataField: "approval_status", text: "Approval Status" ,sort: true},
+  { dataField: "datetime", text: "Date" ,sort: true},
+];
+
+function DocorCus(row,cell)  {
+  return(
+    <>
+    {console.log(cell.is_doctor_customer)}
+    {`${cell.is_doctor_customer}` ?<div>{`${cell.doctor}`}</div>:<div>{`${cell.customer}`}</div>}
+  </>
+  )
+}
 
 
 
@@ -60,23 +156,20 @@ const DirectorDashboard = (props) => {
     
       if(item === "All")
       {
-        tabledataHandler(directorSchedulDataAll)
+        tabledataHandler(schedule)
       }
-      else if(item === "Completed") {
-        tabledataHandler(directorSchedulDataCompleted)
+      else if(item === "Approved") {
+        tabledataHandler(schedule)
       }
-      else if(item === "Pending") {
-        tabledataHandler(directorSchedulDataPending)
+      else if(item === "Awaiting Approval") {
+        tabledataHandler(schedule)
       }
-      else if(item === "Due") {
-        tabledataHandler(directorSchedulDataDue)
+      else if(item === "Reschedule") {
+        tabledataHandler(schedule)
       }
       else if(item === "Cancelled") {
-        tabledataHandler(directorSchedulCancelled)
+        tabledataHandler(schedule)
       }
-     
-       
-    
   };
 
 
@@ -95,6 +188,7 @@ const DirectorDashboard = (props) => {
     
   };
 
+  const [handle, setHandle] = useState("orderoldhistory");
 
   const [sidebarOpen, setsidebarOpen] = useState(false);
   const openSidebar = () => {
@@ -114,6 +208,38 @@ const DirectorDashboard = (props) => {
     // write your logic
     alert(JSON.stringify(item));
   };
+  const buttonname1=["All", "Region"];
+  const buttonname2=["All", "Approved", "Awaiting Approval","Reschedule","Cancelled"];
+  const buttonname3=["List", "Grid"];
+  const loader = useSelector((state) => state?.logIn?.loader);
+  const schedule = useSelector((state) => state?.director?.schedule);
+
+  // API HIT HANDLER ON SIDEBAR BUTTONS
+  const ApiTabhandler = (item) => {
+    setHandle(item);
+    if (item === "schedule") {
+      if (schedule?.length < 1) {
+        dispatch(getSchedule());
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (handle) {
+      dispatch(getSchedule());
+    }
+  }, [dispatch, handle]);
+
+
+    // USEEFFECT HOOK FOR INITIAL API RENDER ON DASHBOARD LOAD
+    // useEffect(() => {
+    //   if (schedule?.length < 1) { 
+    //   dispatch(getSchedule());
+    //   }
+    // }, [dispatch,schedule]);
+  
+    // console.log(schedule)
+
 
   return (
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
@@ -136,7 +262,7 @@ const DirectorDashboard = (props) => {
 
                 <div className="d-flex justify-content-end mb-4 ">
 
-              {["All", "Region"].map(
+              {buttonname1.map(
           (item, index) => (
             <div
               className="d-flex d-inline-flex"
@@ -145,7 +271,7 @@ const DirectorDashboard = (props) => {
             >
               <DashboardBtnList
                 label={item}
-                labelStyle={selectedTab1 === item ? { color: "#fff",borderRadius:'10px'} : ""}
+                bntStyle={{borderRadius:index=== 0 ? '10px 0px 0px 10px' : index=== buttonname1.length-1 ? '0px 10px 10px 0px' : ''  }}                
                 className={
                   selectedTab1 === item
                     ? "dashboardBtnList-item-active py-2"
@@ -228,39 +354,25 @@ const DirectorDashboard = (props) => {
             openSidebar={openSidebar}
             Heading="Schedule"
           />
-          <TableDash
-            cols={Directordashschedule(handleEdit)}
-            data={selectedTabbledata}
-            hoverable
-            reverse={true}
-            SelectedButtons={
-                <div className="row my-4">
-              <div className="col ">
-             
-              {["All", "Completed", "Pending","Due","Cancelled"].map(
-          (item, index) => (
-            <div
-              className="d-flex d-inline-flex "
-              key={index + 1}
-              onClick={() => tabHandler1(item)}
-            >
-              <DashboardBtnList
-                label={item}
-                labelStyle={selectedTab1 === item ? { color: "#fff",borderRadius:'10px'} : ""}
-                className={
-                  selectedTab1 === item
-                    ? "dashboardBtnList-item-active"
-                    : "default-color-and-hover "
-                }
+
+{loader ? (
+            <DashboardMainCard
+            TableDiv={
+
+              <div className="d-flex justify-content-center">
+              <Loader
+                height={100} width={100}
+                type="Rings"
+                color="#0066b3"
               />
-            </div>
-          )
-        )}
               </div>
-        
-              </div>
-            }
-            colorfulcards={
+
+            } reverse="true" />
+  ) : (
+            <DashboardMainCard
+            
+            
+              colorfulcards={
                   <div className="row d-flex justify-content-center">
                     <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
                       <ColorFullDashCard
@@ -296,9 +408,77 @@ const DirectorDashboard = (props) => {
                     </div>
                   </div>
             }
-            bordered={false}
-            {...props}
-          />
+            SelectedButtons={
+              <div className="row my-4">
+            <div className="col ">
+           
+            {buttonname2.map(
+        (item, index) => (
+          <div
+            className="d-flex d-inline-flex "
+            key={index + 1}
+            onClick={() => tabHandler1(item)}
+          >
+            <DashboardBtnList
+              label={item}
+              bntStyle={{borderRadius:index=== 0 ? '10px 0px 0px 10px' : index=== buttonname2.length-1 ? '0px 10px 10px 0px' : ''  }}                
+              className={
+                selectedTab1 === item
+                  ? "dashboardBtnList-item-active"
+                  : "default-color-and-hover "
+              }
+            />
+          </div>
+        )
+      )}
+            </div>
+      
+            </div>
+          }
+              TableDiv={
+                <>
+                  <ToolkitProvider
+                    bootstrap4
+                    keyField="id"
+                    data={selectedTabbledata}
+                    columns={DirectorSchedule}
+                    search
+                  >
+                    {(props) => (
+                      <div className="">
+                        <i
+                          className="fa fa-search"
+                          id="filtersubmit"
+                          style={{ fontSize: "15px" }}
+                        />
+                        <SearchBar
+                          {...props.searchProps}
+                          style={{
+                            padding: "0.375rem 2.5rem",
+                            borderRadius: "10px",
+                          }}
+                        />
+                        <BootstrapTable
+                          {...props.baseProps}
+                          // rowStyle={rowStyle}
+
+                          defaultSorted={deopdefaultSorted}
+                          // pagination={pagination}
+                          pagination={selectedTabbledata.length > 10 ? paginationFactory() : null}  
+                          bordered={false}
+                          condensed
+                          wrapperClasses="table-responsive"
+                        />
+                      </div>
+                    )}
+                  </ToolkitProvider>
+                </>
+              }
+              reverse="true"
+            />
+          )}
+
+
         </Route>
         <Route path={`${props.match.path}/products`}>
           <NavbarDash
@@ -327,7 +507,7 @@ const DirectorDashboard = (props) => {
             SelectedButtons={
               <div className="">
 
-              {["List", "Grid"].map(
+              {buttonname3.map(
           (item, index) => (
             <div
               className="d-flex d-inline-flex "
@@ -339,7 +519,7 @@ const DirectorDashboard = (props) => {
                 iconclassname={
                   item === "List" ? "fa fa-list" : "fa fa-th" 
                 }
-                labelStyle={selectedTab2 === item ? { color: "#fff",borderRadius:'10px'} : ""}
+                bntStyle={{borderRadius:index=== 0 ? '10px 0px 0px 10px' : index===buttonname3.length-1 ? '0px 10px 10px 0px' : ''  }}                
                 className={
                   selectedTab2 === item
                     ? "dashboardBtnList-item-active "
@@ -399,7 +579,7 @@ const DirectorDashboard = (props) => {
             SelectedButtons={
               <div className="">
 
-              {["List", "Grid"].map(
+              {buttonname3.map(
           (item, index) => (
             <div
               className="d-flex d-inline-flex"
@@ -408,8 +588,8 @@ const DirectorDashboard = (props) => {
             >
               <DashboardBtnList
                 label={item}
-                labelStyle={selectedTab2 === item ? { color: "#fff",borderRadius:'0px'} : ""}
-                iconclassname={
+                bntStyle={{borderRadius:index=== 0 ? '10px 0px 0px 10px' : index===buttonname3.length-1 ? '0px 10px 10px 0px' : ''  }}                
+               iconclassname={
                   item === "List" ? "fa fa-list" : "fa fa-th" 
                 }
                 className={
@@ -539,6 +719,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #089DA4" }}
                 btnroute=""
+                // onClick={() => ApiTabhandler("orderoldhistory")}
                 btnName="Reports"
               />
               <SiderbarBtn
@@ -547,6 +728,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #CB912B" }}
                 btnroute="schedule"
+                onClick={() => ApiTabhandler("schedule")}
                 btnName="Schedule"
               />
               <SiderbarBtn
@@ -555,6 +737,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #7F2987" }}
                 btnroute="products"
+                // onClick={() => ApiTabhandler("orderoldhistory")}
                 btnName="Products"
               />
               <SiderbarBtn
@@ -562,6 +745,7 @@ const DirectorDashboard = (props) => {
                 Colr="#4B8F8C"
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #4B8F8C" }}
+                // onClick={() => ApiTabhandler("orderoldhistory")}
                 btnroute="newlylaunched"
                 btnName="Newly Launched"
               />
@@ -571,6 +755,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 btnroute="distributioncenter"
+                // onClick={() => ApiTabhandler("orderoldhistory")}
                 btnName="Distribution Center"
               />
 
@@ -580,6 +765,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #07A04A" }}
                 btnroute="departmenthead"
+                // onClick={() => ApiTabhandler("orderoldhistory")}
                 btnName="Department Head"
               />
               <SiderbarBtn
@@ -588,6 +774,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 btnName="Logout"
+                classlogout={"sidebar__logout"}
                 onClick={logouthandler}
               />
             </>

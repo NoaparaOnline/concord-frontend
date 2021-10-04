@@ -14,6 +14,9 @@ const SERVICE_URLS = {
   getStocksMedicineProducts: 'products/read/medicine',
   getStocksGiftProducts: 'products/read/gift',
   statusChanges:'orders/status-update',
+  getSchedules:'schedules/read',
+  SchedulesApprovalStatusChanges:'schedules/status',
+
 };
 
 const login = (data) =>
@@ -29,6 +32,8 @@ const login = (data) =>
 const forgotPassword = (data) =>
   post(SERVICE_URLS.forgotPassword, data, { feature: featureConstants.static });
 
+ 
+//  DepoManager Api Function
   const getoldOrders = () =>
   get(SERVICE_URLS.getoldOrders, {}, { feature: featureConstants.static });
   
@@ -49,6 +54,18 @@ const getStocksGiftProducts = () =>
 
 const statusChanges = (data) =>
   put(SERVICE_URLS.statusChanges, data, { feature: featureConstants.static });
+//============================
+
+
+//Director Api Function
+const getSchedules = () =>
+  get(SERVICE_URLS.getSchedules, {}, { feature: featureConstants.static });
+
+
+const SchedulesApprovalStatusChanges = (data) =>
+  put(SERVICE_URLS.SchedulesApprovalStatusChanges, data, { feature: featureConstants.static });
+
+//=========================
 
 
 
@@ -65,5 +82,7 @@ const apiServices = {
   statusChanges,
   getStocksMedicineProducts,
   getStocksGiftProducts,
+  getSchedules,
+  SchedulesApprovalStatusChanges,
 };
 export default apiServices;

@@ -44,7 +44,7 @@ const DepotmanagerDashboard = (props) => {
 
 
 
-  const [langbtnshow, setLangbtnshow] = useState(false);
+  
 
 
   const { SearchBar } = Search;
@@ -102,7 +102,7 @@ const DepotmanagerDashboard = (props) => {
       sort: true 
     },
     { dataField: "ordered_by.name", text: "Proceed By",sort: true },
-    { dataField: "customer", formatter: btnFormatter, text: "Actions" },
+    { dataField: "customer", formatter: btnFormatterold, text: "Actions" },
   ];
 
   //NEW ORDER COLUMN HEADERS
@@ -159,6 +159,60 @@ const DepotmanagerDashboard = (props) => {
   ];
 
 
+ //Delivery Status COLUMN HEADERS
+ const DepomanagerDelivery = [
+  { dataField: "order_id", text: "Orders ID", sort: true },
+  { dataField: "customer.name", text: "Customer Name", sort: true },
+  { dataField: "customer.market.name", text: "Market & Address",
+  formatter: appendtwoDatafields,sort: true
+  },
+  {
+    dataField: "order_datetime",
+    text: "Order Date/Time",
+    formatter: dateFormatter,
+    sort: true
+  },
+  { dataField: "payment_type", text: "Payment Type",sort:true },
+  {
+    dataField: "delivery_status",
+    text: "Delivery Status",
+    style: (cell, row) => {
+      if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" ,border:'1px solid #565656' };
+      else if (cell === "Cancelled" || cell === "Declined")
+        return { color: "red", fontWeight: "500" };
+      else if (
+        cell === "Paid" ||
+        cell === "Delivered" ||
+        cell === "Submitted"
+      )
+        return { color: "green", fontWeight: "500" };
+      else if (cell === "Dispatched" || cell === "Unpaid")
+        return { color: "blue", fontWeight: "500" };
+    },
+    sort: true 
+  },
+  {
+    dataField: "payment_status",
+    text: "Payment Status",
+    style: (cell, row) => {
+      if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
+      else if (cell === "Cancelled" || cell === "Declined")
+        return { color: "red", fontWeight: "500" };
+      else if (
+        cell === "Paid" ||
+        cell === "Delivered" ||
+        cell === "Submitted"
+      )
+        return { color: "green", fontWeight: "500" };
+      else if (cell === "Dispatched" || cell === "Unpaid")
+        return { color: "blue", fontWeight: "500" };
+    },
+    sort: true 
+  },
+  { dataField: "ordered_by.name", text: "Proceed By",sort: true },
+  { dataField: "customer", formatter: btnFormatterdelivery, text: "Actions" },
+];
+
  //PAYMENT COLUMN HEADERS
  const DepomanagerPayment = [
   { dataField: "customer.name", text: "Customer Name" ,sort:true },
@@ -182,7 +236,7 @@ const DepotmanagerDashboard = (props) => {
         return { color: "blue", fontWeight: "500" };
     },sort:true
   },
-  { dataField: "customer", formatter: btnFormatterpayment, text: "Actions" },
+  { dataField: "customer", formatter: btnFormatterpay, text: "Actions" },
 ];
 
 
@@ -280,7 +334,7 @@ const DepotmanagerDashboard = (props) => {
   }
 
   //OLD ORDER COLUMN BUTTON FORMATTER
-  function btnFormatter(cell, row) {
+  function btnFormatterold(cell, row) {
     return (
       <>
         <div className="row">
@@ -293,6 +347,84 @@ const DepotmanagerDashboard = (props) => {
                 style={{ color: "#ffffff", textDecoration: "none" }}
                 to={{
                   pathname: "/depotmanager-dashboard/order-request/innerdetail",
+                }}
+                onClick={() => dispatch(getSingleOrder(row))}
+              >
+                View
+              </Link>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  //NEW ORDER COLUMN BUTTON FORMATTER
+  // function btnFormatternew(cell, row) {
+  //   return (
+  //     <>
+  //       <div className="row">
+  //         <div className="col pr-0">
+  //           <div
+  //             className={` btn btn-primary rounded-pill`}
+  //             style={{ backgroundColor: "#0066b3" }}
+  //           >
+  //             <Link
+  //               style={{ color: "#ffffff", textDecoration: "none" }}
+  //               to={{
+  //                 pathname: "/depotmanager-dashboard/new-order/innerdetail",
+  //               }}
+  //               onClick={() => dispatch(getSingleOrder(row))}
+  //             >
+  //               View
+  //             </Link>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </>
+  //   );
+  // }
+
+  //DELIVERY STATUS COLUMN BUTTON FORMATTER
+  function btnFormatterdelivery(cell, row) {
+    return (
+      <>
+        <div className="row">
+          <div className="col pr-0">
+            <div
+              className={` btn btn-primary rounded-pill`}
+              style={{ backgroundColor: "#0066b3" }}
+            >
+              <Link
+                style={{ color: "#ffffff", textDecoration: "none" }}
+                to={{
+                  pathname: "/depotmanager-dashboard/delivery-status/innerdetail",
+                }}
+                onClick={() => dispatch(getSingleOrder(row))}
+              >
+                View
+              </Link>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  //PAYMENT COLUMN BUTTON FORMATTER
+  function btnFormatterpay(cell, row) {
+    return (
+      <>
+        <div className="row">
+          <div className="col pr-0">
+            <div
+              className={` btn btn-primary rounded-pill`}
+              style={{ backgroundColor: "#0066b3" }}
+            >
+              <Link
+                style={{ color: "#ffffff", textDecoration: "none" }}
+                to={{
+                  pathname: "/depotmanager-dashboard/payment-ord/innerdetail",
                 }}
                 onClick={() => dispatch(getSingleOrder(row))}
               >
@@ -365,7 +497,7 @@ const DepotmanagerDashboard = (props) => {
     <Link
                 style={{ color: "#0066b3",fontWeight:'600',fontSize:'14px', textDecoration: "none" }}
                 to={{
-                  pathname: "/depotmanager-dashboard/order-request/innerdetail",
+                  pathname: "/depotmanager-dashboard/new-order/innerdetail",
                 }}
                 onClick={() => dispatch(getSingleOrder(row))}
               >
@@ -389,32 +521,7 @@ const DepotmanagerDashboard = (props) => {
     );
   }
 
-  //PAYMENT COLUMN BUTTON FORMATTER
-  function btnFormatterpayment(cell, row) {
-    return (
-      <>
-        <div className="row">
-          <div className="col pr-0">
-            <div
-              className={` btn btn-primary rounded-pill`}
-              style={{ backgroundColor: "#0066b3" }}
-            >
-              <Link
-                style={{ color: "#ffffff", textDecoration: "none" }}
-                to={{
-                  pathname: "/depotmanager-dashboard/order-request/innerdetail",
-                }}
-                onClick={() => dispatch(getSingleOrder(row))}
-              >
-                View
-              </Link>
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
-
+  
  //Header Column DataFields And Constants And Functions
 
   // End Of Paginition And Search Functionality
@@ -456,12 +563,7 @@ const [show, setShow] = useState(false);
   // API HIT HANDLER ON SIDEBAR BUTTONS
   const ApiTabhandler = (item) => {
     setHandle(item);
-    // if (item === "stock") {
-    //   if (stock?.length < 1) {
-    //     dispatch(getStocksProduct());
-    //   }
-    // } else
-     if (item === "orderoldhistory") {
+    if (item === "orderoldhistory") {
       if (oldorder?.length < 1) {
         dispatch(getoldOrder());
       }
@@ -826,7 +928,7 @@ const buttonname =["All","Medicine", "Gift"]
                     bootstrap4
                     keyField="id"
                     data={oldorder}
-                    columns={DepomanagerOrder}
+                    columns={DepomanagerDelivery}
                     search
                   >
                     {(props) => (
@@ -933,12 +1035,42 @@ const buttonname =["All","Medicine", "Gift"]
         </Route>
 
         {/* Inner Pages Routes */}
+        
         <Route path={`/depotmanager-dashboard/order-request/innerdetail`}>
           <InnerPage
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
+            Heading="Order History"
+            linkRoute="/depotmanager-dashboard"
             {...props}
-          />
+          />          
+        </Route>
+        <Route path={`/depotmanager-dashboard/new-order/innerdetail`}>
+          <InnerPage
+            sidebarOpen={sidebarOpen}
+            openSidebar={openSidebar}
+            Heading="New Order"
+            linkRoute="/depotmanager-dashboard/neworder"
+            {...props}
+          />          
+        </Route>
+        <Route path={`/depotmanager-dashboard/delivery-status/innerdetail`}>
+          <InnerPage
+            sidebarOpen={sidebarOpen}
+            openSidebar={openSidebar}
+            Heading="Delivery Status"
+            linkRoute="/depotmanager-dashboard/deliverystatus"
+            {...props}
+          />          
+        </Route>
+        <Route path={`/depotmanager-dashboard/payment-ord/innerdetail`}>
+          <InnerPage
+            sidebarOpen={sidebarOpen}
+            openSidebar={openSidebar}
+            Heading="Payment"
+            linkRoute="/depotmanager-dashboard/payment"
+            {...props}
+          />          
         </Route>
         <SidebarDashboard
           buttonSidebar={
@@ -949,6 +1081,7 @@ const buttonname =["All","Medicine", "Gift"]
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #089DA4" }}
                 btnroute=""
+                // btnroute1="order-request/innerdetail"
                 onClick={() => ApiTabhandler("orderoldhistory")}
                 btnName="Order History"
               />
@@ -958,6 +1091,7 @@ const buttonname =["All","Medicine", "Gift"]
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #CB912B" }}
                 btnroute="neworder"
+                // btnroute1="new-order/innerdetail"
                 onClick={() => ApiTabhandler("Neworder")}
                 btnName="New Order"
               />
@@ -976,6 +1110,7 @@ const buttonname =["All","Medicine", "Gift"]
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #4B8F8C" }}
                 btnroute="deliverystatus"
+                // btnroute1="delivery-status/innerdetail"
                 onClick={() => ApiTabhandler("order")}
                 btnName="Delivery Status"
               />
@@ -985,6 +1120,7 @@ const buttonname =["All","Medicine", "Gift"]
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 btnroute="payment"
+                // btnroute1="payment-ord/innerdetail"
                 onClick={() => ApiTabhandler("orderhistory")}
                 btnName="Payment"
               />

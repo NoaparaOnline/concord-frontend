@@ -24,6 +24,7 @@ const Login = (props) => {
     const apiData = {
       email_address: data.email,
       password: data.password,
+      fcm_token:"Abc"
     };
 
     const type = await dispatch(loginUser(apiData));
