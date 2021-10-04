@@ -6,10 +6,10 @@ import { logInConstants } from "../Constants/loginConstant";
 
 
 export const getSchedule = () => async (dispatch) => {
-  // dispatch({
-  //   type: logInConstants.SET_LOADER,
-  //   payload: true,
-  // });
+  dispatch({
+    type: logInConstants.SET_LOADER,
+    payload: true,
+  });
   const response = await apiServices.getSchedules();
   console.log("response",response)
   if (response?.data?.response_code === 200) {
@@ -17,10 +17,10 @@ export const getSchedule = () => async (dispatch) => {
       type: directorConstants.GET_SCHEDULE,
       payload: response?.data?.response_data,
     });
-    // dispatch({
-    //   type: logInConstants.SET_LOADER,
-    //   payload: false,
-    // });
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
   }
   
 };

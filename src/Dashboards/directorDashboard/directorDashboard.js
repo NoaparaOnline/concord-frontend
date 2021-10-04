@@ -58,6 +58,7 @@ import search from '../../Statics/assets/G1.png'
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
 import Loader from "react-loader-spinner";
 import { getSchedule } from "../../Store/Actions/directorActions";
+import moment from "moment";
 
 const DirectorDashboard = (props) => {
 
@@ -72,69 +73,32 @@ const DirectorDashboard = (props) => {
 
 
 
-//NEW ORDER COLUMN HEADERS
-// const DirectorSchedule222222222222222222222222 = [
-//   { dataField: "order_id", text: "Orders ID", sort: true },
-//   { dataField: "customer.name", text: "Customer Name",sort: true },
-//   { dataField: "customer.market.name", text: "Market & Address" , formatter:appendtwoDatafields ,sort: true},
-//   {
-//     dataField: "order_datetime",
-//     text: "Order Date/Time",
-//     formatter: dateFormatter,
-//     sort: true
-//   },
-//   { dataField: "payment_type", text: "Payment Type",sort: true },
-//   {
-//     dataField: "delivery_status",
-//     text: "Delivery Status",
-//     style: (cell, row) => {
-//       if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
-//       else if (cell === "Cancelled" || cell === "Declined")
-//         return { color: "red", fontWeight: "500" };
-//       else if (
-//         cell === "Paid" ||
-//         cell === "Delivered" ||
-//         cell === "Submitted"
-//       )
-//         return { color: "green", fontWeight: "500" };
-//       else if (cell === "Dispatched" || cell === "Unpaid")
-//         return { color: "blue", fontWeight: "500" };
-//     },
-//     sort: true
-//   },
-//   {
-//     dataField: "payment_status",
-//     text: "Payment Status",
-//     style: (cell, row) => {
-//       if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
-//       else if (cell === "Cancelled" || cell === "Declined")
-//         return { color: "red", fontWeight: "500" };
-//       else if (
-//         cell === "Paid" ||
-//         cell === "Delivered" ||
-//         cell === "Submitted"
-//       )
-//         return { color: "green", fontWeight: "500" };
-//       else if (cell === "Dispatched" || cell === "Unpaid")
-//         return { color: "blue", fontWeight: "500" };
-//     },
-//     sort: true
-//   },
-//   { dataField: "ordered_by.name", text: "Proceed By" ,sort: true},
-//   { dataField: "customer", formatter: btnFormatterneworder, text: "Actions" },
-// ];
 const DirectorSchedule = [
-  { dataField: "assigned_to.field_staff.manager.role", text: "Assigned To" ,sort: true},
+  { dataField: "assigned_to.role.category.name",formatter:uppercase, text: "Assigned To" ,sort: true},
   { dataField: "customer", text: "Doctor/Customer" ,formatter:DocorCus,sort: true},
-  { dataField: "approval_status", text: "Approval Status" ,sort: true},
-  { dataField: "datetime", text: "Date" ,sort: true},
+  { dataField: "approval_status",formatter:capitalize, text: "Approval Status" ,sort: true},
+  { dataField: "datetime",formatter:dateFormatter, text: "Date" ,sort: true},
 ];
 
+
+
+// EPOCH TO DATE FORMATE TABLE USING MOMENT PAKAGE
+function dateFormatter(cell) {
+  return <span>{moment.unix(cell).format("MMM DD, YYYY")}</span>;
+}
+//UpperCase Cell
+function uppercase(cell) {
+  return <span className="text-uppercase">{cell}</span>;
+}
+//capitalize Cell
+function capitalize(cell) {
+  return <span className="text-capitalize">{cell}</span>;
+}
 function DocorCus(row,cell)  {
   return(
     <>
     {console.log(cell.is_doctor_customer)}
-    {`${cell.is_doctor_customer}` ?<div>{`${cell.doctor}`}</div>:<div>{`${cell.customer}`}</div>}
+    {`${cell.is_doctor_customer}` ?<div>{`${cell.customer.name}`}</div>:<div>{`${cell.doctor.name}`}</div>}
   </>
   )
 }
