@@ -11,7 +11,6 @@ export const getSchedule = () => async (dispatch) => {
     payload: true,
   });
   const response = await apiServices.getSchedules();
-  console.log("response",response)
   if (response?.data?.response_code === 200) {
     dispatch({
       type: directorConstants.GET_SCHEDULE,
@@ -24,6 +23,22 @@ export const getSchedule = () => async (dispatch) => {
   }
   
 };
+export const addSchedule = (data) => async (dispatch) => {
+  const response = await apiServices.addSchedules(data);
+  if (response?.data?.response_code === 200) {
+    dispatch(getSchedule());
+    toast.warning("Schedule Added Successfully");
+  } else {
+    toast.error(response?.response_message);
+  }
+};
+
+
+
+
+
+
+
 
 export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
     const response = await apiServices.SchedulesApprovalStatusChanges(data);
@@ -38,3 +53,36 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
   };
   
 
+  export const getDoctors = () => async (dispatch) => {
+
+    const response = await apiServices.getdoctors();
+    if (response?.data?.response_code === 200) {
+      dispatch({
+        type: directorConstants.GET_DOCTOR,
+        payload: response?.data?.response_data,
+      });
+    }
+    
+  };
+  export const getCustomers = () => async (dispatch) => {
+
+    const response = await apiServices.getcustomers();
+    if (response?.data?.response_code === 200) {
+      dispatch({
+        type: directorConstants.GET_CUSTOMER,
+        payload: response?.data?.response_data,
+      });
+    }
+    
+  };
+  export const getAssignedto = () => async (dispatch) => {
+
+    const response = await apiServices.getassignedto();
+    if (response?.data?.response_code === 200) {
+      dispatch({
+        type: directorConstants.GET_ASSIGNED_TO,
+        payload: response?.data?.response_data,
+      });
+    }
+    
+  };

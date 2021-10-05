@@ -361,31 +361,7 @@ const DepotmanagerDashboard = (props) => {
     );
   }
 
-  //NEW ORDER COLUMN BUTTON FORMATTER
-  // function btnFormatternew(cell, row) {
-  //   return (
-  //     <>
-  //       <div className="row">
-  //         <div className="col pr-0">
-  //           <div
-  //             className={` btn btn-primary rounded-pill`}
-  //             style={{ backgroundColor: "#0066b3" }}
-  //           >
-  //             <Link
-  //               style={{ color: "#ffffff", textDecoration: "none" }}
-  //               to={{
-  //                 pathname: "/depotmanager-dashboard/new-order/innerdetail",
-  //               }}
-  //               onClick={() => dispatch(getSingleOrder(row))}
-  //             >
-  //               View
-  //             </Link>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </>
-  //   );
-  // }
+ 
 
   //DELIVERY STATUS COLUMN BUTTON FORMATTER
   function btnFormatterdelivery(cell, row) {
@@ -460,7 +436,7 @@ const DepotmanagerDashboard = (props) => {
             <span class="caret">Action</span>
             <span class="sr-only">Toggle Dropdown</span>
           </button>
-          <ul class="dropdown-menu" role="menu">
+          <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <li>
 
               <Link

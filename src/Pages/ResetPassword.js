@@ -15,6 +15,8 @@ const params = queryString.parse(props.location.search);
 
   // const qid = queryString.parse(new URLSearchParams(props.location.search)); 
   // console.log(qid.uid);
+  console.log(params.uid);
+  console.log(params.token);
 
 
     const dispatch = useDispatch();
@@ -26,8 +28,8 @@ const params = queryString.parse(props.location.search);
     const onSubmit = async (data) => {
       if (data.password === data.confirmPassword) {
         const apiData = {
-          id: params.uid,
-          token: params.token,
+          uid: params.uid,
+          access_token: params.token,
           new_password: data.password,
         };
         const success = await dispatch(resetPassword(apiData));

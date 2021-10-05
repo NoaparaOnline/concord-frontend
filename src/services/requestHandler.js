@@ -1,4 +1,4 @@
-import { get, patch, post,put } from "./HttpProvider";
+import { get, patch, post, put } from "./HttpProvider";
 import featureConstants from "./features-constants";
 
 const SERVICE_URLS = {
@@ -7,67 +7,89 @@ const SERVICE_URLS = {
   resetPassword: "users/reset-password",
   forgotPassword: "users/forgot-password",
   logout: "users/logout",
-  getoldOrders: 'orders/read/old',
-  getOrders: 'orders/read',
-  getnewOrders: 'orders/read/new',
-  getStocksProducts: 'products/read',
-  getStocksMedicineProducts: 'products/read/medicine',
-  getStocksGiftProducts: 'products/read/gift',
-  statusChanges:'orders/status-update',
-  getSchedules:'schedules/read',
-  SchedulesApprovalStatusChanges:'schedules/status',
-
+  getoldOrders: "orders/read/old",
+  getOrders: "orders/read",
+  getnewOrders: "orders/read/new",
+  getStocksProducts: "products/read",
+  getStocksMedicineProducts: "products/read/medicine",
+  getStocksGiftProducts: "products/read/gift",
+  statusChanges: "orders/status-update",
+  getSchedules: "schedules/read",
+  addSchedules: "schedules/create",
+  SchedulesApprovalStatusChanges: "schedules/status",
+  getdoctors: "doctors/read",
+  getcustomers: "customers/read",
+  getassignedto: "fieldstaffs/childs",
 };
 
 const login = (data) =>
   post(SERVICE_URLS.login, data, { feature: featureConstants.login });
 
-  const logout = () =>
+const logout = () =>
   post(SERVICE_URLS.logout, {}, { feature: featureConstants.login });
 
-  const resetPassword = (data) =>
+const resetPassword = (data) =>
   patch(SERVICE_URLS.resetPassword, data, {
     feature: featureConstants.static,
   });
 const forgotPassword = (data) =>
   post(SERVICE_URLS.forgotPassword, data, { feature: featureConstants.static });
 
- 
 //  DepoManager Api Function
-  const getoldOrders = () =>
+const getoldOrders = () =>
   get(SERVICE_URLS.getoldOrders, {}, { feature: featureConstants.static });
-  
-  const getOrders = () =>
+
+const getOrders = () =>
   get(SERVICE_URLS.getOrders, {}, { feature: featureConstants.static });
 
-  const getnewOrders = () =>
+const getnewOrders = () =>
   get(SERVICE_URLS.getnewOrders, {}, { feature: featureConstants.static });
 
 const getStocksProducts = () =>
   get(SERVICE_URLS.getStocksProducts, {}, { feature: featureConstants.static });
 
 const getStocksMedicineProducts = () =>
-  get(SERVICE_URLS.getStocksMedicineProducts, {}, { feature: featureConstants.static });
+  get(
+    SERVICE_URLS.getStocksMedicineProducts,
+    {},
+    { feature: featureConstants.static }
+  );
 
 const getStocksGiftProducts = () =>
-  get(SERVICE_URLS.getStocksGiftProducts, {}, { feature: featureConstants.static });
+  get(
+    SERVICE_URLS.getStocksGiftProducts,
+    {},
+    { feature: featureConstants.static }
+  );
 
 const statusChanges = (data) =>
   put(SERVICE_URLS.statusChanges, data, { feature: featureConstants.static });
 //============================
 
-
 //Director Api Function
 const getSchedules = () =>
   get(SERVICE_URLS.getSchedules, {}, { feature: featureConstants.static });
 
+const addSchedules = (data) =>
+  post(SERVICE_URLS.addSchedules, data, {
+    feature: featureConstants.static,
+  });
 
 const SchedulesApprovalStatusChanges = (data) =>
-  put(SERVICE_URLS.SchedulesApprovalStatusChanges, data, { feature: featureConstants.static });
+  put(SERVICE_URLS.SchedulesApprovalStatusChanges, data, {
+    feature: featureConstants.static,
+  });
+
+  const getdoctors = () =>
+  get(SERVICE_URLS.getdoctors, {}, { feature: featureConstants.static });
+
+  const getcustomers = () =>
+  get(SERVICE_URLS.getcustomers, {}, { feature: featureConstants.static });
+
+  const getassignedto = () =>
+  get(SERVICE_URLS.getassignedto, {}, { feature: featureConstants.static });
 
 //=========================
-
-
 
 const apiServices = {
   // define variables
@@ -83,6 +105,10 @@ const apiServices = {
   getStocksMedicineProducts,
   getStocksGiftProducts,
   getSchedules,
+  addSchedules,
   SchedulesApprovalStatusChanges,
+  getdoctors,
+  getcustomers,
+  getassignedto,
 };
 export default apiServices;
