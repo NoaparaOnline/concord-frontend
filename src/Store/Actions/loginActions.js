@@ -9,8 +9,7 @@ import { toast } from "react-toastify";
       if (response?.data?.response_code === 200) {
         setToken({
           key: response?.data?.response_data?.token?.access_token,
-          type: response?.data?.response_data?.token.user?.role?.category?.name,
-      
+          type: response?.data?.response_data?.token.user?.role?.category?.name,      
         });
         saveUser(response?.data?.response_data?.token?.user);
         setUserRole( response?.data?.response_data?.token?.user?.role?.category?.name);

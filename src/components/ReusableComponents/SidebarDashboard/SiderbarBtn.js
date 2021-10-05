@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './SidebarDashboard.css'
 const SiderbarBtn = (props) => {
-    
     const {borderSidebtn,btnroute,imgbtn,btnName,match,Colr,classlogout,disablelink} = props;
     return (
         <>

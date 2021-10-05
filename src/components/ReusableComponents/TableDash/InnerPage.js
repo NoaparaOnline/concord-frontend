@@ -26,11 +26,11 @@ const InnerPage = (props) => {
       <NavbarDash
         sidebarOpen={props.sidebarOpen}
         openSidebar={props.openSidebar}
-        Heading="Order History"
+        Heading={props.Heading}
         BackBtn={
           <>
             <Link
-              to="/depotmanager-dashboard"
+              to={props.linkRoute}
               style={{ textDecoration: "none" }}
             >
               <span

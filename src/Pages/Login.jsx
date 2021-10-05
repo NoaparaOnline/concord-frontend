@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 // import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { useDispatch } from "react-redux";
-import { loginUser } from "../Store/Actions/loginActions";
+import { loginUser,forgotPassword } from "../Store/Actions/loginActions";
 import { Link } from "react-router-dom";
 // import { forgotPassword } from "../Store/Actions/loginActions";
 
@@ -24,6 +24,7 @@ const Login = (props) => {
     const apiData = {
       email_address: data.email,
       password: data.password,
+      fcm_token:"Abc"
     };
 
     const type = await dispatch(loginUser(apiData));
@@ -46,15 +47,15 @@ const Login = (props) => {
 
 
   const onSubmitEmail = async () => {
-    // const apiData = {
-    //   email_address: email,
-    // };
-
+    const apiData = {
+      email_address: email,
+    };
+    dispatch(forgotPassword(apiData));
     props.onHide();
   };
 
 
-  // const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
 
 
@@ -189,7 +190,7 @@ const Login = (props) => {
                           className="form-control logmod mt-4"
                           id="inlineFormInputGroupUsername2"
                           placeholder="Username/Email"
-                          // onChange={(e) => setEmail(e.target.value)}
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                       </div>
 
