@@ -449,15 +449,15 @@ export const directorproductbody = [
   {
     "sno": 101,
     "name": "Aceclofenac",
-    "tr": "152.15",
+    "tr": "155.15",
     "rp": "173.28",
     "addby": "Yasir Sheikh",
   },
    
   {
     "sno": 101,
-    "name": "Aceclofenac",
-    "tr": "152.15",
+    "name": "Aceclofennn",
+    "tr": "159.15",
     "rp": "173.28",
     "addby": "Yasir Sheikh",
   },

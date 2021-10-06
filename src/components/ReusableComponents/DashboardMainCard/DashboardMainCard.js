@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DashboardMainCard = ({TableDiv,SelectedButtons,colorfulcards}) => {
+const DashboardMainCard = ({TableDiv,SelectedButtons,colorfulcards,reverse,TableCardGrid,DivCardComponent,DivChartComponent}) => {
     return (
         <>
     <main>
@@ -16,7 +16,17 @@ const DashboardMainCard = ({TableDiv,SelectedButtons,colorfulcards}) => {
     >
       {colorfulcards}
       {SelectedButtons}
-        {TableDiv}
+       
+      {reverse ? (
+        <>{TableDiv}</>
+      ) : (
+        <>
+          {DivCardComponent}
+          {DivChartComponent}
+          {TableCardGrid}
+        </>
+      )}
+        
      </div>
     </main>   
         </>

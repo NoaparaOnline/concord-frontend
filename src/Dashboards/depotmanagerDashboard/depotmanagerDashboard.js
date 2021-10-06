@@ -640,7 +640,9 @@ const DepotmanagerDashboard = (props) => {
           />
 
           {loader ? (
-            <DashboardMainCard TableDiv={
+            <DashboardMainCard
+            reverse={true}
+            TableDiv={
               <div className="d-flex justify-content-center">
                 <Loader
                   height={100} width={100}
@@ -651,6 +653,7 @@ const DepotmanagerDashboard = (props) => {
             } reverse="true" />
           ) : (
             <DashboardMainCard
+            reverse={true}
               TableDiv={
                 <>
                   <ToolkitProvider
@@ -705,7 +708,9 @@ const DepotmanagerDashboard = (props) => {
           />
 
           {loader ? (
-            <DashboardMainCard TableDiv={
+            <DashboardMainCard
+            reverse={true}
+            TableDiv={
 
               <div className="d-flex justify-content-center">
                 <Loader
@@ -718,6 +723,7 @@ const DepotmanagerDashboard = (props) => {
             } reverse="true" />
           ) : (
             <DashboardMainCard
+            reverse={true}
               TableDiv={
                 <>
                   <ToolkitProvider
@@ -772,7 +778,9 @@ const DepotmanagerDashboard = (props) => {
           />
 
           {loader ? (
-            <DashboardMainCard TableDiv={
+            <DashboardMainCard
+            reverse={true}
+             TableDiv={
 
               <div className="d-flex justify-content-center">
                 <Loader
@@ -785,7 +793,7 @@ const DepotmanagerDashboard = (props) => {
             } reverse="true" />
           ) : (
             <DashboardMainCard
-
+            reverse={true}
               SelectedButtons={
                 <div className="row my-4">
                   <div className="col ">
@@ -864,7 +872,10 @@ const DepotmanagerDashboard = (props) => {
           />
 
           {loader ? (
-            <DashboardMainCard TableDiv={
+            <DashboardMainCard 
+            reverse={true}
+            
+            TableDiv={
 
               <div className="d-flex justify-content-center">
                 <Loader
@@ -877,7 +888,9 @@ const DepotmanagerDashboard = (props) => {
             } reverse="true" />
           ) : (
             <DashboardMainCard
-              TableDiv={
+            reverse={true}
+              
+            TableDiv={
                 <>
                   <ToolkitProvider
                     bootstrap4
@@ -930,7 +943,10 @@ const DepotmanagerDashboard = (props) => {
           />
 
           {loader ? (
-            <DashboardMainCard TableDiv={
+            <DashboardMainCard 
+            reverse={true}
+            
+            TableDiv={
 
               <div className="d-flex justify-content-center">
                 <Loader
@@ -943,7 +959,9 @@ const DepotmanagerDashboard = (props) => {
             } reverse="true" />
           ) : (
             <DashboardMainCard
-              TableDiv={
+            reverse={true}
+              
+            TableDiv={
                 <>
                   <ToolkitProvider
                     bootstrap4

@@ -34,12 +34,6 @@ export const addSchedule = (data) => async (dispatch) => {
 };
 
 
-
-
-
-
-
-
 export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
     const response = await apiServices.SchedulesApprovalStatusChanges(data);
     
@@ -53,9 +47,9 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
   };
   
 
-  export const getDoctors = () => async (dispatch) => {
+  export const getDoctors = (data) => async (dispatch) => {
 
-    const response = await apiServices.getdoctors();
+    const response = await apiServices.getdoctors(data);
     if (response?.data?.response_code === 200) {
       dispatch({
         type: directorConstants.GET_DOCTOR,
@@ -64,9 +58,9 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
     }
     
   };
-  export const getCustomers = () => async (dispatch) => {
+  export const getCustomers = (data) => async (dispatch) => {
 
-    const response = await apiServices.getcustomers();
+    const response = await apiServices.getcustomers(data);
     if (response?.data?.response_code === 200) {
       dispatch({
         type: directorConstants.GET_CUSTOMER,
@@ -81,6 +75,39 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
     if (response?.data?.response_code === 200) {
       dispatch({
         type: directorConstants.GET_ASSIGNED_TO,
+        payload: response?.data?.response_data,
+      });
+    }
+    
+  };
+  export const getSingleUIDApproval = (data) =>  (dispatch) => {
+    dispatch({
+      type: directorConstants.GET_UID_APPROVAL,
+      payload: data,
+    });
+  };
+
+
+  // GET PRODUCTS ALL DIRECTOR
+  export const getProductsall = () => async (dispatch) => {
+
+    const response = await apiServices.getproductsall();
+    if (response?.data?.response_code === 200) {
+      dispatch({
+        type: directorConstants.GET_PRODUCTS_ALL,
+        payload: response?.data?.response_data,
+      });
+    }
+    
+  };
+
+  // GET PRODUCTS NEWLY DIRECTOR
+  export const getProductsnew = () => async (dispatch) => {
+
+    const response = await apiServices.getproductsnew();
+    if (response?.data?.response_code === 200) {
+      dispatch({
+        type: directorConstants.GET_PRODUCTS_NEW,
         payload: response?.data?.response_data,
       });
     }

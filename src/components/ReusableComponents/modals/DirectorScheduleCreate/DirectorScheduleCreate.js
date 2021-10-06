@@ -1,36 +1,107 @@
 import React, { useEffect, useState } from "react";
 import { Form, Modal } from "react-bootstrap";
 import "react-bootstrap-typeahead/css/Typeahead.css";
-import { Typeahead } from "react-bootstrap-typeahead";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { getAssignedto } from "../../../../Store/Actions/directorActions";
+import {
+  addSchedule,
+  getAssignedto,
+  getCustomers,
+  getDoctors,
+} from "../../../../Store/Actions/directorActions";
 const DirectorScheduleCreate = (props) => {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm();
+
+ // Normal States
+ const [isdocCus, setIsdocCus] = useState(true);
+ const [assginto, setAssginto] = useState();
 
   const doctor = useSelector((state) => state?.director?.doctor);
   const customer = useSelector((state) => state?.director?.customer);
   const assignedto = useSelector((state) => state?.director?.assignedto);
   const dispatch = useDispatch();
-
+  console.log("assginto",assginto);
+  const selectusertype = watch("usert");
+  if(selectusertype === "doctor")
+  {
+      if (doctor?.length < 1) {
+        const apiData = {
+          child_uid:assginto
+        };
+        console.log("getDoctorsd",apiData);
+          dispatch(getDoctors(apiData));
+      }
+      
+  }
+  else if(selectusertype === "customer")
+  {
+      if (customer?.length < 1) {
+        const apiData = {
+          child_uid:assginto
+        };
+        console.log("getCustomersd",apiData);
+          dispatch(getCustomers(apiData));
+      }
+      
+  }
   useEffect(() => {
-    dispatch(getAssignedto());
-  }, [dispatch]);
-  const onSubmit = async (data) => {
-    //   const apiData = {
-    //     is_doctor_customer,
-    //     customer_uid,
-    //     datetime,
-    //     assigned_to_uid,
-    //   };
-    // console.log(apiData);
-    //   dispatch(addSchedule(apiData));
-    props.onHide();
-  };
+    if (assignedto?.length < 1) {
+        dispatch(getAssignedto());
+    }
+  },[dispatch,doctor,customer])
+
+  const date = watch("date",);
+  const time = watch("time",);
+  const datetime = date +" "+ time ;      
+const onSubmit = async (data) => {
+  
+// if(data.usert ==="doctor")
+// {
+//   setIsdocCus(true);
+// }
+// else if(data.usert ==="customer")
+// {
+//   setIsdocCus(false);
+// }
+
+      // console.log("isdocCus",isdocCus)
+
+      if(data.usert ==="doctor")
+      {
+        // alert(isdocCus);
+        const apiData = {
+          is_doctor_customer:true,
+          doctor_uid:data.name,
+          datetime:datetime,
+          assigned_to_uid:assginto,
+        };
+        dispatch(addSchedule(apiData));
+        console.log(apiData);
+      }
+      else if(data.usert ==="customer")
+      {
+        // alert(isdocCus);
+        const apiData = {
+          is_doctor_customer:false,
+          customer_uid:data.name,
+          datetime:datetime,
+          assigned_to_uid:data.assign,
+        };
+        dispatch(addSchedule(apiData));
+        console.log(apiData);
+      }    
+             
+              props.onHide();
+          };
+
+
+          console.log(datetime)
+  
   return (
     <>
       <Modal show={props.show} onHide={props.onHide} centered size="md">
@@ -39,29 +110,53 @@ const DirectorScheduleCreate = (props) => {
             className=""
             style={{ fontWeight: "600", fontSize: "22px", color: "#0066b3" }}
           >
-            ADD SCHEDULE
+            {" "}
+            Add New Schedules{" "}
           </span>
         </Modal.Header>
         <Modal.Body>
           <div className="row px-3">
+        
             <form onSubmit={handleSubmit(onSubmit)} className="w-100">
               <div
                 className="row"
                 style={{ display: "flex", justifyContent: "center" }}
               >
+                <div className="col-lg-12">
+                  <span className="label-name-login">Assigned To</span>
+                  <Form.Control
+                    as="select"
+                    className="input-login-modal"
+                    custom
+                    onChange={(e) => { setAssginto(e.target.value) }}
+                  >
+                    {assignedto.map((item, index) => {
+                      return (
+                        <option value={item?.uid} key={index + 1}>
+                          {item?.name}
+                        </option>
+                      );
+                    })}
+                  </Form.Control>
+                  {errors?.assign?.message ? (
+                    <div className="text-error">{errors?.assign?.message}</div>
+                  ) : (
+                    ""
+                  )}
+                </div>
                 <div className="col-lg-6">
                   <span className="label-name-login">User Type</span>
                   <Form.Control
                     as="select"
                     className="input-login-modal"
                     custom
-                    {...register("user", {})}
+                    {...register("usert", {})}
                   >
                     <option value="doctor">Doctor</option>
                     <option value="customer">Customer</option>
                   </Form.Control>
-                  {errors?.user?.message ? (
-                    <div className="text-error">{errors?.user?.message}</div>
+                  {errors?.usert?.message ? (
+                    <div className="text-error">{errors?.usert?.message}</div>
                   ) : (
                     ""
                   )}
@@ -69,26 +164,42 @@ const DirectorScheduleCreate = (props) => {
 
                 <div className="col-lg-6">
                   <span className="label-name-login">Name</span>
-                  <Form.Group>
-                    <Typeahead
-                      id="basic-typeahead-single"
-                      labelKey="name"
-                      onChange={(selected) => {
-                        // setSingleSelections(selected);
-                        // changeHanler(selected);
-                      }}
-                      //   options={departments}
-                      placeholder=""
-                      //   selected={singleSelections}
-                    />
-                  </Form.Group>
+                  <Form.Control
+                    as="select"
+                    className="input-login-modal"
+                    custom
+                    {...register("name", {})}
+                  >
+                    {selectusertype === "doctor"
+                      ? doctor.map((item, index) => {
+                          return (
+                            <option value={item?.uid} key={index + 1}>
+                              {item?.name}
+                            </option>
+                          );
+                        })
+                      : selectusertype === "customer"
+                      ? customer.map((item, index) => {
+                          return (
+                            <option value={item?.uid} key={index + 1}>
+                              {item?.name}
+                            </option>
+                          );
+                        })
+                      : ""}
+                  </Form.Control>
+                  {errors?.usert?.message ? (
+                    <div className="text-error">{errors?.usert?.message}</div>
+                  ) : (
+                    ""
+                  )}
                 </div>
 
                 <div className="col-lg-6">
                   <span className="label-name-login">Date</span>
                   <input
                     className="input-login-modal"
-                    type="datetime-local"
+                    type="date"
                     {...register("date", {
                       required: {
                         value: true,
@@ -102,26 +213,28 @@ const DirectorScheduleCreate = (props) => {
                     ""
                   )}
                 </div>
+
                 <div className="col-lg-6">
-                  <span className="label-name-login">Assigned To</span>
-                  <Form.Control
-                    as="select"
+                  <span className="label-name-login">Time</span>
+                  <input
                     className="input-login-modal"
-                    custom
-                    {...register("assigned", {})}
-                  >
-                    {assignedto?.map((item, index) => (
-                      <option value={item?.uid} key={index+1}>{item?.designation}</option>
-                    ))}
-                  </Form.Control>
-                  {errors?.assigned?.message ? (
-                    <div className="text-error">
-                      {errors?.assigned?.message}
-                    </div>
+                    type="time"
+                    step="1"
+                    {...register("time", {
+                      required: {
+                        value: true,
+                        message: "this field is required field",
+                      },
+                    })}
+                  />
+                  {errors?.time?.message ? (
+                    <div className="text-error">{errors?.time?.message}</div>
                   ) : (
                     ""
                   )}
                 </div>
+
+                
               </div>
               <input
                 type="submit"

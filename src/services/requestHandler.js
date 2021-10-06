@@ -20,6 +20,8 @@ const SERVICE_URLS = {
   getdoctors: "doctors/read",
   getcustomers: "customers/read",
   getassignedto: "fieldstaffs/childs",
+  getproductsall: "products/read/medicine",
+  getproductsnew: "products/read/medicine/new",
 };
 
 const login = (data) =>
@@ -80,14 +82,21 @@ const SchedulesApprovalStatusChanges = (data) =>
     feature: featureConstants.static,
   });
 
-  const getdoctors = () =>
-  get(SERVICE_URLS.getdoctors, {}, { feature: featureConstants.static });
+  const getdoctors = (data) =>
+  get(SERVICE_URLS.getdoctors, "",data, { feature: featureConstants.static });
 
-  const getcustomers = () =>
-  get(SERVICE_URLS.getcustomers, {}, { feature: featureConstants.static });
+  const getcustomers = (data) =>
+  get(SERVICE_URLS.getcustomers, "",data, { feature: featureConstants.static });
 
   const getassignedto = () =>
   get(SERVICE_URLS.getassignedto, {}, { feature: featureConstants.static });
+
+  const getproductsall = () =>
+  get(SERVICE_URLS.getproductsall, {}, { feature: featureConstants.static });
+
+  const getproductsnew = () =>
+  get(SERVICE_URLS.getproductsnew, {}, { feature: featureConstants.static });
+
 
 //=========================
 
@@ -110,5 +119,7 @@ const apiServices = {
   getdoctors,
   getcustomers,
   getassignedto,
+  getproductsall,
+  getproductsnew,
 };
 export default apiServices;
