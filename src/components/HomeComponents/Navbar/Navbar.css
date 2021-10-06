@@ -20,12 +20,12 @@
 
 
 .navmenu_custome_li:focus, .navmenu_custome_li:hover {
-    color: #0066b3;
-    background-color: #fff;
+    color: #fff !important;
+    background-color: #0066b3 !important;
 }
 .navmenu_custome:focus, .navmenu_custome:hover {
-    color: #0066b3;
-    background-color: #fff;
+    color: #0066b3 !important;
+    background-color: #fff !important;
 }
 
 
@@ -53,7 +53,6 @@
     transition: all 0.3s linear;
     text-align: start;
     font-size: 12px !important;
-    color: #565656 !important;
     font-weight: 600 !important;
     text-transform: 'uppercase' !important;
     letter-spacing: 0.5px !important;

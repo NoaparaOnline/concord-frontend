@@ -431,36 +431,37 @@ const DepotmanagerDashboard = (props) => {
     return (
       <>
         <div class="btn-group">
-          <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+          <button class="btn btn-secondary " data-toggle="dropdown" style={{borderRadius:'5px'}}>
           {/* <button class="btn btn-secondary">Action</button> */}
-            <span class="caret">Action</span>
+            <span style={{fontSize:'18px',fontWeight:'600'}}> ... </span>
             <span class="sr-only">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <li>
-
+              <i className="fa fa-edit ms-2"></i>
               <Link
-                style={{ color: "#0066b3", fontWeight: '600', fontSize: '14px', textDecoration: "none" }}
+                style={{ color: "#0066b3", fontWeight: '500', fontSize: '14px', textDecoration: "none" }}
                 onClick={() => {
                   handleShow();
                   dispatch(getSingleUID(row));
                 }}
 
               >
-                Status
+              &nbsp; Update Status
               </Link>
 
             </li>
             <li>
+            <i className="fa fa-eye ms-2"></i>
 
               <Link
-                style={{ color: "#0066b3", fontWeight: '600', fontSize: '14px', textDecoration: "none" }}
+                style={{ color: "#0066b3", fontWeight: '500', fontSize: '14px', textDecoration: "none" }}
                 to={{
                   pathname: "/depotmanager-dashboard/new-order/innerdetail",
                 }}
                 onClick={() => dispatch(getSingleOrder(row))}
               >
-                View
+              &nbsp;  View
               </Link>
 
             </li>

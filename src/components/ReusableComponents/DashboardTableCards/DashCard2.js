@@ -37,7 +37,7 @@ const DashCard = ({ data }) => {
                       className="ms-3"
                       style={{ color: "#565656", fontSize: "16px" }}
                     >
-                      {data.name}
+                      {data.name ? data.name : "N/A" }
                     </span>
                   </div>
                   <div className="mt-2">
@@ -50,7 +50,7 @@ const DashCard = ({ data }) => {
                         fontWeight: "400",
                       }}
                     >
-                      {data.position}
+                      {data.position ? data.position : "N/A"}
                     </span>
                   </div>
                   <div className="mt-2">
@@ -63,7 +63,7 @@ const DashCard = ({ data }) => {
                         fontWeight: "400",
                       }}
                     >
-                      {data.num}
+                      {data.phone ? data.phone: "N/A"}
                     </span>
                   </div>
                   <div className="mt-2">
@@ -80,7 +80,7 @@ const DashCard = ({ data }) => {
                           fontWeight: "400",
                         }}
                       >
-                        {data.mailname}
+                        {data.email ? data.email: "N/A" }
                       </span>
                     </a>
                   </div>
@@ -109,7 +109,7 @@ const DashCard = ({ data }) => {
                           fontWeight: "400",
                         }}
                       >
-                        {data.mapname}
+                        {data.address ? data.address : "N/A"}
                       </span>
                     </a>
                   </div>

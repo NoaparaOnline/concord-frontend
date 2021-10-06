@@ -5,14 +5,10 @@ import TableDash from "../../components/ReusableComponents/TableDash/TableDash1"
 import "../depotmanagerDashboard/depotmanagerDashboard.css";
 import DashCard from "../../components/ReusableComponents/DashboardTableCards/DashCard2";
 import {
-  directorSchedulDataAll,
-  directorSchedulDataCompleted,
-  directorproductbody,
   districards,
 } from "../../components/ReusableComponents/TableDash/mockData";
 import {
   tableConstants,
-  Directordashproducthead,
 } from "../../components/ReusableComponents/TableDash/tableConstant1";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
@@ -44,7 +40,7 @@ import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import search from "../../Statics/assets/G1.png";
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
 import Loader from "react-loader-spinner";
-import { getProductsall, getProductsnew, getSchedule, getSingleUIDApproval } from "../../Store/Actions/directorActions";
+import { getProductsall, getProductsnew, getSchedule, getSingleUIDApproval,getDistributioncenter,getDepartmenthead } from "../../Store/Actions/directorActions";
 import moment from "moment";
 import DirectorScheduleCreate from "../../components/ReusableComponents/modals/DirectorScheduleCreate/DirectorScheduleCreate";
 import DirectorApprovalStatusChange from "../../components/ReusableComponents/modals/DirectorApprovalStatusChange/DirectorApprovalStatusChange";
@@ -56,6 +52,8 @@ const DirectorDashboard = (props) => {
   const schedule = useSelector((state) => state?.director?.schedule);
   const productall = useSelector((state) => state?.director?.productall);
   const productnew = useSelector((state) => state?.director?.productnew);
+  const distributioncenter = useSelector((state) => state?.director?.distributioncenter);
+  const departmenthead = useSelector((state) => state?.director?.departmenthead);
 
   // SORTED DATAFIELDS TABLE
   const deopdefaultSorted = [
@@ -174,19 +172,22 @@ const DirectorDashboard = (props) => {
       <>
         <div class="btn-group">
           <button
-            class="btn btn-secondary dropdown-toggle"
+            class="btn btn-secondary "
             data-toggle="dropdown"
+            style={{borderRadius:'5px'}}
           >
             {/* <button class="btn btn-secondary">Action</button> */}
-            <span class="caret">Action</span>
+            <span style={{fontSize:'18px',fontWeight:'600'}}> ... </span>
             <span class="sr-only">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <li>
+            <i className="fa fa-user-plus ms-2"></i>
+
               <Link
                 style={{
                   color: "#0066b3",
-                  fontWeight: "600",
+                  fontWeight: "500",
                   fontSize: "14px",
                   textDecoration: "none",
                 }}
@@ -194,14 +195,16 @@ const DirectorDashboard = (props) => {
                   handleShow();
                 }}
               >
-                Add Schedule
+               &nbsp; Add Schedule
               </Link>
             </li>
             <li>
+            <i className="fa fa-edit ms-2"></i>
+
               <Link
                 style={{
                   color: "#0066b3",
-                  fontWeight: "600",
+                  fontWeight: "500",
                   fontSize: "14px",
                   textDecoration: "none",
                 }}
@@ -210,14 +213,16 @@ const DirectorDashboard = (props) => {
                   dispatch(getSingleUIDApproval(row));
                 }}
               >
-                Update Status
+              &nbsp; Update Status
               </Link>
             </li>
             <li>
+            <i className="fa fa-eye ms-2"></i>
+
               <Link
                 style={{
                   color: "#0066b3",
-                  fontWeight: "600",
+                  fontWeight: "500",
                   fontSize: "14px",
                   textDecoration: "none",
                 }}
@@ -225,7 +230,7 @@ const DirectorDashboard = (props) => {
                   pathname: "/depotmanager-dashboard/new-order/innerdetail",
                 }}
               >
-                View
+              &nbsp;  View
               </Link>
             </li>
           </ul>
@@ -248,7 +253,7 @@ const DirectorDashboard = (props) => {
     const handleClose1 = () => {
       setShow1(!show1);
     };
-    // MODAL OPEN FUCNTION
+    // ===================2nd Modal
     const handleShow1 = () => {
       setShow1(!show1);
     };
@@ -360,6 +365,16 @@ const DirectorDashboard = (props) => {
     if (item === "productnew") {
       if (productnew?.length < 1) {
         dispatch(getProductsnew());
+      }
+    }
+    if (item === "distributioncenter") {
+      if (distributioncenter?.length < 1) {
+        dispatch(getDistributioncenter());
+      }
+    }
+    if (item === "departmenthead") {
+      if (departmenthead?.length < 1) {
+        dispatch(getDepartmenthead());
       }
     }
   };
@@ -1003,11 +1018,30 @@ const DirectorDashboard = (props) => {
             openSidebar={openSidebar}
             Heading="Distribution Center"
           />
-          <TableDash
-            cols={tableConstants(handleEdit)}
-            data={selectedTabbledata}
+
+
+
+
+
+{loader ? (
+            <DashboardMainCard
+            reverse={true}
+
+              TableDiv={
+                <div className="d-flex justify-content-center">
+                  <Loader
+                    height={100}
+                    width={100}
+                    type="Rings"
+                    color="#0066b3"
+                  />
+                </div>
+              }
+            />
+          ) : (
+            <DashboardMainCard
             reverse={false}
-            SearchBar={
+SearchBar={
               <>
                 <div className="search-box my-4" style={{ width: "230px" }}>
                   <form
@@ -1031,7 +1065,7 @@ const DirectorDashboard = (props) => {
             }
             TableCardGrid={
               <div className="row">
-                {districards.map((ob, index) => (
+                {distributioncenter.map((ob, index) => (
                   <React.Fragment key={ob.id}>
                     <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
                       <DashCard data={ob} />
@@ -1040,10 +1074,15 @@ const DirectorDashboard = (props) => {
                 ))}
               </div>
             }
-            hoverable
-            bordered={false}
-            {...props}
-          />
+            />
+          )}
+
+
+
+
+
+
+
         </Route>
         <Route path={`${props.match.path}/departmenthead`}>
           <NavbarDash
@@ -1138,7 +1177,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 btnroute="distributioncenter"
-                // onClick={() => ApiTabhandler("orderoldhistory")}
+                onClick={() => ApiTabhandler("distributioncenter")}
                 btnName="Distribution Center"
               />
 
@@ -1148,7 +1187,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #07A04A" }}
                 btnroute="departmenthead"
-                // onClick={() => ApiTabhandler("orderoldhistory")}
+                onClick={() => ApiTabhandler("departmenthead")}
                 btnName="Department Head"
               />
               <SiderbarBtn

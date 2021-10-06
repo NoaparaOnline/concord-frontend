@@ -7,6 +7,8 @@ const initialState = {
     approvaluid:[],
     productall:[], 
     productnew:[], 
+    distributioncenter:[], 
+    departmenthead:[], 
 };
 export const directorReducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -24,6 +26,10 @@ export const directorReducer = (state = initialState, { type, payload }) => {
         return { ...state, productall : payload };
     case directorConstants.GET_PRODUCTS_NEW:
         return { ...state, productnew : payload };
+    case directorConstants.GET_DISTRIBUTION_CENTER:
+        return { ...state, distributioncenter : payload };
+    case directorConstants.GET_DEPARTMENT_HEAD:
+        return { ...state, departmenthead : payload };
     default:
       return state;
   }

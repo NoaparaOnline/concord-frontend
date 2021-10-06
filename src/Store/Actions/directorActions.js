@@ -113,3 +113,31 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
     }
     
   };
+
+
+  // GET DISTRIBUTION CENTER
+  export const getDepartmenthead = () => async (dispatch) => {
+
+    const response = await apiServices.getdepartmenthead();
+    if (response?.data?.response_code === 200) {
+      dispatch({
+        type: directorConstants.GET_DISTRIBUTION_CENTER,
+        payload: response?.data?.response_data,
+      });
+    }
+    
+  };
+
+
+  // GET DEPARTMENT HEADS
+  export const getDistributioncenter = () => async (dispatch) => {
+
+    const response = await apiServices.getdistributioncenter();
+    if (response?.data?.response_code === 200) {
+      dispatch({
+        type: directorConstants.GET_DEPARTMENT_HEAD,
+        payload: response?.data?.response_data,
+      });
+    }
+    
+  };

@@ -158,12 +158,14 @@ const user = useSelector((state) => state?.logIn?.user);
                         />
                       </Link>
                       <div
-                        className="dropdown-menu profile-nav-dropdown"
+                        className="dropdown-menu dropdown-menu-right profile-nav-dropdown"
                         aria-labelledby="navbarDropdownMenuLink"
                       >
                         <Link
-                          className="dropdown-item"
+                          className="dropdown-item navmenu_custome_li"
                           onClick={() => profileHandler()}
+                          // style={{ color:'#0066b3' ,fontWeight:'600' }}
+
                         >
                           <i
                             className="fa fa-id-card ms-2"
@@ -173,8 +175,9 @@ const user = useSelector((state) => state?.logIn?.user);
                         </Link>
 
                         <Link
-                          className="dropdown-item"
+                          className="dropdown-item navmenu_custome_li"
                           onClick={() => logoutHandler()}
+                          // style={{ color:'#0066b3' ,fontWeight:'600' }}
                         >
                           <i
                             className="fa fa-sign-out ms-2"

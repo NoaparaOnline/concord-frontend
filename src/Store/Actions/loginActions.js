@@ -5,6 +5,10 @@ import { toast } from "react-toastify";
 
   export const loginUser = (data) => async (dispatch) => {
     try {
+      dispatch({
+        type: logInConstants.SET_LOADER,
+        payload: true,
+      });
       const response = await apiServices.login(data);
       if (response?.data?.response_code === 200) {
         setToken({
@@ -21,6 +25,10 @@ import { toast } from "react-toastify";
         dispatch({
           type: logInConstants.LOGIN_IN,
           payload: response?.data?.response_data?.token?.user,
+        });
+        dispatch({
+          type: logInConstants.SET_LOADER,
+          payload: false,
         });
         dispatch({
           type: logInConstants.USER_TYPE,

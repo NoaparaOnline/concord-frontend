@@ -22,6 +22,9 @@ const SERVICE_URLS = {
   getassignedto: "fieldstaffs/childs",
   getproductsall: "products/read/medicine",
   getproductsnew: "products/read/medicine/new",
+  getdepartmenthead: "department_heads/read",
+  getdistributioncenter: "distribution_centres/read",
+
 };
 
 const login = (data) =>
@@ -97,6 +100,12 @@ const SchedulesApprovalStatusChanges = (data) =>
   const getproductsnew = () =>
   get(SERVICE_URLS.getproductsnew, {}, { feature: featureConstants.static });
 
+  const getdepartmenthead = () =>
+  get(SERVICE_URLS.getdepartmenthead, {}, { feature: featureConstants.static });
+
+  const getdistributioncenter = () =>
+  get(SERVICE_URLS.getdistributioncenter, {}, { feature: featureConstants.static });
+
 
 //=========================
 
@@ -121,5 +130,8 @@ const apiServices = {
   getassignedto,
   getproductsall,
   getproductsnew,
+  getdepartmenthead,
+  getdistributioncenter,
+
 };
 export default apiServices;

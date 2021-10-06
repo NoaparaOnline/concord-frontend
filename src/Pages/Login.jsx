@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { loginUser,forgotPassword } from "../Store/Actions/loginActions";
 import { Link } from "react-router-dom";
 // import { forgotPassword } from "../Store/Actions/loginActions";
@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 //USE HISTORY HOOKS
 import { useHistory } from "react-router";
 
+import Loader from "react-loader-spinner";
 
 
 
@@ -18,6 +19,7 @@ import { useHistory } from "react-router";
 const Login = (props) => {
   const history = useHistory();
   const dispatch = useDispatch();
+  const loader = useSelector((state) => state?.logIn?.loader);
 
   const onSubmit = async (data) => {
     const apiData = {
@@ -139,9 +141,8 @@ const Login = (props) => {
                       </div>
 
                       <div className="d-flex justify-content-center">
-                      <input
+                      <button
                         type="submit"
-                        value="LOG IN"
                         className="btn btn-block rounded-pill  mb-2 mx-auto"
                         style={{
                           width: "85%", textAlign: "center", color: "#fff",
@@ -150,7 +151,17 @@ const Login = (props) => {
                           fontWeight: "500",
                         }}
 
+                      >
+                        {loader ? 
+                      <div className="d-flex justify-content-center">
+                      <Loader
+                        height={20} width={20}
+                        type="ThreeDots"
+                        color="#fff"
                       />
+                    </div> : "LOG IN"  
+                      }
+                      </button>
                       </div>
 
                       <div className="">
