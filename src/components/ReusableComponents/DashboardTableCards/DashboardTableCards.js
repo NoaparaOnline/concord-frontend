@@ -1,6 +1,7 @@
 import React from "react";
 import icon from '../../../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg'
 const DashboardTableCards = ({ob}) => {
+    console.log("ob",ob)
   return (
     <>
       <div

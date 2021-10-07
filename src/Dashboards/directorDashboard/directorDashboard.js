@@ -44,6 +44,7 @@ import { getProductsall, getProductsnew, getSchedule, getSingleUIDApproval,getDi
 import moment from "moment";
 import DirectorScheduleCreate from "../../components/ReusableComponents/modals/DirectorScheduleCreate/DirectorScheduleCreate";
 import DirectorApprovalStatusChange from "../../components/ReusableComponents/modals/DirectorApprovalStatusChange/DirectorApprovalStatusChange";
+import { InputGroup } from "react-bootstrap";
 
 const DirectorDashboard = (props) => {
   const { SearchBar } = Search;
@@ -750,24 +751,31 @@ const DirectorDashboard = (props) => {
                 <>
                
               <div className="row">
-             
-              {searchInput.length > 1 ? (
-                    filteredResults.map((item) => {
+              <input icon='search'
+                placeholder='Search...'
+                onChange={(e) => searchItems(e.target.value)}
+            />
+                {console.log("HelloWorl",filteredResults)}
+              {searchInput.length >= 1 ? (
+                    filteredResults.map((item,index) => {
+                      return(
                       <React.Fragment key={item.id}>
                       <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
                       <DashboardTableCards ob={item}/>
                        </div>
                   </React.Fragment>
+                      )
                     })
                 ) : (
                   productall.map((item, index) => (
+                    
                     <React.Fragment key={item.id}>
                    <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
                    <DashboardTableCards ob={item}/>
                     </div>
                </React.Fragment>
             ))
-            
+          
                 )}
                 {console.log("filteredResults",filteredResults)}
               {/* {productall.map((ob, index) => (
