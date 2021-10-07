@@ -17,8 +17,8 @@ const SERVICE_URLS = {
   getSchedules: "schedules/read",
   addSchedules: "schedules/create",
   SchedulesApprovalStatusChanges: "schedules/status",
-  getdoctors: "doctors/read",
-  getcustomers: "customers/read",
+  // getdoctors: "doctors/read",
+  // getcustomers: "customers/read",
   getassignedto: "fieldstaffs/childs",
   getproductsall: "products/read/medicine",
   getproductsnew: "products/read/medicine/new",
@@ -85,11 +85,11 @@ const SchedulesApprovalStatusChanges = (data) =>
     feature: featureConstants.static,
   });
 
-  const getdoctors = (data) =>
-  get(SERVICE_URLS.getdoctors, "",data, { feature: featureConstants.static });
+  // const getdoctors = (data) =>
+  // get(SERVICE_URLS.getdoctors, "",data, { feature: featureConstants.static });
 
-  const getcustomers = (data) =>
-  get(SERVICE_URLS.getcustomers, "",data, { feature: featureConstants.static });
+  // const getcustomers = (data) =>
+  // get(SERVICE_URLS.getcustomers, "",data, { feature: featureConstants.static });
 
   const getassignedto = () =>
   get(SERVICE_URLS.getassignedto, {}, { feature: featureConstants.static });
@@ -125,8 +125,8 @@ const apiServices = {
   getSchedules,
   addSchedules,
   SchedulesApprovalStatusChanges,
-  getdoctors,
-  getcustomers,
+  // getdoctors,
+  // getcustomers,
   getassignedto,
   getproductsall,
   getproductsnew,

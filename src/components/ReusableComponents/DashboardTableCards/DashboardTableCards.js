@@ -51,7 +51,7 @@ const DashboardTableCards = ({ob}) => {
                     <span style={{fontSize:'17px',fontWeight:'600',textTransform:'capitalize',color:'grey'}}>Product Added By</span>
                 </div>
                 <div className="col-12">
-                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize'}}>{ob.created_by ? ob.created_by : "N/A"}</span>
+                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize'}}>{ob.created_by._cls ? ob.created_by._cls : "N/A"}</span>
                 </div>
              </div>
         </div>

@@ -138,7 +138,7 @@ const DirectorDashboard = (props) => {
       sort: true,
     },
     {
-      dataField: "created_by",
+      dataField: "created_by._cls",
       text: "Added By",
       formatter: nullChecker,
       sort: true,
@@ -269,16 +269,42 @@ const DirectorDashboard = (props) => {
 
   
   // tabledata Toogle State
-  const [selectedTabbledata, setSelectedTabbledata] = useState(
-    productall
-  );
-  const tabledataHandler = (item) => {
+  const [selectedTabbledata, setSelectedTabbledata] = useState(schedule);
+  const tabledataHandler = async (item) => {
     setSelectedTabbledata(item);
+    if (item === schedule) {
+      if (schedule?.length < 1) {
+        const scheduleapi = await dispatch(getSchedule());
+        if (scheduleapi === true) {
+          setSelectedTabbledata(schedule);
+        }
+      }
+
+    }
+    if (item === productall) {
+      if (productall?.length < 1) {
+        const productallapi = await dispatch(getProductsall());
+        if (productallapi === true) {
+          setSelectedTabbledata(productall);
+        }
+      }
+
+    }
+    if (item === productnew) {
+      if (productnew?.length < 1) {
+        const productallapi = await dispatch(getProductsnew());
+        if (productallapi === true) {
+          setSelectedTabbledata(productall);
+        }
+      }
+
+    }
   };
 
   // Selected Buttons
   const [selectedTab1, setSelectedTab1] = useState("All");
   const [selectedTab2, setSelectedTab2] = useState("List");
+  const [selectedTab3, setSelectedTab3] = useState("List");
 
   const tabHandler1 = (item) => {
     setSelectedTab1(item);
@@ -318,7 +344,33 @@ const DirectorDashboard = (props) => {
     }
   };
 
-  const [handle, setHandle] = useState("orderoldhistory");
+
+  const [filteredResults, setFilteredResults] = useState([]);
+    const [searchInput, setSearchInput] = useState('');
+  const searchItems = (searchValue) => {
+    setSearchInput(searchValue)
+    if (searchInput !== '') {
+        const filteredData = productall.filter((item) => {
+            return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
+        })
+        console.log("filteredData",filteredData)
+        setFilteredResults(filteredData)
+    }
+    else{
+        setFilteredResults(productall)
+    }
+}
+  const tabHandler3 = (item) => {
+    setSelectedTab3(item);
+
+    if (item === "List") {
+      tabledataHandler(productnew);
+    } else if (item === "Grid") {
+      tabledataHandler(productnew);
+    }
+  };
+
+  const [handle, setHandle] = useState("distributioncenter");
 
   const [sidebarOpen, setsidebarOpen] = useState(false);
   const openSidebar = () => {
@@ -352,47 +404,31 @@ const DirectorDashboard = (props) => {
   // API HIT HANDLER ON SIDEBAR BUTTONS
   const ApiTabhandler = (item) => {
     setHandle(item);
-    if (item === "schedule") {
-      if (schedule?.length < 1) {
-        dispatch(getSchedule());
-      }
-    }
-    if (item === "productall") {
-      if (productall?.length < 1) {
-        dispatch(getProductsall());
-      }
-    }
-    if (item === "productnew") {
-      if (productnew?.length < 1) {
-        dispatch(getProductsnew());
-      }
-    }
+    // if (item === "productnew") {
+    //   if (productnew?.length < 1) {
+    //     dispatch(getProductsnew());
+    //   }
+    // }
     if (item === "distributioncenter") {
       if (distributioncenter?.length < 1) {
         dispatch(getDistributioncenter());
       }
     }
-    if (item === "departmenthead") {
+    else if (item === "departmenthead") {
       if (departmenthead?.length < 1) {
         dispatch(getDepartmenthead());
       }
     }
   };
 
+
   useEffect(() => {
-    if (handle) {
-      dispatch(getSchedule());
-    }
-  }, [dispatch, handle]);
+   
+    if (productall?.length < 1) {
+        dispatch(getProductsall());
+      }
+  }, [dispatch,productall,handle]);
 
-  // USEEFFECT HOOK FOR INITIAL API RENDER ON DASHBOARD LOAD
-  // useEffect(() => {
-  //   if (schedule?.length < 1) {
-  //   dispatch(getSchedule());
-  //   }
-  // }, [dispatch,schedule]);
-
-  // console.log(schedule)
 
   return (
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
@@ -709,17 +745,40 @@ const DirectorDashboard = (props) => {
                 ))}
               </div>
             }
+           
               TableCardGrid={
+                <>
+               
               <div className="row">
-              {productall.map((ob, index) => (
+             
+              {searchInput.length > 1 ? (
+                    filteredResults.map((item) => {
+                      <React.Fragment key={item.id}>
+                      <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                      <DashboardTableCards ob={item}/>
+                       </div>
+                  </React.Fragment>
+                    })
+                ) : (
+                  productall.map((item, index) => (
+                    <React.Fragment key={item.id}>
+                   <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                   <DashboardTableCards ob={item}/>
+                    </div>
+               </React.Fragment>
+            ))
+            
+                )}
+                {console.log("filteredResults",filteredResults)}
+              {/* {productall.map((ob, index) => (
                  <React.Fragment key={ob.id}>
                 <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
                 <DashboardTableCards ob={ob}/>
                  </div>
             </React.Fragment>
-         ))}
+         ))} */}
        </div>
-             
+       </>
             }
             TableDiv={
               <>
@@ -767,58 +826,7 @@ const DirectorDashboard = (props) => {
             />
           )}
 
-          {/* <TableDash
-            cols={Directordashproducthead(handleEdit)}
-            data={directorproductbody}
-            
-            reverse={selectedTab2 === "List" ? true : false}
-            hoverable
-            SelectedButtons={
-              <div className="">
-                {buttonname3.map((item, index) => (
-                  <div
-                    className="d-flex d-inline-flex "
-                    key={index + 1}
-                    onClick={() => tabHandler2(item)}
-                  >
-                    <DashboardBtnList
-                      label={item}
-                      iconclassname={
-                        item === "List" ? "fa fa-list" : "fa fa-th"
-                      }
-                      bntStyle={{
-                        borderRadius:
-                          index === 0
-                            ? "10px 0px 0px 10px"
-                            : index === buttonname3.length - 1
-                            ? "0px 10px 10px 0px"
-                            : "",
-                      }}
-                      className={
-                        selectedTab2 === item
-                          ? "dashboardBtnList-item-active "
-                          : "default-color-and-hover "
-                      }
-                    />
-                  </div>
-                ))}
-              </div>
-            }
-            TableCardGrid={
-              <div className="row">
-              {directorproductbody.map((ob, index) => (
-                 <React.Fragment key={ob.id}>
-                <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
-                <DashboardTableCards ob={ob}/>
-                 </div>
-            </React.Fragment>
-         ))}
-       </div>
-             
-            }
-            bordered={false}
-            {...props}
-          /> */}
+         
         </Route>
         <Route path={`${props.match.path}/newlylaunched`}>
           <NavbarDash
@@ -847,7 +855,7 @@ const DirectorDashboard = (props) => {
             />
           ) : (
             <DashboardMainCard
-            reverse={selectedTab2 === "List" ? true : false}
+            reverse={selectedTab3 === "List" ? true : false}
 
              
                SelectedButtons={
@@ -856,7 +864,7 @@ const DirectorDashboard = (props) => {
                   <div
                     className="d-flex d-inline-flex "
                     key={index + 1}
-                    onClick={() => tabHandler2(item)}
+                    onClick={() => tabHandler3(item)}
                   >
                     <DashboardBtnList
                       label={item}
@@ -872,7 +880,7 @@ const DirectorDashboard = (props) => {
                             : "",
                       }}
                       className={
-                        selectedTab2 === item
+                        selectedTab3 === item
                           ? "dashboardBtnList-item-active "
                           : "default-color-and-hover "
                       }
@@ -939,13 +947,37 @@ const DirectorDashboard = (props) => {
             />
           )}
 
-          {/* <TableDash
-            cols={Directordashproducthead(handleEdit)}
-            data={directorproductbody}
-            reverse={selectedTab2 === "List" ? true : false}
-            hoverable
-            SearchBar={
-              <div className="">
+       
+        </Route>
+        <Route path={`${props.match.path}/distributioncenter`}>
+        
+    
+          <NavbarDash
+            sidebarOpen={sidebarOpen}
+            openSidebar={openSidebar}
+            Heading="Distribution Center"
+          />
+
+ {loader ? (
+          <DashboardMainCard
+            reverse={true}
+
+              TableDiv={
+                <div className="d-flex justify-content-center">
+                  <Loader
+                    height={100}
+                    width={100}
+                    type="Rings"
+                    color="#0066b3"
+                  />
+                </div>
+              }
+            />
+          ) : (
+            <DashboardMainCard
+            reverse={false}
+      SearchBar={
+              <>
                 <div className="search-box my-4" style={{ width: "230px" }}>
                   <form
                     className="form_style_search"
@@ -964,66 +996,45 @@ const DirectorDashboard = (props) => {
                     />
                   </form>
                 </div>
-              </div>
-            }
-            SelectedButtons={
-              <div className="">
-                {buttonname3.map((item, index) => (
-                  <div
-                    className="d-flex d-inline-flex"
-                    key={index + 1}
-                    onClick={() => tabHandler2(item)}
-                  >
-                    <DashboardBtnList
-                      label={item}
-                      bntStyle={{
-                        borderRadius:
-                          index === 0
-                            ? "10px 0px 0px 10px"
-                            : index === buttonname3.length - 1
-                            ? "0px 10px 10px 0px"
-                            : "",
-                      }}
-                      iconclassname={
-                        item === "List" ? "fa fa-list" : "fa fa-th"
-                      }
-                      className={
-                        selectedTab2 === item
-                          ? "dashboardBtnList-item-active "
-                          : "default-color-and-hover "
-                      }
-                    />
-                  </div>
-                ))}
-              </div>
+              </>
             }
             TableCardGrid={
               <div className="row">
-                {directorproductbody.map((ob, index) => (
+                {distributioncenter.map((ob, index) => (
                   <React.Fragment key={ob.id}>
                     <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-                      <DashboardTableCards ob={ob} />
+                      <DashCard 
+                      datahead={ob.name}
+                      dataname={ob.head.name}
+                      datadesignation={ob.head.designation}
+                      dataemail={ob.head.email}
+                      dataphone={ob.head.phone}
+                      dataaddress={ob.head.address}
+                      />
                     </div>
                   </React.Fragment>
                 ))}
               </div>
             }
-            bordered={false}
-            {...props}
-          /> */}
+            />
+          )}
+
+
+
+
+
+
+
         </Route>
-        <Route path={`${props.match.path}/distributioncenter`}>
+        <Route path={`${props.match.path}/departmenthead`}>
           <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="Distribution Center"
+            Heading="Department Head"
           />
+          
 
-
-
-
-
-{loader ? (
+          {loader ? (
             <DashboardMainCard
             reverse={true}
 
@@ -1065,10 +1076,18 @@ SearchBar={
             }
             TableCardGrid={
               <div className="row">
-                {distributioncenter.map((ob, index) => (
+                {console.log(departmenthead)}
+                {departmenthead.map((ob, index) => (
                   <React.Fragment key={ob.id}>
                     <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-                      <DashCard data={ob} />
+                      <DashCard 
+                      datahead="Department Head"
+                      dataname={ob.name}
+                      datadesignation={ob.designation}
+                      dataemail={ob.email}
+                      dataphone={ob.phone}
+                      dataaddress={ob.address}
+                      />
                     </div>
                   </React.Fragment>
                 ))}
@@ -1078,58 +1097,6 @@ SearchBar={
           )}
 
 
-
-
-
-
-
-        </Route>
-        <Route path={`${props.match.path}/departmenthead`}>
-          <NavbarDash
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            Heading="Department Head"
-          />
-          <TableDash
-            cols={tableConstants(handleEdit)}
-            data={selectedTabbledata}
-            hoverable
-            SearchBar={
-              <>
-                <div className="search-box my-4" style={{ width: "230px" }}>
-                  <form
-                    className="form_style_search"
-                    style={{ border: "1px solid #707070", borderRadius: "0px" }}
-                  >
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
-                    >
-                      <img src={search} alt="" />
-                    </button>
-                    <input
-                      className="form_style_input"
-                      type="text"
-                      placeholder="Search"
-                    />
-                  </form>
-                </div>
-              </>
-            }
-            TableCardGrid={
-              <div className="row">
-                {districards.map((ob, index) => (
-                  <React.Fragment key={ob.id}>
-                    <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-                      <DashCard data={ob} />
-                    </div>
-                  </React.Fragment>
-                ))}
-              </div>
-            }
-            bordered={false}
-            {...props}
-          />
         </Route>
 
         <SidebarDashboard
@@ -1150,7 +1117,7 @@ SearchBar={
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #CB912B" }}
                 btnroute="schedule"
-                onClick={() => ApiTabhandler("schedule")}
+                onClick={() => tabHandler1('All')}
                 btnName="Schedule"
               />
               <SiderbarBtn
@@ -1159,7 +1126,7 @@ SearchBar={
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #7F2987" }}
                 btnroute="products"
-                onClick={() => ApiTabhandler("productall")}
+                onClick={() => tabHandler2("List")}
                 btnName="Products"
               />
               <SiderbarBtn
@@ -1167,7 +1134,7 @@ SearchBar={
                 Colr="#4B8F8C"
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #4B8F8C" }}
-                onClick={() => ApiTabhandler("productnew")}
+                onClick={() => tabHandler3("List")}
                 btnroute="newlylaunched"
                 btnName="Newly Launched"
               />

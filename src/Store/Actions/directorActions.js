@@ -1,3 +1,4 @@
+import axios from "axios";
 import { toast } from "react-toastify";
 import apiServices from "../../services/requestHandler";
 import { directorConstants } from "../Constants/directorConstant";
@@ -20,6 +21,7 @@ export const getSchedule = () => async (dispatch) => {
       type: logInConstants.SET_LOADER,
       payload: false,
     });
+    return true 
   }
   
 };
@@ -47,28 +49,74 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
   };
   
 
-  export const getDoctors = (data) => async (dispatch) => {
-
-    const response = await apiServices.getdoctors(data);
-    if (response?.data?.response_code === 200) {
+  export const getDoctors = (uid) => async (dispatch) => {
+    const token = JSON.parse(localStorage.getItem('token'));
+    
+    try {
+      const head = {'x-session-key': token.key, 'x-session-type': token.type};
+      const response = await axios.get(
+        `https://concord-backend-m1.herokuapp.com/api/doctors/read?child_uid=${uid}`,
+        {headers: head},
+      );
+      if (response?.data?.response_code === 200) {
       dispatch({
         type: directorConstants.GET_DOCTOR,
         payload: response?.data?.response_data,
       });
     }
+    } catch (error) {
+      return "fail"
+    }
+
     
   };
-  export const getCustomers = (data) => async (dispatch) => {
+  // export const getCustomers = (data) => async (dispatch) => {
 
-    const response = await apiServices.getcustomers(data);
-    if (response?.data?.response_code === 200) {
+
+    // const response = await apiServices.getcustomers(data);
+    // console.log("response",response)
+    // if (response?.data?.response_code === 200) {
+    //   dispatch({
+    //     type: directorConstants.GET_CUSTOMER,
+    //     payload: response?.data?.response_data,
+    //   });
+    // }
+    
+  // };
+
+
+
+
+
+
+
+
+
+  export const getCustomers = (uid) => async dispatch => {
+    
+    
+    const token = JSON.parse(localStorage.getItem('token'));
+    
+    try {
+      const head = {'x-session-key': token.key, 'x-session-type': token.type};
+      const response = await axios.get(
+        `https://concord-backend-m1.herokuapp.com/api/customers/read?child_uid=${uid}`,
+        {headers: head},
+      );
+      if (response?.data?.response_code === 200) {
       dispatch({
         type: directorConstants.GET_CUSTOMER,
         payload: response?.data?.response_data,
       });
     }
-    
+    } catch (error) {
+      return "fail"
+    }
   };
+
+
+
+
   export const getAssignedto = () => async (dispatch) => {
 
     const response = await apiServices.getassignedto();
@@ -97,6 +145,7 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
         type: directorConstants.GET_PRODUCTS_ALL,
         payload: response?.data?.response_data,
       });
+      return true
     }
     
   };
@@ -110,6 +159,7 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
         type: directorConstants.GET_PRODUCTS_NEW,
         payload: response?.data?.response_data,
       });
+      return true
     }
     
   };
@@ -117,12 +167,19 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
 
   // GET DISTRIBUTION CENTER
   export const getDepartmenthead = () => async (dispatch) => {
-
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: true,
+    });
     const response = await apiServices.getdepartmenthead();
     if (response?.data?.response_code === 200) {
       dispatch({
-        type: directorConstants.GET_DISTRIBUTION_CENTER,
+        type: directorConstants.GET_DEPARTMENT_HEAD,
         payload: response?.data?.response_data,
+      });
+      dispatch({
+        type: logInConstants.SET_LOADER,
+        payload: false,
       });
     }
     
@@ -131,12 +188,19 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
 
   // GET DEPARTMENT HEADS
   export const getDistributioncenter = () => async (dispatch) => {
-
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: true,
+    });
     const response = await apiServices.getdistributioncenter();
     if (response?.data?.response_code === 200) {
       dispatch({
-        type: directorConstants.GET_DEPARTMENT_HEAD,
+        type: directorConstants.GET_DISTRIBUTION_CENTER,
         payload: response?.data?.response_data,
+      });
+      dispatch({
+        type: logInConstants.SET_LOADER,
+        payload: false,
       });
     }
     

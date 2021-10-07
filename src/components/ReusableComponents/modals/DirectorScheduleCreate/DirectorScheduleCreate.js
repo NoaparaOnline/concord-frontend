@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Form, Modal } from "react-bootstrap";
+import "react-bootstrap-typeahead/css/Typeahead.css";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -28,22 +29,19 @@ const DirectorScheduleCreate = (props) => {
   const selectusertype = watch("usert");
   if(selectusertype === "doctor")
   {
-    const apiData = {
-      child_uid:assginto
-    };
       if (doctor?.length < 1) {
+        const apiData = assginto
+        
         console.log("getDoctorsd",apiData);
           dispatch(getDoctors(apiData));
       }
-      console.log("doctor",doctor);
       
   }
   else if(selectusertype === "customer")
   {
       if (customer?.length < 1) {
-        const apiData = {
-          child_uid:assginto
-        };
+        const apiData = assginto;
+        
         console.log("getCustomersd",apiData);
           dispatch(getCustomers(apiData));
       }
@@ -53,7 +51,7 @@ const DirectorScheduleCreate = (props) => {
     if (assignedto?.length < 1) {
         dispatch(getAssignedto());
     }
-  },[dispatch,assignedto])
+  },[dispatch,doctor,customer])
 
   const date = watch("date",);
   const time = watch("time",);
@@ -90,7 +88,7 @@ const onSubmit = async (data) => {
           is_doctor_customer:false,
           customer_uid:data.name,
           datetime:datetime,
-          assigned_to_uid:data.assign,
+          assigned_to_uid:assginto,
         };
         dispatch(addSchedule(apiData));
         console.log(apiData);

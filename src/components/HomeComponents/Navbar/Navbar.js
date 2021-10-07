@@ -10,9 +10,8 @@ import Login from "../../../Pages/Login";
 
 import { useHistory } from "react-router-dom";
 
-
 // 
-import { useDispatch, useSelector } from "react-redux";
+import { createDispatchHook, useDispatch, useSelector } from "react-redux";
 import {
   logoutUser,
 } from "../../../Store/Actions/loginActions";

@@ -1,5 +1,14 @@
 import React from "react";
-const DashCard = ({ data }) => {
+const DashCard = ({ 
+
+  datahead,
+  dataname,
+  datadesignation,
+  dataemail,
+  dataphone,
+  dataaddress,
+
+ }) => {
   return (
     <>
       <div
@@ -27,7 +36,7 @@ const DashCard = ({ data }) => {
                     color: "#000000",
                   }}
                 >
-                  <span>{data.head}</span>
+                  <span>{datahead}</span>
                 </div>
 
                 <div className="mt-2">
@@ -37,7 +46,7 @@ const DashCard = ({ data }) => {
                       className="ms-3"
                       style={{ color: "#565656", fontSize: "16px" }}
                     >
-                      {data.name ? data.name : "N/A" }
+                      {dataname}
                     </span>
                   </div>
                   <div className="mt-2">
@@ -50,7 +59,7 @@ const DashCard = ({ data }) => {
                         fontWeight: "400",
                       }}
                     >
-                      {data.position ? data.position : "N/A"}
+                     {datadesignation}
                     </span>
                   </div>
                   <div className="mt-2">
@@ -63,7 +72,7 @@ const DashCard = ({ data }) => {
                         fontWeight: "400",
                       }}
                     >
-                      {data.phone ? data.phone: "N/A"}
+                      {dataphone}
                     </span>
                   </div>
                   <div className="mt-2">
@@ -80,7 +89,7 @@ const DashCard = ({ data }) => {
                           fontWeight: "400",
                         }}
                       >
-                        {data.email ? data.email: "N/A" }
+                        {dataemail}
                       </span>
                     </a>
                   </div>
@@ -109,7 +118,7 @@ const DashCard = ({ data }) => {
                           fontWeight: "400",
                         }}
                       >
-                        {data.address ? data.address : "N/A"}
+                        {dataaddress}
                       </span>
                     </a>
                   </div>

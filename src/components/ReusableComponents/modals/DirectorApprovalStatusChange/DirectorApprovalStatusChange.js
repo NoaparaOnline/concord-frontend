@@ -64,9 +64,7 @@ const DirectorApprovalStatusChange = (props) => {
                     custom
                     {...register("status", {})}
                   >
-                            <option value="reshedule">
-                              Reshedule
-                            </option>
+                           
                             <option value="approved">
                               Approved
                             </option>
