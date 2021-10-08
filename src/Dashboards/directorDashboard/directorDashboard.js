@@ -48,6 +48,7 @@ import moment from "moment";
 import DirectorScheduleCreate from "../../components/ReusableComponents/modals/DirectorScheduleCreate/DirectorScheduleCreate";
 import DirectorApprovalStatusChange from "../../components/ReusableComponents/modals/DirectorApprovalStatusChange/DirectorApprovalStatusChange";
 import { InputGroup } from "react-bootstrap";
+import DependentDropdowns from "../../components/ReusableComponents/DependentDropdowns/DependentDropdowns";
 
 
 
@@ -362,7 +363,7 @@ const DirectorDashboard = (props) => {
   const [filteredResults, setFilteredResults] = useState([]);
   const [searchInput, setSearchInput] = useState("");
 
-  
+
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
     if (searchInput !== "") {
@@ -435,9 +436,9 @@ const DirectorDashboard = (props) => {
   };
 
 
-  
 
-  
+
+
   const tabHandler3 = (item) => {
     setSelectedTab3(item);
 
@@ -535,8 +536,8 @@ const DirectorDashboard = (props) => {
                                 index === 0
                                   ? "10px 0px 0px 10px"
                                   : index === buttonname1.length - 1
-                                  ? "0px 10px 10px 0px"
-                                  : "",
+                                    ? "0px 10px 10px 0px"
+                                    : "",
                             }}
                             className={
                               selectedTab1 === item
@@ -675,34 +676,42 @@ const DirectorDashboard = (props) => {
                 </div>
               }
               SelectedButtons={
-                <div className="row my-4">
-                  <div className="col ">
-                    {buttonname2.map((item, index) => (
-                      <div
-                        className="d-flex d-inline-flex "
-                        key={index + 1}
-                        onClick={() => tabHandler1(item)}
-                      >
-                        <DashboardBtnList
-                          label={item}
-                          bntStyle={{
-                            borderRadius:
-                              index === 0
-                                ? "10px 0px 0px 10px"
-                                : index === buttonname2.length - 1
-                                ? "0px 10px 10px 0px"
-                                : "",
-                          }}
-                          className={
-                            selectedTab1 === item
-                              ? "dashboardBtnList-item-active"
-                              : "default-color-and-hover "
-                          }
-                        />
-                      </div>
-                    ))}
+                <>
+
+                  
+                  <DependentDropdowns/>
+
+
+
+                  <div className="row my-4">
+                    <div className="col ">
+                      {buttonname2.map((item, index) => (
+                        <div
+                          className="d-flex d-inline-flex "
+                          key={index + 1}
+                          onClick={() => tabHandler1(item)}
+                        >
+                          <DashboardBtnList
+                            label={item}
+                            bntStyle={{
+                              borderRadius:
+                                index === 0
+                                  ? "10px 0px 0px 10px"
+                                  : index === buttonname2.length - 1
+                                    ? "0px 10px 10px 0px"
+                                    : "",
+                            }}
+                            className={
+                              selectedTab1 === item
+                                ? "dashboardBtnList-item-active"
+                                : "default-color-and-hover "
+                            }
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </>
               }
               TableDiv={
                 <>
@@ -715,75 +724,75 @@ const DirectorDashboard = (props) => {
                   >
                     {(props) => (
                       <div className="">
-                       
-                       <div className='row'>
-                         <div className="col-6">
 
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        
-                        <SearchBar
-                          {...props.searchProps}
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                          }}
-                        />
-                         </div>
+                        <div className='row'>
+                          <div className="col-6">
 
-                        <div className="col-6">
-                         <>
-                        <div className="row">
-                        <div className="col d-flex justify-content-end">
-                        <div
-                         className={` btn btn-primary me-2`}
-                        style={{ backgroundColor: "#0066b3" }}
+                            <i
+                              className="fa fa-search"
+                              id="filtersubmit"
+                              style={{ fontSize: "15px" }}
+                            />
+
+                            <SearchBar
+                              {...props.searchProps}
+                              style={{
+                                padding: "0.375rem 2.5rem",
+                                borderRadius: "10px",
+                              }}
+                            />
+                          </div>
+
+                          <div className="col-6">
+                            <>
+                              <div className="row">
+                                <div className="col d-flex justify-content-end">
+                                  <div
+                                    className={` btn btn-primary me-2`}
+                                    style={{ backgroundColor: "#0066b3" }}
+                                  >
+
+                                    <Link
+                                      style={{
+                                        color: "#fff",
+                                        fontWeight: "500",
+                                        fontSize: "14px",
+                                        textDecoration: "none",
+                                      }}
+                                      onClick={() => {
+                                        handleShow();
+                                      }}
                                     >
+                                      <i className="fa fa-user-plus ms-2"></i>
+                                      &nbsp; Add New Schedule
+                                    </Link>
+                                  </div>
+                                  <div
+                                    className={` btn btn-primary `}
+                                    style={{ backgroundColor: "#0066b3" }}
+                                  >
 
-                        <Link
-                          style={{
-                            color: "#fff",
-                            fontWeight: "500",
-                            fontSize: "14px",
-                            textDecoration: "none",
-                          }}
-                          onClick={() => {
-                            handleShow();
-                          }}
-                        >
-                          <i className="fa fa-user-plus ms-2"></i>
-                          &nbsp; Add New Schedule
-                        </Link>
-                      </div>
-                        <div
-                         className={` btn btn-primary `}
-                        style={{ backgroundColor: "#0066b3" }}
+                                    <Link
+                                      style={{
+                                        color: "#FFF",
+                                        fontWeight: "500",
+                                        fontSize: "14px",
+                                        textDecoration: "none",
+                                      }}
+                                      onClick={() => {
+                                        handleShow1();
+                                        dispatch(getSingleUIDApproval());
+                                      }}
                                     >
-
-                      <Link
-                        style={{
-                          color: "#FFF",
-                          fontWeight: "500",
-                          fontSize: "14px",
-                          textDecoration: "none",
-                        }}
-                        onClick={() => {
-                          handleShow1();
-                          dispatch(getSingleUIDApproval());
-                        }}
-                      >
-                        <i className="fa fa-edit ms-2"></i>
-                        &nbsp; Update Status
-                      </Link>
-                      </div>
-                    </div>
-                  </div>
-      </>
-                  </div>
-      </div>
+                                      <i className="fa fa-edit ms-2"></i>
+                                      &nbsp; Update Status
+                                    </Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </>
+                          </div>
+                        </div>
                         <BootstrapTable
                           {...props.baseProps}
                           // rowStyle={rowStyle}
@@ -851,8 +860,8 @@ const DirectorDashboard = (props) => {
                             index === 0
                               ? "10px 0px 0px 10px"
                               : index === buttonname3.length - 1
-                              ? "0px 10px 10px 0px"
-                              : "",
+                                ? "0px 10px 10px 0px"
+                                : "",
                         }}
                         className={
                           selectedTab2 === item
@@ -889,21 +898,21 @@ const DirectorDashboard = (props) => {
 
                     {searchInput.length >= 1
                       ? filteredResults.map((item, index) => {
-                          return (
-                            <React.Fragment key={item.id}>
-                              <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
-                                <DashboardTableCards ob={item} />
-                              </div>
-                            </React.Fragment>
-                          );
-                        })
-                      : productall.map((item, index) => (
+                        return (
                           <React.Fragment key={item.id}>
                             <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
                               <DashboardTableCards ob={item} />
                             </div>
                           </React.Fragment>
-                        ))}
+                        );
+                      })
+                      : productall.map((item, index) => (
+                        <React.Fragment key={item.id}>
+                          <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                            <DashboardTableCards ob={item} />
+                          </div>
+                        </React.Fragment>
+                      ))}
                     {/* {productall.map((ob, index) => (
                  <React.Fragment key={ob.id}>
                 <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
@@ -1003,8 +1012,8 @@ const DirectorDashboard = (props) => {
                             index === 0
                               ? "10px 0px 0px 10px"
                               : index === buttonname3.length - 1
-                              ? "0px 10px 10px 0px"
-                              : "",
+                                ? "0px 10px 10px 0px"
+                                : "",
                         }}
                         className={
                           selectedTab3 === item
@@ -1018,43 +1027,43 @@ const DirectorDashboard = (props) => {
               }
               TableCardGrid={
                 <div className="row">
-                   <div className="row">
-                      <div className="col-3 mb-2">
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        <input
-                          className="form-control"
-                          icon="search"
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                          }}
-                          placeholder="Search"
-                          onChange={(e) => searchItems1(e.target.value)}
-                        />
-                      </div>
+                  <div className="row">
+                    <div className="col-3 mb-2">
+                      <i
+                        className="fa fa-search"
+                        id="filtersubmit"
+                        style={{ fontSize: "15px" }}
+                      />
+                      <input
+                        className="form-control"
+                        icon="search"
+                        style={{
+                          padding: "0.375rem 2.5rem",
+                          borderRadius: "10px",
+                        }}
+                        placeholder="Search"
+                        onChange={(e) => searchItems1(e.target.value)}
+                      />
                     </div>
+                  </div>
 
-                    {searchInput1.length >= 1
-                      ? filteredResults1.map((item, index) => {
-                          return (
-                            <React.Fragment key={item.id}>
-                              <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
-                                <DashboardTableCards ob={item} />
-                              </div>
-                            </React.Fragment>
-                          );
-                        })
-                      : productnew.map((item, index) => (
-                          <React.Fragment key={item.id}>
-                            <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
-                              <DashboardTableCards ob={item} />
-                            </div>
-                          </React.Fragment>
-                        ))}
+                  {searchInput1.length >= 1
+                    ? filteredResults1.map((item, index) => {
+                      return (
+                        <React.Fragment key={item.id}>
+                          <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                            <DashboardTableCards ob={item} />
+                          </div>
+                        </React.Fragment>
+                      );
+                    })
+                    : productnew.map((item, index) => (
+                      <React.Fragment key={item.id}>
+                        <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                          <DashboardTableCards ob={item} />
+                        </div>
+                      </React.Fragment>
+                    ))}
                 </div>
               }
               TableDiv={
@@ -1155,55 +1164,55 @@ const DirectorDashboard = (props) => {
               TableCardGrid={
                 <div className="row">
                   <div className="row">
-                      <div className="col-3 mb-2">
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        <input
-                          className="form-control"
-                          icon="search"
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                          }}
-                          placeholder="Search"
-                          onChange={(e) => searchItems2(e.target.value)}
-                        />
-                      </div>
+                    <div className="col-3 mb-2">
+                      <i
+                        className="fa fa-search"
+                        id="filtersubmit"
+                        style={{ fontSize: "15px" }}
+                      />
+                      <input
+                        className="form-control"
+                        icon="search"
+                        style={{
+                          padding: "0.375rem 2.5rem",
+                          borderRadius: "10px",
+                        }}
+                        placeholder="Search"
+                        onChange={(e) => searchItems2(e.target.value)}
+                      />
                     </div>
-                    {searchInput2.length >= 1
-                      ? filteredResults2.map((ob, index) => {
-                          return (
-                   <React.Fragment key={ob.id}>
-                      <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-                        <DashCard
-                          datahead={ob.name}
-                          dataname={ob.head.name}
-                          datadesignation={ob.head.designation}
-                          dataemail={ob.head.email}
-                          dataphone={ob.head.phone}
-                          dataaddress={ob.head.address}
-                        />
-                      </div>
-                    </React.Fragment>
-                   );
-                  })
-                :distributioncenter.map((ob, index) => (
-                  <React.Fragment key={ob.id}>
-                      <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-                        <DashCard
-                          datahead={ob.name}
-                          dataname={ob.head.name}
-                          datadesignation={ob.head.designation}
-                          dataemail={ob.head.email}
-                          dataphone={ob.head.phone}
-                          dataaddress={ob.head.address}
-                        />
-                      </div>
-                    </React.Fragment>
-                 ))}
+                  </div>
+                  {searchInput2.length >= 1
+                    ? filteredResults2.map((ob, index) => {
+                      return (
+                        <React.Fragment key={ob.id}>
+                          <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <DashCard
+                              datahead={ob.name}
+                              dataname={ob.head.name}
+                              datadesignation={ob.head.designation}
+                              dataemail={ob.head.email}
+                              dataphone={ob.head.phone}
+                              dataaddress={ob.head.address}
+                            />
+                          </div>
+                        </React.Fragment>
+                      );
+                    })
+                    : distributioncenter.map((ob, index) => (
+                      <React.Fragment key={ob.id}>
+                        <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+                          <DashCard
+                            datahead={ob.name}
+                            dataname={ob.head.name}
+                            datadesignation={ob.head.designation}
+                            dataemail={ob.head.email}
+                            dataphone={ob.head.phone}
+                            dataaddress={ob.head.address}
+                          />
+                        </div>
+                      </React.Fragment>
+                    ))}
                 </div>
               }
             />
@@ -1261,56 +1270,56 @@ const DirectorDashboard = (props) => {
               TableCardGrid={
                 <div className="row">
                   <div className="row">
-                      <div className="col-3 mb-2">
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        <input
-                          className="form-control"
-                          icon="search"
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                          }}
-                          placeholder="Search"
-                          onChange={(e) => searchItems3(e.target.value)}
-                        />
-                      </div>
+                    <div className="col-3 mb-2">
+                      <i
+                        className="fa fa-search"
+                        id="filtersubmit"
+                        style={{ fontSize: "15px" }}
+                      />
+                      <input
+                        className="form-control"
+                        icon="search"
+                        style={{
+                          padding: "0.375rem 2.5rem",
+                          borderRadius: "10px",
+                        }}
+                        placeholder="Search"
+                        onChange={(e) => searchItems3(e.target.value)}
+                      />
                     </div>
+                  </div>
 
-                    {searchInput3.length >= 1
-                      ? filteredResults3.map((ob, index) => {
-                          return (
-                   <React.Fragment key={ob.id}>
-                      <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-                        <DashCard
-                          datahead="Department Head"
-                          dataname={ob.name}
-                          datadesignation={ob.designation}
-                          dataemail={ob.email}
-                          dataphone={ob.phone}
-                          dataaddress={ob.address}
-                        />
-                      </div>
-                    </React.Fragment>
-                   );
-                  })
-                :departmenthead.map((ob, index) => (
-                  <React.Fragment key={ob.id}>
-                      <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-                        <DashCard
-                          datahead="Department Head"
-                          dataname={ob.name}
-                          datadesignation={ob.designation}
-                          dataemail={ob.email}
-                          dataphone={ob.phone}
-                          dataaddress={ob.address}
-                        />
-                      </div>
-                    </React.Fragment>
-                 ))}
+                  {searchInput3.length >= 1
+                    ? filteredResults3.map((ob, index) => {
+                      return (
+                        <React.Fragment key={ob.id}>
+                          <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <DashCard
+                              datahead="Department Head"
+                              dataname={ob.name}
+                              datadesignation={ob.designation}
+                              dataemail={ob.email}
+                              dataphone={ob.phone}
+                              dataaddress={ob.address}
+                            />
+                          </div>
+                        </React.Fragment>
+                      );
+                    })
+                    : departmenthead.map((ob, index) => (
+                      <React.Fragment key={ob.id}>
+                        <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+                          <DashCard
+                            datahead="Department Head"
+                            dataname={ob.name}
+                            datadesignation={ob.designation}
+                            dataemail={ob.email}
+                            dataphone={ob.phone}
+                            dataaddress={ob.address}
+                          />
+                        </div>
+                      </React.Fragment>
+                    ))}
 
 
                 </div>

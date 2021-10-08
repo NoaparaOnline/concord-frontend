@@ -17,7 +17,6 @@ const DirectorScheduleCreate = (props) => {
   } = useForm();
 
  // Normal States
- const [isdocCus, setIsdocCus] = useState(true);
  const [assginto, setAssginto] = useState();
 
   const doctor = useSelector((state) => state?.director?.doctor);
@@ -26,47 +25,41 @@ const DirectorScheduleCreate = (props) => {
   const dispatch = useDispatch();
   console.log("assginto",assginto);
   const selectusertype = watch("usert");
-  if(selectusertype === "doctor")
-  {
-        const apiData = assginto
-        
-        console.log("getDoctorsd",apiData);
-          dispatch(getDoctors(apiData));
-      
-  }
-  else if(selectusertype === "customer")
-  {
-        const apiData = assginto;
-        
-        console.log("getCustomersd",apiData);
-          dispatch(getCustomers(apiData));
-      
-  }
   useEffect(() => {
     if (assignedto?.length < 1) {
-        dispatch(getAssignedto());
+      dispatch(getAssignedto());
     }
-  },[dispatch,doctor,customer])
+    
+    if(selectusertype === "doctor")
+    {
+          const apiData = assginto
+          console.log("getDoctorsd",apiData);
+            dispatch(getDoctors(apiData));
+        
+    }
+    else if(selectusertype === "customer")
+    {
+          const apiData = assginto;
+          console.log("getCustomersd",apiData);
+            dispatch(getCustomers(apiData));
+        
+    }
+
+
+
+
+
+  },[dispatch,selectusertype])
 
   const date = watch("date",);
   const time = watch("time",);
   const datetime = date +" "+ time ;      
 const onSubmit = async (data) => {
   
-// if(data.usert ==="doctor")
-// {
-//   setIsdocCus(true);
-// }
-// else if(data.usert ==="customer")
-// {
-//   setIsdocCus(false);
-// }
 
-      // console.log("isdocCus",isdocCus)
 
       if(data.usert ==="doctor")
       {
-        // alert(isdocCus);
         const apiData = {
           is_doctor_customer:true,
           doctor_uid:data.name,
@@ -78,7 +71,6 @@ const onSubmit = async (data) => {
       }
       else if(data.usert ==="customer")
       {
-        // alert(isdocCus);
         const apiData = {
           is_doctor_customer:false,
           customer_uid:data.name,
@@ -93,8 +85,9 @@ const onSubmit = async (data) => {
           };
 
 
-          console.log(datetime)
-  
+        console.log(datetime)
+        
+          
   return (
     <>
       <Modal show={props.show} onHide={props.onHide} centered size="md">
