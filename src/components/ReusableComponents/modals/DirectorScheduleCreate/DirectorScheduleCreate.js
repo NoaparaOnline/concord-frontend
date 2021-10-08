@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Form, Modal } from "react-bootstrap";
-import "react-bootstrap-typeahead/css/Typeahead.css";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -29,22 +28,18 @@ const DirectorScheduleCreate = (props) => {
   const selectusertype = watch("usert");
   if(selectusertype === "doctor")
   {
-      if (doctor?.length < 1) {
         const apiData = assginto
         
         console.log("getDoctorsd",apiData);
           dispatch(getDoctors(apiData));
-      }
       
   }
   else if(selectusertype === "customer")
   {
-      if (customer?.length < 1) {
         const apiData = assginto;
         
         console.log("getCustomersd",apiData);
           dispatch(getCustomers(apiData));
-      }
       
   }
   useEffect(() => {

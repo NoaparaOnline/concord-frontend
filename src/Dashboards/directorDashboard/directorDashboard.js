@@ -4,12 +4,8 @@ import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboa
 import TableDash from "../../components/ReusableComponents/TableDash/TableDash1";
 import "../depotmanagerDashboard/depotmanagerDashboard.css";
 import DashCard from "../../components/ReusableComponents/DashboardTableCards/DashCard2";
-import {
-  districards,
-} from "../../components/ReusableComponents/TableDash/mockData";
-import {
-  tableConstants,
-} from "../../components/ReusableComponents/TableDash/tableConstant1";
+import { districards } from "../../components/ReusableComponents/TableDash/mockData";
+import { tableConstants } from "../../components/ReusableComponents/TableDash/tableConstant1";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
 import icon1 from "../../Statics/assets/Sidebar/6.png";
@@ -40,11 +36,20 @@ import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import search from "../../Statics/assets/G1.png";
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
 import Loader from "react-loader-spinner";
-import { getProductsall, getProductsnew, getSchedule, getSingleUIDApproval,getDistributioncenter,getDepartmenthead } from "../../Store/Actions/directorActions";
+import {
+  getProductsall,
+  getProductsnew,
+  getSchedule,
+  getSingleUIDApproval,
+  getDistributioncenter,
+  getDepartmenthead,
+} from "../../Store/Actions/directorActions";
 import moment from "moment";
 import DirectorScheduleCreate from "../../components/ReusableComponents/modals/DirectorScheduleCreate/DirectorScheduleCreate";
 import DirectorApprovalStatusChange from "../../components/ReusableComponents/modals/DirectorApprovalStatusChange/DirectorApprovalStatusChange";
 import { InputGroup } from "react-bootstrap";
+
+
 
 const DirectorDashboard = (props) => {
   const { SearchBar } = Search;
@@ -53,8 +58,12 @@ const DirectorDashboard = (props) => {
   const schedule = useSelector((state) => state?.director?.schedule);
   const productall = useSelector((state) => state?.director?.productall);
   const productnew = useSelector((state) => state?.director?.productnew);
-  const distributioncenter = useSelector((state) => state?.director?.distributioncenter);
-  const departmenthead = useSelector((state) => state?.director?.departmenthead);
+  const distributioncenter = useSelector(
+    (state) => state?.director?.distributioncenter
+  );
+  const departmenthead = useSelector(
+    (state) => state?.director?.departmenthead
+  );
 
   // SORTED DATAFIELDS TABLE
   const deopdefaultSorted = [
@@ -98,6 +107,16 @@ const DirectorDashboard = (props) => {
       formatter: capitalize,
       text: "Approval Status",
       sort: true,
+      style: (cell, row) => {
+        if (cell === "awaiting_approval")
+          return { color: "#C0B627", fontWeight: "500" };
+        else if (cell === "cancelled")
+          return { color: "red", fontWeight: "500" };
+        else if (cell === "approved")
+          return { color: "green", fontWeight: "500" };
+        else if (cell === "reschedule")
+          return { color: "blue", fontWeight: "500" };
+      },
     },
     {
       dataField: "datetime",
@@ -164,7 +183,6 @@ const DirectorDashboard = (props) => {
     } else {
       return <span>{cell.customer.name}</span>;
     }
-
   }
 
   //ACTION BUTTON FIELDS
@@ -175,15 +193,15 @@ const DirectorDashboard = (props) => {
           <button
             class="btn btn-secondary "
             data-toggle="dropdown"
-            style={{borderRadius:'5px'}}
+            style={{ borderRadius: "5px" }}
           >
             {/* <button class="btn btn-secondary">Action</button> */}
-            <span style={{fontSize:'18px',fontWeight:'600'}}> ... </span>
+            <span style={{ fontSize: "18px", fontWeight: "600" }}> ... </span>
             <span class="sr-only">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <li>
-            <i className="fa fa-user-plus ms-2"></i>
+              <i className="fa fa-user-plus ms-2"></i>
 
               <Link
                 style={{
@@ -196,11 +214,11 @@ const DirectorDashboard = (props) => {
                   handleShow();
                 }}
               >
-               &nbsp; Add Schedule
+                &nbsp; Add Schedule
               </Link>
             </li>
             <li>
-            <i className="fa fa-edit ms-2"></i>
+              <i className="fa fa-edit ms-2"></i>
 
               <Link
                 style={{
@@ -214,11 +232,11 @@ const DirectorDashboard = (props) => {
                   dispatch(getSingleUIDApproval(row));
                 }}
               >
-              &nbsp; Update Status
+                &nbsp; Update Status
               </Link>
             </li>
             <li>
-            <i className="fa fa-eye ms-2"></i>
+              <i className="fa fa-eye ms-2"></i>
 
               <Link
                 style={{
@@ -231,7 +249,7 @@ const DirectorDashboard = (props) => {
                   pathname: "/depotmanager-dashboard/new-order/innerdetail",
                 }}
               >
-              &nbsp;  View
+                &nbsp; View
               </Link>
             </li>
           </ul>
@@ -240,25 +258,25 @@ const DirectorDashboard = (props) => {
     );
   }
   const [show, setShow] = useState(false);
-    // MODAL CLOSE FUCNTION
-    const handleClose = () => {
-      setShow(!show);
-    };
-    // MODAL OPEN FUCNTION
-    const handleShow = () => {
-      setShow(!show);
-    };
-    //===================2nd Modal
+  // MODAL CLOSE FUCNTION
+  const handleClose = () => {
+    setShow(!show);
+  };
+  // MODAL OPEN FUCNTION
+  const handleShow = () => {
+    setShow(!show);
+  };
+  //===================2nd Modal
   const [show1, setShow1] = useState(false);
-    // MODAL CLOSE FUCNTION
-    const handleClose1 = () => {
-      setShow1(!show1);
-    };
-    // ===================2nd Modal
-    const handleShow1 = () => {
-      setShow1(!show1);
-    };
-  
+  // MODAL CLOSE FUCNTION
+  const handleClose1 = () => {
+    setShow1(!show1);
+  };
+  // ===================2nd Modal
+  const handleShow1 = () => {
+    setShow1(!show1);
+  };
+
   //NULLABLE VALUE CHECKER FUNCTION TABLE DATA FIELDS
   function nullChecker(cell) {
     return (
@@ -268,7 +286,6 @@ const DirectorDashboard = (props) => {
     );
   }
 
-  
   // tabledata Toogle State
   const [selectedTabbledata, setSelectedTabbledata] = useState(schedule);
   const tabledataHandler = async (item) => {
@@ -280,7 +297,6 @@ const DirectorDashboard = (props) => {
           setSelectedTabbledata(schedule);
         }
       }
-
     }
     if (item === productall) {
       if (productall?.length < 1) {
@@ -289,7 +305,6 @@ const DirectorDashboard = (props) => {
           setSelectedTabbledata(productall);
         }
       }
-
     }
     if (item === productnew) {
       if (productnew?.length < 1) {
@@ -298,7 +313,6 @@ const DirectorDashboard = (props) => {
           setSelectedTabbledata(productall);
         }
       }
-
     }
   };
 
@@ -345,22 +359,85 @@ const DirectorDashboard = (props) => {
     }
   };
 
-
   const [filteredResults, setFilteredResults] = useState([]);
-    const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState("");
+
+  
   const searchItems = (searchValue) => {
-    setSearchInput(searchValue)
-    if (searchInput !== '') {
-        const filteredData = productall.filter((item) => {
-            return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
-        })
-        console.log("filteredData",filteredData)
-        setFilteredResults(filteredData)
+    setSearchInput(searchValue);
+    if (searchInput !== "") {
+      const filteredData = productall.filter((item) => {
+        return Object.values(item)
+          .join("")
+          .toLowerCase()
+          .includes(searchInput.toLowerCase());
+      });
+      console.log("filteredData", filteredData);
+      setFilteredResults(filteredData);
+    } else {
+      setFilteredResults(productall);
     }
-    else{
-        setFilteredResults(productall)
+  };
+
+  const [filteredResults1, setFilteredResults1] = useState([]);
+  const [searchInput1, setSearchInput1] = useState("");
+
+  const searchItems1 = (searchValue) => {
+    setSearchInput1(searchValue);
+    if (searchInput1 !== "") {
+      const filteredData = productnew.filter((item) => {
+        return Object.values(item)
+          .join("")
+          .toLowerCase()
+          .includes(searchInput1.toLowerCase());
+      });
+      console.log("filteredData", filteredData);
+      setFilteredResults1(filteredData);
+    } else {
+      setFilteredResults1(productnew);
     }
-}
+  };
+
+
+  const [filteredResults2, setFilteredResults2] = useState([]);
+  const [searchInput2, setSearchInput2] = useState("");
+  const searchItems2 = (searchValue) => {
+    setSearchInput2(searchValue);
+    if (searchInput2 !== "") {
+      const filteredData = distributioncenter.filter((item) => {
+        return Object.values(item)
+          .join("")
+          .toLowerCase()
+          .includes(searchInput2.toLowerCase());
+      });
+      console.log("filteredData", filteredData);
+      setFilteredResults2(filteredData);
+    } else {
+      setFilteredResults2(distributioncenter);
+    }
+  };
+  const [filteredResults3, setFilteredResults3] = useState([]);
+  const [searchInput3, setSearchInput3] = useState("");
+  const searchItems3 = (searchValue) => {
+    setSearchInput3(searchValue);
+    if (searchInput3 !== "") {
+      const filteredData = departmenthead.filter((item) => {
+        return Object.values(item)
+          .join("")
+          .toLowerCase()
+          .includes(searchInput3.toLowerCase());
+      });
+      console.log("filteredData", filteredData);
+      setFilteredResults3(filteredData);
+    } else {
+      setFilteredResults3(departmenthead);
+    }
+  };
+
+
+  
+
+  
   const tabHandler3 = (item) => {
     setSelectedTab3(item);
 
@@ -400,7 +477,6 @@ const DirectorDashboard = (props) => {
     "Cancelled",
   ];
   const buttonname3 = ["List", "Grid"];
- 
 
   // API HIT HANDLER ON SIDEBAR BUTTONS
   const ApiTabhandler = (item) => {
@@ -414,22 +490,18 @@ const DirectorDashboard = (props) => {
       if (distributioncenter?.length < 1) {
         dispatch(getDistributioncenter());
       }
-    }
-    else if (item === "departmenthead") {
+    } else if (item === "departmenthead") {
       if (departmenthead?.length < 1) {
         dispatch(getDepartmenthead());
       }
     }
   };
 
-
   useEffect(() => {
-   
     if (productall?.length < 1) {
-        dispatch(getProductsall());
-      }
-  }, [dispatch,productall,handle]);
-
+      dispatch(getProductsall());
+    }
+  }, [dispatch, productall, handle]);
 
   return (
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
@@ -550,8 +622,7 @@ const DirectorDashboard = (props) => {
 
           {loader ? (
             <DashboardMainCard
-            reverse={true}
-
+              reverse={true}
               TableDiv={
                 <div className="d-flex justify-content-center">
                   <Loader
@@ -566,8 +637,7 @@ const DirectorDashboard = (props) => {
             />
           ) : (
             <DashboardMainCard
-            reverse={true}
-
+              reverse={true}
               colorfulcards={
                 <div className="row d-flex justify-content-center">
                   <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
@@ -645,6 +715,216 @@ const DirectorDashboard = (props) => {
                   >
                     {(props) => (
                       <div className="">
+                       
+                       <div className='row'>
+                         <div className="col-6">
+
+                        <i
+                          className="fa fa-search"
+                          id="filtersubmit"
+                          style={{ fontSize: "15px" }}
+                        />
+                        
+                        <SearchBar
+                          {...props.searchProps}
+                          style={{
+                            padding: "0.375rem 2.5rem",
+                            borderRadius: "10px",
+                          }}
+                        />
+                         </div>
+
+                        <div className="col-6">
+                         <>
+                        <div className="row">
+                        <div className="col d-flex justify-content-end">
+                        <div
+                         className={` btn btn-primary me-2`}
+                        style={{ backgroundColor: "#0066b3" }}
+                                    >
+
+                        <Link
+                          style={{
+                            color: "#fff",
+                            fontWeight: "500",
+                            fontSize: "14px",
+                            textDecoration: "none",
+                          }}
+                          onClick={() => {
+                            handleShow();
+                          }}
+                        >
+                          <i className="fa fa-user-plus ms-2"></i>
+                          &nbsp; Add New Schedule
+                        </Link>
+                      </div>
+                        <div
+                         className={` btn btn-primary `}
+                        style={{ backgroundColor: "#0066b3" }}
+                                    >
+
+                      <Link
+                        style={{
+                          color: "#FFF",
+                          fontWeight: "500",
+                          fontSize: "14px",
+                          textDecoration: "none",
+                        }}
+                        onClick={() => {
+                          handleShow1();
+                          dispatch(getSingleUIDApproval());
+                        }}
+                      >
+                        <i className="fa fa-edit ms-2"></i>
+                        &nbsp; Update Status
+                      </Link>
+                      </div>
+                    </div>
+                  </div>
+      </>
+                  </div>
+      </div>
+                        <BootstrapTable
+                          {...props.baseProps}
+                          // rowStyle={rowStyle}
+
+                          defaultSorted={deopdefaultSorted}
+                          // pagination={pagination}
+                          pagination={
+                            selectedTabbledata.length > 10
+                              ? paginationFactory()
+                              : null
+                          }
+                          bordered={false}
+                          condensed
+                          wrapperClasses="table-responsive"
+                        />
+                      </div>
+                    )}
+                  </ToolkitProvider>
+                </>
+              }
+              reverse="true"
+            />
+          )}
+        </Route>
+        <Route path={`${props.match.path}/products`}>
+          <NavbarDash
+            sidebarOpen={sidebarOpen}
+            openSidebar={openSidebar}
+            Heading="Products"
+          />
+
+          {loader ? (
+            <DashboardMainCard
+              reverse={true}
+              TableDiv={
+                <div className="d-flex justify-content-center">
+                  <Loader
+                    height={100}
+                    width={100}
+                    type="Rings"
+                    color="#0066b3"
+                  />
+                </div>
+              }
+              reverse="true"
+            />
+          ) : (
+            <DashboardMainCard
+              reverse={selectedTab2 === "List" ? true : false}
+              SelectedButtons={
+                <div className="">
+                  {buttonname3.map((item, index) => (
+                    <div
+                      className="d-flex d-inline-flex my-3"
+                      key={index + 1}
+                      onClick={() => tabHandler2(item)}
+                    >
+                      <DashboardBtnList
+                        label={item}
+                        iconclassname={
+                          item === "List" ? "fa fa-list" : "fa fa-th"
+                        }
+                        bntStyle={{
+                          borderRadius:
+                            index === 0
+                              ? "10px 0px 0px 10px"
+                              : index === buttonname3.length - 1
+                              ? "0px 10px 10px 0px"
+                              : "",
+                        }}
+                        className={
+                          selectedTab2 === item
+                            ? "dashboardBtnList-item-active "
+                            : "default-color-and-hover "
+                        }
+                      />
+                    </div>
+                  ))}
+                </div>
+              }
+              TableCardGrid={
+                <>
+                  <div className="row">
+                    <div className="row">
+                      <div className="col-3 mb-2">
+                        <i
+                          className="fa fa-search"
+                          id="filtersubmit"
+                          style={{ fontSize: "15px" }}
+                        />
+                        <input
+                          className="form-control"
+                          icon="search"
+                          style={{
+                            padding: "0.375rem 2.5rem",
+                            borderRadius: "10px",
+                          }}
+                          placeholder="Search"
+                          onChange={(e) => searchItems(e.target.value)}
+                        />
+                      </div>
+                    </div>
+
+                    {searchInput.length >= 1
+                      ? filteredResults.map((item, index) => {
+                          return (
+                            <React.Fragment key={item.id}>
+                              <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                                <DashboardTableCards ob={item} />
+                              </div>
+                            </React.Fragment>
+                          );
+                        })
+                      : productall.map((item, index) => (
+                          <React.Fragment key={item.id}>
+                            <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                              <DashboardTableCards ob={item} />
+                            </div>
+                          </React.Fragment>
+                        ))}
+                    {/* {productall.map((ob, index) => (
+                 <React.Fragment key={ob.id}>
+                <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                <DashboardTableCards ob={ob}/>
+                 </div>
+            </React.Fragment>
+         ))} */}
+                  </div>
+                </>
+              }
+              TableDiv={
+                <>
+                  <ToolkitProvider
+                    bootstrap4
+                    keyField="id"
+                    data={selectedTabbledata}
+                    columns={DirectorProductsAll}
+                    search
+                  >
+                    {(props) => (
+                      <div className="">
                         <i
                           className="fa fa-search"
                           id="filtersubmit"
@@ -677,164 +957,8 @@ const DirectorDashboard = (props) => {
                   </ToolkitProvider>
                 </>
               }
-              reverse="true"
             />
           )}
-        </Route>
-        <Route path={`${props.match.path}/products`}>
-          <NavbarDash
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            Heading="Products"
-          />
-
-
-
-
-
-
-
-{loader ? (
-            <DashboardMainCard
-            reverse={true}
-
-              TableDiv={
-                <div className="d-flex justify-content-center">
-                  <Loader
-                    height={100}
-                    width={100}
-                    type="Rings"
-                    color="#0066b3"
-                  />
-                </div>
-              }
-              reverse="true"
-            />
-          ) : (
-            <DashboardMainCard
-            reverse={selectedTab2 === "List" ? true : false}
-
-             
-               SelectedButtons={
-              <div className="">
-                {buttonname3.map((item, index) => (
-                  <div
-                    className="d-flex d-inline-flex "
-                    key={index + 1}
-                    onClick={() => tabHandler2(item)}
-                  >
-                    <DashboardBtnList
-                      label={item}
-                      iconclassname={
-                        item === "List" ? "fa fa-list" : "fa fa-th"
-                      }
-                      bntStyle={{
-                        borderRadius:
-                          index === 0
-                            ? "10px 0px 0px 10px"
-                            : index === buttonname3.length - 1
-                            ? "0px 10px 10px 0px"
-                            : "",
-                      }}
-                      className={
-                        selectedTab2 === item
-                          ? "dashboardBtnList-item-active "
-                          : "default-color-and-hover "
-                      }
-                    />
-                  </div>
-                ))}
-              </div>
-            }
-           
-              TableCardGrid={
-                <>
-               
-              <div className="row">
-              <input icon='search'
-                placeholder='Search...'
-                onChange={(e) => searchItems(e.target.value)}
-            />
-                {console.log("HelloWorl",filteredResults)}
-              {searchInput.length >= 1 ? (
-                    filteredResults.map((item,index) => {
-                      return(
-                      <React.Fragment key={item.id}>
-                      <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
-                      <DashboardTableCards ob={item}/>
-                       </div>
-                  </React.Fragment>
-                      )
-                    })
-                ) : (
-                  productall.map((item, index) => (
-                    
-                    <React.Fragment key={item.id}>
-                   <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
-                   <DashboardTableCards ob={item}/>
-                    </div>
-               </React.Fragment>
-            ))
-          
-                )}
-                {console.log("filteredResults",filteredResults)}
-              {/* {productall.map((ob, index) => (
-                 <React.Fragment key={ob.id}>
-                <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
-                <DashboardTableCards ob={ob}/>
-                 </div>
-            </React.Fragment>
-         ))} */}
-       </div>
-       </>
-            }
-            TableDiv={
-              <>
-                <ToolkitProvider
-                  bootstrap4
-                  keyField="id"
-                  data={selectedTabbledata}
-                  columns={DirectorProductsAll}
-                  search
-                >
-                  {(props) => (
-                    <div className="">
-                      <i
-                        className="fa fa-search"
-                        id="filtersubmit"
-                        style={{ fontSize: "15px" }}
-                      />
-                      <SearchBar
-                        {...props.searchProps}
-                        style={{
-                          padding: "0.375rem 2.5rem",
-                          borderRadius: "10px",
-                        }}
-                      />
-                      <BootstrapTable
-                        {...props.baseProps}
-                        // rowStyle={rowStyle}
-
-                        defaultSorted={deopdefaultSorted}
-                        // pagination={pagination}
-                        pagination={
-                          selectedTabbledata.length > 10
-                            ? paginationFactory()
-                            : null
-                        }
-                        bordered={false}
-                        condensed
-                        wrapperClasses="table-responsive"
-                      />
-                    </div>
-                  )}
-                </ToolkitProvider>
-              </>
-            }
-            />
-          )}
-
-         
         </Route>
         <Route path={`${props.match.path}/newlylaunched`}>
           <NavbarDash
@@ -842,13 +966,10 @@ const DirectorDashboard = (props) => {
             openSidebar={openSidebar}
             Heading="Newly Launched"
           />
-         
-         
-         
+
           {loader ? (
             <DashboardMainCard
-            reverse={true}
-
+              reverse={true}
               TableDiv={
                 <div className="d-flex justify-content-center">
                   <Loader
@@ -863,113 +984,135 @@ const DirectorDashboard = (props) => {
             />
           ) : (
             <DashboardMainCard
-            reverse={selectedTab3 === "List" ? true : false}
-
-             
-               SelectedButtons={
-              <div className="">
-                {buttonname3.map((item, index) => (
-                  <div
-                    className="d-flex d-inline-flex "
-                    key={index + 1}
-                    onClick={() => tabHandler3(item)}
-                  >
-                    <DashboardBtnList
-                      label={item}
-                      iconclassname={
-                        item === "List" ? "fa fa-list" : "fa fa-th"
-                      }
-                      bntStyle={{
-                        borderRadius:
-                          index === 0
-                            ? "10px 0px 0px 10px"
-                            : index === buttonname3.length - 1
-                            ? "0px 10px 10px 0px"
-                            : "",
-                      }}
-                      className={
-                        selectedTab3 === item
-                          ? "dashboardBtnList-item-active "
-                          : "default-color-and-hover "
-                      }
-                    />
-                  </div>
-                ))}
-              </div>
-            }
-              TableCardGrid={
-              <div className="row">
-              {productnew.map((ob, index) => (
-                 <React.Fragment key={ob.id}>
-                <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
-                <DashboardTableCards ob={ob}/>
-                 </div>
-            </React.Fragment>
-         ))}
-       </div>
-             
-            }
-            TableDiv={
-              <>
-                <ToolkitProvider
-                  bootstrap4
-                  keyField="id"
-                  data={selectedTabbledata}
-                  columns={DirectorProductsAll}
-                  search
-                >
-                  {(props) => (
-                    <div className="">
-                      <i
-                        className="fa fa-search"
-                        id="filtersubmit"
-                        style={{ fontSize: "15px" }}
-                      />
-                      <SearchBar
-                        {...props.searchProps}
-                        style={{
-                          padding: "0.375rem 2.5rem",
-                          borderRadius: "10px",
-                        }}
-                      />
-                      <BootstrapTable
-                        {...props.baseProps}
-                        // rowStyle={rowStyle}
-
-                        defaultSorted={deopdefaultSorted}
-                        // pagination={pagination}
-                        pagination={
-                          selectedTabbledata.length > 10
-                            ? paginationFactory()
-                            : null
+              reverse={selectedTab3 === "List" ? true : false}
+              SelectedButtons={
+                <div className="">
+                  {buttonname3.map((item, index) => (
+                    <div
+                      className="d-flex d-inline-flex my-3"
+                      key={index + 1}
+                      onClick={() => tabHandler3(item)}
+                    >
+                      <DashboardBtnList
+                        label={item}
+                        iconclassname={
+                          item === "List" ? "fa fa-list" : "fa fa-th"
                         }
-                        bordered={false}
-                        condensed
-                        wrapperClasses="table-responsive"
+                        bntStyle={{
+                          borderRadius:
+                            index === 0
+                              ? "10px 0px 0px 10px"
+                              : index === buttonname3.length - 1
+                              ? "0px 10px 10px 0px"
+                              : "",
+                        }}
+                        className={
+                          selectedTab3 === item
+                            ? "dashboardBtnList-item-active "
+                            : "default-color-and-hover "
+                        }
                       />
                     </div>
-                  )}
-                </ToolkitProvider>
-              </>
-            }
+                  ))}
+                </div>
+              }
+              TableCardGrid={
+                <div className="row">
+                   <div className="row">
+                      <div className="col-3 mb-2">
+                        <i
+                          className="fa fa-search"
+                          id="filtersubmit"
+                          style={{ fontSize: "15px" }}
+                        />
+                        <input
+                          className="form-control"
+                          icon="search"
+                          style={{
+                            padding: "0.375rem 2.5rem",
+                            borderRadius: "10px",
+                          }}
+                          placeholder="Search"
+                          onChange={(e) => searchItems1(e.target.value)}
+                        />
+                      </div>
+                    </div>
+
+                    {searchInput1.length >= 1
+                      ? filteredResults1.map((item, index) => {
+                          return (
+                            <React.Fragment key={item.id}>
+                              <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                                <DashboardTableCards ob={item} />
+                              </div>
+                            </React.Fragment>
+                          );
+                        })
+                      : productnew.map((item, index) => (
+                          <React.Fragment key={item.id}>
+                            <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                              <DashboardTableCards ob={item} />
+                            </div>
+                          </React.Fragment>
+                        ))}
+                </div>
+              }
+              TableDiv={
+                <>
+                  <ToolkitProvider
+                    bootstrap4
+                    keyField="id"
+                    data={selectedTabbledata}
+                    columns={DirectorProductsAll}
+                    search
+                  >
+                    {(props) => (
+                      <div className="">
+                        <i
+                          className="fa fa-search"
+                          id="filtersubmit"
+                          style={{ fontSize: "15px" }}
+                        />
+                        <SearchBar
+                          {...props.searchProps}
+                          style={{
+                            padding: "0.375rem 2.5rem",
+                            borderRadius: "10px",
+                          }}
+                        />
+                        <BootstrapTable
+                          {...props.baseProps}
+                          // rowStyle={rowStyle}
+
+                          defaultSorted={deopdefaultSorted}
+                          // pagination={pagination}
+                          pagination={
+                            selectedTabbledata.length > 10
+                              ? paginationFactory()
+                              : null
+                          }
+                          bordered={false}
+                          condensed
+                          wrapperClasses="table-responsive"
+                        />
+                      </div>
+                    )}
+                  </ToolkitProvider>
+                </>
+              }
             />
           )}
-
-       
         </Route>
         <Route path={`${props.match.path}/distributioncenter`}>
-        
-    
           <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
             Heading="Distribution Center"
           />
 
- {loader ? (
-          <DashboardMainCard
-            reverse={true}
-
+          {loader ? (
+            <DashboardMainCard
+              reverse={true}
               TableDiv={
                 <div className="d-flex justify-content-center">
                   <Loader
@@ -983,56 +1126,88 @@ const DirectorDashboard = (props) => {
             />
           ) : (
             <DashboardMainCard
-            reverse={false}
-      SearchBar={
-              <>
-                <div className="search-box my-4" style={{ width: "230px" }}>
-                  <form
-                    className="form_style_search"
-                    style={{ border: "1px solid #707070", borderRadius: "0px" }}
-                  >
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
+              reverse={false}
+              SearchBar={
+                <>
+                  <div className="search-box my-4" style={{ width: "230px" }}>
+                    <form
+                      className="form_style_search"
+                      style={{
+                        border: "1px solid #707070",
+                        borderRadius: "0px",
+                      }}
                     >
-                      <img src={search} alt="" />
-                    </button>
-                    <input
-                      className="form_style_input"
-                      type="text"
-                      placeholder="Search"
-                    />
-                  </form>
-                </div>
-              </>
-            }
-            TableCardGrid={
-              <div className="row">
-                {distributioncenter.map((ob, index) => (
-                  <React.Fragment key={ob.id}>
-                    <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-                      <DashCard 
-                      datahead={ob.name}
-                      dataname={ob.head.name}
-                      datadesignation={ob.head.designation}
-                      dataemail={ob.head.email}
-                      dataphone={ob.head.phone}
-                      dataaddress={ob.head.address}
+                      <button
+                        className="form_style_btn"
+                        style={{ background: "transparent", border: "none" }}
+                      >
+                        <img src={search} alt="" />
+                      </button>
+                      <input
+                        className="form_style_input"
+                        type="text"
+                        placeholder="Search"
                       />
+                    </form>
+                  </div>
+                </>
+              }
+              TableCardGrid={
+                <div className="row">
+                  <div className="row">
+                      <div className="col-3 mb-2">
+                        <i
+                          className="fa fa-search"
+                          id="filtersubmit"
+                          style={{ fontSize: "15px" }}
+                        />
+                        <input
+                          className="form-control"
+                          icon="search"
+                          style={{
+                            padding: "0.375rem 2.5rem",
+                            borderRadius: "10px",
+                          }}
+                          placeholder="Search"
+                          onChange={(e) => searchItems2(e.target.value)}
+                        />
+                      </div>
                     </div>
-                  </React.Fragment>
-                ))}
-              </div>
-            }
+                    {searchInput2.length >= 1
+                      ? filteredResults2.map((ob, index) => {
+                          return (
+                   <React.Fragment key={ob.id}>
+                      <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+                        <DashCard
+                          datahead={ob.name}
+                          dataname={ob.head.name}
+                          datadesignation={ob.head.designation}
+                          dataemail={ob.head.email}
+                          dataphone={ob.head.phone}
+                          dataaddress={ob.head.address}
+                        />
+                      </div>
+                    </React.Fragment>
+                   );
+                  })
+                :distributioncenter.map((ob, index) => (
+                  <React.Fragment key={ob.id}>
+                      <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+                        <DashCard
+                          datahead={ob.name}
+                          dataname={ob.head.name}
+                          datadesignation={ob.head.designation}
+                          dataemail={ob.head.email}
+                          dataphone={ob.head.phone}
+                          dataaddress={ob.head.address}
+                        />
+                      </div>
+                    </React.Fragment>
+                 ))}
+                </div>
+              }
             />
           )}
-
-
-
-
-
-
-
         </Route>
         <Route path={`${props.match.path}/departmenthead`}>
           <NavbarDash
@@ -1040,12 +1215,10 @@ const DirectorDashboard = (props) => {
             openSidebar={openSidebar}
             Heading="Department Head"
           />
-          
 
           {loader ? (
             <DashboardMainCard
-            reverse={true}
-
+              reverse={true}
               TableDiv={
                 <div className="d-flex justify-content-center">
                   <Loader
@@ -1059,52 +1232,91 @@ const DirectorDashboard = (props) => {
             />
           ) : (
             <DashboardMainCard
-            reverse={false}
-SearchBar={
-              <>
-                <div className="search-box my-4" style={{ width: "230px" }}>
-                  <form
-                    className="form_style_search"
-                    style={{ border: "1px solid #707070", borderRadius: "0px" }}
-                  >
-                    <button
-                      className="form_style_btn"
-                      style={{ background: "transparent", border: "none" }}
+              reverse={false}
+              SearchBar={
+                <>
+                  <div className="search-box my-4" style={{ width: "230px" }}>
+                    <form
+                      className="form_style_search"
+                      style={{
+                        border: "1px solid #707070",
+                        borderRadius: "0px",
+                      }}
                     >
-                      <img src={search} alt="" />
-                    </button>
-                    <input
-                      className="form_style_input"
-                      type="text"
-                      placeholder="Search"
-                    />
-                  </form>
-                </div>
-              </>
-            }
-            TableCardGrid={
-              <div className="row">
-                {console.log(departmenthead)}
-                {departmenthead.map((ob, index) => (
-                  <React.Fragment key={ob.id}>
-                    <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-                      <DashCard 
-                      datahead="Department Head"
-                      dataname={ob.name}
-                      datadesignation={ob.designation}
-                      dataemail={ob.email}
-                      dataphone={ob.phone}
-                      dataaddress={ob.address}
+                      <button
+                        className="form_style_btn"
+                        style={{ background: "transparent", border: "none" }}
+                      >
+                        <img src={search} alt="" />
+                      </button>
+                      <input
+                        className="form_style_input"
+                        type="text"
+                        placeholder="Search"
                       />
+                    </form>
+                  </div>
+                </>
+              }
+              TableCardGrid={
+                <div className="row">
+                  <div className="row">
+                      <div className="col-3 mb-2">
+                        <i
+                          className="fa fa-search"
+                          id="filtersubmit"
+                          style={{ fontSize: "15px" }}
+                        />
+                        <input
+                          className="form-control"
+                          icon="search"
+                          style={{
+                            padding: "0.375rem 2.5rem",
+                            borderRadius: "10px",
+                          }}
+                          placeholder="Search"
+                          onChange={(e) => searchItems3(e.target.value)}
+                        />
+                      </div>
                     </div>
-                  </React.Fragment>
-                ))}
-              </div>
-            }
+
+                    {searchInput3.length >= 1
+                      ? filteredResults3.map((ob, index) => {
+                          return (
+                   <React.Fragment key={ob.id}>
+                      <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+                        <DashCard
+                          datahead="Department Head"
+                          dataname={ob.name}
+                          datadesignation={ob.designation}
+                          dataemail={ob.email}
+                          dataphone={ob.phone}
+                          dataaddress={ob.address}
+                        />
+                      </div>
+                    </React.Fragment>
+                   );
+                  })
+                :departmenthead.map((ob, index) => (
+                  <React.Fragment key={ob.id}>
+                      <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+                        <DashCard
+                          datahead="Department Head"
+                          dataname={ob.name}
+                          datadesignation={ob.designation}
+                          dataemail={ob.email}
+                          dataphone={ob.phone}
+                          dataaddress={ob.address}
+                        />
+                      </div>
+                    </React.Fragment>
+                 ))}
+
+
+                </div>
+              }
             />
           )}
-
-
         </Route>
 
         <SidebarDashboard
@@ -1125,7 +1337,7 @@ SearchBar={
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #CB912B" }}
                 btnroute="schedule"
-                onClick={() => tabHandler1('All')}
+                onClick={() => tabHandler1("All")}
                 btnName="Schedule"
               />
               <SiderbarBtn
@@ -1183,8 +1395,12 @@ SearchBar={
         />
       </Router>
       {/* <StatuschangedModal show={show} onHide={handleClose} {...props} /> */}
-      <DirectorScheduleCreate show={show} onHide={handleClose} {...props}/>
-      <DirectorApprovalStatusChange show={show1} onHide={handleClose1} {...props}/>
+      <DirectorScheduleCreate show={show} onHide={handleClose} {...props} />
+      <DirectorApprovalStatusChange
+        show={show1}
+        onHide={handleClose1}
+        {...props}
+      />
     </div>
   );
 };
