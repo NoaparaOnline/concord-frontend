@@ -89,9 +89,6 @@ const Login = (props) => {
                 {props.showdiv ?
                   <div>
 
-
-
-                 
                     <form onSubmit={handleSubmit(onSubmit)} style={{padding:'15px',height: '220px'}}>
                       <div className="row">
                         <div className="col-12">

@@ -19,7 +19,7 @@ const SERVICE_URLS = {
   SchedulesApprovalStatusChanges: "schedules/status",
   // getdoctors: "doctors/read",
   // getcustomers: "customers/read",
-  getassignedto: "fieldstaffs/childs",
+  // getassignedto: "fieldstaffs/childs",
   getproductsall: "products/read/medicine",
   getproductsnew: "products/read/medicine/new",
   getdepartmenthead: "department_heads/read",
@@ -72,8 +72,8 @@ const statusChanges = (data) =>
 //============================
 
 //Director Api Function
-const getSchedules = () =>
-  get(SERVICE_URLS.getSchedules, {}, { feature: featureConstants.static });
+// const getSchedules = () =>
+//   get(SERVICE_URLS.getSchedules, {}, { feature: featureConstants.static });
 
 const addSchedules = (data) =>
   post(SERVICE_URLS.addSchedules, data, {
@@ -91,8 +91,8 @@ const SchedulesApprovalStatusChanges = (data) =>
   // const getcustomers = (data) =>
   // get(SERVICE_URLS.getcustomers, "",data, { feature: featureConstants.static });
 
-  const getassignedto = () =>
-  get(SERVICE_URLS.getassignedto, {}, { feature: featureConstants.static });
+  // const getassignedto = () =>
+  // get(SERVICE_URLS.getassignedto, {}, { feature: featureConstants.static });
 
   const getproductsall = () =>
   get(SERVICE_URLS.getproductsall, {}, { feature: featureConstants.static });
@@ -122,12 +122,12 @@ const apiServices = {
   statusChanges,
   getStocksMedicineProducts,
   getStocksGiftProducts,
-  getSchedules,
+  // getSchedules,
   addSchedules,
   SchedulesApprovalStatusChanges,
   // getdoctors,
   // getcustomers,
-  getassignedto,
+  // getassignedto,
   getproductsall,
   getproductsnew,
   getdepartmenthead,

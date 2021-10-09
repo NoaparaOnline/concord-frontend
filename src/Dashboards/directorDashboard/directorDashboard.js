@@ -201,24 +201,8 @@ const DirectorDashboard = (props) => {
             <span class="sr-only">Toggle Dropdown</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
-            <li>
-              <i className="fa fa-user-plus ms-2"></i>
-
-              <Link
-                style={{
-                  color: "#0066b3",
-                  fontWeight: "500",
-                  fontSize: "14px",
-                  textDecoration: "none",
-                }}
-                onClick={() => {
-                  handleShow();
-                }}
-              >
-                &nbsp; Add Schedule
-              </Link>
-            </li>
-            <li>
+           
+            <li className="">
               <i className="fa fa-edit ms-2"></i>
 
               <Link
@@ -236,7 +220,7 @@ const DirectorDashboard = (props) => {
                 &nbsp; Update Status
               </Link>
             </li>
-            <li>
+            <li className="">
               <i className="fa fa-eye ms-2"></i>
 
               <Link
@@ -293,7 +277,7 @@ const DirectorDashboard = (props) => {
     setSelectedTabbledata(item);
     if (item === schedule) {
       if (schedule?.length < 1) {
-        const scheduleapi = await dispatch(getSchedule());
+        const scheduleapi = await dispatch(getSchedule(''));
         if (scheduleapi === true) {
           setSelectedTabbledata(schedule);
         }
@@ -434,10 +418,6 @@ const DirectorDashboard = (props) => {
       setFilteredResults3(departmenthead);
     }
   };
-
-
-
-
 
   const tabHandler3 = (item) => {
     setSelectedTab3(item);
@@ -621,22 +601,6 @@ const DirectorDashboard = (props) => {
             Heading="Schedule"
           />
 
-          {loader ? (
-            <DashboardMainCard
-              reverse={true}
-              TableDiv={
-                <div className="d-flex justify-content-center">
-                  <Loader
-                    height={100}
-                    width={100}
-                    type="Rings"
-                    color="#0066b3"
-                  />
-                </div>
-              }
-              reverse="true"
-            />
-          ) : (
             <DashboardMainCard
               reverse={true}
               colorfulcards={
@@ -679,7 +643,9 @@ const DirectorDashboard = (props) => {
                 <>
 
                   
-                  <DependentDropdowns/>
+                  <DependentDropdowns
+                  data={selectedTabbledata}
+                  />
 
 
 
@@ -767,32 +733,24 @@ const DirectorDashboard = (props) => {
                                       &nbsp; Add New Schedule
                                     </Link>
                                   </div>
-                                  <div
-                                    className={` btn btn-primary `}
-                                    style={{ backgroundColor: "#0066b3" }}
-                                  >
-
-                                    <Link
-                                      style={{
-                                        color: "#FFF",
-                                        fontWeight: "500",
-                                        fontSize: "14px",
-                                        textDecoration: "none",
-                                      }}
-                                      onClick={() => {
-                                        handleShow1();
-                                        dispatch(getSingleUIDApproval());
-                                      }}
-                                    >
-                                      <i className="fa fa-edit ms-2"></i>
-                                      &nbsp; Update Status
-                                    </Link>
-                                  </div>
+                                  
                                 </div>
                               </div>
                             </>
                           </div>
                         </div>
+                        {loader ? (
+                <div className="d-flex justify-content-center">
+                  <Loader
+                    height={100}
+                    width={100}
+                    type="Rings"
+                    color="#0066b3"
+                  />
+                </div>
+          ):(
+
+                       <div>
                         <BootstrapTable
                           {...props.baseProps}
                           // rowStyle={rowStyle}
@@ -808,6 +766,8 @@ const DirectorDashboard = (props) => {
                           condensed
                           wrapperClasses="table-responsive"
                         />
+                       </div>
+          )}
                       </div>
                     )}
                   </ToolkitProvider>
@@ -815,7 +775,7 @@ const DirectorDashboard = (props) => {
               }
               reverse="true"
             />
-          )}
+          
         </Route>
         <Route path={`${props.match.path}/products`}>
           <NavbarDash

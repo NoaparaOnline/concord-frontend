@@ -6,29 +6,68 @@ import { logInConstants } from "../Constants/loginConstant";
 
 
 
-export const getSchedule = () => async (dispatch) => {
+// export const getSchedule = () => async (dispatch) => {
+//   dispatch({
+//     type: logInConstants.SET_LOADER,
+//     payload: true,
+//   });
+//   const response = await apiServices.getSchedules();
+//   if (response?.data?.response_code === 200) {
+//     dispatch({
+//       type: directorConstants.GET_SCHEDULE,
+//       payload: response?.data?.response_data,
+//     });
+//     dispatch({
+//       type: logInConstants.SET_LOADER,
+//       payload: false,
+//     });
+//     return true 
+//   }
+  
+// };
+
+
+export const getSchedule = (uid) => async (dispatch) => {
+  const token = JSON.parse(localStorage.getItem('token'));
   dispatch({
-    type: logInConstants.SET_LOADER,
-    payload: true,
-  });
-  const response = await apiServices.getSchedules();
-  if (response?.data?.response_code === 200) {
+        type: logInConstants.SET_LOADER,
+        payload: true,
+      });
+  try {
+    const head = {'x-session-key': token.key, 'x-session-type': token.type};
+    const response = await axios.get(
+      `https://concord-backend-m1.herokuapp.com/api/schedules/read?child_uid=${uid}`,
+      {headers: head},
+    );
+    if (response?.data?.response_code === 200) {
     dispatch({
       type: directorConstants.GET_SCHEDULE,
       payload: response?.data?.response_data,
     });
     dispatch({
-      type: logInConstants.SET_LOADER,
-      payload: false,
-    });
-    return true 
+            type: logInConstants.SET_LOADER,
+            payload: false,
+          });
+  return true 
   }
+  } catch (error) {
+    return "fail"
+  }
+
   
 };
+
+
+
+
+
+
+
+
 export const addSchedule = (data) => async (dispatch) => {
   const response = await apiServices.addSchedules(data);
   if (response?.data?.response_code === 200) {
-    dispatch(getSchedule());
+    dispatch(getSchedule(''));
     toast.warning("Schedule Added Successfully");
   } else {
     toast.error(response?.response_message);
@@ -40,7 +79,7 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
     const response = await apiServices.SchedulesApprovalStatusChanges(data);
     
     if (response?.response_code === 200) {
-      dispatch(getSchedule());
+      dispatch(getSchedule(''));
       toast.info("Status Updated Successfully");
      
     } else {
@@ -117,23 +156,33 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
 
 
 
-  export const getAssignedto = () => async (dispatch) => {
+  // export const getAssignedto = () => async (dispatch) => {
 
-    const response = await apiServices.getassignedto();
-    if (response?.data?.response_code === 200) {
-      dispatch({
-        type: directorConstants.GET_ASSIGNED_TO,
-        payload: response?.data?.response_data,
-      });
-    }
+  //   const response = await apiServices.getassignedto();
+  //   if (response?.data?.response_code === 200) {
+  //     dispatch({
+  //       type: directorConstants.GET_ASSIGNED_TO,
+  //       payload: response?.data?.response_data,
+  //     });
+  //   }
     
-  };
-  export const getSingleUIDApproval = (data) =>  (dispatch) => {
+  // };
+ 
+
+
+
+// Field Staff API GET UID FOR SM CHILDS IN PARAMS AND FOR CREATE NEW SCHEDULE
+
+
+
+
+ export const getSingleUIDApproval = (data) =>  (dispatch) => {
     dispatch({
       type: directorConstants.GET_UID_APPROVAL,
       payload: data,
     });
   };
+
 
 
   // GET PRODUCTS ALL DIRECTOR
@@ -204,4 +253,64 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
       });
     }
     
+  };
+
+
+  export const getAssignedto = () => async (dispatch) => {
+    const token = JSON.parse(localStorage.getItem('token'));
+   
+    try {
+      const head = {'x-session-key': token.key, 'x-session-type': token.type};
+      const response = await axios.get(
+        `https://concord-backend-m1.herokuapp.com/api/fieldstaffs/childs`,
+        {headers: head},
+      );
+      if (response?.data?.response_code === 200) {
+      dispatch({
+        type: directorConstants.GET_ASSIGNED_TO,
+        payload: response?.data?.response_data,
+      });
+     
+    }
+    } catch (error) {
+      return "fail"
+    }
+  };
+
+
+
+  export const getChildsData = (uid,role) => async (dispatch) => {
+    const token = JSON.parse(localStorage.getItem('token'));
+   
+    try {
+      const head = {'x-session-key': token.key, 'x-session-type': token.type};
+      const response = await axios.get(
+        `https://concord-backend-m1.herokuapp.com/api/fieldstaffs/childs?child_uid=${uid}`,
+        {headers: head},
+      );
+      if (response?.data?.response_code === 200) {
+        
+        if(role === 'rsm') {
+          dispatch({
+            type: directorConstants.GET_ASSIGNED_TO_RSM,
+            payload: response?.data?.response_data,
+          });
+        }
+        else if(role === 'am') {
+          dispatch({
+            type: directorConstants.GET_ASSIGNED_TO_AM,
+            payload: response?.data?.response_data,
+          });
+        }
+        else if(role === 'mpo') {
+          dispatch({
+            type: directorConstants.GET_ASSIGNED_TO_MPO,
+            payload: response?.data?.response_data,
+          });
+        }
+     
+    }
+    } catch (error) {
+      return "fail"
+    }
   };

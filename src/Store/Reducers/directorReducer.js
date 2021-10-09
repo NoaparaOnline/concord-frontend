@@ -8,7 +8,10 @@ const initialState = {
     productall:[], 
     productnew:[], 
     distributioncenter:[], 
-    departmenthead:[], 
+    departmenthead:[],
+    assignedtorsm: [], 
+    assignedtoam: [], 
+    assignedtompo: [], 
 };
 export const directorReducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -30,6 +33,12 @@ export const directorReducer = (state = initialState, { type, payload }) => {
         return { ...state, distributioncenter : payload };
     case directorConstants.GET_DEPARTMENT_HEAD:
         return { ...state, departmenthead : payload };
+    case directorConstants.GET_ASSIGNED_TO_RSM:
+        return { ...state, assignedtorsm : payload };
+    case directorConstants.GET_ASSIGNED_TO_AM:
+        return { ...state, assignedtoam : payload };
+    case directorConstants.GET_ASSIGNED_TO_MPO:
+        return { ...state, assignedtompo : payload };
     default:
       return state;
   }

@@ -23,11 +23,10 @@ const DirectorScheduleCreate = (props) => {
   const customer = useSelector((state) => state?.director?.customer);
   const assignedto = useSelector((state) => state?.director?.assignedto);
   const dispatch = useDispatch();
-  console.log("assginto",assginto);
   const selectusertype = watch("usert");
   useEffect(() => {
     if (assignedto?.length < 1) {
-      dispatch(getAssignedto());
+      dispatch(getAssignedto(''));
     }
     
     if(selectusertype === "doctor")
@@ -85,7 +84,6 @@ const onSubmit = async (data) => {
           };
 
 
-        console.log(datetime)
         
           
   return (
@@ -116,7 +114,8 @@ const onSubmit = async (data) => {
                     custom
                     onChange={(e) => { setAssginto(e.target.value) }}
                   >
-                    {assignedto.map((item, index) => {
+                  <option defaultValue>Select...</option>
+                  {assignedto.map((item, index) => {
                       return (
                         <option value={item?.uid} key={index + 1}>
                           {item?.name}
@@ -156,6 +155,7 @@ const onSubmit = async (data) => {
                     custom
                     {...register("name", {})}
                   >
+
                     {selectusertype === "doctor"
                       ? doctor.map((item, index) => {
                           return (
