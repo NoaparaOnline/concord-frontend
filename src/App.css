@@ -284,3 +284,6 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
 }
 
 
+.Select-menu-outer {
+  position: relative;
+  }

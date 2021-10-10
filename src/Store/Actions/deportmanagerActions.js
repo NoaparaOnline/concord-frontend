@@ -82,7 +82,6 @@ export const getStocksMedicineProduct = () => async (dispatch) => {
     payload: true,
   });
   const response = await apiServices.getStocksMedicineProducts();
-  console.log("stockmedicine",response);
   if (response?.data?.response_code === 200){
     dispatch({
       type: deportConstants.GET_STOCKS_MEDICINE_PRODUCT,
@@ -102,7 +101,6 @@ export const getStocksGiftProduct = () => async (dispatch) => {
   });
   const response = await apiServices.getStocksGiftProducts();
   
-  console.log("response Gift",response)
     
   if (response?.data?.response_code === 200){
     dispatch({

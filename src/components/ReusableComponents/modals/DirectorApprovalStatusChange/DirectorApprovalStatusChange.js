@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from 'react'
+import React,{ useEffect } from 'react'
 import { useForm } from "react-hook-form";
 import { Form, Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,7 +13,6 @@ const DirectorApprovalStatusChange = (props) => {
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
       } = useForm();
       const dispatch = useDispatch();
@@ -22,7 +21,7 @@ const DirectorApprovalStatusChange = (props) => {
         if (schedule?.length < 1) {
             dispatch(getSchedule());
         }
-      },[dispatch])
+      },[dispatch,schedule])
     
       const onSubmit = async (data) => {
   

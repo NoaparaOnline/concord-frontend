@@ -68,7 +68,7 @@ export const addSchedule = (data) => async (dispatch) => {
   const response = await apiServices.addSchedules(data);
   if (response?.data?.response_code === 200) {
     dispatch(getSchedule(''));
-    toast.warning("Schedule Added Successfully");
+    toast.info("Schedule Added Successfully");
   } else {
     toast.error(response?.response_message);
   }

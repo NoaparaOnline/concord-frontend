@@ -16,7 +16,7 @@ const DashboardBtnList = ({
       onClick={onClick}
     >
       <i className={`${iconclassname}`} style={{color:'#565656'}}></i>
-      <Link style={{ labelStyle }} >&nbsp;{label}</Link>
+      <Link to='#' style={{ labelStyle }} >&nbsp;{label}</Link>
      </div>
     
   );

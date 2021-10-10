@@ -31,24 +31,15 @@ const DirectorScheduleCreate = (props) => {
     
     if(selectusertype === "doctor")
     {
-          const apiData = assginto
-          console.log("getDoctorsd",apiData);
-            dispatch(getDoctors(apiData));
+            dispatch(getDoctors(assginto));
         
     }
     else if(selectusertype === "customer")
     {
-          const apiData = assginto;
-          console.log("getCustomersd",apiData);
-            dispatch(getCustomers(apiData));
+            dispatch(getCustomers(assginto));
         
     }
-
-
-
-
-
-  },[dispatch,selectusertype])
+  },[dispatch,selectusertype,assignedto,assginto])
 
   const date = watch("date",);
   const time = watch("time",);
@@ -66,7 +57,6 @@ const onSubmit = async (data) => {
           assigned_to_uid:assginto,
         };
         dispatch(addSchedule(apiData));
-        console.log(apiData);
       }
       else if(data.usert ==="customer")
       {
@@ -77,7 +67,6 @@ const onSubmit = async (data) => {
           assigned_to_uid:assginto,
         };
         dispatch(addSchedule(apiData));
-        console.log(apiData);
       }    
              
               props.onHide();
@@ -110,7 +99,7 @@ const onSubmit = async (data) => {
                   <span className="label-name-login">Assigned To</span>
                   <Form.Control
                     as="select"
-                    className="input-login-modal"
+                    className="input-login-modal Select-menu-outer"
                     custom
                     onChange={(e) => { setAssginto(e.target.value) }}
                   >

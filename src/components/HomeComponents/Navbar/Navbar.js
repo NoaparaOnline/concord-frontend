@@ -11,7 +11,7 @@ import Login from "../../../Pages/Login";
 import { useHistory } from "react-router-dom";
 
 // 
-import { createDispatchHook, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   logoutUser,
 } from "../../../Store/Actions/loginActions";
@@ -167,10 +167,10 @@ const user = useSelector((state) => state?.logIn?.user);
 
                         >
                           <i
-                            className="fa fa-id-card ms-2"
-                            style={{ fontSize: "14.5px" }}
+                            className="fa fa-id-card "
+                            style={{ fontSize: "13px" }}
                           ></i>{" "}
-                          Dashboard
+                          &nbsp;Dashboard
                         </Link>
 
                         <Link
@@ -179,10 +179,10 @@ const user = useSelector((state) => state?.logIn?.user);
                           // style={{ color:'#0066b3' ,fontWeight:'600' }}
                         >
                           <i
-                            className="fa fa-sign-out ms-2"
-                            style={{ fontSize: "14.5px" }}
+                            className="fa fa-sign-out "
+                            style={{ fontSize: "13px" }}
                           ></i>
-                          Log Out
+                          &nbsp;Log Out
                         </Link>
                       </div>
                     </li>

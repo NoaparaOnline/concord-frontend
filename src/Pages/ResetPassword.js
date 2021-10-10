@@ -15,8 +15,8 @@ const params = queryString.parse(props.location.search);
 
   // const qid = queryString.parse(new URLSearchParams(props.location.search)); 
   // console.log(qid.uid);
-  console.log(params.uid);
-  console.log(params.token);
+  // console.log(params.uid);
+  // console.log(params.token);
 
 
     const dispatch = useDispatch();

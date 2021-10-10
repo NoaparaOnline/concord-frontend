@@ -1,15 +1,4 @@
 import React, { useEffect, useState } from "react";
-
-//REACT-BOOTSTRAP-TABLE IMPORTS
-import BootstrapTable from "react-bootstrap-table-next";
-import "react-bootstrap-table-next/dist/react-bootstrap-table2.css";
-import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
-import paginationFactory from "react-bootstrap-table2-paginator";
-import "bootstrap/dist/css/bootstrap.min.css";
-import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
-//
-
-import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
 import "./depotmanagerDashboard.css";
 import icon1 from "../../Statics/assets/Sidebar/1.png";
@@ -27,8 +16,6 @@ import {
   getnewOrder,
   getoldOrder,
   getOrder,
-  getSingleOrder,
-  getSingleUID,
   getStocksProduct,
   getStocksMedicineProduct,
   getStocksGiftProduct,
@@ -36,228 +23,14 @@ import {
 // Search Bar Images Import
 import StatuschangedModal from "../../components/ReusableComponents/modals/StatuschangedModal/StatuschangedModal";
 import moment from "moment";
-import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
-import DashboardBtnList from "../../components/ReusableComponents/DashboardBtnList/DashboardBtnList";
-import Loader from "react-loader-spinner";
-
+import OrderHistory from "./OrderHistory";
+import NewOrder from "./NewOrder";
+import Stocks from "./Stocks";
+import DeliveryStatus from "./DeliveryStatus";
+import Payment from "./Payment";
 const DepotmanagerDashboard = (props) => {
 
 
-
-
-
-
-  const { SearchBar } = Search;
-
-  //Header Column DataFields And Constants
-
-  //OLD ORDER COLUMN HEADERS
-  const DepomanagerOrder = [
-    { dataField: "order_id", text: "Orders ID", sort: true },
-    { dataField: "customer.name", text: "Customer Name", sort: true },
-    {
-      dataField: "customer.market.name", text: "Market & Address",
-      formatter: appendtwoDatafields, sort: true
-    },
-    {
-      dataField: "order_datetime",
-      text: "Order Date/Time",
-      formatter: dateFormatter,
-      sort: true
-    },
-    { dataField: "payment_type", text: "Payment Type", sort: true },
-    {
-      dataField: "delivery_status",
-      text: "Delivery Status",
-      style: (cell, row) => {
-        if (cell === "Pending") return { color: "#C0B627", fontWeight: "500", border: '1px solid #565656' };
-        else if (cell === "Cancelled" || cell === "Declined")
-          return { color: "red", fontWeight: "500" };
-        else if (
-          cell === "Paid" ||
-          cell === "Delivered" ||
-          cell === "Submitted"
-        )
-          return { color: "green", fontWeight: "500" };
-        else if (cell === "Dispatched" || cell === "Unpaid")
-          return { color: "blue", fontWeight: "500" };
-      },
-      sort: true
-    },
-    {
-      dataField: "payment_status",
-      text: "Payment Status",
-      style: (cell, row) => {
-        if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
-        else if (cell === "Cancelled" || cell === "Declined")
-          return { color: "red", fontWeight: "500" };
-        else if (
-          cell === "Paid" ||
-          cell === "Delivered" ||
-          cell === "Submitted"
-        )
-          return { color: "green", fontWeight: "500" };
-        else if (cell === "Dispatched" || cell === "Unpaid")
-          return { color: "blue", fontWeight: "500" };
-      },
-      sort: true
-    },
-    { dataField: "ordered_by.name", text: "Proceed By", sort: true },
-    { dataField: "customer", formatter: btnFormatterold, text: "Actions" },
-  ];
-
-  //NEW ORDER COLUMN HEADERS
-  const DepomanagerNewOrder = [
-    { dataField: "order_id", text: "Orders ID", sort: true },
-    { dataField: "customer.name", text: "Customer Name", sort: true },
-    // {dataField:(data) => moment('order_datetime').format("L")  ,text:'Customer Name',},
-    { dataField: "customer.market.name", text: "Market & Address", formatter: appendtwoDatafields, sort: true },
-    {
-      dataField: "order_datetime",
-      text: "Order Date/Time",
-      formatter: dateFormatter,
-      sort: true
-    },
-    { dataField: "payment_type", text: "Payment Type", sort: true },
-    {
-      dataField: "delivery_status",
-      text: "Delivery Status",
-      style: (cell, row) => {
-        if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
-        else if (cell === "Cancelled" || cell === "Declined")
-          return { color: "red", fontWeight: "500" };
-        else if (
-          cell === "Paid" ||
-          cell === "Delivered" ||
-          cell === "Submitted"
-        )
-          return { color: "green", fontWeight: "500" };
-        else if (cell === "Dispatched" || cell === "Unpaid")
-          return { color: "blue", fontWeight: "500" };
-      },
-      sort: true
-    },
-    {
-      dataField: "payment_status",
-      text: "Payment Status",
-      style: (cell, row) => {
-        if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
-        else if (cell === "Cancelled" || cell === "Declined")
-          return { color: "red", fontWeight: "500" };
-        else if (
-          cell === "Paid" ||
-          cell === "Delivered" ||
-          cell === "Submitted"
-        )
-          return { color: "green", fontWeight: "500" };
-        else if (cell === "Dispatched" || cell === "Unpaid")
-          return { color: "blue", fontWeight: "500" };
-      },
-      sort: true
-    },
-    { dataField: "ordered_by.name", text: "Proceed By", sort: true },
-    { dataField: "customer", formatter: btnFormatterneworder, text: "Actions" },
-  ];
-
-
-  //Delivery Status COLUMN HEADERS
-  const DepomanagerDelivery = [
-    { dataField: "order_id", text: "Orders ID", sort: true },
-    { dataField: "customer.name", text: "Customer Name", sort: true },
-    {
-      dataField: "customer.market.name", text: "Market & Address",
-      formatter: appendtwoDatafields, sort: true
-    },
-    {
-      dataField: "order_datetime",
-      text: "Order Date/Time",
-      formatter: dateFormatter,
-      sort: true
-    },
-    { dataField: "payment_type", text: "Payment Type", sort: true },
-    {
-      dataField: "delivery_status",
-      text: "Delivery Status",
-      style: (cell, row) => {
-        if (cell === "Pending") return { color: "#C0B627", fontWeight: "500", border: '1px solid #565656' };
-        else if (cell === "Cancelled" || cell === "Declined")
-          return { color: "red", fontWeight: "500" };
-        else if (
-          cell === "Paid" ||
-          cell === "Delivered" ||
-          cell === "Submitted"
-        )
-          return { color: "green", fontWeight: "500" };
-        else if (cell === "Dispatched" || cell === "Unpaid")
-          return { color: "blue", fontWeight: "500" };
-      },
-      sort: true
-    },
-    {
-      dataField: "payment_status",
-      text: "Payment Status",
-      style: (cell, row) => {
-        if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
-        else if (cell === "Cancelled" || cell === "Declined")
-          return { color: "red", fontWeight: "500" };
-        else if (
-          cell === "Paid" ||
-          cell === "Delivered" ||
-          cell === "Submitted"
-        )
-          return { color: "green", fontWeight: "500" };
-        else if (cell === "Dispatched" || cell === "Unpaid")
-          return { color: "blue", fontWeight: "500" };
-      },
-      sort: true
-    },
-    { dataField: "ordered_by.name", text: "Proceed By", sort: true },
-    { dataField: "customer", formatter: btnFormatterdelivery, text: "Actions" },
-  ];
-
-  //PAYMENT COLUMN HEADERS
-  const DepomanagerPayment = [
-    { dataField: "customer.name", text: "Customer Name", sort: true },
-
-    { dataField: "payment_type", text: "Payment Type", sort: true },
-
-    {
-      dataField: "payment_status",
-      text: "Payment Status",
-      style: (cell, row) => {
-        if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
-        else if (cell === "Cancelled" || cell === "Declined")
-          return { color: "red", fontWeight: "500" };
-        else if (
-          cell === "Paid" ||
-          cell === "Delivered" ||
-          cell === "Submitted"
-        )
-          return { color: "green", fontWeight: "500" };
-        else if (cell === "Dispatched" || cell === "Unpaid")
-          return { color: "blue", fontWeight: "500" };
-      }, sort: true
-    },
-    { dataField: "customer", formatter: btnFormatterpay, text: "Actions" },
-  ];
-
-
-  // STOCKS COLUMN HEADERS
-  const DepomanagerStock = [
-
-    { dataField: "name", text: "Product Name", sort: true },
-
-    { dataField: "category.name", text: "Category Name", sort: true },
-
-
-    { dataField: "quantity", text: "Quantity", formatter: nullChecker, sort: true },
-
-
-    { dataField: "formula", text: "Formula", formatter: nullChecker, sort: true },
-
-    { dataField: "price", text: "Price", sort: true },
-
-  ];
 
 
   // SORTED DATAFIELDS TABLE
@@ -330,163 +103,6 @@ const DepotmanagerDashboard = (props) => {
   ];
 
 
-  // EPOCH TO DATE FORMATE TABLE USING MOMENT PAKAGE
-  function dateFormatter(cell) {
-    return <span>{moment.unix(cell).format("MMM DD, YYYY")}</span>;
-  }
-
-  //OLD ORDER COLUMN BUTTON FORMATTER
-  function btnFormatterold(cell, row) {
-    return (
-      <>
-        <div className="row">
-          <div className="col pr-0">
-            <div
-              className={` btn btn-primary rounded-pill`}
-              style={{ backgroundColor: "#0066b3" }}
-            >
-              <Link
-                style={{ color: "#ffffff", textDecoration: "none" }}
-                to={{
-                  pathname: "/depotmanager-dashboard/order-request/innerdetail",
-                }}
-                onClick={() => dispatch(getSingleOrder(row))}
-              >
-                View
-              </Link>
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
-
- 
-
-  //DELIVERY STATUS COLUMN BUTTON FORMATTER
-  function btnFormatterdelivery(cell, row) {
-    return (
-      <>
-        <div className="row">
-          <div className="col pr-0">
-            <div
-              className={` btn btn-primary rounded-pill`}
-              style={{ backgroundColor: "#0066b3" }}
-            >
-              <Link
-                style={{ color: "#ffffff", textDecoration: "none" }}
-                to={{
-                  pathname: "/depotmanager-dashboard/delivery-status/innerdetail",
-                }}
-                onClick={() => dispatch(getSingleOrder(row))}
-              >
-                View
-              </Link>
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
-
-  //PAYMENT COLUMN BUTTON FORMATTER
-  function btnFormatterpay(cell, row) {
-    return (
-      <>
-        <div className="row">
-          <div className="col pr-0">
-            <div
-              className={` btn btn-primary rounded-pill`}
-              style={{ backgroundColor: "#0066b3" }}
-            >
-              <Link
-                style={{ color: "#ffffff", textDecoration: "none" }}
-                to={{
-                  pathname: "/depotmanager-dashboard/payment-ord/innerdetail",
-                }}
-                onClick={() => dispatch(getSingleOrder(row))}
-              >
-                View
-              </Link>
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
-
-  //APPEND MARKET AND ADDRESS FIELDS
-  function appendtwoDatafields(cell, row) {
-
-    return (
-      <>
-        <div>{`${row.customer.market.name} ,`}</div>
-        <div>{`${row.customer.market.parent.name}`}</div>
-      </>
-    )
-  }
-
-  //ACTION BUTTON FIELDS
-  function btnFormatterneworder(cell, row) {
-    return (
-      <>
-        <div class="btn-group">
-          <button class="btn btn-secondary " data-toggle="dropdown" style={{borderRadius:'5px'}}>
-          {/* <button class="btn btn-secondary">Action</button> */}
-            <span style={{fontSize:'18px',fontWeight:'600'}}> ... </span>
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-right" role="menu">
-            <li>
-              <i className="fa fa-edit ms-2"></i>
-              <Link
-                style={{ color: "#0066b3", fontWeight: '500', fontSize: '14px', textDecoration: "none" }}
-                onClick={() => {
-                  handleShow();
-                  dispatch(getSingleUID(row));
-                }}
-
-              >
-              &nbsp; Update Status
-              </Link>
-
-            </li>
-            <li>
-            <i className="fa fa-eye ms-2"></i>
-
-              <Link
-                style={{ color: "#0066b3", fontWeight: '500', fontSize: '14px', textDecoration: "none" }}
-                to={{
-                  pathname: "/depotmanager-dashboard/new-order/innerdetail",
-                }}
-                onClick={() => dispatch(getSingleOrder(row))}
-              >
-              &nbsp;  View
-              </Link>
-
-            </li>
-          </ul>
-        </div>
-
-      </>
-    );
-  }
-
-  //NULLABLE VALUE CHECKER FUNCTION TABLE DATA FIELDS
-  function nullChecker(cell) {
-    return (
-      <>
-        <div>{!cell ? "N/A" : cell}</div>
-      </>
-    );
-  }
-
-
-  //Header Column DataFields And Constants And Functions
-
-  // End Of Paginition And Search Functionality
-
-
   // =================================================================//
   // USE STATES 
   const [sidebarOpen, setsidebarOpen] = useState(false);
@@ -497,7 +113,6 @@ const DepotmanagerDashboard = (props) => {
 
   // REDUX STATES
   // const user = useSelector((state) => state?.logIn?.user);
-  const loader = useSelector((state) => state?.logIn?.loader);
   const oldorder = useSelector((state) => state?.deport?.oldorder);
   const neworder = useSelector((state) => state?.deport?.neworder);
   const order = useSelector((state) => state?.deport?.order);
@@ -605,24 +220,14 @@ const DepotmanagerDashboard = (props) => {
     setSelectedTab1(item);
     if (item === "All") {
       tabledataHandler(stock);
-
-
     }
     else if (item === "Medicine") {
       tabledataHandler(stockmedicine);
-
     }
     else if (item === "Gift") {
       tabledataHandler(stockgift);
-
     }
-
-
   };
-
-  const buttonname = ["All", "Medicine", "Gift"]
-
-
   // USE STATES 
 
   const [selectedTab1, setSelectedTab1] = useState("All");
@@ -634,377 +239,51 @@ const DepotmanagerDashboard = (props) => {
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
       <Router>
         <Route exact path={`/depotmanager-dashboard`}>
-          <NavbarDash
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            Heading="Order Request"
+          <OrderHistory
+          sidebarOpen={sidebarOpen}
+          openSidebar={openSidebar}
+          oldorder={oldorder}
+          deopdefaultSorted={deopdefaultSorted}
           />
-
-          {loader ? (
-            <DashboardMainCard
-            reverse={true}
-            TableDiv={
-              <div className="d-flex justify-content-center">
-                <Loader
-                  height={100} width={100}
-                  type="Rings"
-                  color="#0066b3"
-                />
-              </div>
-            } reverse="true" />
-          ) : (
-            <DashboardMainCard
-            reverse={true}
-              TableDiv={
-                <>
-                  <ToolkitProvider
-                    bootstrap4
-                    keyField="id"
-                    data={oldorder}
-                    columns={DepomanagerOrder}
-                    search
-                  >
-                    {(props) => (
-                      <div className="">
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        <SearchBar
-                          {...props.searchProps}
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                          }}
-                        />
-                        <BootstrapTable
-                          style={{ color: "#565656" }}
-                          {...props.baseProps}
-                          // rowStyle={rowStyle}
-                          headerWrapperClasses="customheaderpad"
-                          defaultSorted={deopdefaultSorted}
-                          // pagination={pagination}
-                          pagination={paginationFactory()}
-                          bordered={false}
-                          condensed
-                          wrapperClasses="table-responsive"
-                        />
-                      </div>
-                    )}
-                  </ToolkitProvider>
-                </>
-              }
-              reverse="true"
-            />
-          )}
-
-
         </Route>
         <Route path={`${props.match.path}/neworder`}>
-          <NavbarDash
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            Heading="New Order"
+         
+          <NewOrder
+          handleShow={handleShow}
+          sidebarOpen={sidebarOpen}
+          openSidebar={openSidebar}
+          neworder={neworder}
+          deopdefaultSorted={deopdefaultSorted}
+          
           />
-
-          {loader ? (
-            <DashboardMainCard
-            reverse={true}
-            TableDiv={
-
-              <div className="d-flex justify-content-center">
-                <Loader
-                  height={100} width={100}
-                  type="Rings"
-                  color="#0066b3"
-                />
-              </div>
-
-            } reverse="true" />
-          ) : (
-            <DashboardMainCard
-            reverse={true}
-              TableDiv={
-                <>
-                  <ToolkitProvider
-                    bootstrap4
-                    keyField="id"
-                    data={neworder}
-                    columns={DepomanagerNewOrder}
-                    search
-                  >
-                    {(props) => (
-                      <div className="">
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        <SearchBar
-                          {...props.searchProps}
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                          }}
-                        />
-                        <BootstrapTable
-                          {...props.baseProps}
-                          // rowStyle={rowStyle}
-
-                          defaultSorted={deopdefaultSorted}
-                          // pagination={pagination}
-                          pagination={neworder.length > 10 ? paginationFactory() : null}
-                          bordered={false}
-                          condensed
-                          wrapperClasses="table-responsive"
-                        />
-                      </div>
-                    )}
-                  </ToolkitProvider>
-                </>
-              }
-              reverse="true"
-            />
-          )}
-
 
         </Route>
         <Route path={`${props.match.path}/stocks`}>
-
-          <NavbarDash
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            Heading="Stocks"
+         <Stocks
+          sidebarOpen={sidebarOpen}
+          openSidebar={openSidebar}
+          deopdefaultSorted={deopdefaultSorted}
+          selectedTab1={selectedTab1}
+          tabHandler={tabHandler}
+          selectedTabbledata={selectedTabbledata}
           />
 
-          {loader ? (
-            <DashboardMainCard
-            reverse={true}
-             TableDiv={
-
-              <div className="d-flex justify-content-center">
-                <Loader
-                  height={100} width={100}
-                  type="Rings"
-                  color="#0066b3"
-                />
-              </div>
-
-            } reverse="true" />
-          ) : (
-            <DashboardMainCard
-            reverse={true}
-              SelectedButtons={
-                <div className="row my-4">
-                  <div className="col ">
-
-                    {buttonname.map(
-                      (item, index) => (
-                        <div
-                          className="d-flex d-inline-flex "
-                          key={index + 1}
-                          onClick={() => tabHandler(item)}
-                        >
-                          <DashboardBtnList
-                            label={item}
-                            bntStyle={{ borderRadius: index === 0 ? '10px 0px 0px 10px' : index === buttonname.length - 1 ? '0px 10px 10px 0px' : '' }}
-                            className={
-                              selectedTab1 === item
-                                ? "dashboardBtnList-item-active"
-                                : "default-color-and-hover "
-                            }
-                          />
-                        </div>
-                      )
-                    )}
-                  </div>
-
-                </div>
-              }
-              TableDiv={
-                <>
-                  <ToolkitProvider
-                    bootstrap4
-                    keyField="id"
-                    data={selectedTabbledata}
-                    columns={DepomanagerStock}
-                    search
-                  >
-                    {(props) => (
-                      <div className="">
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        <SearchBar
-                          {...props.searchProps}
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                          }}
-                        />
-                        <BootstrapTable
-                          {...props.baseProps}
-                          // rowStyle={rowStyle}
-
-                          defaultSorted={deopdefaultSorted}
-                          // pagination={pagination}
-                          pagination={selectedTabbledata.length > 10 ? paginationFactory() : null}
-                          bordered={false}
-                          condensed
-                          wrapperClasses="table-responsive"
-                        />
-                      </div>
-                    )}
-                  </ToolkitProvider>
-                </>
-              }
-              reverse="true"
-            />
-          )}
         </Route>
         <Route path={`${props.match.path}/deliverystatus`}>
-          <NavbarDash
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            Heading="Delivery Status"
-          />
-
-          {loader ? (
-            <DashboardMainCard 
-            reverse={true}
-            
-            TableDiv={
-
-              <div className="d-flex justify-content-center">
-                <Loader
-                  height={100} width={100}
-                  type="Rings"
-                  color="#0066b3"
-                />
-              </div>
-
-            } reverse="true" />
-          ) : (
-            <DashboardMainCard
-            reverse={true}
-              
-            TableDiv={
-                <>
-                  <ToolkitProvider
-                    bootstrap4
-                    keyField="id"
-                    data={oldorder}
-                    columns={DepomanagerDelivery}
-                    search
-                  >
-                    {(props) => (
-                      <div className="">
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        <SearchBar
-                          {...props.searchProps}
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                          }}
-                        />
-                        <BootstrapTable
-                          {...props.baseProps}
-                          // rowStyle={rowStyle}
-
-                          defaultSorted={deopdefaultSorted}
-                          // pagination={pagination}
-                          pagination={oldorder.length > 10 ? paginationFactory() : null}
-                          bordered={false}
-                          condensed
-                          wrapperClasses="table-responsive"
-                        />
-                      </div>
-                    )}
-                  </ToolkitProvider>
-                </>
-              }
-              reverse="true"
-            />
-          )}
-
-
+          <DeliveryStatus
+           sidebarOpen={sidebarOpen}
+           openSidebar={openSidebar}
+           oldorder={oldorder}
+           deopdefaultSorted={deopdefaultSorted}
+           />
         </Route>
         <Route path={`${props.match.path}/payment`}>
-          <NavbarDash
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            Heading="Payment"
-          />
-
-          {loader ? (
-            <DashboardMainCard 
-            reverse={true}
-            
-            TableDiv={
-
-              <div className="d-flex justify-content-center">
-                <Loader
-                  height={100} width={100}
-                  type="Rings"
-                  color="#0066b3"
-                />
-              </div>
-
-            } reverse="true" />
-          ) : (
-            <DashboardMainCard
-            reverse={true}
-              
-            TableDiv={
-                <>
-                  <ToolkitProvider
-                    bootstrap4
-                    keyField="id"
-                    data={order}
-                    columns={DepomanagerPayment}
-                    search
-                  >
-                    {(props) => (
-                      <div className="">
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        <SearchBar
-                          {...props.searchProps}
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                          }}
-                        />
-                        <BootstrapTable
-                          {...props.baseProps}
-                          // rowStyle={rowStyle}
-
-                          defaultSorted={deopdefaultSorted}
-                          // pagination={pagination}
-                          pagination={order.length > 10 ? paginationFactory() : null}
-                          bordered={false}
-                          condensed
-                          wrapperClasses="table-responsive"
-                        />
-                      </div>
-                    )}
-                  </ToolkitProvider>
-                </>
-              }
-              reverse="true"
-            />
-          )}
-
+        <Payment
+        order={order}
+        sidebarOpen={sidebarOpen}
+        openSidebar={openSidebar}
+        deopdefaultSorted={deopdefaultSorted}
+        />
 
         </Route>
 

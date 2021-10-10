@@ -48,14 +48,12 @@ import { toast } from "react-toastify";
         return "error";
       }
     } catch (error) {
-      console.log("Login error", error);
     }
 
   };
 
   export const forgotPassword = (data) => async (dispatch) => {
     
-    console.log(data, "forgot Password");
     try {
       const response = await apiServices.forgotPassword(data);
       if (response?.data?.response_code === 200) {
@@ -64,7 +62,7 @@ import { toast } from "react-toastify";
         toast.error(response?.data?.response_message);
       }
     } catch (error) {
-      console.log("Forgot Password error", error);
+      
     }
   };
 

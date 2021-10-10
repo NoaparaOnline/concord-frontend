@@ -28,6 +28,7 @@ const SiderbarBtn = (props) => {
               exact
               activeStyle={borderSidebtn}
               onClick={props.onClick}
+              id={props.idclicked}
               to={`${match.path}/${btnroute}`} 
               >
               <li className="mb-2 ms-4">

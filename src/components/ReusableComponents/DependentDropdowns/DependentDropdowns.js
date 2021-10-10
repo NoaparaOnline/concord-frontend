@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getAssignedto, getChildsData, getRsmData, getSchedule } from "../../../Store/Actions/directorActions";
+import { getChildsData,  getSchedule } from "../../../Store/Actions/directorActions";
 
 const DependentDropdowns = (props) => {
   const dispatch = useDispatch();
@@ -9,7 +9,6 @@ const DependentDropdowns = (props) => {
 
   
   const [assignto,setAssginto]=useState();
-  console.log("data",assignto);
 
   const assignedtoforchilduid = useSelector(
     (state) => state?.director?.assignedto
@@ -30,11 +29,23 @@ const DependentDropdowns = (props) => {
   );
 
 
-  console.log("rsmss" , rsmdata)
-  console.log("amdata" , amdata)
-  console.log("mpodata" , mpodata)
+  // console.log("rsmdata",rsmdata);
+  // console.log("amdata",amdata);
+  // console.log("mpodata",mpodata);
+  // console.log("filterd",filterd);
 
-
+  const defaultSm = {
+    Username: "Select SM ...",
+  };
+  const defaultRsm = {
+    Username: "Select RSM ...",
+  };
+  const defaultAm = {
+    Username: "Select AM ...",
+  };
+  const defaultMPO = {
+    Username: "Select MPO ...",
+  };
 
   return (
     <>
@@ -42,17 +53,17 @@ const DependentDropdowns = (props) => {
       <div className="row">
         <div className="col-2">
           <select
-            className="form-control"
+            className="form-control form-select text-uppercase "
             name="sm"
             onChange={(e) => {
              dispatch(getChildsData(e.target.value ,"rsm"))
              setAssginto(e.target.value)
             }}
           >
-            <option defaultValue>Select SM</option>
+            <option defaultValue={defaultSm}>{defaultSm.Username}</option>
             {filterd.map((item, index) => {
               return (
-                <option value={item?.uid} key={index + 1}>
+                <option className="text-uppercase" value={item?.uid} key={index + 1}>
                   {item?.role?.category?.name}
                 </option>
               );
@@ -62,7 +73,7 @@ const DependentDropdowns = (props) => {
 
         <div className="col-2">
           <select
-            className="form-control"
+            className="form-control form-select text-uppercase"
             name="rsm"
             onChange={(e) => {
             
@@ -71,12 +82,12 @@ const DependentDropdowns = (props) => {
 
              }}
           >
-            <option value>Select RSM's</option>
+            <option defaultValue={defaultRsm}>{defaultRsm.Username}</option>
             {rsmdata.filter(
     (status) => status?.role?.category?.name === "rsm"
   ).map((item, index) => {
               return (
-                <option value={item?.uid} key={index + 1}>
+                <option className="text-uppercase" value={item?.uid} key={index + 1}>
                   {item?.role?.category?.name}
                 </option>
               );
@@ -86,7 +97,7 @@ const DependentDropdowns = (props) => {
 
         <div className="col-2">
           <select
-            className="form-control"
+            className="form-control form-select text-uppercase"
             name="am"
             onChange={(e) => {
             
@@ -95,13 +106,13 @@ const DependentDropdowns = (props) => {
 
              }}
           >
-            <option value>Select AM's</option>
+            <option defaultValue={defaultAm}>{defaultAm.Username}</option>
             {amdata
             .filter(
               (status) => status?.role?.category?.name === "am"
             ).map((item, index) => {
               return (
-                <option value={item?.uid} key={index + 1}>
+                <option className="text-uppercase" value={item?.uid} key={index + 1}>
                   {item?.role?.category?.name}
                 </option>
               );
@@ -111,19 +122,20 @@ const DependentDropdowns = (props) => {
 
         <div className="col-2">
           <select
-            className="form-control"
+            className="form-control form-select text-uppercase"
             name="mpo"
             onChange={(e) => {
               setAssginto(e.target.value)
              }}
+
           >
-            <option value>Select MPO's</option>
+            <option defaultValue={defaultMPO}>{defaultMPO.Username}</option>
             {mpodata
              .filter(
               (status) => status?.role?.category?.name === "mpo"
             ).map((item, index) => {
               return (
-                <option value={item?.uid} key={index + 1}>
+                <option className="text-uppercase" value={item?.uid} key={index + 1}>
                   {item?.role?.category?.name}
                 </option>
               );

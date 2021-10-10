@@ -19,7 +19,6 @@ const StatuschangedModal = (props) => {
   const [dropdown1, setDropdown1] = useState(productuid?.delivery_status);
   const [dropdown2, setDropdown2] = useState(productuid?.payment_status);
 
-  console.log(productuid);
 
   const onSubmit = () => {
     const apiData = {
