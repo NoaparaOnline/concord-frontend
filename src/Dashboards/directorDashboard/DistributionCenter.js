@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Loader from 'react-loader-spinner';
 import { useSelector } from 'react-redux';
 import DashboardMainCard from '../../components/ReusableComponents/DashboardMainCard/DashboardMainCard';
@@ -9,19 +9,20 @@ const DistributionCenter = (
   {
     sidebarOpen,
     openSidebar,
+    data,
   }
 ) => {
 
-  const distributioncenter = useSelector(
-    (state) => state?.director?.distributioncenter
-  );
+
+
+ 
 
   const [filteredResults2, setFilteredResults2] = useState([]);
   const [searchInput2, setSearchInput2] = useState("");
   const searchItems2 = (searchValue) => {
     setSearchInput2(searchValue);
     if (searchInput2 !== "") {
-      const filteredData = distributioncenter.filter((item) => {
+      const filteredData = data.filter((item) => {
         return Object.values(item)
           .join("")
           .toLowerCase()
@@ -29,7 +30,7 @@ const DistributionCenter = (
       });
       setFilteredResults2(filteredData);
     } else {
-      setFilteredResults2(distributioncenter);
+      setFilteredResults2(data);
     }
   };
 
@@ -102,7 +103,7 @@ const DistributionCenter = (
                         </React.Fragment>
                       );
                     })
-                    : distributioncenter.map((ob, index) => (
+                    : data.map((ob, index) => (
                       <React.Fragment key={ob.id}>
                         <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
                           <DashCard

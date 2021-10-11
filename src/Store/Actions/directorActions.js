@@ -40,6 +40,7 @@ export const getSchedule = (uid) => async (dispatch) => {
       {headers: head},
     );
     if (response?.data?.response_code === 200) {
+
     dispatch({
       type: directorConstants.GET_SCHEDULE,
       payload: response?.data?.response_data,
@@ -56,13 +57,6 @@ export const getSchedule = (uid) => async (dispatch) => {
 
   
 };
-
-
-
-
-
-
-
 
 export const addSchedule = (data) => async (dispatch) => {
   const response = await apiServices.addSchedules(data);
@@ -314,3 +308,14 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
       return "fail"
     }
   };
+
+
+
+export const getSingleScheduleDetail = (data) =>  (dispatch) => {
+    dispatch({
+      type: directorConstants.GET_SCHEDULE_SINGLE_UID,
+      payload: data,
+    });
+  };
+  
+  

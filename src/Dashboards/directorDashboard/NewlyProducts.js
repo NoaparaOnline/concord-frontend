@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Loader from 'react-loader-spinner';
 import DashboardBtnList from '../../components/ReusableComponents/DashboardBtnList/DashboardBtnList';
 import DashboardMainCard from '../../components/ReusableComponents/DashboardMainCard/DashboardMainCard';
@@ -18,15 +18,37 @@ import { useSelector } from 'react-redux';
 const NewlyProducts = (
 
   {
-    selectedTabbledata,
-    tabHandler3,
     sidebarOpen,
     openSidebar,
-    selectedTab3,
     deopdefaultSorted,
+    data,
   }
 
 ) => {
+
+
+
+  useEffect(() => {
+    setSelectedTabbledata(data)
+  }, [data])
+
+  const [selectedTabbledata, setSelectedTabbledata] = useState(data);
+  const [selectedTab3, setSelectedTab3] = useState("List");
+
+  const tabledataHandler = async (item) => {
+    setSelectedTabbledata(item);
+  }
+
+  const tabHandler3 = (item) => {
+    setSelectedTab3(item);
+
+    if (item === "List") {
+      tabledataHandler(data);
+    } else if (item === "Grid") {
+      tabledataHandler(data);
+    }
+  };
+
 
 
   const DirectorProductsAll = [
@@ -105,21 +127,7 @@ const NewlyProducts = (
             Heading="Newly Launched"
           />
 
-          {loader ? (
-            <DashboardMainCard
-              reverse={true}
-              TableDiv={
-                <div className="d-flex justify-content-center">
-                  <Loader
-                    height={100}
-                    width={100}
-                    type="Rings"
-                    color="#0066b3"
-                  />
-                </div>
-              }
-            />
-          ) : (
+          
             <DashboardMainCard
               reverse={selectedTab3 === "List" ? true : false}
               SelectedButtons={
@@ -176,7 +184,20 @@ const NewlyProducts = (
                     </div>
                   </div>
 
-                  {searchInput1.length >= 1
+                  {loader ? (
+           
+           <div className="d-flex justify-content-center">
+             <Loader
+               height={100}
+               width={100}
+               type="Rings"
+               color="#0066b3"
+             />
+           </div>
+      
+     ) : (
+
+                  searchInput1.length >= 1
                     ? filteredResults1.map((item, index) => {
                       return (
                         <React.Fragment key={item.id}>
@@ -192,7 +213,8 @@ const NewlyProducts = (
                           <DashboardTableCards ob={item} />
                         </div>
                       </React.Fragment>
-                    ))}
+                    ))
+     )}
                 </div>
               }
               TableDiv={
@@ -218,6 +240,19 @@ const NewlyProducts = (
                             borderRadius: "10px",
                           }}
                         />
+
+{loader ? (
+           
+           <div className="d-flex justify-content-center">
+             <Loader
+               height={100}
+               width={100}
+               type="Rings"
+               color="#0066b3"
+             />
+           </div>
+      
+     ) : (
                         <BootstrapTable
                           {...props.baseProps}
                           // rowStyle={rowStyle}
@@ -233,13 +268,14 @@ const NewlyProducts = (
                           condensed
                           wrapperClasses="table-responsive"
                         />
+     )}
                       </div>
                     )}
                   </ToolkitProvider>
                 </>
               }
             />
-          )}   
+             
         </>
     )
 }

@@ -27,16 +27,18 @@ import NewlyProducts from "./NewlyProducts";
 import DistributionCenter from "./DistributionCenter";
 import Departmentheads from "./Departmentheads";
 import Reports from "./Reports";
+import ScheduleInnerPage from "./ScheduleInnerPage";
 
 
 
 const DirectorDashboard = (props) => {
 
-  const schedule = useSelector((state) => state?.director?.schedule);
+  // const schedule = useSelector((state) => state?.director?.schedule);
   const productall = useSelector((state) => state?.director?.productall);
   const productnew = useSelector((state) => state?.director?.productnew);
   const distributioncenter = useSelector((state) => state?.director?.distributioncenter);
   const departmenthead = useSelector((state) => state?.director?.departmenthead);
+  const schedule = useSelector((state) => state?.director?.schedule);
 
   // SORTED DATAFIELDS TABLE OF REACT-BOOTSTRAP-DATATABLES
   const deopdefaultSorted = [
@@ -83,30 +85,16 @@ const DirectorDashboard = (props) => {
     setShow1(!show1);
   };
 
+  const [selectedTabbledata, setSelectedTabbledata] = useState();
   
 
   // tabledata Toogle State
-  const [selectedTabbledata, setSelectedTabbledata] = useState(schedule);
+  
 
   // SELECTED TABLE DATA OBJECT HANDLER
   const tabledataHandler = async (item) => {
     setSelectedTabbledata(item);
-    if (item === schedule) {
-      if (schedule?.length < 1) {
-        const scheduleapi = await dispatch(getSchedule(''));
-        if (scheduleapi === true) {
-          setSelectedTabbledata(schedule);
-        }
-      }
-    }
-    if (item === productall) {
-      if (productall?.length < 1) {
-        const productallapi = await dispatch(getProductsall());
-        if (productallapi === true) {
-          setSelectedTabbledata(productall);
-        }
-      }
-    }
+  
     if (item === productnew) {
       if (productnew?.length < 1) {
         const productnewapi = await dispatch(getProductsnew());
@@ -119,8 +107,7 @@ const DirectorDashboard = (props) => {
 
   // Selected Buttons
   const [selectedTab0, setSelectedTab0] = useState("All");
-  const [selectedTab1, setSelectedTab1] = useState("All");
-  const [selectedTab2, setSelectedTab2] = useState("List");
+
   const [selectedTab3, setSelectedTab3] = useState("List");
 
 //  BUTTON TAB HANDLER FUNCTIONS
@@ -134,43 +121,9 @@ const DirectorDashboard = (props) => {
     } 
   };
 
-  const tabHandler1 = (item) => {
-    setSelectedTab1(item);
+ 
 
-    if (item === "All") {
-      tabledataHandler(schedule);
-    } else if (item === "Approved") {
-      const filterd = schedule.filter(
-        (status) => status?.approval_status === "approved"
-      );
-      tabledataHandler(filterd);
-    } else if (item === "Awaiting Approval") {
-      const filterd = schedule.filter(
-        (status) => status?.approval_status === "awaiting_approval"
-      );
-      tabledataHandler(filterd);
-    } else if (item === "Reschedule") {
-      const filterd = schedule.filter(
-        (status) => status?.approval_status === "reshedule"
-      );
-      tabledataHandler(filterd);
-    } else if (item === "Cancelled") {
-      const filterd = schedule.filter(
-        (status) => status?.approval_status === "cancelled"
-      );
-      tabledataHandler(filterd);
-    }
-  };
-
-  const tabHandler2 = (item) => {
-    setSelectedTab2(item);
-
-    if (item === "List") {
-      tabledataHandler(productall);
-    } else if (item === "Grid") {
-      tabledataHandler(productall);
-    }
-  };
+ 
 
   const tabHandler3 = (item) => {
     setSelectedTab3(item);
@@ -205,34 +158,39 @@ const DirectorDashboard = (props) => {
 
 
   // API HIT HANDLER ON SIDEBAR BUTTONS
-  const ApiTabhandler = (item) => {
-    setHandle(item);
-    // if (item === "productnew") {
-    //   if (productnew?.length < 1) {
-    //     dispatch(getProductsnew());
-    //   }
-    // }
-    if (item === "distributioncenter") {
-      if (distributioncenter?.length < 1) {
-        dispatch(getDistributioncenter());
-      }
-    } else if (item === "departmenthead") {
-      if (departmenthead?.length < 1) {
-        dispatch(getDepartmenthead());
-      }
-    }
-  };
+  // const ApiTabhandler = (item) => {
+  //   setHandle(item);
+ 
+  //   if (item === "distributioncenter") {
+  //     if (distributioncenter?.length < 1) {
+  //       dispatch(getDistributioncenter());
+  //     }
+  //   }
+
+  // };
 
   useEffect(() => {
-    if (productall?.length < 1) {
-      dispatch(getProductsall());
-    }
+    if (distributioncenter?.length < 1) {
+      dispatch(getDistributioncenter());
+          }
+    
     if (productnew?.length < 1) {
       dispatch(getProductsnew());
     }
-  }, [dispatch, productall, handle]);
+    
+    if (productall?.length < 1) {
+      dispatch(getProductsall());
+    }
+    if (schedule.length < 1) {
+      dispatch(getSchedule());
+   }
+   if (departmenthead?.length < 1) {
+    dispatch(getDepartmenthead());
+    }
+  }, [dispatch,handle]);
 
 
+  
   return (
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
       <Router>
@@ -248,9 +206,7 @@ const DirectorDashboard = (props) => {
           <Schedules
           sidebarOpen={sidebarOpen}
           openSidebar={openSidebar}
-          selectedTabbledata={selectedTabbledata}
-          tabHandler1={tabHandler1}
-          selectedTab1={selectedTab1}
+          data={schedule}
           handleShow1={handleShow1}
           handleShow={handleShow}
           deopdefaultSorted={deopdefaultSorted}
@@ -260,9 +216,7 @@ const DirectorDashboard = (props) => {
           <Products
           sidebarOpen={sidebarOpen}
           openSidebar={openSidebar}
-          selectedTabbledata={selectedTabbledata}
-          tabHandler2={tabHandler2}
-          selectedTab2={selectedTab2}
+          data={productall}
           deopdefaultSorted={deopdefaultSorted}
           />
         </Route>
@@ -270,23 +224,33 @@ const DirectorDashboard = (props) => {
           <NewlyProducts
           sidebarOpen={sidebarOpen}
           openSidebar={openSidebar}
-          selectedTabbledata={selectedTabbledata}
-          tabHandler3={tabHandler3}
-          selectedTab3={selectedTab3}
+          data={productnew}
           deopdefaultSorted={deopdefaultSorted}
           />
         </Route>
         <Route path={`${props.match.path}/distributioncenter`}>
          <DistributionCenter
+         data={distributioncenter}
          sidebarOpen={sidebarOpen}
          openSidebar={openSidebar}         
          />
         </Route>
         <Route path={`${props.match.path}/departmenthead`}>
           <Departmentheads
+          data={departmenthead}
           sidebarOpen={sidebarOpen}
           openSidebar={openSidebar}          
           />     
+        </Route>
+
+        <Route path={`/director-dashboard/schedule-detail`}>
+          <ScheduleInnerPage
+             sidebarOpen={sidebarOpen}
+             openSidebar={openSidebar}
+             Heading="Schedule"
+             linkRoute="/director-dashboard/schedule"
+             {...props}
+          />
         </Route>
 
         <SidebarDashboard
@@ -307,7 +271,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #CB912B" }}
                 btnroute="schedule"
-                onClick={() => tabHandler1("All")}
+                // onClick={() => tabHandler1("All")}
                 
                 btnName="Schedule"
               />
@@ -317,7 +281,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #7F2987" }}
                 btnroute="products"
-                onClick={() => tabHandler2("List")}
+                // onClick={() => tabHandler2("List")}
                 btnName="Products"
               />
               <SiderbarBtn
@@ -325,7 +289,7 @@ const DirectorDashboard = (props) => {
                 Colr="#4B8F8C"
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #4B8F8C" }}
-                onClick={() => tabHandler3("List")}
+                // onClick={() => tabHandler3("List")}
                 btnroute="newlylaunched"
                 btnName="Newly Launched"
               />
@@ -335,7 +299,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 btnroute="distributioncenter"
-                onClick={() => ApiTabhandler("distributioncenter")}
+                // onClick={() => ApiTabhandler("distributioncenter")}
                 btnName="Distribution Center"
               />
 
@@ -345,7 +309,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #07A04A" }}
                 btnroute="departmenthead"
-                onClick={() => ApiTabhandler("departmenthead")}
+                // onClick={() => ApiTabhandler("departmenthead")}
                 btnName="Department Head"
               />
               <SiderbarBtn

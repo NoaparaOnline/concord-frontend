@@ -12,6 +12,7 @@ const initialState = {
     assignedtorsm: [], 
     assignedtoam: [], 
     assignedtompo: [], 
+    scheduleidstate: [],
 };
 export const directorReducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -39,6 +40,8 @@ export const directorReducer = (state = initialState, { type, payload }) => {
         return { ...state, assignedtoam : payload };
     case directorConstants.GET_ASSIGNED_TO_MPO:
         return { ...state, assignedtompo : payload };
+   case directorConstants.GET_SCHEDULE_SINGLE_UID:
+            return { ...state, scheduleidstate : payload };
     default:
       return state;
   }

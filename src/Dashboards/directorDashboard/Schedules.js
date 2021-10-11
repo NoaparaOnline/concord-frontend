@@ -1,12 +1,12 @@
-import React from 'react'
-import Loader from 'react-loader-spinner';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import ColorFullDashCard from '../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard';
-import DashboardBtnList from '../../components/ReusableComponents/DashboardBtnList/DashboardBtnList';
-import DashboardMainCard from '../../components/ReusableComponents/DashboardMainCard/DashboardMainCard';
-import DependentDropdowns from '../../components/ReusableComponents/DependentDropdowns/DependentDropdowns';
-import NavbarDash from '../../components/ReusableComponents/NavbarDash/NavbarDash';
+import React, { useEffect, useState } from "react";
+import Loader from "react-loader-spinner";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import ColorFullDashCard from "../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard";
+import DashboardBtnList from "../../components/ReusableComponents/DashboardBtnList/DashboardBtnList";
+import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
+import DependentDropdowns from "../../components/ReusableComponents/DependentDropdowns/DependentDropdowns";
+import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 
 //REACT-BOOTSTRAP-TABLE IMPORTS
 import BootstrapTable from "react-bootstrap-table-next";
@@ -15,22 +15,73 @@ import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.m
 import paginationFactory from "react-bootstrap-table2-paginator";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
-import moment from 'moment';
-import { getSingleUIDApproval } from '../../Store/Actions/directorActions';
-
+import moment from "moment";
+import {
+  getSchedule,
+  getSingleScheduleDetail,
+  getSingleUIDApproval,
+} from "../../Store/Actions/directorActions";
 
 const Schedules = ({
-  selectedTabbledata,
-  tabHandler1,
   sidebarOpen,
   openSidebar,
-  selectedTab1,
   handleShow1,
   handleShow,
   deopdefaultSorted,
+  data
 }) => {
-
   const dispatch = useDispatch();
+
+  let schedule = useSelector((state) => state?.director?.schedule);
+  console.log(data);
+  const [selectedTab1, setSelectedTab1] = useState("All");
+  const [selectedTabbledata, setSelectedTabbledata] = useState(data);
+
+  console.log("selectedTabbledata",selectedTabbledata)
+ 
+
+  useEffect(() => {
+    setSelectedTabbledata(data)
+  }, [data])
+  
+  useEffect(() => {
+    if (schedule.length < 1) {
+            dispatch(getSchedule());
+         }
+  }, [])
+
+
+  const tabledataHandler = async (item) => {
+   await setSelectedTabbledata(item);
+  };
+
+  const tabHandler1 = (item) => {
+    setSelectedTab1(item);
+
+    if (item === "All") {
+      tabledataHandler(data);
+    } else if (item === "Approved") {
+      const filterd = data.filter(
+        (status) => status?.approval_status === "approved"
+      );
+      tabledataHandler(filterd);
+    } else if (item === "Awaiting Approval") {
+      const filterd = data.filter(
+        (status) => status?.approval_status === "awaiting_approval"
+      );
+      tabledataHandler(filterd);
+    } else if (item === "Reschedule") {
+      const filterd = data.filter(
+        (status) => status?.approval_status === "reshedule"
+      );
+      tabledataHandler(filterd);
+    } else if (item === "Cancelled") {
+      const filterd = data.filter(
+        (status) => status?.approval_status === "cancelled"
+      );
+      tabledataHandler(filterd);
+    }
+  };
 
   const DirectorSchedule = [
     {
@@ -70,13 +121,12 @@ const Schedules = ({
     {
       dataField: "assigned_to.role",
       formatter: btnFormatterschedule,
-      text: "Actions",
+      text: "",
     },
   ];
 
-
-   // EPOCH TO DATE FORMATE TABLE USING MOMENT PAKAGE
-   function dateFormatter(cell) {
+  // EPOCH TO DATE FORMATE TABLE USING MOMENT PAKAGE
+  function dateFormatter(cell) {
     return <span>{moment.unix(cell).format("MMM DD, YYYY")}</span>;
   }
   //UpperCase Cell
@@ -100,17 +150,17 @@ const Schedules = ({
     return (
       <>
         <div class="btn-group">
-          <button
-            class="btn btn-secondary "
+         
+           <button
+            class="btn dropdown-toggle dropdown_custom_toogle"
             data-toggle="dropdown"
-            style={{ borderRadius: "5px" }}
+            style={{ borderRadius: "5px",backgroundColor:'#22A6AC' }}
           >
             {/* <button class="btn btn-secondary">Action</button> */}
-            <span style={{ fontSize: "18px", fontWeight: "600" }}> ... </span>
+            <span style={{ fontSize: "14px", fontWeight: "500" ,color:'#fff'}}> Actions </span>
             <span class="sr-only">Toggle Dropdown</span>
-          </button>
+          </button> 
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
-           
             <li className="">
               <i className="fa fa-edit ms-2"></i>
 
@@ -140,8 +190,9 @@ const Schedules = ({
                   textDecoration: "none",
                 }}
                 to={{
-                  pathname: "/depotmanager-dashboard/new-order/innerdetail",
+                  pathname: "/director-dashboard/schedule-detail",
                 }}
+                onClick={() => dispatch(getSingleScheduleDetail(row))}
               >
                 &nbsp; View
               </Link>
@@ -162,196 +213,180 @@ const Schedules = ({
   const { SearchBar } = Search;
   const loader = useSelector((state) => state?.logIn?.loader);
 
-
   return (
+    <>
+      <NavbarDash
+        sidebarOpen={sidebarOpen}
+        openSidebar={openSidebar}
+        Heading="Schedule"
+      />
 
-        <>
-          <NavbarDash
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            Heading="Schedule"
-          />
-
-            <DashboardMainCard
-              reverse={true}
-              colorfulcards={
-                <div className="row d-flex justify-content-center">
-                  <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-                    <ColorFullDashCard  
-                      headtext="Completed"
-                      textl="1544"
-                      textr="34%"
-                      classname="colrcardblue"
+      <DashboardMainCard
+        reverse={true}
+        colorfulcards={
+          <div className="row d-flex justify-content-center">
+            <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
+              <ColorFullDashCard
+                headtext="Completed"
+                textl="1544"
+                textr="34%"
+                classname="colrcardblue"
+              />
+            </div>
+            <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
+              <ColorFullDashCard
+                headtext="Pending"
+                textl="2,478"
+                textr="64%"
+                classname="colrcardseagreen"
+              />
+            </div>
+            <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
+              <ColorFullDashCard
+                headtext="Due"
+                textl="1,151"
+                textr="20%"
+                classname="colrcardred"
+              />
+            </div>
+            <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
+              <ColorFullDashCard
+                headtext="Resheduled"
+                textl="1,200"
+                textr="34%"
+                classname="colrcardorange"
+              />
+            </div>
+          </div>
+        }
+        SelectedButtons={
+          <>
+            <DependentDropdowns data={selectedTabbledata} />
+            {console.log(selectedTabbledata)}
+            <div className="row my-4">
+              <div className="col ">
+                {buttonname2.map((item, index) => (
+                  <div
+                    className="d-flex d-inline-flex "
+                    key={index + 1}
+                    onClick={() => tabHandler1(item)}
+                  >
+                    <DashboardBtnList
+                      label={item}
+                      bntStyle={{
+                        borderRadius:
+                          index === 0
+                            ? "10px 0px 0px 10px"
+                            : index === buttonname2.length - 1
+                            ? "0px 10px 10px 0px"
+                            : "",
+                        width: index === 0 ? "100px" : "",
+                      }}
+                      className={
+                        selectedTab1 === item
+                          ? "dashboardBtnList-item-active"
+                          : "default-color-and-hover "
+                      }
                     />
                   </div>
-                  <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-                    <ColorFullDashCard
-                      headtext="Pending"
-                      textl="2,478"
-                      textr="64%"
-                      classname="colrcardseagreen"
-                    />
-                  </div>
-                  <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-                    <ColorFullDashCard
-                      headtext="Due"
-                      textl="1,151"
-                      textr="20%"
-                      classname="colrcardred"
-                    />
-                  </div>
-                  <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-                    <ColorFullDashCard
-                      headtext="Resheduled"
-                      textl="1,200"
-                      textr="34%"
-                      classname="colrcardorange"
-                    />
-                  </div>
-                </div>
-              }
-              SelectedButtons={
-                <>
+                ))}
+              </div>
+            </div>
+          </>
+        }
+  
+        TableDiv={
+          <>
+            <ToolkitProvider
+              bootstrap4
+              keyField="id"
+              data={selectedTabbledata}
+              columns={DirectorSchedule}
+              search
+            >
+              {(props) => (
+                <div className="">
+                  <div className="row">
+                    <div className="col-6">
+                      <i
+                        className="fa fa-search"
+                        id="filtersubmit"
+                        style={{ fontSize: "15px" }}
+                      />
 
-                  
-                  <DependentDropdowns
-                  data={selectedTabbledata}
-                  />
+                      <SearchBar
+                        {...props.searchProps}
+                        style={{
+                          padding: "0.375rem 2.5rem",
+                          borderRadius: "10px",
+                        }}
+                      />
+                    </div>
 
-
-
-                  <div className="row my-4">
-                    <div className="col ">
-                      {buttonname2.map((item, index) => (
-                        <div
-                          className="d-flex d-inline-flex "
-                          key={index + 1}
-                          onClick={() => tabHandler1(item)}
-                        >
-                          <DashboardBtnList
-                            label={item}
-                            bntStyle={{
-                              borderRadius:
-                                index === 0
-                                  ? "10px 0px 0px 10px"
-                                  : index === buttonname2.length - 1
-                                    ? "0px 10px 10px 0px"
-                                    : "",
-                              width:
-                                    index === 0
-                                      ? "100px"
-                                        : "",
-                            }}
-                            className={
-                              selectedTab1 === item
-                                ? "dashboardBtnList-item-active"
-                                : "default-color-and-hover "
-                            }
-                          />
+                    <div className="col-6">
+                      <>
+                        <div className="row">
+                          <div className="col d-flex justify-content-end">
+                            <div
+                              className={` btn me-2`}
+                              style={{ backgroundColor: "#22A6AC" }}
+                            >
+                              <Link
+                                style={{
+                                  color: "#fff",
+                                  fontWeight: "500",
+                                  fontSize: "14px",
+                                  textDecoration: "none",
+                                }}
+                                onClick={() => {
+                                  handleShow();
+                                }}
+                              >
+                                <i className="fa fa-calendar-plus-o ms-2"></i>
+                                &nbsp; Add New Schedule
+                              </Link>
+                            </div>
+                          </div>
                         </div>
-                      ))}
+                      </>
                     </div>
                   </div>
-                </>
-              }
-              TableDiv={
-                <>
-                  <ToolkitProvider
-                    bootstrap4
-                    keyField="id"
-                    data={selectedTabbledata}
-                    columns={DirectorSchedule}
-                    search
-                  >
-                    {(props) => (
-                      <div className="">
+                  {loader ? (
+                    <div className="d-flex justify-content-center">
+                      <Loader
+                        height={100}
+                        width={100}
+                        type="Rings"
+                        color="#0066b3"
+                      />
+                    </div>
+                  ) : (
+                    <div>
+                      <BootstrapTable
+                        {...props.baseProps}
+                        // rowStyle={rowStyle}
 
-                        <div className='row'>
-                          <div className="col-6">
-
-                            <i
-                              className="fa fa-search"
-                              id="filtersubmit"
-                              style={{ fontSize: "15px" }}
-                            />
-
-                            <SearchBar
-                              {...props.searchProps}
-                              style={{
-                                padding: "0.375rem 2.5rem",
-                                borderRadius: "10px",
-                              }}
-                            />
-                          </div>
-
-                          <div className="col-6">
-                            <>
-                              <div className="row">
-                                <div className="col d-flex justify-content-end">
-                                  <div
-                                    className={` btn btn-primary me-2`}
-                                    style={{ backgroundColor: "#0066b3" }}
-                                  >
-
-                                    <Link
-                                      style={{
-                                        color: "#fff",
-                                        fontWeight: "500",
-                                        fontSize: "14px",
-                                        textDecoration: "none",
-                                      }}
-                                      onClick={() => {
-                                        handleShow();
-                                      }}
-                                    >
-                                      <i className="fa fa-calendar-plus-o ms-2"></i>
-                                      &nbsp; Add New Schedule
-                                    </Link>
-                                  </div>
-                                  
-                                </div>
-                              </div>
-                            </>
-                          </div>
-                        </div>
-                        {loader ? (
-                <div className="d-flex justify-content-center">
-                  <Loader
-                    height={100}
-                    width={100}
-                    type="Rings"
-                    color="#0066b3"
-                  />
+                        defaultSorted={deopdefaultSorted}
+                        // pagination={pagination}
+                        pagination={
+                          selectedTabbledata.length > 10
+                            ? paginationFactory()
+                            : null
+                        }
+                        bordered={false}
+                        condensed
+                        wrapperClasses="table-responsive"
+                      />
+                    </div>
+                  )}
                 </div>
-          ):(
+              )}
+            </ToolkitProvider>
+          </>
+        }
+      />
+    </>
+  );
+};
 
-                       <div>
-                        <BootstrapTable
-                          {...props.baseProps}
-                          // rowStyle={rowStyle}
-
-                          defaultSorted={deopdefaultSorted}
-                          // pagination={pagination}
-                          pagination={
-                            selectedTabbledata.length > 10
-                              ? paginationFactory()
-                              : null
-                          }
-                          bordered={false}
-                          condensed
-                          wrapperClasses="table-responsive"
-                        />
-                       </div>
-          )}
-                      </div>
-                    )}
-                  </ToolkitProvider>
-                </>
-              }
-            />
-           
-        </>
-    )
-}
-
-export default Schedules
+export default Schedules;

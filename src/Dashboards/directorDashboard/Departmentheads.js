@@ -9,20 +9,18 @@ const Departmentheads = (
   {
     sidebarOpen,
     openSidebar,
+    data,
   }
 
 ) => {
     const loader = useSelector((state) => state?.logIn?.loader);
-    const departmenthead = useSelector(
-      (state) => state?.director?.departmenthead
-    );
-  
+   
     const [filteredResults3, setFilteredResults3] = useState([]);
     const [searchInput3, setSearchInput3] = useState("");
     const searchItems3 = (searchValue) => {
       setSearchInput3(searchValue);
       if (searchInput3 !== "") {
-        const filteredData = departmenthead.filter((item) => {
+        const filteredData = data.filter((item) => {
           return Object.values(item)
             .join("")
             .toLowerCase()
@@ -31,7 +29,7 @@ const Departmentheads = (
         console.log("filteredData", filteredData);
         setFilteredResults3(filteredData);
       } else {
-        setFilteredResults3(departmenthead);
+        setFilteredResults3(data);
       }
     };
   
@@ -97,7 +95,7 @@ const Departmentheads = (
                         </React.Fragment>
                       );
                     })
-                    : departmenthead.map((ob, index) => (
+                    : data.map((ob, index) => (
                       <React.Fragment key={ob.id}>
                         <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
                           <DashCard

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Loader from 'react-loader-spinner';
 import DashboardBtnList from '../../components/ReusableComponents/DashboardBtnList/DashboardBtnList';
 import DashboardMainCard from '../../components/ReusableComponents/DashboardMainCard/DashboardMainCard';
@@ -17,14 +17,39 @@ import { useSelector } from 'react-redux';
 
 const Products = (
   {
-    selectedTabbledata,
-    tabHandler2,
+    // selectedTabbledata,
+    // tabHandler2,
     sidebarOpen,
     openSidebar,
-    selectedTab2,
+    // selectedTab2,
     deopdefaultSorted,
+    data,
   }
 ) => {
+
+  useEffect(() => {
+    setSelectedTabbledata(data)
+  }, [data])
+
+  const [selectedTabbledata, setSelectedTabbledata] = useState(data);
+  const [selectedTab2, setSelectedTab2] = useState("List");
+
+  const tabledataHandler = async (item) => {
+    setSelectedTabbledata(item);
+  }
+
+  const tabHandler2 = (item) => {
+    setSelectedTab2(item);
+
+    if (item === "List") {
+      tabledataHandler(data);
+    } else if (item === "Grid") {
+      tabledataHandler(data);
+    }
+  };
+
+
+
 
 
   const [filteredResults, setFilteredResults] = useState([]);
@@ -34,7 +59,7 @@ const Products = (
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
     if (searchInput !== "") {
-      const filteredData = productall.filter((item) => {
+      const filteredData = data.filter((item) => {
         return Object.values(item)
           .join("")
           .toLowerCase()
@@ -42,7 +67,7 @@ const Products = (
       });
       setFilteredResults(filteredData);
     } else {
-      setFilteredResults(productall);
+      setFilteredResults(data);
     }
   };
 
@@ -91,7 +116,7 @@ const Products = (
   }
 
   const buttonname3 = ["List", "Grid"];
-  const productall = useSelector((state) => state?.director?.productall);
+  // const productall = useSelector((state) => state?.director?.productall);
 
   const { SearchBar } = Search;
   const loader = useSelector((state) => state?.logIn?.loader);
@@ -99,27 +124,13 @@ const Products = (
 
     return (
         <>
-                   <NavbarDash
+             <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
             Heading="Products"
           />
 
-          {loader ? (
-            <DashboardMainCard
-              reverse={true}
-              TableDiv={
-                <div className="d-flex justify-content-center">
-                  <Loader
-                    height={100}
-                    width={100}
-                    type="Rings"
-                    color="#0066b3"
-                  />
-                </div>
-              }
-            />
-          ) : (
+          
             <DashboardMainCard
               reverse={selectedTab2 === "List" ? true : false}
               SelectedButtons={
@@ -178,7 +189,20 @@ const Products = (
                       </div>
                     </div>
 
-                    {searchInput.length >= 1
+                    {loader ? (
+           
+           <div className="d-flex justify-content-center">
+             <Loader
+               height={100}
+               width={100}
+               type="Rings"
+               color="#0066b3"
+             />
+           </div>
+      
+     ) : (
+
+                    searchInput.length >= 1
                       ? filteredResults.map((item, index) => {
                         return (
                           <React.Fragment key={item.id}>
@@ -188,13 +212,15 @@ const Products = (
                           </React.Fragment>
                         );
                       })
-                      : productall.map((item, index) => (
+                      : data.map((item, index) => (
                         <React.Fragment key={item.id}>
                           <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
                             <DashboardTableCards ob={item} />
                           </div>
                         </React.Fragment>
-                      ))}
+                      ))
+
+     )}
                  
                   </div>
                 </>
@@ -222,6 +248,20 @@ const Products = (
                             borderRadius: "10px",
                           }}
                         />
+
+{loader ? (
+           
+           <div className="d-flex justify-content-center">
+             <Loader
+               height={100}
+               width={100}
+               type="Rings"
+               color="#0066b3"
+             />
+           </div>
+      
+     ) : (
+
                         <BootstrapTable
                           {...props.baseProps}
                           // rowStyle={rowStyle}
@@ -237,13 +277,14 @@ const Products = (
                           condensed
                           wrapperClasses="table-responsive"
                         />
+     )}
                       </div>
                     )}
                   </ToolkitProvider>
                 </>
               }
             />
-          )}   
+             
         </>
     )
 }

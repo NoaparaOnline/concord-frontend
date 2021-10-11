@@ -17,11 +17,11 @@ const DirectorApprovalStatusChange = (props) => {
       } = useForm();
       const dispatch = useDispatch();
     
-      useEffect(() => {
-        if (schedule?.length < 1) {
-            dispatch(getSchedule());
-        }
-      },[dispatch,schedule])
+      // useEffect(() => {
+      //   if (schedule?.length < 1) {
+      //       dispatch(getSchedule());
+      //   }
+      // },[dispatch,schedule])
     
       const onSubmit = async (data) => {
   

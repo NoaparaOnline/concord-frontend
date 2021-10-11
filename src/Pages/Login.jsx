@@ -20,12 +20,11 @@ const Login = (props) => {
   const history = useHistory();
   const dispatch = useDispatch();
   const loader = useSelector((state) => state?.logIn?.loader);
-
   const onSubmit = async (data) => {
     const apiData = {
       email_address: data.email,
       password: data.password,
-      fcm_token:"Abc"
+      fcm_token:localStorage.getItem("fcm")
     };
 
     const type = await dispatch(loginUser(apiData));
