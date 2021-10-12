@@ -44,7 +44,10 @@ import { toast } from "react-toastify";
           type: logInConstants.SET_ERROR,
           payload: response?.data?.response_message,
         });
-  
+        dispatch({
+          type: logInConstants.SET_LOADER,
+          payload: false,
+        });
         return "error";
       }
     } catch (error) {
@@ -85,6 +88,7 @@ import { toast } from "react-toastify";
     try {
       // await apiServices.logout();
       logout();
+      localStorage.clear();
       dispatch({
         type: logInConstants.LOG_OUT_USER,
         payload: null,

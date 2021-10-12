@@ -97,7 +97,7 @@ const DirectorScheduleCreate = (props) => {
                       .map((item, index) => {
                         return (
                           <option value={item?.uid} key={index + 1}>
-                            {item?.name}
+                            {item?.role?.category?.name}
                           </option>
                         );
                       })}

@@ -35,7 +35,9 @@ const Login = (props) => {
     else if (type === "director") {
       history?.push('/director-dashboard')
     }
-    props.onHide();
+    if(type !== "error")
+    {  props.onHide();
+    }
   };
 
   const {
@@ -155,7 +157,7 @@ const Login = (props) => {
                         type="ThreeDots"
                         color="#fff"
                       />
-                    </div> : "LOG IN"  
+                    </div> : "LOG IN"    
                       }
                       </button>
                       </div>

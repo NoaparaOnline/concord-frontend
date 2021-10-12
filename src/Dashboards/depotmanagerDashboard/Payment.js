@@ -37,7 +37,8 @@ const Payment = ({
   //PAYMENT COLUMN HEADERS
   const DepomanagerPayment = [
     { dataField: "customer.name", text: "Customer Name", sort: true },
-
+   
+  
     { dataField: "payment_type", text: "Payment Type", sort: true },
 
     {
@@ -57,11 +58,34 @@ const Payment = ({
           return { color: "blue", fontWeight: "500" };
       }, sort: true
     },
+
+    { dataField: "vat_rate", text: "Vat", formatter:Vitval, sort: true },
+    
+    { dataField: "subtotal_amount", text: "Total",formatter:Totalval, sort: true },  
+    
+    
     { dataField: "customer", formatter: btnFormatterpay, text: "Actions" },
   ];
 
   const { SearchBar } = Search;
 
+
+  function Totalval(cell,row)
+  {
+    return (
+      <>
+      {row.vat_rate*row.subtotal_amount}
+      </>
+    )
+  }
+  function Vitval(cell,row)
+  {
+    return (
+      <>
+      {Math.round((row.vat_rate-1)*100)}%
+      </>
+    )
+  }
 
   //PAYMENT COLUMN BUTTON FORMATTER
   function btnFormatterpay(cell, row) {
@@ -69,20 +93,20 @@ const Payment = ({
       <>
         <div className="row">
           <div className="col pr-0">
+            <Link
+              style={{ color: "#ffffff", textDecoration: "none" }}
+              to={{
+                pathname: "/depotmanager-dashboard/payment-ord/innerdetail",
+              }}
+              onClick={() => dispatch(getSingleOrder(row))}
+            >
             <div
              className={` btn`}
              style={{ borderRadius: "5px",backgroundColor:'#22A6AC' }}
             >
-              <Link
-                style={{ color: "#ffffff", textDecoration: "none" }}
-                to={{
-                  pathname: "/depotmanager-dashboard/payment-ord/innerdetail",
-                }}
-                onClick={() => dispatch(getSingleOrder(row))}
-              >
-                View
-              </Link>
+                <span style={{color:'#fff'}}>View</span>
             </div>
+              </Link>
           </div>
         </div>
       </>

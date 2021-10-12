@@ -107,20 +107,21 @@ const OrderHistory = (
             <>
                 <div className="row">
                     <div className="col pr-0">
-                        <div
-                            className={` btn`}
-                            style={{ borderRadius: "5px",backgroundColor:'#22A6AC' }}
-                        >
-                            <Link
-                                style={{ color: "#ffffff", textDecoration: "none" }}
+                    <Link
+                                style={{  textDecoration: "none" }}
                                 to={{
                                     pathname: "/depotmanager-dashboard/order-request/innerdetail",
                                 }}
                                 onClick={() => dispatch(getSingleOrder(row))}
                             >
-                                View
-                            </Link>
+                       <div
+                            className={` btn`}
+                            style={{ borderRadius: "5px",backgroundColor:'#22A6AC' }}
+                        >
+                          
+                              <span  style={{  color:'#fff' }}>View</span>  
                         </div>
+                            </Link>
                     </div>
                 </div>
             </>

@@ -47,7 +47,9 @@ const Schedules = ({
   useEffect(() => {
     setSelectedTabbledata(schedule)
     if (schedule.length < 1) {
-      dispatch(getSchedule());
+    alert('Bhund Hogaya');
+      dispatch(getSchedule(''));
+      
    }
   }, [schedule])
   

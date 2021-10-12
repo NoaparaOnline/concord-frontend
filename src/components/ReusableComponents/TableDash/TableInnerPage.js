@@ -142,7 +142,7 @@ const TableInnerPage = (props) => {
         Total={
           <>
             <tr>
-              <td>Total</td>
+              <td>Sub Total</td>
               <td></td>
               <td></td>
               <td></td>
@@ -156,18 +156,18 @@ const TableInnerPage = (props) => {
               <td>{Math.round((productidstate.vat_rate-1)*100)}%</td>
             </tr>
             <tr>
-              <td>A value-added tax</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>{productidstate.vat_rate*productidstate.subtotal_amount}</td>
-            </tr>
-            <tr>
               <td>Payment Type</td>
               <td></td>
               <td></td>
               <td></td>
               <td>{productidstate.payment_type}</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>{productidstate.vat_rate*productidstate.subtotal_amount}</td>
             </tr>
            
           </>
