@@ -18,6 +18,7 @@ const DirectorScheduleCreate = (props) => {
 
   // Normal States
   const [assginto, setAssginto] = useState();
+  const schedule = useSelector((state) => state?.director?.schedule);
 
   const doctor = useSelector((state) => state?.director?.doctor);
   const customer = useSelector((state) => state?.director?.customer);

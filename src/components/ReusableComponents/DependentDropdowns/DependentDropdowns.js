@@ -198,14 +198,7 @@ const DependentDropdowns = (props) => {
               onClick={() => {
                 dispatch(getSchedule(assignto));
                 alert(assignto);
-                // setDisabletrue1(true);
-                // setDisabletrue2(true);
-                // setDisabletrue3(true);
-                // setSelected("");
-                // setSelected1("");
-                // setSelected2("");
-                // setSelected3("");
-              }}
+                }}
             >
               <i className="fa fa-filter ms-2"></i>
               &nbsp; Filter

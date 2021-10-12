@@ -50,7 +50,6 @@ export const getSchedule = (uid) => async (dispatch) => {
             type: logInConstants.SET_LOADER,
             payload: false,
           });
-  return true 
   }
   } catch (error) {
     return "fail"
