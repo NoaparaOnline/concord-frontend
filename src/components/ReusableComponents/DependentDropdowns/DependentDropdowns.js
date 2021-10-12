@@ -197,7 +197,6 @@ const DependentDropdowns = (props) => {
               }}
               onClick={() => {
                 dispatch(getSchedule(assignto));
-                alert(assignto);
                 }}
             >
               <i className="fa fa-filter ms-2"></i>
