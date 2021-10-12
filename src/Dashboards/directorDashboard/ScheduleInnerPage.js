@@ -61,7 +61,7 @@ const ScheduleInnerPage = (props) => {
                   <span
                     style={{
                       fontWeight: "600",
-                      fontSize: "22px",
+                      fontSize: "20px",
                       color: "#565656",
                     }}
                   >

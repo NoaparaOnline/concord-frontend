@@ -37,6 +37,7 @@ export const getSchedule = (uid) => async (dispatch) => {
     const head = {'x-session-key': token.key, 'x-session-type': token.type};
     const response = await axios.get(
       `https://concord-backend-m1.herokuapp.com/api/schedules/read?child_uid=${uid}`,
+  
       {headers: head},
     );
     if (response?.data?.response_code === 200) {
@@ -49,7 +50,6 @@ export const getSchedule = (uid) => async (dispatch) => {
             type: logInConstants.SET_LOADER,
             payload: false,
           });
-  return true 
   }
   } catch (error) {
     return "fail"

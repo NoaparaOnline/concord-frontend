@@ -50,7 +50,7 @@ const DependentDropdowns = (props) => {
       <div className="row">
         <div className="col-lg-2 mt-3">
           <select
-            className="form-control form-select text-uppercase "
+            className="form-control form-select"
             name="sm"
             onChange={(e) => {
               dispatch(getChildsData(e.target.value, "rsm"));
@@ -64,11 +64,11 @@ const DependentDropdowns = (props) => {
             {filterd.map((item, index) => {
               return (
                 <option
-                  className="text-uppercase"
+                  
                   value={item?.uid}
                   key={index + 1}
                 >
-                  {item?.role?.category?.name}
+                  {item?.role?.name}
                 </option>
               );
             })}
@@ -77,7 +77,7 @@ const DependentDropdowns = (props) => {
 
         <div className="col-lg-2 mt-3">
           <select
-            className="form-control form-select text-uppercase"
+            className="form-control form-select "
             name="rsm"
             onChange={(e) => {
               dispatch(getChildsData(e.target.value, "am"));
@@ -94,11 +94,11 @@ const DependentDropdowns = (props) => {
               .map((item, index) => {
                 return (
                   <option
-                    className="text-uppercase"
+                    
                     value={item?.uid}
                     key={index + 1}
                   >
-                    {item?.role?.category?.name}
+                    {item?.role?.name}
                   </option>
                 );
               })}
@@ -107,7 +107,7 @@ const DependentDropdowns = (props) => {
 
         <div className="col-lg-2 mt-3">
           <select
-            className="form-control form-select text-uppercase"
+            className="form-control form-select "
             name="am"
             onChange={(e) => {
               dispatch(getChildsData(e.target.value, "mpo"));
@@ -124,11 +124,11 @@ const DependentDropdowns = (props) => {
               .map((item, index) => {
                 return (
                   <option
-                    className="text-uppercase"
+                    
                     value={item?.uid}
                     key={index + 1}
                   >
-                    {item?.role?.category?.name}
+                    {item?.role?.name}
                   </option>
                 );
               })}
@@ -137,7 +137,7 @@ const DependentDropdowns = (props) => {
 
         <div className="col-lg-2 mt-3">
           <select
-            className="form-control form-select text-uppercase"
+            className="form-control form-select "
             name="mpo"
             onChange={(e) => {
               setAssginto(e.target.value);
@@ -152,11 +152,11 @@ const DependentDropdowns = (props) => {
               .map((item, index) => {
                 return (
                   <option
-                    className="text-uppercase"
+                    
                     value={item?.uid}
                     key={index + 1}
                   >
-                    {item?.role?.category?.name}
+                    {item?.role?.name}
                   </option>
                 );
               })}
@@ -197,14 +197,8 @@ const DependentDropdowns = (props) => {
               }}
               onClick={() => {
                 dispatch(getSchedule(assignto));
-                setDisabletrue1(true);
-                setDisabletrue2(true);
-                setDisabletrue3(true);
-                setSelected("");
-                setSelected1("");
-                setSelected2("");
-                setSelected3("");
-              }}
+                alert(assignto);
+                }}
             >
               <i className="fa fa-filter ms-2"></i>
               &nbsp; Filter

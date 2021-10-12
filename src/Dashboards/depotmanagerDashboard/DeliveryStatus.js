@@ -119,20 +119,20 @@ const DeliveryStatus = (
       <>
         <div className="row">
           <div className="col pr-0">
+            <Link
+              style={{  textDecoration: "none" }}
+              to={{
+                pathname: "/depotmanager-dashboard/delivery-status/innerdetail",
+              }}
+              onClick={() => dispatch(getSingleOrder(row))}
+            >
             <div
              className={` btn`}
              style={{ borderRadius: "5px",backgroundColor:'#22A6AC' }}
             >
-              <Link
-                style={{ color: "#ffffff", textDecoration: "none" }}
-                to={{
-                  pathname: "/depotmanager-dashboard/delivery-status/innerdetail",
-                }}
-                onClick={() => dispatch(getSingleOrder(row))}
-              >
-                View
-              </Link>
+              <span style={{  color: "#fff" }}>View</span>  
             </div>
+              </Link>
           </div>
         </div>
       </>

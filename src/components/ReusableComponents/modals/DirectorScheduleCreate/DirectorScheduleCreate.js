@@ -18,6 +18,7 @@ const DirectorScheduleCreate = (props) => {
 
   // Normal States
   const [assginto, setAssginto] = useState();
+  const schedule = useSelector((state) => state?.director?.schedule);
 
   const doctor = useSelector((state) => state?.director?.doctor);
   const customer = useSelector((state) => state?.director?.customer);
@@ -97,7 +98,7 @@ const DirectorScheduleCreate = (props) => {
                       .map((item, index) => {
                         return (
                           <option value={item?.uid} key={index + 1}>
-                            {item?.name}
+                            {item?.role?.category?.name}
                           </option>
                         );
                       })}

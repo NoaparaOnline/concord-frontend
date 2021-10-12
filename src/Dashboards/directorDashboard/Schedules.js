@@ -32,33 +32,28 @@ const Schedules = ({
   const dispatch = useDispatch();
 
   let schedule = useSelector((state) => state?.director?.schedule);
-  
+
   // const user = JSON.parse(localStorage.getItem('user'));
   // console.log("User Uid",user.uid)
-  
-//   const filterdDirector = schedule.filter(
-//   (status) => status?.assigned_to.uid === user.uid
-// );
+
+  //   const filterdDirector = schedule.filter(
+  //   (status) => status?.assigned_to.uid === user.uid
+  // );
   const [selectedTab1, setSelectedTab1] = useState("All");
   const [selectedTabbledata, setSelectedTabbledata] = useState(schedule);
 
- 
-
   useEffect(() => {
-    setSelectedTabbledata(schedule)
     if (schedule.length < 1) {
       dispatch(getSchedule());
-   }
-  }, [schedule])
-  
- 
-
-
-   
+    }
+  }, []);
+  useEffect(() => {
+    setSelectedTabbledata(schedule);
+  }, [schedule]);
 
 
   const tabledataHandler = async (item) => {
-   await setSelectedTabbledata(item);
+    await setSelectedTabbledata(item);
   };
 
   const tabHandler1 = (item) => {
@@ -156,16 +151,20 @@ const Schedules = ({
     return (
       <>
         <div class="btn-group">
-         
-           <button
+          <button
             class="btn dropdown-toggle dropdown_custom_toogle"
             data-toggle="dropdown"
-            style={{ borderRadius: "5px",backgroundColor:'#22A6AC' }}
+            style={{ borderRadius: "5px", backgroundColor: "#22A6AC" }}
           >
             {/* <button class="btn btn-secondary">Action</button> */}
-            <span style={{ fontSize: "14px", fontWeight: "500" ,color:'#fff'}}> Actions </span>
+            <span
+              style={{ fontSize: "14px", fontWeight: "500", color: "#fff" }}
+            >
+              {" "}
+              Actions{" "}
+            </span>
             <span class="sr-only">Toggle Dropdown</span>
-          </button> 
+          </button>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <li className="">
               <i className="fa fa-edit ms-2"></i>
@@ -218,7 +217,7 @@ const Schedules = ({
   ];
   const { SearchBar } = Search;
   const loader = useSelector((state) => state?.logIn?.loader);
-
+  const emptyDataMessage = () => { return 'No Data to Display';}
   return (
     <>
       <NavbarDash
@@ -228,8 +227,7 @@ const Schedules = ({
       />
 
       <DashboardMainCard
-              classnamewidth="96%"
-
+        classnamewidth="96%"
         reverse={true}
         colorfulcards={
           <div className="row d-flex justify-content-center">
@@ -301,7 +299,6 @@ const Schedules = ({
             </div>
           </>
         }
-  
         TableDiv={
           <>
             <ToolkitProvider
@@ -326,7 +323,7 @@ const Schedules = ({
                         style={{
                           padding: "0.375rem 2.5rem",
                           borderRadius: "10px",
-                          minWidth: "250px"
+                          minWidth: "250px",
                         }}
                       />
                     </div>
@@ -373,8 +370,8 @@ const Schedules = ({
                       <BootstrapTable
                         {...props.baseProps}
                         // rowStyle={rowStyle}
-
                         defaultSorted={deopdefaultSorted}
+                        noDataIndication={emptyDataMessage}
                         // pagination={pagination}
                         pagination={
                           selectedTabbledata.length > 10
