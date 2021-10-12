@@ -105,6 +105,8 @@ const Stocks = ({
 
 
             <DashboardMainCard
+              classnamewidth="96%"
+
                 reverse={true}
                 SelectedButtons={
                     <div className="row my-4">

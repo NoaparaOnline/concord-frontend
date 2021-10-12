@@ -22,6 +22,8 @@ const Reports = ({
             Heading="Reports"
           />
           <DashboardMainCard
+              classnamewidth="96%"
+
             reverse={false}
             floatleftrightbutton={
               <div className="container">

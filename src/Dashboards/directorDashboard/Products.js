@@ -133,6 +133,8 @@ const Products = (
 
           
             <DashboardMainCard
+              classnamewidth="96%"
+
               reverse={selectedTab2 === "List" ? true : false}
               SelectedButtons={
                 <div className="">

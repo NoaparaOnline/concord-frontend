@@ -32,10 +32,16 @@ const Schedules = ({
   const dispatch = useDispatch();
 
   let schedule = useSelector((state) => state?.director?.schedule);
+  
+  // const user = JSON.parse(localStorage.getItem('user'));
+  // console.log("User Uid",user.uid)
+  
+//   const filterdDirector = schedule.filter(
+//   (status) => status?.assigned_to.uid === user.uid
+// );
   const [selectedTab1, setSelectedTab1] = useState("All");
   const [selectedTabbledata, setSelectedTabbledata] = useState(schedule);
 
-  console.log("selectedTabbledata",selectedTabbledata)
  
 
   useEffect(() => {
@@ -46,6 +52,9 @@ const Schedules = ({
   }, [schedule])
   
  
+
+
+   
 
 
   const tabledataHandler = async (item) => {
@@ -219,6 +228,8 @@ const Schedules = ({
       />
 
       <DashboardMainCard
+              classnamewidth="96%"
+
         reverse={true}
         colorfulcards={
           <div className="row d-flex justify-content-center">
@@ -259,7 +270,6 @@ const Schedules = ({
         SelectedButtons={
           <>
             <DependentDropdowns data={selectedTabbledata} />
-            {console.log(selectedTabbledata)}
             <div className="row my-4">
               <div className="col ">
                 {buttonname2.map((item, index) => (

@@ -24,7 +24,6 @@ const TableDash1 = ({
   floatleftrightbutton,
 }) => {
   let history = useHistory();
-
   // Table Component On True False Toogle
   const TableDiv = (
    

@@ -54,6 +54,8 @@ const Departmentheads = (
 
           
             <DashboardMainCard
+              classnamewidth="96%"
+
               reverse={false}
               TableCardGrid={
                 <div className="row">

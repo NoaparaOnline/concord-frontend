@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DashboardMainCard = ({ TableDiv, SelectedButtons, colorfulcards, reverse, TableCardGrid, DivCardComponent, DivChartComponent, floatleftrightbutton }) => {
+const DashboardMainCard = ({ TableDiv, SelectedButtons, colorfulcards, reverse, TableCardGrid, DivCardComponent, DivChartComponent, floatleftrightbutton,classnamewidth,classnamemarginleft,classnameminwidth }) => {
   return (
     <>
       <main>
@@ -9,9 +9,11 @@ const DashboardMainCard = ({ TableDiv, SelectedButtons, colorfulcards, reverse, 
           style={{
             backgroundColor: "#FFF",
             borderRadius: "10px",
-            width: "96%",
+            width: classnamewidth ,
             alignItems: "center",
             padding: "20px",
+            marginLeft: classnamemarginleft,
+            minWidth:classnameminwidth,
           }}
         >
           {floatleftrightbutton}

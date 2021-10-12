@@ -174,6 +174,9 @@ const DependentDropdowns = (props) => {
               }}
               onClick={() => {
                 dispatch(getSchedule(""));
+                setDisabletrue1(true);
+                setDisabletrue2(true);
+                setDisabletrue3(true);
                 setSelected("");
                 setSelected1("");
                 setSelected2("");

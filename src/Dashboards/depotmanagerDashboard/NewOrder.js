@@ -117,11 +117,15 @@ const NewOrder = (
     return (
       <>
         <div class="btn-group">
-          <button class="btn btn-secondary " data-toggle="dropdown" style={{ borderRadius: '5px' }}>
+        <button
+            class="btn dropdown-toggle dropdown_custom_toogle"
+            data-toggle="dropdown"
+            style={{ borderRadius: "5px",backgroundColor:'#22A6AC' }}
+          >
             {/* <button class="btn btn-secondary">Action</button> */}
-            <span style={{ fontSize: '18px', fontWeight: '600' }}> ... </span>
+            <span style={{ fontSize: "14px", fontWeight: "500" ,color:'#fff'}}> Actions </span>
             <span class="sr-only">Toggle Dropdown</span>
-          </button>
+          </button> 
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <li>
               <i className="fa fa-edit ms-2"></i>
@@ -169,6 +173,8 @@ const NewOrder = (
 
 
             <DashboardMainCard
+              classnamewidth="96%"
+
                 reverse={true}
                 TableDiv={
                     <>

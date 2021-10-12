@@ -108,8 +108,8 @@ const OrderHistory = (
                 <div className="row">
                     <div className="col pr-0">
                         <div
-                            className={` btn btn-primary rounded-pill`}
-                            style={{ backgroundColor: "#0066b3" }}
+                            className={` btn`}
+                            style={{ borderRadius: "5px",backgroundColor:'#22A6AC' }}
                         >
                             <Link
                                 style={{ color: "#ffffff", textDecoration: "none" }}
@@ -151,6 +151,8 @@ const OrderHistory = (
 
             <DashboardMainCard
                 reverse={true}
+              classnamewidth="96%"
+
                 TableDiv={
                     <>
                         <ToolkitProvider

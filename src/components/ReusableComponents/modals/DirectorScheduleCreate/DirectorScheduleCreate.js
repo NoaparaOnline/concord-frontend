@@ -16,8 +16,8 @@ const DirectorScheduleCreate = (props) => {
     formState: { errors },
   } = useForm();
 
- // Normal States
- const [assginto, setAssginto] = useState();
+  // Normal States
+  const [assginto, setAssginto] = useState();
 
   const doctor = useSelector((state) => state?.director?.doctor);
   const customer = useSelector((state) => state?.director?.customer);
@@ -26,55 +26,42 @@ const DirectorScheduleCreate = (props) => {
   const selectusertype = watch("usert");
   useEffect(() => {
     if (assignedto?.length < 1) {
-      dispatch(getAssignedto(''));
+      dispatch(getAssignedto(""));
     }
-    
-    if(selectusertype === "doctor")
-    {
-            dispatch(getDoctors(assginto));
-        
+
+    if (selectusertype === "doctor") {
+      dispatch(getDoctors(assginto));
+    } else if (selectusertype === "customer") {
+      dispatch(getCustomers(assginto));
     }
-    else if(selectusertype === "customer")
-    {
-            dispatch(getCustomers(assginto));
-        
+  }, [dispatch, selectusertype, assignedto, assginto]);
+
+  const date = watch("date");
+  const time = watch("time");
+  const datetime = date + " " + time;
+  const onSubmit = async (data) => {
+    if (data.usert === "doctor") {
+      const apiData = {
+        is_doctor_customer: true,
+        doctor_uid: data.name,
+        datetime: datetime,
+        assigned_to_uid: assginto,
+      };
+      dispatch(addSchedule(apiData));
+    } else if (data.usert === "customer") {
+      const apiData = {
+        is_doctor_customer: false,
+        customer_uid: data.name,
+        datetime: datetime,
+        assigned_to_uid: assginto,
+      };
+      dispatch(addSchedule(apiData));
     }
-  },[dispatch,selectusertype,assignedto,assginto])
 
-  const date = watch("date",);
-  const time = watch("time",);
-  const datetime = date +" "+ time ;      
-const onSubmit = async (data) => {
-  
+    props.onHide();
+  };
 
-
-      if(data.usert ==="doctor")
-      {
-        const apiData = {
-          is_doctor_customer:true,
-          doctor_uid:data.name,
-          datetime:datetime,
-          assigned_to_uid:assginto,
-        };
-        dispatch(addSchedule(apiData));
-      }
-      else if(data.usert ==="customer")
-      {
-        const apiData = {
-          is_doctor_customer:false,
-          customer_uid:data.name,
-          datetime:datetime,
-          assigned_to_uid:assginto,
-        };
-        dispatch(addSchedule(apiData));
-      }    
-             
-              props.onHide();
-          };
-
-
-        
-          
+  const user = JSON.parse(localStorage.getItem("user"));
   return (
     <>
       <Modal show={props.show} onHide={props.onHide} centered size="md">
@@ -89,7 +76,6 @@ const onSubmit = async (data) => {
         </Modal.Header>
         <Modal.Body>
           <div className="row px-3">
-        
             <form onSubmit={handleSubmit(onSubmit)} className="w-100">
               <div
                 className="row"
@@ -101,16 +87,20 @@ const onSubmit = async (data) => {
                     as="select"
                     className="input-login-modal Select-menu-outer"
                     custom
-                    onChange={(e) => { setAssginto(e.target.value) }}
+                    onChange={(e) => {
+                      setAssginto(e.target.value);
+                    }}
                   >
-                  <option defaultValue>Select...</option>
-                  {assignedto.map((item, index) => {
-                      return (
-                        <option value={item?.uid} key={index + 1}>
-                          {item?.name}
-                        </option>
-                      );
-                    })}
+                    <option defaultValue>Select...</option>
+                    {assignedto
+                      .filter((status) => status?.uid !== user.uid)
+                      .map((item, index) => {
+                        return (
+                          <option value={item?.uid} key={index + 1}>
+                            {item?.name}
+                          </option>
+                        );
+                      })}
                   </Form.Control>
                   {errors?.assign?.message ? (
                     <div className="text-error">{errors?.assign?.message}</div>
@@ -144,7 +134,6 @@ const onSubmit = async (data) => {
                     custom
                     {...register("name", {})}
                   >
-
                     {selectusertype === "doctor"
                       ? doctor.map((item, index) => {
                           return (
@@ -208,8 +197,6 @@ const onSubmit = async (data) => {
                     ""
                   )}
                 </div>
-
-                
               </div>
               <input
                 type="submit"
