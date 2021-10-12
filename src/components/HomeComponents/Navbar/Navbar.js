@@ -10,7 +10,6 @@ import Login from "../../../Pages/Login";
 
 import { useHistory } from "react-router-dom";
 
-
 // 
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -158,29 +157,32 @@ const user = useSelector((state) => state?.logIn?.user);
                         />
                       </Link>
                       <div
-                        className="dropdown-menu profile-nav-dropdown"
+                        className="dropdown-menu dropdown-menu-right profile-nav-dropdown"
                         aria-labelledby="navbarDropdownMenuLink"
                       >
                         <Link
-                          className="dropdown-item"
+                          className="dropdown-item navmenu_custome_li"
                           onClick={() => profileHandler()}
+                          // style={{ color:'#0066b3' ,fontWeight:'600' }}
+
                         >
                           <i
-                            className="fa fa-id-card ms-2"
-                            style={{ fontSize: "14.5px" }}
+                            className="fa fa-id-card "
+                            style={{ fontSize: "13px" }}
                           ></i>{" "}
-                          Dashboard
+                          &nbsp;Dashboard
                         </Link>
 
                         <Link
-                          className="dropdown-item"
+                          className="dropdown-item navmenu_custome_li"
                           onClick={() => logoutHandler()}
+                          // style={{ color:'#0066b3' ,fontWeight:'600' }}
                         >
                           <i
-                            className="fa fa-sign-out ms-2"
-                            style={{ fontSize: "14.5px" }}
+                            className="fa fa-sign-out "
+                            style={{ fontSize: "13px" }}
                           ></i>
-                          Log Out
+                          &nbsp;Log Out
                         </Link>
                       </div>
                     </li>

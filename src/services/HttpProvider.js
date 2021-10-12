@@ -72,7 +72,7 @@ export async function get(url, params, featureAndAction, config) {
   for (var key in params) {
     url = url + "" + params[key];
   }
-  return request({ method: "get", url, data: { featureAndAction }, ...config });
+  return request({ method: "get", url, data:  featureAndAction , ...config });
 }
 
 export async function del(url, params, config) {

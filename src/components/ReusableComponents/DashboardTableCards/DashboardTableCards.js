@@ -1,6 +1,6 @@
 import React from "react";
 import icon from '../../../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg'
-const DashboardTableCards = () => {
+const DashboardTableCards = ({ob}) => {
   return (
     <>
       <div
@@ -19,8 +19,8 @@ const DashboardTableCards = () => {
                     style={{border:'5px solid lightgrey' ,borderRadius:'10px'}}
                     />
                     <div className="ms-4 ">
-                    <span style={{fontSize:'20px',fontWeight:'600',textTransform:'uppercase'}}>Aceloben</span>  
-                    <span style={{fontSize:'15px',fontWeight:'500',textTransform:'lowercase'}}><br/>aceclofenac</span>
+                    <span style={{fontSize:'20px',fontWeight:'600',textTransform:'uppercase'}}>{ob.name}</span>  
+                    <span style={{fontSize:'15px',fontWeight:'500',textTransform:'lowercase'}}><br/>{ob.name}</span>
                     </div>
                     
                 </div>
@@ -40,10 +40,10 @@ const DashboardTableCards = () => {
             </div>
             <div className="row mb-3">
                 <div className="col-6 d-flex justify-content-start">
-                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'uppercase'}}>152</span>
+                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'uppercase'}}>{ob.price}</span>
                 </div>
                 <div className="col-6 d-flex justify-content-end">
-                    <span style={{fontSize:'15px',fontWeight:'600',tepxtTransform:'uppercase'}}>152</span>
+                    <span style={{fontSize:'15px',fontWeight:'600',tepxtTransform:'uppercase'}}>{ob.price}</span>
                 </div>
             </div>
             <div className="row mb-3">
@@ -51,7 +51,7 @@ const DashboardTableCards = () => {
                     <span style={{fontSize:'17px',fontWeight:'600',textTransform:'capitalize',color:'grey'}}>Product Added By</span>
                 </div>
                 <div className="col-12">
-                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize'}}>Yasir sheikh</span>
+                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize'}}>{ob.created_by._cls ? ob.created_by._cls : "N/A"}</span>
                 </div>
              </div>
         </div>

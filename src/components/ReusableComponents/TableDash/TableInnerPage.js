@@ -4,12 +4,20 @@ import "./TableDash.css";
 import { tableinner } from "../TableDash/tableConstant";
 import { useSelector } from "react-redux";
 import moment from "moment";
-
+import { useEffect } from "react";
+import { useHistory } from "react-router";
 const TableInnerPage = (props) => {
 
+  const history = useHistory();
   const productidstate = useSelector((state) => state?.deport?.productidstate);
 
-
+  // useEffect(() => {
+  //   // if( isEmpty(productidstate.isEmpty({})))
+  //   // {
+  //   //   history.push('/depotmanager-dashboard')
+  //   // }
+  // }, [])
+  
   const medicinesall =productidstate;
 
   const handleEdit = (item) => () => {
@@ -21,15 +29,72 @@ const TableInnerPage = (props) => {
     <>
        <main> 
       <div
-        className="container style_custom"
+        className="container style_custom "
         style={{
           backgroundColor: "#FFF",
           borderRadius: "10px",
           width:'96%',
           padding: "20px",
+          minWidth:'250px'
         }}
       >
-        <table className="table table-borderless ms-5">
+
+<div className="row  "
+            
+            >
+              
+              <div className="row py-3   ">
+                <div className="col-lg-6">
+                  <span style={{ fontWeight: "600", color: "#565656"  }}>
+                  OrderID : &nbsp;
+                  </span>{" "}
+                  {productidstate?.order_id}
+                
+                </div>
+                <div className="col-lg-6">
+                  <span style={{ fontWeight: "600", color: "#565656"  }}>
+                  Customer Name: &nbsp;
+                  </span>
+                  {productidstate?.customer?.name}
+                 
+                </div>
+              </div>
+             
+              <div className="row py-3  ">
+                <div className="col-lg-6">
+                  <span style={{ fontWeight: "600", color: "#565656"  }}>
+                  Market & Address: &nbsp;
+                  </span>{" "}
+                  {productidstate?.customer?.market?.name}
+                  ,&nbsp;
+                  {productidstate?.customer?.market?.parent?.name}
+                  </div>
+                <div className="col-lg-6">
+                  <span style={{ fontWeight: "600", color: "#565656"  }}>
+                  Order Date/Time: &nbsp;
+                  </span>{" "}
+                  {moment.unix(productidstate?.order_datetime).format("MMM DD, YYYY")}
+                </div>
+              </div>
+              <div className="row py-3  ">
+                <div className="col-lg-6">
+                  <span style={{ fontWeight: "600", color: "#565656"  }}>
+                   Proceed By: &nbsp;
+                  </span>
+                  {productidstate?.ordered_by?.name}
+                </div>
+                <div className="col-lg-6">
+                  <span style={{ fontWeight: "600", color: "#565656"  }}>
+                     MPO: &nbsp;
+                  </span>{" "}
+                  {productidstate?.ordered_by?.name}
+                </div>
+              </div>
+              
+            </div>
+
+
+        {/* <table className="table  table-borderless ms-5" >
           <tbody style={{ border: "none" }}>
             <tr style={{ border: "none", padding: "10px" }}>
               <td style={{ border: "none",fontWeight: "500" }}>OrderID:</td>
@@ -42,7 +107,7 @@ const TableInnerPage = (props) => {
               <td style={{ border: "none" }}>
               {productidstate?.customer?.market?.name}
               <br/>
-              {productidstate?.customer.market.parent.name}
+              {productidstate?.customer?.market?.parent?.name}
               </td>
               <td style={{ border: "none",fontWeight: "500" }}>Order Date/Time:</td>
               <td style={{ border: "none" }}>
@@ -51,12 +116,12 @@ const TableInnerPage = (props) => {
             </tr>
             <tr style={{ border: "none", padding: "10px" }}>
               <td style={{ border: "none",fontWeight: "500" }}>Proceed By: </td>
-              <td style={{ border: "none" }}>{productidstate?.ordered_by.name}</td>
+              <td style={{ border: "none" }}>{productidstate?.ordered_by?.name}</td>
               <td style={{ border: "none" ,fontWeight: "500"}}>MPO:</td>
-              <td style={{ border: "none" }}>{productidstate?.ordered_by.name}</td>
+              <td style={{ border: "none" }}>{productidstate?.ordered_by?.name}</td>
             </tr>
           </tbody>
-        </table>
+        </table> */}
       </div>
    
       <TableDash

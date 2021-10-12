@@ -19,7 +19,6 @@ const StatuschangedModal = (props) => {
   const [dropdown1, setDropdown1] = useState(productuid?.delivery_status);
   const [dropdown2, setDropdown2] = useState(productuid?.payment_status);
 
-  console.log(productuid);
 
   const onSubmit = () => {
     const apiData = {
@@ -68,7 +67,7 @@ const StatuschangedModal = (props) => {
 
 
                       <div className="form-group">
-                        <label>Delivery Statuses</label>
+                        <label>Delivery Status</label>
                         <select className="form-control form-select" id="exampleFormControlSelect1" onChange={(e) => {
                           setDropdown1(e.target.value)
                         }}>
@@ -89,7 +88,7 @@ const StatuschangedModal = (props) => {
                         </select>
                       </div>
                       <div className="form-group">
-                        <label>Delivery Statuses</label>
+                        <label>Payment Status</label>
                         <select className="form-control form-select" id="exampleFormControlSelect1" onChange={(e) => { setDropdown2(e.target.value) }}>
                           <option selected >{productuid?.payment_status}</option>
                           {

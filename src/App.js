@@ -1,4 +1,4 @@
-import React , { useEffect } from "react";
+ import React , { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Route  } from "react-router-dom";
 import "./App.css";
@@ -40,7 +40,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import DepotmanagerDashboard from "./Dashboards/depotmanagerDashboard/depotmanagerDashboard";
 import DirectorDashboard from "./Dashboards/directorDashboard/directorDashboard";
-
+import { messaging , test } from "./init-fcm";
 
 import PrivateRoute from './Routes/PrivateRoute';
 // import PublicRoute from './Routes/PublicRoute';
@@ -50,6 +50,29 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getUser());
+    if ("serviceWorker" in navigator) {
+      navigator?.serviceWorker
+        .register("./firebase-messaging-sw.js")
+        .then(function (registration) {
+          console.log("Registration successful, scope is:", registration.scope);
+        })
+        .catch(function (err) {
+          console.log("Service worker registration failed, error:", err);
+        });
+    }
+    Notification.requestPermission()
+      .then(async function () {
+        // console.log(result);
+        const token = await test?.getToken(messaging);
+        localStorage.setItem("fcm",token)
+      })
+      .catch(function (err) {
+        console.log("Unable to get permission to notify.", err);
+      });
+    navigator?.serviceWorker.addEventListener("message", (message) =>
+      console.log(message)
+    );
+    window.scrollTo(0, 0);
   }, [dispatch]);
 
   return (

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-// import React, { useState } from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import { loginUser,forgotPassword } from "../Store/Actions/loginActions";
 import { Link } from "react-router-dom";
 // import { forgotPassword } from "../Store/Actions/loginActions";
@@ -12,6 +11,7 @@ import { useForm } from "react-hook-form";
 //USE HISTORY HOOKS
 import { useHistory } from "react-router";
 
+import Loader from "react-loader-spinner";
 
 
 
@@ -19,12 +19,12 @@ import { useHistory } from "react-router";
 const Login = (props) => {
   const history = useHistory();
   const dispatch = useDispatch();
-
+  const loader = useSelector((state) => state?.logIn?.loader);
   const onSubmit = async (data) => {
     const apiData = {
       email_address: data.email,
       password: data.password,
-      fcm_token:"Abc"
+      fcm_token:localStorage.getItem("fcm")
     };
 
     const type = await dispatch(loginUser(apiData));
@@ -46,17 +46,15 @@ const Login = (props) => {
 
 
 
-  const onSubmitEmail = async () => {
+  const onSubmitEmail = async (data) => {
     const apiData = {
-      email_address: email,
+      email_address: data.email,
     };
     dispatch(forgotPassword(apiData));
     props.onHide();
   };
 
 
-  const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
 
 
 
@@ -90,9 +88,6 @@ const Login = (props) => {
                 {props.showdiv ?
                   <div>
 
-
-
-                 
                     <form onSubmit={handleSubmit(onSubmit)} style={{padding:'15px',height: '220px'}}>
                       <div className="row">
                         <div className="col-12">
@@ -142,9 +137,8 @@ const Login = (props) => {
                       </div>
 
                       <div className="d-flex justify-content-center">
-                      <input
+                      <button
                         type="submit"
-                        value="LOG IN"
                         className="btn btn-block rounded-pill  mb-2 mx-auto"
                         style={{
                           width: "85%", textAlign: "center", color: "#fff",
@@ -153,7 +147,17 @@ const Login = (props) => {
                           fontWeight: "500",
                         }}
 
+                      >
+                        {loader ? 
+                      <div className="d-flex justify-content-center">
+                      <Loader
+                        height={20} width={20}
+                        type="ThreeDots"
+                        color="#fff"
                       />
+                    </div> : "LOG IN"  
+                      }
+                      </button>
                       </div>
 
                       <div className="">
@@ -175,37 +179,53 @@ const Login = (props) => {
 
 
 
-                    <div className="formpx px-3 pt-4" style={{ padding: '15px', height: '220px' }}>
-                      <div className="input-group mb-4 mr-sm-2">
-                        <div className="input-group-prepend">
-                          {/* <div className="input-group-text">
-                              <i
-                                className="fa fa-user"
-                                style={{ color: "#555" }}
-                              ></i>
-                            </div> */}
+                    <form onSubmit={handleSubmit(onSubmitEmail)} style={{ padding: '15px', height: '170px' }}>
+                     
+                     
+                     
+                    <div className="row">
+                        <div className="col-12 mb-3">
+                          <span className="label-name-login">Email</span>
+                          <input
+                            className="input-login-modal"
+                            type="email"
+                            placeholder="Enter Email For Verfication"
+                            {...register("email", {
+                              required: {
+                                value: true,
+                                message: "this field is required field",
+                              },
+                            })}
+                          />
+                          {errors?.email?.message ? (
+                            <div className="text-error">{errors?.email?.message}</div>
+                          ) : (
+                            ""
+                          )}
                         </div>
-                        <input
-                          type="email"
-                          className="form-control logmod mt-4"
-                          id="inlineFormInputGroupUsername2"
-                          placeholder="Username/Email"
-                          onChange={(e) => setEmail(e.target.value)}
-                        />
                       </div>
+                     
+                     
+                     
 
-                      <button
-                        className="btn btn-primary rounded-pill btn-block mb-2"
+                      <div className="d-flex justify-content-center">
+                      <input
+                        type="submit"
+                        value="SUBMIT"
+                        className="btn btn-block rounded-pill  mb-2 mx-auto"
                         style={{
-                          color: "#fff",
+                          width: "85%", textAlign: "center", color: "#fff",
                           backgroundColor: "#0066b3",
                           fontSize: "13px",
                           fontWeight: "500",
                         }}
-                        onClick={onSubmitEmail}
-                      >
-                        Submit
-                      </button>
+
+                      />
+                      </div>
+
+                     
+
+                      
                       <div className="">
                         <label
                           className="form-check-label "
@@ -217,7 +237,7 @@ const Login = (props) => {
                           }} to="#" style={{ textDecoration: 'none', color: '#0066b3' }}>Back To Login </Link>
                         </label>
                       </div>
-                    </div>
+                    </form>
                   </div>
 
 

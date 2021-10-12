@@ -5,6 +5,10 @@ import { toast } from "react-toastify";
 
   export const loginUser = (data) => async (dispatch) => {
     try {
+      dispatch({
+        type: logInConstants.SET_LOADER,
+        payload: true,
+      });
       const response = await apiServices.login(data);
       if (response?.data?.response_code === 200) {
         setToken({
@@ -21,6 +25,10 @@ import { toast } from "react-toastify";
         dispatch({
           type: logInConstants.LOGIN_IN,
           payload: response?.data?.response_data?.token?.user,
+        });
+        dispatch({
+          type: logInConstants.SET_LOADER,
+          payload: false,
         });
         dispatch({
           type: logInConstants.USER_TYPE,
@@ -40,14 +48,12 @@ import { toast } from "react-toastify";
         return "error";
       }
     } catch (error) {
-      console.log("Login error", error);
     }
 
   };
 
   export const forgotPassword = (data) => async (dispatch) => {
     
-    console.log(data, "forgot Password");
     try {
       const response = await apiServices.forgotPassword(data);
       if (response?.data?.response_code === 200) {
@@ -56,7 +62,7 @@ import { toast } from "react-toastify";
         toast.error(response?.data?.response_message);
       }
     } catch (error) {
-      console.log("Forgot Password error", error);
+      
     }
   };
 
