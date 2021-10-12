@@ -12,7 +12,8 @@ import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.m
 import paginationFactory from "react-bootstrap-table2-paginator";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProductsnew } from '../../Store/Actions/directorActions';
 
 
 const NewlyProducts = (
@@ -21,18 +22,21 @@ const NewlyProducts = (
     sidebarOpen,
     openSidebar,
     deopdefaultSorted,
-    data,
   }
 
 ) => {
 
-
+  const productnew = useSelector((state) => state?.director?.productnew);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    setSelectedTabbledata(data)
-  }, [data])
+    setSelectedTabbledata(productnew)
+    if (productnew?.length < 1) {
+          dispatch(getProductsnew());
+        }
+  }, [productnew])
 
-  const [selectedTabbledata, setSelectedTabbledata] = useState(data);
+  const [selectedTabbledata, setSelectedTabbledata] = useState(productnew);
   const [selectedTab3, setSelectedTab3] = useState("List");
 
   const tabledataHandler = async (item) => {
@@ -43,9 +47,9 @@ const NewlyProducts = (
     setSelectedTab3(item);
 
     if (item === "List") {
-      tabledataHandler(data);
+      tabledataHandler(productnew);
     } else if (item === "Grid") {
-      tabledataHandler(data);
+      tabledataHandler(productnew);
     }
   };
 
@@ -98,7 +102,6 @@ const NewlyProducts = (
   const { SearchBar } = Search;
   const loader = useSelector((state) => state?.logIn?.loader);
   const buttonname3 = ["List", "Grid"];
-  const productnew = useSelector((state) => state?.director?.productnew);
 
   const [filteredResults1, setFilteredResults1] = useState([]);
   const [searchInput1, setSearchInput1] = useState("");

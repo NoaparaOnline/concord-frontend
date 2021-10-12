@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
 import "./depotmanagerDashboard.css";
 import icon1 from "../../Statics/assets/Sidebar/1.png";
@@ -12,17 +12,7 @@ import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
-import {
-  getnewOrder,
-  getoldOrder,
-  getOrder,
-  getStocksProduct,
-  getStocksMedicineProduct,
-  getStocksGiftProduct,
-} from "../../Store/Actions/deportmanagerActions";
-// Search Bar Images Import
 import StatuschangedModal from "../../components/ReusableComponents/modals/StatuschangedModal/StatuschangedModal";
-import moment from "moment";
 import OrderHistory from "./OrderHistory";
 import NewOrder from "./NewOrder";
 import Stocks from "./Stocks";
@@ -106,20 +96,9 @@ const DepotmanagerDashboard = (props) => {
   // =================================================================//
   // USE STATES 
   const [sidebarOpen, setsidebarOpen] = useState(false);
-  const [handle, setHandle] = useState("orderoldhistory");
   const [show, setShow] = useState(false);
 
 
-
-  // REDUX STATES
-  // const user = useSelector((state) => state?.logIn?.user);
-  const oldorder = useSelector((state) => state?.deport?.oldorder);
-  const neworder = useSelector((state) => state?.deport?.neworder);
-  const order = useSelector((state) => state?.deport?.order);
-  const stock = useSelector((state) => state?.deport?.stock);
-  const stockmedicine = useSelector((state) => state?.deport?.stockmedicine);
-  const stockgift = useSelector((state) => state?.deport?.stockgift);
-  // const productidstatestock = useSelector((state) => state?.deport?.stock);
 
 
 
@@ -135,33 +114,6 @@ const DepotmanagerDashboard = (props) => {
     setsidebarOpen(false);
   };
 
-  // API HIT HANDLER ON SIDEBAR BUTTONS
-  const ApiTabhandler = (item) => {
-    setHandle(item);
-    if (item === "orderoldhistory") {
-      if (oldorder?.length < 1) {
-        dispatch(getoldOrder());
-      }
-    } else if (item === "Neworder") {
-      if (neworder?.length < 1) {
-        dispatch(getnewOrder());
-      }
-    } else if (item === "order") {
-      if (order?.length < 1) {
-        dispatch(getOrder());
-      }
-    }
-  };
-
-  // USEEFFECT HOOK FOR INITIAL API RENDER ON DASHBOARD LOAD
-  useEffect(() => {
-    if (handle) {
-      dispatch(getoldOrder());
-    }
-    if (stock.length < 1) {
-      dispatch(getStocksProduct());
-    }
-  }, [dispatch, handle, stock]);
 
 
   // LOGOUT HANDLER FUNCTION
@@ -180,59 +132,7 @@ const DepotmanagerDashboard = (props) => {
     setShow(!show);
   };
 
-
-
-
-
-
-  // STOCKS SELECTED TAB HANDLER FUNCTION
-  const tabledataHandler = async (item) => {
-    setSelectedTabbledata(item);
-    if (item === stock) {
-      if (stock?.length < 1) {
-        const stockapi = await dispatch(getStocksProduct());
-        if (stockapi === true) {
-          setSelectedTabbledata(stock);
-        }
-      }
-
-    }
-    else if (item === stockmedicine) {
-      if (stockmedicine?.length < 1) {
-        const stockmedapi = await dispatch(getStocksMedicineProduct());
-        if (stockmedapi === true) {
-          setSelectedTabbledata(stock);
-        }
-      }
-    }
-    else if (item === stockgift) {
-      if (stockgift?.length < 1) {
-        const stockgiftapi = await dispatch(getStocksGiftProduct());
-        if (stockgiftapi === true) {
-          setSelectedTabbledata(stock);
-        }
-      }
-    }
-  };
-
-  // Tabhandler Medicine And Gift
-  const tabHandler = (item) => {
-    setSelectedTab1(item);
-    if (item === "All") {
-      tabledataHandler(stock);
-    }
-    else if (item === "Medicine") {
-      tabledataHandler(stockmedicine);
-    }
-    else if (item === "Gift") {
-      tabledataHandler(stockgift);
-    }
-  };
-  // USE STATES 
-
-  const [selectedTab1, setSelectedTab1] = useState("All");
-  const [selectedTabbledata, setSelectedTabbledata] = useState(stock);
-
+  
 
   return (
 
@@ -242,7 +142,6 @@ const DepotmanagerDashboard = (props) => {
           <OrderHistory
           sidebarOpen={sidebarOpen}
           openSidebar={openSidebar}
-          oldorder={oldorder}
           deopdefaultSorted={deopdefaultSorted}
           />
         </Route>
@@ -252,7 +151,6 @@ const DepotmanagerDashboard = (props) => {
           handleShow={handleShow}
           sidebarOpen={sidebarOpen}
           openSidebar={openSidebar}
-          neworder={neworder}
           deopdefaultSorted={deopdefaultSorted}
           
           />
@@ -263,9 +161,6 @@ const DepotmanagerDashboard = (props) => {
           sidebarOpen={sidebarOpen}
           openSidebar={openSidebar}
           deopdefaultSorted={deopdefaultSorted}
-          selectedTab1={selectedTab1}
-          tabHandler={tabHandler}
-          selectedTabbledata={selectedTabbledata}
           />
 
         </Route>
@@ -273,13 +168,11 @@ const DepotmanagerDashboard = (props) => {
           <DeliveryStatus
            sidebarOpen={sidebarOpen}
            openSidebar={openSidebar}
-           oldorder={oldorder}
            deopdefaultSorted={deopdefaultSorted}
            />
         </Route>
         <Route path={`${props.match.path}/payment`}>
         <Payment
-        order={order}
         sidebarOpen={sidebarOpen}
         openSidebar={openSidebar}
         deopdefaultSorted={deopdefaultSorted}
@@ -334,8 +227,6 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #089DA4" }}
                 btnroute=""
-                // btnroute1="order-request/innerdetail"
-                onClick={() => ApiTabhandler("orderoldhistory")}
                 btnName="Order History"
               />
               <SiderbarBtn
@@ -344,8 +235,6 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #CB912B" }}
                 btnroute="neworder"
-                // btnroute1="new-order/innerdetail"
-                onClick={() => ApiTabhandler("Neworder")}
                 btnName="New Order"
               />
               <SiderbarBtn
@@ -354,7 +243,6 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #7F2987" }}
                 btnroute="stocks"
-                onClick={() => tabHandler('All')}
                 btnName="Stocks"
               />
               <SiderbarBtn
@@ -363,8 +251,6 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #4B8F8C" }}
                 btnroute="deliverystatus"
-                // btnroute1="delivery-status/innerdetail"
-                onClick={() => ApiTabhandler("order")}
                 btnName="Delivery Status"
               />
               <SiderbarBtn
@@ -373,8 +259,6 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 btnroute="payment"
-                // btnroute1="payment-ord/innerdetail"
-                onClick={() => ApiTabhandler("orderhistory")}
                 btnName="Payment"
               />
               <SiderbarBtn

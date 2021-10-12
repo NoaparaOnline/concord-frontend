@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 //REACT-BOOTSTRAP-TABLE IMPORTS
 import BootstrapTable from "react-bootstrap-table-next";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.css";
@@ -12,18 +12,29 @@ import { useDispatch, useSelector } from "react-redux";
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
 import Loader from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
-import { getSingleOrder } from '../../Store/Actions/deportmanagerActions';
+import { getoldOrder, getOrder, getSingleOrder } from '../../Store/Actions/deportmanagerActions';
 
 const Payment = ({
-    sidebarOpen,
-    openSidebar,
-    order,
-    deopdefaultSorted,
+  sidebarOpen,
+  openSidebar,
+  deopdefaultSorted,
 }) => {
 
-    const dispatch = useDispatch();
-    const loader = useSelector((state) => state?.logIn?.loader);
-      //PAYMENT COLUMN HEADERS
+
+  const order = useSelector((state) => state?.deport?.order);
+
+  useEffect(() => {
+    if (order?.length < 1) {
+      dispatch(getOrder());
+    }
+
+  }, [order]);
+
+
+
+  const dispatch = useDispatch();
+  const loader = useSelector((state) => state?.logIn?.loader);
+  //PAYMENT COLUMN HEADERS
   const DepomanagerPayment = [
     { dataField: "customer.name", text: "Customer Name", sort: true },
 
@@ -79,80 +90,75 @@ const Payment = ({
   }
 
 
-    return (
-        <>
+  return (
+    <>
 
-<NavbarDash
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            Heading="Payment"
-          />
+      <NavbarDash
+        sidebarOpen={sidebarOpen}
+        openSidebar={openSidebar}
+        Heading="Payment"
+      />
 
-          {loader ? (
-            <DashboardMainCard
-              reverse={true}
+      <DashboardMainCard
+        reverse={true}
 
-              TableDiv={
-
-                <div className="d-flex justify-content-center">
-                  <Loader
-                    height={100} width={100}
-                    type="Rings"
-                    color="#0066b3"
+        TableDiv={
+          <>
+            <ToolkitProvider
+              bootstrap4
+              keyField="id"
+              data={order}
+              columns={DepomanagerPayment}
+              search
+            >
+              {(props) => (
+                <div className="">
+                  <i
+                    className="fa fa-search"
+                    id="filtersubmit"
+                    style={{ fontSize: "15px" }}
                   />
+                  <SearchBar
+                    {...props.searchProps}
+                    style={{
+                      padding: "0.375rem 2.5rem",
+                      borderRadius: "10px",
+                    }}
+                  />
+                  {loader ? (
+                    <div className="d-flex justify-content-center">
+                      <Loader
+                        height={100} width={100}
+                        type="Rings"
+                        color="#0066b3"
+                      />
+                    </div>
+
+                  ) : (
+
+                    <BootstrapTable
+                      {...props.baseProps}
+                      // rowStyle={rowStyle}
+
+                      defaultSorted={deopdefaultSorted}
+                      // pagination={pagination}
+                      pagination={order.length > 10 ? paginationFactory() : null}
+                      bordered={false}
+                      condensed
+                      wrapperClasses="table-responsive"
+                    />
+                  )}
                 </div>
+              )}
+            </ToolkitProvider>
+          </>
+        }
 
-              } />
-          ) : (
-            <DashboardMainCard
-              reverse={true}
-
-              TableDiv={
-                <>
-                  <ToolkitProvider
-                    bootstrap4
-                    keyField="id"
-                    data={order}
-                    columns={DepomanagerPayment}
-                    search
-                  >
-                    {(props) => (
-                      <div className="">
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        <SearchBar
-                          {...props.searchProps}
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                          }}
-                        />
-                        <BootstrapTable
-                          {...props.baseProps}
-                          // rowStyle={rowStyle}
-
-                          defaultSorted={deopdefaultSorted}
-                          // pagination={pagination}
-                          pagination={order.length > 10 ? paginationFactory() : null}
-                          bordered={false}
-                          condensed
-                          wrapperClasses="table-responsive"
-                        />
-                      </div>
-                    )}
-                  </ToolkitProvider>
-                </>
-              }
-
-            />
-          )}
+      />
 
 
-        </>
-    )
+    </>
+  )
 }
 
 export default Payment

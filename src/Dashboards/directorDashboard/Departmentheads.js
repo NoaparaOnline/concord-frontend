@@ -1,18 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Loader from 'react-loader-spinner';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import DashboardMainCard from '../../components/ReusableComponents/DashboardMainCard/DashboardMainCard';
 import DashCard from '../../components/ReusableComponents/DashboardTableCards/DashCard2';
 import NavbarDash from '../../components/ReusableComponents/NavbarDash/NavbarDash';
+import { getDepartmenthead } from '../../Store/Actions/directorActions';
 
 const Departmentheads = (
   {
     sidebarOpen,
     openSidebar,
-    data,
   }
 
 ) => {
+
+  const departmenthead = useSelector((state) => state?.director?.departmenthead);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (departmenthead?.length < 1) {
+    dispatch(getDepartmenthead());
+    }
+ 
+  },[])
     const loader = useSelector((state) => state?.logIn?.loader);
    
     const [filteredResults3, setFilteredResults3] = useState([]);
@@ -20,7 +31,7 @@ const Departmentheads = (
     const searchItems3 = (searchValue) => {
       setSearchInput3(searchValue);
       if (searchInput3 !== "") {
-        const filteredData = data.filter((item) => {
+        const filteredData = departmenthead.filter((item) => {
           return Object.values(item)
             .join("")
             .toLowerCase()
@@ -29,7 +40,7 @@ const Departmentheads = (
         console.log("filteredData", filteredData);
         setFilteredResults3(filteredData);
       } else {
-        setFilteredResults3(data);
+        setFilteredResults3(departmenthead);
       }
     };
   
@@ -95,7 +106,7 @@ const Departmentheads = (
                         </React.Fragment>
                       );
                     })
-                    : data.map((ob, index) => (
+                    : departmenthead.map((ob, index) => (
                       <React.Fragment key={ob.id}>
                         <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
                           <DashCard

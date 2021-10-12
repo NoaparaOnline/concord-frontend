@@ -12,26 +12,27 @@ import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.m
 import paginationFactory from "react-bootstrap-table2-paginator";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProductsall } from '../../Store/Actions/directorActions';
 
 
 const Products = (
   {
-    // selectedTabbledata,
-    // tabHandler2,
     sidebarOpen,
     openSidebar,
-    // selectedTab2,
     deopdefaultSorted,
-    data,
   }
 ) => {
-
+  const productall = useSelector((state) => state?.director?.productall);
+  const dispatch = useDispatch();
   useEffect(() => {
-    setSelectedTabbledata(data)
-  }, [data])
+    setSelectedTabbledata(productall)
+    if (productall?.length < 1) {
+          dispatch(getProductsall());
+        }
+  }, [productall])
 
-  const [selectedTabbledata, setSelectedTabbledata] = useState(data);
+  const [selectedTabbledata, setSelectedTabbledata] = useState(productall);
   const [selectedTab2, setSelectedTab2] = useState("List");
 
   const tabledataHandler = async (item) => {
@@ -42,9 +43,9 @@ const Products = (
     setSelectedTab2(item);
 
     if (item === "List") {
-      tabledataHandler(data);
+      tabledataHandler(productall);
     } else if (item === "Grid") {
-      tabledataHandler(data);
+      tabledataHandler(productall);
     }
   };
 
@@ -59,7 +60,7 @@ const Products = (
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
     if (searchInput !== "") {
-      const filteredData = data.filter((item) => {
+      const filteredData = productall.filter((item) => {
         return Object.values(item)
           .join("")
           .toLowerCase()
@@ -67,7 +68,7 @@ const Products = (
       });
       setFilteredResults(filteredData);
     } else {
-      setFilteredResults(data);
+      setFilteredResults(productall);
     }
   };
 
@@ -212,7 +213,7 @@ const Products = (
                           </React.Fragment>
                         );
                       })
-                      : data.map((item, index) => (
+                      : productall.map((item, index) => (
                         <React.Fragment key={item.id}>
                           <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
                             <DashboardTableCards ob={item} />

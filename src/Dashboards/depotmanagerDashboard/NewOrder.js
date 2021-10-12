@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 //REACT-BOOTSTRAP-TABLE IMPORTS
 import BootstrapTable from "react-bootstrap-table-next";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.css";
@@ -13,14 +13,14 @@ import DashboardMainCard from "../../components/ReusableComponents/DashboardMain
 import Loader from 'react-loader-spinner';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import { getSingleOrder, getSingleUID } from '../../Store/Actions/deportmanagerActions';
+import { getnewOrder, getSingleOrder, getSingleUID } from '../../Store/Actions/deportmanagerActions';
 
 
 const NewOrder = (
     {
         sidebarOpen,
         openSidebar,
-        neworder,
+
         deopdefaultSorted,
         handleShow,
     }
@@ -28,6 +28,17 @@ const NewOrder = (
     const dispatch = useDispatch();
     const { SearchBar } = Search;
     const loader = useSelector((state) => state?.logIn?.loader);
+
+
+    const neworder = useSelector((state) => state?.deport?.neworder);
+
+    useEffect(() => {
+        if (neworder?.length < 1) {
+            dispatch(getnewOrder());
+          }
+    
+      }, [neworder]);
+    
 
 
     //NEW ORDER COLUMN HEADERS

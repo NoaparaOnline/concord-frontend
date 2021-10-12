@@ -35,7 +35,11 @@ const Reports = ({
                           onClick={() => tabHandler0(item)}
                         >
                           <DashboardBtnList
-                            label={item}
+                            label={selectedTab0 === item ? item : 
+                            <>
+                            {item}
+                            </>
+                            }
                             bntStyle={{
                               borderRadius:
                                 index === 0

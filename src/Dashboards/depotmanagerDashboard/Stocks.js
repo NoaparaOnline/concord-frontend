@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 //REACT-BOOTSTRAP-TABLE IMPORTS
 import BootstrapTable from "react-bootstrap-table-next";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.css";
@@ -12,15 +12,55 @@ import { useDispatch, useSelector } from "react-redux";
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
 import Loader from 'react-loader-spinner';
 import DashboardBtnList from '../../components/ReusableComponents/DashboardBtnList/DashboardBtnList';
+import { getStocksGiftProduct, getStocksMedicineProduct, getStocksProduct } from '../../Store/Actions/deportmanagerActions';
 
 const Stocks = ({
     sidebarOpen,
     openSidebar,
     deopdefaultSorted,
-    selectedTab1,
-    tabHandler,
-    selectedTabbledata,
 }) => {
+
+
+    const dispatch = useDispatch();
+    const stock = useSelector((state) => state?.deport?.stock);
+    const stockmedicine = useSelector((state) => state?.deport?.stockmedicine);
+    const stockgift = useSelector((state) => state?.deport?.stockgift);
+
+    useEffect(() => {
+        setSelectedTabbledata(stock)
+       if (stock?.length < 1) {
+            dispatch(getStocksProduct());
+         }
+       else if (stockmedicine?.length < 1) {
+        dispatch(getStocksMedicineProduct());
+       }
+       else if (stockgift?.length < 1) {
+        dispatch(getStocksGiftProduct())
+       }
+      }, [stock,stockmedicine,stockgift]);
+
+    const tabledataHandler = async (item) => {
+        setSelectedTabbledata(item);
+      };
+    
+      // Tabhandler Medicine And Gift
+      const tabHandler = (item) => {
+        setSelectedTab1(item);
+        if (item === "All") {
+          tabledataHandler(stock);
+        }
+        else if (item === "Medicine") {
+          tabledataHandler(stockmedicine);
+        }
+        else if (item === "Gift") {
+          tabledataHandler(stockgift);
+        }
+      };
+      // USE STATES 
+    
+      const [selectedTab1, setSelectedTab1] = useState("All");
+      const [selectedTabbledata, setSelectedTabbledata] = useState(stock);
+    
 
     // STOCKS COLUMN HEADERS
     const DepomanagerStock = [

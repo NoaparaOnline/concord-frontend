@@ -28,27 +28,24 @@ const Schedules = ({
   handleShow1,
   handleShow,
   deopdefaultSorted,
-  data
 }) => {
   const dispatch = useDispatch();
 
   let schedule = useSelector((state) => state?.director?.schedule);
-  console.log(data);
   const [selectedTab1, setSelectedTab1] = useState("All");
-  const [selectedTabbledata, setSelectedTabbledata] = useState(data);
+  const [selectedTabbledata, setSelectedTabbledata] = useState(schedule);
 
   console.log("selectedTabbledata",selectedTabbledata)
  
 
   useEffect(() => {
-    setSelectedTabbledata(data)
-  }, [data])
-  
-  useEffect(() => {
+    setSelectedTabbledata(schedule)
     if (schedule.length < 1) {
-            dispatch(getSchedule());
-         }
-  }, [])
+      dispatch(getSchedule());
+   }
+  }, [schedule])
+  
+ 
 
 
   const tabledataHandler = async (item) => {
@@ -59,24 +56,24 @@ const Schedules = ({
     setSelectedTab1(item);
 
     if (item === "All") {
-      tabledataHandler(data);
+      tabledataHandler(schedule);
     } else if (item === "Approved") {
-      const filterd = data.filter(
+      const filterd = schedule.filter(
         (status) => status?.approval_status === "approved"
       );
       tabledataHandler(filterd);
     } else if (item === "Awaiting Approval") {
-      const filterd = data.filter(
+      const filterd = schedule.filter(
         (status) => status?.approval_status === "awaiting_approval"
       );
       tabledataHandler(filterd);
     } else if (item === "Reschedule") {
-      const filterd = data.filter(
+      const filterd = schedule.filter(
         (status) => status?.approval_status === "reshedule"
       );
       tabledataHandler(filterd);
     } else if (item === "Cancelled") {
-      const filterd = data.filter(
+      const filterd = schedule.filter(
         (status) => status?.approval_status === "cancelled"
       );
       tabledataHandler(filterd);
@@ -319,11 +316,12 @@ const Schedules = ({
                         style={{
                           padding: "0.375rem 2.5rem",
                           borderRadius: "10px",
+                          minWidth: "250px"
                         }}
                       />
                     </div>
 
-                    <div className="col-6">
+                    <div className="col-lg-6">
                       <>
                         <div className="row">
                           <div className="col d-flex justify-content-end">

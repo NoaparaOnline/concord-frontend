@@ -21,7 +21,7 @@ const TableInnerPage = (props) => {
     <>
        <main> 
       <div
-        className="container style_custom"
+        className="container style_custom "
         style={{
           backgroundColor: "#FFF",
           borderRadius: "10px",
@@ -29,7 +29,7 @@ const TableInnerPage = (props) => {
           padding: "20px",
         }}
       >
-        <table className="table table-borderless ms-5">
+        <table className="table  table-borderless ms-5" >
           <tbody style={{ border: "none" }}>
             <tr style={{ border: "none", padding: "10px" }}>
               <td style={{ border: "none",fontWeight: "500" }}>OrderID:</td>

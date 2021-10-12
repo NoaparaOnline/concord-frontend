@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 //REACT-BOOTSTRAP-TABLE IMPORTS
 import BootstrapTable from "react-bootstrap-table-next";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.css";
@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
 import Loader from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
-import { getSingleOrder } from '../../Store/Actions/deportmanagerActions';
+import { getoldOrder, getSingleOrder } from '../../Store/Actions/deportmanagerActions';
 import moment from 'moment';
 
 
@@ -20,12 +20,20 @@ const DeliveryStatus = (
     {
         sidebarOpen,
         openSidebar,
-        oldorder,
         deopdefaultSorted,
     }
 ) => {
 
+  const oldorder = useSelector((state) => state?.deport?.oldorder);
 
+  useEffect(() => {
+      if (oldorder?.length < 1) {
+          dispatch(getoldOrder());
+        }
+  
+    }, [oldorder]);
+
+ 
      //Delivery Status COLUMN HEADERS
   const DepomanagerDelivery = [
     { dataField: "order_id", text: "Orders ID", sort: true },

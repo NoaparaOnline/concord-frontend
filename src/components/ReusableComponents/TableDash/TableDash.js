@@ -34,7 +34,7 @@ TableDash = ({
 //     return new Intl.DateTimeFormat('en-US').format(timestamp);
 //  }
   const TableDiv = (
-    <div className="table-responsive "
+    <div className="table-responsive"
     style={{overflowY:'scroll' }}
     >
       <table

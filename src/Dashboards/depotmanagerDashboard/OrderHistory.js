@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 //REACT-BOOTSTRAP-TABLE IMPORTS
 import BootstrapTable from "react-bootstrap-table-next";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.css";
@@ -13,20 +13,28 @@ import DashboardMainCard from "../../components/ReusableComponents/DashboardMain
 import Loader from 'react-loader-spinner';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import { getSingleOrder } from '../../Store/Actions/deportmanagerActions';
+import { getoldOrder, getSingleOrder } from '../../Store/Actions/deportmanagerActions';
 
 
 const OrderHistory = (
     {
         sidebarOpen,
         openSidebar,
-        oldorder,
         deopdefaultSorted,
     }
 ) => {
 
     const dispatch = useDispatch();
+    const oldorder = useSelector((state) => state?.deport?.oldorder);
 
+    useEffect(() => {
+        if (oldorder?.length < 1) {
+            dispatch(getoldOrder());
+          }
+    
+      }, [oldorder]);
+    
+    
 
     const { SearchBar } = Search;
     const loader = useSelector((state) => state?.logIn?.loader);
