@@ -14,6 +14,7 @@ export const saveUser = user => localStore.store_data('user', user);
 export const logout = async () => {
   await localStore.remove_data('token');
   await localStore.remove_data('user')
+  await localStore.remove_data('userRole')
   await updateHeaders();
   return true;
 };

@@ -63,7 +63,7 @@ const StatuschangedModal = (props) => {
 
 
 
-                    <div className="formpx px-3 pt-4" style={{ padding: '10px', height: '180px' }}>
+                    <div className="form  px-3 pt-4" style={{ padding: '10px', height: '180px' }}>
 
 
                       <div className="form-group">

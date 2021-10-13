@@ -57,6 +57,9 @@ const DependentDropdowns = (props) => {
               setAssginto(e.target.value);
               setDisabletrue1(false);
               setSelected(e.target.value);
+              setSelected2('');
+              setSelected3('');
+             
             }}
             value={selected}
           >
@@ -84,6 +87,7 @@ const DependentDropdowns = (props) => {
               setAssginto(e.target.value);
               setDisabletrue2(false);
               setSelected1(e.target.value);
+              setSelected3('');
             }}
             value={selected1}
             disabled={disabletrue1}
@@ -164,7 +168,6 @@ const DependentDropdowns = (props) => {
         </div>
 
         <div className="col-lg-4 d-flex justify-content-end mt-3">
-          <div className={` btn me-2 `} style={{ backgroundColor: "#22A6AC" }}>
             <Link
               style={{
                 color: "#fff",
@@ -183,11 +186,11 @@ const DependentDropdowns = (props) => {
                 setSelected3("");
               }}
             >
+          <div className={` btn me-2 `} style={{ backgroundColor: "#22A6AC",color:'#fff' }}>
               <i className="fa fa-times ms-2"></i>
-              &nbsp; Clear
-            </Link>
+              &nbsp; <span style={{color:'#fff'}}>Clear</span>
           </div>
-          <div className={` btn me-2 `} style={{ backgroundColor: "#22A6AC" }}>
+            </Link>
             <Link
               style={{
                 color: "#fff",
@@ -197,13 +200,13 @@ const DependentDropdowns = (props) => {
               }}
               onClick={() => {
                 dispatch(getSchedule(assignto));
-                alert(assignto);
                 }}
             >
+          <div className={` btn me-2 `} style={{ backgroundColor: "#22A6AC",color:'#fff' }}>
               <i className="fa fa-filter ms-2"></i>
-              &nbsp; Filter
-            </Link>
+              &nbsp; <span>Filter</span>
           </div>
+            </Link>
         </div>
       </div>
     </>

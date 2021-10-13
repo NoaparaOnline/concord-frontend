@@ -88,7 +88,7 @@ import { toast } from "react-toastify";
     try {
       // await apiServices.logout();
       logout();
-      localStorage.clear();
+      // localStorage.clear();
       dispatch({
         type: logInConstants.LOG_OUT_USER,
         payload: null,

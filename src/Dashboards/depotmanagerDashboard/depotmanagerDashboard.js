@@ -1,6 +1,7 @@
 import React, {  useState } from "react";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
 import "./depotmanagerDashboard.css";
+import icon0 from "../../Statics/assets/Sidebar/0.png";
 import icon1 from "../../Statics/assets/Sidebar/1.png";
 import icon2 from "../../Statics/assets/Sidebar/2.png";
 import icon3 from "../../Statics/assets/Sidebar/3.png";
@@ -132,7 +133,9 @@ const DepotmanagerDashboard = (props) => {
     setShow(!show);
   };
 
-  
+  const homepage =()=>{
+    props.history.replace('/');
+} 
 
   return (
 
@@ -221,6 +224,16 @@ const DepotmanagerDashboard = (props) => {
         <SidebarDashboard
           buttonSidebar={
             <>
+              <SiderbarBtn
+                imgbtn={icon0}
+                Colr="#0066b3"
+                {...props}
+                borderSidebtn={{ borderRight: "6px solid #089DA4" }}
+                btnName="Home"
+                disablelink={true}
+                classlogout={"sidebar__logout"}
+                onClick={homepage}
+              />
               <SiderbarBtn
                 imgbtn={icon1}
                 Colr="#089DA4"

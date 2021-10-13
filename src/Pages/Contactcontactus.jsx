@@ -152,7 +152,7 @@ const Contact_contactus = () => {
                   marginTop: "35px",
                   bordeRadius: "3px",
                 }}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3746840.935862213!2d88.10073676858228!3d23.495632366328973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2sBangladesh!5e0!3m2!1sen!2sin!4v1624536563451!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d912.9408966712035!2d90.37438092917422!3d23.755808526510663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8acb1b88a2d%3A0x498d307161c801f7!2sConcord%20Pharmaceuticals%20Limited!5e0!3m2!1sen!2sbd!4v1633578534075!5m2!1sen!2sbd"
                 width="100%"
                 height="450"
                 allowfullscreen="allowfullscreen"

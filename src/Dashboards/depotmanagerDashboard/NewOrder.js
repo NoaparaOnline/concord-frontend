@@ -91,7 +91,7 @@ const NewOrder = (
             sort: true
         },
         { dataField: "ordered_by.name", text: "Proceed By", sort: true },
-        { dataField: "customer", formatter: btnFormatterneworder, text: "Actions" },
+        { dataField: "customer", formatter: btnFormatterneworder, text: "" },
     ];
 
 
