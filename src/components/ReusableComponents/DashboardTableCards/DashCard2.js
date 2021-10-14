@@ -80,7 +80,7 @@ const DashCard = ({
                       href="/#"
                       style={{ textDecoration: "none", color: "#0066b3" }}
                     >
-                      <i className="fa fa-envelope" aria-hidden="true"></i>{" "}
+                      <i className="fa fa-envelope" aria-hidden="true"></i>
                       <span
                         className="ms-3"
                         style={{
@@ -90,6 +90,7 @@ const DashCard = ({
                         }}
                       >
                         {dataemail}
+                        {/* sdaaaaaaaaaaaaaaaaaaaaaa<br/>sssssssssssssssssssssssssssssssss */}
                       </span>
                     </a>
                   </div>

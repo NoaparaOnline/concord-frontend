@@ -10,6 +10,7 @@ import icon3 from "../../Statics/assets/Sidebar/8.png";
 import icon4 from "../../Statics/assets/Sidebar/9.png";
 import icon5 from "../../Statics/assets/Sidebar/10.png";
 import iconf from "../../Statics/assets/Sidebar/11.png";
+import icon111 from "../../Statics/assets/Sidebar/111.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
@@ -22,6 +23,7 @@ import DistributionCenter from "./DistributionCenter";
 import Departmentheads from "./Departmentheads";
 import Reports from "./Reports";
 import ScheduleInnerPage from "./ScheduleInnerPage";
+import Notifications from "../../components/ReusableComponents/modals/Notifications/Notifications";
 
 
 
@@ -61,6 +63,17 @@ const DirectorDashboard = (props) => {
   // MODAL OPEN FUCNTION
   const handleShow = () => {
     setShow(!show);
+  };
+
+
+  const [show3, setShow3] = useState(false);
+  // MODAL CLOSE FUCNTION
+  const handleClose3 = () => {
+    setShow3(!show3);
+  };
+  // MODAL OPEN FUCNTION
+  const handleShow3= () => {
+    setShow3(!show3);
   };
   //===================2nd Modal
   const [show1, setShow1] = useState(false);
@@ -243,6 +256,17 @@ const DirectorDashboard = (props) => {
                 btnName="Department Head"
               />
               <SiderbarBtn
+                imgbtn={icon111}
+                Colr="#DB2323"
+                {...props}
+                borderSidebtn={{ borderRight: "6px solid #DB2323" }}
+                btnroute=""
+                onClick={() => {
+                  handleShow3();
+                }}
+                btnName="Notification"
+              />
+              <SiderbarBtn
                 imgbtn={icon6}
                 Colr="#BB2026"
                 {...props}
@@ -268,6 +292,11 @@ const DirectorDashboard = (props) => {
       <DirectorApprovalStatusChange
         show={show1}
         onHide={handleClose1}
+        {...props}
+      />
+      <Notifications
+        show={show3}
+        onHide={handleClose3}
         {...props}
       />
     </div>

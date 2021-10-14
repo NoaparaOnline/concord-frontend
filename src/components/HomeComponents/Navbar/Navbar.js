@@ -184,7 +184,7 @@ const user = useSelector((state) => state?.logIn?.user);
                           &nbsp;Dashboard
                         </Link>
 
-                        {/* <Link
+                        <Link
                           className="dropdown-item navmenu_custome_li"
                           onClick={() => {
                             handleShow1();
@@ -197,7 +197,7 @@ const user = useSelector((state) => state?.logIn?.user);
                             style={{ fontSize: "13px" }}
                           ></i>{" "}
                           &nbsp;Notifications
-                        </Link> */}
+                        </Link>
 
                         <Link
                           className="dropdown-item navmenu_custome_li"
@@ -703,7 +703,7 @@ const user = useSelector((state) => state?.logIn?.user);
       </nav>
 
       <Login show={show} onHide={handleClose} showdiv={showdiv} setShowdiv={setShowdiv} />
-      {/* <Notifications show={show1} onHide={handleClose1}  /> */}
+      <Notifications show={show1} onHide={handleClose1}  />
     </>
   );
 };
