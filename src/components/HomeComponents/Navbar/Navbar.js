@@ -16,6 +16,7 @@ import {
   logoutUser,
 } from "../../../Store/Actions/loginActions";
 import profileLogo from "../../../Statics/assets/profile-logo.png";
+import Notifications from "../../ReusableComponents/modals/Notifications/Notifications";
 
 // 
 
@@ -41,7 +42,8 @@ const user = useSelector((state) => state?.logIn?.user);
 
 
  
- const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
+  const [show1, setShow1] = useState(false);
   const [langbtnshow, setLangbtnshow] = useState(false);
   const [showdiv, setShowdiv] = useState(true);
 
@@ -55,6 +57,15 @@ const user = useSelector((state) => state?.logIn?.user);
 
     setShow(!show);
   };
+  const handleShow1 = () => {
+
+    setShow1(!show1);
+  };
+  const handleClose1 = () => 
+  {
+      setShow1(!show1);
+
+  }
   return (
     <>
       <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top custom-nav ">
@@ -172,6 +183,21 @@ const user = useSelector((state) => state?.logIn?.user);
                           ></i>{" "}
                           &nbsp;Dashboard
                         </Link>
+
+                        {/* <Link
+                          className="dropdown-item navmenu_custome_li"
+                          onClick={() => {
+                            handleShow1();
+                          }}
+                          // style={{ color:'#0066b3' ,fontWeight:'600' }}
+
+                        >
+                          <i
+                            className="fa fa-bell "
+                            style={{ fontSize: "13px" }}
+                          ></i>{" "}
+                          &nbsp;Notifications
+                        </Link> */}
 
                         <Link
                           className="dropdown-item navmenu_custome_li"
@@ -677,6 +703,7 @@ const user = useSelector((state) => state?.logIn?.user);
       </nav>
 
       <Login show={show} onHide={handleClose} showdiv={showdiv} setShowdiv={setShowdiv} />
+      {/* <Notifications show={show1} onHide={handleClose1}  /> */}
     </>
   );
 };

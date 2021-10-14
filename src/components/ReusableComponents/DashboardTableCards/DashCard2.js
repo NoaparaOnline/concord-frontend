@@ -36,7 +36,7 @@ const DashCard = ({
                     color: "#000000",
                   }}
                 >
-                  <span>{datahead}</span>
+                  <span className="text-uppercase">{datahead}</span>
                 </div>
 
                 <div className="mt-2">

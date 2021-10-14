@@ -1,4 +1,4 @@
-import React,{ useEffect } from 'react'
+import React,{ useEffect, useState } from 'react'
 import { useForm } from "react-hook-form";
 import { Form, Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,9 +9,15 @@ const DirectorApprovalStatusChange = (props) => {
     
     const schedule = useSelector((state) => state?.director?.schedule);
     const approvaluid = useSelector((state) => state?.director?.approvaluid);
-    
+    // const filterd = schedule.filter(
+    //   (status) => status?.approval_status === "reshedule"
+    // );
+    const [dropdown1, setDropdown1] = useState(approvaluid.approval_status);
+
+    console.log("approvaluid",approvaluid)
+
     const {
-        register,
+        
         handleSubmit,
         formState: { errors },
       } = useForm();
@@ -26,7 +32,7 @@ const DirectorApprovalStatusChange = (props) => {
       const onSubmit = async (data) => {
   
         const apiData = {
-            approval_status: data.status,
+            approval_status: dropdown1,
             uid: approvaluid.uid,
           }
           dispatch(SchedulesApprovalStatusChange(apiData));
@@ -34,6 +40,13 @@ const DirectorApprovalStatusChange = (props) => {
         props.onHide();
                   };
         
+
+     const uniqueItems = [];
+     schedule.map(item => {
+      if (uniqueItems.indexOf(item.approval_status) === -1) {
+          uniqueItems.push(item.approval_status)
+      }
+      });
     return (
         <>
            <Modal show={props.show} onHide={props.onHide} centered size="md">
@@ -56,30 +69,39 @@ const DirectorApprovalStatusChange = (props) => {
               >
                 
                 <div className="col-lg-12">
-                  <span className="label-name-login">Approval Status</span>
-                  <Form.Control
-                    as="select"
-                    className="input-login-modal"
-                    custom
-                    {...register("status", {})}
-                  >
-                           
-                            <option value="approved">
-                              Approved
-                            </option>
-                            <option value="cancelled">
-                              Cancelled
-                            </option>
-                            <option value="awaiting_approval">
-                              Awaiting Approval
-                            </option>
-                           
-                  </Form.Control>
-                  {errors?.status?.message ? (
-                    <div className="text-error">{errors?.status?.message}</div>
-                  ) : (
-                    ""
-                  )}
+                  
+                  <div className="form-group">
+                        <label>Approval Status</label>
+                        <select className="form-control form-select text-capitalize" id="exampleFormControlSelect1" onChange={(e) => {
+                          setDropdown1(e.target.value)
+                        }}
+                        >
+
+                          <option selected className="text-capitalize">{approvaluid.approval_status}</option>
+                          {
+                            approvaluid.approval_status === "approved" ? "" :
+                              <option className="text-capitalize">approved</option>
+                          }
+                          {
+                            approvaluid.approval_status === "awaiting_approval" ? "" :
+                              <option className="text-capitalize">awaiting_approval</option>
+                          }
+                          {
+                            approvaluid.approval_status === "cancelled" ? "" :
+                              <option className="text-capitalize">cancelled</option>
+                          }
+
+{/* {uniqueItems
+                      .map((item, index) => {
+                        return (
+                          <option className="text-capitalize">
+                             {item}
+                          </option>
+                        );
+                      })}    */}
+                        </select>
+                      </div>
+
                 </div>
                 
               </div>

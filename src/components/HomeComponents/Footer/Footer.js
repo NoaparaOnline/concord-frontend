@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="container p-1">
               <div className="row mt-4">
                 <div className="col-lg-3 col-md-6 mb-4 mb-md-0 first1">
-                  <h5 className="text-uppercase fhead">Quick Links</h5>
+                  <h5 className="text-capitalize fhead">Quick Links</h5>
 
                   <ul className="list-unstyled mb-0" style={{textDecoration:'none'}}>
                   <li>
@@ -66,7 +66,7 @@ const Footer = () => {
                 </div>
 
                 <div className="col-lg-3 col-md-6 mb-4 mb-md-0 second2">
-                  <h5 className="text-uppercase fhead">Our Products</h5>
+                  <h5 className="text-capitalize fhead">Our Products</h5>
 
                   <ul className="list-unstyled">
                   <li>
@@ -134,7 +134,7 @@ const Footer = () => {
                 </div>
 
                 <div className="col-lg-3 col-md-6 d-xs-none mb-4 mb-md-0 three3">
-                  <h5 className="text-uppercase fhead">Subscribe for Newsletter</h5>
+                  <h5 className="text-capitalize fhead">Subscribe for Newsletter</h5>
 
 
                   <div className="form-row">
@@ -179,7 +179,7 @@ const Footer = () => {
                 </div>
 
                 <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                  <h5 className="text-uppercase fhead">Get In Touch</h5>
+                  <h5 className="text-capitalize fhead">Get In Touch</h5>
 
                   <ul className="list-unstyled">
                   <li className="">

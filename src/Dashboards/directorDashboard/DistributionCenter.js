@@ -96,32 +96,145 @@ const DistributionCenter = (
 
               searchInput2.length >= 1
                 ? filteredResults2.map((ob, index) => {
+                  
                   return (
                     <React.Fragment key={ob.id}>
                       <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+                        {console.log("ob",ob)}
                         <DashCard
-                          datahead={ob.name}
-                          dataname={ob.head.name}
-                          datadesignation={ob.head.designation}
-                          dataemail={ob.head.email}
-                          dataphone={ob.head.phone}
-                          dataaddress={ob.head.address}
+                        
+                        datahead={
+                          ob?.areas[0]?.parent?.name
+                        }
+                        dataname={
+                             
+                            ob?.depot_managers?.map((obdep, index) => {
+                              if(obdep?.is_primary)
+                              {
+                                return (
+                                  obdep?.name
+                                  );
+                              }
+                              })
+                        }
+                        datadesignation={
+                          ob?.depot_managers?.map((obdep, index) => {
+                            if(obdep?.is_primary)
+                              {
+                                return (
+                                  obdep?.designation
+                                  );
+                              }
+                            
+                            })
+                          }
+                        dataemail={
+                          ob?.depot_managers?.map((obdep, index) => {
+                            if(obdep?.is_primary)
+                              {
+                                return (
+                                  obdep?.email_address
+                                  );
+                              }
+                            })
+                            
+                        }
+                        dataphone={
+                          ob?.depot_managers?.map((obdep, index) => {
+                            if(obdep?.is_primary)
+                              {
+                                return (
+                                  obdep?.phone_number
+                                  );
+                              }
+                            
+                            })
+                          }
+                        
+                        dataaddress={
+                          ob?.depot_managers?.map((obdep, index) => {
+                            if(obdep?.is_primary)
+                              {
+                                return (
+                                  `${obdep?.address.street_address} ,${obdep?.address.area} ,${obdep?.address.province}, ${obdep?.address.city}` 
+                                  );
+                              }
+                            
+                            })
+                          
+                        }
                         />
                       </div>
                     </React.Fragment>
                   );
+                  
+                  
                 })
                 : distributioncenter.map((ob, index) => (
                   <React.Fragment key={ob.id}>
                     <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
                       <DashCard
-                        datahead={ob.name}
-                        dataname={ob.head.name}
-                        datadesignation={ob.head.designation}
-                        dataemail={ob.head.email}
-                        dataphone={ob.head.phone}
-                        dataaddress={ob.head.address}
-                      />
+                        datahead={
+                          ob?.areas[0]?.parent?.name
+                        }
+                        dataname={
+                             
+                            ob?.depot_managers?.map((obdep, index) => {
+                              if(obdep?.is_primary)
+                              {
+                                return (
+                                  obdep?.name
+                                  );
+                              }
+                              })
+                        }
+                        datadesignation={
+                          ob?.depot_managers?.map((obdep, index) => {
+                            if(obdep?.is_primary)
+                              {
+                                return (
+                                  obdep?.designation
+                                  );
+                              }
+                            
+                            })
+                          }
+                        dataemail={
+                          ob?.depot_managers?.map((obdep, index) => {
+                            if(obdep?.is_primary)
+                              {
+                                return (
+                                  obdep?.email_address
+                                  );
+                              }
+                            })
+                            
+                        }
+                        dataphone={
+                          ob?.depot_managers?.map((obdep, index) => {
+                            if(obdep?.is_primary)
+                              {
+                                return (
+                                  obdep?.phone_number
+                                  );
+                              }
+                            
+                            })
+                          }
+                        
+                        dataaddress={
+                          ob?.depot_managers?.map((obdep, index) => {
+                            if(obdep?.is_primary)
+                              {
+                                return (
+                                  `${obdep?.address.street_address} ,${obdep?.address.area} ,${obdep?.address.province}, ${obdep?.address.city}` 
+                                  );
+                              }
+                            
+                            })
+                          
+                        }
+                        />
                     </div>
                   </React.Fragment>
                 ))

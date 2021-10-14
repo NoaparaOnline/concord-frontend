@@ -181,7 +181,7 @@ const Schedules = ({
                   dispatch(getSingleUIDApproval(row));
                 }}
               >
-                &nbsp; Update Status
+                &nbsp;  Update Status
               </Link>
             </li>
             <li className="">
@@ -332,25 +332,25 @@ const Schedules = ({
                       <>
                         <div className="row">
                           <div className="col d-flex justify-content-end">
+                            <Link
+                              style={{
+                                color: "#fff",
+                                fontWeight: "500",
+                                fontSize: "14px",
+                                textDecoration: "none",
+                              }}
+                              onClick={() => {
+                                handleShow();
+                              }}
+                            >
                             <div
                               className={` btn me-2`}
-                              style={{ backgroundColor: "#22A6AC" }}
+                              style={{ backgroundColor: "#22A6AC",color:'#fff' }}
                             >
-                              <Link
-                                style={{
-                                  color: "#fff",
-                                  fontWeight: "500",
-                                  fontSize: "14px",
-                                  textDecoration: "none",
-                                }}
-                                onClick={() => {
-                                  handleShow();
-                                }}
-                              >
                                 <i className="fa fa-calendar-plus-o ms-2"></i>
                                 &nbsp; Add New Schedule
-                              </Link>
                             </div>
+                              </Link>
                           </div>
                         </div>
                       </>

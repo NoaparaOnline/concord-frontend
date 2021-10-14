@@ -3,6 +3,7 @@ import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboa
 import "../depotmanagerDashboard/depotmanagerDashboard.css";
 import { BrowserRouter as Router,  Route } from "react-router-dom";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
+import icon0 from "../../Statics/assets/Sidebar/0.png";
 import icon1 from "../../Statics/assets/Sidebar/6.png";
 import icon2 from "../../Statics/assets/Sidebar/7.png";
 import icon3 from "../../Statics/assets/Sidebar/8.png";
@@ -117,7 +118,9 @@ const DirectorDashboard = (props) => {
     props.history.replace("/");
   };
 
-  
+  const homepage =()=>{
+    props.history.replace('/');
+}
   
   return (
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
@@ -179,6 +182,16 @@ const DirectorDashboard = (props) => {
         <SidebarDashboard
           buttonSidebar={
             <>
+              <SiderbarBtn
+                imgbtn={icon0}
+                Colr="#0066b3"
+                {...props}
+                borderSidebtn={{ borderRight: "6px solid #089DA4" }}
+                btnName="Home"
+                disablelink={true}
+                classlogout={"sidebar__logout"}
+                onClick={homepage}
+              />
               <SiderbarBtn
                 imgbtn={icon1}
                 Colr="#089DA4"
