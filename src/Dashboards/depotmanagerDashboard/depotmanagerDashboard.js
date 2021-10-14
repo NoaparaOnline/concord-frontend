@@ -8,7 +8,8 @@ import icon3 from "../../Statics/assets/Sidebar/3.png";
 import icon4 from "../../Statics/assets/Sidebar/4.png";
 import icon5 from "../../Statics/assets/Sidebar/5.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import icon111 from "../../Statics/assets/Sidebar/111.png";
+import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,6 +20,9 @@ import NewOrder from "./NewOrder";
 import Stocks from "./Stocks";
 import DeliveryStatus from "./DeliveryStatus";
 import Payment from "./Payment";
+import Notifications from "../../components/ReusableComponents/modals/Notifications/Notifications";
+
+
 const DepotmanagerDashboard = (props) => {
 
 
@@ -100,7 +104,15 @@ const DepotmanagerDashboard = (props) => {
   const [show, setShow] = useState(false);
 
 
-
+  const [show3, setShow3] = useState(false);
+  // MODAL CLOSE FUCNTION
+  const handleClose3 = () => {
+    setShow3(!show3);
+  };
+  // MODAL OPEN FUCNTION
+  const handleShow3= () => {
+    setShow3(!show3);
+  };
 
 
   const dispatch = useDispatch();
@@ -131,7 +143,7 @@ const DepotmanagerDashboard = (props) => {
   // MODAL OPEN FUCNTION
   const handleShow = () => {
     setShow(!show);
-  };
+};
 
   const homepage =()=>{
     props.history.replace('/');
@@ -274,6 +286,22 @@ const DepotmanagerDashboard = (props) => {
                 btnroute="payment"
                 btnName="Payment"
               />
+              <div className="mt-3">
+              <NavLink
+              activeClassName="sidebar__link"
+              className="sidebar__link"
+              
+              onClick={() => {
+                handleShow3();
+              }}
+              to="#"
+              >
+              <li className="mb-2 ms-4">
+                <img src={icon111} alt="" width="36" height="36" />
+                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#DB2323", fontWeight: '700' }}>Notification</span>
+              </li>
+            </NavLink>
+            </div>
               <SiderbarBtn
                 imgbtn={icon6}
                 Colr="#BB2026"
@@ -294,6 +322,11 @@ const DepotmanagerDashboard = (props) => {
         />
       </Router>
       <StatuschangedModal show={show} onHide={handleClose} {...props} />
+      <Notifications
+        show={show3}
+        onHide={handleClose3}
+        {...props}
+      />
     </div>
   );
 };

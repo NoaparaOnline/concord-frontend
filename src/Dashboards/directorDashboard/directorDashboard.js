@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
 import "../depotmanagerDashboard/depotmanagerDashboard.css";
-import { BrowserRouter as Router,  Route } from "react-router-dom";
+import { BrowserRouter as Router,  Route , NavLink} from "react-router-dom";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
 import icon0 from "../../Statics/assets/Sidebar/0.png";
 import icon1 from "../../Statics/assets/Sidebar/6.png";
@@ -255,17 +255,22 @@ const DirectorDashboard = (props) => {
                 btnroute="departmenthead"
                 btnName="Department Head"
               />
-              <SiderbarBtn
-                imgbtn={icon111}
-                Colr="#DB2323"
-                {...props}
-                borderSidebtn={{ borderRight: "6px solid #DB2323" }}
-                btnroute=""
-                onClick={() => {
-                  handleShow3();
-                }}
-                btnName="Notification"
-              />
+              <div className="mt-3">
+              <NavLink
+              activeClassName="sidebar__link"
+              className="sidebar__link"
+              
+              onClick={() => {
+                handleShow3();
+              }}
+              to="#"
+              >
+              <li className="mb-2 ms-4">
+                <img src={icon111} alt="" width="36" height="36" />
+                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#DB2323", fontWeight: '700' }}>Notification</span>
+              </li>
+            </NavLink>
+            </div>
               <SiderbarBtn
                 imgbtn={icon6}
                 Colr="#BB2026"
