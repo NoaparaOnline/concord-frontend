@@ -294,3 +294,56 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
 }
 
 
+
+.chatbutton{
+  background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+.mf-content {
+  padding: 12px 17px 13px;
+  border-radius: 2px;
+  display: inline-block;
+  max-width: 80%
+}
+.mf-date {
+  display: block;
+  color: #B3B3B3;
+  margin-top: 7px;
+}
+.mf-date>i {
+  font-size: 14px;
+  line-height: 100%;
+  position: relative;
+  top: 1px;
+}
+.incoming_msg_img {
+  display: inline-block;
+  width: 8%;
+}
+img {max-width: 100%; }
+		.inbox_msg {
+      
+		  border: 1px solid #c4c4c4;
+		  clear: both;
+		  overflow: hidden;
+		}
+  
+.hide-text {
+      min-width: 220px;
+      width: 450px;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+    }
+    
+.hide-text:hover {
+       white-space: unset;
+       text-overflow: unset;
+    }
+
+
