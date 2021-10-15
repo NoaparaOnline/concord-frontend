@@ -333,4 +333,23 @@ img {max-width: 100%; }
 		}
   
 
-
+.browsebutton{
+  background: #3297fa;
+    border-radius: 0;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 12px;
+    position: absolute;
+    right: 6px;
+    text-align: center;
+    top: 6px;
+}
+.file input[type="file"] {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+.form-control[type=file] {
+  overflow: hidden;
+}

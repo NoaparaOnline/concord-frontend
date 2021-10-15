@@ -9,6 +9,7 @@ import icon4 from "../../Statics/assets/Sidebar/4.png";
 import icon5 from "../../Statics/assets/Sidebar/5.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
 import icon111 from "../../Statics/assets/Sidebar/111.png";
+import icon112 from "../../Statics/assets/Sidebar/112.png";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
@@ -21,6 +22,7 @@ import Stocks from "./Stocks";
 import DeliveryStatus from "./DeliveryStatus";
 import Payment from "./Payment";
 import Notifications from "../../components/ReusableComponents/modals/Notifications/Notifications";
+import ChangePassword from "../../components/ReusableComponents/modals/ChangePassword/ChangePassword";
 
 
 const DepotmanagerDashboard = (props) => {
@@ -112,6 +114,17 @@ const DepotmanagerDashboard = (props) => {
   // MODAL OPEN FUCNTION
   const handleShow3= () => {
     setShow3(!show3);
+  };
+
+  //Change Password
+  const [show4, setShow4] = useState(false);
+  // MODAL CLOSE FUCNTION
+  const handleClose4 = () => {
+    setShow4(!show4);
+  };
+  // MODAL OPEN FUCNTION
+  const handleShow4= () => {
+    setShow4(!show4);
   };
 
 
@@ -302,6 +315,22 @@ const DepotmanagerDashboard = (props) => {
               </li>
             </NavLink>
             </div>
+            <div className="mt-3">
+              <NavLink
+              activeClassName="sidebar__link"
+              className="sidebar__link"
+              
+              onClick={() => {
+                handleShow4();
+              }}
+              to="#"
+              >
+              <li className="mb-2 ms-4">
+                <img src={icon112} alt="" width="36" height="36" />
+                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#6421FF", fontWeight: '700' }}>Change Password</span>
+              </li>
+            </NavLink>
+            </div>
               <SiderbarBtn
                 imgbtn={icon6}
                 Colr="#BB2026"
@@ -327,6 +356,8 @@ const DepotmanagerDashboard = (props) => {
         onHide={handleClose3}
         {...props}
       />
+      <ChangePassword show={show4} onHide={handleClose4} {...props}  />
+
     </div>
   );
 };

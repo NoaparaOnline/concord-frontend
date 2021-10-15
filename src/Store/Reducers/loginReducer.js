@@ -22,6 +22,9 @@ export const loginReducer = (state = initialState, { type, payload }) => {
       return { ...state, user: payload };
     case logInConstants.SET_ERROR:
       return { ...state, error: payload };
+    case logInConstants.SET_USER_FROM_LOCAL:
+      return { ...state, user: payload };
+      
     default:
       return state;
   }

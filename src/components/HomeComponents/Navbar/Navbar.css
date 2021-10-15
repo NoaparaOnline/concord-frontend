@@ -19,7 +19,11 @@
 
 
 
-.navmenu_custome_li:focus, .navmenu_custome_li:hover {
+.navmenu_custome_li:hover {
+    color: #0066b3 !important;
+    background-color: transparent !important;
+}
+.navmenu_custome_li:focus{
     color: #fff !important;
     background-color: #0066b3 !important;
 }

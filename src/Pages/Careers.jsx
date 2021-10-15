@@ -14,21 +14,21 @@ const Careers = () => {
   const CareersLinks = [
     {
         name: "MPO",
-        btnlink: "#",
-        namelink: "#",
-        postdate: "Posted 1 month ago",
+        btnlink: "/careers-inner-page",
+        namelink: "/careers-inner-page",
+        postdate: "Posted 3 month ago",
     },
     {
       name: "RSM",
-      btnlink: "#",
-      namelink: "#",
-      postdate: "Posted 1 month ago",
+      btnlink: "/careers-inner-page",
+      namelink: "/careers-inner-page",
+      postdate: "Posted 3 month ago",
     },
     {
       name: "AM",
-      btnlink: "#",
-      namelink: "#",
-      postdate: "Posted 1 month ago",
+      btnlink: "/careers-inner-page",
+      namelink: "/careers-inner-page",
+      postdate: "Posted 3 month ago",
     }
   ];
 
@@ -69,12 +69,14 @@ const Careers = () => {
                   </Link>
 
                   <span className="d-flex justify-content-end">
+                  <Link to={ob.btnlink} style={{textDecoration:'none' ,color:'#fff'}}>
                     <div
                       className="btn btn-primary"
-                      style={{ fontSize: "14px", backgroundColor: "#0066b3" }}
+                      style={{ fontSize: "14px", backgroundColor: "#0066b3",borderRadius:'0px' }}
                     >
-                      <Link to={ob.btnlink} style={{textDecoration:'none' ,color:'#fff'}}>Apply Now</Link>
+                      Apply Now
                     </div>
+                    </Link>
                   </span>
                 </div>
                 <div className="card-footer">

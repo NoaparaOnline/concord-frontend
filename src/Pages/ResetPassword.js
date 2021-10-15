@@ -30,6 +30,7 @@ const params = queryString.parse(props.location.search);
         const success = await dispatch(resetPassword(apiData));
   
         if (success === "success") {
+        toast.info("Password Reset Successfully");
           props.history.push("/");
         }
       } else {

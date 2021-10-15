@@ -199,13 +199,15 @@ const Products_bytrade = () => {
               <h3 className="filterHeading" style={{ fontWeight: "600" }}>
                 Product Categories
               </h3>
-              <form id="category-radio-btn">
+              <form id="category-radio-btn" style={{color:'#666666'}}>
                 <input
                   className="me-2"
                   type="radio"
                   id="all"
                   name="product-category"
                   value="1"
+                  defaultChecked
+                
                   onChange={()=>filteredtype("All")}
                 />
                 <label htmlFor="all">All</label>

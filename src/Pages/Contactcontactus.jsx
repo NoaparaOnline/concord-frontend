@@ -15,7 +15,24 @@ const Contact_contactus = () => {
       subLink: "/contact",
     },
   ];
+  const [state, setState] = React.useState({
+    DropSel: "",
+    Name: "",
+    Email: "",
+    Numbers: "",
+    Subject: "",
+    Message: "",
+  })
+  console.log("state",state)
+  function handleChange(evt) {
+    const value = evt.target.value;
+    setState({
+      ...state,
+      [evt.target.name]: value
+    });
+  }
 
+  
   return (
     <div>
       <BannerWithText
@@ -36,7 +53,12 @@ const Contact_contactus = () => {
               {/* Bootstrap Form */}
               <form style={{minHeight:'450px'}}>
                 <div className="form-group">
-                  <select className="form-control form-select" id="exampleFormControlSelect1">
+                  <select className="form-control form-select" id="exampleFormControlSelect1"
+                  onChange={handleChange}
+                  name="DropSel"
+                  value={state.DropSel}
+
+                  >
                     <option >General Inquiry</option>
                     <option>Sales</option>
                     <option>Delivery Service</option>
@@ -50,6 +72,9 @@ const Contact_contactus = () => {
                     className="form-control"
                     id=""
                     placeholder="Name"
+                    name="Name"
+                    onChange={handleChange}
+                    value={state.Name}
                   />
                 </div>
 
@@ -58,15 +83,23 @@ const Contact_contactus = () => {
                     type="email"
                     className="form-control"
                     id=""
+                    name="Email"
                     placeholder="Email"
+                    onChange={handleChange}
+                    value={state.Email}
+
                   />
                 </div>
                 <div className="form-group">
                   <input
-                    type="number"
+                    type="numbers"
                     className="form-control"
                     id=""
+                    name="Numbers"
                     placeholder="Contact Number"
+                    onChange={handleChange}
+                    value={state.Numbers}
+
                   />
                 </div>
                 <div className="form-group">
@@ -74,7 +107,11 @@ const Contact_contactus = () => {
                     type="text"
                     className="form-control"
                     id=""
+                    name="Subject"
                     placeholder="Subject"
+                    onChange={handleChange}
+                    value={state.Subject}
+
                   />
                 </div>
 
@@ -83,11 +120,15 @@ const Contact_contactus = () => {
                     className="form-control"
                     id=""
                     rows="3"
+                    name="Message"
                     placeholder="Message"
+                    onChange={handleChange}
+                    value={state.Message}
+
                   ></textarea>
                 </div>
 
-                <button className="btn btn-primary rounded-pill px-5 colr" style={{fontWeight:'600',backgroundColor:'#0066b3'}}>
+                <button className="btn btn-primary rounded-pill px-5 colr" style={{fontWeight:'600',backgroundColor:'#0066b3'}} >
                   <span>SUBMIT</span>
                 </button>
               </form>

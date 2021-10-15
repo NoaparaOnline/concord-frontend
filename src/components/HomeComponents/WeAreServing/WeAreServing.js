@@ -8,7 +8,7 @@ const WeAreServing = () => {
       <div className="container wrapper">
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-6">
-            <span className="static-txt"> We are Serving you </span>
+            <span className="static-txt"> We are Serving</span>
             <ReactTypingEffect
               text={["BANGLADESH", "YOU", "WORLD"]}
               cursorRenderer={(cursor) => (
