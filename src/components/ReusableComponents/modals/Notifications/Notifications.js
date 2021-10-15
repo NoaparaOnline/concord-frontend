@@ -14,7 +14,7 @@ const Notifications = (props) => {
            Notifications
           </span>
         </Modal.Header>
-        <Modal.Body className="p-0" >
+        <Modal.Body className="p-0"  >
           <div className="row ">
            
 
@@ -55,7 +55,7 @@ const Notifications = (props) => {
                       </a>{" "}
                     </li>
                   </ul>
-                  <div className="tab-content" id="pills-tabContent">
+                  <div className="tab-content" id="pills-tabContent" style={{overflowY:'scroll' ,height:'400px'}}>
                     <div
                       className="tab-pane fade show active"
                       id="pills-home"
@@ -63,45 +63,30 @@ const Notifications = (props) => {
                       aria-labelledby="pills-home-tab"
                     >
                       <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
+                      backgroundcolorchat="#565656"
                       colorchattext="#fff"
                       />
                       <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
+                      backgroundcolorchat="#565656"
                       colorchattext="#fff"
                       />
                       <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
+                      backgroundcolorchat="#565656"
                       colorchattext="#fff"
                       />
                       <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
+                      backgroundcolorchat="#565656"
                       colorchattext="#fff"
                       />
                       <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
+                      backgroundcolorchat="#565656"
                       colorchattext="#fff"
                       />
                       <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
+                      backgroundcolorchat="#565656"
                       colorchattext="#fff"
                       />
-                      <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
-                      colorchattext="#fff"
-                      />
-                      <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
-                      colorchattext="#fff"
-                      />
-                      <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
-                      colorchattext="#fff"
-                      />
-                      <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
-                      colorchattext="#fff"
-                      />
+                     
                     </div>
                     <div
                       className="tab-pane fade"
@@ -110,21 +95,32 @@ const Notifications = (props) => {
                       aria-labelledby="pills-profile-tab"
                     >
                       <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
+                      backgroundcolorchat="#565656"
+                      colorchattext="#fff"
+                      />
+                     
+                      <SingleNotificationCard
+                      backgroundcolorchat="#565656"
+                      colorchattext="#fff"
+                      />
+                     
+                      <SingleNotificationCard
+                      backgroundcolorchat="#565656"
                       colorchattext="#fff"
                       />
                       <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
+                      backgroundcolorchat="#565656"
                       colorchattext="#fff"
                       />
                       <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
+                      backgroundcolorchat="#565656"
                       colorchattext="#fff"
                       />
                       <SingleNotificationCard
-                      backgroundcolorchat="#0066b3"
+                      backgroundcolorchat="#565656"
                       colorchattext="#fff"
                       />
+                     
                     </div>
                   </div>
                 </div>

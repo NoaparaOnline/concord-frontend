@@ -17,6 +17,7 @@ import {
 } from "../../../Store/Actions/loginActions";
 import profileLogo from "../../../Statics/assets/profile-logo.png";
 import Notifications from "../../ReusableComponents/modals/Notifications/Notifications";
+import ChangePassword from "../../ReusableComponents/modals/ChangePassword/ChangePassword";
 
 // 
 
@@ -44,6 +45,7 @@ const user = useSelector((state) => state?.logIn?.user);
  
   const [show, setShow] = useState(false);
   const [show1, setShow1] = useState(false);
+  const [show2, setShow2] = useState(false);
   const [langbtnshow, setLangbtnshow] = useState(false);
   const [showdiv, setShowdiv] = useState(true);
 
@@ -64,6 +66,16 @@ const user = useSelector((state) => state?.logIn?.user);
   const handleClose1 = () => 
   {
       setShow1(!show1);
+
+  }
+
+  const handleShow2 = () => {
+
+    setShow2(!show2);
+  };
+  const handleClose2 = () => 
+  {
+      setShow2(!show2);
 
   }
   return (
@@ -184,7 +196,7 @@ const user = useSelector((state) => state?.logIn?.user);
                           &nbsp;Dashboard
                         </Link>
 
-                        {/* <Link
+                        <Link
                           className="dropdown-item navmenu_custome_li"
                           onClick={() => {
                             handleShow1();
@@ -197,7 +209,23 @@ const user = useSelector((state) => state?.logIn?.user);
                             style={{ fontSize: "13px" }}
                           ></i>{" "}
                           &nbsp;Notifications
-                        </Link> */}
+                        </Link>
+
+                        {/* Change Password */}
+                        <Link
+                          className="dropdown-item navmenu_custome_li"
+                          onClick={() => {
+                            handleShow2();
+                          }}
+                          // style={{ color:'#0066b3' ,fontWeight:'600' }}
+
+                        >
+                          <i
+                            className="fa fa-key"
+                            style={{ fontSize: "13px" }}
+                          ></i>{" "}
+                          &nbsp;Change Password
+                        </Link>
 
                         <Link
                           className="dropdown-item navmenu_custome_li"
@@ -399,7 +427,7 @@ const user = useSelector((state) => state?.logIn?.user);
                           <Link
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="#"
+                            to="/about_chairmen_profile"
                           >
                             Chairman’s Profile{" "}
                           </Link>
@@ -565,9 +593,12 @@ const user = useSelector((state) => state?.logIn?.user);
                   </li>
                   <li className="nav-item">
                     {/* TeleMedicine Routing Path = /teleMedicine */}
-                    <Link className="nav-link secnav" to="#" >
-                      Tele-Medicine
-                    </Link>
+                    <a href="https://www.mdxdmfr.com" className="nav-link secnav">
+                    Tele-Medicine
+                    </a>
+                    {/* <Link className="nav-link secnav" to="#" >
+                      
+                    </Link> */}
                   </li>
                   <li className="nav-item dropdown">
                     <NavLink
@@ -703,7 +734,8 @@ const user = useSelector((state) => state?.logIn?.user);
       </nav>
 
       <Login show={show} onHide={handleClose} showdiv={showdiv} setShowdiv={setShowdiv} />
-      {/* <Notifications show={show1} onHide={handleClose1}  /> */}
+      <Notifications show={show1} onHide={handleClose1}  />
+      <ChangePassword show={show2} onHide={handleClose2}  />
     </>
   );
 };

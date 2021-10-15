@@ -83,6 +83,21 @@ import { toast } from "react-toastify";
       toast.error(error);
     }
   };
+
+  export const changePassword = (data) => async (dispatch) => {
+    try {
+      const response = await apiServices.changePassword(data);
+      if (response?.response_code === 200) {
+        toast.info("Successful Password Change");
+        return "success";
+      } else {
+        toast.error(response?.response_message);
+        return "fail";
+      }
+    } catch (error) {
+      toast.error(error);
+    }
+  };
   
   export const logoutUser = () => async (dispatch) => {
     try {
@@ -114,4 +129,14 @@ import { toast } from "react-toastify";
       payload: userRole,
     });
   };
+  
+  export const setUserFromLocal = (data) => async (dispatch) => {
+    dispatch({
+      type: logInConstants.SET_USER_FROM_LOCAL,
+      payload: data,
+    });
+  };
+
+
+
   

@@ -172,7 +172,7 @@ const DistributionCenter = (
                 })
                 : distributioncenter.map((ob, index) => (
                   <React.Fragment key={ob.id}>
-                    <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+                    <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                       <DashCard
                         datahead={
                           ob?.areas[0]?.parent?.name

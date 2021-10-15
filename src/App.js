@@ -43,6 +43,8 @@ import DirectorDashboard from "./Dashboards/directorDashboard/directorDashboard"
 import { messaging , test } from "./init-fcm";
 
 import PrivateRoute from './Routes/PrivateRoute';
+import Aboutchairmenprofile from "./Pages/Aboutchairmenprofile";
+import CareersInnerPage from "./Pages/CareersInnerPage";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -175,10 +177,18 @@ function App() {
           <Aboutmessagechairmen />
         </Route>
 
+        <Route exact path="/about_chairmen_profile">
+          <Aboutchairmenprofile />
+        </Route>
+
         {/*          Careers Page              */}
 
         <Route exact path="/careers">
           <Careers />
+        </Route>
+         {/*       Careers Inner Page      */}
+         <Route exact path="/careers-inner-page">
+          <CareersInnerPage />
         </Route>
 
         {/* Dashboards */}

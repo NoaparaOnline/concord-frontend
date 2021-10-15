@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SidebarDashboard from "../../components/ReusableComponents/SidebarDashboard/SidebarDashboard";
 import "../depotmanagerDashboard/depotmanagerDashboard.css";
-import { BrowserRouter as Router,  Route } from "react-router-dom";
+import { BrowserRouter as Router,  Route , NavLink} from "react-router-dom";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
 import icon0 from "../../Statics/assets/Sidebar/0.png";
 import icon1 from "../../Statics/assets/Sidebar/6.png";
@@ -10,6 +10,8 @@ import icon3 from "../../Statics/assets/Sidebar/8.png";
 import icon4 from "../../Statics/assets/Sidebar/9.png";
 import icon5 from "../../Statics/assets/Sidebar/10.png";
 import iconf from "../../Statics/assets/Sidebar/11.png";
+import icon111 from "../../Statics/assets/Sidebar/111.png";
+import icon112 from "../../Statics/assets/Sidebar/112.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
@@ -22,6 +24,8 @@ import DistributionCenter from "./DistributionCenter";
 import Departmentheads from "./Departmentheads";
 import Reports from "./Reports";
 import ScheduleInnerPage from "./ScheduleInnerPage";
+import Notifications from "../../components/ReusableComponents/modals/Notifications/Notifications";
+import ChangePassword from "../../components/ReusableComponents/modals/ChangePassword/ChangePassword";
 
 
 
@@ -61,6 +65,28 @@ const DirectorDashboard = (props) => {
   // MODAL OPEN FUCNTION
   const handleShow = () => {
     setShow(!show);
+  };
+
+
+  const [show3, setShow3] = useState(false);
+  // MODAL CLOSE FUCNTION
+  const handleClose3 = () => {
+    setShow3(!show3);
+  };
+  // MODAL OPEN FUCNTION
+  const handleShow3= () => {
+    setShow3(!show3);
+  };
+
+  // Change Password
+  const [show4, setShow4] = useState(false);
+  // MODAL CLOSE FUCNTION
+  const handleClose4 = () => {
+    setShow4(!show4);
+  };
+  // MODAL OPEN FUCNTION
+  const handleShow4= () => {
+    setShow4(!show4);
   };
   //===================2nd Modal
   const [show1, setShow1] = useState(false);
@@ -242,6 +268,38 @@ const DirectorDashboard = (props) => {
                 btnroute="departmenthead"
                 btnName="Department Head"
               />
+              <div className="mt-3">
+              <NavLink
+              activeClassName="sidebar__link"
+              className="sidebar__link"
+              
+              onClick={() => {
+                handleShow3();
+              }}
+              to="#"
+              >
+              <li className="mb-2 ms-4">
+                <img src={icon111} alt="" width="36" height="36" />
+                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#DB2323", fontWeight: '700' }}>Notification</span>
+              </li>
+            </NavLink>
+            </div>
+              <div className="mt-3">
+              <NavLink
+              activeClassName="sidebar__link"
+              className="sidebar__link"
+              
+              onClick={() => {
+                handleShow4();
+              }}
+              to="#"
+              >
+              <li className="mb-2 ms-4">
+                <img src={icon112} alt="" width="36" height="36" />
+                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#6421FF", fontWeight: '700' }}>Change Password</span>
+              </li>
+            </NavLink>
+            </div>
               <SiderbarBtn
                 imgbtn={icon6}
                 Colr="#BB2026"
@@ -270,6 +328,13 @@ const DirectorDashboard = (props) => {
         onHide={handleClose1}
         {...props}
       />
+      <Notifications
+        show={show3}
+        onHide={handleClose3}
+        {...props}
+      />
+      <ChangePassword show={show4} onHide={handleClose4} {...props}  />
+
     </div>
   );
 };

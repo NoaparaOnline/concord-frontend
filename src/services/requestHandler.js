@@ -6,13 +6,14 @@ const SERVICE_URLS = {
   login: "users/login/web",
   resetPassword: "users/reset-password",
   forgotPassword: "users/forgot-password",
+  changePassword: "users/change-password",
   logout: "users/logout",
   getoldOrders: "orders/read/old",
   getOrders: "orders/read",
   getnewOrders: "orders/read/new",
-  getStocksProducts: "products/read",
-  getStocksMedicineProducts: "products/read/medicine",
-  getStocksGiftProducts: "products/read/gift",
+  getStocksProducts: "stocks/read",
+  getStocksMedicineProducts: "stocks/read/medicine",
+  getStocksGiftProducts: "stocks/read/gift",
   statusChanges: "orders/status-update",
   getSchedules: "schedules/read",
   addSchedules: "schedules/create",
@@ -35,6 +36,11 @@ const logout = () =>
 
 const resetPassword = (data) =>
   patch(SERVICE_URLS.resetPassword, data, {
+    feature: featureConstants.static,
+  });
+
+  const changePassword = (data) =>
+  patch(SERVICE_URLS.changePassword, data, {
     feature: featureConstants.static,
   });
 const forgotPassword = (data) =>
@@ -123,6 +129,7 @@ const apiServices = {
   getStocksMedicineProducts,
   getStocksGiftProducts,
   // getSchedules,
+  changePassword,
   addSchedules,
   SchedulesApprovalStatusChanges,
   // getdoctors,

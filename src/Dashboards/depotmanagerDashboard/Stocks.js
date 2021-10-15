@@ -65,19 +65,22 @@ const Stocks = ({
     // STOCKS COLUMN HEADERS
     const DepomanagerStock = [
 
-        { dataField: "name", text: "Product Name", sort: true },
+        { dataField: "product.name", text: "Product Name", sort: true },
 
-        { dataField: "category.name", text: "Category Name", sort: true },
+        { dataField: "product.category.name", text: "Category Name", sort: true },
 
 
         { dataField: "quantity", text: "Quantity", formatter: nullChecker, sort: true },
 
 
-        { dataField: "formula", text: "Formula", formatter: nullChecker, sort: true },
+        { dataField: "product.formula", text: "Formula", formatter: nullChecker, sort: true },
 
-        { dataField: "price", text: "Price", sort: true },
+        { dataField: "product.price", text: "Price", sort: true },
 
     ];
+    // STOCKS COLUMN HEADERS
+   
+    
 
     //NULLABLE VALUE CHECKER FUNCTION TABLE DATA FIELDS
     function nullChecker(cell) {
@@ -154,6 +157,7 @@ const Stocks = ({
                             bootstrap4
                             keyField="id"
                             data={selectedTabbledata}
+                            // columns={DepomanagerStock}
                             columns={DepomanagerStock}
                             search
                         >

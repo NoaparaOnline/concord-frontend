@@ -51,6 +51,13 @@ export const getSchedule = (uid) => async (dispatch) => {
             payload: false,
           });
   }
+  else{
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
+
+  }
   } catch (error) {
     return "fail"
   }
@@ -64,6 +71,7 @@ export const addSchedule = (data) => async (dispatch) => {
     dispatch(getSchedule(''));
     toast.info("Schedule Added Successfully");
   } else {
+    
     toast.error(response?.response_message);
   }
 };
@@ -77,6 +85,7 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
       toast.info("Status Updated Successfully");
      
     } else {
+    
       toast.error("Error");
     }
   };
@@ -97,6 +106,7 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
         payload: response?.data?.response_data,
       });
     }
+  
     } catch (error) {
       return "fail"
     }
@@ -225,7 +235,12 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
         payload: false,
       });
     }
-    
+    else{
+      dispatch({
+        type: logInConstants.SET_LOADER,
+        payload: false,
+      });
+    }
   };
 
 
@@ -241,6 +256,12 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
         type: directorConstants.GET_DISTRIBUTION_CENTER,
         payload: response?.data?.response_data,
       });
+      dispatch({
+        type: logInConstants.SET_LOADER,
+        payload: false,
+      });
+    }
+    else{
       dispatch({
         type: logInConstants.SET_LOADER,
         payload: false,

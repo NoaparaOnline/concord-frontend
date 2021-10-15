@@ -201,6 +201,7 @@ const Products_bygeneric = () => {
                   id="all"
                   name="product-category"
                   value="1"
+                  defaultChecked
                   onChange={()=>filteredtype("All")}
                 />
                 <label htmlFor="all">All</label>

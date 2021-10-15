@@ -19,6 +19,12 @@ export const getoldOrder = (data) => async (dispatch) => {
       payload: false,
     });
   }
+  else {
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
+  }
   
 };
 
@@ -38,6 +44,12 @@ export const getOrder = (data) => async (dispatch) => {
       payload: false,
     });
   }
+  else {
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
+  }
 };
 export const getnewOrder = (data) => async (dispatch) => {
   dispatch({
@@ -50,6 +62,12 @@ export const getnewOrder = (data) => async (dispatch) => {
       type: deportConstants.GET_NEW_ORDER,
       payload: response?.data?.response_data,
     });
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
+  }
+  else {
     dispatch({
       type: logInConstants.SET_LOADER,
       payload: false,
@@ -74,6 +92,12 @@ export const getStocksProduct = () => async (dispatch) => {
     });
     return true
   }
+  else {
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
+  }
 };
 
 export const getStocksMedicineProduct = () => async (dispatch) => {
@@ -92,6 +116,12 @@ export const getStocksMedicineProduct = () => async (dispatch) => {
       payload: false,
     });
     return true
+  }
+  else {
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
   }
 };
 export const getStocksGiftProduct = () => async (dispatch) => {
@@ -112,6 +142,12 @@ export const getStocksGiftProduct = () => async (dispatch) => {
       payload: false,
     });
     return true
+  }
+  else {
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
   }
 };
 

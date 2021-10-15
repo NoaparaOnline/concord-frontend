@@ -304,7 +304,7 @@ p, a, span, h1, h2, h3, h4, h5, h6, div ,li{
     outline: none;
 }
 .mf-content {
-  padding: 12px 17px 13px;
+  padding: 12px 15px 13px;
   border-radius: 2px;
   display: inline-block;
   max-width: 80%
@@ -332,18 +332,24 @@ img {max-width: 100%; }
 		  overflow: hidden;
 		}
   
-.hide-text {
-      min-width: 220px;
-      width: 450px;
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden !important;
-      text-overflow: ellipsis;
-    }
-    
-.hide-text:hover {
-       white-space: unset;
-       text-overflow: unset;
-    }
 
-
+.browsebutton{
+  background: #3297fa;
+    border-radius: 0;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 12px;
+    position: absolute;
+    right: 6px;
+    text-align: center;
+    top: 6px;
+}
+.file input[type="file"] {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+.form-control[type=file] {
+  overflow: hidden;
+}

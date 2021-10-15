@@ -21,17 +21,18 @@ const DeliveryStatus = (
         sidebarOpen,
         openSidebar,
         deopdefaultSorted,
-    }
-) => {
-
-  const oldorder = useSelector((state) => state?.deport?.oldorder);
-
+      }
+      ) => {
+        
+        const oldorder = useSelector((state) => state?.deport?.oldorder);
+        const dispatch = useDispatch();
+        
   useEffect(() => {
       if (oldorder?.length < 1) {
           dispatch(getoldOrder());
         }
   
-    }, [oldorder]);
+    }, [oldorder,dispatch]);
 
  
      //Delivery Status COLUMN HEADERS
@@ -92,7 +93,6 @@ const DeliveryStatus = (
 
     const { SearchBar } = Search;
 
-    const dispatch = useDispatch();
 
     const loader = useSelector((state) => state?.logIn?.loader);
 

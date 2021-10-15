@@ -1,5 +1,5 @@
 import React from "react";
-const DashCard = ({ 
+const DashCard = ({
 
   datahead,
   dataname,
@@ -8,7 +8,7 @@ const DashCard = ({
   dataphone,
   dataaddress,
 
- }) => {
+}) => {
   return (
     <>
       <div
@@ -18,12 +18,12 @@ const DashCard = ({
           borderRadius: "10px",
           padding: "20px",
           maxHeight: "280px",
-          minWidth:'230px',
+          minWidth: '230px',
         }}
       >
         <div className="">
           <div className="row mb-3">
-            
+
             <div className="col">
               <div
                 className="text-left"
@@ -59,7 +59,7 @@ const DashCard = ({
                         fontWeight: "400",
                       }}
                     >
-                     {datadesignation}
+                      {datadesignation}
                     </span>
                   </div>
                   <div className="mt-2">
@@ -80,17 +80,21 @@ const DashCard = ({
                       href="/#"
                       style={{ textDecoration: "none", color: "#0066b3" }}
                     >
-                      <i className="fa fa-envelope" aria-hidden="true"></i>{" "}
-                      <span
-                        className="ms-3"
-                        style={{
-                          color: "#565656",
-                          fontSize: "16px",
-                          fontWeight: "400",
-                        }}
-                      >
-                        {dataemail}
-                      </span>
+                      <i className="fa fa-envelope text-break" aria-hidden="true">
+                        <span
+                          className="ms-3"
+                          style={{
+                            color: "#565656",
+                            fontSize: "16px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {dataemail}
+                          {/* sdaaaaaaaaaaaaaaaaaaaaaa<br/>sssssssssssssssssssssssssssssssss */}
+                        </span>
+
+                      </i>
+
                     </a>
                   </div>
 
@@ -102,24 +106,26 @@ const DashCard = ({
                       style={{ textDecoration: "none", color: "#0066b3" }}
                     >
                       <i
-                        className="fa fa-map-marker"
+                        className="fa fa-map-marker text-break"
                         aria-hidden="true"
                         style={{
                           fontSize: "20px",
                           fontWeight: "400",
                         }}
-                      ></i>
-                      {"  "}
-                      <span
-                        className="ms-3"
-                        style={{
-                          color: "#565656",
-                          fontSize: "16px",
-                          fontWeight: "400",
-                        }}
                       >
-                        {dataaddress}
-                      </span>
+                        
+                        <span
+                          className="ms-3"
+                          style={{
+                            color: "#565656",
+                            fontSize: "16px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {dataaddress}
+                        </span>
+
+                      </i>
                     </a>
                   </div>
                 </div>
