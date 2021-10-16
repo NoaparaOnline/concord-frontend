@@ -120,8 +120,9 @@
 
 /* Jumping Animation Bottom To Top */
 .ball {
-  animation: opacity 0.5s, bounce 1.5s infinite alternate;
-  -webkit-animation: opacity 0.5s, bounce 1.5s infinite alternate;
+  animation: opacity 2s, bounce 1.5s infinite alternate;
+  -webkit-animation: opacity 2s, bounce 1.6s infinite alternate;
+  animation-delay: 1s;
 }
 @keyframes bounce {
   from {

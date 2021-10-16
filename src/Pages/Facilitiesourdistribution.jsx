@@ -170,6 +170,9 @@ const Facilities_ourdistribution = () => {
         subHeading={`OUR DISTRIBUTION NETWORK`}
         LinksBan={LinksBan}
         height={"400px"}
+        
+        backposit={'center left'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.6), rgba(20, 20, 19, 0.2)),url(${bannerimg})`}
         backgroundSize={"100% 400px"}
         conmarpad={"mt-5 pt-5"}
         fontsize={"60px"}

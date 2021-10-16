@@ -23,14 +23,15 @@
     color: #0066b3 !important;
     background-color: transparent !important;
 }
-.navmenu_custome_li:focus{
+/* .navmenu_custome_li:focus{
     color: #fff !important;
     background-color: #0066b3 !important;
-}
-.navmenu_custome:focus, .navmenu_custome:hover {
-    color: #0066b3 !important;
-    background-color: #fff !important;
-}
+} */
+ /* .navmenu_custome:focus,  */
+.navmenu_custome_li:hover {
+    color: #fff !important;
+    background-color: #0066b3 !important;
+} 
 
 
 .navmenu_custome {

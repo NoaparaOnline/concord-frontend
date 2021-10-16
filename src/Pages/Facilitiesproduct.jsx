@@ -1,6 +1,6 @@
 import React from 'react'
 import { CompanyLogos } from "../components";
-import bannerimg from "../Statics/assets/fac-production.jpg";
+import bannerimg from "../Statics/assets/fac-production-ban.jpg";
 import facrd from "../Statics/assets/fac-production.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 
@@ -25,6 +25,9 @@ const Facilities_product = () => {
           imgSrc={bannerimg}
           heading={"Production"}
           subHeading={`PRODUCTION`}
+          
+        backposit={'100% 22%'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
           LinksBan={LinksBan}
           height={"400px"}
           backgroundSize={"100% 400px"}

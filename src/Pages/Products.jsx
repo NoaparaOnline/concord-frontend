@@ -36,7 +36,7 @@ const Products = () => {
         id:3,
         imageURL: productscard4,
         text: "First Time Launching",
-        link: "/about_message_chairmen",
+        link: "/products_firsttime",
       },
     ];
     
@@ -58,6 +58,9 @@ const Products = () => {
     <BannerWithText imgSrc={bannerimg} heading={'Products'} subHeading={`PRODUCTS`}
     LinksBan={LinksBan}
     height={"400px"}
+    
+    backposit={'center right'}
+    backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
     backgroundSize={"100% 400px"}
     conmarpad={"mt-5 pt-5"}
     fontsize={"60px"}

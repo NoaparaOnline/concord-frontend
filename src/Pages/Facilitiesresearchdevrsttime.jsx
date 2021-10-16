@@ -1,6 +1,6 @@
 import React from "react";
 import { CompanyLogos } from "../components";
-import bannerimg from "../Statics/assets/fac-RD.jpg";
+import bannerimg from "../Statics/assets/fac-RD-ban.jpg";
 import facrd from "../Statics/assets/fac-RD.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 
@@ -26,6 +26,9 @@ const Facilities_researchdevrsttime = () => {
         heading={"Research & Development"}
         subHeading={`RESEARCH & DEVELOPMENT`}
         LinksBan={LinksBan}
+        
+        backposit={'center right'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
         height={"400px"}
         backgroundSize={"100% 400px"}
         conmarpad={"mt-5 pt-5"}

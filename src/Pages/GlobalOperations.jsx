@@ -76,6 +76,9 @@ const GlobalOPerations = () => {
         subHeading={`GLOBAL OPERATION`}
         LinksBan={LinksBan}
         height={"400px"}
+        
+        backposit={'center'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.4), rgba(20, 20, 19, 0.2)),url(${bannerimg})`}
         backgroundSize={"100% 400px"}
         conmarpad={"mt-5 pt-5"}
         fontsize={"60px"}

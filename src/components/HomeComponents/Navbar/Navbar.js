@@ -159,6 +159,7 @@ const user = useSelector((state) => state?.logIn?.user);
 
 
                   {user ? (
+                    
               <>
                 <div className="me-4" id="navbar-list-4">
                   <ul className="navbar-nav">
@@ -424,13 +425,13 @@ const user = useSelector((state) => state?.logIn?.user);
                           </Link>
                         </li>
                         <li>
-                          <Link
+                          <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
                             to="/about_chairmen_profile"
                           >
                             Chairman’s Profile{" "}
-                          </Link>
+                          </NavLink>
                         </li>
                         <li>
                           <NavLink
@@ -593,7 +594,7 @@ const user = useSelector((state) => state?.logIn?.user);
                   </li>
                   <li className="nav-item">
                     {/* TeleMedicine Routing Path = /teleMedicine */}
-                    <a href="https://www.mdxdmfr.com" className="nav-link secnav">
+                    <a href="https://www.mdxdmfr.com" className="nav-link secnav" target="_blank">
                     Tele-Medicine
                     </a>
                     {/* <Link className="nav-link secnav" to="#" >

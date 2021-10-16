@@ -41,6 +41,9 @@ const Contact = () => {
           heading={'Contact'}
           subHeading={`Contact`}
           LinksBan={LinksBan}
+          
+        backposit={'center right'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
           height={"400px"}
           backgroundSize={"100% 400px"}
           conmarpad={"mt-5 pt-5"}

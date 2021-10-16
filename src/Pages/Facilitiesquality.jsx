@@ -1,6 +1,6 @@
 import React from "react";
 import { CompanyLogos } from "../components";
-import bannerimg from "../Statics/assets/fac-QC.jpg";
+import bannerimg from "../Statics/assets/fac-QC-ban.jpg";
 import facrd from "../Statics/assets/fac-QC.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 const Facilities_quality = () => {
@@ -24,6 +24,9 @@ const Facilities_quality = () => {
         heading={"Quality Control"}
         subHeading={`QUALITY CONTROL`}
         LinksBan={LinksBan}
+        
+        backposit={'100% 54%'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
         height={"400px"}
         backgroundSize={"100% 400px"}
         conmarpad={"mt-5 pt-5"}

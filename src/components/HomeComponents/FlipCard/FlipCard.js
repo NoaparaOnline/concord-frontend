@@ -1,10 +1,12 @@
 import React from "react";
 import "./FlipCard.css";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getSingleProductDataObj } from "../../../Store/Actions/directorActions";
 
 const FlipCard = ({ card }) => {
   const { title, text1, text2, img, btn,btnlink } = card;
-
+  const dispatch = useDispatch();
   return (
     <div >
       <div className="flip-card" style={{marginBottom:'50%'}}>
@@ -18,12 +20,14 @@ const FlipCard = ({ card }) => {
               </div>
               {card.img.map((ob,index) => {
                 return (
-                  <img key={ob.id} src={ob.imgf} className="card-img-top p-3" alt="..." />
-                );
-              })}
-              <Link to={btnlink}  className="btn  rounded-pill colr_btn">
+                  <>
+                  <img key={ob.id} src={ob.imgf} className="card-img-top p-3" height="300vh" width="100%"  alt="..." />
+              <Link to={btnlink} onClick={() => dispatch(getSingleProductDataObj(ob.datainnerpage))}    className="btn  rounded-pill colr_btn">
                 {btn}
               </Link>
+              </>
+                );
+              })}
             </div>
           </div>
 
@@ -36,12 +40,14 @@ const FlipCard = ({ card }) => {
               </div>
               {card.img.map((ob,index) => {
                 return (
-                  <img key={ob.id} src={ob.imge} className="card-img-top p-3" alt="..." />
-                );
-              })}
-              <Link to={btnlink}  className="btn  rounded-pill colr_btn">
+                  <>
+                  <img key={ob.id} src={ob.imge}  className="card-img-top p-3" height="300vh" width="100%"  alt="..." />
+              <Link to={btnlink} onClick={() => dispatch(getSingleProductDataObj(ob.datainnerpage))}  className="btn  rounded-pill colr_btn">
                 {btn}
               </Link>
+              </>
+                );
+              })}
             </div>
           </div>
         </div>
