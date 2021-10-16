@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/contactusbanner.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { useDispatch } from "react-redux";
+import { SendGridMailApi } from "../Store/Actions/directorActions";
+import { toast } from "react-toastify";
 const Contact_contactus = () => {
+  const dispatch = useDispatch();
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -22,17 +26,55 @@ const Contact_contactus = () => {
     Numbers: "",
     Subject: "",
     Message: "",
-  })
-  console.log("state",state)
-  function handleChange(evt) {
+  });
+  console.log("state", state);
+  const handleChange = (evt) => {
     const value = evt.target.value;
     setState({
       ...state,
-      [evt.target.name]: value
+      [evt.target.name]: value,
     });
-  }
-
+  };
   
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = (e) => {
+    const RecipentEmail ='info@concordpharma-bd.com'
+    const apiData = {
+      recipients: [RecipentEmail],
+      subject: state.DropSel,
+      body: `<p>Email enquiry from Contact-Us form Concord Pharma</p>
+      <strong>Name</strong> : ${state.Name}
+                    <br/>
+                    <strong>Email</strong> : ${state.Email}
+                    <br/>
+                    <strong>Number</strong> : ${state.Numbers}
+                    <br/>
+                    <strong>Subject</strong> : ${state.Subject}
+                    <br/>
+                    <strong>Message</strong> : <span className="text-justify">${state.Message}</span>
+                    <br/>
+                    `,
+    };
+    e.preventDefault();
+    const res = dispatch(SendGridMailApi(apiData));
+    if(res){
+      setSuccess(true);
+      toast.info("Email Send Successfully")
+      setState({
+        DropSel: "",
+        Name: "",
+        Email: "",
+        Numbers: "",
+        Subject: "",
+        Message: "",
+      })
+    }
+    else{
+      toast.error("Email Not Send")
+    }
+  };
+
   return (
     <div>
       <BannerWithText
@@ -40,6 +82,9 @@ const Contact_contactus = () => {
         heading={"Contact Us"}
         subHeading={`CONTACT US`}
         LinksBan={LinksBan}
+        
+        backposit={'center right'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
         height={"400px"}
         backgroundSize={"100% 400px"}
         conmarpad={"mt-5 pt-5"}
@@ -50,16 +95,16 @@ const Contact_contactus = () => {
         <div className="row">
           <div className="col-lg-7 ">
             <div className="form-div">
-              {/* Bootstrap Form */}
-              <form style={{minHeight:'450px'}}>
+              <form style={{ minHeight: "450px" }}>
                 <div className="form-group">
-                  <select className="form-control form-select" id="exampleFormControlSelect1"
-                  onChange={handleChange}
-                  name="DropSel"
-                  value={state.DropSel}
-
+                  <select
+                    className="form-control form-select"
+                    id="exampleFormControlSelect1"
+                    onChange={handleChange}
+                    name="DropSel"
+                    value={state.DropSel}
                   >
-                    <option >General Inquiry</option>
+                    <option>General Inquiry</option>
                     <option>Sales</option>
                     <option>Delivery Service</option>
                     <option>Complaints & Suggestions</option>
@@ -87,7 +132,6 @@ const Contact_contactus = () => {
                     placeholder="Email"
                     onChange={handleChange}
                     value={state.Email}
-
                   />
                 </div>
                 <div className="form-group">
@@ -99,7 +143,6 @@ const Contact_contactus = () => {
                     placeholder="Contact Number"
                     onChange={handleChange}
                     value={state.Numbers}
-
                   />
                 </div>
                 <div className="form-group">
@@ -111,7 +154,6 @@ const Contact_contactus = () => {
                     placeholder="Subject"
                     onChange={handleChange}
                     value={state.Subject}
-
                   />
                 </div>
 
@@ -124,11 +166,18 @@ const Contact_contactus = () => {
                     placeholder="Message"
                     onChange={handleChange}
                     value={state.Message}
-
                   ></textarea>
                 </div>
-
-                <button className="btn btn-primary rounded-pill px-5 colr" style={{fontWeight:'600',backgroundColor:'#0066b3'}} >
+                <div className="form-group">
+                 {success ? 
+                 <label style={{color:'#0066b3'}}>Your response has been sent successfully</label> : ""
+                } 
+                 </div>
+                <button
+                  className="btn btn-primary rounded-pill px-5 colr"
+                  style={{ fontWeight: "600", backgroundColor: "#0066b3" }}
+                  onClick={handleSubmit}
+                >
                   <span>SUBMIT</span>
                 </button>
               </form>
@@ -138,7 +187,10 @@ const Contact_contactus = () => {
             <div className="serviceBox1">
               <div className="service-content1">
                 <h3>For, International Business</h3>
-                <span style={{color:'#565656'}}>Faysal Md. Shaheen Manager &amp; Head, Int’l Business Department</span>
+                <span style={{ color: "#565656" }}>
+                  Faysal Md. Shaheen Manager &amp; Head, Int’l Business
+                  Department
+                </span>
               </div>
 
               <div className="service-icon1">
@@ -149,7 +201,7 @@ const Contact_contactus = () => {
             <div className="serviceBox1">
               <div className="service-content1">
                 <h3>Phone</h3>
-               <span style={{color:'#565656'}}>88-02-9146311-13</span> 
+                <span style={{ color: "#565656" }}>88-02-9146311-13</span>
               </div>
               <div className="service-icon1">
                 <i className="fa fa-phone"></i>
@@ -157,10 +209,9 @@ const Contact_contactus = () => {
             </div>
 
             <div className="serviceBox1">
-              <div className="service-content1" 
-              >
+              <div className="service-content1">
                 <h3>Fax</h3>
-                <span style={{color:'#565656'}}>+88-02-9146483</span>
+                <span style={{ color: "#565656" }}>+88-02-9146483</span>
               </div>
               <div className="service-icon1">
                 <i className="fa fa-fax" aria-hidden="true"></i>
@@ -170,8 +221,10 @@ const Contact_contactus = () => {
             <div className="serviceBox1">
               <div className="service-content1">
                 <h3>Email</h3>
-                <a  className="secnav" href="mailto:info@concordpharma-bd.com"
-                 style={{color:'#565656',textDecoration:'none'}}
+                <a
+                  className="secnav"
+                  href="mailto:info@concordpharma-bd.com"
+                  style={{ color: "#565656", textDecoration: "none" }}
                 >
                   info@concordpharma-bd.com
                 </a>

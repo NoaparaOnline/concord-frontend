@@ -13,7 +13,7 @@ import Dopagutfr from '../Statics/assets/TabletsFrontBack/Dopagut-60-mlfr.jpg';
 import Dopagutbk from '../Statics/assets/TabletsFrontBack/ban-Dopagut-60-mlbk.jpg';
 import histaminefr from '../Statics/assets/TabletsFrontBack/Anti-histaminefr.jpg';
 import histaminebk from '../Statics/assets/TabletsFrontBack/Anti-histaminebk.jpg';
-
+import {ByGeneric} from '../components/HomeComponents/ProductsData/productbygenricdata'
 const Products_bygeneric = () => {
   const LinksBan = [
     {
@@ -28,150 +28,31 @@ const Products_bygeneric = () => {
     },
   ];
 
-  const card = [
-    {
-      id: 0,
-      title: "Acedol Tablet",
-      text1: "NSAID",
-      text2: "Aceclofenac 100 mg",
-      img: [
-        {
-          id: 0,
-          imgf: acedolfr,
-          imge: acedolbk,
-        },
-      ],
-      btn: "Read More",
-      btnlink: "/acedol-tablet",
-      type:'Syrup'
-    },
-    {
-      id: 1,
-      title: "Acubis 2.5 Tablet",
-      text1: "Cardiovascular",
-      text2: "Bisoprolo 2.5 mg",
-      img: [
-        {
-          id: 1,
-          imgf: acubisfr,
-          imge: acubisbk,
-        },
-      ],
-      btn: "Read More",
-      btnlink: "/acedol-tablet",
-      type:'Tablet'
-    },
-    {
-      id: 2,
-      title: "ConziSyrup",
-      text1: "Vitamin & Minerals",
-      text2: "Zinc 10 mg/5ml",
-      img: [
-        {
-          id: 2,
-          imgf: conzifr,
-          imge: conzibk,
-        },
-      ],
-      btn: "Read More",
-      btnlink: "/acedol-tablet",
-      type:'Capsule'
-    },
-    {
-      id: 3,
-      title: "Dopagut",
-      text1: "Suspension",
-      text2: "Gastroprokinetic",
-      img: [
-        {
-          id: 3,
-          imgf: Dopagutfr,
-          imge: Dopagutbk,
-        },
-      ],
-      btn: "Read More",
-      btnlink: "/acedol-tablet",
-      type:'Hand Rub'
-    },
-    {
-      id: 4,
-      title: "Unilor 5 mg Tablet",
-      text1: "Anti-histamine",
-      text2: "Anti-histamine",
-      img: [
-        {
-          id: 4,
-          imgf: histaminefr,
-          imge: histaminebk,
-        },
-      ],
-      btn: "Read More",
-      btnlink: "/acedol-tablet",
-      type:'Injectables'
-    },
- 
-    {
-      id: 6,
-      title: "Unilor 5 mg Tablet",
-      text1: "Anti-histamine",
-      text2: "Anti-histamine",
-      img: [
-        {
-          id: 4,
-          imgf: histaminefr,
-          imge: histaminebk,
-        },
-      ],
-      btn: "Read More",
-      btnlink: "/acedol-tablet",
-      type:'Injectables'
-    },
-    {
-      id: 7,
-      title: "Acubis 2.5 Tablet",
-      text1: "Cardiovascular",
-      text2: "Bisoprolo 2.5 mg",
-      img: [
-        {
-          id: 1,
-          imgf: acubisfr,
-          imge: acubisbk,
-        },
-      ],
-      btn: "Read More",
-      btnlink: "/acedol-tablet",
-      type:'Injectables'
-    },
-  ];
+  
 
-
-  const [obj , setObj] = useState(card);
+  const [obj , setObj] = useState(ByGeneric);
   const filteredtype = (type) => {
     if (type==="All") {
-      setObj(card)
+      setObj(ByGeneric)
     }
     else if (type==="Syrup") {
-      const filterd = card.filter(category => 
+      const filterd = ByGeneric.filter(category => 
         category.type === "Syrup" )
       setObj(filterd);
     }
     else if (type==="Tablet") {
-      const filterd = card.filter(category => 
+      const filterd = ByGeneric.filter(category => 
         category.type === "Tablet" )
       setObj(filterd);
     }
     else if (type==="Capsule") {
-      const filterd = card.filter(category => 
+      const filterd = ByGeneric.filter(category => 
         category.type === "Capsule" )
       setObj(filterd);
     }
-    else if (type==="Hand Rub") {
-      const filterd = card.filter(category => 
-        category.type === "Hand Rub" )
-      setObj(filterd);
-    }
+   
     else if (type==="Injectables") {
-      const filterd = card.filter(category => 
+      const filterd = ByGeneric.filter(category => 
         category.type === "Injectables" )
       setObj(filterd);
     }
@@ -184,6 +65,9 @@ const Products_bygeneric = () => {
         subHeading={`BY GENERIC NAME`}
         LinksBan={LinksBan}
         height={""}
+        
+        // backposit={'center right'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url()`}
         backgroundSize={""}
         conmarpad={""}
         fontsize={"45px"}
@@ -246,16 +130,7 @@ const Products_bygeneric = () => {
                 />
                 <label htmlFor="capsule">Capsule</label>
                 <br />
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="handrub"
-                  name="product-category"
-                  value="6"
-                  onChange={()=>filteredtype("Hand Rub")}
-
-                />
-                <label htmlFor="handrub">Hand Rub</label>
+               
               </form>
               </div>
           </div>
@@ -265,10 +140,10 @@ const Products_bygeneric = () => {
               {obj.map((ob, index) => (
                 <React.Fragment key={ob.id}>
                   <>
-                    <div className="col-sm-12 col-lg-4 d-none d-lg-block d-md-none">
+                    <div className="col-sm-12 col-lg-3 d-none d-lg-block d-md-none">
                       <FlipCard card={ob} />
                     </div>
-                    <div className="col-sm-12 col-lg-4 d-lg-none d-sm-block col-md-6">
+                    <div className="col-sm-12 col-lg-3 d-lg-none d-sm-block col-md-6">
                       <SingleCard card={ob} />
                     </div>
                   </>

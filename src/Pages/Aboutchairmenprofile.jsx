@@ -29,6 +29,8 @@ const Aboutchairmenprofile = () => {
         imgSrc={bannerimg}
         heading={"Chairman Profile"}
         subHeading={`CHAIRMAN PROFILE`}
+        backposit={'100% 25%'}
+        backimg={`url(${bannerimg})`}
         LinksBan={LinksBan}
         height={"400px"}
         backgroundSize={"100% 400px"}

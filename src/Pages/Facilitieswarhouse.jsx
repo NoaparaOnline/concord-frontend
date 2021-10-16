@@ -25,6 +25,9 @@ const Facilities_warhouse = () => {
         subHeading={`WAREHOUSE`}
         LinksBan={LinksBan}
         height={"400px"}
+        
+        backposit={'100% center'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
         backgroundSize={"100% 400px"}
         conmarpad={"mt-5 pt-5"}
         fontsize={"60px"}

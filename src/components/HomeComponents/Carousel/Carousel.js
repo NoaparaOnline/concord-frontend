@@ -44,7 +44,7 @@ const Slideshow = () => {
     arrows: false,
     durations: 1000,
     scale: 5.6,
-    transitionDuration: 2000,
+    transitionDuration: 1000,
     infinite: true,
     autoplay: true,
     dots: true,

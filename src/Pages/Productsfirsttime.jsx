@@ -13,6 +13,7 @@ import Dopagutfr from '../Statics/assets/TabletsFrontBack/Dopagut-60-mlfr.jpg';
 import Dopagutbk from '../Statics/assets/TabletsFrontBack/ban-Dopagut-60-mlbk.jpg';
 import histaminefr from '../Statics/assets/TabletsFrontBack/Anti-histaminefr.jpg';
 import histaminebk from '../Statics/assets/TabletsFrontBack/Anti-histaminebk.jpg';
+import { FirstTime } from '../components/HomeComponents/ProductsData/productsfirstimelaunch';
 const Products_firsttime = () => {
    
     const LinksBan = [
@@ -27,78 +28,7 @@ const Products_firsttime = () => {
           subLink: "/products",
         },
       ];
-      const card = [
-
-        {
-            id:0,
-            title:'Acedol Tablet',
-            text1:'NSAID',
-            text2:'Aceclofenac 100 mg',
-            img:[{
-                id:0,
-                imgf:acedolfr,
-                imge:acedolbk,
-            }],
-            btn:'Read More',
-            btnlink:'/acedol-tablet'
-        },
-        {
-            id:1,
-            title:'Acubis 2.5 Tablet',
-            text1:'Cardiovascular',
-            text2:'Bisoprolo 2.5 mg',
-            img:[{
-                id:1,
-                imgf:acubisfr,
-                imge:acubisbk,
-            }],
-            btn:'Read More',
-            btnlink:'/acedol-tablet'
-        },
-        {
-            id:2,
-            title:'ConziSyrup',
-            text1:'Vitamin & Minerals',
-            text2:'Zinc 10 mg/5ml',
-            img:[{
-                id:2,
-                imgf:conzifr,
-                imge:conzibk,
-            }],
-            btn:'Read More',
-            btnlink:'/acedol-tablet'
-        },
-        {
-            id:3,
-            title:'Dopagut',
-            text1:'Suspension',
-            text2:'Gastroprokinetic',
-            img:[{
-                id:3,
-                imgf:Dopagutfr,
-                imge:Dopagutbk,
-            }],
-            btn:'Read More',
-            btnlink:'/acedol-tablet'
     
-        },
-        {
-            id:4,
-            title:'Unilor 5 mg Tablet',
-            text1:'Anti-histamine',
-            text2:'Anti-histamine',
-            img:[{
-                id:4,
-                imgf:histaminefr,
-                imge:histaminebk,
-            }],
-            btn:'Read More',
-            btnlink:'/acedol-tablet'
-    
-        },
-
-    
-    ];
     
 
     return (
@@ -107,6 +37,9 @@ const Products_firsttime = () => {
         heading={"First Time Launching"}
         subHeading={`FIRST TIME LAUNCHING`}
         LinksBan={LinksBan}
+        
+        // backposit={'center right'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url()`}
         height={""}
         backgroundSize={""}
         conmarpad={""}
@@ -118,9 +51,11 @@ const Products_firsttime = () => {
       <div className="Responsive_Margin_Screen" style={{ marginBottom: "100px" }}>
         <div className="row">
        
-              {card.map((ob, index) => (
+              {FirstTime.map((ob, index) => (
+                
                <React.Fragment key={ob.id}>
-               <div  className={index===0 ? `col-lg-2 offset-1 d-none d-lg-block d-md-none col-md-4 mt-3  col-sm-12 custome-card-test`:`col-lg-2 d-none d-lg-block d-md-none col-md-4 mt-3   col-sm-12 custome-card-test`}>
+                 {/* index offset after 5 cards function */}
+               <div  className={index===0 || index===5 || index===9 ? `col-lg-2 offset-1 d-none d-lg-block d-md-none col-md-4 mt-3  col-sm-12 custome-card-test`:`col-lg-2 d-none d-lg-block d-md-none col-md-4 mt-3   col-sm-12 custome-card-test`}>
                  <FlipCard card={ob} />
                </div>
                <div  className="custome_xs_screen  d-lg-none d-sm-block col-md-4 col-sm-12 col-xs-12 mt-3 custome-card-test ">

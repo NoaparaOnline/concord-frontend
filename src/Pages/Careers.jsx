@@ -37,6 +37,9 @@ const Careers = () => {
       <BannerWithText
         heading={"ALL JOBS"}
         subHeading={`JOBS`}
+        
+        backposit={'center right'}
+        // backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
         LinksBan={LinksBan}
         height={""}
         backgroundSize={""}

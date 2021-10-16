@@ -42,6 +42,9 @@ const About_vision_mission = () => {
         imgSrc={bannerimg}
         heading={"Vision & Mission"}
         subHeading={`VISION & MISSION`}
+        
+        backposit={'center right'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
         LinksBan={LinksBan}
         height={"400px"}
         backgroundSize={"100% 400px"}

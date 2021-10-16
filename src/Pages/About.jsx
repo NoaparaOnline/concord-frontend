@@ -51,9 +51,12 @@ const About = () => {
 
   return (
     <div>
-      <BannerWithText imgSrc={bannerimg}
+      <BannerWithText
+        imgSrc={bannerimg}
         heading={'About Us'}
         subHeading={`about us`}
+        backposit={'center right'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
         LinksBan={LinksBan}
         height={"400px"}
         backgroundSize={"100% 400px"}

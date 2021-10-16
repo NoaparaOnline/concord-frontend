@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import acedolfr from "../Statics/assets/TabletsFrontBack/innerpagacedolfr.png";
 import acedolbk from "../Statics/assets/TabletsFrontBack/innerpagacedolbk.png";
 import Modal from "react-bootstrap/Modal";
+import { useSelector } from "react-redux";
 
 const ProductsCardInnerPage = () => {
   const LinksBan = [
@@ -33,7 +34,8 @@ const ProductsCardInnerPage = () => {
   const handleShow = () => {
     setShow(true);
   };
-  
+  const productssingleobj = useSelector((state) => state?.director?.getsingleproductobj);
+  console.log("productssingleobj",productssingleobj)
   const Text = () => {
     return(
       <div>
@@ -162,6 +164,9 @@ const ProductsCardInnerPage = () => {
     <div>
       <BannerWithText
         subHeading={`ACEDOL`}
+        
+        // backposit={'center right'}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url()`}
         LinksBan={LinksBan}
         height={"200px"}
         backgroundSize={"100% 200px"}

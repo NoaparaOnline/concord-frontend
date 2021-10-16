@@ -45,6 +45,10 @@ import { messaging , test } from "./init-fcm";
 import PrivateRoute from './Routes/PrivateRoute';
 import Aboutchairmenprofile from "./Pages/Aboutchairmenprofile";
 import CareersInnerPage from "./Pages/CareersInnerPage";
+import DapzineTablet from "./components/ReusableComponents/ProductDetail/DapzineTablet";
+import Relikof from "./components/ReusableComponents/ProductDetail/Relikof";
+import Relikofkids from "./components/ReusableComponents/ProductDetail/Relikofkids";
+import Acedol from "./components/ReusableComponents/ProductDetail/Acedol";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -317,6 +321,19 @@ function App() {
         <Route exact path="/acedol-tablet">
           <ProductsCardInnerPage />
         </Route>
+        <Route exact path="/dapzine-tablet">
+          <DapzineTablet />
+        </Route>
+        <Route exact path="/relikof-syrup">
+          <Relikof />
+        </Route>
+        <Route exact path="/relikof-kids-syrup">
+          <Relikofkids />
+        </Route>
+        <Route exact path="/acedolcopy-tablet">
+          <Acedol />
+        </Route>
+     
 
         {/*          Sitemap Page          */}
 

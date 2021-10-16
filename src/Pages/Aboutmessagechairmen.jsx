@@ -38,6 +38,9 @@ const About_message_chairmen = () => {
         imgSrc={bannerimg}
         heading={"Message from Chairman"}
         subHeading={`MESSAGE FROM CHAIRMAN`}
+        
+        backposit={'100% 25%'}
+        backimg={`url(${bannerimg})`}
         LinksBan={LinksBan}
         height={"400px"}
         backgroundSize={"100% 400px"}

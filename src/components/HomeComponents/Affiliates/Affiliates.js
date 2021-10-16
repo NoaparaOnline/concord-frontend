@@ -1,15 +1,17 @@
 import React from 'react'
 import './Affiliates.css'
 import Slider from "react-slick";
-
+import ewvila from '../../../Statics/assets/Sliderlogos/1.png'
+import dmfr from '../../../Statics/assets/Sliderlogos/2.png'
+import toticell from '../../../Statics/assets/Sliderlogos/3.png'
 import { NavLink } from 'react-router-dom'
 const Affiliates = () => {
        
       
         const properties = {
-          duration: 300,
-          slidesToShow: 5,
-          slidesToScroll: 2,
+          duration: 200,
+          slidesToShow: 3,
+          slidesToScroll: 1,
           autoplay: true,
           indicators: false,
           arrows: false,
@@ -19,7 +21,7 @@ const Affiliates = () => {
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 4,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: true,
                 dots: false
@@ -28,7 +30,7 @@ const Affiliates = () => {
             {
               breakpoint: 600,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
                 slidesToScroll: 1
               }
             },
@@ -59,14 +61,9 @@ const Affiliates = () => {
         
           <div>
         <Slider {...properties}  className={"slick-slide-affiliates"} id="id_tog">
-          <div className="carddivslider">
-            <img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/roche.jpg'}/>
-            </div>
-          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/brist.jpg'}/></div>
-          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/johnson.jpg'}/></div>
-          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/novar.jpg'}/></div>
-          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/phizer.jpg'}/></div>
-          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={'https://www.ri-demo.co/concord/final-2/wp-content/uploads/2021/04/sonafi.jpg'}/></div>
+          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={ewvila}/></div>
+          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={dmfr}/></div>
+          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={toticell}/></div>
         </Slider>
           </div>
                     </div>
