@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../../Statics/assets/logo.png";
 import langlogo from "../../../Statics/assets/languagelogo.png";
@@ -10,74 +10,59 @@ import Login from "../../../Pages/Login";
 
 import { useHistory } from "react-router-dom";
 
-// 
+//
 import { useDispatch, useSelector } from "react-redux";
-import {
-  logoutUser,
-} from "../../../Store/Actions/loginActions";
+import { logoutUser } from "../../../Store/Actions/loginActions";
 import profileLogo from "../../../Statics/assets/profile-logo.png";
 import Notifications from "../../ReusableComponents/modals/Notifications/Notifications";
 import ChangePassword from "../../ReusableComponents/modals/ChangePassword/ChangePassword";
 
-// 
-
+//
 
 const Navbars = (props) => {
   const history = useHistory();
 
   const userRole = useSelector((state) => state?.logIn?.userRole);
- const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const logoutHandler = () => {
     dispatch(logoutUser());
     history?.push("/");
   };
-const user = useSelector((state) => state?.logIn?.user);
+  const user = useSelector((state) => state?.logIn?.user);
   const profileHandler = () => {
-    if (userRole === "depot_manager" ) {
+    if (userRole === "depot_manager") {
       history.push("/depotmanager-dashboard");
-    }  
-    else if (userRole === "director" ){
-        history.push('/director-dashboard')
-      }
+    } else if (userRole === "director") {
+      history.push("/director-dashboard");
+    }
   };
 
-
- 
   const [show, setShow] = useState(false);
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
   const [langbtnshow, setLangbtnshow] = useState(false);
   const [showdiv, setShowdiv] = useState(true);
 
-  const handleClose = () => 
-  {
-      setShow(!show);
-      setShowdiv(true);
-
-  }
+  const handleClose = () => {
+    setShow(!show);
+    setShowdiv(true);
+  };
   const handleShow = () => {
-
     setShow(!show);
   };
   const handleShow1 = () => {
-
     setShow1(!show1);
   };
-  const handleClose1 = () => 
-  {
-      setShow1(!show1);
-
-  }
+  const handleClose1 = () => {
+    setShow1(!show1);
+  };
 
   const handleShow2 = () => {
-
     setShow2(!show2);
   };
-  const handleClose2 = () => 
-  {
-      setShow2(!show2);
-
-  }
+  const handleClose2 = () => {
+    setShow2(!show2);
+  };
   return (
     <>
       <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top custom-nav ">
@@ -98,7 +83,6 @@ const user = useSelector((state) => state?.logIn?.user);
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-     
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -152,144 +136,107 @@ const user = useSelector((state) => state?.logIn?.user);
                     </div>
                   </div>
 
-
-
-
-
-
-
                   {user ? (
-                    
-              <>
-                <div className="me-4" id="navbar-list-4">
-                  <ul className="navbar-nav">
-                    <li className="nav-item dropdown ">
-                      <Link
-                        className="nav-link dropdown-toggle"
-                        id="navbarDropdownMenuLink"
-                        role="button"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <img
-                          src={profileLogo}
-                          alt=""
-                          width="25"
-                          height="25"
-                          className="rounded-circle"
-                        />
-                      </Link>
-                      <div
-                        className="dropdown-menu dropdown-menu-right profile-nav-dropdown"
-                        aria-labelledby="navbarDropdownMenuLink"
-                      >
-                        <Link
-                          className="dropdown-item navmenu_custome_li"
-                          onClick={() => profileHandler()}
-                          // style={{ color:'#0066b3' ,fontWeight:'600' }}
+                    <>
+                      <div className="me-4" id="navbar-list-4">
+                        <ul className="navbar-nav">
+                          <li className="nav-item dropdown ">
+                            <Link
+                              className="nav-link dropdown-toggle"
+                              id="navbarDropdownMenuLink"
+                              role="button"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <img
+                                src={profileLogo}
+                                alt=""
+                                width="25"
+                                height="25"
+                                className="rounded-circle"
+                              />
+                            </Link>
+                            <div
+                              className="dropdown-menu dropdown-menu-right profile-nav-dropdown"
+                              aria-labelledby="navbarDropdownMenuLink"
+                            >
+                              <Link
+                                className="dropdown-item navmenu_custome_li"
+                                onClick={() => profileHandler()}
+                                // style={{ color:'#0066b3' ,fontWeight:'600' }}
+                              >
+                                <i
+                                  className="fa fa-id-card "
+                                  style={{ fontSize: "13px" }}
+                                ></i>{" "}
+                                &nbsp;Dashboard
+                              </Link>
 
-                        >
-                          <i
-                            className="fa fa-id-card "
-                            style={{ fontSize: "13px" }}
-                          ></i>{" "}
-                          &nbsp;Dashboard
-                        </Link>
+                              <Link
+                                className="dropdown-item navmenu_custome_li"
+                                onClick={() => {
+                                  handleShow1();
+                                }}
+                                // style={{ color:'#0066b3' ,fontWeight:'600' }}
+                              >
+                                <i
+                                  className="fa fa-bell "
+                                  style={{ fontSize: "13px" }}
+                                ></i>{" "}
+                                &nbsp;Notifications
+                              </Link>
 
-                        <Link
-                          className="dropdown-item navmenu_custome_li"
-                          onClick={() => {
-                            handleShow1();
-                          }}
-                          // style={{ color:'#0066b3' ,fontWeight:'600' }}
+                              {/* Change Password */}
+                              <Link
+                                className="dropdown-item navmenu_custome_li"
+                                onClick={() => {
+                                  handleShow2();
+                                }}
+                                // style={{ color:'#0066b3' ,fontWeight:'600' }}
+                              >
+                                <i
+                                  className="fa fa-key"
+                                  style={{ fontSize: "13px" }}
+                                ></i>{" "}
+                                &nbsp;Change Password
+                              </Link>
 
-                        >
-                          <i
-                            className="fa fa-bell "
-                            style={{ fontSize: "13px" }}
-                          ></i>{" "}
-                          &nbsp;Notifications
-                        </Link>
-
-                        {/* Change Password */}
-                        <Link
-                          className="dropdown-item navmenu_custome_li"
-                          onClick={() => {
-                            handleShow2();
-                          }}
-                          // style={{ color:'#0066b3' ,fontWeight:'600' }}
-
-                        >
-                          <i
-                            className="fa fa-key"
-                            style={{ fontSize: "13px" }}
-                          ></i>{" "}
-                          &nbsp;Change Password
-                        </Link>
-
-                        <Link
-                          className="dropdown-item navmenu_custome_li"
-                          onClick={() => logoutHandler()}
-                          // style={{ color:'#0066b3' ,fontWeight:'600' }}
-                        >
-                          <i
-                            className="fa fa-sign-out "
-                            style={{ fontSize: "13px" }}
-                          ></i>
-                          &nbsp;Log Out
-                        </Link>
+                              <Link
+                                className="dropdown-item navmenu_custome_li"
+                                onClick={() => logoutHandler()}
+                                // style={{ color:'#0066b3' ,fontWeight:'600' }}
+                              >
+                                <i
+                                  className="fa fa-sign-out "
+                                  style={{ fontSize: "13px" }}
+                                ></i>
+                                &nbsp;Log Out
+                              </Link>
+                            </div>
+                          </li>
+                        </ul>
                       </div>
+                    </>
+                  ) : (
+                    <li className="nav-item ">
+                      <i
+                        className="fa fa-user fs-5 ms-3"
+                        aria-hidden="true"
+                      ></i>
+                      <Link
+                        className="nav-link secnav text-capitalize "
+                        onClick={() => {
+                          handleShow();
+                        }}
+                        style={{ clear: "both", marginTop: "-10px" }}
+                        aria-current="page"
+                        to="#"
+                      >
+                        login
+                      </Link>
                     </li>
-                  </ul>
-                </div>
-              </>
-            ) : (
-              <li className="nav-item ">
-              <i className="fa fa-user fs-5 ms-3" aria-hidden="true"></i>
-              <Link
-                className="nav-link secnav text-capitalize "
-                onClick={() => {
-                  handleShow();
-                }}
-                style={{ clear: "both", marginTop: "-10px" }}
-                aria-current="page"
-                to="#"
-              >
-                login
-              </Link>
-            </li>
-        
-            )}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                  )}
 
                   <li className="nav-item dropdown disablehover">
                     <span
@@ -299,7 +246,7 @@ const user = useSelector((state) => state?.logIn?.user);
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                       data-bs-offset="10,20"
-                      onClick={()=>setLangbtnshow(!langbtnshow)}
+                      onClick={() => setLangbtnshow(!langbtnshow)}
                     >
                       <img
                         src={langlogo}
@@ -308,55 +255,55 @@ const user = useSelector((state) => state?.logIn?.user);
                       />
                     </span>
 
-                   
-                      <ul
-                        className={ langbtnshow ?`dropdown-menu enablehover-menu dropdown-menu-right` : `disablehover-menu dropdown-menu-right`}
-                        aria-labelledby="dropdownMenuOffset"
-                        style={{ listStyle: "none", background: "white" }}
-                      >
-                        <li>
-                          <Link
-                            className="dropdown-item conCapitalized "
-                            to="#"
-                          >
-                            <span>
-                              {" "}
-                              <img
-                                src={enlang}
-                                alt="english"
-                                style={{ width: "22px", marginRight: "10px" }}
-                              />{" "}
-                              english
-                            </span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="dropdown-item conCapitalized" to="#">
-                            <span>
-                              {" "}
-                              <img
-                                src={arlang}
-                                alt="arabic"
-                                style={{ width: "22px", marginRight: "10px" }}
-                              />
-                              arabic{" "}
-                            </span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="dropdown-item conCapitalized" to="#">
-                            <span>
-                              {" "}
-                              <img
-                                src={bnlang}
-                                alt="bengali"
-                                style={{ width: "22px", marginRight: "10px" }}
-                              />
-                              bengali
-                            </span>
-                          </Link>
-                        </li>
-                      </ul>
+                    <ul
+                      className={
+                        langbtnshow
+                          ? `dropdown-menu enablehover-menu dropdown-menu-right`
+                          : `disablehover-menu dropdown-menu-right`
+                      }
+                      aria-labelledby="dropdownMenuOffset"
+                      style={{ listStyle: "none", background: "white" }}
+                    >
+                      <li>
+                        <Link className="dropdown-item conCapitalized " to="#">
+                          <span>
+                            {" "}
+                            <img
+                              src={enlang}
+                              alt="english"
+                              style={{ width: "22px", marginRight: "10px" }}
+                            />{" "}
+                            english
+                          </span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item conCapitalized" to="#">
+                          <span>
+                            {" "}
+                            <img
+                              src={arlang}
+                              alt="arabic"
+                              style={{ width: "22px", marginRight: "10px" }}
+                            />
+                            arabic{" "}
+                          </span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item conCapitalized" to="#">
+                          <span>
+                            {" "}
+                            <img
+                              src={bnlang}
+                              alt="bengali"
+                              style={{ width: "22px", marginRight: "10px" }}
+                            />
+                            bengali
+                          </span>
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -367,10 +314,9 @@ const user = useSelector((state) => state?.logIn?.user);
                     <NavLink
                       className="nav-link secnav "
                       aria-current="page"
-                      to="/" 
+                      to="/"
                       exact
                       activeClassName="active"
-
                     >
                       HOME
                     </NavLink>
@@ -395,24 +341,19 @@ const user = useSelector((state) => state?.logIn?.user);
                         paddingTop: "15px",
                         border: "none",
                         background: "transparent",
-
                       }}
                     >
                       <ul
                         className="navmenu_custome "
                         aria-labelledby="dropdownMenuOffset"
-                        style={{ listStyle: "none", background: "white"}}
+                        style={{ listStyle: "none", background: "white" }}
                       >
                         <li>
                           <NavLink
                             className="dropdown-item navmenu_custome_li"
                             to="/about_vision_mission"
                           >
-                           
-
-                           Vision & Mission
-
-                           
+                            Vision & Mission
                           </NavLink>
                         </li>
                         <li>
@@ -446,7 +387,11 @@ const user = useSelector((state) => state?.logIn?.user);
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link secnav" to="/globalOperations" activeClassName="active">
+                    <NavLink
+                      className="nav-link secnav"
+                      to="/globalOperations"
+                      activeClassName="active"
+                    >
                       global operation
                     </NavLink>
                   </li>
@@ -594,8 +539,12 @@ const user = useSelector((state) => state?.logIn?.user);
                   </li>
                   <li className="nav-item">
                     {/* TeleMedicine Routing Path = /teleMedicine */}
-                    <a href="https://www.mdxdmfr.com" className="nav-link secnav" target="_blank">
-                    Tele-Medicine
+                    <a
+                      href="https://www.mdxdmfr.com"
+                      className="nav-link secnav"
+                      target="_blank"
+                    >
+                      Tele-Medicine
                     </a>
                     {/* <Link className="nav-link secnav" to="#" >
                       
@@ -734,9 +683,14 @@ const user = useSelector((state) => state?.logIn?.user);
         </div>
       </nav>
 
-      <Login show={show} onHide={handleClose} showdiv={showdiv} setShowdiv={setShowdiv} />
-      <Notifications show={show1} onHide={handleClose1}  />
-      <ChangePassword show={show2} onHide={handleClose2}  />
+      <Login
+        show={show}
+        onHide={handleClose}
+        showdiv={showdiv}
+        setShowdiv={setShowdiv}
+      />
+      <Notifications show={show1} onHide={handleClose1} />
+      <ChangePassword show={show2} onHide={handleClose2} />
     </>
   );
 };
