@@ -1,5 +1,6 @@
-import acedolfr from '../../../Statics/assets/by-trade-name/Acedol-eng.jpg';
-import acedolbk from '../../../Statics/assets/by-trade-name/Acedol-ban.jpg';
+import acedolfr from '../../../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg';
+import acedolbk from '../../../Statics/assets/TabletsFrontBack/ban-Acedol-Tabletbk.jpg';
+
 
 import acedolsrfr from '../../../Statics/assets/by-trade-name/Acedol-SR-eng.jpg';
 import acedolsrbk from '../../../Statics/assets/by-trade-name/Acedol-SR-ban.jpg';

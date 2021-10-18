@@ -57,10 +57,10 @@ const About_message_chairmen = () => {
             <img alt="Chairmen" src={DirectorImg} className="img-fluid" />
           </div>
 
-          <div className="col-lg-8 col-md-6 col-sm-12 col-xs-12 mt-3 d-flex justify-content-lg-start ">
+          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3 d-flex justify-content-lg-start ">
             <div className="card d-flex justify-content-center" style={{ border: 'none' }}>
               <h5 className="text-start mb-4" style={{ color: "#337ab7", fontWeight: '500', fontSize: '36px' }}>{DirectorInfo.name}</h5>
-              <p className="text-start" style={{ color: "#565656", fontWeight: '400', fontSize: '17px' }}>{DirectorInfo.about}</p>
+              <p className="text-justify" style={{ color: "#565656", fontWeight: '400', fontSize: '17px' }}>{DirectorInfo.about}</p>
             </div>
           </div>
 

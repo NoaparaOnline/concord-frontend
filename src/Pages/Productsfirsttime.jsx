@@ -3,16 +3,7 @@ import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
-import acedolfr from '../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg';
-import acedolbk from '../Statics/assets/TabletsFrontBack/ban-Acedol-Tabletbk.jpg';
-import acubisfr from '../Statics/assets/TabletsFrontBack/Acubis-2.5fr.jpg';
-import acubisbk from '../Statics/assets/TabletsFrontBack/ban-Acubis-2bk.jpg';
-import conzifr from '../Statics/assets/TabletsFrontBack/Conzi-100-mlfr.jpg';
-import conzibk from '../Statics/assets/TabletsFrontBack/ban-Conzi-100-mlbk.jpg';
-import Dopagutfr from '../Statics/assets/TabletsFrontBack/Dopagut-60-mlfr.jpg';
-import Dopagutbk from '../Statics/assets/TabletsFrontBack/ban-Dopagut-60-mlbk.jpg';
-import histaminefr from '../Statics/assets/TabletsFrontBack/Anti-histaminefr.jpg';
-import histaminebk from '../Statics/assets/TabletsFrontBack/Anti-histaminebk.jpg';
+
 import { FirstTime } from '../components/HomeComponents/ProductsData/productsfirstimelaunch';
 const Products_firsttime = () => {
    

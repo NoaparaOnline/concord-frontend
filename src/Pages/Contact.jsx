@@ -59,7 +59,7 @@ const Contact = () => {
   
             {contactcard.map((ob, index) => (
               <React.Fragment key={ob.id}>
-                <div className='col-lg-2 col-md- col-sm-12 col-xs-12 mt-3 '>
+                <div className='col-xxl-2 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-3 '>
                   <ZoominCards abcard={ob} />
                 </div>
               </React.Fragment>

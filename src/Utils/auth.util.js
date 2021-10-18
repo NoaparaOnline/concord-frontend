@@ -1,20 +1,20 @@
 import localStore from './localstore.util';
 import { updateHeaders } from '../services/HttpProvider';
 
-export const getToken = () => localStore.get_data('token');
+export const getToken = () => localStore.get_data('tokenConcord');
 
-export const setToken = token => localStore.store_data('token', token);
-export const setUserRole = token => localStore.store_data('userRole', token);
+export const setToken = token => localStore.store_data('tokenConcord', token);
+export const setUserRole = token => localStore.store_data('userRoleConcord', token);
 
-export const getUser = () => localStore.get_data('user');
-export const saveUser = user => localStore.store_data('user', user);
+export const getUser = () => localStore.get_data('userConcord');
+export const saveUser = user => localStore.store_data('userConcord', user);
 
 
 
 export const logout = async () => {
-  await localStore.remove_data('token');
-  await localStore.remove_data('user')
-  await localStore.remove_data('userRole')
+  await localStore.remove_data('tokenConcord');
+  await localStore.remove_data('userConcord')
+  await localStore.remove_data('userRoleConcord')
   await updateHeaders();
   return true;
 };
