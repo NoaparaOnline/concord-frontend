@@ -114,9 +114,9 @@ import { toast } from "react-toastify";
   };
 
   export const getUser = () => async (dispatch) => {
-    const getUserFromLocal = localStorage.getItem("user");
+    const getUserFromLocal = localStorage.getItem("userConcord");
     let user = JSON.parse(getUserFromLocal);
-    const getUserRoleFromLocal = localStorage.getItem("userRole");
+    const getUserRoleFromLocal = localStorage.getItem("userRoleConcord");
     let userRole = JSON.parse(getUserRoleFromLocal);
     
   

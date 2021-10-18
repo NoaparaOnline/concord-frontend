@@ -4,7 +4,7 @@
 
 const features = {
     login: 'login',
-    user: 'user',
+    user: 'userConcord',
     static : ''
 };
 

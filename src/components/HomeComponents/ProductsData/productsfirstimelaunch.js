@@ -1,5 +1,5 @@
-import acedolfr from '../../../Statics/assets/first-time-launching/Acedol-eng.jpg';
-import acedolbk from '../../../Statics/assets/first-time-launching/Acedol-ban.jpg';
+import acedolfr from '../../../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg';
+import acedolbk from '../../../Statics/assets/TabletsFrontBack/ban-Acedol-Tabletbk.jpg';
 
 import acubis25fr from '../../../Statics/assets/first-time-launching/Acubis-2.5-eng.jpg';
 import acubis25bk from '../../../Statics/assets/first-time-launching/Acubis-2.5-ban.jpg';

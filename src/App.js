@@ -70,7 +70,7 @@ function App() {
       .then(async function () {
         // console.log(result);
         const token = await test?.getToken(messaging);
-        localStorage.setItem("fcm",token)
+        localStorage.setItem("fcmConcord",token)
       })
       .catch(function (err) {
         console.log("Unable to get permission to notify.", err);

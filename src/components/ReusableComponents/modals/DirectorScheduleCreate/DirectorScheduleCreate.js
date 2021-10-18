@@ -62,7 +62,7 @@ const DirectorScheduleCreate = (props) => {
     props.onHide();
   };
 
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem("userConcord"));
   return (
     <>
       <Modal show={props.show} onHide={props.onHide} centered size="md">
