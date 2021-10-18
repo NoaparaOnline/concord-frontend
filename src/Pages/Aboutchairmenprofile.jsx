@@ -2,7 +2,7 @@ import React from "react";
 
 import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/parallax_contact.jpg";
-import DirectorImg from "../Statics/assets/Managing-Director.png";
+import DirectorImg from "../Statics/assets/chairman-profile.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Link } from "react-router-dom";
 
@@ -45,7 +45,7 @@ const Aboutchairmenprofile = () => {
             {/* <img alt="Chairmen" src={DirectorImg} className="img-fluid" /> */}
             <img
               class="alignnone size-medium wp-image-24556"
-              src="https://concordpharma-bd.com/wp-content/uploads/2019/06/chairman-profile-1-240x300.jpg"
+              src={DirectorImg}
               alt=""
               width="240"
               height="300"

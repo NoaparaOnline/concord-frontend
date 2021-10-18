@@ -399,7 +399,7 @@ const user = useSelector((state) => state?.logIn?.user);
                       }}
                     >
                       <ul
-                        className="dropdown-menu navmenu_custome "
+                        className="navmenu_custome "
                         aria-labelledby="dropdownMenuOffset"
                         style={{ listStyle: "none", background: "white"}}
                       >
@@ -474,7 +474,7 @@ const user = useSelector((state) => state?.logIn?.user);
                       }}
                     >
                       <ul
-                        className="dropdown-menu navmenu_custome "
+                        className="navmenu_custome "
                         aria-labelledby="dropdownMenuOffset"
                         style={{ listStyle: "none", background: "white" }}
                       >
@@ -540,7 +540,7 @@ const user = useSelector((state) => state?.logIn?.user);
                       }}
                     >
                       <ul
-                        className="dropdown-menu navmenu_custome"
+                        className="navmenu_custome"
                         aria-labelledby="dropdownMenuOffset"
                         style={{ listStyle: "none", background: "white" }}
                       >
@@ -624,7 +624,7 @@ const user = useSelector((state) => state?.logIn?.user);
                       }}
                     >
                       <ul
-                        className="dropdown-menu dropdown-menu-right navmenu_custome "
+                        className="navmenu_custome "
                         aria-labelledby="dropdownMenuOffset"
                         style={{ listStyle: "none", background: "white" }}
                       >
@@ -693,7 +693,7 @@ const user = useSelector((state) => state?.logIn?.user);
                     </NavLink>
 
                     <ul
-                      className="dropdown-menu  dropdown-menu-right hovercolr "
+                      className="dropdown-menu dropdown-menu-right hovercolr "
                       aria-labelledby="dropdownMenuOffset"
                       style={{
                         paddingTop: "15px",
@@ -702,7 +702,7 @@ const user = useSelector((state) => state?.logIn?.user);
                       }}
                     >
                       <ul
-                        className="dropdown-menu  dropdown-menu-right navmenu_custome"
+                        className="navmenu_custome"
                         aria-labelledby="dropdownMenuOffset"
                         style={{ listStyle: "none", background: "white" }}
                       >
