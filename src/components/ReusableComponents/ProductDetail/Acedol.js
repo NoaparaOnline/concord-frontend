@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { CompanyLogos } from "../../../components";
 import BannerWithText from "../../../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Link } from "react-router-dom";
-import acedolfr from "../../../Statics/assets/by-trade-name/Acedol-eng.jpg";
-import acedolbk from "../../../Statics/assets/by-trade-name/Acedol-ban.jpg";
+import acedolfr from '../../../Statics/assets/first-time-launching/Acedol-Tabletfr.jpg';
+import acedolbk from '../../../Statics/assets/first-time-launching/ban-Acedol-Tabletbk.jpg';
 import Modal from "react-bootstrap/Modal";
 import { useSelector } from "react-redux";
 

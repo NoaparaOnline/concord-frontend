@@ -1,6 +1,6 @@
- import React , { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { BrowserRouter as Router, Route  } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect,Switch } from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer, FixedRight } from "./components";
 import About from "./Pages/About";
@@ -40,15 +40,16 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import DepotmanagerDashboard from "./Dashboards/depotmanagerDashboard/depotmanagerDashboard";
 import DirectorDashboard from "./Dashboards/directorDashboard/directorDashboard";
-import { messaging , test } from "./init-fcm";
+import { messaging, test } from "./init-fcm";
 
-import PrivateRoute from './Routes/PrivateRoute';
+import PrivateRoute from "./Routes/PrivateRoute";
 import Aboutchairmenprofile from "./Pages/Aboutchairmenprofile";
 import CareersInnerPage from "./Pages/CareersInnerPage";
 import DapzineTablet from "./components/ReusableComponents/ProductDetail/DapzineTablet";
 import Relikof from "./components/ReusableComponents/ProductDetail/Relikof";
 import Relikofkids from "./components/ReusableComponents/ProductDetail/Relikofkids";
 import Acedol from "./components/ReusableComponents/ProductDetail/Acedol";
+import Error404 from "./Pages/Error404";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -70,7 +71,7 @@ function App() {
       .then(async function () {
         // console.log(result);
         const token = await test?.getToken(messaging);
-        localStorage.setItem("fcmConcord",token)
+        localStorage.setItem("fcmConcord", token);
       })
       .catch(function (err) {
         console.log("Unable to get permission to notify.", err);
@@ -96,18 +97,12 @@ function App() {
       />
 
       <Router>
+        
         <ScrollToTop />
         {/*          Root Page             */}
 
-       
-       
-        <Route
-          exact path="/"
-          render={(props) => <Navbar {...props}/> }
-        />
-       
-       
-       
+        <Route exact path="/" render={(props) => <Navbar {...props} />} />
+
         {/*          Front Home Page             */}
 
         <Route exact path="/">
@@ -117,16 +112,18 @@ function App() {
         {/*          Navbar             */}
 
         <Route
-          exact path="/:page"
-          render={(props) => 
-            (props.location.pathname !== '/depotmanager-dashboard' 
-            && props.location.pathname !== '/depotmanager-dashboard/'
-            && props.location.pathname !== '/director-dashboard'
-            && props.location.pathname !== '/director-dashboard/'
-            // && props.location.pathname !== '/reset-password'
-            ) 
-            && <Navbar {...props}/> }
-            />
+          exact
+          path="/:page"
+          render={(props) =>
+            props.location.pathname !== "/depotmanager-dashboard" &&
+            props.location.pathname !== "/depotmanager-dashboard/" &&
+            props.location.pathname !== "/director-dashboard" &&
+            props.location.pathname !== "/director-dashboard/" && (
+              // && props.location.pathname !== '/reset-password'
+              <Navbar {...props} />
+            )
+          }
+        />
 
         {/*          Home Page             */}
 
@@ -137,33 +134,30 @@ function App() {
         {/* Resest Password */}
         {/* <Route path="/reset_password_link/uid=:uid/token=:token" render={(props)=>   <ResetPassword {...props}/>}/> */}
         <Route
-          path='/reset-password'
+          path="/reset-password"
           render={(props) => <ResetPassword {...props} />}
-          />
+        />
 
         {/*          FixedRight             */}
 
         <Route exact path="/">
           <FixedRight />
         </Route>
-        <Route exact path="/:page"
+        <Route
+          exact
+          path="/:page"
           render={(props) =>
-          (props.location.pathname !== '/depotmanager-dashboard' 
-            && props.location.pathname !== '/depotmanager-dashboard/'
-            && props.location.pathname !== '/director-dashboard'
-            && props.location.pathname !== '/director-dashboard/'
-            && props.location.pathname !== '/reset-password'
-            )
-            && <FixedRight /> }
-            />
-
+            props.location.pathname !== "/depotmanager-dashboard" &&
+            props.location.pathname !== "/depotmanager-dashboard/" &&
+            props.location.pathname !== "/director-dashboard" &&
+            props.location.pathname !== "/director-dashboard/" &&
+            props.location.pathname !== "/reset-password" && <FixedRight />
+          }
+        />
 
         {/*          Login Page             */}
 
-        <Route
-          path='/login'
-          render={(props) => <Login {...props} />}
-          />
+        <Route path="/login" render={(props) => <Login {...props} />} />
 
         {/*          Main About Page             */}
 
@@ -190,26 +184,27 @@ function App() {
         <Route exact path="/careers">
           <Careers />
         </Route>
-         {/*       Careers Inner Page      */}
-         <Route exact path="/careers-inner-page">
+        {/*       Careers Inner Page      */}
+        <Route exact path="/careers-inner-page">
           <CareersInnerPage />
         </Route>
 
         {/* Dashboards */}
-
 
         {/* <Route
            path="/depotmanager-dashboard"
            render={(props) => <DepotmanagerDashboard {...props} />}/>
         */}
         <PrivateRoute
-           path="/depotmanager-dashboard"
-           component={DepotmanagerDashboard}/>
+          path="/depotmanager-dashboard"
+          component={DepotmanagerDashboard}
+        />
         <PrivateRoute
-           path="/director-dashboard"
-           component={DirectorDashboard}/>
-       
-       {/* Private Convert */}
+          path="/director-dashboard"
+          component={DirectorDashboard}
+        />
+
+        {/* Private Convert */}
         {/* <Route 
         path="/director-dashboard"
         render={(props) => <DirectorDashboard {...props} />}
@@ -333,7 +328,6 @@ function App() {
         <Route exact path="/acedolcopy-tablet">
           <Acedol />
         </Route>
-     
 
         {/*          Sitemap Page          */}
 
@@ -341,56 +335,37 @@ function App() {
           <Sitemap />
         </Route>
 
-            
-
         {/*          TeleMedicine          */}
 
         <Route exact path="/teleMedicine">
           <TeleMedicine />
         </Route>
+       
+
+        {/* 404 Page */}
+        
+        {/* <Route path='*' component={Error404} /> */}
 
         {/*          Footer             */}
 
-
-
-
-
-
-
-
-
-
-
-
-
-        <Route exact path="/:page"
-          render={(props) => 
-            (props.location.pathname !== '/depotmanager-dashboard'
-            && props.location.pathname !== '/depotmanager-dashboard/'
-            && props.location.pathname !== '/director-dashboard'
-            && props.location.pathname !== '/director-dashboard/'
-            //  && props.location.pathname !== '/reset-password'
-             ) 
-             && <Footer />}
+        <Route
+          exact
+          path="/:page"
+          render={(props) =>
+            props.location.pathname !== "/depotmanager-dashboard" &&
+            props.location.pathname !== "/depotmanager-dashboard/" &&
+            props.location.pathname !== "/director-dashboard" &&
+            props.location.pathname !== "/director-dashboard/" && (
+              //  && props.location.pathname !== '/reset-password'
+              <Footer />
+              )
+            }
         />
 
         <Route exact path="/">
           <Footer />
         </Route>
-
-
-
-
-
-
-
-
-
-
-
-
       </Router>
-
     </div>
   );
 }
