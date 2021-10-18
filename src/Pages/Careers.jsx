@@ -39,7 +39,7 @@ const Careers = () => {
         subHeading={`JOBS`}
         
         backposit={'center right'}
-        // backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
+        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url()`}
         LinksBan={LinksBan}
         height={""}
         backgroundSize={""}

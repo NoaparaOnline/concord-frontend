@@ -6,15 +6,10 @@ import { toast } from "react-toastify";
 import { changePassword, setUserFromLocal } from "../../../../Store/Actions/loginActions";
 import {  getUser } from "../../../../Utils/auth.util";
 const ChangePassword = (props) => {
+ 
+ 
   const dispatch = useDispatch();
-  useEffect(async () => {
-    let user = await getUser();
-    dispatch(setUserFromLocal(user));
-    if (user === null || user === undefined) {
-    } else {
-    }
-  }, []);
-
+  
 
   const user = useSelector((state) => state?.logIn?.user);
   const onSubmit = async (data) => {
