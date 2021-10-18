@@ -14,6 +14,7 @@ import Dopagutfr from "../Statics/assets/TabletsFrontBack/Dopagut-60-mlfr.jpg";
 import Dopagutbk from "../Statics/assets/TabletsFrontBack/ban-Dopagut-60-mlbk.jpg";
 import histaminefr from "../Statics/assets/TabletsFrontBack/Anti-histaminefr.jpg";
 import histaminebk from "../Statics/assets/TabletsFrontBack/Anti-histaminebk.jpg";
+import { Pagination } from "react-bootstrap";
 
 
 
@@ -66,7 +67,25 @@ const Products_bytrade = () => {
       setObj(filterd);
     }
   }
-
+  // let paginationConfig = {
+  //   totalPages: 22,
+  //   currentPage: 15,
+  //   showMax: 5,
+  //   size: "lg",
+  //   threeDots: true,
+  //   prevNext: true,
+  //   href: 'https://example.com/items?page=*', // * will be replaced by the page number
+  //   pageOneHref: 'https://example.com/items',
+  //   borderColor: 'red',
+  //   activeBorderColor: 'black',
+  //   activeBgColor: 'grey',
+  //   disabledBgColor: 'red',
+  //   activeColor: 'red',
+  //   color: 'purple',
+  //   disabledColor: 'green',
+  //   circle: true,
+  //   shadow: true
+  // };
   return (
     <div>
       <BannerWithText
@@ -162,15 +181,17 @@ const Products_bytrade = () => {
                 {obj.map((ob, index) => (
                   <React.Fragment key={ob.id}>
                     <>
-                      <div className="col-lg-3 d-none d-lg-block d-md-none">
+                      <div className="col-lg-4 d-none d-lg-block d-md-none">
                         <FlipCard card={ob} />
                       </div>
-                      <div className="col-lg-3 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
+                      <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
                         <SingleCard card={ob} />
                       </div>
+                     
                     </>
                   </React.Fragment>
                 ))}
+                {/* <Pagination {...paginationConfig} /> */}
               </div>
             </div>
           </div>

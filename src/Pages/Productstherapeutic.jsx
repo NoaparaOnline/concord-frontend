@@ -1,12 +1,12 @@
-import React,{ useState} from 'react'
+import React, { useState } from "react";
 import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 
-import {ByTherapeutic} from '../components/HomeComponents/ProductsData/productbytheraputic'
+import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
+import { Pagination } from "react-bootstrap";
 const Products_therapeutic = () => {
-
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -20,40 +20,37 @@ const Products_therapeutic = () => {
     },
   ];
 
-
-
-
-  const [obj , setObj] = useState(ByTherapeutic);
+  const [obj, setObj] = useState(ByTherapeutic);
   const filteredtype = (type) => {
-    if (type==="All") {
-      setObj(ByTherapeutic)
-    }
-    else if (type==="Syrup") {
-      const filterd = ByTherapeutic.filter(category => 
-        category.type === "Syrup" )
+    if (type === "All") {
+      setObj(ByTherapeutic);
+    } else if (type === "Syrup") {
+      const filterd = ByTherapeutic.filter(
+        (category) => category.type === "Syrup"
+      );
+      setObj(filterd);
+    } else if (type === "Tablet") {
+      const filterd = ByTherapeutic.filter(
+        (category) => category.type === "Tablet"
+      );
+      setObj(filterd);
+    } else if (type === "Capsule") {
+      const filterd = ByTherapeutic.filter(
+        (category) => category.type === "Capsule"
+      );
+      setObj(filterd);
+    } else if (type === "Hand Rub") {
+      const filterd = ByTherapeutic.filter(
+        (category) => category.type === "Hand Rub"
+      );
+      setObj(filterd);
+    } else if (type === "Injectables") {
+      const filterd = ByTherapeutic.filter(
+        (category) => category.type === "Injectables"
+      );
       setObj(filterd);
     }
-    else if (type==="Tablet") {
-      const filterd = ByTherapeutic.filter(category => 
-        category.type === "Tablet" )
-      setObj(filterd);
-    }
-    else if (type==="Capsule") {
-      const filterd = ByTherapeutic.filter(category => 
-        category.type === "Capsule" )
-      setObj(filterd);
-    }
-    else if (type==="Hand Rub") {
-      const filterd = ByTherapeutic.filter(category => 
-        category.type === "Hand Rub" )
-      setObj(filterd);
-    }
-    else if (type==="Injectables") {
-      const filterd = ByTherapeutic.filter(category => 
-        category.type === "Injectables" )
-      setObj(filterd);
-    }
-  }
+  };
 
   return (
     <div>
@@ -61,8 +58,7 @@ const Products_therapeutic = () => {
         heading={"By Therapeutic Class"}
         subHeading={`BY THERAPEUTIC CLASS`}
         LinksBan={LinksBan}
-        
-        backposit={'center right'}
+        backposit={"center right"}
         backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url()`}
         height={""}
         backgroundSize={""}
@@ -74,7 +70,9 @@ const Products_therapeutic = () => {
         <div className="row">
           <div className="col-sm-12 col-lg-3">
             <div className="productFilterContent">
-              <h3 className="filterHeading" style={{ fontWeight: '600' }} >Product Categories</h3>
+              <h3 className="filterHeading" style={{ fontWeight: "600" }}>
+                Product Categories
+              </h3>
               <form id="category-radio-btn">
                 <input
                   className="me-2"
@@ -83,7 +81,7 @@ const Products_therapeutic = () => {
                   name="product-category"
                   value="1"
                   defaultChecked
-                  onChange={()=>filteredtype("All")}
+                  onChange={() => filteredtype("All")}
                 />
                 <label htmlFor="all">All</label>
                 <br />
@@ -93,7 +91,7 @@ const Products_therapeutic = () => {
                   id="injectables"
                   name="product-category"
                   value="2"
-                  onChange={()=>filteredtype("Injectables")}
+                  onChange={() => filteredtype("Injectables")}
                 />
                 <label htmlFor="injectables">Injectables</label>
                 <br />
@@ -103,7 +101,7 @@ const Products_therapeutic = () => {
                   id="syrup"
                   name="product-category"
                   value="3"
-                  onChange={()=>filteredtype("Syrup")}
+                  onChange={() => filteredtype("Syrup")}
                 />
                 <label htmlFor="syrup">Syrup</label>
                 <br />
@@ -113,7 +111,7 @@ const Products_therapeutic = () => {
                   id="tablet"
                   name="product-category"
                   value="4"
-                  onChange={()=>filteredtype("Tablet")}
+                  onChange={() => filteredtype("Tablet")}
                 />
                 <label htmlFor="tablet">Tablet</label>
                 <br />
@@ -123,7 +121,7 @@ const Products_therapeutic = () => {
                   id="capsule"
                   name="product-category"
                   value="5"
-                  onChange={()=>filteredtype("Capsule")}
+                  onChange={() => filteredtype("Capsule")}
                 />
                 <label htmlFor="capsule">Capsule</label>
                 <br />
@@ -133,28 +131,43 @@ const Products_therapeutic = () => {
                   id="handrub"
                   name="product-category"
                   value="6"
-                  onChange={()=>filteredtype("Hand Rub")}
-
+                  onChange={() => filteredtype("Hand Rub")}
                 />
                 <label htmlFor="handrub">Hand Rub</label>
               </form>
-             </div>
+            </div>
           </div>
 
           <div className="col-sm-12 col-lg-9 mt-0">
             <div className="row">
               {obj.map((ob, index) => (
                 <React.Fragment key={ob.id}>
-
                   <>
-                    <div className="col-sm-12 col-lg-3 d-none d-lg-block d-md-none">
+                    <div className="col-lg-4 d-none d-lg-block d-md-none">
                       <FlipCard card={ob} />
                     </div>
-                    <div className="col-sm-12 col-lg-3 d-lg-none d-sm-block col-md-6">
+
+                    <div className="col-lg-4 d-lg-none d-sm-block col-md-6">
                       <SingleCard card={ob} />
                     </div>
-                  </>
+                    <Pagination>
+                      <Pagination.First />
+                      <Pagination.Prev />
+                      <Pagination.Item>{1}</Pagination.Item>
+                      <Pagination.Ellipsis />
 
+                      <Pagination.Item>{10}</Pagination.Item>
+                      <Pagination.Item>{11}</Pagination.Item>
+                      <Pagination.Item active>{12}</Pagination.Item>
+                      <Pagination.Item>{13}</Pagination.Item>
+                      <Pagination.Item disabled>{14}</Pagination.Item>
+
+                      <Pagination.Ellipsis />
+                      <Pagination.Item>{20}</Pagination.Item>
+                      <Pagination.Next />
+                      <Pagination.Last />
+                    </Pagination>
+                  </>
                 </React.Fragment>
               ))}
             </div>
@@ -164,7 +177,7 @@ const Products_therapeutic = () => {
 
       <CompanyLogos />
     </div>
-  )
-}
+  );
+};
 
-export default Products_therapeutic
+export default Products_therapeutic;

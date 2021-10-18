@@ -12,6 +12,7 @@ const Facilities_ourdistribution = () => {
       position: "Head of Distribution",
       num: "01991146267",
       mailname: "cpl.khairul@gmail.com",
+      mapname2:'Google Map',
       mapname: "35 Bijoy Nagar dhaka-1000.",
       maillink: "mailto:cpl.khairul@gmail.com",
       maplink:
@@ -24,6 +25,7 @@ const Facilities_ourdistribution = () => {
       position: "DIC- Executive",
       num: "01991145305",
       mailname: "cpldhakadepot@gmail.com",
+      mapname2:'Google Map',
       mapname: "35 Bijoy Nagar dhaka-1000.",
       maillink: "mailto:cpldhakadepot@gmail.com",
       maplink:
@@ -36,6 +38,7 @@ const Facilities_ourdistribution = () => {
       position: "DIC- Executive",
       num: "01991145334",
       mailname: "cplbarisaldepot@gmail.com",
+      mapname2:'Google Map',
       mapname:
         "Concord Pharmaceuticals Ltd.D/S Tower, 1st floor, Shahid Altaf Memorial Girls School Road,South Alekanda, Barishal",
       maillink: "mailto:cpl.khairul@gmail.com",
@@ -49,6 +52,7 @@ const Facilities_ourdistribution = () => {
       position: "DIC-Executive",
       num: "01991145318",
       mailname: "cpljessore@gmail.com",
+      mapname2:'Google Map',
       mapname:
         "Concord Pharmaceuticals Ltd,Naznin Vila 1/B Ghop Center Road. Jessore",
       maillink: "mailto:cpljessore@gmail.com",
@@ -62,6 +66,7 @@ const Facilities_ourdistribution = () => {
       position: "DIC-Executive",
       num: "01991145365",
       mailname: "cplcomilladepot@gmail.com",
+      mapname2:'Google Map',
       mapname:
         "Concord Pharmaceuticals Ltd.Nahar Villa, 447-Nozrul Avenue Kandir Par, Cumilla",
       maillink: "mailto:cplcomilladepot@gmail.com",
@@ -75,6 +80,7 @@ const Facilities_ourdistribution = () => {
       position: "DIC-Executive",
       num: "01991145350",
       mailname: "cplnoakhali@gmail.com",
+      mapname2:'Google Map',
       mapname:
         "Amena Monjil (1st Floor), Holding No. 247,Shahid Shah Alam Bir Uttam Sarak,Modhusudonpur, Maijdee Court,Noakahli – 3800.",
       maillink: "mailto:cplnoakhali@gmail.com",
@@ -88,6 +94,7 @@ const Facilities_ourdistribution = () => {
       position: "DIC-Executive",
       num: "01991145376",
       mailname: "cplmymenshinghdepot@gmail.com",
+      mapname2:'Google Map',
       mapname:
         "Concord Pharmaceuticals Ltd,291 Maskanda, Mymenshingh",
       maillink: "mailto:cplmymenshinghdepot@gmail.com",
@@ -101,6 +108,7 @@ const Facilities_ourdistribution = () => {
       position: "DIC-Executive",
       num: "01991145385",
       mailname: "cplchittagongdepot@gmail.com",
+      mapname2:'Google Map',
       mapname:
         "House No: X-51,Road No:07,Block:A Chandgoan R/A Chittagong Depot",
       maillink: "mailto:cplchittagongdepot@gmail.com",
@@ -114,6 +122,7 @@ const Facilities_ourdistribution = () => {
       position: "DIC-Executive",
       num: "01991145414",
       mailname: "cplrangpurdepot@gmail.com",
+      mapname2:'Google Map',
       mapname:
         "House No: X-51,Road No:07,Block:A Chandgoan R/A Chittagong Depot",
       maillink: "mailto:cplrangpurdepot@gmail.com",
@@ -127,6 +136,7 @@ const Facilities_ourdistribution = () => {
       position: "DIC-Executive",
       num: "01991-145401",
       mailname: "cplrajshahi18@gmail.com",
+      mapname2:'Google Map',
       mapname:
         "Concord Pharmaceuticals Ltd.House No-115,Sector No-02,Road No-02,Uposhahor Rajshahi.",
       maillink: "mailto:cplrajshahi18@gmail.com",
@@ -140,6 +150,7 @@ const Facilities_ourdistribution = () => {
       position: "DIC-Executive",
       num: "01991-146103",
       mailname: "cpljhenaidahdepot@gmail.com",
+      mapname2:'Google Map',
       mapname:
         "Concord Pharmaceuticals Ltd.DR. Sheikh Mohammod Aminul Haque,30 Dukhi Mahmud sorok,Arappur, Jhenaidah. Bus Stand Dhaka Road , Bridze er Pase.",
       maillink: "mailto:cpljhenaidahdepot@gmail.com",
@@ -251,6 +262,17 @@ const Facilities_ourdistribution = () => {
                       >
                         <i className="fa fa-map-marker" aria-hidden="true"></i>{"  "}
                         <span>{ob.mapname}</span>
+                      </a>
+                    </div>
+                    <div className="mt-2">
+                      <a
+                        href={ob.maplink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "#0066b3" }}
+                      >
+                        <i className="fa fa-map" aria-hidden="true"></i>{"  "}
+                        <span>{ob.mapname2}</span>
                       </a>
                     </div>
                   </div>
