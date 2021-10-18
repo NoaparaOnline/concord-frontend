@@ -354,3 +354,11 @@ img {max-width: 100%; }
 .form-control[type=file] {
   overflow: hidden;
 }
+
+
+.page-404-default {
+  padding: 80px 0 160px;
+}
+.page-404 {
+  text-align: center;
+}

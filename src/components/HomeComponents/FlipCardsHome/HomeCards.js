@@ -14,7 +14,7 @@ const HomeCards = ({ card }) => {
               : `col-xxl-2 col-xl-4 col-lg-4  d-none d-lg-block d-md-none  custome-card-test mb-4`}>
                 <FlipCard card={ob} />
               </div>
-              <div  className="custome_xs_screen  d-lg-none d-sm-block col-md-4 col-sm-12 col-xs-12  custome-card-test mb-4">
+              <div  className="custome_xs_screen  d-lg-none d-sm-block col-md-6 col-sm-12 col-xs-12  custome-card-test mb-4">
                 <SingleCard card={ob} />
               </div>
               </React.Fragment>
