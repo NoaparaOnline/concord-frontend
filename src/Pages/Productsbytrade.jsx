@@ -4,17 +4,6 @@ import BannerWithText from "../components/ReusableComponents/BannerImgComponents
 import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 import { ByTrade } from "../components/HomeComponents/ProductsData/productsbytradedata";
-import acedolfr from "../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg";
-import acedolbk from "../Statics/assets/TabletsFrontBack/ban-Acedol-Tabletbk.jpg";
-import acubisfr from "../Statics/assets/TabletsFrontBack/Acubis-2.5fr.jpg";
-import acubisbk from "../Statics/assets/TabletsFrontBack/ban-Acubis-2bk.jpg";
-import conzifr from "../Statics/assets/TabletsFrontBack/Conzi-100-mlfr.jpg";
-import conzibk from "../Statics/assets/TabletsFrontBack/ban-Conzi-100-mlbk.jpg";
-import Dopagutfr from "../Statics/assets/TabletsFrontBack/Dopagut-60-mlfr.jpg";
-import Dopagutbk from "../Statics/assets/TabletsFrontBack/ban-Dopagut-60-mlbk.jpg";
-import histaminefr from "../Statics/assets/TabletsFrontBack/Anti-histaminefr.jpg";
-import histaminebk from "../Statics/assets/TabletsFrontBack/Anti-histaminebk.jpg";
-import { Pagination } from "react-bootstrap";
 import ReactPaginate from 'react-paginate';
 
 
@@ -80,25 +69,6 @@ const Products_bytrade = () => {
 
     }
   }
-  // let paginationConfig = {
-  //   totalPages: 22,
-  //   currentPage: 15,
-  //   showMax: 5,
-  //   size: "lg",
-  //   threeDots: true,
-  //   prevNext: true,
-  //   href: 'https://example.com/items?page=*', // * will be replaced by the page number
-  //   pageOneHref: 'https://example.com/items',
-  //   borderColor: 'red',
-  //   activeBorderColor: 'black',
-  //   activeBgColor: 'grey',
-  //   disabledBgColor: 'red',
-  //   activeColor: 'red',
-  //   color: 'purple',
-  //   disabledColor: 'green',
-  //   circle: true,
-  //   shadow: true
-  // };
 
   const [pageNumber, setPageNumber] = useState(0)
   const perPage = 9;
@@ -230,7 +200,6 @@ return (
                
                 forcePage={pageNumber}
                 />
-                {/* <Pagination {...paginationConfig} /> */}
               </div>
             </div>
           </div>
