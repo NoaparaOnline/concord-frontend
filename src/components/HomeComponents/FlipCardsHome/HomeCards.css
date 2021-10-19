@@ -17,7 +17,7 @@
   
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .container {
      max-width: 1200px;
    }
@@ -26,9 +26,19 @@
   .container {
     max-width: 1800px !important;
   }
-}
+} */
 @media screen and (min-width: 2600px) {
   .container {
     max-width: 2800px !important;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+     max-width: 1800px !important;
+   }
+}
+@media screen and (min-width: 1800px) {
+  .container {
+    max-width: 1800px !important;
   }
 }
