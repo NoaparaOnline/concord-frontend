@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
 import Loader from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
-import { getoldOrder, getOrder, getSingleOrder } from '../../Store/Actions/deportmanagerActions';
+import {  getOrder, getSingleOrder } from '../../Store/Actions/deportmanagerActions';
 
 const Payment = ({
   sidebarOpen,
@@ -22,17 +22,17 @@ const Payment = ({
 
 
   const order = useSelector((state) => state?.deport?.order);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (order?.length < 1) {
       dispatch(getOrder());
     }
-
+// eslint-disable-next-line
   }, [order]);
 
 
 
-  const dispatch = useDispatch();
   const loader = useSelector((state) => state?.logIn?.loader);
   //PAYMENT COLUMN HEADERS
   const DepomanagerPayment = [

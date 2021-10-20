@@ -4,37 +4,20 @@ import apiServices from "../../services/requestHandler";
 import { directorConstants } from "../Constants/directorConstant";
 import { logInConstants } from "../Constants/loginConstant";
 
-// export const getSchedule = () => async (dispatch) => {
-//   dispatch({
-//     type: logInConstants.SET_LOADER,
-//     payload: true,
-//   });
-//   const response = await apiServices.getSchedules();
-//   if (response?.data?.response_code === 200) {
-//     dispatch({
-//       type: directorConstants.GET_SCHEDULE,
-//       payload: response?.data?.response_data,
-//     });
-//     dispatch({
-//       type: logInConstants.SET_LOADER,
-//       payload: false,
-//     });
-//     return true
-//   }
 
-// };
 
 export const getSchedule = (uid) => async (dispatch) => {
-  const token = JSON.parse(localStorage.getItem("token"));
+  // alert("Action")
+  const token = JSON.parse(localStorage.getItem("tokenConcord"));
   dispatch({
     type: logInConstants.SET_LOADER,
     payload: true,
   });
   try {
+    // alert("Try")
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
-      `https://concord-backend-m1.herokuapp.com/api/schedules/read?child_uid=${uid}`,
-
+      `https://concord-backend-prod.herokuapp.com/api/schedules/read?child_uid=${uid}`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {
@@ -79,12 +62,12 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
 };
 
 export const getDoctors = (uid) => async (dispatch) => {
-  const token = JSON.parse(localStorage.getItem("token"));
+  const token = JSON.parse(localStorage.getItem("tokenConcord"));
 
   try {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
-      `https://concord-backend-m1.herokuapp.com/api/doctors/read?child_uid=${uid}`,
+      `https://concord-backend-prod.herokuapp.com/api/doctors/read?child_uid=${uid}`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {
@@ -111,12 +94,12 @@ export const getDoctors = (uid) => async (dispatch) => {
 // };
 
 export const getCustomers = (uid) => async (dispatch) => {
-  const token = JSON.parse(localStorage.getItem("token"));
+  const token = JSON.parse(localStorage.getItem("tokenConcord"));
 
   try {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
-      `https://concord-backend-m1.herokuapp.com/api/customers/read?child_uid=${uid}`,
+      `https://concord-backend-prod.herokuapp.com/api/customers/read?child_uid=${uid}`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {
@@ -153,25 +136,53 @@ export const getSingleUIDApproval = (data) => (dispatch) => {
 
 // GET PRODUCTS ALL DIRECTOR
 export const getProductsall = () => async (dispatch) => {
+  dispatch({
+    type: logInConstants.SET_LOADER,
+    payload: true,
+  });
   const response = await apiServices.getproductsall();
   if (response?.data?.response_code === 200) {
     dispatch({
       type: directorConstants.GET_PRODUCTS_ALL,
       payload: response?.data?.response_data,
     });
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
     return true;
+  }
+  else {
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
   }
 };
 
 // GET PRODUCTS NEWLY DIRECTOR
 export const getProductsnew = () => async (dispatch) => {
+  dispatch({
+    type: logInConstants.SET_LOADER,
+    payload: true,
+  });
   const response = await apiServices.getproductsnew();
   if (response?.data?.response_code === 200) {
     dispatch({
       type: directorConstants.GET_PRODUCTS_NEW,
       payload: response?.data?.response_data,
     });
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
     return true;
+  }
+  else {
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
   }
 };
 
@@ -224,12 +235,12 @@ export const getDistributioncenter = () => async (dispatch) => {
 };
 
 export const getAssignedto = () => async (dispatch) => {
-  const token = JSON.parse(localStorage.getItem("token"));
+  const token = JSON.parse(localStorage.getItem("tokenConcord"));
 
   try {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
-      `https://concord-backend-m1.herokuapp.com/api/fieldstaffs/childs`,
+      `https://concord-backend-prod.herokuapp.com/api/fieldstaffs/childs`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {
@@ -244,12 +255,12 @@ export const getAssignedto = () => async (dispatch) => {
 };
 
 export const getChildsData = (uid, role) => async (dispatch) => {
-  const token = JSON.parse(localStorage.getItem("token"));
+  const token = JSON.parse(localStorage.getItem("tokenConcord"));
 
   try {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
-      `https://concord-backend-m1.herokuapp.com/api/fieldstaffs/childs?child_uid=${uid}`,
+      `https://concord-backend-prod.herokuapp.com/api/fieldstaffs/childs?child_uid=${uid}`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {

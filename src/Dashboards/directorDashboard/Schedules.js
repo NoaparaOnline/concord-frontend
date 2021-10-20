@@ -46,6 +46,7 @@ const Schedules = ({
     if (schedule.length < 1) {
       dispatch(getSchedule());
     }
+    // eslint-disable-next-line
   }, []);
   useEffect(() => {
     setSelectedTabbledata(schedule);
@@ -103,13 +104,13 @@ const Schedules = ({
       text: "Approval Status",
       sort: true,
       style: (cell, row) => {
-        if (cell === "awaiting_approval")
+        if (cell === "Awaiting Approval")
           return { color: "#C0B627", fontWeight: "500" };
-        else if (cell === "cancelled")
+        else if (cell === "Cancelled")
           return { color: "red", fontWeight: "500" };
-        else if (cell === "approved")
+        else if (cell === "Approved")
           return { color: "green", fontWeight: "500" };
-        else if (cell === "reschedule")
+        else if (cell === "Request for Reschedule")
           return { color: "blue", fontWeight: "500" };
       },
     },

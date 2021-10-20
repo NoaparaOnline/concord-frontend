@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { BrowserRouter as Router, Route, Redirect,Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer, FixedRight } from "./components";
 import About from "./Pages/About";
@@ -49,7 +49,7 @@ import DapzineTablet from "./components/ReusableComponents/ProductDetail/Dapzine
 import Relikof from "./components/ReusableComponents/ProductDetail/Relikof";
 import Relikofkids from "./components/ReusableComponents/ProductDetail/Relikofkids";
 import Acedol from "./components/ReusableComponents/ProductDetail/Acedol";
-import Error404 from "./Pages/Error404";
+// import Error404 from "./Pages/Error404";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {

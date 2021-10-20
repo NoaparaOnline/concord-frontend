@@ -30,6 +30,7 @@ const Products = (
     if (productall?.length < 1) {
           dispatch(getProductsall());
         }
+        // eslint-disable-next-line
   }, [productall])
 
   const [selectedTabbledata, setSelectedTabbledata] = useState(productall);

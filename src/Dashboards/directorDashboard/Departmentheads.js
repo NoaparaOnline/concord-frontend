@@ -22,7 +22,7 @@ const Departmentheads = (
     if (departmenthead?.length < 1) {
     dispatch(getDepartmenthead());
     }
- 
+ // eslint-disable-next-line
   },[])
     const loader = useSelector((state) => state?.logIn?.loader);
    

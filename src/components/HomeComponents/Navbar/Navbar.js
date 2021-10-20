@@ -543,6 +543,7 @@ const Navbars = (props) => {
                       href="https://www.mdxdmfr.com"
                       className="nav-link secnav"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Tele-Medicine
                     </a>

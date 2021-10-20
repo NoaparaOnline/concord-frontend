@@ -137,8 +137,6 @@ import microcef200bk from '../../../Statics/assets/by-trade-name/Microcef-200-ba
 import microcef50fr from '../../../Statics/assets/by-trade-name/Microcef-50-ml-eng.jpg';
 import microcef50bk from '../../../Statics/assets/by-trade-name/Microcef-50-ml-ban.jpg';
 
-import monocal500fr from '../../../Statics/assets/by-trade-name/Monocal-500-eng.jpg';
-import monocal500bk from '../../../Statics/assets/by-trade-name/Monocal-500-ban.jpg';
 
 import monocaldboxfr from '../../../Statics/assets/by-trade-name/Monocal-D-Box-eng.jpg';
 import monocaldboxbk from '../../../Statics/assets/by-trade-name/Monocal-D-Box-ban.jpg';
@@ -187,6 +185,73 @@ import sefconds100bk from '../../../Statics/assets/by-trade-name/Sefcon-DS-100-m
 
 import unirab20fr from '../../../Statics/assets/by-trade-name/Unirab-20-eng.jpg';
 import unirab20bk from '../../../Statics/assets/by-trade-name/Unirab-20-ban.jpg';
+
+
+import optivas10fr from '../../../Statics/assets/by-trade-name/Optivas-10-eng.jpg';
+import optivas10bk from '../../../Statics/assets/by-trade-name/Optivas-10-ban.jpg';
+
+import panagra100fr from '../../../Statics/assets/by-trade-name/Panagra-100-eng.jpg';
+import panagra100bk from '../../../Statics/assets/by-trade-name/Panagra-100-ban.jpg';
+
+import peacepil3fr from '../../../Statics/assets/by-trade-name/Peacepil-3-mg-eng.jpg';
+import peacepil3bk from '../../../Statics/assets/by-trade-name/Peacepil-3-mg-ban.jpg';
+
+import picocef250fr from '../../../Statics/assets/by-trade-name/Picocef-250-eng.jpg';
+import picocef250bk from '../../../Statics/assets/by-trade-name/Picocef-250-ban.jpg';
+
+import picocef500fr from '../../../Statics/assets/by-trade-name/Picocef-500-eng.jpg';
+import picocef500bk from '../../../Statics/assets/by-trade-name/Picocef-500-ban.jpg';
+
+import plavasplusfr from '../../../Statics/assets/by-trade-name/Plavas-Plus-eng.jpg';
+import plavasplusbk from '../../../Statics/assets/by-trade-name/Plavas-Plus-ban.jpg';
+
+import polimet500fr from '../../../Statics/assets/by-trade-name/Polimet-500-eng.jpg';
+import polimet500bk from '../../../Statics/assets/by-trade-name/Polimet-500-ban.jpg';
+
+import polimet850fr from '../../../Statics/assets/by-trade-name/Polimet-850-eng.jpg';
+import polimet850bk from '../../../Statics/assets/by-trade-name/Polimet-850-ban.jpg';
+
+import paramax20fr from '../../../Statics/assets/by-trade-name/Pramax-20-eng.jpg';
+import paramax20bk from '../../../Statics/assets/by-trade-name/Pramax-20-ban.jpg';
+
+import paramax40fr from '../../../Statics/assets/by-trade-name/Pramax-40-eng.jpg';
+import paramax40bk from '../../../Statics/assets/by-trade-name/Pramax-40-ban.jpg';
+
+import radibac500fr from '../../../Statics/assets/by-trade-name/Radibac-500-eng.jpg';
+import radibac500bk from '../../../Statics/assets/by-trade-name/Radibac-500-ban.jpg';
+
+import roclav250fr from '../../../Statics/assets/by-trade-name/Roclav-250-eng.jpg';
+import roclav250bk from '../../../Statics/assets/by-trade-name/Roclav-250-ban.jpg';
+
+import roclav500fr from '../../../Statics/assets/by-trade-name/Roclav-500-eng.jpg';
+import roclav500bk from '../../../Statics/assets/by-trade-name/Roclav-500-ban.jpg';
+
+import rosucard10fr from '../../../Statics/assets/by-trade-name/Rosucard-10-eng.jpg';
+import rosucard10bk from '../../../Statics/assets/by-trade-name/Rosucard-10-ban.jpg';
+
+import rotagan200fr from '../../../Statics/assets/by-trade-name/Rotagan-200-eng.jpg';
+import rotagan200bk from '../../../Statics/assets/by-trade-name/Rotagan-200-ban.jpg';
+
+import tispafr from '../../../Statics/assets/by-trade-name/Tispa-eng.jpg';
+import tispabk from '../../../Statics/assets/by-trade-name/Tispa-ban.jpg';
+
+import unilorfr from '../../../Statics/assets/by-trade-name/unilor-eng.png';
+import unilorbk from '../../../Statics/assets/by-trade-name/Unilor-ban.jpg';
+
+import vildaglip50fr from '../../../Statics/assets/by-trade-name/Vildaglip-50-mg-eng.jpg';
+import vildaglip50bk from '../../../Statics/assets/by-trade-name/Vildaglip-50-mg-ban.jpg';
+
+import vildaglipm850fr from '../../../Statics/assets/by-trade-name/Vildaglip-M-850-eng.jpg';
+import vildaglipm850bk from '../../../Statics/assets/by-trade-name/Vildaglip-M-850-ban.jpg';
+
+import xdol60fr from '../../../Statics/assets/by-trade-name/X-Dol-60-Tab-eng.jpg';
+import xdol60bk from '../../../Statics/assets/by-trade-name/X-dol-60-Tab-ban.jpg';
+
+import xdol90fr from '../../../Statics/assets/by-trade-name/X-Dol-90-eng.jpg';
+import xdol90bk from '../../../Statics/assets/by-trade-name/X-Dol-90-ban.jpg';
+
+import xdol120fr from '../../../Statics/assets/by-trade-name/X-Dol-120-eng.jpg';
+import xdol120bk from '../../../Statics/assets/by-trade-name/X-Dol-120-ban.jpg';
 
 export const ByTrade = [
     {
@@ -1274,8 +1339,383 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "/unirab-20-capsule",
+      btnlink: "#",
       type:'Capsule'
     },
+
+    {
+      id: 64,
+      title: "Optivas 10",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 64,
+          imgf: optivas10fr,
+          imge: optivas10bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 65,
+      title: "Panagra 100",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 65,
+          imgf: panagra100fr,
+          imge: panagra100bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 66,
+      title: "Peacepil",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 66,
+          imgf: peacepil3fr,
+          imge: peacepil3bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 67,
+      title: "Picocef 250",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 67,
+          imgf: picocef250fr,
+          imge: picocef250bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 68,
+      title: "Picocef 500",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 68,
+          imgf: picocef500fr,
+          imge: picocef500bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 69,
+      title: "Plavas Plus",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 69,
+          imgf: plavasplusfr,
+          imge: plavasplusbk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 70,
+      title: "Polimet 500",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 70,
+          imgf: polimet500fr,
+          imge: polimet500bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 71,
+      title: "Polimet 850",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 71,
+          imgf: polimet850fr,
+          imge: polimet850bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 72,
+      title: "Paramax 20",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 72,
+          imgf: paramax20fr,
+          imge: paramax20bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 73,
+      title: "Paramax 40",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 73,
+          imgf: paramax40fr,
+          imge: paramax40bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 74,
+      title: "Radibac 500",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 74,
+          imgf: radibac500fr,
+          imge: radibac500bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 75,
+      title: "Roclav 250",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 75,
+          imgf: roclav250fr,
+          imge: roclav250bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 76,
+      title: "Roclav 500",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 76,
+          imgf: roclav500fr,
+          imge: roclav500bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 77,
+      title: "Rosucard 10",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 77,
+          imgf: rosucard10fr,
+          imge: rosucard10bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+{
+      id: 78,
+      title: "Rotagan 200",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 78,
+          imgf: rotagan200fr,
+          imge: rotagan200bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 79,
+      title: "Tispa",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 79,
+          imgf: tispafr,
+          imge: tispabk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+
+{
+      id: 80,
+      title: "Unilor",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 80,
+          imgf: unilorfr,
+          imge: unilorbk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 81,
+      title: "Vildaglip 50",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 81,
+          imgf: vildaglip50fr,
+          imge: vildaglip50bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 82,
+      title: "Vildaglip M 850",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 82,
+          imgf: vildaglipm850fr,
+          imge: vildaglipm850bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 83,
+      title: "X-Dol 60",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 83,
+          imgf: xdol60fr,
+          imge: xdol60bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 84,
+      title: "X-Dol 90",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 84,
+          imgf: xdol90fr,
+          imge: xdol90bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "#",
+      type:'tablet'
+    },
+
+{
+      id: 85,
+      title: "X-Dol 120",
+      text1: " ",
+      text2: " ",
+      img: [
+        {
+          id: 85,
+          imgf: xdol120fr,
+          imge: xdol120bk,
+        },
+      ],
+      btn: "Read More",
+      btnlink: "/#",
+      type:'tablet'
+    },
+
 
 ]

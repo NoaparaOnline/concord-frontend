@@ -13,7 +13,7 @@ import icon112 from "../../Statics/assets/Sidebar/112.png";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 import StatuschangedModal from "../../components/ReusableComponents/modals/StatuschangedModal/StatuschangedModal";
 import OrderHistory from "./OrderHistory";
