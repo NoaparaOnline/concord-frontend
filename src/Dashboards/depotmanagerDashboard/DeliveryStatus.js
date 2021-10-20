@@ -31,8 +31,8 @@ const DeliveryStatus = (
       if (oldorder?.length < 1) {
           dispatch(getoldOrder());
         }
-  
-    }, [oldorder,dispatch]);
+  // eslint-disable-next-line
+    }, []);
 
  
      //Delivery Status COLUMN HEADERS

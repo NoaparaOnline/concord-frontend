@@ -37,7 +37,7 @@ const NewOrder = (
             dispatch(getnewOrder());
           }
     // eslint-disable-next-line
-      }, [neworder]);
+      }, []);
     
 
 

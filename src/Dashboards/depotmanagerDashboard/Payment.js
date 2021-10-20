@@ -29,7 +29,7 @@ const Payment = ({
       dispatch(getOrder());
     }
 // eslint-disable-next-line
-  }, [order]);
+  }, []);
 
 
 
