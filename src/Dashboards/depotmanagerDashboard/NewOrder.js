@@ -36,7 +36,7 @@ const NewOrder = (
         if (neworder?.length < 1) {
             dispatch(getnewOrder());
           }
-    
+    // eslint-disable-next-line
       }, [neworder]);
     
 

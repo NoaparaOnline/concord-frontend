@@ -19,7 +19,7 @@ const DistributionCenter = (
     if (distributioncenter?.length < 1) {
       dispatch(getDistributioncenter());
     }
-
+// eslint-disable-next-line
   }, [])
 
 
@@ -115,6 +115,9 @@ const DistributionCenter = (
                                   obdep?.name
                                   );
                               }
+                              else{
+                                return ""
+                              }
                               })
                         }
                         datadesignation={
@@ -124,6 +127,9 @@ const DistributionCenter = (
                                 return (
                                   obdep?.designation
                                   );
+                              }
+                              else{
+                                return ""
                               }
                             
                             })
@@ -136,6 +142,9 @@ const DistributionCenter = (
                                   obdep?.email_address
                                   );
                               }
+                              else{
+                                return ""
+                              }
                             })
                             
                         }
@@ -146,6 +155,9 @@ const DistributionCenter = (
                                 return (
                                   obdep?.phone_number
                                   );
+                              }
+                              else{
+                                return ""
                               }
                             
                             })
@@ -158,6 +170,9 @@ const DistributionCenter = (
                                 return (
                                   `${obdep?.address.street_address} ,${obdep?.address.area} ,${obdep?.address.province}, ${obdep?.address.city}` 
                                   );
+                              }
+                              else{
+                                return ""
                               }
                             
                             })
@@ -186,6 +201,9 @@ const DistributionCenter = (
                                   obdep?.name
                                   );
                               }
+                              else{
+                                return ""
+                              }
                               })
                         }
                         datadesignation={
@@ -195,6 +213,9 @@ const DistributionCenter = (
                                 return (
                                   obdep?.designation
                                   );
+                              }
+                              else{
+                                return ""
                               }
                             
                             })
@@ -207,6 +228,9 @@ const DistributionCenter = (
                                   obdep?.email_address
                                   );
                               }
+                              else{
+                                return ""
+                              }
                             })
                             
                         }
@@ -217,6 +241,9 @@ const DistributionCenter = (
                                 return (
                                   obdep?.phone_number
                                   );
+                              }
+                              else{
+                                return ""
                               }
                             
                             })
@@ -230,7 +257,9 @@ const DistributionCenter = (
                                   `${obdep?.address.street_address} ,${obdep?.address.area} ,${obdep?.address.province}, ${obdep?.address.city}` 
                                   );
                               }
-                            
+                              else{
+                                return ""
+                              }
                             })
                           
                         }

@@ -1,17 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import { changePassword, setUserFromLocal } from "../../../../Store/Actions/loginActions";
-import {  getUser } from "../../../../Utils/auth.util";
+import { changePassword } from "../../../../Store/Actions/loginActions";
 const ChangePassword = (props) => {
  
  
   const dispatch = useDispatch();
   
 
-  const user = useSelector((state) => state?.logIn?.user);
   const onSubmit = async (data) => {
     
     if (data.new_password === data.new_password_next) {

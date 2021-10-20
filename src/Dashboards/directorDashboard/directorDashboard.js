@@ -13,7 +13,7 @@ import iconf from "../../Statics/assets/Sidebar/11.png";
 import icon111 from "../../Statics/assets/Sidebar/111.png";
 import icon112 from "../../Statics/assets/Sidebar/112.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 import DirectorScheduleCreate from "../../components/ReusableComponents/modals/DirectorScheduleCreate/DirectorScheduleCreate";
 import DirectorApprovalStatusChange from "../../components/ReusableComponents/modals/DirectorApprovalStatusChange/DirectorApprovalStatusChange";
@@ -99,17 +99,7 @@ const DirectorDashboard = (props) => {
     setShow1(!show1);
   };
 
-  const [selectedTabbledata, setSelectedTabbledata] = useState();
-  
-
-  // tabledata Toogle State
-  
-
-  // SELECTED TABLE DATA OBJECT HANDLER
-  const tabledataHandler = async (item) => {
-    setSelectedTabbledata(item);
-  };
-
+ 
   // Selected Buttons
   const [selectedTab0, setSelectedTab0] = useState("All");
 

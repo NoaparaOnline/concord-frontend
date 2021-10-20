@@ -37,7 +37,7 @@ const Stocks = ({
        else if (stockgift?.length < 1) {
         dispatch(getStocksGiftProduct())
        }
-      }, [stock,stockmedicine,stockgift]);
+      }, [stock,stockmedicine,stockgift,dispatch]);
 
     const tabledataHandler = async (item) => {
         setSelectedTabbledata(item);

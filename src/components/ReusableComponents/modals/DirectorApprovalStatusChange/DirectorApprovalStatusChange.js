@@ -1,8 +1,8 @@
-import React,{ useEffect, useState } from 'react'
+import React,{ useState } from 'react'
 import { useForm } from "react-hook-form";
-import { Form, Modal } from "react-bootstrap";
+import {  Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { getSchedule, SchedulesApprovalStatusChange } from '../../../../Store/Actions/directorActions';
+import {  SchedulesApprovalStatusChange } from '../../../../Store/Actions/directorActions';
 
 const DirectorApprovalStatusChange = (props) => {
 
@@ -19,7 +19,7 @@ const DirectorApprovalStatusChange = (props) => {
     const {
         
         handleSubmit,
-        formState: { errors },
+     
       } = useForm();
       const dispatch = useDispatch();
     
@@ -44,7 +44,10 @@ const DirectorApprovalStatusChange = (props) => {
      const uniqueItems = [];
      schedule.map(item => {
       if (uniqueItems.indexOf(item.approval_status) === -1) {
-          uniqueItems.push(item.approval_status)
+          return uniqueItems.push(item.approval_status)
+      }
+      else{
+        return ""
       }
       });
     return (
@@ -79,15 +82,15 @@ const DirectorApprovalStatusChange = (props) => {
 
                           <option selected className="text-capitalize">{approvaluid.approval_status}</option>
                           {
-                            approvaluid.approval_status === "approved" ? "" :
+                            approvaluid.approval_status === "Approved" ? "" :
                               <option className="text-capitalize">approved</option>
                           }
                           {
-                            approvaluid.approval_status === "awaiting_approval" ? "" :
-                              <option className="text-capitalize">awaiting_approval</option>
+                            approvaluid.approval_status === "Awaiting Approval" ? "" :
+                              <option className="text-capitalize">Awaiting Approval</option>
                           }
                           {
-                            approvaluid.approval_status === "cancelled" ? "" :
+                            approvaluid.approval_status === "Cancelled" ? "" :
                               <option className="text-capitalize">cancelled</option>
                           }
 

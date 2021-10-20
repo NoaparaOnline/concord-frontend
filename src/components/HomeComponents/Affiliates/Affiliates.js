@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import ewvila from '../../../Statics/assets/Sliderlogos/1.png'
 import dmfr from '../../../Statics/assets/Sliderlogos/2.png'
 import toticell from '../../../Statics/assets/Sliderlogos/3.png'
-import { NavLink } from 'react-router-dom'
 const Affiliates = () => {
        
       

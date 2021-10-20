@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { FlipCard } from "../components";
@@ -70,8 +70,10 @@ const Products_bytrade = () => {
     }
   }
 
+  const [selected, setSelected] = useState(5);
+
   const [pageNumber, setPageNumber] = useState(0)
-  const perPage = 9;
+  const perPage = selected;
   const pageVisited =pageNumber * perPage;
   
   const displayUsers = obj
@@ -115,6 +117,9 @@ return (
         <div className="row">
           <div className="col-sm-12 col-lg-3 ">
             <div className="productFilterContent">
+
+              <div className="productFilterContent1">
+
               <h3 className="filterHeading" style={{ fontWeight: "600" }}>
                 Product Categories
               </h3>
@@ -182,6 +187,30 @@ return (
                 />
                 <label htmlFor="handrub">Hand Rub</label>
               </form>
+
+
+              </div>
+
+              <div className="">
+            <label className="my-2" style={{fontSize:'18px',fontWeight:'500',color:'#565656'}}>No of Products:</label>
+                <select
+            className="form-control form-select"
+            name="sm"
+            onChange={(e) => {
+              setSelected(e.target.value);
+             
+            }}
+            value={selected}
+          >
+            <option selected>5</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            
+          </select>
+            </div>
             </div>
           </div>
 

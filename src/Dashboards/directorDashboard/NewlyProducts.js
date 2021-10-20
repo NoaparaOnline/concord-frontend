@@ -34,6 +34,7 @@ const NewlyProducts = (
     if (productnew?.length < 1) {
           dispatch(getProductsnew());
         }
+        // eslint-disable-next-line
   }, [productnew])
 
   const [selectedTabbledata, setSelectedTabbledata] = useState(productnew);

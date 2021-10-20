@@ -4,19 +4,11 @@ import "./TableDash.css";
 import { tableinner } from "../TableDash/tableConstant";
 import { useSelector } from "react-redux";
 import moment from "moment";
-import { useEffect } from "react";
-import { useHistory } from "react-router";
 const TableInnerPage = (props) => {
 
-  const history = useHistory();
   const productidstate = useSelector((state) => state?.deport?.productidstate);
 
-  // useEffect(() => {
-  //   // if( isEmpty(productidstate.isEmpty({})))
-  //   // {
-  //   //   history.push('/depotmanager-dashboard')
-  //   // }
-  // }, [])
+
   
   const medicinesall =productidstate;
 

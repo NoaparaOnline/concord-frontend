@@ -3,9 +3,9 @@ import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
-
 import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
-import { Pagination } from "react-bootstrap";
+import ReactPaginate from "react-paginate";
+
 const Products_therapeutic = () => {
   const LinksBan = [
     {
@@ -24,36 +24,68 @@ const Products_therapeutic = () => {
   const filteredtype = (type) => {
     if (type === "All") {
       setObj(ByTherapeutic);
+      setPageNumber(0);
     } else if (type === "Syrup") {
       const filterd = ByTherapeutic.filter(
         (category) => category.type === "Syrup"
       );
       setObj(filterd);
+      setPageNumber(0);
     } else if (type === "Tablet") {
       const filterd = ByTherapeutic.filter(
         (category) => category.type === "Tablet"
       );
       setObj(filterd);
+      setPageNumber(0);
     } else if (type === "Capsule") {
       const filterd = ByTherapeutic.filter(
         (category) => category.type === "Capsule"
       );
       setObj(filterd);
-    } 
+      setPageNumber(0);
+    }
     // else if (type === "Hand Rub") {
     //   const filterd = ByTherapeutic.filter(
     //     (category) => category.type === "Hand Rub"
     //   );
-    //   setObj(filterd);
+    // setObj(filterd);
+    // setPageNumber(0);
     // }
-     else if (type === "Injectables") {
+    else if (type === "Injectables") {
       const filterd = ByTherapeutic.filter(
         (category) => category.type === "Injectables"
       );
       setObj(filterd);
+      setPageNumber(0);
     }
   };
+  const [selected, setSelected] = useState(5);
 
+  const [pageNumber, setPageNumber] = useState(0);
+  const perPage = selected;
+  const pageVisited = pageNumber * perPage;
+
+  const displayUsers = obj
+    .slice(pageVisited, pageVisited + perPage)
+    .map((ob, index) => (
+      <React.Fragment key={ob.id}>
+        <>
+          <div className="col-lg-4 d-none d-lg-block d-md-none">
+            <FlipCard card={ob} />
+          </div>
+
+          <div className="col-lg-4 d-lg-none d-sm-block col-md-6">
+            <SingleCard card={ob} />
+          </div>
+        </>
+      </React.Fragment>
+    ));
+
+  const pageCount = Math.ceil(obj.length / perPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
   return (
     <div>
       <BannerWithText
@@ -71,7 +103,12 @@ const Products_therapeutic = () => {
       <div className="container mt-5">
         <div className="row">
           <div className="col-sm-12 col-lg-3">
-            <div className="productFilterContent">
+            
+            
+            <div className="productFilterContent"> 
+
+
+            <div className="productFilterContent1">
               <h3 className="filterHeading" style={{ fontWeight: "600" }}>
                 Product Categories
               </h3>
@@ -127,51 +164,57 @@ const Products_therapeutic = () => {
                 />
                 <label htmlFor="capsule">Capsule</label>
                 <br />
-                {/* <input
-                  className="me-2"
-                  type="radio"
-                  id="handrub"
-                  name="product-category"
-                  value="6"
-                  onChange={() => filteredtype("Hand Rub")}
-                />
-                <label htmlFor="handrub">Hand Rub</label> */}
               </form>
             </div>
+            <div className="">
+            <label className="my-2" style={{fontSize:'18px',fontWeight:'500',color:'#565656'}}>No of Products:</label>
+                <select
+            className="form-control form-select"
+            name="sm"
+            onChange={(e) => {
+              setSelected(e.target.value);
+             
+            }}
+            value={selected}
+          >
+            <option selected>5</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            
+          </select>
+            </div>
+            </div>
+
+
+
           </div>
 
           <div className="col-sm-12 col-lg-9 mt-0">
             <div className="row">
-              {obj.map((ob, index) => (
-                <React.Fragment key={ob.id}>
-                  <>
-                    <div className="col-lg-4 d-none d-lg-block d-md-none">
-                      <FlipCard card={ob} />
-                    </div>
-
-                    <div className="col-lg-4 d-lg-none d-sm-block col-md-6">
-                      <SingleCard card={ob} />
-                    </div>
-                    <Pagination>
-                      <Pagination.First />
-                      <Pagination.Prev />
-                      <Pagination.Item>{1}</Pagination.Item>
-                      <Pagination.Ellipsis />
-
-                      <Pagination.Item>{10}</Pagination.Item>
-                      <Pagination.Item>{11}</Pagination.Item>
-                      <Pagination.Item active>{12}</Pagination.Item>
-                      <Pagination.Item>{13}</Pagination.Item>
-                      <Pagination.Item disabled>{14}</Pagination.Item>
-
-                      <Pagination.Ellipsis />
-                      <Pagination.Item>{20}</Pagination.Item>
-                      <Pagination.Next />
-                      <Pagination.Last />
-                    </Pagination>
-                  </>
-                </React.Fragment>
-              ))}
+              {displayUsers}
+              <ReactPaginate
+                previousLabel={
+                  <i
+                    style={{ fontSize: "20px", color: "#0066b3" }}
+                    className="fa fa-arrow-left"
+                  ></i>
+                }
+                nextLabel={
+                  <i
+                    style={{ fontSize: "20px", color: "#0066b3" }}
+                    className="fa fa-arrow-right"
+                  ></i>
+                }
+                pageCount={pageCount}
+                onPageChange={changePage}
+                containerClassName={"pagination"}
+                subContainerClassName={"pages pagination"}
+                activeClassName={"active"}
+                forcePage={pageNumber}
+              />
             </div>
           </div>
         </div>

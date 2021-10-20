@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import {
@@ -28,12 +28,12 @@ const DependentDropdowns = (props) => {
   // console.log("mpodata",mpodata);
   // console.log("filterd",filterd);
 
-  const [defaultval, setDefaultval] = useState({
+  const defaultval = {
     sm: "Select SM ...",
     rsm: "Select RSM ...",
     am: "Select AM ...",
     mpo: "Select MPO ...",
-  });
+  };
 
   const [selected, setSelected] = useState("");
   const [selected1, setSelected1] = useState("");
