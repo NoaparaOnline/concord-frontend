@@ -264,7 +264,7 @@ const Facilities_ourdistribution = () => {
                         <span>{ob.mapname}</span>
                       </a>
                     </div>
-                    <div className="mt-2">
+                    <div className="my-2">
                       <a
                         href={ob.maplink}
                         target="_blank"

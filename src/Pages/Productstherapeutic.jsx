@@ -39,12 +39,14 @@ const Products_therapeutic = () => {
         (category) => category.type === "Capsule"
       );
       setObj(filterd);
-    } else if (type === "Hand Rub") {
-      const filterd = ByTherapeutic.filter(
-        (category) => category.type === "Hand Rub"
-      );
-      setObj(filterd);
-    } else if (type === "Injectables") {
+    } 
+    // else if (type === "Hand Rub") {
+    //   const filterd = ByTherapeutic.filter(
+    //     (category) => category.type === "Hand Rub"
+    //   );
+    //   setObj(filterd);
+    // }
+     else if (type === "Injectables") {
       const filterd = ByTherapeutic.filter(
         (category) => category.type === "Injectables"
       );
@@ -125,7 +127,7 @@ const Products_therapeutic = () => {
                 />
                 <label htmlFor="capsule">Capsule</label>
                 <br />
-                <input
+                {/* <input
                   className="me-2"
                   type="radio"
                   id="handrub"
@@ -133,7 +135,7 @@ const Products_therapeutic = () => {
                   value="6"
                   onChange={() => filteredtype("Hand Rub")}
                 />
-                <label htmlFor="handrub">Hand Rub</label>
+                <label htmlFor="handrub">Hand Rub</label> */}
               </form>
             </div>
           </div>

@@ -1,21 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 import { ByTrade } from "../components/HomeComponents/ProductsData/productsbytradedata";
-import acedolfr from "../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg";
-import acedolbk from "../Statics/assets/TabletsFrontBack/ban-Acedol-Tabletbk.jpg";
-import acubisfr from "../Statics/assets/TabletsFrontBack/Acubis-2.5fr.jpg";
-import acubisbk from "../Statics/assets/TabletsFrontBack/ban-Acubis-2bk.jpg";
-import conzifr from "../Statics/assets/TabletsFrontBack/Conzi-100-mlfr.jpg";
-import conzibk from "../Statics/assets/TabletsFrontBack/ban-Conzi-100-mlbk.jpg";
-import Dopagutfr from "../Statics/assets/TabletsFrontBack/Dopagut-60-mlfr.jpg";
-import Dopagutbk from "../Statics/assets/TabletsFrontBack/ban-Dopagut-60-mlbk.jpg";
-import histaminefr from "../Statics/assets/TabletsFrontBack/Anti-histaminefr.jpg";
-import histaminebk from "../Statics/assets/TabletsFrontBack/Anti-histaminebk.jpg";
-import { Pagination } from "react-bootstrap";
-
+import ReactPaginate from 'react-paginate';
 
 
 const Products_bytrade = () => {
@@ -40,53 +29,74 @@ const Products_bytrade = () => {
   const filteredtype = (type) => {
     if (type==="All") {
       setObj(ByTrade)
+      setPageNumber(0);
+      
     }
     else if (type==="Syrup") {
       const filterd = ByTrade.filter(category => 
         category.type === "Syrup" )
       setObj(filterd);
+      setPageNumber(0);
+      
     }
     else if (type==="Tablet") {
       const filterd = ByTrade.filter(category => 
         category.type === "Tablet" )
       setObj(filterd);
+      setPageNumber(0);
+      
     }
     else if (type==="Capsule") {
       const filterd = ByTrade.filter(category => 
         category.type === "Capsule" )
       setObj(filterd);
+      setPageNumber(0);
+      
     }
     else if (type==="Hand Rub") {
       const filterd = ByTrade.filter(category => 
         category.type === "Hand Rub" )
       setObj(filterd);
+      setPageNumber(0);
+      
     }
     else if (type==="Injectables") {
       const filterd = ByTrade.filter(category => 
         category.type === "Injectables" )
       setObj(filterd);
+      setPageNumber(0);
+      
+
     }
   }
-  // let paginationConfig = {
-  //   totalPages: 22,
-  //   currentPage: 15,
-  //   showMax: 5,
-  //   size: "lg",
-  //   threeDots: true,
-  //   prevNext: true,
-  //   href: 'https://example.com/items?page=*', // * will be replaced by the page number
-  //   pageOneHref: 'https://example.com/items',
-  //   borderColor: 'red',
-  //   activeBorderColor: 'black',
-  //   activeBgColor: 'grey',
-  //   disabledBgColor: 'red',
-  //   activeColor: 'red',
-  //   color: 'purple',
-  //   disabledColor: 'green',
-  //   circle: true,
-  //   shadow: true
-  // };
-  return (
+
+  const [pageNumber, setPageNumber] = useState(0)
+  const perPage = 9;
+  const pageVisited =pageNumber * perPage;
+  
+  const displayUsers = obj
+  .slice(pageVisited , pageVisited + perPage)
+  .map((ob, index) => (
+    <React.Fragment key={ob.id}>
+      <>
+        <div className="col-lg-4 d-none d-lg-block d-md-none">
+          <FlipCard card={ob} />
+        </div>
+        <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
+          <SingleCard card={ob} />
+        </div>
+       
+      </>
+    </React.Fragment>
+  ));
+ 
+  const pageCount = Math.ceil(obj.length/ perPage) ;
+
+  const changePage = ({selected}) => {
+    setPageNumber(selected);
+  }
+
+return (
     <div>
       <BannerWithText
         heading={"By Trade Name"}
@@ -150,7 +160,7 @@ const Products_bytrade = () => {
                   onChange={()=>filteredtype("Tablet")}
                 />
                 <label htmlFor="tablet">Tablet</label>
-                <br />
+                <br/>
                 <input
                   className="me-2"
                   type="radio"
@@ -178,20 +188,18 @@ const Products_bytrade = () => {
           <div className="col-sm-12 col-lg-9 mt-0">
             <div className="cards ">
               <div className="row">
-                {obj.map((ob, index) => (
-                  <React.Fragment key={ob.id}>
-                    <>
-                      <div className="col-lg-4 d-none d-lg-block d-md-none">
-                        <FlipCard card={ob} />
-                      </div>
-                      <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
-                        <SingleCard card={ob} />
-                      </div>
-                     
-                    </>
-                  </React.Fragment>
-                ))}
-                {/* <Pagination {...paginationConfig} /> */}
+                {displayUsers}
+                <ReactPaginate
+                previousLabel={<i  style={{fontSize:'20px' ,color: '#0066b3'}} className="fa fa-arrow-left"></i>}
+                nextLabel={<i  style={{fontSize:'20px' ,color: '#0066b3'}} className="fa fa-arrow-right"></i>}
+                pageCount={pageCount}
+                onPageChange={changePage}
+                containerClassName={"pagination"}
+                subContainerClassName={"pages pagination"}
+                activeClassName={"active"}
+               
+                forcePage={pageNumber}
+                />
               </div>
             </div>
           </div>

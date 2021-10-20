@@ -21,7 +21,7 @@ const FlipCard = ({ card }) => {
               {card.img.map((ob,index) => {
                 return (
                   <>
-                  <img key={ob.id} src={ob.imgf} className="card-img-top p-3" height="100%" width="100%"   alt="..." />
+                  <img  key={ob.id} src={ob.imgf} className="card-img-top p-3" height="100%" width="100%"   alt="..." />
               <Link to={btnlink} onClick={() => dispatch(getSingleProductDataObj(ob.datainnerpage))}    className="btn  rounded-pill colr_btn">
                 {btn}
               </Link>
