@@ -74,35 +74,35 @@ const StatuschangedModal = (props) => {
 
                           <option selected >{productuid?.delivery_status}</option>
                           {
-                            productuid?.delivery_status === "Pending" ? "" :
-                              <option >Pending</option>
+                            productuid?.delivery_status === "Pending" || "pending" ? "" :
+                              <option >pending</option>
                           }
                           {
-                            productuid?.delivery_status === "Dispatched" ? "" :
-                              <option>Dispatched</option>
+                            productuid?.delivery_status === "Dispatched" || "dispatched" ? "" :
+                              <option>dispatched</option>
                           }
 
-                          <option>Delivered</option>
-                          <option>Declined</option>
-                          <option>Cancelled</option>
+                          <option>delivered</option>
+                          <option>declined</option>
+                          <option>cancelled</option>
                         </select>
                       </div>
                       <div className="form-group">
-                        <label>Payment Status</label>
+                        <label>payment Status</label>
                         <select className="form-control form-select" id="exampleFormControlSelect1" onChange={(e) => { setDropdown2(e.target.value) }}>
                           <option selected >{productuid?.payment_status}</option>
                           {
-                            productuid?.payment_status === "Pending" ? "" :
-                              <option >Pending</option>
+                            productuid?.payment_status === "Pending" || "pending" ? "" :
+                              <option>pending</option>
                           }
                           {
-                            productuid?.payment_status === "Unpaid" ? "" :
-                              <option>Unpaid</option>
+                            productuid?.payment_status === "Unpaid" || "unpaid" ? "" :
+                              <option>unpaid</option>
                           }
-                          <option>Paid</option>
-                          <option>Submitted</option>
-                          <option>Declined</option>
-                          <option>Cancelled</option>
+                          <option>paid</option>
+                          <option>submitted</option>
+                          <option>declined</option>
+                          <option>cancelled</option>
                         </select>
                       </div>
 

@@ -45,16 +45,16 @@ const Payment = ({
       dataField: "payment_status",
       text: "Payment Status",
       style: (cell, row) => {
-        if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
-        else if (cell === "Cancelled" || cell === "Declined")
+        if (cell === "pending") return { color: "#C0B627", fontWeight: "500" };
+        else if (cell === "cancelled" || cell === "declined")
           return { color: "red", fontWeight: "500" };
         else if (
-          cell === "Paid" ||
-          cell === "Delivered" ||
-          cell === "Submitted"
+          cell === "paid" ||
+          cell === "delivered" ||
+          cell === "submitted"
         )
           return { color: "green", fontWeight: "500" };
-        else if (cell === "Dispatched" || cell === "Unpaid")
+        else if (cell === "dispatched" || cell === "unpaid")
           return { color: "blue", fontWeight: "500" };
       }, sort: true
     },

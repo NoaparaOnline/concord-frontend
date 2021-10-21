@@ -45,8 +45,8 @@ const OrderHistory = (
         { dataField: "order_id", text: "Orders ID", sort: true },
         { dataField: "customer.name", text: "Customer Name", sort: true },
         {
-            dataField: "customer.market.name", text: "Market & Address",
-            formatter: appendtwoDatafields, sort: true
+            dataField: "customer.market__street_address", text: "Market & Address",
+            sort: true
         },
         {
             dataField: "order_datetime",
@@ -58,6 +58,7 @@ const OrderHistory = (
         {
             dataField: "delivery_status",
             text: "Delivery Status",
+            
             style: (cell, row) => {
                 if (cell === "Pending") return { color: "#C0B627", fontWeight: "500", border: '1px solid #565656' };
                 else if (cell === "Cancelled" || cell === "Declined")
@@ -94,6 +95,7 @@ const OrderHistory = (
         { dataField: "ordered_by.name", text: "Proceed By", sort: true },
         { dataField: "customer", formatter: btnFormatterold, text: "Actions" },
     ];
+
 
 
     // EPOCH TO DATE FORMATE TABLE USING MOMENT PAKAGE

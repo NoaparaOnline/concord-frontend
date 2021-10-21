@@ -37,7 +37,8 @@ const Stocks = ({
        else if (stockgift?.length < 1) {
         dispatch(getStocksGiftProduct())
        }
-      }, [stock,stockmedicine,stockgift,dispatch]);
+       // eslint-disable-next-line
+      }, [stock,stockmedicine,stockgift]);
 
     const tabledataHandler = async (item) => {
         setSelectedTabbledata(item);

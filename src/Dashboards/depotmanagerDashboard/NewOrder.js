@@ -46,7 +46,7 @@ const NewOrder = (
         { dataField: "order_id", text: "Orders ID", sort: true },
         { dataField: "customer.name", text: "Customer Name", sort: true },
         // {dataField:(data) => moment('order_datetime').format("L")  ,text:'Customer Name',},
-        { dataField: "customer.market.name", text: "Market & Address", formatter: appendtwoDatafields, sort: true },
+        { dataField: "customer.market__street_address", text: "Market & Address",  sort: true },
         {
             dataField: "order_datetime",
             text: "Order Date/Time",
@@ -56,18 +56,19 @@ const NewOrder = (
         { dataField: "payment_type", text: "Payment Type", sort: true },
         {
             dataField: "delivery_status",
+            formatter:capitalize,
             text: "Delivery Status",
             style: (cell, row) => {
-                if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
-                else if (cell === "Cancelled" || cell === "Declined")
+                if (cell === "pending") return { color: "#C0B627", fontWeight: "500" };
+                else if (cell === "cancelled" || cell === "declined")
                     return { color: "red", fontWeight: "500" };
                 else if (
-                    cell === "Paid" ||
-                    cell === "Delivered" ||
-                    cell === "Submitted"
+                    cell === "paid" ||
+                    cell === "delivered" ||
+                    cell === "submitted"
                 )
                     return { color: "green", fontWeight: "500" };
-                else if (cell === "Dispatched" || cell === "Unpaid")
+                else if (cell === "dispatched" || cell === "unpaid")
                     return { color: "blue", fontWeight: "500" };
             },
             sort: true
@@ -75,17 +76,18 @@ const NewOrder = (
         {
             dataField: "payment_status",
             text: "Payment Status",
+            formatter:capitalize,
             style: (cell, row) => {
-                if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
-                else if (cell === "Cancelled" || cell === "Declined")
+                if (cell === "pending") return { color: "#C0B627", fontWeight: "500" };
+                else if (cell === "cancelled" || cell === "declined")
                     return { color: "red", fontWeight: "500" };
                 else if (
-                    cell === "Paid" ||
-                    cell === "Delivered" ||
-                    cell === "Submitted"
+                    cell === "paid" ||
+                    cell === "delivered" ||
+                    cell === "submitted"
                 )
                     return { color: "green", fontWeight: "500" };
-                else if (cell === "Dispatched" || cell === "Unpaid")
+                else if (cell === "dispatched" || cell === "unpaid")
                     return { color: "blue", fontWeight: "500" };
             },
             sort: true
@@ -94,7 +96,10 @@ const NewOrder = (
         { dataField: "customer", formatter: btnFormatterneworder, text: "" },
     ];
 
-
+  //capitalize Cell
+  function capitalize(cell) {
+    return <span className="text-capitalize">{cell}</span>;
+  }
     //APPEND MARKET AND ADDRESS FIELDS
     function appendtwoDatafields(cell, row) {
 
