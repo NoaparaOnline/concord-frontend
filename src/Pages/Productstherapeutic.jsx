@@ -210,8 +210,8 @@ const Products_therapeutic = () => {
                 }
                 pageCount={pageCount}
                 onPageChange={changePage}
-                containerClassName={"pagination"}
-                subContainerClassName={"pages pagination"}
+                containerClassName={"paginationcustom"}
+                subContainerClassName={"pages paginationcustom"}
                 activeClassName={"active"}
                 forcePage={pageNumber}
               />
