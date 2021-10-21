@@ -223,8 +223,8 @@ return (
                 nextLabel={<i  style={{fontSize:'20px' ,color: '#0066b3'}} className="fa fa-arrow-right"></i>}
                 pageCount={pageCount}
                 onPageChange={changePage}
-                containerClassName={"pagination"}
-                subContainerClassName={"pages pagination"}
+                containerClassName={"paginationcustom"}
+                subContainerClassName={"pages paginationcustom"}
                 activeClassName={"active"}
                
                 forcePage={pageNumber}
