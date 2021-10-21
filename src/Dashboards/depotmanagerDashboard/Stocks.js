@@ -38,7 +38,7 @@ const Stocks = ({
         dispatch(getStocksGiftProduct())
        }
        // eslint-disable-next-line
-      }, []);
+      }, [stock,stockmedicine,stockgift]);
 
     const tabledataHandler = async (item) => {
         setSelectedTabbledata(item);

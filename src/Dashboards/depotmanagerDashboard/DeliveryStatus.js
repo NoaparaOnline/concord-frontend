@@ -32,7 +32,7 @@ const DeliveryStatus = (
           dispatch(getoldOrder());
         }
   // eslint-disable-next-line
-    }, []);
+    }, [oldorder]);
 
  
      //Delivery Status COLUMN HEADERS
@@ -40,8 +40,8 @@ const DeliveryStatus = (
     { dataField: "order_id", text: "Orders ID", sort: true },
     { dataField: "customer.name", text: "Customer Name", sort: true },
     {
-      dataField: "customer.market.name", text: "Market & Address",
-      formatter: appendtwoDatafields, sort: true
+      dataField: "customer.market__street_address", text: "Market & Address",
+       sort: true
     },
     {
       dataField: "order_datetime",
