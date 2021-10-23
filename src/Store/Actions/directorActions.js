@@ -299,8 +299,8 @@ export const getSingleScheduleDetail = (data) => (dispatch) => {
 
 export const SendGridMailApi = (data) => async (dispatch) => {
   axios
-    // .post("https://concord-backend-prod.herokuapp.com/api/users/mail/send", data,)
-    .post("https://concord-backend-m1.herokuapp.com/api/users/mail/send", data,)
+    .post("https://concord-backend-prod.herokuapp.com/api/users/mail/send", data,)
+    // .post("https://concord-backend-m1.herokuapp.com/api/users/mail/send", data,)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
     })
