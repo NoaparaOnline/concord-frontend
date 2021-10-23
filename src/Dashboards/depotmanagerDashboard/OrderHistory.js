@@ -60,43 +60,51 @@ const OrderHistory = (
             text: "Delivery Status",
             
             style: (cell, row) => {
-                if (cell === "Pending") return { color: "#C0B627", fontWeight: "500", border: '1px solid #565656' };
-                else if (cell === "Cancelled" || cell === "Declined")
+                if (cell === "pending" ) return { color: "#C0B627", fontWeight: "500" };
+                else if (cell === "cancelled" || cell === "declined")
                     return { color: "red", fontWeight: "500" };
                 else if (
-                    cell === "Paid" ||
-                    cell === "Delivered" ||
-                    cell === "Submitted"
+                    cell === "paid" ||
+                    cell === "delivered" ||
+                    cell === "submitted"
+                    || cell === "submitted_to_depot"
+                    || cell === "received"
                 )
                     return { color: "green", fontWeight: "500" };
-                else if (cell === "Dispatched" || cell === "Unpaid")
+                else if (cell === "dispatched" ||  cell === "unpaid" ||  cell === "deposited")
                     return { color: "blue", fontWeight: "500" };
             },
+            formatter:capitalize,
             sort: true
         },
         {
             dataField: "payment_status",
             text: "Payment Status",
             style: (cell, row) => {
-                if (cell === "Pending") return { color: "#C0B627", fontWeight: "500" };
-                else if (cell === "Cancelled" || cell === "Declined")
+                if (cell === "pending" ) return { color: "#C0B627", fontWeight: "500" };
+                else if (cell === "cancelled" || cell === "declined")
                     return { color: "red", fontWeight: "500" };
                 else if (
-                    cell === "Paid" ||
-                    cell === "Delivered" ||
-                    cell === "Submitted"
+                    cell === "paid" ||
+                    cell === "delivered" ||
+                    cell === "submitted" ||
+                    cell === "received"
                 )
                     return { color: "green", fontWeight: "500" };
-                else if (cell === "Dispatched" || cell === "Unpaid")
+                else if (cell === "dispatched" || cell === "unpaid" ||  cell === "deposited")
                     return { color: "blue", fontWeight: "500" };
             },
+            formatter:capitalize,
             sort: true
         },
         { dataField: "ordered_by.name", text: "Proceed By", sort: true },
         { dataField: "customer", formatter: btnFormatterold, text: "Actions" },
     ];
 
-
+  //capitalize Cell
+  function capitalize(cell) {
+    return <span className="text-capitalize">{cell}</span>;
+  }
 
     // EPOCH TO DATE FORMATE TABLE USING MOMENT PAKAGE
     function dateFormatter(cell) {

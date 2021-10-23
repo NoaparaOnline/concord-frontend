@@ -40,6 +40,7 @@ const Contact_contactus = () => {
 
   const handleSubmit = (e) => {
     const RecipentEmail ='info@concordpharma-bd.com'
+    // const RecipentEmail ='shahzaibqadir7@gmail.com'
     const apiData = {
       recipients: [RecipentEmail],
       subject: state.DropSel,

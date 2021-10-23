@@ -65,10 +65,11 @@ const NewOrder = (
                 else if (
                     cell === "paid" ||
                     cell === "delivered" ||
-                    cell === "submitted"
+                    cell === "submitted" ||
+                    cell === "received"
                 )
                     return { color: "green", fontWeight: "500" };
-                else if (cell === "dispatched" || cell === "unpaid")
+                else if (cell === "dispatched" || cell === "unpaid" ||  cell === "deposited")
                     return { color: "blue", fontWeight: "500" };
             },
             sort: true
@@ -84,10 +85,11 @@ const NewOrder = (
                 else if (
                     cell === "paid" ||
                     cell === "delivered" ||
-                    cell === "submitted"
+                    cell === "submitted" ||
+                    cell === "received"
                 )
                     return { color: "green", fontWeight: "500" };
-                else if (cell === "dispatched" || cell === "unpaid")
+                else if (cell === "dispatched" || cell === "unpaid" ||  cell === "deposited")
                     return { color: "blue", fontWeight: "500" };
             },
             sort: true

@@ -104,13 +104,13 @@ const Schedules = ({
       text: "Approval Status",
       sort: true,
       style: (cell, row) => {
-        if (cell === "Awaiting Approval")
+        if (cell === "awaiting_approval")
           return { color: "#C0B627", fontWeight: "500" };
-        else if (cell === "Cancelled")
+        else if (cell === "cancelled")
           return { color: "red", fontWeight: "500" };
-        else if (cell === "Approved")
+        else if (cell === "approved")
           return { color: "green", fontWeight: "500" };
-        else if (cell === "Request for Reschedule")
+        else if (cell === "request_for_reschedule")
           return { color: "blue", fontWeight: "500" };
       },
     },
