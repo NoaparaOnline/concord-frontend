@@ -57,9 +57,7 @@ const TableInnerPage = (props) => {
                   <span style={{ fontWeight: "600", color: "#565656"  }}>
                   Market & Address: &nbsp;
                   </span>{" "}
-                  {productidstate?.customer?.market?.name}
-                  ,&nbsp;
-                  {productidstate?.customer?.market?.parent?.name}
+                  {productidstate?.customer?.market__street_address}
                   </div>
                 <div className="col-lg-6">
                   <span style={{ fontWeight: "600", color: "#565656"  }}>
