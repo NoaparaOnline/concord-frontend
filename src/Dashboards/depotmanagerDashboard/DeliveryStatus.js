@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect } from 'react'
 //REACT-BOOTSTRAP-TABLE IMPORTS
 import BootstrapTable from "react-bootstrap-table-next";
@@ -28,11 +30,9 @@ const DeliveryStatus = (
         const dispatch = useDispatch();
         
   useEffect(() => {
-      if (oldorder?.length < 1) {
           dispatch(getoldOrder());
-        }
   // eslint-disable-next-line
-    }, [oldorder]);
+    }, []);
 
  
      //Delivery Status COLUMN HEADERS
@@ -105,15 +105,16 @@ const DeliveryStatus = (
     }
 
     //APPEND MARKET AND ADDRESS FIELDS
-    function appendtwoDatafields(cell, row) {
+   
+    // function appendtwoDatafields(cell, row) {
 
-            return (
-                <>
-                    <div>{`${row.customer.market.name} ,`}</div>
-                    <div>{`${row.customer.market.parent.name}`}</div>
-                </>
-            )
-        }
+    //         return (
+    //             <>
+    //                 <div>{`${row.customer.market.name} ,`}</div>
+    //                 <div>{`${row.customer.market.parent.name}`}</div>
+    //             </>
+    //         )
+    //     }
     
 
      //DELIVERY STATUS COLUMN BUTTON FORMATTER
@@ -130,7 +131,7 @@ const DeliveryStatus = (
               onClick={() => dispatch(getSingleOrder(row))}
             >
             <div
-             className={` btn`}
+             className={`btn`}
              style={{ borderRadius: "5px",backgroundColor:'#22A6AC' }}
             >
               <span style={{  color: "#fff" }}>View</span>  
@@ -141,6 +142,7 @@ const DeliveryStatus = (
       </>
     );
   }
+  const emptyDataMessage = () => { return 'No Data to Display';}
     return (
         <>
          <NavbarDash
@@ -195,6 +197,7 @@ const DeliveryStatus = (
                           // pagination={pagination}
                           pagination={oldorder.length > 10 ? paginationFactory() : null}
                           bordered={false}
+                          noDataIndication={emptyDataMessage}
                           condensed
                           wrapperClasses="table-responsive"
                         />

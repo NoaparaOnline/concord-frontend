@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
@@ -14,6 +16,7 @@ const ScheduleInnerPage = (props) => {
   }, [])
 
   console.log("scheduleidstate", scheduleidstate);
+  const emptyDataMessage = () => { return 'No Data to Display';}
   return (
     <>
       <NavbarDash

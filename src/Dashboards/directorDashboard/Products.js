@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect, useState } from 'react'
 import Loader from 'react-loader-spinner';
 import DashboardBtnList from '../../components/ReusableComponents/DashboardBtnList/DashboardBtnList';
@@ -27,11 +29,11 @@ const Products = (
   const dispatch = useDispatch();
   useEffect(() => {
     setSelectedTabbledata(productall)
-    if (productall?.length < 1) {
-          dispatch(getProductsall());
-        }
-        // eslint-disable-next-line
+         
   }, [productall])
+  useEffect(() => {
+    dispatch(getProductsall());     
+  }, [])
 
   const [selectedTabbledata, setSelectedTabbledata] = useState(productall);
   const [selectedTab2, setSelectedTab2] = useState("List");
