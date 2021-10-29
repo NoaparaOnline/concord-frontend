@@ -45,7 +45,7 @@ const Schedules = ({
   const [selectedTabbledata, setSelectedTabbledata] = useState(schedule);
 
   useEffect(() => {
-      dispatch(getSchedule());
+      dispatch(getSchedule(''));
   }, []);
   useEffect(() => {
     setSelectedTabbledata(schedule);
