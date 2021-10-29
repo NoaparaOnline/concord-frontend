@@ -131,7 +131,7 @@ const DistributionCenter = (
                                 return ""
                               }
                             
-                            })
+                          })
                           }
                         dataemail={
                           ob?.depot_managers?.map((obdep, index) => {

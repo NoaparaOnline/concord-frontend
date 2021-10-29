@@ -257,6 +257,7 @@ export const ByTrade = [
     {
       id: 0,
       title: "Acedol Tablet",
+      value: "acedol tablet",
       text1: "",
       text2: "",
       img: [
@@ -268,7 +269,8 @@ export const ByTrade = [
       ],
       btn: "Read More",
       btnlink: "/acedol-tablet",
-      type:'Tablet'
+      type:'Tablet',
+      
     },
 	{
       id: 1,
@@ -283,7 +285,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -300,7 +302,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -318,7 +320,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -335,7 +337,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -352,7 +354,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -369,7 +371,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -386,7 +388,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -403,7 +405,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -420,7 +422,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Syrup'
     },
 {
@@ -436,7 +438,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -453,7 +455,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Syrup'
     },
 
@@ -470,7 +472,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Syrup'
     },
 
@@ -487,7 +489,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Syrup'
     },
 
@@ -504,7 +506,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Syrup'
     },
 
@@ -521,7 +523,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -538,7 +540,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -555,7 +557,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -572,7 +574,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Syrup'
     },
 
@@ -589,7 +591,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Syrup'
     },
 
@@ -606,7 +608,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -623,7 +625,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -640,7 +642,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -657,7 +659,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -674,7 +676,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -691,7 +693,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -708,7 +710,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -725,7 +727,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -742,7 +744,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -759,7 +761,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -776,7 +778,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Hand Rub'
     },
 
@@ -793,7 +795,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Hand Rub'
     },
 
@@ -810,7 +812,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Injectables'
     },
 
@@ -827,7 +829,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Injectables'
     },
 
@@ -844,7 +846,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -861,7 +863,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -878,7 +880,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -895,7 +897,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -912,7 +914,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -929,7 +931,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -946,7 +948,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Injectables'
     },
 
@@ -963,7 +965,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Injectables'
     },
 
@@ -980,7 +982,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -997,7 +999,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -1014,7 +1016,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Syrup'
     },
 
@@ -1031,7 +1033,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -1048,7 +1050,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -1067,7 +1069,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -1084,7 +1086,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -1101,7 +1103,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -1118,7 +1120,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -1135,7 +1137,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -1152,7 +1154,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -1169,7 +1171,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -1186,7 +1188,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -1203,7 +1205,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Tablet'
     },
 
@@ -1220,7 +1222,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -1237,7 +1239,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Syrup'
     },
 
@@ -1254,7 +1256,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -1271,7 +1273,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -1288,7 +1290,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Syrup'
     },
 
@@ -1305,7 +1307,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -1322,7 +1324,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Syrup'
     },
 
@@ -1339,7 +1341,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'Capsule'
     },
 
@@ -1356,7 +1358,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1373,7 +1375,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1390,7 +1392,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1407,7 +1409,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1424,7 +1426,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1441,7 +1443,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1458,7 +1460,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1475,7 +1477,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1492,7 +1494,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1509,7 +1511,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1526,7 +1528,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1543,7 +1545,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1560,7 +1562,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1577,7 +1579,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 {
@@ -1593,7 +1595,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1610,7 +1612,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1628,7 +1630,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1645,7 +1647,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1662,7 +1664,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1679,7 +1681,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1696,7 +1698,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "#",
+      btnlink: "/acedol-tablet",
       type:'tablet'
     },
 
@@ -1713,7 +1715,7 @@ export const ByTrade = [
         },
       ],
       btn: "Read More",
-      btnlink: "/#",
+      btnlink: "//acedol-tablet",
       type:'tablet'
     },
 

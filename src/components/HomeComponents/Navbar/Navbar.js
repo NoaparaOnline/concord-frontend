@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../../Statics/assets/logo.png";
@@ -16,12 +18,28 @@ import { logoutUser } from "../../../Store/Actions/loginActions";
 import profileLogo from "../../../Statics/assets/profile-logo.png";
 import Notifications from "../../ReusableComponents/modals/Notifications/Notifications";
 import ChangePassword from "../../ReusableComponents/modals/ChangePassword/ChangePassword";
-
+import SearchBar from "../../ReusableComponents/SearchComponent/SearchBar";
+import { ByTrade } from "../ProductsData/productsbytradedata";
+import { ByGeneric } from "../ProductsData/productbygenricdata";
+import { ByTherapeutic } from "../ProductsData/productbytheraputic";
+import { FirstTime } from "../ProductsData/productsfirstimelaunch";
 //
 
 const Navbars = (props) => {
   const history = useHistory();
 
+  const allarray = [ByTrade,ByGeneric,ByTherapeutic,FirstTime]
+  const AllmergeData = [];
+  allarray.map((item)=>{
+    return(
+      item.map((item1) =>{
+        AllmergeData.push(item1)
+      })
+    );
+  })
+
+  
+  console.log(AllmergeData,"sdasdasd")
   const userRole = useSelector((state) => state?.logIn?.userRole);
   const dispatch = useDispatch();
   const logoutHandler = () => {
@@ -65,8 +83,8 @@ const Navbars = (props) => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top custom-nav ">
-        <div className="container">
+      <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top custom-nav " >
+        <div className="container" >
           <Link to="/">
             <img
               alt=""
@@ -76,7 +94,7 @@ const Navbars = (props) => {
           </Link>
 
           <button
-            className="navbar-toggler toggle-iconcustome ms-auto mt-3"
+            className="navbar-toggler toggle-iconcustome ms-auto mt-3 "
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -87,11 +105,11 @@ const Navbars = (props) => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <div className="ms-auto">
-              <div className="row">
-                <ul className="navbar-nav  justify-content-end text-uppercase fontsizefamily">
-                  <li className="nav-item ">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent" >
+            <div className="ms-auto" >
+              <div className="row" >
+                <ul className="navbar-nav  justify-content-end text-uppercase fontsizefamily" >
+                  <li className="nav-item " >
                     <NavLink
                       className="nav-link firstnav"
                       aria-current="page"
@@ -101,7 +119,7 @@ const Navbars = (props) => {
                       {/* <span className="custom_span_style"></span> */}
                     </NavLink>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item" >
                     <NavLink
                       className="nav-link firstnav"
                       aria-current="page"
@@ -111,29 +129,10 @@ const Navbars = (props) => {
                     </NavLink>
                   </li>
                   <div className="col-sm-3">
-                    <div className="input-group my-1">
-                      <input
-                        style={{
-                          height: "28px",
-                          borderRadius: 0,
-                          borderColor: "none",
-                        }}
-                        type="text"
-                        className="form-control "
-                        placeholder="Search"
-                        aria-label="Recipient's username"
-                        aria-describedby="basic-addon2"
-                      />
-                      <div className="input-group-append">
-                        <span
-                          style={{ height: "28px", borderRadius: 0 }}
-                          className="input-group-text"
-                          id="basic-addon2"
-                        >
-                          <i className="fa fa-search"></i>
-                        </span>
-                      </div>
-                    </div>
+                    
+                    <SearchBar
+                    placeholder="Search" data={AllmergeData} 
+                    />
                   </div>
 
                   {user ? (
