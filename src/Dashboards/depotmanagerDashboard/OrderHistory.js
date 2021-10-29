@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect } from 'react'
 //REACT-BOOTSTRAP-TABLE IMPORTS
 import BootstrapTable from "react-bootstrap-table-next";
@@ -28,11 +30,9 @@ const OrderHistory = (
     const oldorder = useSelector((state) => state?.deport?.oldorder);
 
     useEffect(() => {
-        if (oldorder?.length < 1) {
             dispatch(getoldOrder());
-          }
     // eslint-disable-next-line
-      }, [oldorder]);
+      }, []);
     
     
 
@@ -150,7 +150,7 @@ const OrderHistory = (
     }
 
 
-
+    const emptyDataMessage = () => { return 'No Data to Display';}
     return (
         <>
             <NavbarDash
@@ -205,6 +205,7 @@ const OrderHistory = (
                                             headerWrapperClasses="customheaderpad"
                                             defaultSorted={deopdefaultSorted}
                                             // pagination={pagination}
+                                            noDataIndication={emptyDataMessage}
                                             pagination={paginationFactory()}
                                             bordered={false}
                                             condensed

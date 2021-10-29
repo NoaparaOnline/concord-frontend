@@ -28,17 +28,15 @@ const Stocks = ({
 
     useEffect(() => {
         setSelectedTabbledata(stock)
-       if (stock?.length < 1) {
             dispatch(getStocksProduct());
-         }
-       else if (stockmedicine?.length < 1) {
         dispatch(getStocksMedicineProduct());
-       }
-       else if (stockgift?.length < 1) {
         dispatch(getStocksGiftProduct())
-       }
        // eslint-disable-next-line
-      }, [stock,stockmedicine,stockgift]);
+      }, []);
+    useEffect(() => {
+        setSelectedTabbledata(stock)
+       // eslint-disable-next-line
+      }, [stock]);
 
     const tabledataHandler = async (item) => {
         setSelectedTabbledata(item);
@@ -98,7 +96,7 @@ const Stocks = ({
     const loader = useSelector((state) => state?.logIn?.loader);
 
 
-
+    const emptyDataMessage = () => { return 'No Data to Display';}
     return (
         <>
             <NavbarDash
@@ -194,6 +192,7 @@ const Stocks = ({
 
                                             defaultSorted={deopdefaultSorted}
                                             // pagination={pagination}
+                                            noDataIndication={emptyDataMessage}
                                             pagination={selectedTabbledata.length > 10 ? paginationFactory() : null}
                                             bordered={false}
                                             condensed

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect, useState } from "react";
 import Loader from "react-loader-spinner";
 import { useDispatch, useSelector } from "react-redux";
@@ -43,10 +45,7 @@ const Schedules = ({
   const [selectedTabbledata, setSelectedTabbledata] = useState(schedule);
 
   useEffect(() => {
-    if (schedule.length < 1) {
       dispatch(getSchedule());
-    }
-    // eslint-disable-next-line
   }, []);
   useEffect(() => {
     setSelectedTabbledata(schedule);

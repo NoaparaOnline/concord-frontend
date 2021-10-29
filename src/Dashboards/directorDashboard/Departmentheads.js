@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect, useState } from 'react'
 import Loader from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,10 +21,7 @@ const Departmentheads = (
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (departmenthead?.length < 1) {
     dispatch(getDepartmenthead());
-    }
- // eslint-disable-next-line
   },[])
     const loader = useSelector((state) => state?.logIn?.loader);
    

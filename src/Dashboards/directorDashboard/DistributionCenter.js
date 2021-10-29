@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect, useState } from 'react'
 import Loader from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,10 +18,7 @@ const DistributionCenter = (
   const distributioncenter = useSelector((state) => state?.director?.distributioncenter);
   const dispatch = useDispatch();
   useEffect(() => {
-    if (distributioncenter?.length < 1) {
       dispatch(getDistributioncenter());
-    }
-// eslint-disable-next-line
   }, [])
 
 

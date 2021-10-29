@@ -25,11 +25,9 @@ const Payment = ({
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (order?.length < 1) {
       dispatch(getOrder());
-    }
 // eslint-disable-next-line
-  }, [order]);
+  }, []);
 
 
 
@@ -114,7 +112,7 @@ const Payment = ({
     );
   }
 
-
+  const emptyDataMessage = () => { return 'No Data to Display';}
   return (
     <>
 
@@ -169,6 +167,7 @@ const Payment = ({
 
                       defaultSorted={deopdefaultSorted}
                       // pagination={pagination}
+                      noDataIndication={emptyDataMessage}
                       pagination={order.length > 10 ? paginationFactory() : null}
                       bordered={false}
                       condensed

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect } from 'react'
 //REACT-BOOTSTRAP-TABLE IMPORTS
 import BootstrapTable from "react-bootstrap-table-next";
@@ -33,11 +35,9 @@ const NewOrder = (
     const neworder = useSelector((state) => state?.deport?.neworder);
 
     useEffect(() => {
-        if (neworder?.length < 1) {
             dispatch(getnewOrder());
-          }
     // eslint-disable-next-line
-      }, [neworder]);
+      }, []);
     
 
 
@@ -169,7 +169,7 @@ const NewOrder = (
     );
   }
 
-
+  const emptyDataMessage = () => { return 'No Data to Display';}
     return (
         <>
             <NavbarDash
@@ -227,6 +227,7 @@ const NewOrder = (
                                             // pagination={pagination}
                                             pagination={neworder.length > 10 ? paginationFactory() : null}
                                             bordered={false}
+                                            noDataIndication={emptyDataMessage}
                                             condensed
                                             wrapperClasses="table-responsive"
                                         />

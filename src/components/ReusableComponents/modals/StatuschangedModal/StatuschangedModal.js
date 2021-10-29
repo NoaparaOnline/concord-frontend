@@ -26,6 +26,7 @@ const StatuschangedModal = (props) => {
       payment_status: dropdown2,
       uid: productuid.uid,
     }
+    console.log("apiData",apiData)
     dispatch(statusChange(apiData));
     props.onHide();
   };
@@ -83,8 +84,9 @@ const StatuschangedModal = (props) => {
                           }
 
                           <option>delivered</option>
-                          <option>declined</option>
+                          <option>returned</option>
                           <option>cancelled</option>
+                          <option>submitted_to_depot</option>
                         </select>
                       </div>
                       <div className="form-group">
@@ -99,8 +101,12 @@ const StatuschangedModal = (props) => {
                             productuid?.payment_status === "Unpaid" || "unpaid" ? "" :
                               <option>unpaid</option>
                           }
-                          <option>paid</option>
-                          <option>submitted</option>
+                          {
+                            productuid?.payment_status === "Dispatched" || "dispatched" ? "" :
+                              <option>dispatched</option>
+                          }
+                          <option>received</option>
+                          <option>deposited</option>
                           <option>declined</option>
                           <option>cancelled</option>
                         </select>
