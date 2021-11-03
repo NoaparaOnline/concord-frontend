@@ -103,7 +103,7 @@ const Products = (
       sort: true,
     },
     {
-      dataField: "created_by._cls",
+      dataField: "created_by.name",
       text: "Added By",
       formatter: nullChecker,
       sort: true,
