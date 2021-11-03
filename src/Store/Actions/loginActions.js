@@ -101,7 +101,7 @@ import { toast } from "react-toastify";
   
   export const logoutUser = () => async (dispatch) => {
     try {
-      // await apiServices.logout();
+      await apiServices.logout();
       logout();
       // localStorage.clear();
       dispatch({

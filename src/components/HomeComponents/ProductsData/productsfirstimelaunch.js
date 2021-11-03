@@ -38,18 +38,7 @@ export const FirstTime = [
           imge: acedolbk,
         },
       ],
-      // datainnerpage:{
-      //   tabhead:'Acedol Tablet',
-      //   tabheadpara:'Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.',
-      //   tabheadpara1:'Acedol® SR Tablet: Each sustained release tablet contains-Aceclofenac BP 200 mg.',
-      //   tabhead1:'PHARMACOLOGY',
-      //   tabheadpara1:'Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potentinhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.',
-      //   tabhead2:'INDICATION',
-      //   tabheadpara2:'For the relief of pain and inflammation in osteoarthritis,rheumatoid arthritis and ankylosing spondylitis.',
-      //   tabhead3:'DOSAGE AND ADMINISTRATION',
-      //   tabheadpara3:` Acedol® Tablet:<br/><span className="block"><strong>Adults:</strong> The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children.</span>`,
-
-      // },
+     
       btn: "Read More",
       btnlink: "/acedolcopy-tablet",
       type:'Tablet'
