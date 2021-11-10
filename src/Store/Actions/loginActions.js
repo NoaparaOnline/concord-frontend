@@ -42,6 +42,10 @@ import { toast } from "react-toastify";
         }
         else{
           toast.error("UnAuthorized Access");
+          dispatch({
+            type: logInConstants.SET_LOADER,
+            payload: false,
+          });
         }
       } 
       else {
