@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route ,Switch} from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer, FixedRight } from "./components";
 import About from "./Pages/About";
@@ -49,7 +49,7 @@ import DapzineTablet from "./components/ReusableComponents/ProductDetail/Dapzine
 import Relikof from "./components/ReusableComponents/ProductDetail/Relikof";
 import Relikofkids from "./components/ReusableComponents/ProductDetail/Relikofkids";
 import Acedol from "./components/ReusableComponents/ProductDetail/Acedol";
-// import Error404 from "./Pages/Error404";
+import Error404 from "./Pages/Error404";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -103,12 +103,6 @@ function App() {
 
         <Route exact path="/" render={(props) => <Navbar {...props} />} />
 
-        {/*          Front Home Page             */}
-
-        <Route exact path="/">
-          <Home />
-        </Route>
-
         {/*          Navbar             */}
 
         <Route
@@ -125,11 +119,6 @@ function App() {
           }
         />
 
-        {/*          Home Page             */}
-
-        <Route exact path="/home">
-          <Home />
-        </Route>
 
         {/* Resest Password */}
         {/* <Route path="/reset_password_link/uid=:uid/token=:token" render={(props)=>   <ResetPassword {...props}/>}/> */}
@@ -155,9 +144,24 @@ function App() {
           }
         />
 
-        {/*          Login Page             */}
 
-        <Route path="/login" render={(props) => <Login {...props} />} />
+
+          <Switch>
+
+          
+        {/*          Front Home Page             */}
+
+        <Route exact path="/">
+          <Home />
+        </Route>
+
+
+        {/*          Home Page             */}
+
+        <Route exact path="/home">
+          <Home />
+        </Route>
+
 
         {/*          Main About Page             */}
 
@@ -196,10 +200,12 @@ function App() {
            render={(props) => <DepotmanagerDashboard {...props} />}/>
         */}
         <PrivateRoute
+        routelink={"depot_manager"}
           path="/depotmanager-dashboard"
           component={DepotmanagerDashboard}
         />
         <PrivateRoute
+         routelink={"director"}
           path="/director-dashboard"
           component={DirectorDashboard}
         />
@@ -343,8 +349,12 @@ function App() {
        
 
         {/* 404 Page */}
-        
-        {/* <Route path='*' component={Error404} /> */}
+        <Route path="*">
+            <Error404 />
+          </Route>
+
+        </Switch>
+
 
         {/*          Footer             */}
 

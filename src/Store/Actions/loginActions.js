@@ -11,32 +11,38 @@ import { toast } from "react-toastify";
       });
       const response = await apiServices.login(data);
       if (response?.data?.response_code === 200) {
-        setToken({
-          key: response?.data?.response_data?.token?.access_token,
-          type: response?.data?.response_data?.token.user?.role?.category?.name,      
-        });
-        saveUser(response?.data?.response_data?.token?.user);
-        setUserRole( response?.data?.response_data?.token?.user?.role?.category?.name);
-        
-        dispatch({
-          type: logInConstants.SET_ERROR,
-          payload: null,
-        });
-        dispatch({
-          type: logInConstants.LOGIN_IN,
-          payload: response?.data?.response_data?.token?.user,
-        });
-        dispatch({
-          type: logInConstants.SET_LOADER,
-          payload: false,
-        });
-        dispatch({
-          type: logInConstants.USER_TYPE,
-          payload: response?.data?.response_data?.token?.user?.role.category?.name,
-        });
-        
-        toast.info("Login Successful");
-        return response?.data?.response_data?.token.user?.role.category?.name;
+        if(response?.data?.response_data?.token.user?.role?.category?.name === "director" ||  response?.data?.response_data?.token.user?.role?.category?.name === "depot_manager")
+        {
+          setToken({
+            key: response?.data?.response_data?.token?.access_token,
+            type: response?.data?.response_data?.token.user?.role?.category?.name,      
+          });
+          saveUser(response?.data?.response_data?.token?.user);
+          setUserRole( response?.data?.response_data?.token?.user?.role?.category?.name);
+          
+          dispatch({
+            type: logInConstants.SET_ERROR,
+            payload: null,
+          });
+          dispatch({
+            type: logInConstants.LOGIN_IN,
+            payload: response?.data?.response_data?.token?.user,
+          });
+          dispatch({
+            type: logInConstants.SET_LOADER,
+            payload: false,
+          });
+          dispatch({
+            type: logInConstants.USER_TYPE,
+            payload: response?.data?.response_data?.token?.user?.role.category?.name,
+          });
+          
+          toast.info("Login Successful");
+          return response?.data?.response_data?.token.user?.role.category?.name;
+        }
+        else{
+          toast.error("UnAuthorized Access");
+        }
       } 
       else {
         toast.error(response?.data?.response_message);

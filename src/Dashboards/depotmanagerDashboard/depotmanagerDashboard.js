@@ -10,7 +10,7 @@ import icon5 from "../../Statics/assets/Sidebar/5.png";
 import icon6 from "../../Statics/assets/Sidebar/logout.png";
 import icon111 from "../../Statics/assets/Sidebar/111.png";
 import icon112 from "../../Statics/assets/Sidebar/112.png";
-import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
+import { BrowserRouter as Router, NavLink, Route , Switch } from "react-router-dom";
 import InnerPage from "../../components/ReusableComponents/TableDash/InnerPage";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
 import { useDispatch} from "react-redux";
@@ -23,6 +23,7 @@ import DeliveryStatus from "./DeliveryStatus";
 import Payment from "./Payment";
 import Notifications from "../../components/ReusableComponents/modals/Notifications/Notifications";
 import ChangePassword from "../../components/ReusableComponents/modals/ChangePassword/ChangePassword";
+import Error404 from "../../Pages/Error404";
 
 
 const DepotmanagerDashboard = (props) => {
@@ -166,6 +167,8 @@ const DepotmanagerDashboard = (props) => {
 
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
       <Router>
+
+      <Switch>
         <Route exact path={`/depotmanager-dashboard`}>
           <OrderHistory
           sidebarOpen={sidebarOpen}
@@ -246,6 +249,13 @@ const DepotmanagerDashboard = (props) => {
             {...props}
           />
         </Route>
+
+          {/* 404 Page */}
+          <Route path="*">
+            <Error404 />
+          </Route>
+
+        </Switch>
         <SidebarDashboard
           buttonSidebar={
             <>

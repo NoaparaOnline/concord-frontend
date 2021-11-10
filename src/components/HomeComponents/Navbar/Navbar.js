@@ -39,7 +39,6 @@ const Navbars = (props) => {
   })
 
   
-  console.log(AllmergeData,"sdasdasd")
   const userRole = useSelector((state) => state?.logIn?.userRole);
   const dispatch = useDispatch();
   const logoutHandler = () => {
