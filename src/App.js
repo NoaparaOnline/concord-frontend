@@ -50,6 +50,7 @@ import Relikof from "./components/ReusableComponents/ProductDetail/Relikof";
 import Relikofkids from "./components/ReusableComponents/ProductDetail/Relikofkids";
 import Acedol from "./components/ReusableComponents/ProductDetail/Acedol";
 import Error404 from "./Pages/Error404";
+import ProductallDetails from "./components/ReusableComponents/ProductDetail/ProductallDetails";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -152,14 +153,14 @@ function App() {
         {/*          Front Home Page             */}
 
         <Route exact path="/">
-          <Home />
+          <Home  />
         </Route>
 
 
         {/*          Home Page             */}
 
         <Route exact path="/home">
-          <Home />
+          <Home  />
         </Route>
 
 
@@ -319,6 +320,16 @@ function App() {
         </Route>
 
         {/*          Products Inner Pages         */}
+        
+        {/* All Inner Page */}
+        <Route exact path="/prod_details">
+          <ProductallDetails
+          />
+        </Route>
+        {/* All Inner Page */}
+
+
+
         <Route exact path="/acedol-tablet">
           <ProductsCardInnerPage />
         </Route>
