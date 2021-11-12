@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link ,useHistory} from "react-router-dom";
 import "./SearchBar.css";
 
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
-
+  const history = useHistory();
 
   const handleFilter = (event) => {
     const searchWord = event.target.value;
@@ -72,8 +72,8 @@ function SearchBar({ placeholder, data }) {
           <div className="dataResult">
             {filteredData.slice(0, 15).map((value, key) => {
               return (
-                <Link
-                  to={value.btnlink}
+                <div
+                  onClick={() => history?.push("/prod_details",{data : value})}
                   style={{ textDecoration: "none" }}
                   className="dataItem"
                 >
@@ -83,7 +83,7 @@ function SearchBar({ placeholder, data }) {
                 );
                     })}
                   <p>{value.title}</p>
-                </Link>
+                </div>
               );
             })}
           </div>

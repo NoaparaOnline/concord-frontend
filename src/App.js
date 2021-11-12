@@ -151,17 +151,23 @@ function App() {
 
           
         {/*          Front Home Page             */}
-
-        <Route exact path="/">
+        <Route
+         exact path="/"
+          render={(props) => <Home {...props} />}
+        />
+        {/* <Route exact path="/">
           <Home  />
-        </Route>
+        </Route> */}
 
 
         {/*          Home Page             */}
-
-        <Route exact path="/home">
+        <Route
+         exact path="/home"
+          render={(props) => <Home {...props} />}
+        />
+        {/* <Route exact path="/home">
           <Home  />
-        </Route>
+        </Route> */}
 
 
         {/*          Main About Page             */}
@@ -302,10 +308,13 @@ function App() {
         </Route>
 
         {/*          Products Submenu Page          */}
-
-        <Route exact path="/products_bygeneric">
+        <Route
+         exact path="/products_bygeneric"
+          render={(props) => <Productsbygeneric {...props} />}
+        />
+        {/* <Route exact path="/products_bygeneric">
           <Productsbygeneric />
-        </Route>
+        </Route> */}
 
         <Route exact path="/products_bytrade">
           <Productsbytrade />
@@ -322,10 +331,16 @@ function App() {
         {/*          Products Inner Pages         */}
         
         {/* All Inner Page */}
-        <Route exact path="/prod_details">
+        
+        <Route
+          path="/prod_details"
+          render={(props) => <ProductallDetails {...props} />}
+        />
+        {/* <Route exact path="/prod_details">
           <ProductallDetails
+          
           />
-        </Route>
+        </Route> */}
         {/* All Inner Page */}
 
 

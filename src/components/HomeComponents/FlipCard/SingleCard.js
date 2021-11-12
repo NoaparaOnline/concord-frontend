@@ -18,7 +18,7 @@ const SingleCard = ({card}) => {
                 <h6 className="card-title text-white">{text1}</h6>
                 <h6 className="card-title text-white">{text2}</h6>
                </div>
-              {card.img.map((ob,index) => {
+              {card?.img?.map((ob,index) => {
                 return (
                   <img key={ob.id} src={ob.imgf} className="card-img-top p-3" alt="..." />
                 );

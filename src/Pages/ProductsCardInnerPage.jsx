@@ -54,6 +54,7 @@ const ProductsCardInnerPage = () => {
               fontWeight: "400",
             }}
             >Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.</p>
+            
             <h2   style={{
                   fontSize: "20px",
                   color: "#232323",

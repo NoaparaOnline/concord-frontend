@@ -6,7 +6,8 @@ import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 import { ByGeneric } from "../components/HomeComponents/ProductsData/productbygenricdata";
 import ReactPaginate from 'react-paginate';
 
-const Products_bygeneric = () => {
+const Products_bygeneric = (props) => {
+  console.log(props,"Card OAge");
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -63,10 +64,10 @@ const Products_bygeneric = () => {
       <React.Fragment key={ob.id}>
         <>
           <div className="col-lg-4 d-none d-lg-block d-md-none">
-            <FlipCard card={ob} />
+            <FlipCard card={ob} {...props}/>
           </div>
           <div className="col-lg-4 d-lg-none d-sm-block col-md-6">
-            <SingleCard card={ob} />
+            <SingleCard card={ob} {...props}/>
           </div>
         </>
       </React.Fragment>
