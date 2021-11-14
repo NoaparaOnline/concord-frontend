@@ -17,8 +17,8 @@ const ProductallDetails = (props) => {
   };
   const viewData = props?.location?.state?.data;
 
-  console.log(viewData,"currentdata");
-  
+  console.log(viewData, "currentdata");
+
 
   const LinksBan = [
     {
@@ -38,77 +38,142 @@ const ProductallDetails = (props) => {
     },
   ];
 
-  
+
   const Text = () => {
-    return(
+    return (
       <div>
-           {viewData?.innerdata1?.map((item) =>{
-             return(
+        {viewData?.innerdata1?.map((item) => {
+          return (
             <>
-            <h2   style={{
-                  fontSize: "20px",
-                  color: "#232323",
-                  fontWeight: "600",
-                }}>
+              <h2 style={{
+                fontSize: "20px",
+                color: "#232323",
+                fontWeight: "600",
+              }}>
 
                 {item?.innerHead}
 
-                </h2>
-            <p
-             style={{
-              fontSize: "16px",
-              color: "#565656",
-              fontWeight: "400",
-            }}
-            >
-            {item?.innerData}
+              </h2>
+              <p
+                style={{
+                  fontSize: "16px",
+                  color: "#565656",
+                  fontWeight: "400",
+                }}
+              >
+                {item?.innerData}
 
-            </p>
-            
-            {item?.istable ? (
-            <TableCustomComponent
-              tableHead={item?.table?.headers?.map((item) => item)}
-              data={item?.table?.body?.map((item) => {
-                return item;
-              })}
-            />
-          ) : null}
-            {item?.islist ? (
-           <ul>
-              {item?.listData?.map(item => <li>{item}</li>)}
-           </ul>
-          ) : null}
-            
-            
+              </p>
+
+
+              {item?.isinnerSub ? (
+                      <>
+                        <h6 style={{
+                          color: "#232323",
+                          fontWeight: "600",
+                        }}>
+
+                          {item?.innerSubHead}
+
+                        </h6>
+                        <p
+                          style={{
+                            fontSize: "16px",
+                            color: "#565656",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item?.innerSubData}
+
+                        </p>
+{/* 08 bytrade */}
+               {item?.isSublist ? (
+                <ul>
+                  {item?.listSubData?.map(item => <li>{item}</li>)}
+                </ul>
+              ) : null}
+                      </>
+                    ) : null}
+                    {item?.isinnerSub1 ? (
+                      <>
+                        <h6 style={{
+                          color: "#232323",
+                          fontWeight: "600",
+                        }}>
+
+                          {item?.innerSubHead1}
+
+                        </h6>
+                        <p
+                          style={{
+                            fontSize: "16px",
+                            color: "#565656",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item?.innerSubData1}
+
+                        </p>
+                        {item?.isSublist1 ? (
+                <ul>
+                  {item?.listSubData1?.map(item => <li>{item}</li>)}
+                </ul>
+              ) : null}
+                      </>
+                    ) : null}
+
+
+              {item?.istable ? (
+                <TableCustomComponent
+                  tableHead={item?.table?.headers?.map((item) => item)}
+                  data={item?.table?.body?.map((item) => {
+                    return item;
+                  })}
+                />
+              ) : null}
+
+
+
+
+              
+
+
+              {item?.islist ? (
+                <ul>
+                  {item?.listData?.map(item => <li>{item}</li>)}
+                </ul>
+              ) : null}
+
+
             </>
-             )
-           })}
-            
-           
-          <div>
-       {showText ?
-       <div className="d-flex flex-column justify-content-center">
-   <div
-              onClick={onHide}
-              className="btn btn-primary pt-2 pb-2 "
-              style={{
-                color: "#fff",
-                backgroundColor: "#0066b3",
-                textDecoration: "none",
-                fontWeight: 500,
-                marginTop: 0,
-                height: "40px",
-                width: "110px",
-                borderRadius: 0,
-              }}
-            >
-              <span style={{ fontSize: "14px" }}>Read Less</span>
+          )
+        })}
+
+
+        <div>
+          {showText ?
+            <div className="d-flex flex-column justify-content-center">
+              <div
+                onClick={onHide}
+                className="btn btn-primary pt-2 pb-2 "
+                style={{
+                  color: "#fff",
+                  backgroundColor: "#0066b3",
+                  textDecoration: "none",
+                  fontWeight: 500,
+                  marginTop: 0,
+                  height: "40px",
+                  width: "110px",
+                  borderRadius: 0,
+                }}
+              >
+                <span style={{ fontSize: "14px" }}>Read Less</span>
+              </div>
             </div>
-       </div>
-         :null
-            }
-          </div>
-       </div>
+            : null
+          }
+        </div>
+      </div>
     )
   };
 
@@ -117,7 +182,7 @@ const ProductallDetails = (props) => {
     <div>
       <BannerWithText
         subHeading={viewData?.innerMainHeading}
-        
+
         // backposit={'center right'}
         backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url()`}
         LinksBan={LinksBan}
@@ -148,7 +213,7 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-front d-flex justify-content-center align-items-center">
                     <div className="card " style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt="" src={viewData?.img?.map(item=> item.imgf)} width="100%" height="100%" />
+                        <img alt="" src={viewData?.img?.map(item => item.imgf)} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -156,7 +221,7 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-back d-flex justify-content-center align-items-center">
                     <div className="card" style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt="" src={viewData?.img?.map(item=> item.imge)} width="100%" height="100%" />
+                        <img alt="" src={viewData?.img?.map(item => item.imge)} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -167,87 +232,152 @@ const ProductallDetails = (props) => {
 
           <div className="col-lg-8 ">
             <div className="productContentInfo">
-             
-             <h1
+
+              <h1
                 style={{
                   fontSize: "30px",
                   color: "#0066b3",
                   fontWeight: "600",
                 }}
               >
-                {viewData?.innerMainHeading} 
+                {viewData?.innerMainHeading}
               </h1>
-             <h5
+              <h5
                 style={{
                   color: "#0066b3",
                   fontWeight: "600",
                 }}
               >
-                {viewData?.innerComposition} 
+                {viewData?.innerComposition}
               </h5>
-              
-              {viewData?.innerdata?.map((item) =>{
-             return(
-            <>
-            <h2   style={{
-                  fontSize: "20px",
-                  color: "#232323",
-                  fontWeight: "600",
-                }}>
 
-                {item?.innerHead}
+              {viewData?.innerdata?.map((item) => {
+                return (
+                  <>
+                    <h2 style={{
+                      fontSize: "20px",
+                      color: "#232323",
+                      fontWeight: "600",
+                    }}>
 
-                </h2>
-            <p
-             style={{
-              fontSize: "16px",
-              color: "#565656",
-              fontWeight: "400",
-            }}
-            >
-            {item?.innerData}
+                      {item?.innerHead}
 
-            </p>
-            {item?.istable ? (
-            <TableCustomComponent
-              tableHead={item?.table?.headers?.map((item) => item)}
-              data={item?.table?.body?.map((item) => {
-                return item;
+                    </h2>
+                    <p
+                      style={{
+                        fontSize: "16px",
+                        color: "#565656",
+                        fontWeight: "400",
+                      }}
+                    >
+                      {item?.innerData}
+
+                    </p>
+
+
+                    {item?.isinnerSub ? (
+                      <>
+                        <h2 style={{
+                          fontSize: "20px",
+                          color: "#232323",
+                          fontWeight: "600",
+                        }}>
+
+                          {item?.innerSubHead}
+
+                        </h2>
+                        <p
+                          style={{
+                            fontSize: "16px",
+                            color: "#565656",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item?.innerSubData}
+
+                        </p>
+                      </>
+                    ) : null}
+                    {item?.isinnerSub1 ? (
+                      <>
+                        <h2 style={{
+                          fontSize: "20px",
+                          color: "#232323",
+                          fontWeight: "600",
+                        }}>
+
+                          {item?.innerSubHead1}
+
+                        </h2>
+                        <p
+                          style={{
+                            fontSize: "16px",
+                            color: "#565656",
+                            fontWeight: "400",
+                          }}
+                        >
+                          {item?.innerSubData1}
+
+                        </p>
+                      </>
+                    ) : null}
+                    {item?.istable ? (
+                      <TableCustomComponent
+                        tableHead={item?.table?.headers?.map((item) => item)}
+                        data={item?.table?.body?.map((item) => {
+                          return item;
+                        })}
+                      />
+                    ) : null}
+
+
+                    {item?.isSublist ? (
+                      <ul>
+                        {item?.listSubData?.map(item => <li>{item}</li>)}
+                      </ul>
+                    ) : null}
+
+                    {item?.isSublist1 ? (
+                      <ul>
+                        {item?.listSubData1?.map(item => <li>{item}</li>)}
+                      </ul>
+                    ) : null}
+
+
+
+                    {item?.islist ? (
+                      <ul>
+                        {item?.listData?.map(item => <li>{item}</li>)}
+                      </ul>
+                    ) : null}
+                  </>
+                )
               })}
-            />
-          ) : null}
-            {item?.islist ? (
-           <ul>
-              {item?.listData?.map(item => <li>{item}</li>)}
-           </ul>
-          ) : null}
-            </>
-             )
-           })}
-              
-              
+
+
+
             </div>
-         
+
             {!showText ?
-            <div
-              onClick={onClick}
-              className="btn btn-primary me-auto pt-2 pb-2  "
-              style={{
-                color: "#fff",
-                backgroundColor: "#0066b3",
-                textDecoration: "none",
-                fontWeight: 500,
-                marginTop: 0,
-                height: "40px",
-                width: "110px",
-                borderRadius: 0,
-              }}
-            >
-              <span style={{ fontSize: "14px" }}>Read More</span>
-            </div>
-          :
-             ""   
-                }
+              <div
+                onClick={onClick}
+                className="btn btn-primary me-auto pt-2 pb-2  "
+                style={{
+                  color: "#fff",
+                  backgroundColor: "#0066b3",
+                  textDecoration: "none",
+                  fontWeight: 500,
+                  marginTop: 0,
+                  height: "40px",
+                  width: "110px",
+                  borderRadius: 0,
+                }}
+              >
+                <span style={{ fontSize: "14px" }}>Read More</span>
+              </div>
+              :
+              ""
+            }
           </div>
           {showText ? <Text /> : null}
         </div>
@@ -257,7 +387,7 @@ const ProductallDetails = (props) => {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <div className="allborder d-flex justify-content-center align-items-center">
-            <img alt="" src={viewData?.img?.map(item=> item.imgf)}  />
+            <img alt="" src={viewData?.img?.map(item => item.imgf)} />
           </div>
         </Modal.Body>
       </Modal>

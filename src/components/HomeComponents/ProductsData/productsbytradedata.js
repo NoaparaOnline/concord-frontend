@@ -1277,7 +1277,7 @@ export const ByTrade = [
       type:'Tablet'
     },
 
-{
+    {
       id: 7,
       title: "Alatin Tablet",
       text1: " ",
@@ -1291,111 +1291,140 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Alatin",
+      innerComposition: "Cetirizine Dihydrochloride BP",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: "Alatin® Tablet: Each tablet contains Cetirizine Dihydrochloride BP 10 mg.  ",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
         {
           innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
+          innerData: "Alatin® is a piperazine derivative and a potent functional antagonist of histamine H1 receptors. Alatin® is a long acting antihistamine. Central sedation or antimuscarinic effects do not generally occur with the usual doses of Alatin®. ",
           istable: false,
           table: {},
           islist: false,
-          listData:[]
+          listData:[
+            "",
+            "",
+          ]
         },
         {
           innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
-      ],
-      innerdata1:[
-        {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: "Alatin® is indicated for the prevention and symptomatic relief of allergic manifestations, such as:",
           istable: false,
           table: {},
           islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          listData:[
+            "Seasonal allergic rhinitis",
+            "Perennial allergic rhinitis",
+            "Chronic idiopathic urticaria",
+          ]
+        },
+        {
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: "Adults and children over 12 years: 10 mg (1 tablet) once daily. ",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
       ],
+      innerdata1:[
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: "Cetirizine is contraindicated in patients who have shown hypersensitivity or idiosyncrasy to it or its parent compound- Hydroxyzine.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+ 
+          {
+            innerHead: "ADVERSE REACTION",
+            innerData: "No potentially life threatening effects have been encountered.",
+            istable: false,
+            table: {},
+            islist: false,
+            listData:[
+              "",
+              "",
+            ]
+          },
+          {
+            innerHead: "PRECAUTIONS",
+            innerData: "Neonates: The drug is not usually administered to neonates.Children: Cetirizine is effective & well tolerated in children. No special precautions are required in children over 6 yrs of age.Lactating mother: The extent of Cetirizine excretion in human breast milk is unknown but some animal studies have shown excretion in breast milk. Nursing mothers are advised not to take this medication.",
+            istable: false,
+            table: {},
+            islist: false,
+            listData:[
+              "",
+              "",
+            ]
+          },
+          {
+            innerHead: "USE IN PREGNANCY",
+            innerData: "Cetirizine is not teratogenic in animals. Since the animal studies are not always predictive of human response, it should be used only if the potential benefit justifies the potential risk to the fetus.",
+            istable: false,
+            table: {},
+            islist: false,
+            listData:[
+              "",
+              "",
+            ]
+          },
+          {
+            innerHead: "DRUG INTERACTION",
+            innerData: "There are no reports of hazardous interactions with other drugs to date. Concomitant administration with alcohol or diazepam does not impair psychomotor performance any more than the impairment of performance produced by alcohol alone.",
+            istable: false,
+            table: {},
+            islist: false,
+            listData:[
+              "",
+              "",
+            ]
+          },
+          {
+            innerHead: "STORAGE",
+            innerData: "Store in a cool (Below 30⁰ c. Temp.) and dry place, protected from light. Keep out of the reach of children.",
+            istable: false,
+            table: {},
+            islist: false,
+            listData:[
+              "",
+              "",
+            ]
+          },
+          {
+            innerHead: "COMMERCIAL PACK",
+            innerData: "Alatin® Tablet: Each Box contains 10x10’s tablet in blister strips.",
+            istable: false,
+            table: {},
+            islist: false,
+            listData:[
+              "",
+              "",
+            ]
+          },
+        ],
       btn: "Read More",
       type:'Tablet'
     },
 
-{
+  {
       id: 8,
       title: "Brocast 10  Tablet",
       text1: " ",
@@ -1409,85 +1438,140 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Brocast",
+      innerComposition: "Montelukast",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: "Brocast® 10 Tablet: Each film coated tablet contains Montelukast Sodium INN 10.38 mg Eqv. to 10 mg Montelukast.",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
         {
           innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
+          innerData: "Montelukast is a selective and orally active leukotriene receptor antagonist that inhibits the cysteinyl leukotriene CysLT1 receptor. The cysteinyl leukotrienes (LTC4, LTD4, LTE4) are products of arachidonic acid metabolism and are released from various cells, including mast cells and eosinophils. These eicosanoids bind to cysteinyl leukotriene receptors (CysLT) found in the human airway. Montelukast inhibits physiologic actions of LTD4 at the CysLT1 receptor without any agonist activity.",
           istable: false,
           table: {},
           islist: false,
-          listData:[]
+          listData:[
+            "",
+            "",
+          ]
         },
         {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
+          innerHead: "INDICATION",
+          innerData: "Montelukast is indicated for:",
           istable: false,
           table: {},
-          islist: false,
-          listData:[]
-        }
+          islist: true,
+          listData:[
+            "Prophylaxis and chronic treatment of asthma in patients 12 months of age and older.",
+            "Acute prevention of Exercise-Induced Bronchoconstriction (EIB) in patients 6 years of age and older.",
+            "Relief of symptoms of Allergic Rhinitis (AR): Seasonal Allergic Rhinitis (SAR) in patients 2 years of age and older, and perennial allergic rhinitis (PAR) in patients 6 months of age and older.",
+          ]
+        },
       ],
-      innerdata1:[
+     innerdata1:[
         {
           innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
+          innerData: "",
           istable: false,
           table: {},
           islist: false,
-          listData:[]
+          listData:[
+            "",
+            "",
+          ],
+          isinnerSub: true,
+          innerSubHead: "By indications-", 
+          innerSubData: "", 
+          isSublist: true,
+          listSubData:[
+            "Asthma: Once daily in the evening for patients 12 months and older.",
+            "Acute prevention of exercise-induced bronchoconstriction: One tablet at least 2 hours before exercise for patients 6 years of age and older.",
+            "Seasonal allergic rhinitis: Once daily for patients 2 years and older.",
+            "Perennial allergic rhinitis: Once daily for patients 6 months and older.",
+          ],
+          isinnerSub1: true,
+          innerSubHead1: "By age-", 
+          innerSubData1: "", 
+          isSublist1: true,
+          listSubData1:[
+            "15 years and older: One 10 mg tablet.",
+            "6 to 14 years: One 5 mg chewable tablet.",
+            "2 to 5 years: One 4 mg chewable tablet ",
+          ],
         },
         {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
+          innerHead: "SIDE EFFECT",
+          innerData: "Montelukast appears to be well tolerated. In clinical trials, the most common adverse effect reported was headache, occurring in approximately 18% of patients. Rash, dyspepsia, dizziness, and abdominal pain were all reported in less than 2% of patients. Elevated liver transaminases have been reported with montelukast use, but not at a greater incidence than with placebo. A small percentage of pediatric patients have experienced diarrhea, sinusitis and otitis media during montelukast clinical trials.",
           istable: false,
           table: {},
           islist: false,
-          listData:[]
+          listData:[
+            "",
+            "",
+          ]
         },
         {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
+          innerHead: "PRECAUTION",
+          innerData: "Montelukast is not indicated for use in the reversal of bronchospasm in acute asthma attacks. Montelukast should not be abruptly substituted for inhaled or oral corticosteroids. Montelukast should not be used as monotherapy for the treatment and management of exercise-induced bronchospasm. ",
           istable: false,
           table: {},
           islist: false,
-          listData:[]
+          listData:[
+            "",
+            "",
+          ]
         },
         {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
+          innerHead: "CONTRAINDICATION",
+          innerData: "Montelukast is contraindicated in patients with Hypersensitivity to any component of this product.",
           istable: false,
           table: {},
           islist: false,
-          listData:[]
+          listData:[
+            "",
+            "",
+          ]
         },
         {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
+          innerHead: "PREGNANCY & LACTATION",
+          innerData: "Montelukast is classified as pregnancy category B. The drug has been shown to cross the placenta of pregnant rats and rabbits, but there have been no reports of its use in pregnant women. Montelukast is also known to be excreted into breast-milk, but only limited information is available on the significance of this finding. Caution should be used prior to initiating montelukast therapy in nursing mothers",
           istable: false,
           table: {},
           islist: false,
-          listData:[]
+          listData:[
+            "",
+            "",
+          ]
         },
         {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
+          innerHead: "DRUG INTERACTION",
+          innerData: "Montelukast may be administered with other therapies routinely used in the prophylaxis and chronic treatment of asthma. In drug-interactions studies, the recommended clinical dose of montelukast did not have clinically important effects on the following medicinal products: theophylline, prednisone, prednisolone, oral contraceptives, terfenadine, digoxin and warfarin. Caution should be exercised, particularly in children, when montelukast is co-administered with phenytoin, phenobarbital and rifampicin.",
           istable: false,
           table: {},
           islist: false,
-          listData:[]
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSAGE",
+          innerData: "There were no adverse experiences reported in the majority of over dosage reports. The most frequent adverse experiences observed were thirst, somnolence, hyperkinesia and abdominal pain.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
         {
           innerHead: "STORAGE",
@@ -1495,25 +1579,27 @@ export const ByTrade = [
           istable: false,
           table: {},
           islist: false,
-          listData:[]
+          listData:[
+            "",
+            "",
+          ]
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: "Brocast® 10: Each box contains 2×10 tablets in blister strips.",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
-      ],
-      btn: "Read More",
-      type:'Tablet'
-    },
 
-{
+      ]
+  },
+       
+  {      
       id: 9,
       title: "Brokof 100  Syrup",
       text1: " ",
@@ -1531,101 +1617,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          inner1Head: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Syrup'
@@ -1648,101 +1664,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -1766,101 +1712,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Syrup'
@@ -1884,101 +1760,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Syrup'
@@ -2002,101 +1808,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Syrup'
@@ -2120,101 +1856,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Syrup'
@@ -2238,101 +1904,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -2356,101 +1952,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -2474,101 +2000,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -2592,101 +2048,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Syrup'
@@ -2710,101 +2096,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Syrup'
@@ -2828,101 +2144,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -2946,101 +2192,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -3064,101 +2240,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -3182,101 +2288,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -3300,101 +2336,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -3418,101 +2384,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -3536,101 +2432,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -3654,101 +2480,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -3772,101 +2528,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -3890,101 +2576,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -4008,101 +2624,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Hand Rub'
@@ -4126,101 +2672,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Hand Rub'
@@ -4244,101 +2720,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Injectables'
@@ -4362,101 +2768,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Injectables'
@@ -4480,101 +2816,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -4598,101 +2864,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -4716,101 +2912,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -4834,101 +2960,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -4952,101 +3008,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -5070,101 +3056,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -5188,101 +3104,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Injectables'
@@ -5306,101 +3152,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Injectables'
@@ -5424,101 +3200,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -5542,101 +3248,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -5660,101 +3296,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Syrup'
@@ -5778,101 +3344,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -5896,101 +3392,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -6016,101 +3442,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -6134,101 +3490,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -6252,101 +3538,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -6370,101 +3586,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -6488,101 +3634,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -6606,101 +3682,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -6724,101 +3730,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -6842,101 +3778,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -6960,101 +3826,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Tablet'
@@ -7078,101 +3874,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -7196,101 +3922,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Syrup'
@@ -7314,101 +3970,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -7432,101 +4018,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -7550,101 +4066,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Syrup'
@@ -7668,101 +4114,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -7786,101 +4162,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Syrup'
@@ -7904,101 +4210,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'Capsule'
@@ -8022,101 +4258,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -8140,101 +4306,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -8258,101 +4354,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -8376,101 +4402,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -8494,101 +4450,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -8612,101 +4498,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -8730,101 +4546,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -8848,101 +4594,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -8966,101 +4642,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -9084,101 +4690,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -9202,101 +4738,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -9320,101 +4786,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -9438,101 +4834,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -9556,101 +4882,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -9673,101 +4929,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -9791,101 +4977,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -9910,101 +5026,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -10028,101 +5074,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -10146,101 +5122,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -10264,101 +5170,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -10382,101 +5218,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
@@ -10500,101 +5266,31 @@ export const ByTrade = [
       innerComposition: "",
       innerdata:[
         {
-          innerHead: "PRESENTATION",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
+          islist: false,
           listData:[
-            "Acedol® Tablet: Each film coated tablet contains- Aceclofenac BP 100 mg.",
-            "Acedol® SR Tablet: Each sustained release tablet contains- Aceclofenac BP 200 mg.",
+            "",
+            "",
           ]
         },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: "Aceclofenac is a non-steroidal agent with marked anti-inflammatory and analgesic properties. It is a potent inhibitor of the enzyme cycloxygenase which is involved in the production of prostaglandin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "For the relief of pain and inflammation in osteoarthritis, rheumatoid arthritis and ankylosing spondylitis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        }
+        
       ],
       innerdata1:[
         {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "Acedol® Tablet: Adults: The recommended dose is 100 mg, twice daily. Children: There are no clinical data on the use of Aceclofenac in children. Elderly: The pharmacokinetics of Aceclofenac is not altered in elderly patients, therefore it is not considered necessary to modify the dose or dose frequency. Acedol® SR Tablet:The recommended dose is 200 mg, once daily.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "CONTRAINDICATION AND PRECAUTION",
-          innerData: "Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "SIDE-EFFECT",
-          innerData: "The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "OVER DOSAGE",
-          innerData: "There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: "Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATIO",
-          innerData: "The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
+          innerHead: "",
           innerData: "",
           istable: false,
           table: {},
-          islist: true,
-          listData: [
-          "Acedol® Tablet: Each box containing 10x10’s tablet, in Alu-PVC blister pack.",
-          "Acedol® SR Tablet: Each box containing 5x10’s tablet, in Alu Opaque PVDC blister pack.",
-        ],
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
         },
+        
       ],
       btn: "Read More",
       type:'tablet'
