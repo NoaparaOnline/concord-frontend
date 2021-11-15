@@ -312,21 +312,25 @@ function App() {
          exact path="/products_bygeneric"
           render={(props) => <Productsbygeneric {...props} />}
         />
-        {/* <Route exact path="/products_bygeneric">
-          <Productsbygeneric />
-        </Route> */}
 
-        <Route exact path="/products_bytrade">
-          <Productsbytrade />
-        </Route>
 
-        <Route exact path="/products_firsttime">
-          <Productsfirsttime />
-        </Route>
+        <Route
+         exact path="/products_bytrade"
+          render={(props) => <Productsbytrade {...props} />}
+        />
+        
+        
+        <Route
+         exact path="/products_firsttime"
+          render={(props) => <Productsfirsttime {...props} />}
+        />
+        
+        <Route
+         exact path="/products_therapeutic"
+          render={(props) => <Productstherapeutic {...props} />}
+        />
 
-        <Route exact path="/products_therapeutic">
-          <Productstherapeutic />
-        </Route>
+
 
         {/*          Products Inner Pages         */}
         

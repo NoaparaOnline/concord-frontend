@@ -40,10 +40,13 @@ export const ByGeneric = [
           innerHead: "COMPOSITION",
           innerData: `Acubis®2.5 Tablet: Each film coated tablet contains- Bisoprolol Fumarate BP 2.5 mg.
               Acubis®5 Tablet: Each film coated tablet contains- Bisoprolol Fumarate BP 5 mg.`,
-              istable: false,
+          istable: false,
           table: {},
           islist: false,
-          listData:[]
+          listData:[
+            "",
+            "",
+          ]
         },
         {
           innerHead: "PHARMACOLOGY",
