@@ -64,7 +64,7 @@ const Home = (props) => {
       <Affiliates />
       <Globaloperation />
       <Heading heading={label.HeadOurProduct} />
-      <HomeCards card={card}  {...props}/>
+      <HomeCards {...props}/>
 
       <Milestones
         heading={label}

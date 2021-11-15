@@ -1,14 +1,15 @@
 import React from "react";
 import { FlipCard} from "../../../components";
 import SingleCard from "../FlipCard/SingleCard";
+import card from "./CardData";
 import "./HomeCards.css";
 const HomeCards = (props) => {
-  console.log(props)
+  console.log(props,"data")
   return (
     <div className="container  my-5 ">
       <div className="container cards Responsive_Margin_Screen  " >
         <div className="row  ">
-          {props.card.map((ob, index) => (
+          {card.map((ob, index) => (
             <React.Fragment key={ob.id}>
               <div  className={index===0  ? `col-xxl-2 col-xl-4 col-lg-4  offset-xxl-1 d-none d-lg-block d-md-none  custome-card-test mb-4` 
              

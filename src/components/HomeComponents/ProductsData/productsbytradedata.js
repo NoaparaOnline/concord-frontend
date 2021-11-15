@@ -276,7 +276,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "PRESENTATION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -361,7 +361,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -397,7 +397,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "PRESENTATION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -482,7 +482,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -918,7 +918,7 @@ export const ByTrade = [
         },
         {
           innerHead: "INDICATIONS",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -931,7 +931,7 @@ export const ByTrade = [
       innerdata1:[
         {
           innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -992,7 +992,7 @@ export const ByTrade = [
         },
         {
           innerHead: "DRUG INTERACTION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -1011,7 +1011,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -1184,7 +1184,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "PRESENTATION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -1269,7 +1269,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -1487,7 +1487,7 @@ export const ByTrade = [
         innerdata1:[
           {
             innerHead: "DOSAGE AND ADMINISTRATION",
-            innerData: "",
+            innerData: ``,
             istable: false,
             table: {},
             islist: false,
@@ -1736,16 +1736,6 @@ export const ByTrade = [
             "",
           ]
         },
-        {
-          innerHead: "",
-          innerData: "",
-          istable: false,
-          table: {},
-          islist: true,
-          listData:[
-            "",
-          ]
-        },
         
       ],
       btn: "Read More",
@@ -1772,7 +1762,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -1885,7 +1875,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -2192,7 +2182,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -2351,7 +2341,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -2546,7 +2536,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "PRESENTATION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -2582,7 +2572,7 @@ export const ByTrade = [
       innerdata1:[
         {
           innerHead: "DOSAGE & ADMINISTRATION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -2606,7 +2596,7 @@ export const ByTrade = [
         },
         {
           innerHead: "DRUG INTERACTIONS",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -2664,7 +2654,7 @@ export const ByTrade = [
         },
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -2675,7 +2665,7 @@ export const ByTrade = [
         },
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -2705,12 +2695,12 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "Dapazin",
+      innerMainHeading: "Dapazin 10",
       innerComposition: "Dapagliflozin INN",
       innerdata:[
         {
           innerHead: "PRESENTATION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -2746,7 +2736,7 @@ export const ByTrade = [
       innerdata1:[
         {
           innerHead: "DOSAGE & ADMINISTRATION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -2770,7 +2760,7 @@ export const ByTrade = [
         },
         {
           innerHead: "DRUG INTERACTIONS",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -2828,7 +2818,7 @@ export const ByTrade = [
         },
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -2839,7 +2829,7 @@ export const ByTrade = [
         },
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -2956,7 +2946,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -3072,7 +3062,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -3106,7 +3096,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -3264,7 +3254,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -3300,7 +3290,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -3458,7 +3448,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -3495,7 +3485,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -3653,7 +3643,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -3690,7 +3680,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -3821,7 +3811,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -3856,7 +3846,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -3987,7 +3977,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4022,7 +4012,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4045,7 +4035,7 @@ export const ByTrade = [
         },
         {
           innerHead: "INDICATIONS",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4075,7 +4065,7 @@ export const ByTrade = [
         },
         {
           innerHead: "Recommended regimens for Helicobacter pylori eradication in adults",
-          innerData: "",
+          innerData: ``,
           istable: true,
           table: {
 
@@ -4171,7 +4161,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4207,7 +4197,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4230,7 +4220,7 @@ export const ByTrade = [
         },
         {
           innerHead: "INDICATIONS",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4260,7 +4250,7 @@ export const ByTrade = [
         },
         {
           innerHead: "Recommended regimens for Helicobacter pylori eradication in adults",
-          innerData: "",
+          innerData: ``,
           istable: true,
           table: {
 
@@ -4356,7 +4346,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4392,7 +4382,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITIONS",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4429,7 +4419,7 @@ export const ByTrade = [
       innerdata1:[
         {
           innerHead: "INDICATIONS",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4441,7 +4431,7 @@ export const ByTrade = [
         },
         {
           innerHead: "DOSAGE & ADMINISTRATION",
-          innerData: "",
+          innerData: ``,
           istable: true,
           table: {
             headers: ["Patient Population", "Fexocon® tablets","Fexocon® oral suspension"],
@@ -4544,7 +4534,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4580,7 +4570,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITIONS",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4617,7 +4607,7 @@ export const ByTrade = [
       innerdata1:[
         {
           innerHead: "INDICATIONS",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4629,7 +4619,7 @@ export const ByTrade = [
         },
         {
           innerHead: "DOSAGE & ADMINISTRATION",
-          innerData: "",
+          innerData: ``,
           istable: true,
           table: {
             headers: ["Patient Population", "Fexocon® tablets","Fexocon® oral suspension"],
@@ -4732,7 +4722,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4768,7 +4758,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4946,7 +4936,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -4981,7 +4971,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "COMPOSITION",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -5160,7 +5150,7 @@ export const ByTrade = [
         },
         {
           innerHead: "COMMERCIAL PACK",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: true,
@@ -5197,7 +5187,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -5211,7 +5201,7 @@ export const ByTrade = [
       innerdata1:[
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -5246,7 +5236,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -5260,7 +5250,7 @@ export const ByTrade = [
       innerdata1:[
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -5276,7 +5266,7 @@ export const ByTrade = [
       type:'Hand Rub'
     },
 
-{
+    {
       id: 32,
       title: "Holicef 1gm IM Injection",
       text1: " ",
@@ -5290,42 +5280,132 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Holicef® Injection",
+      innerComposition: "Ceftriaxone BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+          "Holicef® 250 mg IM Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 250 mg. Each ampoule contains 2 ml Lidocaine Hydrochloride 1% BP.",
+          "Holicef® 500 mg IM Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 500 mg. Each ampoule contains 2 ml Lidocaine Hydrochloride 1% BP.",
+          "Holicef® 500 mg IV Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 500 mg. Each ampoule contains 5 ml water for injection BP.",
+          "Holicef® 1 gm IM Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 1 gm. Each ampoule contains 3.5 ml Lidocaine Hydrochloride 1% BP.",
+          "Holicef® 1 gm IV Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 1 gm. Each ampoule contains- 10 ml water for injection BP.",
+          "Holicef® 2 gm IV Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 2 gm. Each ampoule contains- 10 ml water for injection BP. (2 ampoule, 20 ml water for injection)",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: "Holicef® (Ceftriaxone) is a sterile semi-synthetic broad spectrum 3rd generation Cephalosporin antibiotic for intravenous or intramuscular administration. The bactericidal activity of Ceftriaxone results from inhibition of cell wall synthesis. Ceftriaxone has a high degree of stability in the presence of beta-lactamase, both penicillinases and cephalosporinases of gram-positive and gram-negative bacteria. Holicef® (Ceftriaxone), like other cephalosporins and penicillins, kills bacteria by interfering with the synthesis of the bacterial cell wall. A remarkable feature of Holicef® (Ceftriaxone) is its relatively long plasma elimination half-life of about 6 to 9 hours, which makes single or once-daily dosage of the drug appropriate for most patients. Ceftriaxone is not metabolized in the body. About 40-65% of a dose of Ceftriaxone is excreted unchanged in the urine; the remainder is excreted in the bile and ultimately found in the faeces as unchanged drug and microbiologically inactive compound. The drug is highly (95%) protein bound.",
           istable: false,
           table: {},
           islist: false,
-          listData:[
-            "",
-            "",
-          ]
+          listData:[]
         },
-        
-      ],
+        {
+          innerHead: "INDICATIONS",
+          innerData: "Holicef® is indicated for the treatment of the following infections- 1. Lower respiratory tract infections, particularly pneumonia 2. Renal and urinary tract infections 3. Gonococcal infections 4. Acute bacterial otitis media 5. Skin, soft tissue, bone and joint infections 6. Bacterial meningitis7. Ear, nose and throat infections 8. Typhoid fever 9. Septicemia 10. Infections in cancer patients. 11. Prevention of post-operative infections 12. Pre-operative prophylaxis of infections associated with surgery",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        }
+        ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: "Adult: By deep intramuscular injection or by intravenous injection over at least 2-4 minutes or by intravenous infusion, 1 gm daily; 2-4 gm daily in severe infections; intramuscular doses over 1 gm divided between more than one site. Neonate: By intravenous infusion over 60 minutes, 20-50 mg/kg daily (max. 50 mg/kg daily). Infant and child under 50 kg: By deep intramuscular injection or by intravenous injection over 2-4 minutes or by intravenous infusion, 20-50 mg/kg daily; up to 80 mg/kg daily in severe infections; doses of 50 mg/kg and over by intravenous infusion only; 50 kg and over, adult dose. Uncomplicated gonorrhea: By deep intramuscular injection, 250 mg as a single dose. Surgical prophylaxis: By deep intramuscular injection or by intravenous injection over at least 2-4 minutes, 1 gm at induction, Preparation of injections and direction for reconstitution of powder : For intramuscular injection : Holicef 250 mg or 500 mg should be dissolved in 2 ml of 1% Lidocaine HCl Injection, Holicef 1 gm  in 3.5 ml of 1% Lidocaine HCl Injection. For intravenous injection :Holicef 250 mg or 500 mg should be dissolved in 5 ml of Water for Injection, Holicef 1 gm in 10 ml of Water for Injection, Holicef 2 gm in 20 ml of water for Injection. Use the solution immediately after reconstitution of powder. ",
           istable: false,
           table: {},
           islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: "GenerallyHolicef® (Ceftriaxone) is well-tolerated. However, few side-effects including- nausea, vomiting, diarrhoea, dizziness and fever may occur.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "ADVERSE DRUG REACTIONS",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
           listData:[
-            "",
-            "",
+          "Pain can occur at the site of injection.",
+          "Diarrhea occurs in about 3% (children 5-6%).",
+          "Convulsion or involuntary movements may occur with ceftriaxone USE."
           ]
         },
-        
-      ],
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: "Ceftriaxone is contraindicated in patients with known allergy to ceftriaxone, other cephalosporins or penicillins.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: "Pregnancy: The safety of Ceftriaxone in the treatment of infection during pregnancy has not been established. Ceftriaxone should only be used during pregnancy if the likely benefit outweighs the potential risk to the fetus or the mother.Lactation: Ceftriaxone is excreted in breast milk at low concentrations. Therefore, caution should be exercised when Ceftriaxone is administered to a nursing mother.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: "No drug interactions have yet been reported.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: "There is no specific antidote. Treatment of overdosage should be symptomatic.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: "Store below 30°C, Protect from light & moisture. Keep out of the reach of children.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData: [
+          "Holicef® 250 mg IM Injection: Each box contains- 1 combipac (1 vial of 250 mg Ceftriaxone with1 ampoule of 2 ml Lidocaine HCl 1% injection), Sterile disposable syringe 5 ml, Alcohol pad, First aid bandage & Baby needle.",
+          "Holicef® 500 mg IM Injection: Each box contains- 1 combipac (1 vial of 500 mg Ceftriaxone with 1 ampoule of 2 ml Lidocaine HCl 1% injection), Sterile disposable syringe 5 ml, Alcohol pad, First aid bandage.",
+          "Holicef® 500 mg IV Injection: Each box contains- 1 combipac (1vial of 500 mg Ceftriaxone with 1 ampoule of 5 ml water for injection), Sterile disposable syringe 5 ml, Alcohol pad, First aid bandage & 1 vein set.",
+          "Holicef® 1 gm IM Injection: Each box contains- 1 combipac (1 vial of 1 gm Ceftriaxone with 1 ampoule of 3.5 ml Lidocaine HCl 1% injection), Sterile disposable syringe 5 ml, Alcohol pad, First aid bandage.",
+          "Holicef® 1 gm IV Injection: Each box contains- 1 combipac (1vial of 1 gm Ceftriaxone with 1 ampoule of 10 ml water for injection), Sterile disposable syringe 10 ml, Alcohol pad, First aid bandage & 1 vein set.",
+          "Holicef® 2 gm IV Injection: Each box contains- 1 combipac (1vial of 2 gm Ceftriaxone with 2 ampoules of 10 ml water for injection), Sterile disposable syringe 20 ml, Alcohol pad, First aid bandage & 1 vein set.",
+        ],
+        },
+        ],
       btn: "Read More",
       btnlink: "/prod_details",
       type:'Injectables'
     },
 
-{
+    {
       id: 33,
       title: "Holicef 500mg IV Injection",
       text1: " ",
@@ -5339,42 +5419,132 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Holicef® Injection",
+      innerComposition: "Ceftriaxone BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+          "Holicef® 250 mg IM Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 250 mg. Each ampoule contains 2 ml Lidocaine Hydrochloride 1% BP.",
+          "Holicef® 500 mg IM Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 500 mg. Each ampoule contains 2 ml Lidocaine Hydrochloride 1% BP.",
+          "Holicef® 500 mg IV Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 500 mg. Each ampoule contains 5 ml water for injection BP.",
+          "Holicef® 1 gm IM Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 1 gm. Each ampoule contains 3.5 ml Lidocaine Hydrochloride 1% BP.",
+          "Holicef® 1 gm IV Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 1 gm. Each ampoule contains- 10 ml water for injection BP.",
+          "Holicef® 2 gm IV Injection: Each vial contains Ceftriaxone Sodium BP eqvt. to Ceftriaxone 2 gm. Each ampoule contains- 10 ml water for injection BP. (2 ampoule, 20 ml water for injection)",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: "Holicef® (Ceftriaxone) is a sterile semi-synthetic broad spectrum 3rd generation Cephalosporin antibiotic for intravenous or intramuscular administration. The bactericidal activity of Ceftriaxone results from inhibition of cell wall synthesis. Ceftriaxone has a high degree of stability in the presence of beta-lactamase, both penicillinases and cephalosporinases of gram-positive and gram-negative bacteria. Holicef® (Ceftriaxone), like other cephalosporins and penicillins, kills bacteria by interfering with the synthesis of the bacterial cell wall. A remarkable feature of Holicef® (Ceftriaxone) is its relatively long plasma elimination half-life of about 6 to 9 hours, which makes single or once-daily dosage of the drug appropriate for most patients. Ceftriaxone is not metabolized in the body. About 40-65% of a dose of Ceftriaxone is excreted unchanged in the urine; the remainder is excreted in the bile and ultimately found in the faeces as unchanged drug and microbiologically inactive compound. The drug is highly (95%) protein bound.",
           istable: false,
           table: {},
           islist: false,
-          listData:[
-            "",
-            "",
-          ]
+          listData:[]
         },
-        
-      ],
+        {
+          innerHead: "INDICATIONS",
+          innerData: "Holicef® is indicated for the treatment of the following infections- 1. Lower respiratory tract infections, particularly pneumonia 2. Renal and urinary tract infections 3. Gonococcal infections 4. Acute bacterial otitis media 5. Skin, soft tissue, bone and joint infections 6. Bacterial meningitis7. Ear, nose and throat infections 8. Typhoid fever 9. Septicemia 10. Infections in cancer patients. 11. Prevention of post-operative infections 12. Pre-operative prophylaxis of infections associated with surgery",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        }
+        ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: "Adult: By deep intramuscular injection or by intravenous injection over at least 2-4 minutes or by intravenous infusion, 1 gm daily; 2-4 gm daily in severe infections; intramuscular doses over 1 gm divided between more than one site. Neonate: By intravenous infusion over 60 minutes, 20-50 mg/kg daily (max. 50 mg/kg daily). Infant and child under 50 kg: By deep intramuscular injection or by intravenous injection over 2-4 minutes or by intravenous infusion, 20-50 mg/kg daily; up to 80 mg/kg daily in severe infections; doses of 50 mg/kg and over by intravenous infusion only; 50 kg and over, adult dose. Uncomplicated gonorrhea: By deep intramuscular injection, 250 mg as a single dose. Surgical prophylaxis: By deep intramuscular injection or by intravenous injection over at least 2-4 minutes, 1 gm at induction, Preparation of injections and direction for reconstitution of powder : For intramuscular injection : Holicef 250 mg or 500 mg should be dissolved in 2 ml of 1% Lidocaine HCl Injection, Holicef 1 gm  in 3.5 ml of 1% Lidocaine HCl Injection. For intravenous injection :Holicef 250 mg or 500 mg should be dissolved in 5 ml of Water for Injection, Holicef 1 gm in 10 ml of Water for Injection, Holicef 2 gm in 20 ml of water for Injection. Use the solution immediately after reconstitution of powder. ",
           istable: false,
           table: {},
           islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: "GenerallyHolicef® (Ceftriaxone) is well-tolerated. However, few side-effects including- nausea, vomiting, diarrhoea, dizziness and fever may occur.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "ADVERSE DRUG REACTIONS",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
           listData:[
-            "",
-            "",
+          "Pain can occur at the site of injection.",
+          "Diarrhea occurs in about 3% (children 5-6%).",
+          "Convulsion or involuntary movements may occur with ceftriaxone USE."
           ]
         },
-        
-      ],
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: "Ceftriaxone is contraindicated in patients with known allergy to ceftriaxone, other cephalosporins or penicillins.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: "Pregnancy: The safety of Ceftriaxone in the treatment of infection during pregnancy has not been established. Ceftriaxone should only be used during pregnancy if the likely benefit outweighs the potential risk to the fetus or the mother.Lactation: Ceftriaxone is excreted in breast milk at low concentrations. Therefore, caution should be exercised when Ceftriaxone is administered to a nursing mother.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: "No drug interactions have yet been reported.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: "There is no specific antidote. Treatment of overdosage should be symptomatic.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: "Store below 30°C, Protect from light & moisture. Keep out of the reach of children.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData: [
+          "Holicef® 250 mg IM Injection: Each box contains- 1 combipac (1 vial of 250 mg Ceftriaxone with1 ampoule of 2 ml Lidocaine HCl 1% injection), Sterile disposable syringe 5 ml, Alcohol pad, First aid bandage & Baby needle.",
+          "Holicef® 500 mg IM Injection: Each box contains- 1 combipac (1 vial of 500 mg Ceftriaxone with 1 ampoule of 2 ml Lidocaine HCl 1% injection), Sterile disposable syringe 5 ml, Alcohol pad, First aid bandage.",
+          "Holicef® 500 mg IV Injection: Each box contains- 1 combipac (1vial of 500 mg Ceftriaxone with 1 ampoule of 5 ml water for injection), Sterile disposable syringe 5 ml, Alcohol pad, First aid bandage & 1 vein set.",
+          "Holicef® 1 gm IM Injection: Each box contains- 1 combipac (1 vial of 1 gm Ceftriaxone with 1 ampoule of 3.5 ml Lidocaine HCl 1% injection), Sterile disposable syringe 5 ml, Alcohol pad, First aid bandage.",
+          "Holicef® 1 gm IV Injection: Each box contains- 1 combipac (1vial of 1 gm Ceftriaxone with 1 ampoule of 10 ml water for injection), Sterile disposable syringe 10 ml, Alcohol pad, First aid bandage & 1 vein set.",
+          "Holicef® 2 gm IV Injection: Each box contains- 1 combipac (1vial of 2 gm Ceftriaxone with 2 ampoules of 10 ml water for injection), Sterile disposable syringe 20 ml, Alcohol pad, First aid bandage & 1 vein set.",
+        ],
+        },
+        ],
       btn: "Read More",
       btnlink: "/prod_details",
       type:'Injectables'
     },
 
-{
+    {
       id: 34,
       title: "Linacon 5  Tablet",
       text1: " ",
@@ -5388,12 +5558,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Linacon",
+      innerComposition: "Linagliptin INN",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: "Linacon® 5: Each film coated tablet contains Linagliptin INN 5 mg.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: "Linacon ® 5 is an inhibitor of DPP-4 , an enzyme that degrades the incretin hormones GLP-1 and GIP. Thus, Linagliptin increases the concentrations of active incretin hormones, stimulating the release of insulin from pancreatic beta cells in a glucose-dependent manner and decreasing the secretion of glucangon from pancreatic alpha cells in the circulation. Thus it improves glycemic control in patients with type 2 diabetes mellitus.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: "Linacon® 5 is indicated in the treatment of type 2 diabetes mellitus to improve glycaemic control in adults. As monotherapy-in patients inadequately controlled by diet and exercise alone and for whom metformin is inappropriate due to intolerance or contraindicated due to renal impairment. As combination therapy-in combination with metformin when diet and exercise plus metformin alone do not provide adequate glycaemic control-in combination with a sulphonylurea and metformin when diet and exercise plus dual therapy with these medicinal products do not provide adequate glycaemic control.",
           istable: false,
           table: {},
           islist: false,
@@ -5403,11 +5595,89 @@ export const ByTrade = [
           ]
         },
         
+        
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: "Linagliptin 5 mg once daily. If added to metformin, the dose of metformin should be maintained and linagliptin administered concomitantly. When used in combination with a sulfonylurea, a lower dose of the sulphonylurea may be considered to reduce the risk of hypoglycaemia.Patients with renal impairment: No dose adjustment required. Linagliptin can be taken with or without a meal at any time of the day.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION:",
+          innerData: "Hypersensitivity to the active substance or to any of the excipients.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: "Linagliptin should not be used in patients with type 1 diabetes or for the treatment of diabetic ketoacidosis.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECT",
+          innerData: "There may be hypoglycaemia, nasopharyngitis, cough and pancreatitis in combination with metformin and sulfonylurea.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: "Linagliptin is a weak competitive and a weak to moderate mechanism-based inhibitor of CYP isozyme CYP3A4, but does not inhibit other CYP isozymes. The risk for clinically meaningful interactions by other medicinal products on linagliptin is low and in clinical studies linagliptin had no clinically relevant effect on the pharmacokinetics of metformin, glyburide, simvastatin, warfarin, digoxin or oral contraceptives.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PREGNANCY AND LACTATION",
+          innerData: "Avoid use during pregnancy. A risk to the breast-fed child cannot be excluded. ",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: "Each box contains 2 X 10 tablets in Alu-Alu blister pack.",
           istable: false,
           table: {},
           islist: false,
@@ -5423,7 +5693,7 @@ export const ByTrade = [
       type:'Tablet'
     },
 
-{
+    {
       id: 35,
       title: "Macrobac 15  Tablet",
       text1: " ",
@@ -5437,12 +5707,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Macrobac 15",
+      innerComposition: "Azithromycin BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: "Macrobac® 500 Tablet: Each tablet contains Azithromycin BP  500 mg as Azithromycin Dihydrate BP.Macrobac® 15, 25, 35 & 50 ml PFS: After reconstitution, Each 5 ml suspension contains Azithromycin BP  200 mg as Azithromycin Dihydrate BP.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: "Azithromycin is an azalide, a subclass of macrolide antibiotics active against gram-positive and gram-negative organisms. It prevents bacteria from growing by interfering with their protein synthesis. It binds to the 50s subunit of the bacterial ribosome and thus inhibits translation of mRNA.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: "Respiratory tract infections, Otitis media, Skin and soft-tissue infections, Uncomplicated gonorrhoea, Uncomplicated genital chlamydial infections, Nongonococcal urethritis, Typhoid fever, Community acquired pneumonia, Chronic obstructive pulmonary disease, Mycobacterium avium complex.",
           istable: false,
           table: {},
           islist: false,
@@ -5455,14 +5747,122 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: "Adults: 500 mg once daily orally for 3 days.Children (Over 6 months): 10 mg/kg once daily for 3 days or",
+          istable: true,
+          table: {
+
+            headers: ["Body weight", "Dose","Duration"],
+          body: [
+            
+            [
+              "15-25 kg",
+              "200 mg once daily",
+              "3 days",
+            ],
+            [
+              "26-35 kg",
+              "300 mg once daily",
+              "3 days",
+            ],
+            [
+              "36-45 kg",
+              "200 mg once daily",
+              "3 days",
+            ],
+            
+          ],
+
+          },
+          islist: true,
+          listData:[
+            "Uncomplicated gonorrhoea, uncomplicated genital chlamydial infections and non-gonococcal urethritis, 1 g as a single dose.",
+            "Community acquired pneumonia and Chronic obstructive pulmonary disease, 500 mg as a single dose on day 1, followed by 250 mg once daily from day 2 to 5",
+            "Macrobac® Tablet & PFS Can Be Taken With Or Without Food.",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Pregnancy: Recent clinical studies have recommended that Azithromycin should be considered for the initial treatment of Chlamydial Cervicitis in pregnancy. In other infections, it should be used only when clearly needed. It is pregnancy category B drug.
+          Lactation: It is not known whether Azithromycin is excreted in human milk. Because many drugs are excreted in human milk, caution should be exercised when it is administered to a nursing woman.
+          `,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Azithromycin is well tolerated with a low incidence of side effects. Most common side effects are nausea, abdominal discomfort, vomiting, flatulence and diarrhea.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Azithromycin is contraindicated in patients hypersensitive to Azithromycin orother macrolide antibiotics.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Azithromycin is principally eliminated via liver. Caution should be exercised when it is administered to patients with impaired hepatic function.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Food and antacid reduce the absorption of Azithromycin. So Azithromycinshould be administered 1 hour before or 2 hours after taking food or antacid. Macrolides have been known to increase the plasma concentration of digoxinand cyclosporine. So caution should be exercised while co-administration is
+          necessary.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Macrobac® 500 Tablet: Each box contains 3 X 4’s tablets in Alu-Alu blister pack.",
+            "Macrobac® 15 ml PFS: Each bottle contains Azithromycin dry powder for 15 ml suspension with a measuring cup.",
+            "Macrobac® 25 ml PFS: Each bottle contains Azithromycin dry powder for 25 ml suspension with a measuring cup.",
+            "Macrobac® 35 ml PFS: Each bottle contains Azithromycin dry powder for 35 ml suspension with a measuring cup.",
+            "Macrobac® 50 ml PFS: Each bottle contains Azithromycin dry powder for 50 ml suspension with a measuring cup.",
           ]
         },
         
@@ -5486,12 +5886,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Macrobac 35",
+      innerComposition: "Azithromycin BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: "Macrobac® 500 Tablet: Each tablet contains Azithromycin BP  500 mg as Azithromycin Dihydrate BP.Macrobac® 15, 25, 35 & 50 ml PFS: After reconstitution, Each 5 ml suspension contains Azithromycin BP  200 mg as Azithromycin Dihydrate BP.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: "Azithromycin is an azalide, a subclass of macrolide antibiotics active against gram-positive and gram-negative organisms. It prevents bacteria from growing by interfering with their protein synthesis. It binds to the 50s subunit of the bacterial ribosome and thus inhibits translation of mRNA.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: "Respiratory tract infections, Otitis media, Skin and soft-tissue infections, Uncomplicated gonorrhoea, Uncomplicated genital chlamydial infections, Nongonococcal urethritis, Typhoid fever, Community acquired pneumonia, Chronic obstructive pulmonary disease, Mycobacterium avium complex.",
           istable: false,
           table: {},
           islist: false,
@@ -5504,14 +5926,122 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: "Adults: 500 mg once daily orally for 3 days.Children (Over 6 months): 10 mg/kg once daily for 3 days or",
+          istable: true,
+          table: {
+
+            headers: ["Body weight", "Dose","Duration"],
+          body: [
+            
+            [
+              "15-25 kg",
+              "200 mg once daily",
+              "3 days",
+            ],
+            [
+              "26-35 kg",
+              "300 mg once daily",
+              "3 days",
+            ],
+            [
+              "36-45 kg",
+              "200 mg once daily",
+              "3 days",
+            ],
+            
+          ],
+
+          },
+          islist: true,
+          listData:[
+            "Uncomplicated gonorrhoea, uncomplicated genital chlamydial infections and non-gonococcal urethritis, 1 g as a single dose.",
+            "Community acquired pneumonia and Chronic obstructive pulmonary disease, 500 mg as a single dose on day 1, followed by 250 mg once daily from day 2 to 5",
+            "Macrobac® Tablet & PFS Can Be Taken With Or Without Food.",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Pregnancy: Recent clinical studies have recommended that Azithromycin should be considered for the initial treatment of Chlamydial Cervicitis in pregnancy. In other infections, it should be used only when clearly needed. It is pregnancy category B drug.
+          Lactation: It is not known whether Azithromycin is excreted in human milk. Because many drugs are excreted in human milk, caution should be exercised when it is administered to a nursing woman.
+          `,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Azithromycin is well tolerated with a low incidence of side effects. Most common side effects are nausea, abdominal discomfort, vomiting, flatulence and diarrhea.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Azithromycin is contraindicated in patients hypersensitive to Azithromycin orother macrolide antibiotics.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Azithromycin is principally eliminated via liver. Caution should be exercised when it is administered to patients with impaired hepatic function.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Food and antacid reduce the absorption of Azithromycin. So Azithromycinshould be administered 1 hour before or 2 hours after taking food or antacid. Macrolides have been known to increase the plasma concentration of digoxinand cyclosporine. So caution should be exercised while co-administration is
+          necessary.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Macrobac® 500 Tablet: Each box contains 3 X 4’s tablets in Alu-Alu blister pack.",
+            "Macrobac® 15 ml PFS: Each bottle contains Azithromycin dry powder for 15 ml suspension with a measuring cup.",
+            "Macrobac® 25 ml PFS: Each bottle contains Azithromycin dry powder for 25 ml suspension with a measuring cup.",
+            "Macrobac® 35 ml PFS: Each bottle contains Azithromycin dry powder for 35 ml suspension with a measuring cup.",
+            "Macrobac® 50 ml PFS: Each bottle contains Azithromycin dry powder for 50 ml suspension with a measuring cup.",
           ]
         },
         
@@ -5521,7 +6051,7 @@ export const ByTrade = [
       type:'Tablet'
     },
 
-{
+    {
       id: 37,
       title: "Macrobac 500  Tablet",
       text1: " ",
@@ -5535,12 +6065,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Macrobac 500",
+      innerComposition: "Azithromycin BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: "Macrobac® 500 Tablet: Each tablet contains Azithromycin BP  500 mg as Azithromycin Dihydrate BP.Macrobac® 15, 25, 35 & 50 ml PFS: After reconstitution, Each 5 ml suspension contains Azithromycin BP  200 mg as Azithromycin Dihydrate BP.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: "Azithromycin is an azalide, a subclass of macrolide antibiotics active against gram-positive and gram-negative organisms. It prevents bacteria from growing by interfering with their protein synthesis. It binds to the 50s subunit of the bacterial ribosome and thus inhibits translation of mRNA.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: "Respiratory tract infections, Otitis media, Skin and soft-tissue infections, Uncomplicated gonorrhoea, Uncomplicated genital chlamydial infections, Nongonococcal urethritis, Typhoid fever, Community acquired pneumonia, Chronic obstructive pulmonary disease, Mycobacterium avium complex.",
           istable: false,
           table: {},
           islist: false,
@@ -5553,14 +6105,122 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: "Adults: 500 mg once daily orally for 3 days.Children (Over 6 months): 10 mg/kg once daily for 3 days or",
+          istable: true,
+          table: {
+
+            headers: ["Body weight", "Dose","Duration"],
+          body: [
+            
+            [
+              "15-25 kg",
+              "200 mg once daily",
+              "3 days",
+            ],
+            [
+              "26-35 kg",
+              "300 mg once daily",
+              "3 days",
+            ],
+            [
+              "36-45 kg",
+              "200 mg once daily",
+              "3 days",
+            ],
+            
+          ],
+
+          },
+          islist: true,
+          listData:[
+            "Uncomplicated gonorrhoea, uncomplicated genital chlamydial infections and non-gonococcal urethritis, 1 g as a single dose.",
+            "Community acquired pneumonia and Chronic obstructive pulmonary disease, 500 mg as a single dose on day 1, followed by 250 mg once daily from day 2 to 5",
+            "Macrobac® Tablet & PFS Can Be Taken With Or Without Food.",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Pregnancy: Recent clinical studies have recommended that Azithromycin should be considered for the initial treatment of Chlamydial Cervicitis in pregnancy. In other infections, it should be used only when clearly needed. It is pregnancy category B drug.
+          Lactation: It is not known whether Azithromycin is excreted in human milk. Because many drugs are excreted in human milk, caution should be exercised when it is administered to a nursing woman.
+          `,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Azithromycin is well tolerated with a low incidence of side effects. Most common side effects are nausea, abdominal discomfort, vomiting, flatulence and diarrhea.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Azithromycin is contraindicated in patients hypersensitive to Azithromycin orother macrolide antibiotics.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Azithromycin is principally eliminated via liver. Caution should be exercised when it is administered to patients with impaired hepatic function.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Food and antacid reduce the absorption of Azithromycin. So Azithromycinshould be administered 1 hour before or 2 hours after taking food or antacid. Macrolides have been known to increase the plasma concentration of digoxinand cyclosporine. So caution should be exercised while co-administration is
+          necessary.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Macrobac® 500 Tablet: Each box contains 3 X 4’s tablets in Alu-Alu blister pack.",
+            "Macrobac® 15 ml PFS: Each bottle contains Azithromycin dry powder for 15 ml suspension with a measuring cup.",
+            "Macrobac® 25 ml PFS: Each bottle contains Azithromycin dry powder for 25 ml suspension with a measuring cup.",
+            "Macrobac® 35 ml PFS: Each bottle contains Azithromycin dry powder for 35 ml suspension with a measuring cup.",
+            "Macrobac® 50 ml PFS: Each bottle contains Azithromycin dry powder for 50 ml suspension with a measuring cup.",
           ]
         },
         
@@ -5570,7 +6230,7 @@ export const ByTrade = [
       type:'Tablet'
     },
 
-{
+    {
       id: 38,
       title: "Maxdol 10  Tablet",
       text1: " ",
@@ -5584,12 +6244,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Maxdol",
+      innerComposition: "Ketorolac Tromethamine USP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Maxdol® 10 tablet: Each film coated tablet contains Ketorolac tromethamine USP 10 mg. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Ketorolac Tromethamine is a drug of pyrrolo-pyrrole group of nonsteroidal anti-inflammatory drug (NSAID). Chemically it is known as 5 benzoyle-2, 3-dihydro-1H-pyrroligine-1-carboxylic acid, compound with 2-amino-2 -(hydroxymethyl)-1, 3-propanediol (1:1). Ketorolac Tromethamine inhibits synthesis of prostaglandins and may be considered as a peripherally acting analgesic. The biological activity of Ketorolac Tromethamine is associated with the S-form. Pharmacokinetic property of Ketorolac Tromethamine is linear. It is highly protein bound and is largely metabolized in liver. The products of metabolism and some unchanged drugs are excreted in the urine.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Injections and tablets are indicated for the short-term management of moderate to severe acute post-operative pain.`,
           istable: false,
           table: {},
           islist: false,
@@ -5602,8 +6284,96 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Ketorolac tromethamine is for administration by intramuscular or bolus intravenous injection. The recommended initial dose of Ketorolac is 10 mg, followed by 10 to 30 mg every four to six hours as required. A total daily dose of 90 mg for non-elderly and 60 mg for the elderly, renally-impaired patients and patients less than 50 kg should not be exceeded. The maximum duration of treatment should not exceed two days. Ketorolac tablets are recommended for short-term use only (up to 7 days) and are not recommended for chronic use. 10mg every 4 to 6 hours as required. Doses exceeding 40 mg per day are not recommended. For patients receiving parenteral Ketorolac tromethamine and who are converted to Ketorolac tromethamine oral tablets, the total combined daily dose should not exceed 90 mg (60 mg for the elderly, renally-impaired patients and patients less than 50 kg) and the oral component should not exceed 40 mg on the day the change of formulation is made. Patients should be converted to oral treatment as soon as possible.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Commonly occurring side-effects are nausea, vomiting, gastro-intestinal bleeding, melaena, peptic ulcer, pancreatitis, anxiety, drowsiness, dizziness, headache, hallucination, excessive thirst, inability to concentrate, insomnia, malaise, fatigue, pruritus, urticaria, skin photosensitivity, Lyell's syndrome, Stevens Johnson syndrome, flushing, bradycardia, hypertension, palpitations, chest pain, infertility in female, dyspnoea, asthma, pulmonary oedema, fever & pain at injection site.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: `Precaution should be taken in elderly , allergic disorder, renal , cardiac  & patient with low body weight (< 50kg)`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `Ketorolac tromethamine is contraindicated in patients having hypersensitivity to this drug or other NSAIDs and those patients in whom aspirin or other prostaglandin synthesis inhibitors induce allergic reactions. It is also contraindicated in a history of peptic ulcer or gastro-intestinal bleeding, moderate or severe renal impairment (serum creatinine> 160 micromol/l), a history of asthma. Ketorolac tromethamine is contra-indicated as prophylactic analgesia before surgery.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Safety in human pregnancy has not been established. Ketorolac has been detected in human milk at low levels. Ketorolac is therefore contraindicated during pregnancy, labour or delivery, or in mothers who are breast feeding.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSAGE",
+          innerData: `Over dosage of Ketorolac Tromethamine may cause abdominal pain, peptic ulcers which healed after discontinuation of doses and Metabolic acidosis has been reported following intentional over dosage.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Ketorolac tromethamine should not be used with other NSAIDs or in patients receiving aspirin because of the potential for additive side-effects. Care should be taken when administering Ketorolac tromethamine with anti-coagulants since co-administration may cause an enhanced anti-coagulant effect. Ketorolac tromethamine and other non-steroidal anti-inflammatory drugs can reduce the anti-hypertensive effect of beta-blockers .`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30 ⁰C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `Maxdol® 10 tablet: Each box contains 3x10 tablets in Alu-Alu pack. `,
           istable: false,
           table: {},
           islist: false,
@@ -5633,12 +6403,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Maxdol",
+      innerComposition: "Ketorolac Tromethamine USP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Maxdol® 10 tablet: Each film coated tablet contains Ketorolac tromethamine USP 10 mg. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Ketorolac Tromethamine is a drug of pyrrolo-pyrrole group of nonsteroidal anti-inflammatory drug (NSAID). Chemically it is known as 5 benzoyle-2, 3-dihydro-1H-pyrroligine-1-carboxylic acid, compound with 2-amino-2 -(hydroxymethyl)-1, 3-propanediol (1:1). Ketorolac Tromethamine inhibits synthesis of prostaglandins and may be considered as a peripherally acting analgesic. The biological activity of Ketorolac Tromethamine is associated with the S-form. Pharmacokinetic property of Ketorolac Tromethamine is linear. It is highly protein bound and is largely metabolized in liver. The products of metabolism and some unchanged drugs are excreted in the urine.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Injections and tablets are indicated for the short-term management of moderate to severe acute post-operative pain.`,
           istable: false,
           table: {},
           islist: false,
@@ -5651,8 +6443,96 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Ketorolac tromethamine is for administration by intramuscular or bolus intravenous injection. The recommended initial dose of Ketorolac is 10 mg, followed by 10 to 30 mg every four to six hours as required. A total daily dose of 90 mg for non-elderly and 60 mg for the elderly, renally-impaired patients and patients less than 50 kg should not be exceeded. The maximum duration of treatment should not exceed two days. Ketorolac tablets are recommended for short-term use only (up to 7 days) and are not recommended for chronic use. 10mg every 4 to 6 hours as required. Doses exceeding 40 mg per day are not recommended. For patients receiving parenteral Ketorolac tromethamine and who are converted to Ketorolac tromethamine oral tablets, the total combined daily dose should not exceed 90 mg (60 mg for the elderly, renally-impaired patients and patients less than 50 kg) and the oral component should not exceed 40 mg on the day the change of formulation is made. Patients should be converted to oral treatment as soon as possible.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Commonly occurring side-effects are nausea, vomiting, gastro-intestinal bleeding, melaena, peptic ulcer, pancreatitis, anxiety, drowsiness, dizziness, headache, hallucination, excessive thirst, inability to concentrate, insomnia, malaise, fatigue, pruritus, urticaria, skin photosensitivity, Lyell's syndrome, Stevens Johnson syndrome, flushing, bradycardia, hypertension, palpitations, chest pain, infertility in female, dyspnoea, asthma, pulmonary oedema, fever & pain at injection site.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: `Precaution should be taken in elderly , allergic disorder, renal , cardiac  & patient with low body weight (< 50kg)`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `Ketorolac tromethamine is contraindicated in patients having hypersensitivity to this drug or other NSAIDs and those patients in whom aspirin or other prostaglandin synthesis inhibitors induce allergic reactions. It is also contraindicated in a history of peptic ulcer or gastro-intestinal bleeding, moderate or severe renal impairment (serum creatinine> 160 micromol/l), a history of asthma. Ketorolac tromethamine is contra-indicated as prophylactic analgesia before surgery.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Safety in human pregnancy has not been established. Ketorolac has been detected in human milk at low levels. Ketorolac is therefore contraindicated during pregnancy, labour or delivery, or in mothers who are breast feeding.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSAGE",
+          innerData: `Over dosage of Ketorolac Tromethamine may cause abdominal pain, peptic ulcers which healed after discontinuation of doses and Metabolic acidosis has been reported following intentional over dosage.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Ketorolac tromethamine should not be used with other NSAIDs or in patients receiving aspirin because of the potential for additive side-effects. Care should be taken when administering Ketorolac tromethamine with anti-coagulants since co-administration may cause an enhanced anti-coagulant effect. Ketorolac tromethamine and other non-steroidal anti-inflammatory drugs can reduce the anti-hypertensive effect of beta-blockers .`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30 ⁰C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `Maxdol® 10 tablet: Each box contains 3x10 tablets in Alu-Alu pack. `,
           istable: false,
           table: {},
           islist: false,
@@ -5682,12 +6562,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Maxdol 30 Injection",
+      innerComposition: "Ketorolac Tromethamine USP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Maxdol® 30 injection: Each 1 ml injection contains Ketorolac tromethamine USP 30 mg. ",
+            "Maxdol® 60 injection: Each 2 ml injection contains Ketorolac tromethamine USP 60 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Ketorolac Tromethamine is a drug of pyrrolo-pyrrole group of nonsteroidal anti-inflammatory drug (NSAID). Chemically it is known as 5 benzoyle-2, 3-dihydro-1H-pyrroligine-1-carboxylic acid, compound with 2 - amino-2 -(hydroxymethyl)-1, 3-propanediol (1:1). Ketorolac Tromethamine inhibits synthesis of prostaglandins and may be considered as a peripherally acting analgesic. The biological activity of Ketorolac Tromethamine is associated with the S-form. Pharmacokinetic property of Ketorolac Tromethamine is linear. It is highly protein bound and is largely metabolized in liver. The products of metabolism and some unchanged drugs are excreted in the urine.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Injections and tablets are indicated for the short-term management of moderate to severe acute post-operative pain.`,
           istable: false,
           table: {},
           islist: false,
@@ -5700,14 +6602,102 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Ketorolac tromethamine is for administration by intramuscular or bolus intravenous injection. The recommended initial dose of Ketorolac is 10 mg, followed by 10 to 30 mg every four to six hours as required. A total daily dose of 90 mg for non-elderly and 60 mg for the elderly, renally-impaired patients and patients less than 50 kg should not be exceeded. The maximum duration of treatment should not exceed two days. Ketorolac tablets are recommended for short-term use only (up to 7 days) and are not recommended for chronic use. 10mg every 4 to 6 hours as required. Doses exceeding 40 mg per day are not recommended. For patients receiving parenteral Ketorolac tromethamine and who are converted to Ketorolac tromethamine oral tablets, the total combined daily dose should not exceed 90 mg (60 mg for the elderly, renally-impaired patients and patients less than 50 kg) and the oral component should not exceed 40 mg on the day the change of formulation is made. Patients should be converted to oral treatment as soon as possible.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Commonly occurring side-effects are nausea, vomiting, gastro-intestinal bleeding, melaena, peptic ulcer, pancreatitis, anxiety, drowsiness, dizziness, headache, hallucination, excessive thirst, inability to concentrate, insomnia, malaise, fatigue, pruritus, urticaria, skin photosensitivity, Lyell's syndrome, Stevens Johnson syndrome, flushing, bradycardia, hypertension, palpitations, chest pain, infertility in female, dyspnoea, asthma, pulmonary oedema, fever & pain at injection site.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: `Precaution should be taken in elderly, allergic disorder, renal, cardiac  & patient with low body weight (< 50kg)`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `Ketorolac tromethamine is contraindicated in patients having hypersensitivity to this drug or other NSAIDs and those patients in whom aspirin or other prostaglandin synthesis inhibitors induce allergic reactions. It is also contraindicated in a history of peptic ulcer or gastro-intestinal bleeding, moderate or severe renal impairment (serum creatinine> 160 micromol/l), a history of asthma. Ketorolac tromethamine is contra-indicated as prophylactic analgesia before surgery.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Safety in human pregnancy has not been established. Ketorolac has been detected in human milk at low levels. Ketorolac is therefore contraindicated during pregnancy, labour or delivery, or in mothers who are breast feeding.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSAGE:",
+          innerData: `Over dosage of Ketorolac Tromethamine may cause abdominal pain, peptic ulcers which healed after discontinuation of doses and Metabolic acidosis has been reported following intentional over dosage.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS: ",
+          innerData: `Ketorolac tromethamine should not be used with other NSAIDs or in patients receiving aspirin because of the potential for additive side-effects. Care should be taken when administering Ketorolac tromethamine with anti-coagulants since co-administration may cause an enhanced anti-coagulant effect. Ketorolac tromethamine and other non-steroidal anti-inflammatory drugs can reduce the anti-hypertensive effect of beta-blockers .`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Maxdol® 30 injection: Each box contains 1 ampoule of 1 ml sterile solution of Ketorolac tromethamine 30 mg injection.",
+            "Maxdol® 60 injection: Each box contains 1 ampoule of 2 ml sterile solution of Ketorolac tromethamine 60 mg injection.",
           ]
         },
         
@@ -5731,12 +6721,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Maxdol 60 Injection",
+      innerComposition: "Ketorolac Tromethamine USP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Maxdol® 30 injection: Each 1 ml injection contains Ketorolac tromethamine USP 30 mg. ",
+            "Maxdol® 60 injection: Each 2 ml injection contains Ketorolac tromethamine USP 60 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Ketorolac Tromethamine is a drug of pyrrolo-pyrrole group of nonsteroidal anti-inflammatory drug (NSAID). Chemically it is known as 5 benzoyle-2, 3-dihydro-1H-pyrroligine-1-carboxylic acid, compound with 2 - amino-2 -(hydroxymethyl)-1, 3-propanediol (1:1). Ketorolac Tromethamine inhibits synthesis of prostaglandins and may be considered as a peripherally acting analgesic. The biological activity of Ketorolac Tromethamine is associated with the S-form. Pharmacokinetic property of Ketorolac Tromethamine is linear. It is highly protein bound and is largely metabolized in liver. The products of metabolism and some unchanged drugs are excreted in the urine.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Injections and tablets are indicated for the short-term management of moderate to severe acute post-operative pain.`,
           istable: false,
           table: {},
           islist: false,
@@ -5749,14 +6761,102 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Ketorolac tromethamine is for administration by intramuscular or bolus intravenous injection. The recommended initial dose of Ketorolac is 10 mg, followed by 10 to 30 mg every four to six hours as required. A total daily dose of 90 mg for non-elderly and 60 mg for the elderly, renally-impaired patients and patients less than 50 kg should not be exceeded. The maximum duration of treatment should not exceed two days. Ketorolac tablets are recommended for short-term use only (up to 7 days) and are not recommended for chronic use. 10mg every 4 to 6 hours as required. Doses exceeding 40 mg per day are not recommended. For patients receiving parenteral Ketorolac tromethamine and who are converted to Ketorolac tromethamine oral tablets, the total combined daily dose should not exceed 90 mg (60 mg for the elderly, renally-impaired patients and patients less than 50 kg) and the oral component should not exceed 40 mg on the day the change of formulation is made. Patients should be converted to oral treatment as soon as possible.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Commonly occurring side-effects are nausea, vomiting, gastro-intestinal bleeding, melaena, peptic ulcer, pancreatitis, anxiety, drowsiness, dizziness, headache, hallucination, excessive thirst, inability to concentrate, insomnia, malaise, fatigue, pruritus, urticaria, skin photosensitivity, Lyell's syndrome, Stevens Johnson syndrome, flushing, bradycardia, hypertension, palpitations, chest pain, infertility in female, dyspnoea, asthma, pulmonary oedema, fever & pain at injection site.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: `Precaution should be taken in elderly, allergic disorder, renal, cardiac  & patient with low body weight (< 50kg)`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `Ketorolac tromethamine is contraindicated in patients having hypersensitivity to this drug or other NSAIDs and those patients in whom aspirin or other prostaglandin synthesis inhibitors induce allergic reactions. It is also contraindicated in a history of peptic ulcer or gastro-intestinal bleeding, moderate or severe renal impairment (serum creatinine> 160 micromol/l), a history of asthma. Ketorolac tromethamine is contra-indicated as prophylactic analgesia before surgery.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Safety in human pregnancy has not been established. Ketorolac has been detected in human milk at low levels. Ketorolac is therefore contraindicated during pregnancy, labour or delivery, or in mothers who are breast feeding.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSAGE:",
+          innerData: `Over dosage of Ketorolac Tromethamine may cause abdominal pain, peptic ulcers which healed after discontinuation of doses and Metabolic acidosis has been reported following intentional over dosage.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS: ",
+          innerData: `Ketorolac tromethamine should not be used with other NSAIDs or in patients receiving aspirin because of the potential for additive side-effects. Care should be taken when administering Ketorolac tromethamine with anti-coagulants since co-administration may cause an enhanced anti-coagulant effect. Ketorolac tromethamine and other non-steroidal anti-inflammatory drugs can reduce the anti-hypertensive effect of beta-blockers .`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Maxdol® 30 injection: Each box contains 1 ampoule of 1 ml sterile solution of Ketorolac tromethamine 30 mg injection.",
+            "Maxdol® 60 injection: Each box contains 1 ampoule of 2 ml sterile solution of Ketorolac tromethamine 60 mg injection.",
           ]
         },
         
@@ -5780,12 +6880,23 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Maxvit 2000",
+      innerComposition: "Cholecalciferol BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Maxvit® D 20000 Capsule: Each capsule contains Cholecalciferol BP 20,000 IU.",
+            "Maxvit® D 40000 Capsule: Each capsule contains Cholecalciferol BP 40,000 IU.",
+          ]
+        },
+        {
+          innerHead: "DESCRIPTION",
+          innerData: `Maxvit® D is a preparation of Cholecalciferol, a synthetic of Vitamin D3. It is essential for normal bone growth and development and to maintain bone density. Cholecalciferol helps our body to utilize both Calcium and Phosphorus. It acts as a hormone and increases reabsorption of Calcium and Phosphorus by the kidneys.`,
           istable: false,
           table: {},
           islist: false,
@@ -5794,18 +6905,119 @@ export const ByTrade = [
             "",
           ]
         },
-        
-      ],
-      innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "INDICATIONS",
+          innerData: `Vitamin D is used to treat and prevent bone disorders. Vitamin D is also used with other medications to treat low levels of calcium or phosphate caused by certain disorder. It may be used in kidney disease to keep calcium levels normal and allow normal bone growth.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+      ],
+      innerdata1:[
+        {
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adult dose:`,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Treatment of Vitamin D deficiency: 40,000 IU per week for 7 weeks, followed by maintenance therapy (1400-2000 IU/day).",
+            "Prevention of Vitamin D deficiency : 20,000 IU per month.",
+            "Children dose (12-18 years)",
+            "Treatment of Vitamin D deficiency: 20,000 IU once every 2 weeks for 6 weeks.",
+            "Prevention of Vitamin D deficiency: 20,000 IU once every 6 weeks.",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Commonly occuring side effects are hypercalcaemia, hypercalciuria, skin rash, pruritus, urticaria, nausea, abdominal pain.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Precaution should be taken in renal, cardiac & all hypercalcaemia associated patient.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Vitamin D is contraindicated in patients with high amount of phosphate in the blood, high amount of calcium in the blood, excessive amount of Vitamin-D in the blood, nephrolithiasis, decreased kidney function. Vitamin D is also contraindicated in patients having hypersensitivity to Vitamin D. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Studies have shown safe use of doses up to 4,000 IU during pregnancy. The recommended daily intake for pregnant women is 400 IU, however, in women who are considered to be Vitamin D deficient a higher dose may be required. During pregnancy women should follow the advice of their medical practitioner as their requirements may vary depending on the severity of their disease and their response to treatment Vitamin D and its metabolites are excreted in breast milk. Overdose in infants induced by nursing mothers has not been observed; however, when prescribing additional Vitamin D to a breast-fed child the practitioner should consider the dose of any additional Vitamin D given to the mother.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Vitamin D can lead to hypervitaminosis D.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Vitamin D interferes with phenytoin, barbiturates, glucocorticoids, certain laxative (such as liquid paraffin), actinomycin and imidazole antifungal agents.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Maxvit® D 20000 Capsule: Each box contains 10 capsules of 20,000 IU of Cholecalciferol in Alu-Alu blister strips.",
+            "Maxvit® D 40000 Capsule: Each box contains 10 capsules of 40,000 IU of Cholecalciferol in Alu-Alu blister strips.",
           ]
         },
         
@@ -5829,12 +7041,23 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Maxvit 4000",
+      innerComposition: "Cholecalciferol BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Maxvit® D 20000 Capsule: Each capsule contains Cholecalciferol BP 20,000 IU.",
+            "Maxvit® D 40000 Capsule: Each capsule contains Cholecalciferol BP 40,000 IU.",
+          ]
+        },
+        {
+          innerHead: "DESCRIPTION",
+          innerData: `Maxvit® D is a preparation of Cholecalciferol, a synthetic of Vitamin D3. It is essential for normal bone growth and development and to maintain bone density. Cholecalciferol helps our body to utilize both Calcium and Phosphorus. It acts as a hormone and increases reabsorption of Calcium and Phosphorus by the kidneys.`,
           istable: false,
           table: {},
           islist: false,
@@ -5843,18 +7066,119 @@ export const ByTrade = [
             "",
           ]
         },
-        
-      ],
-      innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "INDICATIONS",
+          innerData: `Vitamin D is used to treat and prevent bone disorders. Vitamin D is also used with other medications to treat low levels of calcium or phosphate caused by certain disorder. It may be used in kidney disease to keep calcium levels normal and allow normal bone growth.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+      ],
+      innerdata1:[
+        {
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adult dose:`,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Treatment of Vitamin D deficiency: 40,000 IU per week for 7 weeks, followed by maintenance therapy (1400-2000 IU/day).",
+            "Prevention of Vitamin D deficiency : 20,000 IU per month.",
+            "Children dose (12-18 years)",
+            "Treatment of Vitamin D deficiency: 20,000 IU once every 2 weeks for 6 weeks.",
+            "Prevention of Vitamin D deficiency: 20,000 IU once every 6 weeks.",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Commonly occuring side effects are hypercalcaemia, hypercalciuria, skin rash, pruritus, urticaria, nausea, abdominal pain.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Precaution should be taken in renal, cardiac & all hypercalcaemia associated patient.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Vitamin D is contraindicated in patients with high amount of phosphate in the blood, high amount of calcium in the blood, excessive amount of Vitamin-D in the blood, nephrolithiasis, decreased kidney function. Vitamin D is also contraindicated in patients having hypersensitivity to Vitamin D. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Studies have shown safe use of doses up to 4,000 IU during pregnancy. The recommended daily intake for pregnant women is 400 IU, however, in women who are considered to be Vitamin D deficient a higher dose may be required. During pregnancy women should follow the advice of their medical practitioner as their requirements may vary depending on the severity of their disease and their response to treatment Vitamin D and its metabolites are excreted in breast milk. Overdose in infants induced by nursing mothers has not been observed; however, when prescribing additional Vitamin D to a breast-fed child the practitioner should consider the dose of any additional Vitamin D given to the mother.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Vitamin D can lead to hypervitaminosis D.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Vitamin D interferes with phenytoin, barbiturates, glucocorticoids, certain laxative (such as liquid paraffin), actinomycin and imidazole antifungal agents.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Maxvit® D 20000 Capsule: Each box contains 10 capsules of 20,000 IU of Cholecalciferol in Alu-Alu blister strips.",
+            "Maxvit® D 40000 Capsule: Each box contains 10 capsules of 40,000 IU of Cholecalciferol in Alu-Alu blister strips.",
           ]
         },
         
@@ -5878,12 +7202,24 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Microcef 50ml",
+      innerComposition: "Cefixime Trihydrate BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Microcef® 200 Capsule: Each capsule contains Cefixime Trihydrate BP equivalent to Cefixime 200 mg.",
+            "Microcef® 400 Capsule: Each capsule contains Cefixime Trihydrate BP equivalent to Cefixime 400 mg.",
+            "Microcef® Powder for Suspension: After reconstitution each 5 ml suspension contains Cefixime Trihydrate BP equivalent to Cefixime 100 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Cefixime is a broad spectrum cephalosporin antibiotic of third generation for oral administration. It is a Bactericidal antibiotic. Cefixime kills bacteria by interfering in the synthesis of the bacterial cell wall. Cefixime is highly active against Neisseria gonorrhoeae, Haemophilus influenzae, Moraxella catarrhalis including betalactamase producers, most of the Enterobacteriaceae, betahaemolytic Streptococci (group A & B) and Streptococcus pneumoniae. Cefixime is more active than other oral cephalosporins against Escherichia coli, Klebsiella spp., Proteus mirabilis, Serratia marcescens and Streptococcus pyogenes. 40-50% of an oral dose is absorbed from gastro-intestinal tract, whether taken with meals or not. The plasma half-life is usually about 3 to 4 hours and may be prolonged when there is renal impairment.`,
           istable: false,
           table: {},
           islist: false,
@@ -5892,18 +7228,121 @@ export const ByTrade = [
             "",
           ]
         },
-        
-      ],
-      innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "INDICATIONS",
+          innerData: `Cefixime is indicated for the treatment of urinary tract infections, typhoid fever, tonsillitis, upper and lower respiratory tract infections, acute otitis media, gonococcal urethritis and enteric fever.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+      ],
+      innerdata1:[
+        {
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Adult & child over 12 years: 200 - 400 mg daily in 1-2 divided doses for 7-14 days, according to the severity of the infection. Except for urinary tract infections where once daily dosing must be used.
+          Uncomplicated gonorrhoea: Adult: 400 mg for 1 dose.
+          Child over 6 month: 8 mg/kg/daily as a single dose or in two divided doses for 7-14 days. Except for urinary tract infections where once daily dosing must be used.
+          Children weighing more than 50 kg or older than 12 years should be treated with the recommended adult dose.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `No data are available, so it is probably best to avoid using the drug during pregnancy and by the nursing mothers.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `It should not be used in patients hypersensitive to any cephalosporin antibiotic.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Cefixime is generally well tolerated. The majority of side effects observed in clinical trials were mild and self-limiting in nature. Diarrhoea, nausea, abdominal pain, dyspepsia, Headache, dizziness have been reported.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Cefixime should be prescribed with caution in individuals with a history of gastrointestinal diseases, particularly colitis. Dosage adjustment is only necessary in severe renal failure (creatinine clearance <20 ml. min-1).`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Patients receiving anticoagulants and Cefixime concomitantly increase prothrombin time.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Gastric lavage may be indicated; otherwise, no specific antidote exists. Cefixime is not removed in significant quantities from the circulation by hemodialysis or peritoneal dialysis. Adverse reactions in small numbers of healthy adult volunteers receiving single doses up to 2 g of Cefixime did not differ from the profile seen in patients treated at the recommended doses.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Capsule & Dry powder for Suspension: Store in a cool (Below 30⁰c. Temp.) and dry place, away from light. Keep out of the reach of children. The reconstituted suspension should be used within 7 days if kept in room temperature or within 14 days if refrigerated.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Microcef® 200 Capsule: Each commercial box contains 2 x 7’s capsules in Alu-Alu blister pack.",
+            "Microcef® 400 Capsule: Each commercial box contains 1 x 7’s capsules in Alu-Alu blister pack.",
+            "Microcef® Powder for Suspension: Each bottle contains dry powder for preparation of 30 & 50 ml suspension with a measuring cup and dropper for measurement.",
           ]
         },
         
@@ -5927,12 +7366,24 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Microcef",
+      innerComposition: "Cefixime Trihydrate BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Microcef® 200 Capsule: Each capsule contains Cefixime Trihydrate BP equivalent to Cefixime 200 mg.",
+            "Microcef® 400 Capsule: Each capsule contains Cefixime Trihydrate BP equivalent to Cefixime 400 mg.",
+            "Microcef® Powder for Suspension: After reconstitution each 5 ml suspension contains Cefixime Trihydrate BP equivalent to Cefixime 100 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Cefixime is a broad spectrum cephalosporin antibiotic of third generation for oral administration. It is a Bactericidal antibiotic. Cefixime kills bacteria by interfering in the synthesis of the bacterial cell wall. Cefixime is highly active against Neisseria gonorrhoeae, Haemophilus influenzae, Moraxella catarrhalis including betalactamase producers, most of the Enterobacteriaceae, betahaemolytic Streptococci (group A & B) and Streptococcus pneumoniae. Cefixime is more active than other oral cephalosporins against Escherichia coli, Klebsiella spp., Proteus mirabilis, Serratia marcescens and Streptococcus pyogenes. 40-50% of an oral dose is absorbed from gastro-intestinal tract, whether taken with meals or not. The plasma half-life is usually about 3 to 4 hours and may be prolonged when there is renal impairment.`,
           istable: false,
           table: {},
           islist: false,
@@ -5941,18 +7392,121 @@ export const ByTrade = [
             "",
           ]
         },
-        
-      ],
-      innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "INDICATIONS",
+          innerData: `Cefixime is indicated for the treatment of urinary tract infections, typhoid fever, tonsillitis, upper and lower respiratory tract infections, acute otitis media, gonococcal urethritis and enteric fever.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+      ],
+      innerdata1:[
+        {
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Adult & child over 12 years: 200 - 400 mg daily in 1-2 divided doses for 7-14 days, according to the severity of the infection. Except for urinary tract infections where once daily dosing must be used.
+          Uncomplicated gonorrhoea: Adult: 400 mg for 1 dose.
+          Child over 6 month: 8 mg/kg/daily as a single dose or in two divided doses for 7-14 days. Except for urinary tract infections where once daily dosing must be used.
+          Children weighing more than 50 kg or older than 12 years should be treated with the recommended adult dose.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `No data are available, so it is probably best to avoid using the drug during pregnancy and by the nursing mothers.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `It should not be used in patients hypersensitive to any cephalosporin antibiotic.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Cefixime is generally well tolerated. The majority of side effects observed in clinical trials were mild and self-limiting in nature. Diarrhoea, nausea, abdominal pain, dyspepsia, Headache, dizziness have been reported.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Cefixime should be prescribed with caution in individuals with a history of gastrointestinal diseases, particularly colitis. Dosage adjustment is only necessary in severe renal failure (creatinine clearance <20 ml. min-1).`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Patients receiving anticoagulants and Cefixime concomitantly increase prothrombin time.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Gastric lavage may be indicated; otherwise, no specific antidote exists. Cefixime is not removed in significant quantities from the circulation by hemodialysis or peritoneal dialysis. Adverse reactions in small numbers of healthy adult volunteers receiving single doses up to 2 g of Cefixime did not differ from the profile seen in patients treated at the recommended doses.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Capsule & Dry powder for Suspension: Store in a cool (Below 30⁰c. Temp.) and dry place, away from light. Keep out of the reach of children. The reconstituted suspension should be used within 7 days if kept in room temperature or within 14 days if refrigerated.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Microcef® 200 Capsule: Each commercial box contains 2 x 7’s capsules in Alu-Alu blister pack.",
+            "Microcef® 400 Capsule: Each commercial box contains 1 x 7’s capsules in Alu-Alu blister pack.",
+            "Microcef® Powder for Suspension: Each bottle contains dry powder for preparation of 30 & 50 ml suspension with a measuring cup and dropper for measurement.",
           ]
         },
         
@@ -5976,12 +7530,24 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Microcef",
+      innerComposition: "Cefixime Trihydrate BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Microcef® 200 Capsule: Each capsule contains Cefixime Trihydrate BP equivalent to Cefixime 200 mg.",
+            "Microcef® 400 Capsule: Each capsule contains Cefixime Trihydrate BP equivalent to Cefixime 400 mg.",
+            "Microcef® Powder for Suspension: After reconstitution each 5 ml suspension contains Cefixime Trihydrate BP equivalent to Cefixime 100 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Cefixime is a broad spectrum cephalosporin antibiotic of third generation for oral administration. It is a Bactericidal antibiotic. Cefixime kills bacteria by interfering in the synthesis of the bacterial cell wall. Cefixime is highly active against Neisseria gonorrhoeae, Haemophilus influenzae, Moraxella catarrhalis including betalactamase producers, most of the Enterobacteriaceae, betahaemolytic Streptococci (group A & B) and Streptococcus pneumoniae. Cefixime is more active than other oral cephalosporins against Escherichia coli, Klebsiella spp., Proteus mirabilis, Serratia marcescens and Streptococcus pyogenes. 40-50% of an oral dose is absorbed from gastro-intestinal tract, whether taken with meals or not. The plasma half-life is usually about 3 to 4 hours and may be prolonged when there is renal impairment.`,
           istable: false,
           table: {},
           islist: false,
@@ -5990,18 +7556,121 @@ export const ByTrade = [
             "",
           ]
         },
-        
-      ],
-      innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "INDICATIONS",
+          innerData: `Cefixime is indicated for the treatment of urinary tract infections, typhoid fever, tonsillitis, upper and lower respiratory tract infections, acute otitis media, gonococcal urethritis and enteric fever.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+      ],
+      innerdata1:[
+        {
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Adult & child over 12 years: 200 - 400 mg daily in 1-2 divided doses for 7-14 days, according to the severity of the infection. Except for urinary tract infections where once daily dosing must be used.
+          Uncomplicated gonorrhoea: Adult: 400 mg for 1 dose.
+          Child over 6 month: 8 mg/kg/daily as a single dose or in two divided doses for 7-14 days. Except for urinary tract infections where once daily dosing must be used.
+          Children weighing more than 50 kg or older than 12 years should be treated with the recommended adult dose.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `No data are available, so it is probably best to avoid using the drug during pregnancy and by the nursing mothers.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `It should not be used in patients hypersensitive to any cephalosporin antibiotic.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Cefixime is generally well tolerated. The majority of side effects observed in clinical trials were mild and self-limiting in nature. Diarrhoea, nausea, abdominal pain, dyspepsia, Headache, dizziness have been reported.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Cefixime should be prescribed with caution in individuals with a history of gastrointestinal diseases, particularly colitis. Dosage adjustment is only necessary in severe renal failure (creatinine clearance <20 ml. min-1).`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Patients receiving anticoagulants and Cefixime concomitantly increase prothrombin time.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Gastric lavage may be indicated; otherwise, no specific antidote exists. Cefixime is not removed in significant quantities from the circulation by hemodialysis or peritoneal dialysis. Adverse reactions in small numbers of healthy adult volunteers receiving single doses up to 2 g of Cefixime did not differ from the profile seen in patients treated at the recommended doses.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Capsule & Dry powder for Suspension: Store in a cool (Below 30⁰c. Temp.) and dry place, away from light. Keep out of the reach of children. The reconstituted suspension should be used within 7 days if kept in room temperature or within 14 days if refrigerated.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Microcef® 200 Capsule: Each commercial box contains 2 x 7’s capsules in Alu-Alu blister pack.",
+            "Microcef® 400 Capsule: Each commercial box contains 1 x 7’s capsules in Alu-Alu blister pack.",
+            "Microcef® Powder for Suspension: Each bottle contains dry powder for preparation of 30 & 50 ml suspension with a measuring cup and dropper for measurement.",
           ]
         },
         
@@ -6027,12 +7696,12 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Monocal",
+      innerComposition: "Calcium  500",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Monocal Tablet: Each tablet contains Calcium Carbonate USP 1250 mg equivalent to 500 mg of Calcium.`,
           istable: false,
           table: {},
           islist: false,
@@ -6041,12 +7710,118 @@ export const ByTrade = [
             "",
           ]
         },
+        {
+          innerHead: "DESCRIPTION",
+          innerData: `Monocal is a preparation of Calcium Carbonate. Calcium Carbonate is a salt, which after taking provides calcium in the body. Calcium requirement varies with age. If calcium intake is inadequate, bone mineralization may be impaired in children and bone loss accelerated in adults.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Monocal is indicated -`,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "For dietary calcium supplement when it is deficient",
+            "As a phosphate binder in chronic renal failure",
+            "As an adjunct therapy in the arrest or slowing down of bone demineralizationin osteoporosis",
+            "Raised calcium requirement, e.g. during pregnancy and lactation, and in children and adolescents at times of rapid growth",
+            "Disorders of osteogenesis and tooth formation (in addition to specific treatment) ",
+            "Helps in maintaining bone mass",
+          ]
+        },
         
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Adult: One tablet (500 mg elemental Calcium) daily or as directed by the physician. Higher doses should not be taken unless recommended by the physician.
+          Children: 250 mg elemental Calcium daily or as directed by the physician. 
+          Adolescents: 250-500 mg elemental Calcium daily or as directed by the physician.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: `Mild gastrointestinal disturbances (e.g. flatulence, abdominal pain, constipation) may occur. Hypercalcaemia and alkalosis are rarely produced with large doses. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Hypercalcaemia and hyperparathyroidism, Hypercalciuria and nephrolithiasis, Zollinger-Ellison syndrome. Concomitant digoxin therapy requires careful monitoring of serum calcium level.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Calcium Carbonate may enhance the cardiac effects of digoxin and other cardiac glycosides, if systemic hypercalcaemia occurs. Calcium Carbonate may interfere with the absorption of concomitantly administered tetracycline preparations.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `Calcium containing drugs are used widely in pregnancy by way of oral calcium supplementation. Calcium Carbonate can be used in lactating women too.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: `When hypercalcaemia occurs, discontinuation of the drug is usually sufficient to return serum calcium concentrations to normal. Calcium salts should be used cautiously in patients with sarcoidosis, renal or cardiac disease, and in patients receiving cardiac glycosides.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `Monocal Tablet: Each box contains 5x10’s tablets in blister strip.`,
           istable: false,
           table: {},
           islist: false,
@@ -6076,12 +7851,12 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Monocal-D",
+      innerComposition: "Calcium USP  500 mg & Vitamin D3 USP 200 IU ",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Monocal-D: Each film coated tablet contains- Calcium Carbonate USP 1250 mg equivalent to 500 mg elemental Calcium and Vitamin D3 USP 200 IU.`,
           istable: false,
           table: {},
           islist: false,
@@ -6090,12 +7865,122 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "PHARMACOLOGICAL ACTION",
+          innerData: `Monocal-D is a combination of Calcium & Vitamin D3. Calcium is needed for the formation of strong bones and healthy teeth and is involved in helping the blood to clot when required. It is also required to transmit nerve signals and help muscles to work. Vitamin D3 is also essential for healthy bones as it aids in calcium absorption from the GI tract. In addition to this, it stimulates bone formation &calcium deposition. Clinical studies show that calcium and vitamin D3 has synergistic effects on bone growth as well as in osteoporosis and fracture prevention especially at older age.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Monocal-D is used for the treatment of osteoporosis, osteomalacia, rickets, tetany, and parathyroid diseases. It is used in higher calcium requirement for children and adolescents at times of rapid growth, inadequate intake of calcium in the diet, prevention and treatment of osteoporosis, disorders of osteogenesis and tooth formation (in addition to specific treatment), latent tetany and during pregnancy and lactation to meet the additional requirement. It is also used as routine supplement and phosphate binder in chronic renal failure.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Adults, elderly and children above 12 years of age: 2 tablets daily, preferably one tablet in morning and evening.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `Hypersensitivity to any component of Monocal-D. Hypercalcaemia, as a result of hyperparathyroidism, vitamin D3 overdose, decalcifying tumours such as myeloma, bone metastasis or sarcoidosis, severe hypercalciuria, renal stones  and osteoporosis due to prolonged immobilization.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: `The use of calcium supplements may give rise to mild gastro-intestinal disturbances, such as constipation, flatulence, nausea, gastric pain, diarrhoea. Following administration of vitamin D3 supplements, occasional skin rashes has been reported. Hypercalciuria and in rare cases hypercalcaemia, have been seen with long term treatment at high dosage.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Normal requirements of calcium & vitamin D3 are raised during pregnancy & lactation. Calcium is excreted in breast milk but not sufficiently to produce adverse effects in the infant. During pregnancy & lactation, Monocal-D therapy should be under strict medical supervision. Children: Children under 12 years of age should not be treated with Monocal-D.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION AND WARNING",
+          innerData: `When hypercalcaemia occurs, discontinuation of the drug is usually sufficient to return serum calcium concentrations to normal. Calcium salts should be used cautiously in patients with sarcoidosis, renal or cardiac disease and in patients receiving cardiac glycosides. Patients with a history of stone formation should also be recommended to increase their fluid intake.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `It has possible interaction with digoxin, antacids containing calcium, aluminium or magnesium, other calcium supplements, calcitriol or other vitamin D3 supplements, tetracycline, doxycycline etc.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `The most serious consequence of acute or chronic overdose is hypercalcaemia due to vitamin D toxicity. Symptoms include nausea, vomiting, polyuria and constipation. Chronic overdoses can lead to vascular and organ calcification as a result of hypercalcaemia. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `Each box contains 6x10 tablets in blister strip & 30 tablets in HDPE container.`,
           istable: false,
           table: {},
           islist: false,
@@ -6125,12 +8010,12 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "My zinc",
+      innerComposition: "Zinc USP 20 mg",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `My zinc® 20 tablet: Each tablet contains Zinc Sulphate monohydrate USP equivalent to 20mg elemental Zinc.`,
           istable: false,
           table: {},
           islist: false,
@@ -6139,12 +8024,124 @@ export const ByTrade = [
             "",
           ]
         },
+        {
+          innerHead: "DESCRIPTION",
+          innerData: `Zinc is a mineral. It is called an "essential trace element" because very small amount of Zinc is necessary for human health. Zinc is needed for the proper growth and maintenance of the human body. It is found in several systems and biological reactions and it is needed for immune function, wound healing, blood clotting, thyroid function and much more.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Since the human body does not store excess Zinc, it must be consumed regularly as part of the diet. Zinc plays a key role in maintaining vision and it is present in high concentrations in the eye. Zinc might also have effects against viruses.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Children under 10 kg: 10mg or ½ tablet (if the children can swallow) 2 times daily or as directed by the physician.",
+            "Children (10-30 kg): 1 tablet 1-3 times daily or as directed by the physician.",
+            "Adults and children over 30 kg: 2 tablets daily or as directed by the physician.",
+            "Zinc supplements are most effective if they are taken at least 1 hour before or 2 hour after a meal, if Zinc supplements cause stomach upset, they may be taken with a meal.",
+          ]
+        },
         
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "SIDE EFFECTS",
+          innerData: `Commonly occuring side effects are nausea, vomiting, gastric irritation, metallic taste, headache, neurologic deterioration etc.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: `Concurrent administration of Zinc salt with penicillamine might diminish the effect of Penicillamine. Chelation may occur with Tetracyclines.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `Zinc is contraindicated in patients with hypersensitivity to Zinc.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Pregnant women and lactating mother should avoid zinc doses higher than Recommended Dietary Allowance (RDA).`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSAGE",
+          innerData: `Zinc Sulphate is corrosive at overdose. Symptoms are corrosion and inflammation of the mucous membrane of the mouth and stomach, ulceration of the stomach followed by perforation may occur.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Zinc tablets might interact with some group of drugs like Quinolone, Tetracycline antibiotics, Penicillamine etc.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Protected from light, store in cool (Below 30°C. Temp.) and dry place. Keep out of reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `My zinc® 20 tablet: Each box contains 3 X 10’s tablets in blister strips.`,
           istable: false,
           table: {},
           islist: false,
@@ -6162,7 +8159,7 @@ export const ByTrade = [
 
 {
       id: 50,
-      title: "Novera 6 Tablet",
+      title: "Neovera 6 Tablet",
       text1: " ",
       text2: " ",
       img: [
@@ -6174,12 +8171,57 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Neovera 6",
+      innerComposition: "Ivermectin BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Neovera® 6 tablet: Each tablet contains Ivermectin BP 6 mg.",
+            "Neovera® 12 tablet: Each tablet contains Ivermectin BP 12mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `This medication is used to treat certain parasitic roundworm infections. Ivermectin belongs to a class of drugs known as anthelmintics. It works by paralyzing and killing parasites. Ivermectin are macrocyclic lactones derived from the bacterium Streptomyces avermitilis. Ivermectin kills by interfering with nervous system and muscle function, in particular by enhancing inhibitory neurotransmission. It binds to glutamate-gated chloride channels in the membranes of invertebrate nerve and muscle cells, causing increased permeability to chloride ions.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            ""
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Ivermectin oral tablet is used to treat infections of parasites. These include parasitic infections of intestinal tract, skin and eyes etc.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            ""
+          ]
+        },
+        
+      ],
+      innerdata1:[
+        {
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `The recommended dosage of ivermectin is a single oral dose designed to provide approximately 200 mcg of ivermectin per kg of body weight. It should be taken at least 1 hour before meal in an empty stomach.
+          Dosage guidelines based on body weight:
+          15 to 24 kg: 3 mg orally one time
+          25 to 35 kg: 6 mg orally one time
+          36 to 50 kg: 9 mg orally one time
+          51 to 65 kg: 12 mg orally one time
+          66 to 80 kg: 15 mg orally one time
+          85 kg or more: Approx 200 mg/kg
+          Classic/typical scabies: 2 doses (1 dose on day 1 and another dose between day 8 and day 15). Ivermectin can be used alone or in combination with a topical scabicide.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6188,12 +8230,97 @@ export const ByTrade = [
             "",
           ]
         },
-        
-      ],
-      innerdata1:[
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Commonly occuring side effects are tiredness, loss of energy,stomach pain, loss of appetite, nausea, vomiting, diarrhea, dizziness, sleepiness or drowsiness,itchiness.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: `Precaution should be taken in elderly, pediatric and allergic patient.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `Ivermectin is contraindicated in patients having hypersensitivity to this drug and those patients who taken warfarin. It is also contraindicated in a history of asthma, hepatic and HIV patients.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Safety in human pregnancy has not been established. Ivermectin is secreted in very low concentration in breast milk. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `In case of overdose one need to employ the usual supportive measures e.g., remove unabsorbed material from the gastrointestinal tract, employ clinical monitoring and institute supportive treatment as dictated by the patient’s clinical status.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Ivermectin should not be used with aprepitant because of the potential for adverse effects. Care should be taken when administering Ivermectin with anticoagulants since co-administration may cause an enhanced anticoagulants effect. Ivermectin should not be taken with antiviral drugs.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (below 300 C temp.) and dry place, protected from light. Keep out of reach children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Neovera® 6 tablet: Each box contains 2 x 10 tablets in blister strips.",
+            "Neovera® 6 tablet: Each box contains 2 x 10 tablets in blister strips.",
+          ]
+        },
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -6223,12 +8350,57 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Neovera 12",
+      innerComposition: "Ivermectin BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Neovera® 6 tablet: Each tablet contains Ivermectin BP 6 mg.",
+            "Neovera® 12 tablet: Each tablet contains Ivermectin BP 12mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `This medication is used to treat certain parasitic roundworm infections. Ivermectin belongs to a class of drugs known as anthelmintics. It works by paralyzing and killing parasites. Ivermectin are macrocyclic lactones derived from the bacterium Streptomyces avermitilis. Ivermectin kills by interfering with nervous system and muscle function, in particular by enhancing inhibitory neurotransmission. It binds to glutamate-gated chloride channels in the membranes of invertebrate nerve and muscle cells, causing increased permeability to chloride ions.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            ""
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Ivermectin oral tablet is used to treat infections of parasites. These include parasitic infections of intestinal tract, skin and eyes etc.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            ""
+          ]
+        },
+        
+      ],
+      innerdata1:[
+        {
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `The recommended dosage of ivermectin is a single oral dose designed to provide approximately 200 mcg of ivermectin per kg of body weight. It should be taken at least 1 hour before meal in an empty stomach.
+          Dosage guidelines based on body weight:
+          15 to 24 kg: 3 mg orally one time
+          25 to 35 kg: 6 mg orally one time
+          36 to 50 kg: 9 mg orally one time
+          51 to 65 kg: 12 mg orally one time
+          66 to 80 kg: 15 mg orally one time
+          85 kg or more: Approx 200 mg/kg
+          Classic/typical scabies: 2 doses (1 dose on day 1 and another dose between day 8 and day 15). Ivermectin can be used alone or in combination with a topical scabicide.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6237,12 +8409,97 @@ export const ByTrade = [
             "",
           ]
         },
-        
-      ],
-      innerdata1:[
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Commonly occuring side effects are tiredness, loss of energy,stomach pain, loss of appetite, nausea, vomiting, diarrhea, dizziness, sleepiness or drowsiness,itchiness.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: `Precaution should be taken in elderly, pediatric and allergic patient.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `Ivermectin is contraindicated in patients having hypersensitivity to this drug and those patients who taken warfarin. It is also contraindicated in a history of asthma, hepatic and HIV patients.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Safety in human pregnancy has not been established. Ivermectin is secreted in very low concentration in breast milk. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `In case of overdose one need to employ the usual supportive measures e.g., remove unabsorbed material from the gastrointestinal tract, employ clinical monitoring and institute supportive treatment as dictated by the patient’s clinical status.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Ivermectin should not be used with aprepitant because of the potential for adverse effects. Care should be taken when administering Ivermectin with anticoagulants since co-administration may cause an enhanced anticoagulants effect. Ivermectin should not be taken with antiviral drugs.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (below 300 C temp.) and dry place, protected from light. Keep out of reach children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Neovera® 6 tablet: Each box contains 2 x 10 tablets in blister strips.",
+            "Neovera® 6 tablet: Each box contains 2 x 10 tablets in blister strips.",
+          ]
+        },
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -6272,12 +8529,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Neuroprax",
+      innerComposition: "Vit-B1+Vit-B6+Vit-B12      ",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Neuroprax: Each film coated tablet contains Thiamine Hydrochloride (Vit-B1) BP 100 mg, Pyridoxine Hydrochloride (Vit-B6) BP 200 mg &Cyanocobalamine (Vit-B12) BP 200 mcg.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Neuroprax is a combination of Thiamine Hydrochloride (Vit-B1), Pyridoxine Hydrochloride (Vit-B6) & Cyanocobalamin (Vit-B12). These B-vitamins play an essential role as co-enzyme in the cellular biochemical metabolism in the nervous system. Thus the combination normalizes metabolic condition of nerve cells and improves neural condition. Neuroprax supports the regeneration of nerve fibers and myelin sheath by activation of the metabolism and the natural repair mechanism.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Neuroprax Tablet indicated for deficiency of the relavent vitamins exists. It is indicated for the treatment of following diseases - Polyneuropathy of any origin (such as-Diabetic, Alcoholic or Toxic neuropathies), Neuritis, Neuralgia, Cervical Syndrome, Shoulder-Arm syndrome, Lumbago, Sciatica, Myalgia, Intercostal neuralgia, Herpes Zoster and Trigeminal Neuralgia, supportive treatment in facial paresis.`,
           istable: false,
           table: {},
           islist: false,
@@ -6290,8 +8569,85 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `1 to 3 tablets daily preferably after meals or as directed by the physician.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `Should not be used in patients on Levodopa therapy and hypersensitive to any of its components.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: `Neuroprax is generally well-tolerated. In rare cases, few allergic reactions may occur.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: `Cyanocobalamin should not be given before a diagnosis has been fully established because of the possibility of masking of the symptoms of subacute degeneration of the spinal cord. Cyanocobalamin is not a suitable form of Vitamin B12 for the treatment of optic neuropathies associated with raised plasma concentration of cyanocobalamin.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `Sufficient data yet not available in this respect. So, Neuroprax tablet is to be taken if advised by physician during pregnancy and lactation.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `No drug interactions have yet been reported.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `Each box contains 6x10 tablets in Alu-PVDC blister pack and 30 tablets HDPE container.`,
           istable: false,
           table: {},
           islist: false,
@@ -6321,12 +8677,12 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Norxit",
+      innerComposition: "Flupentixol 0.5 mg & Melitracen 10 mg",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Each film coated tablet contains- Flupentixol Dihydrochloride BP 0.584 mg Eqvt. to Flupentixol 0.5 mg & Melitracen Hydrochloride INN 11.25 mg Eqvt. to Melitracen 10 mg.`,
           istable: false,
           table: {},
           islist: false,
@@ -6336,11 +8692,102 @@ export const ByTrade = [
           ]
         },
         
+        {
+          innerHead: "INDICATIONS",
+          innerData: `• Anxiety  • Depression  • Apathy • Others are Psychogenic depression, depressive neuroses, masked depression, psychosomatic affections accompanied by anxiety and apathy, menopausal depression. Dysphoria and depression in alcoholics and drug addicts.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Adults: Usually 2 tablets daily (morning and noon). In severe cases the morning dose may be increased to 2 tablets. Elderly patients: 1 tablet in the morning. Maintenance dose: Usually 1 tablet in the morning. In cases of insomnia or severe restlessness additional treatment with a sedative in the acute phase is recommended. Second dose should not be taken after 4 pm.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `The immediate recovery phase after myocardial infarction. Defects in bundle-branch conduction. Untreated narrow angle glaucoma. Acute alcohol, barbiturate and opiate intoxication. Flupentixol and Melitracen should not be given to patients who have received a MAO inhibitor within two weeks. Not recommended for excitable patient since its activating effect may lead to exaggeration of these characteristics.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `If previously the patient has been treated with tranquilizers with sedative effects these should be withdrawn gradually.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Flupentixol and Melitracen may enhance the response to alcohol, barbiturates and other CNS depressants. Simultaneous administration of MAO inhibitors may cause hypertensive crisis. Neuroleptics and thymoleptics reduce the antihypertensive effect of Guanethidine and similar acting compounds and thymoleptics enhance the effects of adrenaline and noradrenaline.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `In the recommended doses side effects are rare. These could be transient
+          restlessness and insomnia.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN SPECIAL POPULATION",
+          innerData: `Pregnancy and lactation: Flupentixol and Melitracen should preferably not be given during pregnancy and lactation.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `Norxit Tablet: Box containing 50 tablets in 5 x 10’s blister strips.`,
           istable: false,
           table: {},
           islist: false,
@@ -6370,12 +8817,12 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Norxit",
+      innerComposition: "Flupentixol 0.5 mg & Melitracen 10 mg",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Each film coated tablet contains- Flupentixol Dihydrochloride BP 0.584 mg Eqvt. to Flupentixol 0.5 mg & Melitracen Hydrochloride INN 11.25 mg Eqvt. to Melitracen 10 mg.`,
           istable: false,
           table: {},
           islist: false,
@@ -6385,11 +8832,102 @@ export const ByTrade = [
           ]
         },
         
+        {
+          innerHead: "INDICATIONS",
+          innerData: `• Anxiety  • Depression  • Apathy • Others are Psychogenic depression, depressive neuroses, masked depression, psychosomatic affections accompanied by anxiety and apathy, menopausal depression. Dysphoria and depression in alcoholics and drug addicts.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Adults: Usually 2 tablets daily (morning and noon). In severe cases the morning dose may be increased to 2 tablets. Elderly patients: 1 tablet in the morning. Maintenance dose: Usually 1 tablet in the morning. In cases of insomnia or severe restlessness additional treatment with a sedative in the acute phase is recommended. Second dose should not be taken after 4 pm.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `The immediate recovery phase after myocardial infarction. Defects in bundle-branch conduction. Untreated narrow angle glaucoma. Acute alcohol, barbiturate and opiate intoxication. Flupentixol and Melitracen should not be given to patients who have received a MAO inhibitor within two weeks. Not recommended for excitable patient since its activating effect may lead to exaggeration of these characteristics.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `If previously the patient has been treated with tranquilizers with sedative effects these should be withdrawn gradually.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Flupentixol and Melitracen may enhance the response to alcohol, barbiturates and other CNS depressants. Simultaneous administration of MAO inhibitors may cause hypertensive crisis. Neuroleptics and thymoleptics reduce the antihypertensive effect of Guanethidine and similar acting compounds and thymoleptics enhance the effects of adrenaline and noradrenaline.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `In the recommended doses side effects are rare. These could be transient
+          restlessness and insomnia.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN SPECIAL POPULATION",
+          innerData: `Pregnancy and lactation: Flupentixol and Melitracen should preferably not be given during pregnancy and lactation.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `Norxit Tablet: Box containing 50 tablets in 5 x 10’s blister strips.`,
           istable: false,
           table: {},
           islist: false,
@@ -6419,12 +8957,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Novotril",
+      innerComposition: "Clonazepam BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Novotril® 0.5 Tablet: Each tablet contains- Clonazepam BP 0.5 mg.",
+            "Novotril® 2 Tablet: Each tablet contains- Clonazepam BP 2 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Novotril® (Clonazepam) acts by binding to the benzodiazepine site of the GABA receptors, which enhances the electric effect of GABA binding on neurons, resulting in an increased influx of chloride ions into the neurons. This further results in an inhibition of synaptic transmission across the CNS. Benzodiazepines do not have any effect on the levels of GABA in the brain. Clonazepam has no effect on GABA levels and has no effect on gamma-aminobutyric acid transaminase. Clonazepam does, however, affect glutamate decarboxylase activity. It differs from other anticonvulsant drugs it was compared to in a study.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: `Novotril® (Clonazepam) is used as an anticonvulsant in the treatment of the Lennox-Gastaut syndrome (petit mal variant), akinetic and myoclonic seizures. It can also be used for the treatment of panic disorders.`,
           istable: false,
           table: {},
           islist: false,
@@ -6437,8 +8997,12 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Panic Disorder: Adults: The recommended initial dosage of Clonazepam is 0.25 mg twice daily, increment dose is 0.5-1 mg at interval of 3 days. To reduce the inconvenience of somnolence administration of one dose at bedtime may be desirable.
+          Children: There is no clinical trial experience with Clonazepam in Panic disorder patients under 18 years of age. 
+          Seizure Disorder: Adults: Initial dose is 1 mg/daily in divided dose (elderly 0.5 mg), not to exceed 1.5 mg/day. Increment dose is 0.5 mg at intervals of 3 days. Maintenance dose is 4.8 mg/day. Maximum dose: 20 mg/day should be administered with caution.
+          Children: Up to 1 year: 0.25 mg increased to 0.5-1 mg. 1-5 years: 0.25 mg increased to 1-3 mg at intervals of 3 days. Maintenance dose is 4-8 mg/day.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6447,7 +9011,83 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: `The common side-effects are fatigue, drowsiness, muscular hypotonia, dizziness, light-headedness and ataxia. These effects are usually transient and generally disappear spontaneously although these can be partially prevented by increasing the dose slowly at the start of treatment.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS:",
+          innerData: `Carbamazepine, Phenobarbitone or Phenytoin may accelerate the metabolism of Clonazepam. Intake of alcohol may affect the patient’s response to Clonazepam. Clonazepam may be expected to have the sedative interactions associated with benzodiazepines in general.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `The dosage of Clonazepam must be carefully adjusted to individual requirements in elderly patients with pre existing disease of the respiratory system (chronic obstructive pulmonary disease), renal or hepatic diseases and in patients undergoing treatment with other centrally acting medications or anticonvulsant agents. It should be withdrawn slowly and abrupt discontinuance of the drug should be avoided.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `Clonazepam should only be administered to pregnant women if the potential benefit outweighs the risk to the fetus. Not recommended in lactation.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Clonazepam is contraindicated in patients with known hypersensitivity to benzodiazepines, acute pulmonary insufficiency and respiratory depression.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (below 30⁰C) and dry place, protected from light. Keep out of the reach of the children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Novotril® 0.5 Tablet: Each box containing 5 x 10’s tablets in blister strips. ",
+            "Novotril® 0.5 Tablet: Each box containing 5 x 10’s tablets in blister strips. ",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
@@ -6468,12 +9108,94 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "OPmax",
+      innerComposition: "Omeprazole BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "OPmax®20 Capsule: Each capsule contains- Omeprazole BP 20 mg .",
+            "OPmax®40 Capsule: Each capsule contains- Omeprazole BP 40 mg .",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `OPmax® capsule is indicated for GERD including-  `,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Reflux esophagitis",
+            "Acid reflux diseases",
+            "Duodenal and benign gastric ulcers",
+            "H. pylori eradication regimens in peptic ulcer disease (PUD)",
+            "Prophylaxis of acid aspiration ",
+            "Zollinger-Ellison Syndrome (ZES)",
+            "NSAIDs-associated gastric ulcers",
+            "Gastroduodenal erosions",
+          ]
+        },
+        
+      ],
+      innerdata1:[
+        {
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `OPmax® (Omeprazole) should be taken before meal.`,
+          istable: true,
+          table: {
+
+            headers: ["DISEASE", "DOSAGE AND ADMINISTRATION"],
+          body: [
+            
+            [
+              `Gastroesophageal reflux disease including reflux esophagitis`,
+              `The usual dosage is 20 mg Omeprazole once daily for 4 weeks.`,
+            ],
+            [
+              `Duodenal and benign gastric ulcers`,
+              `The usual dose is 20 mg Omeprazole once daily for 4 weeks in patients with duodenal ulcer and 8 weeks in patients with gastric ulcer.`,
+            ],
+            [
+              `Helicobacter pylori eradication regimens in peptic ulcer disease`,
+              `Recommended dose 20 mg twice daily in association with antimicrobial agents Amoxicillin 1 g and Clarithromycin 500 mg both twice a day for 7 to 14 days`,
+            ],
+            [
+              `Prophylaxis of acid aspiration`,
+              `For patients considered to be at risk of aspiration of the gastric contents during general anaesthesia, the recommended dosage is Omeprazole 40 mg on the evening before surgery followed by Omeprazole 40 mg 2-6 hours prior to surgery.`,
+            ],
+            [
+              `Zollinger-Ellison syndrome`,
+              `The recommended dosage is 60 mg Omeprazole once daily. Maximum dose is 80 mg daily; the dose should be divided and given twice daily.`,
+            ],
+            [
+              `NSAID associated gastric ulcers, duodenal ulcers or gastro duodenal erosions`,
+              `The recommended dose is 20 mg once daily. Symptom resolution is rapid and in most patients healing occurs within 4 weeks.`,
+            ],
+            [
+              `GERD or other acid-related disorders`,
+              `>1 year-10 mg once daily, if needed, 20 mg once daily 
+              >2 year-20 mg once daily, if needed, 40 mg once daily
+              `,
+            ],
+          ],
+
+          },
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SPECIAL POPULATION",
+          innerData: `Impaired renal function: Dose adjustment is not necessary. 
+          Impaired hepatic function: As plasma half-life of Omeprazole is increased, a daily dose of 10 – 20 mg may be sufficient. 
+          Elderly: Dose adjustment is not necessary.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6482,18 +9204,59 @@ export const ByTrade = [
             "",
           ]
         },
-        
-      ],
-      innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "SIDE-EFFECT",
+          innerData: `Omeprazole is well-tolerated. Nausea, diarrhoea, abdominal colic, paresthesia, dizziness and headache have been stated to be generally mild and transient and not requiring a reduction in dosage.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `There are no known contraindications to the use of Omeprazole. When gastric ulcer is suspected, the possibility of malignancy should be excluded before treatment with Omeprazole is instituted as treatment may alleviate symptoms and delay diagnosis. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: `Symptomatic response to therapy with Omeprazole does not preclude the presence of gastric malignancy. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30 ⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "OPmax®20 Capsule: Each box contains 10x10’s capsules in Alu-Alu pack. ",
+            "OPmax®20 Capsule: Each box contains 10x10’s capsules in Alu-Alu pack. ",
           ]
         },
         
@@ -6503,7 +9266,7 @@ export const ByTrade = [
       type:'Capsule'
     },
 
-{
+    {
       id: 57,
       title: "Picocef 70 Syrup",
       text1: " ",
@@ -6517,26 +9280,71 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Picocef",
+      innerComposition: "Cefuroxime",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Picocef® 250 Tablet: Each film coated tablet contains Cefuroxime Axetil USP equivalent to Cefuroxime 250 mg.",
+            "Picocef® 500 Tablet: Each film coated tablet contains Cefuroxime Axetil BP equivalent to Cefuroxime 500 mg.",
+            "Picocef® PFS: After reconstitution Each 5 ml suspension contains Cefuroxime Axetil USP equivalent to Cefuroxime 125 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Cefuroxime is 2nd generation cephalosporin which active against a wide range of gram-positive & gram-negative bacteria. Cefuroxime works by binding with beta-lactam ring of bacteria & inhibit bacterial cell wall. `,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Upper and lower respiratory tract infections, such as acute and chronic bronchitis, pneumonia, sinusitis, otitis media & tonsillitis",
+            "Skin & soft tissue infections such as peritonitis.",
+            "Urinary tract infections.",
+            "Gonorrhoea.",
+            "Septicemia.",
+            "Meningitis.",
+            "Prophylaxis.",
           ]
         },
         
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adults (>13 years)
+          • Pharyngitis/Tonsillitis 250 mg bid 10 days.
+          • Acute bacterial maxillary sinusitis 250 mg bid 10 days.
+          • Acute bacterial chronic bronchitis 250 or 500 mg bid 10 days.
+          • Secondary bacterial infections of acute bronchitis 250-500 mg bid 5-10 days.
+          • Uncomplicated skin and skin structure infections 250-500 mg bid 10 days.
+          • Uncomplicated urinary tract infections 125-250 mg bid 7-10 days.
+          • Uncomplicated gonorrhoea 1000 mg Single dose.
+          Children who can swallow tablets
+          • Pharyngitis/Tonsillitis 125 mg bid 10 days.
+          • Acute otitis media 250 mg bid 10 days.
+          • Acute bacterial maxillary sinusitis 250 mg bid 10 days.
+          Pediatric patients (3 months to 12 years)
+          • Pharyngitis/Tonsillitis 10 mg/kg/day bid 10 days
+          • Acute otitis media 15 mg/kg/day bid 10 days
+          • Acute bacterial maxillary sinusitis 15 mg/kg/day bid 10 days
+          • Impetigo 15 mg/kg/day bid 10 days
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6545,14 +9353,113 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "DIRECTIONS FOR RECONSTITUTION",
+          innerData: `For Suspension: To prepare 70 ml Suspension, at first shake the bottle well to loosen the powder. Then add 40 ml boiled and cooled water with the help of the supplied measuring cup to the powder and shake well. For better reconstitution add the water divided amount.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Patients with known allergy to Cephalosporins.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Generally Cefuroxime is well tolerated. However, a few side effects like nausea, vomiting, diarrhea, abdominal discomfort or pain may occur. Rarely (<0.2%) renal dysfunction, anaphylaxis, angioedema, pruritus, rash and serum sickness like urticaria may appear.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Cefuroxime should be given with care to patients receiving concurrent treatment with potent diuretics & who have history of colitis.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Pregnant women: USFDA pregnancy category B. While all antibiotics should be avoided in the first trimester. If possible, Cefuroxime has been safely used in later pregnancy to treat urinary and other infections`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Concomitant administration of probenecid with Cefuroxime increases the area under the serum concentration versus time curve by 50%. Drug that reduces gastric acidity may result in a lower bioavailability of Cefuroxime and tend to cancel the effect of postprandial absorption.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Overdosage of Cefuroxime tablet can cause cerebral irritation leading to convulsions.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, keep away from sunlight. All medicines keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Picocef® 250 Tablet: Box containing 2 x 7’s tablets in Alu-Alu blister pack.",
+            "Picocef® 250 Tablet: Box containing 2 x 7’s tablets in Alu-Alu blister pack.",
+            "Picocef® PFS: After reconstitution, each bottle contains 70 ml suspension and a dropper with measuring cup.",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
       type:'Syrup'
     },
 
-{
+    {
       id: 58,
       title: "Pregacap 50 Capsule",
       text1: " ",
@@ -6566,26 +9473,69 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Pregacap",
+      innerComposition: "Pregabalin INN",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Pregacap® 50 mg Capsule: Each capsule contains Pregabalin INN 50 mg.",
+            "Pregacap® 75 mg Capsule: Each capsule contains Pregabalin INN 75 mg.",
+          ]
+        },
+        {
+          innerHead: "DESCRIPTION",
+          innerData: `Pregacap (Pregabalin) is the preparation of Pregabalin, which is an analogue of neurotransmitter gamma-amino-butyric acid (GABA). It does not bind directly to GABAA or GABAB or benzodiazepine receptors. It binds with high affinity to the alpha-delta site (an auxiliary subunit of voltage-gated calcium channels) in central nervous system.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Management of neuropathic pain associated with diabetic peripheral neuropathy",
+            "Management of post herpetic neuralgia",
+            "Adjunctive therapy for adult patients with partial seizures/Epilepsy",
+            "Management of fibromyalgia",
           ]
         },
         
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adults over 18 years of age: Pregacap is given orally with or without food. Dosing amounts and frequency of dosing will be decided by the physician.
+          Neuropathic pain, associated with diabetic peripheral neuropathy:
+          Dosing should begin at 50 mg three times a day (150 mg/day). The dose may be increased to 300 mg/day within 1 week based on efficacy and tolerability. The maximum recommended dose of Pregabalin is 100 mg three times a day (300 mg/day) in patients with creatinine clearance of at least 60 ml/min.
+          Post-herpetic Neuralgia 
+          The recommended dose is 150 mg to 300 mg daily in 2-3 divided doses in patients with creatinine clearance of at least 60 ml/min.
+          Adjunctive Therapy For Adult Patients With Partial Seizures/epilepsy
+          The initial dose is 150 mg daily in 2-3 divided doses as adjunctive therapy in the treatment of partial onset seizures in adults.
+          Fibromyalgia
+          The recommended dose is 300 to 450 mg daily. Dosing should begin at 150 mg daily in two divided doses and may be increased to 300 mg daily in 2 divided doses within 1 week based on efficacy and tolerability.
+          Children And Adolescents (<18 Years Of Age)
+          The safety and efficacy of Pregabalin has not been established in patients below the age of 18 years, with either epilepsy or neuropathic pain.
+          Use In Elderly (Over 65 Years Of Age)
+          Elderly patients may require a dose reduction of Pregabalin due to decreased renal function.
+          Patients With Renal Impairment
+          Creatinine clearance (CrCl)
+          >_ 60 ml/min,	Initially 150 mg daily and maximum 600 mgdaily in 2-3 divided doses.
+          30- 60 ml/min, Initially 75 mg daily and maximum 300 mg daily in 2-3 divided doses.
+          15-30 ml/min,	initially 25-50 mg daily and maximum 150mgdaily in1-2 divided doses.
+          <15 ml/min,	Initially 25 mg once daily and maximum 75 mgonce daily.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6594,14 +9544,103 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: `Most common side-effects are dizziness, somnolence, dry mouth, edema, blurred vision, weight gain and abnormal thinking (primarily difficulty with concentration/attention).`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `Pregnancy: Pregabalin is a pregnancy category C drug. It should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus.
+          Lactation: It is not known if Pregabalin is excreted in the breast milk of humans but because of the potential for tumorigenicity shown for Pregabalin in animal studies, a decision should be made whether to discontinue nursing or to discontinue the drug, taking into account the importance of the drug to the mother.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Pregabalin is contraindicated in patients with known hypersensitivity to Pregabalin or any of its other components.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Hypersensitivity reactions (e.g. hives, dyspnea, and wheezing) can occur. Pregabalin should be discontinued immediately in these cases. Pregabalin may cause peripheral edema. Caution should be taken in case of exercise or when co-administering Pregabalin and Thiazolidinedione antidiabetic agents. Pregabalin may cause dizziness and somnolence and impair patients ability to drive or operate machinery.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `There are no significant interactions between Pregabalin and other antiepileptic drugs like carbamazepine, valproic acid, lamotrigine, phenytoin, phenobarbital, and topiramate. Co-administration of Pregabalin with the oral contraceptives like norethisterone and ethinyl oestradiol does not influence the steady state pharmacokinetics of other agent. Pregabalin may potentiate the effects of ethanol and lorazepam.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `The highest reported accidental overdose of Pregabalin was 8000 mg. The most common adverse events are affective disorder, somnolence, confusional state, depression, agitation and restlessness. Elimination of unabsorbed drug may be attempted by emesis or gastric lavage.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Pregacap® 50 mg Capsule: Each box contains- 30’s Capsules in blister strips.",
+            "Pregacap® 75 mg Capsule: Each box contains- 30’s Capsules in blister strips.",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
       type:'Capsule'
     },
 
-{
+    {
       id: 59,
       title: "Pregacap 75 Capsule",
       text1: " ",
@@ -6615,26 +9654,70 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+
+      innerMainHeading: "Pregacap 75",
+      innerComposition: "Pregabalin INN",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Pregacap® 50 mg Capsule: Each capsule contains Pregabalin INN 50 mg.",
+            "Pregacap® 75 mg Capsule: Each capsule contains Pregabalin INN 75 mg.",
+          ]
+        },
+        {
+          innerHead: "DESCRIPTION",
+          innerData: `Pregacap (Pregabalin) is the preparation of Pregabalin, which is an analogue of neurotransmitter gamma-amino-butyric acid (GABA). It does not bind directly to GABAA or GABAB or benzodiazepine receptors. It binds with high affinity to the alpha-delta site (an auxiliary subunit of voltage-gated calcium channels) in central nervous system.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Management of neuropathic pain associated with diabetic peripheral neuropathy",
+            "Management of post herpetic neuralgia",
+            "Adjunctive therapy for adult patients with partial seizures/Epilepsy",
+            "Management of fibromyalgia",
           ]
         },
         
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adults over 18 years of age: Pregacap is given orally with or without food. Dosing amounts and frequency of dosing will be decided by the physician.
+          Neuropathic pain, associated with diabetic peripheral neuropathy:
+          Dosing should begin at 50 mg three times a day (150 mg/day). The dose may be increased to 300 mg/day within 1 week based on efficacy and tolerability. The maximum recommended dose of Pregabalin is 100 mg three times a day (300 mg/day) in patients with creatinine clearance of at least 60 ml/min.
+          Post-herpetic Neuralgia 
+          The recommended dose is 150 mg to 300 mg daily in 2-3 divided doses in patients with creatinine clearance of at least 60 ml/min.
+          Adjunctive Therapy For Adult Patients With Partial Seizures/epilepsy
+          The initial dose is 150 mg daily in 2-3 divided doses as adjunctive therapy in the treatment of partial onset seizures in adults.
+          Fibromyalgia
+          The recommended dose is 300 to 450 mg daily. Dosing should begin at 150 mg daily in two divided doses and may be increased to 300 mg daily in 2 divided doses within 1 week based on efficacy and tolerability.
+          Children And Adolescents (<18 Years Of Age)
+          The safety and efficacy of Pregabalin has not been established in patients below the age of 18 years, with either epilepsy or neuropathic pain.
+          Use In Elderly (Over 65 Years Of Age)
+          Elderly patients may require a dose reduction of Pregabalin due to decreased renal function.
+          Patients With Renal Impairment
+          Creatinine clearance (CrCl)
+          >_ 60 ml/min,	Initially 150 mg daily and maximum 600 mgdaily in 2-3 divided doses.
+          30- 60 ml/min, Initially 75 mg daily and maximum 300 mg daily in 2-3 divided doses.
+          15-30 ml/min,	initially 25-50 mg daily and maximum 150mgdaily in1-2 divided doses.
+          <15 ml/min,	Initially 25 mg once daily and maximum 75 mgonce daily.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6643,14 +9726,104 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: `Most common side-effects are dizziness, somnolence, dry mouth, edema, blurred vision, weight gain and abnormal thinking (primarily difficulty with concentration/attention).`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `Pregnancy: Pregabalin is a pregnancy category C drug. It should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus.
+          Lactation: It is not known if Pregabalin is excreted in the breast milk of humans but because of the potential for tumorigenicity shown for Pregabalin in animal studies, a decision should be made whether to discontinue nursing or to discontinue the drug, taking into account the importance of the drug to the mother.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Pregabalin is contraindicated in patients with known hypersensitivity to Pregabalin or any of its other components.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Hypersensitivity reactions (e.g. hives, dyspnea, and wheezing) can occur. Pregabalin should be discontinued immediately in these cases. Pregabalin may cause peripheral edema. Caution should be taken in case of exercise or when co-administering Pregabalin and Thiazolidinedione antidiabetic agents. Pregabalin may cause dizziness and somnolence and impair patients ability to drive or operate machinery.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `There are no significant interactions between Pregabalin and other antiepileptic drugs like carbamazepine, valproic acid, lamotrigine, phenytoin, phenobarbital, and topiramate. Co-administration of Pregabalin with the oral contraceptives like norethisterone and ethinyl oestradiol does not influence the steady state pharmacokinetics of other agent. Pregabalin may potentiate the effects of ethanol and lorazepam.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `The highest reported accidental overdose of Pregabalin was 8000 mg. The most common adverse events are affective disorder, somnolence, confusional state, depression, agitation and restlessness. Elimination of unabsorbed drug may be attempted by emesis or gastric lavage.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Pregacap® 50 mg Capsule: Each box contains- 30’s Capsules in blister strips.",
+            "Pregacap® 75 mg Capsule: Each box contains- 30’s Capsules in blister strips.",
+          ]
+        },
       ],
+
       btn: "Read More",
       btnlink: "/prod_details",
       type:'Capsule'
     },
-
-{
+ 
+    {
       id: 60,
       title: "Relikof Kidz Syrup",
       text1: " ",
@@ -6664,12 +9837,12 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Relikof® Kidz Linctus",
+      innerComposition: "Citric Acid Monohydrate BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Relikof® Kidz Linctus: Each 5 ml Linctus contains Citric Acid Monohydrate BP 31.25 mg.`,
           istable: false,
           table: {},
           islist: false,
@@ -6678,12 +9851,124 @@ export const ByTrade = [
             "",
           ]
         },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Relikof® kidz linctus contains Citric Acid Monohydrate BP which is moderately transparent, slightly yellowish, natural Anise flavored sugar free Linctus. It acts as demulent& forms a protective film on surface of respiratory mucus membrane. This Relikof® Kidz Linctus provides a soothing effect on throat relieving irritating dry cough.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Relikof® linctus is indicated for relief of all types of non productive (dry) coughs, specially-`,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Environment induced dry cough",
+            "Cold induced dry cough",
+            "Irritating dry cough",
+            "Allergic dry cough",
+          ]
+        },
         
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Child (1 month-12 Years): Relikof® Kidz Linctus 5-10 ml (1-2 teaspoon), 3-4 times daily.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: `There are no known side effects from using this medicine. However, if you notice any side effects, stop use and consult a doctor or pharmacist.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Contraindicated in patients having hypersensitivity to any of the ingredients of Citric Acid Monohydrate .`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Consult a doctor if cough symptoms persist for more than 5 days.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `There are no enough data from the use of Citric Acid Monohydrate in pregnant women. There is insufficient information on the excretion of Citric Acid Monohydrate metabolites in Human milk.  If necessary, it can used with the consultation of physician.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `No clinically significant interactions have found.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Overdose with this preparation is unlikely to occur due to the low concentrations of the ingredients.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰C Temp.) & dry place, protect from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `Relikof® Kidz Linctus: Each bottle contains 100 ml linctus with a measuring cup.`,
           istable: false,
           table: {},
           islist: false,
@@ -6699,7 +9984,7 @@ export const ByTrade = [
       type:'Syrup'
     },
 
-{
+    {
       id: 61,
       title: "Sefcon 500 Capsule",
       text1: " ",
@@ -6713,12 +9998,39 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Sefcon 500",
+      innerComposition: "Cefradine BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Sefcon® 500 Capsule: Each Capsule contains Cefradine BP 500 mg.",
+            "Sefcon® DS Powder for Suspension: After reconstitution each 5 ml suspension contains Cefradine BP 250 mg",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Sefcon® (Cefradine) is a cephalosporin antibiotic with broad spectrum bactericidal activity against both gram-positive and gram-negative bacteria. Cefradine interferes with the synthesis of bacterial cell wall by inhibiting transpeptidase enzyme, as a result the bacterial cell wall is destroyed.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Sefcon® (Cefradine) is used in the treatment of infections caused by sensitive organisms.
+          Upper respiratory tract infections: Pharyngitis, sinusitis, otitis media, tonsillitis. Lower respiratory tract infections: Acute and chronic bronchitis, Bronchopneumonia.
+          Urinary tract infections: Cystitis, urethritis, pyelonephritis.
+          Skin and soft tissue infections: Abscess, cellulitis, furunculosis, impetigo. Gastrointestinal tract infections: Bacillary dysentery, enteritis, peritonitis. Bone and joint infections.
+          Surgical prophylaxis: It is also used in perioperative prophylactic administration. In cesarean post-operative infections, intra-operative and post-operative use may reduce the incidence of certain post-operative infections.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6731,8 +10043,11 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `The dosage may be given without regard to meals.
+          Adults: Oral: 250-500 mg 4 times a day, alternatively 0.5-1 g twice daily. Increased if necessary up to 1 g 4 times a day, Increased dose may be used in severe infections.
+          Children: Oral: The usual total dose is 25 to 50 mg/kg/day daily in 2-4 divided doses.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6741,7 +10056,105 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "DOSAGE IN RENAL IMPAIRMENT",
+          innerData: `In patient with impaired renal function, doses and frequency of administration of Cefradine must be modified according to the degree of impairment, severity of infection, susceptibility of the causative organism and serum concentration of the drug. For adults, a loading dose of 750 mg should be given subsequently followed by 500 mg with the mentioned time interval.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `It should not be used in patients hypersensitive to any cephalosporin antibiotic.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Cefradine should be used with caution in those patients who have known hypersensitivity to penicillins.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Side effects include nausea, vomiting, Diarrhoea and abdominal discomfort. Allergic reactions including skin rashes, Urticaria, eosinophilia, angioedema and anaphylaxis may occur and elevation of hepatic enzyme values have been noted. Neutropenia has been reported. Super-infection with resistant microorganisms, particularly candida, may follow the treatment. There is also a possibility of development of pseudo membranous colitis. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `Although there have been no reports of adverse effect on the fetus, safety or use during pregnancy has not been definitely established. Cephalosporins are distributed into breast milk and the drug should be used with caution in nursing women.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Loop diuretics may increase nephro toxicity of cephalosporins. Probenecid has been seen to raise serum concentrations of Cefradine, by reducing renal clearance of the cephalosporins.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVER DOSE",
+          innerData: `The symptoms of cefradine overdose are non-specific and are generally nausea, vomiting, diarrhoea and gastric upsets. Gastric lavage will be necessary if a large amount has been ingested. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Sefcon® 500 Capsule: Each box containing 3 x 7's Capsules in Alu-Alu Blister pack.",
+            "Sefcon® DS Powder for Suspension: Each bottle containing dry powder to reconstitute 100 ml suspension with measuring cup for measurement.",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
@@ -6762,12 +10175,39 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Sefcon",
+      innerComposition: "Cefradine BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Sefcon® 500 Capsule: Each Capsule contains Cefradine BP 500 mg.",
+            "Sefcon® DS Powder for Suspension: After reconstitution each 5 ml suspension contains Cefradine BP 250 mg",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Sefcon® (Cefradine) is a cephalosporin antibiotic with broad spectrum bactericidal activity against both gram-positive and gram-negative bacteria. Cefradine interferes with the synthesis of bacterial cell wall by inhibiting transpeptidase enzyme, as a result the bacterial cell wall is destroyed.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Sefcon® (Cefradine) is used in the treatment of infections caused by sensitive organisms.
+          Upper respiratory tract infections: Pharyngitis, sinusitis, otitis media, tonsillitis. Lower respiratory tract infections: Acute and chronic bronchitis, Bronchopneumonia.
+          Urinary tract infections: Cystitis, urethritis, pyelonephritis.
+          Skin and soft tissue infections: Abscess, cellulitis, furunculosis, impetigo. Gastrointestinal tract infections: Bacillary dysentery, enteritis, peritonitis. Bone and joint infections.
+          Surgical prophylaxis: It is also used in perioperative prophylactic administration. In cesarean post-operative infections, intra-operative and post-operative use may reduce the incidence of certain post-operative infections.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6780,8 +10220,11 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `The dosage may be given without regard to meals.
+          Adults: Oral: 250-500 mg 4 times a day, alternatively 0.5-1 g twice daily. Increased if necessary up to 1 g 4 times a day, Increased dose may be used in severe infections.
+          Children: Oral: The usual total dose is 25 to 50 mg/kg/day daily in 2-4 divided doses.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6790,7 +10233,105 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "DOSAGE IN RENAL IMPAIRMENT",
+          innerData: `In patient with impaired renal function, doses and frequency of administration of Cefradine must be modified according to the degree of impairment, severity of infection, susceptibility of the causative organism and serum concentration of the drug. For adults, a loading dose of 750 mg should be given subsequently followed by 500 mg with the mentioned time interval.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `It should not be used in patients hypersensitive to any cephalosporin antibiotic.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Cefradine should be used with caution in those patients who have known hypersensitivity to penicillins.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Side effects include nausea, vomiting, Diarrhoea and abdominal discomfort. Allergic reactions including skin rashes, Urticaria, eosinophilia, angioedema and anaphylaxis may occur and elevation of hepatic enzyme values have been noted. Neutropenia has been reported. Super-infection with resistant microorganisms, particularly candida, may follow the treatment. There is also a possibility of development of pseudo membranous colitis. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `Although there have been no reports of adverse effect on the fetus, safety or use during pregnancy has not been definitely established. Cephalosporins are distributed into breast milk and the drug should be used with caution in nursing women.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Loop diuretics may increase nephro toxicity of cephalosporins. Probenecid has been seen to raise serum concentrations of Cefradine, by reducing renal clearance of the cephalosporins.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVER DOSE",
+          innerData: `The symptoms of cefradine overdose are non-specific and are generally nausea, vomiting, diarrhoea and gastric upsets. Gastric lavage will be necessary if a large amount has been ingested. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Sefcon® 500 Capsule: Each box containing 3 x 7's Capsules in Alu-Alu Blister pack.",
+            "Sefcon® DS Powder for Suspension: Each bottle containing dry powder to reconstitute 100 ml suspension with measuring cup for measurement.",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
@@ -6811,12 +10352,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Unirab",
+      innerComposition: "Rabeprazole Sodium INN 20 mg",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Unirab® Capsule: Each Capsule contains Rabeprazole Sodium INN 20 mg.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Rabeprazole suppresses gastric acid secretion by inhibiting the gastric H+/K+ ATPase at the secretory surface of the gastric parietal cell. Because this enzyme is regarded as the acid (proton) pump within the parietal cell, Rabeprazole has been characterized as a gastric proton-pump inhibitor.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Healing of Benign Gastric Ulcer; Healing of Erosive or Ulcerative Gastroesophageal Reflux Disease (GERD); Maintenance of healing of Erosive or Ulcerative GERD; Treatment of symptomatic GERD; Healing of Duodenal Ulcers; Helicobacter pylori eradication to reduce the risk of Duodenal Ulcer recurrence; Treatment of pathological hypersecretory conditions, including Zollinger-Ellison Syndrome.`,
           istable: false,
           table: {},
           islist: false,
@@ -6829,8 +10392,16 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Unirab® capsule can be taken with or without food.
+          Healing of Benign Gastric Ulcer: The recommended adult oral dose is one Unirab® capsule to be taken once daily in the morning for 8 weeks.
+          Healing of Erosive or Ulcerative GERD: The recommended adult oral dose is one Unirab® Capsule to be taken once daily for four to eight weeks. For those patients who have not healed after 8 weeks of treatment, an additional 8 week course of Rabonac Tablet may be considered.
+          Maintenance of healing of Erosive or Ulcerative GERD: The recommended adult oral dose is one Unirab® Capsule to be taken once daily.
+          Treatment of symptomatic GERD: The recommended adult oral dose is one Unirab Capsule to be taken once daily for 4 weeks. If symptoms do not resolve completely after 4 weeks, an additional course of treatment may be considered.
+          Healing of Duodenal Ulcers: The recommended adult oral dose is one Unirab® Capsule to be taken once daily after the morning meal for a period up to 4 weeks. Most patients with duodenal ulcer heal within 4 weeks. A few patients may require additional therapy to achieve healing.
+          Helicobacter pylori eradication to reduce the risk of Duodenal Ulcer recurrence: Triple therapy regimen: Unirab® 20 mg, Amoxicillin 1000 mg, Clarithromycin 500 mg; each drug should be taken twice daily with the morning and evening meals for 7 days.
+          Treatment of pathological hypersecretory conditions, including Zollinger-Ellison Syndrome: The recommended adult oral starting dose is 60 mg once a day. Doses should be adjusted to individual patient needs and should continue for as long as clinically indicated. Some patients may require 2 divided doses (maximum 120 mg daily). Some patients with Zollinger-Ellison syndrome have been treated continuously with Unirab® Capsule for up to one year.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6839,7 +10410,87 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Rabeprazole Capsule are generally well tolerated. The observed undesirable effects have been generally mild/moderate and transient in nature. The most common adverse events are headache, diarrhea and nausea. The less common adverse effects are abdominal pain, asthenia, flatulence, rash, dry mouth etc. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `Rabeprazole is contraindicated in patients with known hypersensitivity to Rabeprazole or to any component of the formulation.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTION",
+          innerData: `Administration of Rabeprazole to patients with mild to moderate liver impairment results in increased exposure and decreased elimination. Caution should be exercised in patients with severe hepatic impairment.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Rabeprazole like other PPIs is metabolized through Cytochrome P450 drug metabolizing enzyme system. But Rabeprazole does not have clinically significant interaction with other drugs metabolized by CYP P450 system, such as warfarin, theophylline, diazepam and phenytoin. Rabeprazole inhibits gastric acid secretion and may interfere with absorption of drugs where gastric pH is an important determinant of bioavailability e.g. ketoconazole, iron salts and digoxin. In studies no interaction with liquid antacid or foods was observed.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN SPECIAL GROUP",
+          innerData: `Pregnancy: Pregnancy category B. There are no adequate and well-controlled studies in pregnant women. This drug should be used during pregnancy only if clearly needed.
+          Nursing Mother: Since many drugs are excreted in milk, and becasue of the potential for adverse reactions to nursing infants from Rabeprazole, a decision should be made to discontinue nursing or discontinue the drug, taking into account the importance of the drug to the mother.
+          Pediatric Use: The safety and effectiveness of Rabeprazole for the treatment of GERD patients <12 years of age have not been established. The safety and effectiveness of Rabeprazole for other uses have not been established in pediatric patients.
+          Geriatric Use: No overall differences in safety or effectiveness were observed between these subjects and younger subjects, but greater sensitivity of some older individuals cannot be ruled out.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "Commercial Pack",
+          innerData: `Unirab® Capsule: Each box contains 6x10 tablets in Alu-Alu blister strip.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
@@ -6860,26 +10511,100 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Optivas",
+      innerComposition: "Atorvastatin INN",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Optivas® 10 : Each film coated tablet contains Atorvastatin Calcium Trihydrate INN equivalent to Atorvastatin 10 mg.",
+            "Optivas® 20 : Each film coated tablet contains Atorvastatin Calcium Trihydrate INN equivalent to Atorvastatin 20 mg",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Optivas® (Atorvastatin) is a synthetic lipid-lowering agent. Atorvastatin is a selective, competitive inhibitor of HMG-CoA reductase, the rate-limiting enzyme that converts 3-hydroxy 3 methylglutarylcoenzyme A to mevalonate, a precursor of cholesterol. As mevalonate is produced, it is then converted into cholesterol. Moreover, It activates lipoproteinlipase which breaks down triglyceride by hydrolysis.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: `Atorvastatin is indicated as an adjunct to diet for reduction of elevated total cholesterol, LDL-cholesterol, apolipoprotein B, and triglycerides in patients with-`,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Primary hypercholesterolemia (heterozygous familial and non-familial) hypercholesterolemia and mixed dyslipidemia (Fredrickson types IIa and IIb).",
+            " Elevated serum Triglyceride (TG) levels (Fredrickson type IV).",
+            "Primary dysbetalipoproteinemia (Fredrickson type III) who do not respond adequately to diet.",
+            "Homozygous familial hypercholesterolemia as an adjunct to other lipid-lowering treatments (e.g., LDL apheresis).",
           ]
         },
         
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Patients should be placed on a standard cholesterol-lowering diet before receiving Atorvastatin and should continue on this diet during treatment. The usual starting dose for all the indications is 10 mg once daily. The doses range is 10 to 80 mg once daily. Doses should be individualized according to baseline LDL-C levels, the goal of therapy, and patient response. Adjustment of dosage should be made at intervals of 4 weeks or more. Doses may be given at any time of day with or without food.
+          Children: Treatment experience in a paediatric population with dose of Atorvastatin up to 80 mg/day is limited.
+          Geriatric (>70 Years) Use: The safety and efficacy of Atorvastatin in this population is as similar as < 70 years of age patients with the dose up to 80 mg/day.
+          
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Atorvastatin is contraindicated in patients with hypersensitivity to any component of this medication, active liver disease or unexplained persistent elevations of serum transaminases.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Atorvastatin is generally well tolerated. Adverse reactions have usually been mild and transient. Reversible myositis is rare but significant side effect of the statins. The statins also cause headache, altered liver function tests and gastro-intestinal effects including abdominal pain, flatulence, diarrhoea, nausea and vomiting.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Liver effects : Liver function tests should be performed before the initiation of treatment and periodically thereafter. Should an increase in ALT or AST of greater than 3 times the upper limit of normal persist, reduction of dose or withdrawal of Atorvastatin is recommended. Atorvastatin should be used with caution in patients who consume substantial quantities of alcohol and/or have a history of liver disease.
+          Skeletal muscle effects: Uncomplicated myalgia has been reported in Atorvastatin- treated patients. Atorvastatin therapy should be discontinued if markedly elevated CPK levels occur or myopathy is diagnosed or suspected.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOAGE",
+          innerData: `There is no specific treatment for overdose, in the event of an Overdose, the patients should be treated symptomatically and general supportive measures instituted as required. Due to excessive drug binding to plasma proteins, haemodialysis is not expected to significantly enhance atorvastatin clearance. Liver function test and Serum CPK levels should be monitored. `,
           istable: false,
           table: {},
           islist: false,
@@ -6889,6 +10614,51 @@ export const ByTrade = [
           ]
         },
         
+        
+        {
+          innerHead: "PREGNANCY AND LACTATION",
+          innerData: `Atorvastatin is contraindicated in pregnancy. Women of childbearing potential should use adequate contraceptive measures. Atorvastatin should be administered to women of child bearing age only when such patients are highly unlikely to conceive and have been informed of the potential hazards to the fetus. Atorvastatin is contraindicated while breast feeding. It is not known whether this drug is excreted in human milk. Because of the potential for adverse reactions in nursing infants, women taking atorvastatin should not breast-feed.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `The risk of myopathy during treatment with other drugs in this class is increased with concurrent administration of cyclosporin, fibric acid derivatives, erythromycin, azole antifungals, or niacin (nicotinic acid). These risks may also occur when combining these drugs with Atorvastatin. Caution should also be exercised when Atorvastatin is administered with inhibitors of P450 3A4 (macrolide antibiotics and azole antifungals). Patients should be closely monitored if Atorvastatin is added to digoxin, erythromycin, oral contraceptives, colestipol, antacid and warfarin.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERICAL PACKING",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Optivas® 10: Each box contains 3×10's tablet in blister pack.",
+            "Optivas® 10: Each box contains 3×10's tablet in blister pack.",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
@@ -6909,12 +10679,23 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Panagra",
+      innerComposition: "Sildenafil USP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Panagra®-50 Tablet: Each film coated tablet contains- Sildenafil Citrate USP eqvt. to Sildenafil 50 mg.",
+            "Panagra®-50 Tablet: Each film coated tablet contains- Sildenafil Citrate USP eqvt. to Sildenafil 50 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Sildenafil is an inhibitor of phosphodiesterase type 5 (PDE5). The sexual stimulation causes the natural production of nitric oxide which releases required quantity of cGMP. PDE5 is present in the corpus cavernosum smooth muscle, vascular & visceral smooth muscle, kidney, lungs & pancreas. Sildenafil has no effect on penile blood flow in the absence of sexual stimulation. Sildenafil has no effect on penile blood flow in the absence of sexual stimulation. The effect of PDE5 inhibition on cGMP concentration in the corpus cavernosum and pulmonary arteries is also observed in the smooth muscle of the prostate, the bladder and their vascular supply. `,
           istable: false,
           table: {},
           islist: false,
@@ -6923,12 +10704,24 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "INDICATION",
+          innerData: `Sildenafil is used for the treatment of men with erectile dysfunction and pulmonary arterial hypertension (PAH).`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Erectile Dysfunction: The recommended dose for most patients is 50 mg taken, as needed, approximately 30 -40 minutes before intercourse. However, Sildenafil may be taken anywhere from 4 hours to 0.5 hour before sexual activity. Based on effectiveness and toleration, the dose may be increased to a maximum recommended dose of 100 mg or decreased to 25 mg. It should not be used more than once daily. The following factors are associated with increased plasma levels of Sildenafil: age >65, hepatic impairment, severe renal impairment, and concomitant use of potent cytochrome P450 3A4 inhibitors (ketoconazole, itraconazole, erythromycin, saquinavir). Since higher plasma levels may increase both the efficacy and incidence of adverse events, a starting dose of 25 mg should be considered in these patients. When Sildenafil is co-administered with a-blocker, patients should be stable on a-blocker therapy prior to initiating Sildenafil treatment and Sildenafil should be initiated at the lowest dose. 
+          Pulmonary arterial hypertension: The recommended dose of Sildenafil Citrate is 20 mg three times a day and should be taken approximately 4-6 hours apart, with or without food.
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -6937,7 +10730,107 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: `Like all medicines, Sildenafil can cause side-effects although not everybody gets them. The side-effects reported in association with the use of Sildenafil are usually mild to moderate and of a short duration. Body as a whole: allergic reaction, face edema, photosensitivity reaction, shock, asthenia, pain, chills, abdominal pain, chest pain. Musculoskeletal: arthritis, myalgia, tendon rupture, tenosynovitis, bone pain, myasthenia, synovitis. Nervous: ataxia, hypertonia, neuralgia, neuropathy, paresthesia, tremor, vertigo, depression, insomnia, somnolence, abnormal dreams, hypesthesia. Respiratory: asthma, dyspnea, laryngitis, pharyngitis, sinusitis, bronchitis. Cardiovascular: angina pectoris, AV block migraine, syncope, tachycardia, palpitation, hypotension, postural hypotension, myocardial ischemia, cerebral thrombosis, cardiac arrest, heart failure, abnormal electrocardiogram and cardiomyopathy. Digestive: vomiting, glossitis, colitis, dysphagia, gastritis, gastroenteritis, esophagitis, stomatitis, dry mouth, liver function tests abnormal, rectal hemorrhage, gingivitis. Hemic and Lymphatic: anemia and leukopenia. Metabolic and Nutritional: thirst, edema, gout, unstable diabetes, hyperglycemia, peripheral edema, hyperuricemia, hypoglycemic reaction, hypernatremia. Skin and Appendages: urticaria, pruritus, sweating, skin ulcer, exfoliative dermatitis. Special Senses: sudden decrease or loss of hearing, mydriasis, conjunctivitis, photophobia, tinnitus, eye pain, ear pain, eye hemorrhage, cataract, dry eyes. Urogenital: cystitis, nocturia, urinary frequency, urinary incontinence, abnormal ejaculation, genital edema and anorgasmia. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Sildenafil has shown to potentiate the hypotensive effects of nitrates and its administration to patients who are using organic nitrates, either regularly and or intermittently, in any form is therefore contraindicated. Sildenafil is also contraindicated in patients with a hypersensivity to any component of the tablet`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `General: The evaluation of erectile dysfunction should include a determination of potential underlying causes and the identification of appropriate treatment following a complete medical assessment. Before prescribing Slidenafil, it is important to note the following: Caution is advised when Phosphodiesterase Type 5 (PDE5) inhibitors are co-administered with alpha-blockers. PDE5 inhibitors, including Sildenafil, and a-adrenergic blocking agents are both vasodilators with blood pressure lowering effects. When vasodilators are used in combination, an additive effect on blood pressure may be anticipated. In some patients, concomitant use of these two drug classes can lower blood pressure significantly leading to symptomatic hypotension (e.g. dizziness, fainting lightheadedness). Regard should be given: Patients should be stable on a-blocker therapy prior to initiating a PDE5 inhibitor. Patients who demonstrate hemodynamic instability on a-blocker therapy alone are at increased risk of symptomatic hypotension with concomitant use of PDE5 inhibitors. In those patients who are stable on a-blocker therapy, PDE5 inhibitors should be initiated at the lowest dose. In those patients already taking an optimized dose of a PDE5 inhibitor, a-blocker therapy should be initiated at the lowest dose. Stepwise increase in a-blocker dose may be associated with further lowering of blood pressure when taking a PDE5 inhibitor. Safety of combined use of PDE5 inhibitors and a-blockers may be affected by other variables, including intravascular volume depletion and other anti-hypertensive drugs. Sildenafil has systemic vasodilatory properties and may augment the blood pressure lowering effect of other anti-hypertensive medications. The safety of Sildenafil is unknown in patients with bleeding disorders and patients with active peptic ulceration. Sildenafil should be used with caution in patients with anatomical deformation of the penis (such as angulation, cavernosal fibrosis or Peyronie's disease), or in patients who have conditions which may predispose them to priapism (such as sickle cell anemia, multiple myeloma, or leukemia). The safety and efficacy of combinations of Sildenafil with other treatments for erectile dysfunction have not been studied. Therefore, the use of such combinations is not recommended. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "WARNINGS",
+          innerData: `There is a cardiac risk of sexual activity in patients with preexisting cardiovascular disease. Therefore, treatments for erectile dysfunction with Sildenafil should not be generally used in men for whom sexual activity is inadvisable because of their underlying cardiovascular status. Sildenafil has systemic vasodilatory properties that resulted in transient decreases in supine blood pressure in healthy volunteers (mean maximum decrease of 8.4/5.5 mmHg). While this normally would be expected to be of little consequence in most patients, prior to prescribing Sildenafil, physicians should carefully consider whether their patients with underlying cardiovascular disease could be affected adversely by such vasodilatory effects, especially in combination with sexual activity. Patients with the following underlying conditions can be particularly sensitive to the actions of vasodilators including Sildenafil- those with left ventricular outflow obstruction (e.g. aortic stenosis, idiopathic hypertrophic subaortic stenosis) and those with severely impaired autonomic control of blood pressure. There is no controlled clinical data on the safety or efficacy of Sildenafil in the following groups; if prescribed, this should be done with caution. Patients who have suffered a myocardial infarction, stroke, or life-threatening arrhythmia within the last 6 months; Patients with resting hypotension (BP <90/50) or hypertension (BP >170/110): Patients with cardiac failure or coronary artery disease causing unstable angina; Patients with retinitis pigmentosa (a minority of these patients have genetic disorders of retinal phosphodiesterases); Patients with sickle cell or related anemias.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTTONS",
+          innerData: `Sildenafil metabolism is principally mediated by the cytochrome P450 (CYP) isoforms 3A4 (major route) and 2C9 (minor route). Therefore, inhibitors of these isoenzymes 15 may reduce Sildenafil clearance and inducers of these isoenzymes may increase Sildenafil clearance. Cimetidine (800 mg), a nonspecific CYP inhibitor, caused a 56% increase in plasma Sildenafil concentrations when coadministered with Sildenafil (50 mg). When a single 100 mg dose of Sildenafil was administered with erythromycin, a specific CYP3A4 inhibitor, at steady state (500 mg bid for 5 days), there was a 182% increase in Sildenafil systemic exposure (AUC). Co-administration of the HIV protease inhibitor saquinavir, also a CYP3A4 inhibitor, at steady state (1200 mg tid) with Sildenafil (100 mg single dose) resulted in a 140% increase in Sildenafil Cmax and a 210% increase in Sildenafil AUC. Stronger CYP3A4 inhibitors such as ketoconazole or itraconazole would be expected to have still greater effects, and population data from patients in clinical trials did indicate a reduction in Sildenafil clearance when it was coadministered with CYP3A4 inhibitors (such as ketoconazole, erythromycin, or cimetidine). In another study co-administration with the HIV protease inhibitor ritonavir, a highly potent P450 inhibitor, at steady state (500 mg bid) with Sildenafil (100 mg single dose) resulted in a 300% (4-fold) increase in Sildenafil Cmax and a 1000% (11-fold) increase in Sildenafil plasma AUC. At 24 hours, the plasma levels of Sildenafil were approximately 200 ng/ml, compared to approximately 5 ng/ml when Sildenafil was dosed alone. Although the interaction between other protease inhibitors and Sildenafil has not been studied, their concomitant use is expected to increase Sildenafil levels.  Concomitant administration of strong CYP3A4 inducers, such as rifampin, is expected to cause greater decreases in plasma levels of Sildenafil. The AUC of the active metabolite, N-desmethyl Sildenafil, was increased 62% by loop and potassium-sparing diuretics and 102% by 16 nonspecific beta-blockers. These effects on the metabolite are not expected to be of clinical consequence. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PREGNANCY & LACTATION",
+          innerData: `Sildenafil is not indicated for use in women. 
+          Geriatric Use: Healthy elderly volunteers (65 years or over) had a reduced clearance of Sildenafil. Since higher plasma levels may increase both the efficacy and incidence of adverse events, a starting dose of 25 mg should be considered. 
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSAGE",
+          innerData: `In studies with healthy volunteers of single doses up to 800 mg, adverse events were similar to those seen at lower doses but incidence rates and severities were increased. In cases of overdose, standard supportive measures should be adopted as required. Renal dialysis is not expected to accelerate clearance as Sildenafil is highly bound to plasma proteins and it is not eliminated in the urine. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protected from light. Keep out of reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Panagra® 50 Tablet: Each box contains- 1 blister strip of 4 film-coated tablets.",
+            "Panagra® 50 Tablet: Each box contains- 1 blister strip of 4 film-coated tablets.",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
@@ -6958,36 +10851,106 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Peacepil",
+      innerComposition: "Bromazepam BP 3 mg",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: "Kafu® 100 ml Syrup: Each 5 ml syrup contains Ketotifen Fumarate BP equivalent to Ketotifen 1 mg.",
           istable: false,
           table: {},
           islist: false,
-          listData:[
-            "",
-            "",
-          ]
+          listData:[]
         },
-        
-      ],
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: "Kafu® is a preparation of Ketotifen which has anti-histaminic and anti-anaphylactic activity. It has been used similarly to sodium chromoglycate in the prophylactic treatment of asthma. Ketotifen is a non-bronchodilator anti-asthmatic drug with marked anti-histaminic effects. Ketotifen exerts a powerful and sustained H1-receptor blocking activities which can be clearly dissociated from its anti-anaphylactic properties.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: "",
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Prophylactic treatment of bronchial asthma.",
+            "Allergic rhinitis and Conjunctivitis.",
+          ]
+        }
+        ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: "Adults: 1 mg twice daily with food. If necessary the dose may be increased up to 2 mg twice daily in severe case.Child above 3 years of age: 1 mg twice daily with food or as directed by the physician.Elderly: Same as adult dose or as advised by physician.",
           istable: false,
           table: {},
           islist: false,
-          listData:[
-            "",
-            "",
-          ]
+          listData:[]
+        },
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: "Drowsiness, dry mouth, slight dizziness may occur at the beginning of treatment but usually disappear spontaneously after a few days. CNS stimulation and weight gain has also been reported. ",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: "The treatment with existing anti-asthmatic treatment should be continued for at least 2 weeks after initiation of Ketotifen treatment to avoid the risk of exacerbation of asthma. If inter current infection occurs, treatment must be supplemented by specific anti-infectious therapy. On the first few days of treatment with Ketotifen, the patient’s reactions may be impaired. Care should be taken when driving a vehicle or operating machinery. ",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: "Symptoms of overdose include drowsiness to severe sedation, confusion, dyspnea, hypotension, tachycardia, hyperexcitability and convulsions. Other symptoms include nausea, vomiting, diarrhea and blurred vision.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: "Kafu® may be potentiate the effects of CNS depressants, anti-histamines and alcohol.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: "It should not be used in pregnancy and lactation, although there is no evidence of any teratogenic effects. ",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
         },
         
-      ],
+        {
+          innerHead: "STORAGE",
+          innerData: "Store in a cool (Below 30 ⁰ C. Temp.), dry place and protected from light. Keep out of reach from children. ",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: "",
+          istable: false,
+          table: {},
+          islist: true,
+          listData: [
+          "Kafu® 100 ml Syrup: Each 5 ml syrup contains Ketotifen Fumarate BP equivalent to Ketotifen 1 mg.",
+        ],
+        },
+        ],
       btn: "Read More",
       btnlink: "/prod_details",
       type:'tablet'
@@ -7007,26 +10970,71 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Picocef",
+      innerComposition: "Cefuroxime",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Picocef® 250 Tablet: Each film coated tablet contains Cefuroxime Axetil USP equivalent to Cefuroxime 250 mg.",
+            "Picocef® 500 Tablet: Each film coated tablet contains Cefuroxime Axetil BP equivalent to Cefuroxime 500 mg.",
+            "Picocef® PFS: After reconstitution Each 5 ml suspension contains Cefuroxime Axetil USP equivalent to Cefuroxime 125 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Cefuroxime is 2nd generation cephalosporin which active against a wide range of gram-positive & gram-negative bacteria. Cefuroxime works by binding with beta-lactam ring of bacteria & inhibit bacterial cell wall. `,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Upper and lower respiratory tract infections, such as acute and chronic bronchitis, pneumonia, sinusitis, otitis media & tonsillitis",
+            "Skin & soft tissue infections such as peritonitis.",
+            "Urinary tract infections.",
+            "Gonorrhoea.",
+            "Septicemia.",
+            "Meningitis.",
+            "Prophylaxis.",
           ]
         },
         
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adults (>13 years)
+          • Pharyngitis/Tonsillitis 250 mg bid 10 days.
+          • Acute bacterial maxillary sinusitis 250 mg bid 10 days.
+          • Acute bacterial chronic bronchitis 250 or 500 mg bid 10 days.
+          • Secondary bacterial infections of acute bronchitis 250-500 mg bid 5-10 days.
+          • Uncomplicated skin and skin structure infections 250-500 mg bid 10 days.
+          • Uncomplicated urinary tract infections 125-250 mg bid 7-10 days.
+          • Uncomplicated gonorrhoea 1000 mg Single dose.
+          Children who can swallow tablets
+          • Pharyngitis/Tonsillitis 125 mg bid 10 days.
+          • Acute otitis media 250 mg bid 10 days.
+          • Acute bacterial maxillary sinusitis 250 mg bid 10 days.
+          Pediatric patients (3 months to 12 years)
+          • Pharyngitis/Tonsillitis 10 mg/kg/day bid 10 days
+          • Acute otitis media 15 mg/kg/day bid 10 days
+          • Acute bacterial maxillary sinusitis 15 mg/kg/day bid 10 days
+          • Impetigo 15 mg/kg/day bid 10 days
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -7035,7 +11043,106 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "DIRECTIONS FOR RECONSTITUTION",
+          innerData: `For Suspension: To prepare 70 ml Suspension, at first shake the bottle well to loosen the powder. Then add 40 ml boiled and cooled water with the help of the supplied measuring cup to the powder and shake well. For better reconstitution add the water divided amount.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Patients with known allergy to Cephalosporins.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Generally Cefuroxime is well tolerated. However, a few side effects like nausea, vomiting, diarrhea, abdominal discomfort or pain may occur. Rarely (<0.2%) renal dysfunction, anaphylaxis, angioedema, pruritus, rash and serum sickness like urticaria may appear.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Cefuroxime should be given with care to patients receiving concurrent treatment with potent diuretics & who have history of colitis.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Pregnant women: USFDA pregnancy category B. While all antibiotics should be avoided in the first trimester. If possible, Cefuroxime has been safely used in later pregnancy to treat urinary and other infections`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Concomitant administration of probenecid with Cefuroxime increases the area under the serum concentration versus time curve by 50%. Drug that reduces gastric acidity may result in a lower bioavailability of Cefuroxime and tend to cancel the effect of postprandial absorption.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Overdosage of Cefuroxime tablet can cause cerebral irritation leading to convulsions.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, keep away from sunlight. All medicines keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Picocef® 250 Tablet: Box containing 2 x 7’s tablets in Alu-Alu blister pack.",
+            "Picocef® 250 Tablet: Box containing 2 x 7’s tablets in Alu-Alu blister pack.",
+            "Picocef® PFS: After reconstitution, each bottle contains 70 ml suspension and a dropper with measuring cup.",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
@@ -7056,26 +11163,71 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Picocef 500",
+      innerComposition: "Cefuroxime",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Picocef® 250 Tablet: Each film coated tablet contains Cefuroxime Axetil USP equivalent to Cefuroxime 250 mg.",
+            "Picocef® 500 Tablet: Each film coated tablet contains Cefuroxime Axetil BP equivalent to Cefuroxime 500 mg.",
+            "Picocef® PFS: After reconstitution Each 5 ml suspension contains Cefuroxime Axetil USP equivalent to Cefuroxime 125 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Cefuroxime is 2nd generation cephalosporin which active against a wide range of gram-positive & gram-negative bacteria. Cefuroxime works by binding with beta-lactam ring of bacteria & inhibit bacterial cell wall. `,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Upper and lower respiratory tract infections, such as acute and chronic bronchitis, pneumonia, sinusitis, otitis media & tonsillitis",
+            "Skin & soft tissue infections such as peritonitis.",
+            "Urinary tract infections.",
+            "Gonorrhoea.",
+            "Septicemia.",
+            "Meningitis.",
+            "Prophylaxis.",
           ]
         },
         
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adults (>13 years)
+          • Pharyngitis/Tonsillitis 250 mg bid 10 days.
+          • Acute bacterial maxillary sinusitis 250 mg bid 10 days.
+          • Acute bacterial chronic bronchitis 250 or 500 mg bid 10 days.
+          • Secondary bacterial infections of acute bronchitis 250-500 mg bid 5-10 days.
+          • Uncomplicated skin and skin structure infections 250-500 mg bid 10 days.
+          • Uncomplicated urinary tract infections 125-250 mg bid 7-10 days.
+          • Uncomplicated gonorrhoea 1000 mg Single dose.
+          Children who can swallow tablets
+          • Pharyngitis/Tonsillitis 125 mg bid 10 days.
+          • Acute otitis media 250 mg bid 10 days.
+          • Acute bacterial maxillary sinusitis 250 mg bid 10 days.
+          Pediatric patients (3 months to 12 years)
+          • Pharyngitis/Tonsillitis 10 mg/kg/day bid 10 days
+          • Acute otitis media 15 mg/kg/day bid 10 days
+          • Acute bacterial maxillary sinusitis 15 mg/kg/day bid 10 days
+          • Impetigo 15 mg/kg/day bid 10 days
+          `,
           istable: false,
           table: {},
           islist: false,
@@ -7084,7 +11236,106 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "DIRECTIONS FOR RECONSTITUTION",
+          innerData: `For Suspension: To prepare 70 ml Suspension, at first shake the bottle well to loosen the powder. Then add 40 ml boiled and cooled water with the help of the supplied measuring cup to the powder and shake well. For better reconstitution add the water divided amount.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Patients with known allergy to Cephalosporins.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Generally Cefuroxime is well tolerated. However, a few side effects like nausea, vomiting, diarrhea, abdominal discomfort or pain may occur. Rarely (<0.2%) renal dysfunction, anaphylaxis, angioedema, pruritus, rash and serum sickness like urticaria may appear.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Cefuroxime should be given with care to patients receiving concurrent treatment with potent diuretics & who have history of colitis.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Pregnant women: USFDA pregnancy category B. While all antibiotics should be avoided in the first trimester. If possible, Cefuroxime has been safely used in later pregnancy to treat urinary and other infections`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Concomitant administration of probenecid with Cefuroxime increases the area under the serum concentration versus time curve by 50%. Drug that reduces gastric acidity may result in a lower bioavailability of Cefuroxime and tend to cancel the effect of postprandial absorption.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Overdosage of Cefuroxime tablet can cause cerebral irritation leading to convulsions.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, keep away from sunlight. All medicines keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Picocef® 250 Tablet: Box containing 2 x 7’s tablets in Alu-Alu blister pack.",
+            "Picocef® 250 Tablet: Box containing 2 x 7’s tablets in Alu-Alu blister pack.",
+            "Picocef® PFS: After reconstitution, each bottle contains 70 ml suspension and a dropper with measuring cup.",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
@@ -7105,36 +11356,117 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Plavas® Plus",
+      innerComposition: "Clopidogrel + Aspirin",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: "Plavas® Plus Tablet: Each film coated tablet contains Clopidogrel Bisulphate INN 97.854 mg eqvt. to 75 mg Clopidogrel & Aspirin BP 75 mg.",
           istable: false,
           table: {},
           islist: false,
-          listData:[
-            "",
-            "",
-          ]
+          listData:[]
         },
-        
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: "Plavas Plus is a fixed dose combination containing Clopidogrel and Aspirin. Clopidogrel is an inhibitor of platelet aggregation. Clopidogrel selectively inhibits the binding of adenosine diphosphate (ADP) to its platelet receptor and the subsequent ADP mediated activation of the glycoprotein GPIIb/IIIa complex, thereby inhibiting platelet aggregation. Aspirin is an antiplatelet agent. It acts by causing irreversible inhibition of the cyclo-oxygenase enzyme.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "MECHANISM OF ACTION",
+          innerData: "Clopidogrel is a thienopyridine derivative that interferes with the platelet activation cascade. It blocks the adenosine diphosphate (ADP) receptor selectively and irreversibly & thus inhibiting the activation of the GPIIb/IIIA complex, the major receptor fibrinogen present in the platelet surface. Clopidogrel may antagonize the ADP induced inhibition of the atenylate cyclase possibly resulting in an elevated platelet cyclic adenosine monophosphate level after stimulation by an appropriate agonist. Aspirin is also an antiplatelet agent. It acts by causing irreversible inhibition of the cyclo-oxygenase enzyme, which leads to decreased formation of the thromboxaneA2. Since platelet does not synthesize new enzyme, the action of aspirin on platelet cyclo-oxygenase is permanent, lasting for the life of the platelet (7-10days)",
           istable: false,
           table: {},
           islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: "Plavas Plus is indicated for the patients-",
+          istable: false,
+          table: {},
+          islist: true,
           listData:[
-            "",
-            "",
+            "With a history of recent myocardial infarction (MI) and stroke",
+            "Established peripheral arterial diseases",
+            "It is also indicated for patients with acute coronary syndrome e.g., unstable angina/non–Q-wave MI, including patients who are to be managed medically and those who are to be managed with per-cutaneous coronary intervention.",
           ]
         },
+        {
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: "Recent MI, recent stroke or established peripheral arterial diseases: The recommended daily dose of this combined preparation is one tablet daily. Acute coronary syndrome: In Acute coronary syndrome (unstable angina/nonQ-wave MI), the dose should be initiated with 4 tablets as loading dose and then continued at one tablet daily.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: "Hypersensitivity to any of the components or NSAIDs. Active pathological bleeding such as peptic ulcer or intracranial hemorrhage or bleeding disorders like hemophilia. Recent history of gastrointestinal bleeding.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: "The combination is generally well-tolerated. Side-effects that have been reported include- abdominal pain, nausea, vomiting, neuralgia, paranesthesia, rash, pruritus etc.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
         
-      ],
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: "This combination may enhance the effect of anticoagulants.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: "The combination drug should be avoided during pregnancy. It is not recommended for use during breast feeding because of the possible risk of developing Reve's syndrome.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "USE IN PEDIATRIC PATIENTS",
+          innerData: "Kafu® may be potentiate the effects of CNS depressants, anti-histamines and alcohol.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        
+        {
+          innerHead: "STORAGE",
+          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: "",
+          istable: false,
+          table: {},
+          islist: true,
+          listData: [
+          "Plavas® Plus Tablet: Each box contains 30 tablets, in blister strips.",
+        ],
+        },
+        ],
       btn: "Read More",
       btnlink: "/prod_details",
       type:'tablet'
@@ -7154,12 +11486,23 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Polimet",
+      innerComposition: "Metformin Hydrochloride BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Polimet® 500 : Each tablet contains Metformin Hydrochloride BP 500 mg.",
+            "Polimet® 850 : Each tablet contains Metformin Hydrochloride BP 850 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Metformin Hydrochloride is a biguanide type oral anti-hyperglycemic drug used in the management of type II diabetes. Mechanism of action of metformin is different from those of sulfonylureas and it does not produce hypoglycemia. Metformin decreases hepatic glucose production, decreases intestinal absorption of glucose and improves insulin sensitivity by an increase in peripheral glucose uptake and utilization.`,
           istable: false,
           table: {},
           islist: false,
@@ -7168,18 +11511,30 @@ export const ByTrade = [
             "",
           ]
         },
+        {
+          innerHead: "INDICATION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Polimet tablet is used in the management of type II diabetes when diet has failed and especially if ",
+            "Polimet as monotherapy, is indicated as an adjunct to diet and exercise to improve glycemic control in patients with type II diabetes.",
+            "Non-alcoholic fatty liver syndrome. ",
+          ]
+        },
         
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: ``,
           istable: false,
           table: {},
-          islist: false,
+          islist: true,
           listData:[
-            "",
-            "",
+            "Initial dose is 500 mg twice a day or 850 mg once daily along with breakfast.",
+            "Later on dose could be increased up to 3 tablets daily on divided dose.",
           ]
         },
         
@@ -7203,12 +11558,23 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Polimet 850",
+      innerComposition: "Metformin Hydrochloride BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Polimet® 500 : Each tablet contains Metformin Hydrochloride BP 500 mg.",
+            "Polimet® 850 : Each tablet contains Metformin Hydrochloride BP 850 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Metformin Hydrochloride is a biguanide type oral anti-hyperglycemic drug used in the management of type II diabetes. Mechanism of action of metformin is different from those of sulfonylureas and it does not produce hypoglycemia. Metformin decreases hepatic glucose production, decreases intestinal absorption of glucose and improves insulin sensitivity by an increase in peripheral glucose uptake and utilization.`,
           istable: false,
           table: {},
           islist: false,
@@ -7217,18 +11583,30 @@ export const ByTrade = [
             "",
           ]
         },
+        {
+          innerHead: "INDICATION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Polimet tablet is used in the management of type II diabetes when diet has failed and especially if ",
+            "Polimet as monotherapy, is indicated as an adjunct to diet and exercise to improve glycemic control in patients with type II diabetes.",
+            "Non-alcoholic fatty liver syndrome. ",
+          ]
+        },
         
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: ``,
           istable: false,
           table: {},
-          islist: false,
+          islist: true,
           listData:[
-            "",
-            "",
+            "Initial dose is 500 mg twice a day or 850 mg once daily along with breakfast.",
+            "Later on dose could be increased up to 3 tablets daily on divided dose.",
           ]
         },
         
@@ -7257,7 +11635,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -7271,7 +11649,7 @@ export const ByTrade = [
       innerdata1:[
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -7306,7 +11684,7 @@ export const ByTrade = [
       innerdata:[
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -7320,7 +11698,7 @@ export const ByTrade = [
       innerdata1:[
         {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -7350,12 +11728,12 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Radibac",
+      innerComposition: "Levofloxacin",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Rabibac® 500 Tablet: Each film coated tablet contains Levofloxacin Hemihydrate INN 500 mg as Levofloxacin.`,
           istable: false,
           table: {},
           islist: false,
@@ -7364,18 +11742,113 @@ export const ByTrade = [
             "",
           ]
         },
-        
-      ],
-      innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "PHARMACOLOGY",
+          innerData: `It is a synthetic, broad-spectrum, third generation fluoroquinolone derivative antibacterial agent for oral administration. Chemically Levofloxacin is a chiral fluorinated carboxyquinolone.`,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `It is indicated for the treatment of adults with mild, moderate and severe infections caused by susceptible strains of the designated micro-organisms in the condition listed below:`,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Acute maxillary sinusitis due to Streptococcus pneumoniae, Haemophilus influenzae or  Moraxella catarrhalis.",
+            "Acute bacterial exacerbation of chronic bronchitis due to Staphylococcus aureus, Streptococcus pneumoniae, Haemophilus influenzae or Moraxella catarrhalis.",
+            "Community-acquired pneumonia due to Staphylococcus aureus, Streptococcus pneumoniae, Haemophilus influenzae, Klebsiella pneumoniae, Moraxella cararrhalis, Chlamydiapneumoniae, Legionella pneumophila or Mycoplasmapneumoniae.",
+            "Acute pyelonephritis caused by Escherichia coli.",
+            "Uncomplicated & complicated skin and soft tissue infections including abscesses, cellulitis, furuncles, impetigo, pyoderma, wound infections, due to Staphylococcus aureus, Streptococcus pyogenes, Proteus mirabilis or Enterococcus faecalis.",
+          ]
+        },
+        
+      ],
+      innerdata1:[
+        {
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Acute sinusitis 500 mg once daily for 10-14 days",
+            "Exacerbation of chronic bronchitis 250-500 mg daily for 7 days",
+            "Community-acquired pneumonia 500 mg once or twice daily for 7-14 days",
+            "Complicated urinary tract infections and acute pyelonephritis, 250-500 mg daily for 7-10 days.",
+            "Uncomplicated skin and soft-tissue infections, 500 mg once daily for 7-10 days.",
+            "Complicated skin and soft-tissue infections, 750 mg once daily for 7-14 days.",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION AND PRECAUTION",
+          innerData: `It is contraindicated in patients with a history of hypersensitivity to Levofloxacin, quinolone antimicrobial agents or any other components of this product. The following measures should be taken during administration of Levofloxacin:`,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "While taking Levofloxacin, adequate amount of water should be taken to avoid concentrated form of urine.",
+            "Dose adjustment should be exercised during Levofloxacin ingestion in presence of renal insufficiency.",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECT",
+          innerData: `It is generally well tolerated. However, a few side effects can usually be seen, side effects include: nausea, vomiting, diarrhea, abdominal pain, flatulence and rare occurrence of phototoxicity (0.1%). side effects that may be seen very rarely include tremors, depression, anxiety, confusion etc.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Antacids, Iron and Adsorbents-reduce absorption of Levofloxacin.",
+            "NSAID- may increase the risk of CNS stimulation.",
+            "Warfarin- may increase the risk of bleeding",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `It is not recommended for use during pregnancy or nursing, as the effects on the unborn child or nursing infant are unknown.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Radibac®500 tablet: Box contains 2 x 10's tablets in blister pack.",
           ]
         },
         
@@ -7399,12 +11872,23 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Roclav",
+      innerComposition: "Cefuroxime BP and Clavulanic Acid BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Roclav® 250: Each film coated tablet contains Cefuroxime 250 mg as Cefuroxime Axetil BP and Clavulanic Acid 62.5 mg as diluted Potassium Clavulanate BP. ",
+            "Roclav® 500: Each film coated tablet contains Cefuroxime 500 mg as Cefuroxime Axetil BP and Clavulanic Acid 125 mg as diluted Potassium Clavulanate BP. ",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Cefuroxime is one of the bactericidal second generation cephalosporin antibiotics, which is active against a wide range of Gram-positive and Gram-negative susceptible organisms including many beta-lactamase producing strains. It is indicated for the treatment of infections caused by sensitive bacteria. Clavulanic acid has a similar structure to the beta-lactam antibiotics but binds irreversibly to the beta-lactamase enzymes. The presence of clavulanic acid in Roclav formulations protects Cefuroxime from degradation by beta-lactamase enzymes and effectively extends the antibacterial spectrum of Cefuroxime to include many bacteria normally resistant to Cefuroxime and other cephalosporins.`,
           istable: false,
           table: {},
           islist: false,
@@ -7417,14 +11901,160 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "INDICATIONS",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Pharyngitis/tonsillitis caused by Streptococcus pyogenes.",
+            "Acute bacterial otitis media caused by Streptococcus pneumoniae, Haemophilus influenzae (including beta lactamase-producing strains), Moraxella Catarrhalis (including beta-lactamase-producing strains) or Streptococcus pyogenes Acute bacterial maxillary sinusitis caused by Streptococcus pneumoniae or Haemophilus influenzae (non-beta-lactamase-producing strains only).",
+            "Lower respiratory tract infections including pneumoniae, caused by Streptococcus pneumoniae, Haemophilus influenzae (including beta lactamase-producing strains), Klebsiella spp., Staphylococcus aureus (penicillinase- and non-penicillinase-producing strains), Streptococcus pyogenes, Escherichia coli.",
+            "Acute bacterial exacerbations of chronic bronchitis and secondary bacterial infections of acute bronchitis caused by Streptococcus penumoniae, Haemophilus influenzae (beta-lactamase negative strains) or Haemophilusparainfluenzae (beta-lactamase negative strains).",
+            "Skin and Skin-Structure Infections caused by Staphylococcus aureus (penicillinase- and non-penicillinase-producing strains), Streptococcus pyogenes, Escherichia coli, Klebsiella spp. and Enterobacter spp.",
+            "Urinary tract infections caused by Escherichia coli or Klebsiella pneumoniae Bone and Joint Infections caused by Staphylococcus aureus (penicillinase and non-penicillinase producing strains).",
+            "Gonorrhea: Uncomplicated and disseminated gonococcal infections due to Neisseria gonorrhoeae (penicillinase- and non-penicillinase-producing strains) in both males and females.",
+            "Early Lyme disease (erythema migrans) caused by Borrelia burgdorferi Septicemia caused by Staphylococcus aureus (penicillinase and non-penicillinase producing strains), Streptococcus pneumoniae, Escherichia coli, Haemophilus influenzae (including ampicillin-resistant strains), and Klebsiella spp.",
+            "Meningitis caused by Streptococcus pneumoniae, Haemophilus influenzae (including ampicillin resistant strains), Neisseria meningitidis and Staphylococcus aureus (penicillinase and non-penicillinase producing strains)",
+            "Switch therapy (injectable to oral) after surgery when patient’s condition is improved.",
+          ]
+        },
+
+        {
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adolescents & adults:
+          Pharyngitis or Tonsillitis: 250 mg twice daily 5-10 days
+          Acute bacterial maxillary sinusitis: 250 mg twice daily 10 days
+          Acute bacterial exacerbation of chronic bronchitis: 250-500 mg twice daily 10 days
+          Secondary bacterial infections of acute bronchitis: 250-500 mg twice daily 5-10 days
+          Community acquired pneumonia: 250-500 mg twice daily 5-10 days
+          Uncomplicated skin & skin-structure infections: 250-500 mg twice daily 10 days
+          MDR Typhoid fever: 500 mg twice daily 10-14 days
+          Uncomplicated urinary tract infection: 250 mg twice daily 7-10 days
+          Uncomplicated gonorrhea: 1000 mg single dose
+          Lyme disease: 500 mg twice daily 20 days
+          Paediatric patients (3 months to 12 years)
+          Pharyngitis or Tonsillitis: 20 mg/kg/day in two divided doses 5-10 days
+          Acute otitis media: 30 mg/kg/day in two divided doses 10 days
+          Acute bacterial maxillary sinusitis: 30 mg/kg/day in two divided doses 10 days
+          Community acquired pneumonia: 30 mg/kg/day in two divided doses 5-10 days
+          MDR Typhoid fever: 30 mg/kg/day in two divided doses 10-14 days
+          Uncomplicated skin & skin-structure infections: 30 mg/kg/day in two divided doses 10 days
+          Uncomplicated urinary tract infection: 20 mg/kg/day in two divided doses 7-10 days
+          Roclav may be administered without regard to meals.
+          `,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "DIRECTION FOR RECONSTITUTION OF SUSPENSION",
+          innerData: `Shake the bottle well to loosen the powder. Add 60 ml of boiled and cooled water to the dry powder of the bottle. For ease of preparation, add water to the bottle in two proportions. Shake the bottle well after each addition until all the powder is in suspension. 
+          Note: The reconstituted suspension must be stored at 2-8°C temperature and should be used within 7 days after reconstitution. Shake the suspension well before each use. Keep the bottle tightly closed.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Generally Cefuroxime and Clavulanic acid are well tolerated. However, a few side effects like nausea, vomiting, diarrhea, abdominal discomfort or pain may occur. As with other broad-spectrum antibiotics, prolonged administration of Cefuroxime and Clavulanic acid combination may result in overgrowth of non susceptible microorganisms. Rarely (<0.2%) renal dysfunction, anaphylaxis, angioedema, pruritis, rash and serum sickness like urticaria may appear.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Roclav should be given with care to patients receiving concurrent treatment with potent diuretics & who have history of colitis.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Patients with known allergy to cephalosporins & pseudomembranous colitis are contraindicated.
+          During pregnancy: While all antibiotics should be avoided in the first trimester if possible. However, Roclav® can be safely used in later pregnancy to treat urinary and other infections.
+          During lactation: Roclav® is excreted into the breast milk in small quantities. However, the possibility of sensitizing the infant should be kept in mind.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Concomitant administration of probenecid with Roclav increases the area under the serum concentration versus time curve by 50%. Drug that reduces gastric acidity may result in a lower bioavailability of Cefuroxime and tend to cancel the effect of postprandial absorption.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Signs and symptoms: Over dosage of Roclav® can cause cerebral irritation leading to convulsions.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DIRECTION FOR PREPARATION OF SUSPENSION",
+          innerData: `Shake the bottle well before mixing the water. To prepare 70 ml suspension, add 40 ml (with the help of 10 ml cup) boiled & cooled water in two portions. Shake well after each addition till powder is completely mixed with water.
+          The reconstituted suspension must be kept in 20C-80C temperature in a refrigerator & consumed within 7 days after reconstitution.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Roclav® tablet should be kept in a cool (15–30°C) and dry place and protected from light.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Roclav® 250 : Each box contains 2 pouches and each pouch contains 7 tablets in alu-alu blister strip.",
+            "Roclav® 250 : Each box contains 2 pouches and each pouch contains 7 tablets in alu-alu blister strip.",
           ]
         },
         
@@ -7434,7 +12064,7 @@ export const ByTrade = [
       type:'tablet'
     },
 
-{
+    {
       id: 76,
       title: "Roclav 500",
       text1: " ",
@@ -7448,12 +12078,24 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      backpagename: "By Trade Name",
+      innerMainHeading: "Roclav 500",
+      innerComposition: "Cefuroxime BP and Clavulanic Acid BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Roclav® 250: Each film coated tablet contains Cefuroxime 250 mg as Cefuroxime Axetil BP and Clavulanic Acid 62.5 mg as diluted Potassium Clavulanate BP. ",
+            "Roclav® 500: Each film coated tablet contains Cefuroxime 500 mg as Cefuroxime Axetil BP and Clavulanic Acid 125 mg as diluted Potassium Clavulanate BP. ",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Cefuroxime is one of the bactericidal second generation cephalosporin antibiotics, which is active against a wide range of Gram-positive and Gram-negative susceptible organisms including many beta-lactamase producing strains. It is indicated for the treatment of infections caused by sensitive bacteria. Clavulanic acid has a similar structure to the beta-lactam antibiotics but binds irreversibly to the beta-lactamase enzymes. The presence of clavulanic acid in Roclav formulations protects Cefuroxime from degradation by beta-lactamase enzymes and effectively extends the antibacterial spectrum of Cefuroxime to include many bacteria normally resistant to Cefuroxime and other cephalosporins.`,
           istable: false,
           table: {},
           islist: false,
@@ -7466,14 +12108,160 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "INDICATIONS",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Pharyngitis/tonsillitis caused by Streptococcus pyogenes.",
+            "Acute bacterial otitis media caused by Streptococcus pneumoniae, Haemophilus influenzae (including beta lactamase-producing strains), Moraxella Catarrhalis (including beta-lactamase-producing strains) or Streptococcus pyogenes Acute bacterial maxillary sinusitis caused by Streptococcus pneumoniae or Haemophilus influenzae (non-beta-lactamase-producing strains only).",
+            "Lower respiratory tract infections including pneumoniae, caused by Streptococcus pneumoniae, Haemophilus influenzae (including beta lactamase-producing strains), Klebsiella spp., Staphylococcus aureus (penicillinase- and non-penicillinase-producing strains), Streptococcus pyogenes, Escherichia coli.",
+            "Acute bacterial exacerbations of chronic bronchitis and secondary bacterial infections of acute bronchitis caused by Streptococcus penumoniae, Haemophilus influenzae (beta-lactamase negative strains) or Haemophilusparainfluenzae (beta-lactamase negative strains).",
+            "Skin and Skin-Structure Infections caused by Staphylococcus aureus (penicillinase- and non-penicillinase-producing strains), Streptococcus pyogenes, Escherichia coli, Klebsiella spp. and Enterobacter spp.",
+            "Urinary tract infections caused by Escherichia coli or Klebsiella pneumoniae Bone and Joint Infections caused by Staphylococcus aureus (penicillinase and non-penicillinase producing strains).",
+            "Gonorrhea: Uncomplicated and disseminated gonococcal infections due to Neisseria gonorrhoeae (penicillinase- and non-penicillinase-producing strains) in both males and females.",
+            "Early Lyme disease (erythema migrans) caused by Borrelia burgdorferi Septicemia caused by Staphylococcus aureus (penicillinase and non-penicillinase producing strains), Streptococcus pneumoniae, Escherichia coli, Haemophilus influenzae (including ampicillin-resistant strains), and Klebsiella spp.",
+            "Meningitis caused by Streptococcus pneumoniae, Haemophilus influenzae (including ampicillin resistant strains), Neisseria meningitidis and Staphylococcus aureus (penicillinase and non-penicillinase producing strains)",
+            "Switch therapy (injectable to oral) after surgery when patient’s condition is improved.",
+          ]
+        },
+
+        {
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adolescents & adults:
+          Pharyngitis or Tonsillitis: 250 mg twice daily 5-10 days
+          Acute bacterial maxillary sinusitis: 250 mg twice daily 10 days
+          Acute bacterial exacerbation of chronic bronchitis: 250-500 mg twice daily 10 days
+          Secondary bacterial infections of acute bronchitis: 250-500 mg twice daily 5-10 days
+          Community acquired pneumonia: 250-500 mg twice daily 5-10 days
+          Uncomplicated skin & skin-structure infections: 250-500 mg twice daily 10 days
+          MDR Typhoid fever: 500 mg twice daily 10-14 days
+          Uncomplicated urinary tract infection: 250 mg twice daily 7-10 days
+          Uncomplicated gonorrhea: 1000 mg single dose
+          Lyme disease: 500 mg twice daily 20 days
+          Paediatric patients (3 months to 12 years)
+          Pharyngitis or Tonsillitis: 20 mg/kg/day in two divided doses 5-10 days
+          Acute otitis media: 30 mg/kg/day in two divided doses 10 days
+          Acute bacterial maxillary sinusitis: 30 mg/kg/day in two divided doses 10 days
+          Community acquired pneumonia: 30 mg/kg/day in two divided doses 5-10 days
+          MDR Typhoid fever: 30 mg/kg/day in two divided doses 10-14 days
+          Uncomplicated skin & skin-structure infections: 30 mg/kg/day in two divided doses 10 days
+          Uncomplicated urinary tract infection: 20 mg/kg/day in two divided doses 7-10 days
+          Roclav may be administered without regard to meals.
+          `,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "DIRECTION FOR RECONSTITUTION OF SUSPENSION",
+          innerData: `Shake the bottle well to loosen the powder. Add 60 ml of boiled and cooled water to the dry powder of the bottle. For ease of preparation, add water to the bottle in two proportions. Shake the bottle well after each addition until all the powder is in suspension. 
+          Note: The reconstituted suspension must be stored at 2-8°C temperature and should be used within 7 days after reconstitution. Shake the suspension well before each use. Keep the bottle tightly closed.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Generally Cefuroxime and Clavulanic acid are well tolerated. However, a few side effects like nausea, vomiting, diarrhea, abdominal discomfort or pain may occur. As with other broad-spectrum antibiotics, prolonged administration of Cefuroxime and Clavulanic acid combination may result in overgrowth of non susceptible microorganisms. Rarely (<0.2%) renal dysfunction, anaphylaxis, angioedema, pruritis, rash and serum sickness like urticaria may appear.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Roclav should be given with care to patients receiving concurrent treatment with potent diuretics & who have history of colitis.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Patients with known allergy to cephalosporins & pseudomembranous colitis are contraindicated.
+          During pregnancy: While all antibiotics should be avoided in the first trimester if possible. However, Roclav® can be safely used in later pregnancy to treat urinary and other infections.
+          During lactation: Roclav® is excreted into the breast milk in small quantities. However, the possibility of sensitizing the infant should be kept in mind.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Concomitant administration of probenecid with Roclav increases the area under the serum concentration versus time curve by 50%. Drug that reduces gastric acidity may result in a lower bioavailability of Cefuroxime and tend to cancel the effect of postprandial absorption.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `Signs and symptoms: Over dosage of Roclav® can cause cerebral irritation leading to convulsions.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DIRECTION FOR PREPARATION OF SUSPENSION",
+          innerData: `Shake the bottle well before mixing the water. To prepare 70 ml suspension, add 40 ml (with the help of 10 ml cup) boiled & cooled water in two portions. Shake well after each addition till powder is completely mixed with water.
+          The reconstituted suspension must be kept in 20C-80C temperature in a refrigerator & consumed within 7 days after reconstitution.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Roclav® tablet should be kept in a cool (15–30°C) and dry place and protected from light.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Roclav® 250 : Each box contains 2 pouches and each pouch contains 7 tablets in alu-alu blister strip.",
+            "Roclav® 250 : Each box contains 2 pouches and each pouch contains 7 tablets in alu-alu blister strip.",
           ]
         },
         
@@ -7497,12 +12285,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Rosucard",
+      innerComposition: "Rosuvastatin INN 10 mg",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Rosucard® 10 tablet: Each film coated tablet contains Rosuvastatin Calcium INN 10.40 mg equiv. to Rosuvastatin 10 mg`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Rosuvastatin calcium is a synthetic lipid-lowering agent for oral administration. It is an inhibitor of 3-hydroxy-3-methyl-glutaryl-coenzyme A (HMG-CoA). This enzyme catalyzes the conversion of HMG-CoA to mevalonate, an early and rate limiting step in the synthesis of cholesterol.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: `Hyperlipidemia and Mixed Dyslipidemia, Hypertriglyceridemia, Homozygous Familial Hypercholesterolemia, Rosuvastatin is also indicated to: Reduce the risk of stroke, Reduce the risk of myocardial infarction, Reduce the risk of arterial revascularization procedures.`,
           istable: false,
           table: {},
           islist: false,
@@ -7515,8 +12325,8 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `The recommended starting dose of Rosuvastatin is 5-10 mg once daily. The dose may be increased if necessary at intervals of at least 4 weeks to 20 mg once daily. The dose may be increased after further 4 weeks to 40 mg once daily only in severe hypercholesterolemia with high cardiovascular risk and under specialist supervision. Dose in elderly patients: Initially 5 mg once daily. `,
           istable: false,
           table: {},
           islist: false,
@@ -7525,7 +12335,72 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `If the patient becomes pregnant while taking this drug, the patient should be apprised of the potential hazard to the fetus and the lack of known clinical benefit with continued use during pregnancy.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Rosuvastatin is generally well tolerated. The most frequent adverse event thought to be related to rosuvastatin were myalgia, constipation, asthenia,abdominal pain and nausea.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `It is contraindicated in patient with active liver disease. Women who are pregnant or may become pregnant: Rosuvastatin may cause fetal harm when administered to pregnant women. Nursing mothers: Because another drug in this class passes into breast milk it is advised not to nurse their infants while taking this drug.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Gemfibrozil, Lopinavir/Ritonavir, Cyclosporine significantly increased Rosuvastatin exposure. Therefore, in patients taking cyclosporine, therapy should be limited to Rosuvastatin 5 mg once daily. Rosuvastatin significantly increased INR in patients receiving coumarin anticoagulants. In patients taking coumarin anticoagulants and Rosuvastatin concomitantly, INR should be determined before starting Rosuvastatin and frequently enough during early therapy to ensure that no significant alteration of INR occurs. The risk of skeletal muscle effects may be enhanced when Rosuvastatin is used in combination with niacin; a reduction in Rosuvastatin dosage should be considered in this setting Special Precautions for Use Rosuvastatin should be used with caution in pregnancy, lactation and children. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `Rosucard® 10 tablet: Each box containing 3x10’s tablets in blister strips.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
@@ -7545,12 +12420,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Rotagan",
+      innerComposition: "Favipiravir INN 200 mg",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "PRESENTATION",
+          innerData: `Rotagan® Tablet: Each film coated tablet contains Favipiravir INN 200 mg.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `The mechanism of action of  Rotagan® is novel compared to existing influenza antivirals that primarily prevent entry and exit of the virus from cells. The active favipiravir-RTP selectively inhibits RNA polymerase and prevents replication of the viral genome. There are several hypotheses as to how favipiravir-RTP interacts with RdRp. Some studies have shown that when favipiravir-RTP is incorporated into a nascent RNA strand, it prevents RNA strand elongation and viral proliferation. Studies have also found that the presence of purine analogs can reduce favipiravir’s antiviral activity. Although originally developed to target influenza, Favipiravir has been investigated for the treatment of life-threatening pathogens such as Ebola virus, Lassa virus etc.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `Rotagan® was approved to treat cases of influenza that were unresponsive to conventional treatment. Given its efficacy at targeting several strains of influenza, it has been investigated in other countries to treat novel viruses including Ebola.`,
           istable: false,
           table: {},
           islist: false,
@@ -7563,8 +12460,97 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `The usual dosage of Rotagan® for adults is 1600 mg orally twice daily for 1 day followed by 600 mg orally twice daily for 4 days. The total administration period should be 5 days.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Shock, anaphylaxis, Pneumonia, hepatic dysfunction, jaundice, Toxic epidermal necrolysis (TEN), Acute kidney injury, White blood cell count decreased, neutrophil count decreased, platelet count decreased, Neurological and psychiatric symptoms (consciousness disturbed, abnormal behavior, convulsion etc.), Colitis hemorrhagic, Rash, Nausea, Vomiting,  Abdominal pain etc.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Women known or suspected to be pregnant. Also to patients with a history of hypersensitivity to any ingredients of the drug.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `Ratagan® is a drug the use of which is considered only when there is an outbreak of novel or re-emerging influenza virus infections in which other anti-influenza virus agents are not effective or insufficiently effective. When administering the drug, obtain the latest information including government’s direction of countermeasures against such influenza viruses, and prescribe only to appropriate patients.
+          Rotagan® is not effective against bacterial infections.
+          Rotagan® has not been administered to children .
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Warfarin: The metabolism of (S)-Warfarin can be decreased when combined with Favipiravir.
+          Acetyldigoxin: May decrease the excretion rate of Acetyldigoxin which could result in a higher serum level.
+          Acyclovir: The excretion of Acyclovir can be decreased when combined with Favipiravir.
+          Allopurinol: The excretion of Allopurinol can be decreased when combined with Favipiravir.
+          Almotriptan: The metabolism of Almotriptan can be decreased when combined with Favipiravir.
+          Use in specific populations: 
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PREGNANCY & LACTATION",
+          innerData: `Rotagan® should be avoided in administration to women known or suspected to be pregnant. When administering Rotagan® to lactating women, instruct to stop lactating.
+          Elderly:
+          Since the elderly often have reduced physiological functions, Rotagan® should be administered with care to them by monitoring their general conditions.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (below 30 ⁰C temp.) and dry place, protected from light. Keep out of reach children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `Rotagan® Tablet: Each box contains 2 blister strips of 10 tablets.`,
           istable: false,
           table: {},
           islist: false,
@@ -7594,12 +12580,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Tispa",
+      innerComposition: "Tiemonium Methylsulfate INN",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: `Tispa® Tablet : Each film coated tablet contains Tiemonium Methylsulfate INN 50 mg.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DESCRIPTION",
+          innerData: `It is an antispasmodic. Tiemonium is quaternary ammonium anti muscarinic agent with peripheral effect similar to those of atropine.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "MECHANISM OF ACTION",
+          innerData: `Tiemonium strengthens calcium bonding with phospholipids & proteins thus stabilizing the cell membrane of the GI tract. `,
           istable: false,
           table: {},
           islist: false,
@@ -7612,8 +12620,8 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "INDICATIONS",
+          innerData: `This drug is indicated for pain in gastrointestinal and biliary diseases, and in urology and gynaecology. It reduces muscle spasms of the intestine, biliary system, bladder & uterus. `,
           istable: false,
           table: {},
           islist: false,
@@ -7622,7 +12630,93 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "DOSAGE AND METHOD OF ADMINISTRAITON",
+          innerData: `In adults the usual dose is 2 to 6 tablets per day. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `This drug should not be used in glaucoma (acute pain of eyeball with vision disturbances) and in difficulty to urinate (disorders of prostate or bladder). `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `In order to avoid possible drug interactions, you must systematically inform your physician about any other drugs you are taking. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `As with any active substance this drug may cause certain undesirable or unpleasant effects. In some people dry mouth with difficulty in swallowing and thirst dilatation of pupils with loss of accommodation and sensitivity to light, increased intraocular pressure, flushing, dry skin, bradycardia followed by tachycardia, palpitations and arrhythmias, difficulty in micturition and constipation may occur. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PREGNANCY AND LACTATION",
+          innerData: `Avoid taking this drug without medical advice during pregnancy or breast feeding. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Occasional retention of urine in excessive or overdoses. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (below 30 ⁰C), dry place and protect from light. Keep out of the reach of children. `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK: ",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Tispa® Tablet : Box containing 50 tablets in blister pack.",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
@@ -7644,12 +12738,23 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Unilor",
+      innerComposition: "Desloratadine INN",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "COMPOSITION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Unilor tablet: Each film coated tablet contains Desloratadine INN 5 mg.",
+            "Unilor syrup: Each 5 ml contains Desloratadine INN 2.5mg",
+          ]
+        },
+        {
+          innerHead: "DESCRIPTION",
+          innerData: `Desloratadine is a long-acting tricyclic histamine antagonist with selective H1-receptor antagonist activity. It is a non-sedating antihistamine. Desloratadine has effects on the chronic inflammatory response to allergens.    `,
           istable: false,
           table: {},
           islist: false,
@@ -7658,12 +12763,152 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "INDICATIONS",
+          innerData: `Allergic rhinitis: Desloratadine is indicated for the relief of nasal and non-nasal symptoms of allergic rhinitis (seasonal and perennial). 
+          Chronic idiopathic urticaria: Desloratadine is indicated for the symptomatic relief of pruritus, reduction in the number of hives and size of hives, in patients with chronic idiopathic urticaria.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
       ],
       innerdata1:[
         {
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Unilor Syrup: Child 2-5 years of Age: 1/2 teaspoonful once daily
+          Child 6-11 years of Age: 1 teaspoonful once daily
+          Adults &> years of Age: 2 teaspoonful once daily
+          Unilor Tablet: Adults and children 12 years of age and over: 1 Tablet daily.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `Pregnancy: There are no adequate and well-controlled studies in pregnant women.  Because animal reproduction studies are not always predictive of human response, Desloratadine should be used in pregnancy only if clearly needed.
+          Lactation: Desloratadine passes into breast milk. Therefore, a decision should be made whether to discontinue nursing or to discontinue Desloratadine, taking into account the importance of the drug to the mother.
+          SIDE EFFECTS
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Desloratadine is generally well tolerated. However, dry mouth, fatigue, somnolence and myalgia are commonly reported side-effects. Less common side-effects may include dizziness, headache and nausea. Rarely rash, pruritus and urticaria may occur.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATIONS",
+          innerData: `Desloratadine is contraindicated in patients who are hypersensitive to this medication or to any of its ingredients or to Loratadine.     `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `Alcohol enhances the sedative effect of Desloratadine. Erythromycin, Ketoconazole, Cimetidine & Amprenavir may increase plasma concentration of Loratadine.  `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SPECIAL PRECAUTIONS FOR USE",
+          innerData: `Antihistamine should be used with caution in prostatic hypertrophy, urinary retention, glaucoma, and pyloroduodenal obstruction. It should be used with caution in hepatic disease and dose reduction may be necessary in the renal impairment. Caution may be required in epilepsy and porphyria. Children and the elderly are more susceptible to side effects.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSAGE",
+          innerData: `No clinically relevant adverse effects have been reported in case of over dosage. However, in the event of overdosage, symptomatic and supportive treatment is recommended.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Unilor tablet: Each box containing 50’s tablets in blister strips.",
+            "Unilor syrup: Each bottle containing 60 ml.",
+          ]
+        },
+        {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -7693,12 +12938,12 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Vildaglip",
+      innerComposition: "Vildagliptin INN",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "PRESENTATION",
+          innerData: `Vildaglip® tablet: Each film coated tablet contains Vildagliptin INN 50 mg.`,
           istable: false,
           table: {},
           islist: false,
@@ -7707,12 +12952,103 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Vildaglip® is a Dipeptidyl peptidase-4 (DPP-4) inhibitor, which is believed to exert its actions in patients with type 2 diabetes by slowing the inactivation of incretin hormones. Incretin hormones, including glucagon-like peptide-1 (GLP-1) and glucose-dependent insulinotropic polypeptide (GIP), are released by the intestine throughout the day and levels are increased in response to a meal. These hormones are rapidly inactivated by the enzyme, DPP-4. The incretins are part of an endogenous system involved in the physiologic regulation of glucose homeostasis. When blood glucose concentrations are normal or elevated, GLP-1 and GIP increase insulin synthesis and release from pancreatic beta cells by intracellular signaling pathways involving cyclic AMP. GLP-1 also lowers glucagon secretion from pancreatic alpha cells, leading to reduced hepatic glucose production. By increasing and prolonging active incretin levels, Vildaglip increases insulin release and decreases glucagon levels in the circulation in a glucose-dependent manner.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS",
+          innerData: `Vildaglip® is indicated as an adjunct to diet and exercise to improve glycemic control in patients with type-2 diabetes mellitus.`,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "As monotherapy",
+            "In dual combination with Metformin, a Sulphonylurea, a Thiazolidinedione or Insulin when diet, exercise and a single antidiabetic agent do not result in adequate glycemic control.",
+          ]
+        },
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `The recommended dose of Vildaglip® is`,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "50 mg or 100 mg daily for monotherapy.",
+            "50 mg twice daily (morning and evening) when used in dual combination with Metformin or a Thiazolidinedione.",
+            "50 mg once daily in the morning when used in dual combination with a Sulphonylurea.Vildaglip® may be taken with or without a meal. No dosage adjustment is required in the elderly, or in patients with mild renal impairment.",
+          ]
+        },
+        {
+          innerHead: "SIDE-EFFECTS",
+          innerData: `Nausea, hypoglycemia, tremor, headache and dizziness. Rare cases of hepato-toxicity have been reported.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `In pharmacokinetic studies, no interactions were seen with pioglitazone, metformin, glibenclamide, digoxin, warfarin, amlodipine, ramipril, valsartan or simvastatin. As with other oral antidiabetic medicinal products the glucose-lowering effect of Vildagliptin may be reduced by certain active substances, including thiazides, corticosteroids, thyroid products and sympathomimetics.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY AND LACTATION",
+          innerData: `PREGNANCY: There are no adequate data on the use of Vildagliptin in pregnant women; hence the potential risk for human is unknown.
+          NURSING MOTHERS: It is not known whether Vildagliptin is excreted in human milk. Due to lack of human data, Vildagliptin should not be used during lactation.
+          PEDIATRIC USE: Vildagliptin is not recommended in patients 18 years of age.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `In the event of an overdose, appropriate supportive treatment should be initiated as dictated by the patient's clinical status.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE:",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: `Vildaglip® tablet: Each box containing 2x10’s tablets in Alu-Alu blister strips.`,
           istable: false,
           table: {},
           islist: false,
@@ -7742,12 +13078,34 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "Vildaglip® M",
+      innerComposition: "Vildagliptin INN & Metformin HCl BP",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "PRESENTATION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Vildaglip M: Each tablet contains Vildagliptin INN 50 mg & Metformin HCl BP 500 mg.",
+            "Vildaglip M: Each tablet contains Vildagliptin INN 50 mg & Metformin HCl BP 500 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Vildagliptin is an oral anti-hyperglycemic agent of the new dipeptidyl peptidase-4 (DPP-4) inhibitor class of drugs which inhibits the inactivation of GLP-1 and GIP by DPP-4, allowing GLP-1 and GIP to potentiate the secretion of insulin in the beta cells and suppress glucagon release by the alpha cells of the islets of Langerhans in the pancreas. Metformin is an antihyperglycemic agent which improves glucose tolerance in patients with type 2 diabetes, lowering both basal and postprandial plasma glucose. Its pharmacologic mechanisms of action are different from other classes of oral antihyperglycemic agents. Metformin decreases hepatic glucose production, decreases intestinal absorption of glucose and improves insulin sensitivity by increasing peripheral glucose uptake and utilization. Unlike sulfonylureas, metformin does not produce hypoglycemia in either patients with type 2 diabetes or normal subjects and does not cause hyperinsulinemia. With metformin therapy, insulin secretion remains unchanged while fasting insulin levels and daylong plasma insulin response may actually decrease.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "INDICATION",
+          innerData: `It is used in the treatment of type 2 diabetes mellitus patients which cannot be controlled by diet and exercise or who are already treated with the combination of vildagliptin and metformin as separate tablets.`,
           istable: false,
           table: {},
           islist: false,
@@ -7760,8 +13118,8 @@ export const ByTrade = [
       ],
       innerdata1:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "DOSAGE AND ADMINISTRATION",
+          innerData: `Generally be given twice daily with meals, with gradual dose escalation, to reduce the gastrointestinal (GI) side effects due to metformin. The starting dose should be based on the patient's current regimen. The recommended starting dose in patients not currently treated with metformin is 50 mg vildagliptin/500 mg metformin HCL twice daily, with gradual dose escalation recommended to reduce gastrointestinal side effects associated with metformin. The starting dose in patients already treated with metformin should provide vildagliptin dosed as 50 mg twice daily (100 mg total daily dose) and the dose of metformin already being taken. For patients taking metformin 850 mg twice daily. `,
           istable: false,
           table: {},
           islist: false,
@@ -7770,7 +13128,88 @@ export const ByTrade = [
             "",
           ]
         },
-        
+        {
+          innerHead: "CONTRAINDICATIONs",
+          innerData: `Vildagliptin/Metformin HCL combination is contraindicated with known hypersensitivity to the active substances or to any of the components of the formulation.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `A few numbers of patient experiences hypoglycemia, tremor, headache, dizziness, fatigue, asthenia, weight gain, peripheral oedema, diarrhea etc. Very rare cases reported liver disease (hepatitis), Nasopharyngitis, upper respiratory tract infection and arthralgia.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `It should be used with caution in patients with impaired renal function, heart problem and impaired hepatic function`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTIONS",
+          innerData: `As with other oral antidiabetic medicinal products the hypoglycaemic effect of vildagliptin may be reduced by certain active substances, including thiazides, corticosteroids, thyroid products and sympathomimetics. Cationic active substances that are eliminated by renal tubular secretion (e.g. cimetidine) may interact with metformin by competing for common renal tubular transport systems and hence delay the elimination of metformin, which may increase the risk of lactic acidosis.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USED IN PREGNANCY AND LACTATION",
+          innerData: `Pregnancy: There are no adequate data from the use of vildagliptin in pregnant women. Studies in animals have shown reproductive toxicity at high doses. The potential risk for humans is unknown. Due to lack of human data, It should not be used during pregnancy.
+          Breast-feeding: It is unknown wheather vildagliptin is excreted in human milk. Animal studies have shown excretion of vildagliptin in milk. It should not be used during lactation.
+          Use in children:
+          Vildagliptin & Metformin combination therapy is not recommended under 18 years of age.
+          Use in Elderly: Patients (>65 years): Metformin excreted through kidneys, for this reason renal function test is necessary before this combination therapy. It is not recommended in patient over 75 years of age.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Vildaglip M: Each box contains 2X10’s tablets in a blister pack. ",
+            "Vildaglip M: Each box contains 2X10’s tablets in a blister pack. ",
+          ]
+        },
       ],
       btn: "Read More",
       btnlink: "/prod_details",
@@ -7791,12 +13230,24 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "X-dol 60",
+      innerComposition: "Etoricoxib INN",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "PRESENTATION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "X dol® 60: Each film-coated tablet contains Etoricoxib INN 60 mg.",
+            "X dol® 90: Each film-coated tablet contains Etoricoxib INN 90 mg.",
+            "X dol® 120: Each film-coated tablet contains Etoricoxib INN 120 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Etoricoxib is a nonsteroidal anti-inflammatory drugs(NSAID) that exhibits anti-inflammatory, analgesic, and antipyretic activities in animal models. It is a potent, orally active, highly selective cyclooxygenase-2 (COX-2) inhibitor within and above the clinical dose range. COX-2 has been shown to be primarily responsible for the synthesis of prostanoid mediators of pain, inflammation, and fever. Selective inhibition of COX-2 by Etoricoxib decreases these clinical signs and symptoms with decreased GI toxicity and without effects on platelet function.  `,
           istable: false,
           table: {},
           islist: false,
@@ -7805,12 +13256,139 @@ export const ByTrade = [
             "",
           ]
         },
+        {
+          innerHead: "INDICATIONS:",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Pain and inflammation in osteoarthritis, rheumatoid arthritis and other chronic musculoskeletal disorders",
+            "Treatment of acute gout",
+            "Treatment of acute gout",
+            "Pain following dental surgery",
+          ]
+        },
         
       ],
       innerdata1:[
         {
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adult and adolescent over 16 years: `,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Adult and adolescent over 16 years: ",
+            "Osteoarthritis: 30 mg once daily, increased if necessary to 60 mg once daily.",
+            "Acute gut : 120 mg once daily for maximum 8 days. Maximum 60 mg daily in mild hepatic impairment. Maximum 60 mg on alteration days or 30 mg once daily in moderate hepatic impairment.",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Side- effects may include dry mouth, taste disturbance, mouth ulcers, flatulence, constipation, appetite and weight changes, chest pain, fatigue, paraesthesia, influenza-like syndrome & myalgia.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `In patients with advanced renal disease treatment with it is not recommended. Clinical experience in patients with estimated creatinine clearance of <30 ml/min in very limited. If therapy with it must be initiated in such patients, close monitoring of the patients renal function is advisable. Caution should be used when initiating treatment with it in patients with considerable dehydration. It is advisable to rehydrate patients prior to starting therapy with it. The possibility of fluid retention, edema or hypertension should be taken into consideration when it is used in patients with a pre-exiting edema, hypertension, or heart failure. Independent of treatment, patients with a prior history of GI perforation, ulcer and bleeding(PUB) and patients greater than 65 years of age are known to be at a higher risk for a PUB. A patient with symptoms and /or signs suggesting liver dysfunction, or in whom an abnormal liver function test has occurred, should be evaluated for persistently abnormal liver function tests. If persistently abnormal liver function tests (three times the upper limit of normal) are detected, it should be discontinued. It should be used with caution in patients who have previously experienced acute asthmatic attacks, urticaria or rhinitis, which were precipitated by salicylates or non- selective cyclooxygenase inhibitors. It may mask fever, which is a sign of infection. The physician should be aware of this when using it in patients being treated for infection.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `It is contraindicated in patients with hypersensitivity to any component of this product, patients, with inflammatory bowel disease, severe congestive heart failure.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Pregnancy : As with others drugs known to inhibit prostaglandin synthesis, use of it should be avoided in late pregnancy because it may cause premature closure of the ductus arteriosus. It should be used during the first two trimesters of pregnancy only if the potential benefit justifies the potential risk to the foetus.
+          Lactation: It is known whether this drug is excreted in human milk.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Oral anticoagulants, diuretics and ACE inhibitors, Acetylsalicylic acid, Cyclosporin and Tacrolimus, Lithium, Methotrexate, oral contraceptives, Prednisone/Prednisolone, Digoxin, drugs metabolized by sulfotransferases (Ethinyl Estradiol), drugs metabolized by CYP isoenzymes, Ketoconazole, Rifampicin and Antacids have interaction with Etoricoxib.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `In clinical studies, administration of single doses of etoricoxib up to 500 mg and multiple doses up to 150 mg/day for 21 days did not result in significant toxicity. There have been reports of acute overdosage with etoricoxib although adverse experiences were not reported in the majority of cases. The most frequently observed adverse experiences were consistent with the safety profile for etoricoxib (e.g. gastrointestinal events, cardiorenal events).`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "X dol® 60 Tablet: Each box contains 3X10’s Film Coated Tablet in blister pack.",
+            "X dol® 90 Tablet: Each box contains 3X10’s Film Coated Tablet in blister pack.",
+            "X dol® 90 Tablet: Each box contains 3X10’s Film Coated Tablet in blister pack.",
+          ]
+        },
+        {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -7840,26 +13418,165 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "X-dol 90",
+      innerComposition: "Etoricoxib INN",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "PRESENTATION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "X dol® 60: Each film-coated tablet contains Etoricoxib INN 60 mg.",
+            "X dol® 90: Each film-coated tablet contains Etoricoxib INN 90 mg.",
+            "X dol® 120: Each film-coated tablet contains Etoricoxib INN 120 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Etoricoxib is a nonsteroidal anti-inflammatory drugs(NSAID) that exhibits anti-inflammatory, analgesic, and antipyretic activities in animal models. It is a potent, orally active, highly selective cyclooxygenase-2 (COX-2) inhibitor within and above the clinical dose range. COX-2 has been shown to be primarily responsible for the synthesis of prostanoid mediators of pain, inflammation, and fever. Selective inhibition of COX-2 by Etoricoxib decreases these clinical signs and symptoms with decreased GI toxicity and without effects on platelet function.  `,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS:",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Pain and inflammation in osteoarthritis, rheumatoid arthritis and other chronic musculoskeletal disorders",
+            "Treatment of acute gout",
+            "Treatment of acute gout",
+            "Pain following dental surgery",
           ]
         },
         
       ],
       innerdata1:[
         {
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adult and adolescent over 16 years: `,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Adult and adolescent over 16 years: ",
+            "Osteoarthritis: 30 mg once daily, increased if necessary to 60 mg once daily.",
+            "Acute gut : 120 mg once daily for maximum 8 days. Maximum 60 mg daily in mild hepatic impairment. Maximum 60 mg on alteration days or 30 mg once daily in moderate hepatic impairment.",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Side- effects may include dry mouth, taste disturbance, mouth ulcers, flatulence, constipation, appetite and weight changes, chest pain, fatigue, paraesthesia, influenza-like syndrome & myalgia.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `In patients with advanced renal disease treatment with it is not recommended. Clinical experience in patients with estimated creatinine clearance of <30 ml/min in very limited. If therapy with it must be initiated in such patients, close monitoring of the patients renal function is advisable. Caution should be used when initiating treatment with it in patients with considerable dehydration. It is advisable to rehydrate patients prior to starting therapy with it. The possibility of fluid retention, edema or hypertension should be taken into consideration when it is used in patients with a pre-exiting edema, hypertension, or heart failure. Independent of treatment, patients with a prior history of GI perforation, ulcer and bleeding(PUB) and patients greater than 65 years of age are known to be at a higher risk for a PUB. A patient with symptoms and /or signs suggesting liver dysfunction, or in whom an abnormal liver function test has occurred, should be evaluated for persistently abnormal liver function tests. If persistently abnormal liver function tests (three times the upper limit of normal) are detected, it should be discontinued. It should be used with caution in patients who have previously experienced acute asthmatic attacks, urticaria or rhinitis, which were precipitated by salicylates or non- selective cyclooxygenase inhibitors. It may mask fever, which is a sign of infection. The physician should be aware of this when using it in patients being treated for infection.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `It is contraindicated in patients with hypersensitivity to any component of this product, patients, with inflammatory bowel disease, severe congestive heart failure.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Pregnancy : As with others drugs known to inhibit prostaglandin synthesis, use of it should be avoided in late pregnancy because it may cause premature closure of the ductus arteriosus. It should be used during the first two trimesters of pregnancy only if the potential benefit justifies the potential risk to the foetus.
+          Lactation: It is known whether this drug is excreted in human milk.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Oral anticoagulants, diuretics and ACE inhibitors, Acetylsalicylic acid, Cyclosporin and Tacrolimus, Lithium, Methotrexate, oral contraceptives, Prednisone/Prednisolone, Digoxin, drugs metabolized by sulfotransferases (Ethinyl Estradiol), drugs metabolized by CYP isoenzymes, Ketoconazole, Rifampicin and Antacids have interaction with Etoricoxib.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `In clinical studies, administration of single doses of etoricoxib up to 500 mg and multiple doses up to 150 mg/day for 21 days did not result in significant toxicity. There have been reports of acute overdosage with etoricoxib although adverse experiences were not reported in the majority of cases. The most frequently observed adverse experiences were consistent with the safety profile for etoricoxib (e.g. gastrointestinal events, cardiorenal events).`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "X dol® 60 Tablet: Each box contains 3X10’s Film Coated Tablet in blister pack.",
+            "X dol® 90 Tablet: Each box contains 3X10’s Film Coated Tablet in blister pack.",
+            "X dol® 90 Tablet: Each box contains 3X10’s Film Coated Tablet in blister pack.",
+          ]
+        },
+        {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -7870,6 +13587,7 @@ export const ByTrade = [
         },
         
       ],
+
       btn: "Read More",
       btnlink: "/prod_details",
       type:'tablet'
@@ -7889,26 +13607,165 @@ export const ByTrade = [
       ],
       backpagelink: "/products_bytrade",
       backpagename: "By Trade Name",
-      innerMainHeading: "",
-      innerComposition: "",
+      innerMainHeading: "X-dol 120",
+      innerComposition: "Etoricoxib INN",
       innerdata:[
         {
-          innerHead: "",
-          innerData: "",
+          innerHead: "PRESENTATION",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "X dol® 60: Each film-coated tablet contains Etoricoxib INN 60 mg.",
+            "X dol® 90: Each film-coated tablet contains Etoricoxib INN 90 mg.",
+            "X dol® 120: Each film-coated tablet contains Etoricoxib INN 120 mg.",
+          ]
+        },
+        {
+          innerHead: "PHARMACOLOGY",
+          innerData: `Etoricoxib is a nonsteroidal anti-inflammatory drugs(NSAID) that exhibits anti-inflammatory, analgesic, and antipyretic activities in animal models. It is a potent, orally active, highly selective cyclooxygenase-2 (COX-2) inhibitor within and above the clinical dose range. COX-2 has been shown to be primarily responsible for the synthesis of prostanoid mediators of pain, inflammation, and fever. Selective inhibition of COX-2 by Etoricoxib decreases these clinical signs and symptoms with decreased GI toxicity and without effects on platelet function.  `,
           istable: false,
           table: {},
           islist: false,
           listData:[
             "",
             "",
+          ]
+        },
+        {
+          innerHead: "INDICATIONS:",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Pain and inflammation in osteoarthritis, rheumatoid arthritis and other chronic musculoskeletal disorders",
+            "Treatment of acute gout",
+            "Treatment of acute gout",
+            "Pain following dental surgery",
           ]
         },
         
       ],
       innerdata1:[
         {
+          innerHead: "DOSAGE & ADMINISTRATION",
+          innerData: `Adult and adolescent over 16 years: `,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "Adult and adolescent over 16 years: ",
+            "Osteoarthritis: 30 mg once daily, increased if necessary to 60 mg once daily.",
+            "Acute gut : 120 mg once daily for maximum 8 days. Maximum 60 mg daily in mild hepatic impairment. Maximum 60 mg on alteration days or 30 mg once daily in moderate hepatic impairment.",
+          ]
+        },
+        {
+          innerHead: "SIDE EFFECTS",
+          innerData: `Side- effects may include dry mouth, taste disturbance, mouth ulcers, flatulence, constipation, appetite and weight changes, chest pain, fatigue, paraesthesia, influenza-like syndrome & myalgia.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "PRECAUTIONS",
+          innerData: `In patients with advanced renal disease treatment with it is not recommended. Clinical experience in patients with estimated creatinine clearance of <30 ml/min in very limited. If therapy with it must be initiated in such patients, close monitoring of the patients renal function is advisable. Caution should be used when initiating treatment with it in patients with considerable dehydration. It is advisable to rehydrate patients prior to starting therapy with it. The possibility of fluid retention, edema or hypertension should be taken into consideration when it is used in patients with a pre-exiting edema, hypertension, or heart failure. Independent of treatment, patients with a prior history of GI perforation, ulcer and bleeding(PUB) and patients greater than 65 years of age are known to be at a higher risk for a PUB. A patient with symptoms and /or signs suggesting liver dysfunction, or in whom an abnormal liver function test has occurred, should be evaluated for persistently abnormal liver function tests. If persistently abnormal liver function tests (three times the upper limit of normal) are detected, it should be discontinued. It should be used with caution in patients who have previously experienced acute asthmatic attacks, urticaria or rhinitis, which were precipitated by salicylates or non- selective cyclooxygenase inhibitors. It may mask fever, which is a sign of infection. The physician should be aware of this when using it in patients being treated for infection.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "CONTRAINDICATION",
+          innerData: `It is contraindicated in patients with hypersensitivity to any component of this product, patients, with inflammatory bowel disease, severe congestive heart failure.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "USE IN PREGNANCY & LACTATION",
+          innerData: `Pregnancy : As with others drugs known to inhibit prostaglandin synthesis, use of it should be avoided in late pregnancy because it may cause premature closure of the ductus arteriosus. It should be used during the first two trimesters of pregnancy only if the potential benefit justifies the potential risk to the foetus.
+          Lactation: It is known whether this drug is excreted in human milk.
+          `,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "DRUG INTERACTION",
+          innerData: `Oral anticoagulants, diuretics and ACE inhibitors, Acetylsalicylic acid, Cyclosporin and Tacrolimus, Lithium, Methotrexate, oral contraceptives, Prednisone/Prednisolone, Digoxin, drugs metabolized by sulfotransferases (Ethinyl Estradiol), drugs metabolized by CYP isoenzymes, Ketoconazole, Rifampicin and Antacids have interaction with Etoricoxib.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "OVERDOSE",
+          innerData: `In clinical studies, administration of single doses of etoricoxib up to 500 mg and multiple doses up to 150 mg/day for 21 days did not result in significant toxicity. There have been reports of acute overdosage with etoricoxib although adverse experiences were not reported in the majority of cases. The most frequently observed adverse experiences were consistent with the safety profile for etoricoxib (e.g. gastrointestinal events, cardiorenal events).`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "STORAGE",
+          innerData: `Store in a cool (Below 30⁰ C Temp.) and dry place, away from light. Keep out of the reach of children.`,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "COMMERCIAL PACK",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: true,
+          listData:[
+            "X dol® 60 Tablet: Each box contains 3X10’s Film Coated Tablet in blister pack.",
+            "X dol® 90 Tablet: Each box contains 3X10’s Film Coated Tablet in blister pack.",
+            "X dol® 90 Tablet: Each box contains 3X10’s Film Coated Tablet in blister pack.",
+          ]
+        },
+        {
           innerHead: "",
-          innerData: "",
+          innerData: ``,
+          istable: false,
+          table: {},
+          islist: false,
+          listData:[
+            "",
+            "",
+          ]
+        },
+        {
+          innerHead: "",
+          innerData: ``,
           istable: false,
           table: {},
           islist: false,
@@ -7919,6 +13776,7 @@ export const ByTrade = [
         },
         
       ],
+
       btn: "Read More",
       btnlink: "/prod_details",
       type:'tablet'

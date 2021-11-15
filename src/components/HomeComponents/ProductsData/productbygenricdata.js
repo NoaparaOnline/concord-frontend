@@ -379,7 +379,7 @@ export const ByGeneric = [
           listData:[]
         }
         ],
-        innerdata1:[
+      innerdata1:[
         {
           innerHead: "DOSAGE AND ADMINISTRATION",
           innerData: "Adult: By deep intramuscular injection or by intravenous injection over at least 2-4 minutes or by intravenous infusion, 1 gm daily; 2-4 gm daily in severe infections; intramuscular doses over 1 gm divided between more than one site. Neonate: By intravenous infusion over 60 minutes, 20-50 mg/kg daily (max. 50 mg/kg daily). Infant and child under 50 kg: By deep intramuscular injection or by intravenous injection over 2-4 minutes or by intravenous infusion, 20-50 mg/kg daily; up to 80 mg/kg daily in severe infections; doses of 50 mg/kg and over by intravenous infusion only; 50 kg and over, adult dose. Uncomplicated gonorrhea: By deep intramuscular injection, 250 mg as a single dose. Surgical prophylaxis: By deep intramuscular injection or by intravenous injection over at least 2-4 minutes, 1 gm at induction, Preparation of injections and direction for reconstitution of powder : For intramuscular injection : Holicef 250 mg or 500 mg should be dissolved in 2 ml of 1% Lidocaine HCl Injection, Holicef 1 gm  in 3.5 ml of 1% Lidocaine HCl Injection. For intravenous injection :Holicef 250 mg or 500 mg should be dissolved in 5 ml of Water for Injection, Holicef 1 gm in 10 ml of Water for Injection, Holicef 2 gm in 20 ml of water for Injection. Use the solution immediately after reconstitution of powder. ",
