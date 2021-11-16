@@ -39,7 +39,7 @@ const milestone_data = [
 ];
 
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div>
 
@@ -59,12 +59,12 @@ const Home = () => {
 
 
       <Cards />
-
+      {console.log(props,"homeprops")}
       <Heading heading={label.Our_Affiliates} />
       <Affiliates />
       <Globaloperation />
       <Heading heading={label.HeadOurProduct} />
-      <HomeCards card={card} />
+      <HomeCards {...props}/>
 
       <Milestones
         heading={label}

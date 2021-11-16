@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Error404 = (props) => {
+
+    
     return (
         <div>
             <section class="page-404 page-404-default">
@@ -15,7 +17,7 @@ const Error404 = (props) => {
 			</p>
 			<div className="lte-empty-space"></div>
             <div className="col-md-12 d-flex justify-content-center my-5 text-primary">
-                <Link to='/' style={{ 
+                <Link to={JSON.parse(localStorage.getItem('userRoleConcord')) === "director" ? "/director-dashboard" : JSON.parse(localStorage.getItem('userRoleConcord')) === "depot_manager" ? "/depotmanager-dashboard" : "/" } style={{ 
                   textDecoration: 'none', 
                   fontWeight: 500,
                   fontSize:'12px',

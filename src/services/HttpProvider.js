@@ -1,5 +1,6 @@
 import axios from "axios";
-import { getToken } from "../Utils/auth.util";
+import { toast } from "react-toastify";
+import { getToken, logout } from "../Utils/auth.util";
 // const BASE_URL = "prod link";
 // https://dmfr-backend.herokuapp.com/api/v1/
 // https://concord-backend-m1.herokuapp.com/
@@ -38,13 +39,23 @@ export async function request({ method, url, data, headers }) {
   let response;
   try {
     response = await promise;
+
+    if (
+      response?.data?.response_code === 403 ||
+      response?.data?.response_code === 401
+    ) {
+      toast.error(response?.data?.response_message);
+      setTimeout(() => {
+        logout();
+        window.location.href = "/";
+      }, 2000);
+    }
   } catch (error) {
     throw error.response;
   }
 
   return response;
 }
-
 export async function newRequest({ method, url, data, headers }) {
   if (headers === undefined) {
     await updateHeaders();

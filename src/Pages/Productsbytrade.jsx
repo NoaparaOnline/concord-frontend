@@ -7,7 +7,7 @@ import { ByTrade } from "../components/HomeComponents/ProductsData/productsbytra
 import ReactPaginate from 'react-paginate';
 
 
-const Products_bytrade = () => {
+const Products_bytrade = (props) => {
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -82,10 +82,10 @@ const Products_bytrade = () => {
     <React.Fragment key={ob.id}>
       <>
         <div className="col-lg-4 d-none d-lg-block d-md-none">
-          <FlipCard card={ob} />
+          <FlipCard card={ob} {...props} />
         </div>
         <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
-          <SingleCard card={ob} />
+          <SingleCard card={ob} {...props} />
         </div>
        
       </>

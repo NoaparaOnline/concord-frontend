@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route ,Switch} from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer, FixedRight } from "./components";
 import About from "./Pages/About";
@@ -49,7 +49,8 @@ import DapzineTablet from "./components/ReusableComponents/ProductDetail/Dapzine
 import Relikof from "./components/ReusableComponents/ProductDetail/Relikof";
 import Relikofkids from "./components/ReusableComponents/ProductDetail/Relikofkids";
 import Acedol from "./components/ReusableComponents/ProductDetail/Acedol";
-// import Error404 from "./Pages/Error404";
+import Error404 from "./Pages/Error404";
+import ProductallDetails from "./components/ReusableComponents/ProductDetail/ProductallDetails";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -103,12 +104,6 @@ function App() {
 
         <Route exact path="/" render={(props) => <Navbar {...props} />} />
 
-        {/*          Front Home Page             */}
-
-        <Route exact path="/">
-          <Home />
-        </Route>
-
         {/*          Navbar             */}
 
         <Route
@@ -125,11 +120,6 @@ function App() {
           }
         />
 
-        {/*          Home Page             */}
-
-        <Route exact path="/home">
-          <Home />
-        </Route>
 
         {/* Resest Password */}
         {/* <Route path="/reset_password_link/uid=:uid/token=:token" render={(props)=>   <ResetPassword {...props}/>}/> */}
@@ -155,9 +145,30 @@ function App() {
           }
         />
 
-        {/*          Login Page             */}
 
-        <Route path="/login" render={(props) => <Login {...props} />} />
+
+          <Switch>
+
+          
+        {/*          Front Home Page             */}
+        <Route
+         exact path="/"
+          render={(props) => <Home {...props} />}
+        />
+        {/* <Route exact path="/">
+          <Home  />
+        </Route> */}
+
+
+        {/*          Home Page             */}
+        <Route
+         exact path="/home"
+          render={(props) => <Home {...props} />}
+        />
+        {/* <Route exact path="/home">
+          <Home  />
+        </Route> */}
+
 
         {/*          Main About Page             */}
 
@@ -196,10 +207,12 @@ function App() {
            render={(props) => <DepotmanagerDashboard {...props} />}/>
         */}
         <PrivateRoute
+        routelink={"depot_manager"}
           path="/depotmanager-dashboard"
           component={DepotmanagerDashboard}
         />
         <PrivateRoute
+         routelink={"director"}
           path="/director-dashboard"
           component={DirectorDashboard}
         />
@@ -295,24 +308,47 @@ function App() {
         </Route>
 
         {/*          Products Submenu Page          */}
+        <Route
+         exact path="/products_bygeneric"
+          render={(props) => <Productsbygeneric {...props} />}
+        />
 
-        <Route exact path="/products_bygeneric">
-          <Productsbygeneric />
-        </Route>
 
-        <Route exact path="/products_bytrade">
-          <Productsbytrade />
-        </Route>
+        <Route
+         exact path="/products_bytrade"
+          render={(props) => <Productsbytrade {...props} />}
+        />
+        
+        
+        <Route
+         exact path="/products_firsttime"
+          render={(props) => <Productsfirsttime {...props} />}
+        />
+        
+        <Route
+         exact path="/products_therapeutic"
+          render={(props) => <Productstherapeutic {...props} />}
+        />
 
-        <Route exact path="/products_firsttime">
-          <Productsfirsttime />
-        </Route>
 
-        <Route exact path="/products_therapeutic">
-          <Productstherapeutic />
-        </Route>
 
         {/*          Products Inner Pages         */}
+        
+        {/* All Inner Page */}
+        
+        <Route
+          path="/prod_details"
+          render={(props) => <ProductallDetails {...props} />}
+        />
+        {/* <Route exact path="/prod_details">
+          <ProductallDetails
+          
+          />
+        </Route> */}
+        {/* All Inner Page */}
+
+
+
         <Route exact path="/acedol-tablet">
           <ProductsCardInnerPage />
         </Route>
@@ -343,8 +379,12 @@ function App() {
        
 
         {/* 404 Page */}
-        
-        {/* <Route path='*' component={Error404} /> */}
+        <Route path="*">
+            <Error404 />
+          </Route>
+
+        </Switch>
+
 
         {/*          Footer             */}
 

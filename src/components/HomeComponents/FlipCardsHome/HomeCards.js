@@ -1,8 +1,10 @@
 import React from "react";
 import { FlipCard} from "../../../components";
 import SingleCard from "../FlipCard/SingleCard";
+import card from "./CardData";
 import "./HomeCards.css";
-const HomeCards = ({ card }) => {
+const HomeCards = (props) => {
+  console.log(props,"data")
   return (
     <div className="container  my-5 ">
       <div className="container cards Responsive_Margin_Screen  " >
@@ -12,10 +14,10 @@ const HomeCards = ({ card }) => {
               <div  className={index===0  ? `col-xxl-2 col-xl-4 col-lg-4  offset-xxl-1 d-none d-lg-block d-md-none  custome-card-test mb-4` 
              
               : `col-xxl-2 col-xl-4 col-lg-4  d-none d-lg-block d-md-none  custome-card-test mb-4`}>
-                <FlipCard card={ob} />
+                <FlipCard card={ob} {...props} />
               </div>
               <div  className="custome_xs_screen  d-lg-none d-sm-block col-md-6 col-sm-12 col-xs-12  custome-card-test mb-4">
-                <SingleCard card={ob} />
+                <SingleCard card={ob}   {...props}/>
               </div>
               </React.Fragment>
           )

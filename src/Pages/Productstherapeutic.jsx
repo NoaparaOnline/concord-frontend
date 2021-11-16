@@ -6,7 +6,7 @@ import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
 import ReactPaginate from "react-paginate";
 
-const Products_therapeutic = () => {
+const Products_therapeutic = (props) => {
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -71,11 +71,11 @@ const Products_therapeutic = () => {
       <React.Fragment key={ob.id}>
         <>
           <div className="col-lg-4 d-none d-lg-block d-md-none">
-            <FlipCard card={ob} />
+            <FlipCard card={ob} {...props} />
           </div>
 
           <div className="col-lg-4 d-lg-none d-sm-block col-md-6">
-            <SingleCard card={ob} />
+            <SingleCard card={ob} {...props} />
           </div>
         </>
       </React.Fragment>
