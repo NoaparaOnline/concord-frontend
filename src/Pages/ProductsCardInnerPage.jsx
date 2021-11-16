@@ -35,7 +35,6 @@ const ProductsCardInnerPage = () => {
     setShow(true);
   };
   const productssingleobj = useSelector((state) => state?.director?.getsingleproductobj);
-  console.log("productssingleobj",productssingleobj)
  
  
   const Text = () => {

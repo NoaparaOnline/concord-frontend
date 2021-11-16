@@ -14,7 +14,6 @@ const DirectorApprovalStatusChange = (props) => {
     // );
     const [dropdown1, setDropdown1] = useState(approvaluid.approval_status);
 
-    console.log("approvaluid",approvaluid)
 
     const {
         

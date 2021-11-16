@@ -59,7 +59,6 @@ const Home = (props) => {
 
 
       <Cards />
-      {console.log(props,"homeprops")}
       <Heading heading={label.Our_Affiliates} />
       <Affiliates />
       <Globaloperation />

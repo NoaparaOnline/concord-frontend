@@ -4,7 +4,6 @@ import SingleCard from "../FlipCard/SingleCard";
 import card from "./CardData";
 import "./HomeCards.css";
 const HomeCards = (props) => {
-  console.log(props,"data")
   return (
     <div className="container  my-5 ">
       <div className="container cards Responsive_Margin_Screen  " >

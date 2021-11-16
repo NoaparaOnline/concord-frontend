@@ -30,7 +30,6 @@ import { toast } from "react-toastify";
 const PrivateRoute = ({ component: Component, routelink, ...rest }) => {
   const user = localStorage.getItem("userConcord");
   const userRole = JSON.parse(localStorage.getItem("userRoleConcord"));
-  console.log(user && routelink === userRole);
   return (
     <Route
       {...rest}

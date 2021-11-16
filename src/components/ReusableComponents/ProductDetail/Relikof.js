@@ -37,7 +37,6 @@ const Relikof = () => {
   const productssingleobj = useSelector(
     (state) => state?.director?.getsingleproductobj
   );
-  console.log("productssingleobj", productssingleobj);
   const Text = () => {
     return (
       <div>
