@@ -107,6 +107,8 @@ const Notifications = (props) => {
                       <SingleNotificationCard
                       backgroundcolorchat="#565656"
                       colorchattext="#fff"
+                      title="hello"
+                      description="hello"
                       />
                       <SingleNotificationCard
                       backgroundcolorchat="#565656"
