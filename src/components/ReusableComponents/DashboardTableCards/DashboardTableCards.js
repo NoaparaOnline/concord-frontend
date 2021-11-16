@@ -14,7 +14,7 @@ const DashboardTableCards = ({ob}) => {
         }}
       >
             <div className="row mb-3">
-                <div className="col-6 d-flex">
+                <div className="col-12 d-flex">
                     <img src={icon} width="50px" height="50px" alt=""
                     style={{border:'5px solid lightgrey' ,borderRadius:'10px'}}
                     />

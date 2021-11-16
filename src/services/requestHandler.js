@@ -25,6 +25,8 @@ const SERVICE_URLS = {
   getproductsnew: "products/read/medicine/new",
   getdepartmenthead: "department_heads/read",
   getdistributioncenter: "distribution_centres/read",
+  notificationall: "notifications/read",
+  notificationrecent: "notifications/read?is_seen=0",
 
 };
 
