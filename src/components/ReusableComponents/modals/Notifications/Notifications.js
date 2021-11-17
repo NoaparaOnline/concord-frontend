@@ -243,6 +243,7 @@ const Notifications = (props) => {
                           colorchattext="#fff"
                           title={item?.title}
                           decription={item?.message_body}
+                          created_on={item?.created_on}
                           key={index + 1}
                         />
                       )}
@@ -263,6 +264,7 @@ const Notifications = (props) => {
                           colorchattext="#fff"
                           title={item?.title}
                           decription={item?.message_body}
+                          created_on={item?.created_on}
                           key={index + 1}
                         />
                       )}
