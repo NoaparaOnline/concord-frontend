@@ -46,12 +46,25 @@ const Products_firsttime = (props) => {
                 
                <React.Fragment key={ob.id}>
                  {/* index offset after 5 cards function */}
-               <div  className={index===0 || index===5 || index===9 ? `col-lg-2 offset-1 d-none d-lg-block d-md-none col-md-4 mt-3  col-sm-12 custome-card-test`:`col-lg-2 d-none d-lg-block d-md-none col-md-4 mt-3   col-sm-12 custome-card-test`}>
+               {/* <div  className={index===0 || index===5 || index===9 ? `col-lg-2 offset-1 d-none d-lg-block d-md-none col-md-4 mt-3  col-sm-12 custome-card-test`:`col-lg-2 d-none d-lg-block d-md-none col-md-4 mt-3   col-sm-12 custome-card-test`}>
                  <FlipCard card={ob} {...props} />
                </div>
                <div  className="custome_xs_screen  d-lg-none d-sm-block col-md-4 col-sm-12 col-xs-12 mt-3 custome-card-test ">
                  <SingleCard card={ob} {...props} />
+               </div> */}
+               <div className="col-lg-3 d-none d-lg-block d-md-none">
+               <FlipCard card={ob} {...props} />
+              </div>
+
+              <div className="col-lg-3 d-lg-none d-sm-block col-md-6">
+              <SingleCard card={ob} {...props} />
+              </div>
+               {/* <div  className={index===0 || index===5 || index===9 ? `col-lg-2 offset-1 d-none d-lg-block d-md-none col-md-4 mt-3  col-sm-12 custome-card-test`:`col-lg-2 d-none d-lg-block d-md-none col-md-4 mt-3   col-sm-12 custome-card-test`}>
+                 <FlipCard card={ob} {...props} />
                </div>
+               <div  className="custome_xs_screen  d-lg-none d-sm-block col-md-4 col-sm-12 col-xs-12 mt-3 custome-card-test ">
+                 <SingleCard card={ob} {...props} />
+               </div> */}
                </React.Fragment>
               ))}
             </div>

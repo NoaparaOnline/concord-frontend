@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
-import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
 import ReactPaginate from "react-paginate";
+import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
 
 const Products_therapeutic = (props) => {
   const LinksBan = [
@@ -19,8 +19,24 @@ const Products_therapeutic = (props) => {
       subLink: "/products",
     },
   ];
+  
+  
+  
+    const [selectedClass, setSelectedClass] = useState("all");
+  
+  
+    
+    let [obj, setObj] = useState(ByTherapeutic);
+    
+    
+    let filterClass = selectedClass === "all" ? obj :
+    obj?.filter((item)=>(
+      item?.theraputic_class === selectedClass 
+      ))
+  
 
-  const [obj, setObj] = useState(ByTherapeutic);
+  console.log(filterClass,"filterClass")
+
   const filteredtype = (type) => {
     if (type === "All") {
       setObj(ByTherapeutic);
@@ -60,12 +76,26 @@ const Products_therapeutic = (props) => {
     }
   };
   const [selected, setSelected] = useState(5);
+  let [defaultandfilter, setDefaultandfilter] = useState(obj);
+
+  // useEffect(() => {
+  //   setDefaultandfilter(obj);
+  // }, [obj])
+
+  console.log(selectedClass,"selectedClass")
 
   const [pageNumber, setPageNumber] = useState(0);
   const perPage = selected;
   const pageVisited = pageNumber * perPage;
 
-  const displayUsers = obj
+  // defaultandfilter = selectedClass ? filterClass : (selectedClass==="all" || selectedClass===null) ? obj : obj     
+
+
+  console.log(defaultandfilter,"defaultandfilter")
+  const displayUsers = filterClass.length===0 ? 
+  <div className="d-flex justify-content-center mb-5">
+    <span style={{fontSize:'30px',color:'#0066b3'}} >No Item Of This Therapeutic Class</span>
+  </div>:filterClass  
     .slice(pageVisited, pageVisited + perPage)
     .map((ob, index) => (
       <React.Fragment key={ob.id}>
@@ -81,7 +111,7 @@ const Products_therapeutic = (props) => {
       </React.Fragment>
     ));
 
-  const pageCount = Math.ceil(obj.length / perPage);
+  const pageCount = Math.ceil(filterClass.length / perPage);
 
   const changePage = ({ selected }) => {
     setPageNumber(selected);
@@ -186,7 +216,46 @@ const Products_therapeutic = (props) => {
             
           </select>
             </div>
+            
+            <div className="">
+            <label className="my-2" style={{fontSize:'18px',fontWeight:'500',color:'#565656'}}>Products By Therapeutic Class:</label>
+                <select
+            className="form-control form-select"
+            name="sm"
+            onChange={(e) => {
+              setSelectedClass(e.target.value);
+             
+            }}
+            value={selectedClass}
+          >
+            <option disabled selected>Select ..</option>
+            <option value="all">All</option>
+            <option value="antibiotic">Antibiotic</option>
+            <option value="anthelmentics">Anthelmentics</option>
+            <option value="anti-histamine">Anti-histamine</option>
+            <option value="anti-ulcerant">Anti-ulcerant</option>
+            <option value="anti-diabetic">Anti-diabetic</option>
+            <option value="anti-fungal">Anti-fungal</option>
+            <option value="anti-parasitic">Anti-parasitic</option>
+            <option value="anti-viral">Anti-viral</option>
+            <option value="anti-spasmodic">Anti-spasmodic agent</option>
+            <option value="anti-neuropathic">Anti-neuropathic Agent</option>
+            <option value="antidepressant">Antidepressant & Anxiolytic</option>
+            <option value="cardiovascular">Cardiovascular Drug</option>
+            <option value="gastroprokinetic">Gastroprokinetic Agent</option>
+            <option value="leukotrine">Leukotrine receptor antagonist</option>
+            <option value="mucolytic">Mucolytic Agent</option>
+            <option value="pde">PDE inhibitors</option>
+            <option value="nsaids">NSAIDs</option>
+            <option value="hand-sanitizer">Hand Sanitizer & Anticeptic Agent</option>
+            <option value="vitamin">Vitamin & Minerals</option>
+            
+          </select>
             </div>
+
+            
+            </div>
+
 
 
 
