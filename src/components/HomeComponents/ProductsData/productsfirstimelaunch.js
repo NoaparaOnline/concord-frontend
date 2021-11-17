@@ -498,333 +498,337 @@ export const FirstTime = [
     type: 'Syrup'
   },
 
-  {
-    id: 3,
-    title: "Dapazin 5 Tablet",
-    text1: "Vitamin & Minerals",
-    text2: "Dapagliflozin INN 5 mg",
-    img: [
-      {
-        id: 3,
-        imgf: dapazin5fr,
-        imge: dapazin5bk,
-      },
-    ],
-     innerMainHeading: "Dapazin",
-      innerComposition: "Dapagliflozin INN",
-      innerdata:[
-        {
-          innerHead: "PRESENTATION",
-          innerData: ``,
-          istable: false,
-          table: {},
-          islist: true,
-          listData:[
-            "Dapazin® 5 tablet: Each film coated tablet contains Dapagliflozin INN 5 mg.",
-            "Dapazin® 10 tablet: Each film coated tablet contains Dapagliflozin INN 10 mg.",
-          ]
-        },
-        {
-          innerHead: "PHARMACOLOGY:",
-          innerData: "Dapazin® (Dapagliflozin) helps lower blood glucose levels by helping the body to filter more excess glucose out of the blood. Sodium-glucose co transporter 2 (SGLT2), expressed in the proximal renal tubules, is responsible for the majority of the re-absorption of filtered glucose from the tubular lumen. Dapagliflozin is an inhibitor of SGLT2. By inhibiting SGLT2, Dapagliflozin reduces reabsorption of filtered glucose and lowers the renal threshold for glucose, and thereby increases urinary glucose excretion.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "Dapazin® (Dapagliflozin) is indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.Limitation of Use: Dapagliflozin is not recommended for  patients with type 1 diabetes mellitus or for the treatment of diabetic ketoacidosis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        
-      ],
-      innerdata1:[
-        {
-          innerHead: "DOSAGE & ADMINISTRATION",
-          innerData: ``,
-          istable: false,
-          table: {},
-          islist: true,
-          listData:[
-            "The recommended starting dose is 5 mg once daily, taken in the morning, with or without food.",
-            "Dose can be increased to 10 mg once daily in patients who require additional glycemic control.",
-            "Assess renal function before initiating Dapazin. Do not initiate Dapazin if eGFR is below 60 mL/min/1.73 m².",
-            "Discontinue Dapazin if eGFR falls persistently below 60 mL/min/1.73 m².",
-          ]
-        },
-        {
-          innerHead: "SIDE EFFECTS",
-          innerData: "Dapagliflozin may cause female genital mycotic infections, nasopharyngitis and urinary tract infections.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: ``,
-          istable: false,
-          table: {},
-          islist: true,
-          listData:[
-            "Hypoglycemic Agents: May enhance the adverse/toxic effect of other hypoglycemic agents.",
-            "Hypotensive Agents: May enhance the adverse/toxic effect of other hypotensive agents.",
-            "Loop Diuretics: May diminish the hypoglycemic effect of hypoglycemic agents.",
-            "MAO Inhibitors: May enhance the hypoglycemic effect of hypoglycemic agents.",
-            "Selective Serotonin Reuptake Inhibitors:- May enhance the hypoglycemic effect of hypoglycemic agents.",
-          ]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATION:",
-          innerData: "Pregnancy: There are no adequate well controlled studies in pregnant women. Use during pregnancy only if the potential benefit justifies the potential risk to fetus.Nursing mother: Discontinue Dapazin or discontinue nursing.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "OVERDOSE",
-          innerData: "There were no reports of overdose during the clinical development program for Dapagliflozin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
-          innerData: "Dapazin® 5 tablet: Each box containing 2 X 14’s tablet in Alu-Alu blister strips.Dapazin® 10 tablet: Each box containing 1 X 14’s tablet in Alu-Alu blister strips.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "",
-          innerData: ``,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "",
-          innerData: ``,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        
-      ],
-    btn: "Read More",
-    backpagename: "First Time Launching",
-    backpagelink: "/products_firsttime",
-    btnlink: "/dapzine-tablet",
-    type: 'Tablet'
-  },
 
-  {
-    id: 4,
-    title: "Dapazin 10 Tablet",
-    text1: "Vitamin & Minerals",
-    text2: "Dapagliflozin INN 10 mg",
-    img: [
-      {
-        id: 4,
-        imgf: dapazin10fr,
-        imge: dapazin10bk,
-      },
-    ],
-    innerMainHeading: "Dapazin 10",
-      innerComposition: "Dapagliflozin INN",
-      innerdata:[
-        {
-          innerHead: "PRESENTATION",
-          innerData: ``,
-          istable: false,
-          table: {},
-          islist: true,
-          listData:[
-            "Dapazin® 5 tablet: Each film coated tablet contains Dapagliflozin INN 5 mg.",
-            "Dapazin® 10 tablet: Each film coated tablet contains Dapagliflozin INN 10 mg.",
-          ]
-        },
-        {
-          innerHead: "PHARMACOLOGY:",
-          innerData: "Dapazin® (Dapagliflozin) helps lower blood glucose levels by helping the body to filter more excess glucose out of the blood. Sodium-glucose co transporter 2 (SGLT2), expressed in the proximal renal tubules, is responsible for the majority of the re-absorption of filtered glucose from the tubular lumen. Dapagliflozin is an inhibitor of SGLT2. By inhibiting SGLT2, Dapagliflozin reduces reabsorption of filtered glucose and lowers the renal threshold for glucose, and thereby increases urinary glucose excretion.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "INDICATIONS",
-          innerData: "Dapazin® (Dapagliflozin) is indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.Limitation of Use: Dapagliflozin is not recommended for  patients with type 1 diabetes mellitus or for the treatment of diabetic ketoacidosis.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
+  // Dapzin Cut
+  // {
+  //   id: 3,
+  //   title: "Dapazin 5 Tablet",
+  //   text1: "Vitamin & Minerals",
+  //   text2: "Dapagliflozin INN 5 mg",
+  //   img: [
+  //     {
+  //       id: 3,
+  //       imgf: dapazin5fr,
+  //       imge: dapazin5bk,
+  //     },
+  //   ],
+  //    innerMainHeading: "Dapazin",
+  //     innerComposition: "Dapagliflozin INN",
+  //     innerdata:[
+  //       {
+  //         innerHead: "PRESENTATION",
+  //         innerData: ``,
+  //         istable: false,
+  //         table: {},
+  //         islist: true,
+  //         listData:[
+  //           "Dapazin® 5 tablet: Each film coated tablet contains Dapagliflozin INN 5 mg.",
+  //           "Dapazin® 10 tablet: Each film coated tablet contains Dapagliflozin INN 10 mg.",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "PHARMACOLOGY:",
+  //         innerData: "Dapazin® (Dapagliflozin) helps lower blood glucose levels by helping the body to filter more excess glucose out of the blood. Sodium-glucose co transporter 2 (SGLT2), expressed in the proximal renal tubules, is responsible for the majority of the re-absorption of filtered glucose from the tubular lumen. Dapagliflozin is an inhibitor of SGLT2. By inhibiting SGLT2, Dapagliflozin reduces reabsorption of filtered glucose and lowers the renal threshold for glucose, and thereby increases urinary glucose excretion.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "INDICATIONS",
+  //         innerData: "Dapazin® (Dapagliflozin) is indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.Limitation of Use: Dapagliflozin is not recommended for  patients with type 1 diabetes mellitus or for the treatment of diabetic ketoacidosis.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
         
-      ],
-      innerdata1:[
-        {
-          innerHead: "DOSAGE & ADMINISTRATION",
-          innerData: ``,
-          istable: false,
-          table: {},
-          islist: true,
-          listData:[
-            "The recommended starting dose is 5 mg once daily, taken in the morning, with or without food.",
-            "Dose can be increased to 10 mg once daily in patients who require additional glycemic control.",
-            "Assess renal function before initiating Dapazin. Do not initiate Dapazin if eGFR is below 60 mL/min/1.73 m².",
-            "Discontinue Dapazin if eGFR falls persistently below 60 mL/min/1.73 m².",
-          ]
-        },
-        {
-          innerHead: "SIDE EFFECTS",
-          innerData: "Dapagliflozin may cause female genital mycotic infections, nasopharyngitis and urinary tract infections.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "DRUG INTERACTIONS",
-          innerData: ``,
-          istable: false,
-          table: {},
-          islist: true,
-          listData:[
-            "Hypoglycemic Agents: May enhance the adverse/toxic effect of other hypoglycemic agents.",
-            "Hypotensive Agents: May enhance the adverse/toxic effect of other hypotensive agents.",
-            "Loop Diuretics: May diminish the hypoglycemic effect of hypoglycemic agents.",
-            "MAO Inhibitors: May enhance the hypoglycemic effect of hypoglycemic agents.",
-            "Selective Serotonin Reuptake Inhibitors:- May enhance the hypoglycemic effect of hypoglycemic agents.",
-          ]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATION:",
-          innerData: "Pregnancy: There are no adequate well controlled studies in pregnant women. Use during pregnancy only if the potential benefit justifies the potential risk to fetus.Nursing mother: Discontinue Dapazin or discontinue nursing.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "OVERDOSE",
-          innerData: "There were no reports of overdose during the clinical development program for Dapagliflozin.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
-          innerData: "Dapazin® 5 tablet: Each box containing 2 X 14’s tablet in Alu-Alu blister strips.Dapazin® 10 tablet: Each box containing 1 X 14’s tablet in Alu-Alu blister strips.",
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "",
-          innerData: ``,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "",
-          innerData: ``,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
+  //     ],
+  //     innerdata1:[
+  //       {
+  //         innerHead: "DOSAGE & ADMINISTRATION",
+  //         innerData: ``,
+  //         istable: false,
+  //         table: {},
+  //         islist: true,
+  //         listData:[
+  //           "The recommended starting dose is 5 mg once daily, taken in the morning, with or without food.",
+  //           "Dose can be increased to 10 mg once daily in patients who require additional glycemic control.",
+  //           "Assess renal function before initiating Dapazin. Do not initiate Dapazin if eGFR is below 60 mL/min/1.73 m².",
+  //           "Discontinue Dapazin if eGFR falls persistently below 60 mL/min/1.73 m².",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "SIDE EFFECTS",
+  //         innerData: "Dapagliflozin may cause female genital mycotic infections, nasopharyngitis and urinary tract infections.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "DRUG INTERACTIONS",
+  //         innerData: ``,
+  //         istable: false,
+  //         table: {},
+  //         islist: true,
+  //         listData:[
+  //           "Hypoglycemic Agents: May enhance the adverse/toxic effect of other hypoglycemic agents.",
+  //           "Hypotensive Agents: May enhance the adverse/toxic effect of other hypotensive agents.",
+  //           "Loop Diuretics: May diminish the hypoglycemic effect of hypoglycemic agents.",
+  //           "MAO Inhibitors: May enhance the hypoglycemic effect of hypoglycemic agents.",
+  //           "Selective Serotonin Reuptake Inhibitors:- May enhance the hypoglycemic effect of hypoglycemic agents.",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "USE IN PREGNANCY AND LACTATION:",
+  //         innerData: "Pregnancy: There are no adequate well controlled studies in pregnant women. Use during pregnancy only if the potential benefit justifies the potential risk to fetus.Nursing mother: Discontinue Dapazin or discontinue nursing.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "OVERDOSE",
+  //         innerData: "There were no reports of overdose during the clinical development program for Dapagliflozin.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "STORAGE",
+  //         innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "COMMERCIAL PACK",
+  //         innerData: "Dapazin® 5 tablet: Each box containing 2 X 14’s tablet in Alu-Alu blister strips.Dapazin® 10 tablet: Each box containing 1 X 14’s tablet in Alu-Alu blister strips.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "",
+  //         innerData: ``,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "",
+  //         innerData: ``,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
         
-      ],
-    btn: "Read More",
-    backpagename: "First Time Launching",
-    backpagelink: "/products_firsttime",
-    btnlink: "#",
-    type: 'Tablet'
-  },
+  //     ],
+  //   btn: "Read More",
+  //   backpagename: "First Time Launching",
+  //   backpagelink: "/products_firsttime",
+  //   btnlink: "/dapzine-tablet",
+  //   type: 'Tablet'
+  // },
+
+  // {
+  //   id: 4,
+  //   title: "Dapazin 10 Tablet",
+  //   text1: "Vitamin & Minerals",
+  //   text2: "Dapagliflozin INN 10 mg",
+  //   img: [
+  //     {
+  //       id: 4,
+  //       imgf: dapazin10fr,
+  //       imge: dapazin10bk,
+  //     },
+  //   ],
+  //   innerMainHeading: "Dapazin 10",
+  //     innerComposition: "Dapagliflozin INN",
+  //     innerdata:[
+  //       {
+  //         innerHead: "PRESENTATION",
+  //         innerData: ``,
+  //         istable: false,
+  //         table: {},
+  //         islist: true,
+  //         listData:[
+  //           "Dapazin® 5 tablet: Each film coated tablet contains Dapagliflozin INN 5 mg.",
+  //           "Dapazin® 10 tablet: Each film coated tablet contains Dapagliflozin INN 10 mg.",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "PHARMACOLOGY:",
+  //         innerData: "Dapazin® (Dapagliflozin) helps lower blood glucose levels by helping the body to filter more excess glucose out of the blood. Sodium-glucose co transporter 2 (SGLT2), expressed in the proximal renal tubules, is responsible for the majority of the re-absorption of filtered glucose from the tubular lumen. Dapagliflozin is an inhibitor of SGLT2. By inhibiting SGLT2, Dapagliflozin reduces reabsorption of filtered glucose and lowers the renal threshold for glucose, and thereby increases urinary glucose excretion.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "INDICATIONS",
+  //         innerData: "Dapazin® (Dapagliflozin) is indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.Limitation of Use: Dapagliflozin is not recommended for  patients with type 1 diabetes mellitus or for the treatment of diabetic ketoacidosis.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+        
+  //     ],
+  //     innerdata1:[
+  //       {
+  //         innerHead: "DOSAGE & ADMINISTRATION",
+  //         innerData: ``,
+  //         istable: false,
+  //         table: {},
+  //         islist: true,
+  //         listData:[
+  //           "The recommended starting dose is 5 mg once daily, taken in the morning, with or without food.",
+  //           "Dose can be increased to 10 mg once daily in patients who require additional glycemic control.",
+  //           "Assess renal function before initiating Dapazin. Do not initiate Dapazin if eGFR is below 60 mL/min/1.73 m².",
+  //           "Discontinue Dapazin if eGFR falls persistently below 60 mL/min/1.73 m².",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "SIDE EFFECTS",
+  //         innerData: "Dapagliflozin may cause female genital mycotic infections, nasopharyngitis and urinary tract infections.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "DRUG INTERACTIONS",
+  //         innerData: ``,
+  //         istable: false,
+  //         table: {},
+  //         islist: true,
+  //         listData:[
+  //           "Hypoglycemic Agents: May enhance the adverse/toxic effect of other hypoglycemic agents.",
+  //           "Hypotensive Agents: May enhance the adverse/toxic effect of other hypotensive agents.",
+  //           "Loop Diuretics: May diminish the hypoglycemic effect of hypoglycemic agents.",
+  //           "MAO Inhibitors: May enhance the hypoglycemic effect of hypoglycemic agents.",
+  //           "Selective Serotonin Reuptake Inhibitors:- May enhance the hypoglycemic effect of hypoglycemic agents.",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "USE IN PREGNANCY AND LACTATION:",
+  //         innerData: "Pregnancy: There are no adequate well controlled studies in pregnant women. Use during pregnancy only if the potential benefit justifies the potential risk to fetus.Nursing mother: Discontinue Dapazin or discontinue nursing.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "OVERDOSE",
+  //         innerData: "There were no reports of overdose during the clinical development program for Dapagliflozin.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "STORAGE",
+  //         innerData: "Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "COMMERCIAL PACK",
+  //         innerData: "Dapazin® 5 tablet: Each box containing 2 X 14’s tablet in Alu-Alu blister strips.Dapazin® 10 tablet: Each box containing 1 X 14’s tablet in Alu-Alu blister strips.",
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "",
+  //         innerData: ``,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "",
+  //         innerData: ``,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+        
+  //     ],
+  //   btn: "Read More",
+  //   backpagename: "First Time Launching",
+  //   backpagelink: "/products_firsttime",
+  //   btnlink: "#",
+  //   type: 'Tablet'
+  // },
+  // Dapzin Cut End
+
   {
     id: 5,
     title: "Dopagut 60 ml Syrup",
@@ -941,327 +945,330 @@ export const FirstTime = [
     type: 'Syrup'
   },
 
-  {
-    id: 6,
-    title: "Relikof 2.5 Syrup",
-    text1: "Citric Acid Monohydrate BP",
-    text2: "31.25 mg/ 5 ml",
-    img: [
-      {
-        id: 6,
-        imgf: relikof25fr,
-        imge: relikof25bk,
-      },
-    ],
-    innerMainHeading: "Relikof® Kidz Linctus",
-      innerComposition: "Citric Acid Monohydrate BP",
-      innerdata:[
-        {
-          innerHead: "COMPOSITION",
-          innerData: `Relikof® Kidz Linctus: Each 5 ml Linctus contains Citric Acid Monohydrate BP 31.25 mg.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: `Relikof® kidz linctus contains Citric Acid Monohydrate BP which is moderately transparent, slightly yellowish, natural Anise flavored sugar free Linctus. It acts as demulent& forms a protective film on surface of respiratory mucus membrane. This Relikof® Kidz Linctus provides a soothing effect on throat relieving irritating dry cough.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "INDICATION",
-          innerData: `Relikof® linctus is indicated for relief of all types of non productive (dry) coughs, specially-`,
-          istable: false,
-          table: {},
-          islist: true,
-          listData:[
-            "Environment induced dry cough",
-            "Cold induced dry cough",
-            "Irritating dry cough",
-            "Allergic dry cough",
-          ]
-        },
+  // Relikof Cut
+  // {
+  //   id: 6,
+  //   title: "Relikof 2.5 Syrup",
+  //   text1: "Citric Acid Monohydrate BP",
+  //   text2: "31.25 mg/ 5 ml",
+  //   img: [
+  //     {
+  //       id: 6,
+  //       imgf: relikof25fr,
+  //       imge: relikof25bk,
+  //     },
+  //   ],
+  //   innerMainHeading: "Relikof® Kidz Linctus",
+  //     innerComposition: "Citric Acid Monohydrate BP",
+  //     innerdata:[
+  //       {
+  //         innerHead: "COMPOSITION",
+  //         innerData: `Relikof® Kidz Linctus: Each 5 ml Linctus contains Citric Acid Monohydrate BP 31.25 mg.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "PHARMACOLOGY",
+  //         innerData: `Relikof® kidz linctus contains Citric Acid Monohydrate BP which is moderately transparent, slightly yellowish, natural Anise flavored sugar free Linctus. It acts as demulent& forms a protective film on surface of respiratory mucus membrane. This Relikof® Kidz Linctus provides a soothing effect on throat relieving irritating dry cough.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "INDICATION",
+  //         innerData: `Relikof® linctus is indicated for relief of all types of non productive (dry) coughs, specially-`,
+  //         istable: false,
+  //         table: {},
+  //         islist: true,
+  //         listData:[
+  //           "Environment induced dry cough",
+  //           "Cold induced dry cough",
+  //           "Irritating dry cough",
+  //           "Allergic dry cough",
+  //         ]
+  //       },
         
-      ],
-      innerdata1:[
-        {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: `Child (1 month-12 Years): Relikof® Kidz Linctus 5-10 ml (1-2 teaspoon), 3-4 times daily.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "SIDE-EFFECTS",
-          innerData: `There are no known side effects from using this medicine. However, if you notice any side effects, stop use and consult a doctor or pharmacist.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "CONTRAINDICATIONS",
-          innerData: `Contraindicated in patients having hypersensitivity to any of the ingredients of Citric Acid Monohydrate .`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "PRECAUTIONS",
-          innerData: `Consult a doctor if cough symptoms persist for more than 5 days.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATION",
-          innerData: `There are no enough data from the use of Citric Acid Monohydrate in pregnant women. There is insufficient information on the excretion of Citric Acid Monohydrate metabolites in Human milk.  If necessary, it can used with the consultation of physician.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "DRUG INTERACTION",
-          innerData: `No clinically significant interactions have found.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "OVERDOSE",
-          innerData: `Overdose with this preparation is unlikely to occur due to the low concentrations of the ingredients.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: `Store in a cool (Below 30⁰C Temp.) & dry place, protect from light. Keep out of the reach of children.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
-          innerData: `Relikof® Kidz Linctus: Each bottle contains 100 ml linctus with a measuring cup.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
+  //     ],
+  //     innerdata1:[
+  //       {
+  //         innerHead: "DOSAGE AND ADMINISTRATION",
+  //         innerData: `Child (1 month-12 Years): Relikof® Kidz Linctus 5-10 ml (1-2 teaspoon), 3-4 times daily.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "SIDE-EFFECTS",
+  //         innerData: `There are no known side effects from using this medicine. However, if you notice any side effects, stop use and consult a doctor or pharmacist.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "CONTRAINDICATIONS",
+  //         innerData: `Contraindicated in patients having hypersensitivity to any of the ingredients of Citric Acid Monohydrate .`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "PRECAUTIONS",
+  //         innerData: `Consult a doctor if cough symptoms persist for more than 5 days.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "USE IN PREGNANCY AND LACTATION",
+  //         innerData: `There are no enough data from the use of Citric Acid Monohydrate in pregnant women. There is insufficient information on the excretion of Citric Acid Monohydrate metabolites in Human milk.  If necessary, it can used with the consultation of physician.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "DRUG INTERACTION",
+  //         innerData: `No clinically significant interactions have found.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "OVERDOSE",
+  //         innerData: `Overdose with this preparation is unlikely to occur due to the low concentrations of the ingredients.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "STORAGE",
+  //         innerData: `Store in a cool (Below 30⁰C Temp.) & dry place, protect from light. Keep out of the reach of children.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "COMMERCIAL PACK",
+  //         innerData: `Relikof® Kidz Linctus: Each bottle contains 100 ml linctus with a measuring cup.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
         
-      ],
-    btn: "Read More",
-    backpagename: "First Time Launching",
-    backpagelink: "/products_firsttime",
-    btnlink: "/relikof-syrup",
-    type: 'Syrup'
-  },
+  //     ],
+  //   btn: "Read More",
+  //   backpagename: "First Time Launching",
+  //   backpagelink: "/products_firsttime",
+  //   btnlink: "/relikof-syrup",
+  //   type: 'Syrup'
+  // },
 
-  {
-    id: 7,
-    title: "Relikof Kidz Syrup",
-    text1: "Citric Acid Monohydrate BP",
-    text2: "125 mg/ 5 ml",
-    img: [
-      {
-        id: 7,
-        imgf: relikofkidzfr,
-        imge: relikofkidzbk,
-      },
-    ],
-    innerMainHeading: "Relikof® Kidz Linctus",
-      innerComposition: "Citric Acid Monohydrate BP",
-      innerdata:[
-        {
-          innerHead: "COMPOSITION",
-          innerData: `Relikof® Kidz Linctus: Each 5 ml Linctus contains Citric Acid Monohydrate BP 31.25 mg.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "PHARMACOLOGY",
-          innerData: `Relikof® kidz linctus contains Citric Acid Monohydrate BP which is moderately transparent, slightly yellowish, natural Anise flavored sugar free Linctus. It acts as demulent& forms a protective film on surface of respiratory mucus membrane. This Relikof® Kidz Linctus provides a soothing effect on throat relieving irritating dry cough.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "INDICATION",
-          innerData: `Relikof® linctus is indicated for relief of all types of non productive (dry) coughs, specially-`,
-          istable: false,
-          table: {},
-          islist: true,
-          listData:[
-            "Environment induced dry cough",
-            "Cold induced dry cough",
-            "Irritating dry cough",
-            "Allergic dry cough",
-          ]
-        },
+
+  // {
+  //   id: 7,
+  //   title: "Relikof Kidz Syrup",
+  //   text1: "Citric Acid Monohydrate BP",
+  //   text2: "125 mg/ 5 ml",
+  //   img: [
+  //     {
+  //       id: 7,
+  //       imgf: relikofkidzfr,
+  //       imge: relikofkidzbk,
+  //     },
+  //   ],
+  //   innerMainHeading: "Relikof® Kidz Linctus",
+  //     innerComposition: "Citric Acid Monohydrate BP",
+  //     innerdata:[
+  //       {
+  //         innerHead: "COMPOSITION",
+  //         innerData: `Relikof® Kidz Linctus: Each 5 ml Linctus contains Citric Acid Monohydrate BP 31.25 mg.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "PHARMACOLOGY",
+  //         innerData: `Relikof® kidz linctus contains Citric Acid Monohydrate BP which is moderately transparent, slightly yellowish, natural Anise flavored sugar free Linctus. It acts as demulent& forms a protective film on surface of respiratory mucus membrane. This Relikof® Kidz Linctus provides a soothing effect on throat relieving irritating dry cough.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "INDICATION",
+  //         innerData: `Relikof® linctus is indicated for relief of all types of non productive (dry) coughs, specially-`,
+  //         istable: false,
+  //         table: {},
+  //         islist: true,
+  //         listData:[
+  //           "Environment induced dry cough",
+  //           "Cold induced dry cough",
+  //           "Irritating dry cough",
+  //           "Allergic dry cough",
+  //         ]
+  //       },
         
-      ],
-      innerdata1:[
-        {
-          innerHead: "DOSAGE AND ADMINISTRATION",
-          innerData: `Child (1 month-12 Years): Relikof® Kidz Linctus 5-10 ml (1-2 teaspoon), 3-4 times daily.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "SIDE-EFFECTS",
-          innerData: `There are no known side effects from using this medicine. However, if you notice any side effects, stop use and consult a doctor or pharmacist.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "CONTRAINDICATIONS",
-          innerData: `Contraindicated in patients having hypersensitivity to any of the ingredients of Citric Acid Monohydrate .`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "PRECAUTIONS",
-          innerData: `Consult a doctor if cough symptoms persist for more than 5 days.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "USE IN PREGNANCY AND LACTATION",
-          innerData: `There are no enough data from the use of Citric Acid Monohydrate in pregnant women. There is insufficient information on the excretion of Citric Acid Monohydrate metabolites in Human milk.  If necessary, it can used with the consultation of physician.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "DRUG INTERACTION",
-          innerData: `No clinically significant interactions have found.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "OVERDOSE",
-          innerData: `Overdose with this preparation is unlikely to occur due to the low concentrations of the ingredients.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "STORAGE",
-          innerData: `Store in a cool (Below 30⁰C Temp.) & dry place, protect from light. Keep out of the reach of children.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
-        {
-          innerHead: "COMMERCIAL PACK",
-          innerData: `Relikof® Kidz Linctus: Each bottle contains 100 ml linctus with a measuring cup.`,
-          istable: false,
-          table: {},
-          islist: false,
-          listData:[
-            "",
-            "",
-          ]
-        },
+  //     ],
+  //     innerdata1:[
+  //       {
+  //         innerHead: "DOSAGE AND ADMINISTRATION",
+  //         innerData: `Child (1 month-12 Years): Relikof® Kidz Linctus 5-10 ml (1-2 teaspoon), 3-4 times daily.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "SIDE-EFFECTS",
+  //         innerData: `There are no known side effects from using this medicine. However, if you notice any side effects, stop use and consult a doctor or pharmacist.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "CONTRAINDICATIONS",
+  //         innerData: `Contraindicated in patients having hypersensitivity to any of the ingredients of Citric Acid Monohydrate .`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "PRECAUTIONS",
+  //         innerData: `Consult a doctor if cough symptoms persist for more than 5 days.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "USE IN PREGNANCY AND LACTATION",
+  //         innerData: `There are no enough data from the use of Citric Acid Monohydrate in pregnant women. There is insufficient information on the excretion of Citric Acid Monohydrate metabolites in Human milk.  If necessary, it can used with the consultation of physician.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "DRUG INTERACTION",
+  //         innerData: `No clinically significant interactions have found.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "OVERDOSE",
+  //         innerData: `Overdose with this preparation is unlikely to occur due to the low concentrations of the ingredients.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "STORAGE",
+  //         innerData: `Store in a cool (Below 30⁰C Temp.) & dry place, protect from light. Keep out of the reach of children.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
+  //       {
+  //         innerHead: "COMMERCIAL PACK",
+  //         innerData: `Relikof® Kidz Linctus: Each bottle contains 100 ml linctus with a measuring cup.`,
+  //         istable: false,
+  //         table: {},
+  //         islist: false,
+  //         listData:[
+  //           "",
+  //           "",
+  //         ]
+  //       },
         
-      ],
-    btn: "Read More",
-    backpagename: "First Time Launching",
-    backpagelink: "/products_firsttime",
-    btnlink: "/relikof-kids-syrup",
-    type: 'Syrup'
-  },
+  //     ],
+  //   btn: "Read More",
+  //   backpagename: "First Time Launching",
+  //   backpagelink: "/products_firsttime",
+  //   btnlink: "/relikof-kids-syrup",
+  //   type: 'Syrup'
+  // },
+// Relikof Cut End
 
   {
     id: 8,

@@ -34,7 +34,7 @@ const Sitemap = () => {
 
 
 
-<img alt="" src={sitemap} usemap="#image-map" />
+{/* <img alt="" src={sitemap} usemap="#image-map" />
 
 <map name="image-map">
     <Link to='/'><area target="_blank" alt="Home" title="Home" coords="628,0,751,40" shape="rect"/></Link>
@@ -66,8 +66,82 @@ const Sitemap = () => {
     <Link to='#'><area target="_blank" alt="Social Responsibilities" title="Social Responsibilities"  coords="786,472,977,508" shape="rect"/></Link>
     <Link to='/facilities_ourdistribution'><area target="_blank" alt="Our Distribution Network" title="Our Distribution Network"  coords="1018,172,1205,211" shape="rect"/></Link>
     <Link to='/contact_contactus'><area target="_blank" alt="Contact Us" title="Contact Us"  coords="1017,249,1207,282" shape="rect"/></Link>
-</map> 
+</map>  */}
+{/* <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 1380 511">
+  <image width="1380" height="511" xlinkHref={sitemap}></image> <Link to="/about">
+    <rect x="0" y="77" fill="#fff" opacity="0" width="123" height="50"></rect>
+  </Link><a xlinkHref="#">
+    <rect x="149" y="77" fill="#fff" opacity="0" width="211" height="50"></rect>
+  </a>
+</svg> */}
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 1380 511">
+  <image width="1380" height="511" xlinkHref={sitemap}></image> <Link to="/about">
+    <rect x="0" y="77" fill="#fff" opacity="0" width="123" height="50"></rect>
+  </Link><Link to="/globalOperations">
+    <rect x="149" y="77" fill="#fff" opacity="0" width="211" height="50"></rect>
+  </Link><Link to="/products">
+    <rect x="386" y="78" fill="#fff" opacity="0" width="135" height="50"></rect>
+  </Link><Link to="/facilities">
+    <rect x="541" y="75" fill="#fff" opacity="0" width="128" height="50"></rect>
+  </Link><a xlinkHref="https://www.mdxdmfr.com" target="_blank">
+    <rect x="722" y="77" fill="#fff" opacity="0" width="171" height="50"></rect>
+  </a><Link to="/media">
+    <rect x="948" y="78" fill="#fff" opacity="0" width="100" height="52"></rect>
+  </Link><Link to="/contact">
+    <rect x="1100" y="77" fill="#fff" opacity="0" width="125" height="50"></rect>
+  </Link><Link to="/careers">
+    <rect x="1260" y="77" fill="#fff" opacity="0" width="118" height="50"></rect>
+  </Link><Link to="/about_vision_mission">
+    <rect x="77" y="166" fill="#fff" opacity="0" width="184" height="50"></rect>
+  </Link><Link to="/products_bytrade">
+    <rect x="311" y="166" fill="#fff" opacity="0" width="193" height="50"></rect>
+  </Link><Link to="/facilities_researchdevrsttime">
+    <rect x="558" y="166" fill="#fff" opacity="0" width="189" height="50"></rect>
+  </Link><Link to="#">
+    <rect x="782" y="166" fill="#fff" opacity="0" width="198" height="50"></rect>
+  </Link><Link to="/facilities_ourdistribution">
+    <rect x="1014" y="165" fill="#fff" opacity="0" width="191" height="50"></rect>
+  </Link><Link to="#">
+    <rect x="78" y="241" fill="#fff" opacity="0" width="192" height="50"></rect>
+  </Link><Link to="/products_bygeneric">
+    <rect x="313" y="240" fill="#fff" opacity="0" width="195" height="50"></rect>
+  </Link><Link to="/facilities_product">
+    <rect x="558" y="242" fill="#fff" opacity="0" width="191" height="50"></rect>
+  </Link><Link to="/media_photo">
+    <rect x="785" y="239" fill="#fff" opacity="0" width="194" height="50"></rect>
+  </Link><Link to="/contact_contactus">
+    <rect x="1015" y="241" fill="#fff" opacity="0" width="194" height="50"></rect>
+  </Link><Link to="/about_chairmen_profile">
+    <rect x="76" y="315" fill="#fff" opacity="0" width="184" height="50"></rect>
+  </Link><Link to="/products_therapeutic">
+    <rect x="314" y="318" fill="#fff" opacity="0" width="189" height="50"></rect>
+  </Link><Link to="/facilities_quality">
+    <rect x="560" y="318" fill="#fff" opacity="0" width="182" height="50"></rect>
+  </Link><Link to="/media_socialmedia">
+    <rect x="782" y="317" fill="#fff" opacity="0" width="193" height="50"></rect>
+  </Link><Link to="/about_message_chairmen">
+    <rect x="78" y="393" fill="#fff" opacity="0" width="185" height="50"></rect>
+  </Link><Link to="/products_firsttime">
+    <rect x="313" y="394" fill="#fff" opacity="0" width="191" height="50"></rect>
+  </Link><Link to="/facilities_warhouse">
+    <rect x="558" y="392" fill="#fff" opacity="0" width="187" height="50"></rect>
+  </Link><Link to="/media_milestone">
+    <rect x="788" y="390" fill="#fff" opacity="0" width="188" height="50"></rect>
+  </Link><Link to="/facilities_ourdistribution">
+    <rect x="555" y="461" fill="#fff" opacity="0" width="191" height="50"></rect>
+  </Link><Link to="#">
+    <rect x="788" y="461" fill="#fff" opacity="0" width="192" height="50"></rect>
+  </Link><Link to="/">
+    <rect x="624" y="0" fill="#fff" opacity="0" width="134" height="50"></rect>
+  </Link>
+</svg>
+
+
 </div>
+
+
 
       <CompanyLogos />
     </div>
