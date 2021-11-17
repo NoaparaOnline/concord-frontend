@@ -166,6 +166,7 @@ const Notifications = (props) => {
   useEffect(() => {
     setSelectedTab("All Notifications");
   }, []);
+ 
 
 
   const tabHandler = async (item) => {
