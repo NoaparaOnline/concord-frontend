@@ -25,8 +25,9 @@ const SERVICE_URLS = {
   getproductsnew: "products/read/medicine/new",
   getdepartmenthead: "department_heads/read",
   getdistributioncenter: "distribution_centres/read",
-  notificationall: "notifications/read",
-  notificationrecent: "notifications/read?is_seen=0",
+  getallNotification: "notifications/read",
+  // seeAllNotification: "notifications/read",
+  seeAllNotification: "notifications/read?is_seen=0",
 
 };
 
@@ -106,6 +107,7 @@ const SchedulesApprovalStatusChanges = (data) =>
   get(SERVICE_URLS.getproductsall, {}, { feature: featureConstants.static });
 
   const getproductsnew = () =>
+
   get(SERVICE_URLS.getproductsnew, {}, { feature: featureConstants.static });
 
   const getdepartmenthead = () =>
@@ -113,6 +115,16 @@ const SchedulesApprovalStatusChanges = (data) =>
 
   const getdistributioncenter = () =>
   get(SERVICE_URLS.getdistributioncenter, {}, { feature: featureConstants.static });
+
+
+  const getallNotification = () =>
+  get(SERVICE_URLS.getallNotification, {}, {
+    feature: featureConstants.static,
+  });
+  const seeAllNotification = () =>
+  get(SERVICE_URLS.seeAllNotification, {}, {
+    feature: featureConstants.static,
+  });
 
 
 //=========================
@@ -141,6 +153,7 @@ const apiServices = {
   getproductsnew,
   getdepartmenthead,
   getdistributioncenter,
-
+  getallNotification,
+  seeAllNotification,
 };
 export default apiServices;

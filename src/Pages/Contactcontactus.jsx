@@ -27,7 +27,6 @@ const Contact_contactus = () => {
     Subject: "",
     Message: "",
   });
-  console.log("state", state);
   const handleChange = (evt) => {
     const value = evt.target.value;
     setState({

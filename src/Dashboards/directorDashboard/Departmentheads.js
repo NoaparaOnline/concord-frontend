@@ -36,7 +36,6 @@ const Departmentheads = (
             .toLowerCase()
             .includes(searchInput3.toLowerCase());
         });
-        console.log("filteredData", filteredData);
         setFilteredResults3(filteredData);
       } else {
         setFilteredResults3(departmenthead);

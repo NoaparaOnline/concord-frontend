@@ -7,7 +7,6 @@ import { ByGeneric } from "../components/HomeComponents/ProductsData/productbyge
 import ReactPaginate from 'react-paginate';
 
 const Products_bygeneric = (props) => {
-  console.log(props,"Card OAge");
   const LinksBan = [
     {
       subLinkName: "Home",

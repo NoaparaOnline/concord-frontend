@@ -11,11 +11,11 @@ const ScheduleInnerPage = (props) => {
   const scheduleidstate = useSelector(
     (state) => state?.director?.scheduleidstate
   );
+ 
 
   useEffect(() => {
   }, [])
 
-  console.log("scheduleidstate", scheduleidstate);
   const emptyDataMessage = () => { return 'No Data to Display';}
   return (
     <>
