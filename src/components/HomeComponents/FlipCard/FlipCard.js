@@ -5,9 +5,7 @@ import { useDispatch } from "react-redux";
 import { getSingleProductDataObj } from "../../../Store/Actions/directorActions";
 
 const FlipCard = (props) => {
-  console.log(props,"Flip CARD YAY!!");
   const { card } = props;
-  console.log(card,"FLip card");
   const { title, text1, text2, img, btn, btnlink, innerdata } = card;
   const dispatch = useDispatch();
   return (

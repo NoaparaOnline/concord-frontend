@@ -410,3 +410,8 @@ img {max-width: 100%; }
   
  
 }
+.center-childrens {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}

@@ -26,7 +26,6 @@ const StatuschangedModal = (props) => {
       payment_status: dropdown2,
       uid: productuid.uid,
     }
-    console.log("apiData",apiData)
     dispatch(statusChange(apiData));
     props.onHide();
   };
