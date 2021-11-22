@@ -27,7 +27,7 @@ const SERVICE_URLS = {
   getdistributioncenter: "distribution_centres/read",
   getallNotification: "notifications/read",
   // seeAllNotification: "notifications/read",
-  seeAllNotification: "notifications/read?is_seen=0",
+  seeAllNotification: "notifications/read?is_seen=1",
 
 };
 

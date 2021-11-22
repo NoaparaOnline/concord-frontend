@@ -18,8 +18,8 @@ export const getSchedule = (uid) => async (dispatch) => {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
       // `https://concord-backend-prod.herokuapp.com/api/schedules/read?child_uid=${uid}`,
-      // `https://concord-backend-m1.herokuapp.com/api/schedules/read?child_uid=${uid}`,
-      `https://concord-backend-m2.herokuapp.com/api/schedules/read?child_uid=${uid}`,
+      `https://concord-backend-m1.herokuapp.com/api/schedules/read?child_uid=${uid}`,
+      // `https://concord-backend-m2.herokuapp.com/api/schedules/read?child_uid=${uid}`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {
@@ -70,8 +70,8 @@ export const getDoctors = (uid) => async (dispatch) => {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
       // `https://concord-backend-prod.herokuapp.com/api/doctors/read?child_uid=${uid}`,
-      // `https://concord-backend-m1.herokuapp.com/api/doctors/read?child_uid=${uid}`,
-      `https://concord-backend-m2.herokuapp.com/api/doctors/read?child_uid=${uid}`,
+      `https://concord-backend-m1.herokuapp.com/api/doctors/read?child_uid=${uid}`,
+      // `https://concord-backend-m2.herokuapp.com/api/doctors/read?child_uid=${uid}`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {
@@ -104,8 +104,8 @@ export const getCustomers = (uid) => async (dispatch) => {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
       // `https://concord-backend-prod.herokuapp.com/api/customers/read?child_uid=${uid}`,
-      // `https://concord-backend-m1.herokuapp.com/api/customers/read?child_uid=${uid}`,
-      `https://concord-backend-m2.herokuapp.com/api/customers/read?child_uid=${uid}`,
+      `https://concord-backend-m1.herokuapp.com/api/customers/read?child_uid=${uid}`,
+      // `https://concord-backend-m2.herokuapp.com/api/customers/read?child_uid=${uid}`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {
@@ -247,8 +247,8 @@ export const getAssignedto = () => async (dispatch) => {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
       // `https://concord-backend-prod.herokuapp.com/api/fieldstaffs/childs`,
-      // `https://concord-backend-m1.herokuapp.com/api/fieldstaffs/childs`,
-      `https://concord-backend-m2.herokuapp.com/api/fieldstaffs/childs`,
+      `https://concord-backend-m1.herokuapp.com/api/fieldstaffs/childs`,
+      // `https://concord-backend-m2.herokuapp.com/api/fieldstaffs/childs`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {
@@ -269,8 +269,8 @@ export const getChildsData = (uid, role) => async (dispatch) => {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
       // `https://concord-backend-prod.herokuapp.com/api/fieldstaffs/childs?child_uid=${uid}`,
-      // `https://concord-backend-m1.herokuapp.com/api/fieldstaffs/childs?child_uid=${uid}`,
-      `https://concord-backend-m2.herokuapp.com/api/fieldstaffs/childs?child_uid=${uid}`,
+      `https://concord-backend-m1.herokuapp.com/api/fieldstaffs/childs?child_uid=${uid}`,
+      // `https://concord-backend-m2.herokuapp.com/api/fieldstaffs/childs?child_uid=${uid}`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {
@@ -306,8 +306,8 @@ export const getSingleScheduleDetail = (data) => (dispatch) => {
 export const SendGridMailApi = (data) => async (dispatch) => {
   axios
     // .post("https://concord-backend-prod.herokuapp.com/api/users/mail/send", data,)
-    // .post("https://concord-backend-m1.herokuapp.com/api/users/mail/send", data,)
-    .post("https://concord-backend-m2.herokuapp.com/api/users/mail/send", data,)
+    .post("https://concord-backend-m1.herokuapp.com/api/users/mail/send", data,)
+    // .post("https://concord-backend-m2.herokuapp.com/api/users/mail/send", data,)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
     })

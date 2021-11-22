@@ -37,7 +37,7 @@ import ProductsCardInnerPage from "./Pages/ProductsCardInnerPage";
 import ResetPassword from "./Pages/ResetPassword";
 import { getUser } from "./Store/Actions/loginActions";
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import DepotmanagerDashboard from "./Dashboards/depotmanagerDashboard/depotmanagerDashboard";
 import DirectorDashboard from "./Dashboards/directorDashboard/directorDashboard";
 import { messaging, test } from "./init-fcm";
@@ -77,9 +77,32 @@ function App() {
       .catch(function (err) {
         console.log("Unable to get permission to notify.", err);
       });
-    navigator?.serviceWorker.addEventListener("message", (message) =>
-      console.log(message)
-    );
+    
+
+      navigator?.serviceWorker?.addEventListener("message", (message) => {
+        console.log(message,"message")
+        if (!("Notification" in window)) {
+          toast.error("This browser does not support desktop notification");
+        } else if (Notification.permission === "granted") {
+          const noti = new Notification(
+            message?.data?.["firebase-messaging-msg-data"]?.notification?.title,
+            {
+              icon: message?.data?.["firebase-messaging-msg-data"]?.notification
+                ?.image,
+              body: message?.data?.["firebase-messaging-msg-data"]?.notification
+                ?.body,
+              data: message?.data?.["firebase-messaging-msg-data"]?.data,
+            }
+          );
+          noti.onclick = (event) => {
+            console.log(event, "Notification clicked.");
+            // if (event?.currentTarget?.data?.url) {
+            //   window.location.href = event?.currentTarget?.data?.url;
+            // }
+          };
+        }
+      });
+
     window.scrollTo(0, 0);
   }, [dispatch]);
 
