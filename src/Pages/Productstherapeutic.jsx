@@ -19,23 +19,17 @@ const Products_therapeutic = (props) => {
       subLink: "/products",
     },
   ];
-  
-  
-  
-    const [selectedClass, setSelectedClass] = useState("all");
-  
-  
-    
-    let [obj, setObj] = useState(ByTherapeutic);
-    
-    
-    let filterClass = selectedClass === "all" ? obj :
-    obj?.filter((item)=>(
-      item?.theraputic_class === selectedClass 
-      ))
-  
 
-  console.log(filterClass,"filterClass")
+  const [selectedClass, setSelectedClass] = useState("all");
+
+  let [obj, setObj] = useState(ByTherapeutic);
+
+  let filterClass =
+    selectedClass === "all"
+      ? obj
+      : obj?.filter((item) => item?.theraputic_class === selectedClass);
+
+  console.log(filterClass, "filterClass");
 
   const filteredtype = (type) => {
     if (type === "All") {
@@ -75,41 +69,44 @@ const Products_therapeutic = (props) => {
       setPageNumber(0);
     }
   };
-  const [selected, setSelected] = useState(5);
+  const [selected, setSelected] = useState('5');
   let [defaultandfilter, setDefaultandfilter] = useState(obj);
 
   // useEffect(() => {
   //   setDefaultandfilter(obj);
   // }, [obj])
 
-  console.log(selectedClass,"selectedClass")
+  console.log(selectedClass, "selectedClass");
 
   const [pageNumber, setPageNumber] = useState(0);
   const perPage = selected;
   const pageVisited = pageNumber * perPage;
 
-  // defaultandfilter = selectedClass ? filterClass : (selectedClass==="all" || selectedClass===null) ? obj : obj     
+  // defaultandfilter = selectedClass ? filterClass : (selectedClass==="all" || selectedClass===null) ? obj : obj
 
+  console.log(defaultandfilter, "defaultandfilter");
+  const displayUsers =
+    filterClass.length === 0 ? (
+      <div className="d-flex justify-content-center mb-5">
+        <span style={{ fontSize: "30px", color: "#0066b3" }}>
+          No Item Of This Therapeutic Class
+        </span>
+      </div>
+    ) : (
+      filterClass.slice(pageVisited, pageVisited + perPage).map((ob, index) => (
+        <React.Fragment key={ob.id}>
+          <>
+            <div className="col-lg-4 d-none d-lg-block d-md-none">
+              <FlipCard card={ob} {...props} />
+            </div>
 
-  console.log(defaultandfilter,"defaultandfilter")
-  const displayUsers = filterClass.length===0 ? 
-  <div className="d-flex justify-content-center mb-5">
-    <span style={{fontSize:'30px',color:'#0066b3'}} >No Item Of This Therapeutic Class</span>
-  </div>:filterClass  
-    .slice(pageVisited, pageVisited + perPage)
-    .map((ob, index) => (
-      <React.Fragment key={ob.id}>
-        <>
-          <div className="col-lg-4 d-none d-lg-block d-md-none">
-            <FlipCard card={ob} {...props} />
-          </div>
-
-          <div className="col-lg-4 d-lg-none d-sm-block col-md-6">
-            <SingleCard card={ob} {...props} />
-          </div>
-        </>
-      </React.Fragment>
-    ));
+            <div className="col-lg-4 d-lg-none d-sm-block col-md-6">
+              <SingleCard card={ob} {...props} />
+            </div>
+          </>
+        </React.Fragment>
+      ))
+    );
 
   const pageCount = Math.ceil(filterClass.length / perPage);
 
@@ -133,136 +130,165 @@ const Products_therapeutic = (props) => {
       <div className="container mt-5">
         <div className="row">
           <div className="col-sm-12 col-lg-3">
-            
-            
-            <div className="productFilterContent"> 
-
-
-            <div className="productFilterContent1">
-              <h3 className="filterHeading" style={{ fontWeight: "600" }}>
-                Product Categories
-              </h3>
-              <form id="category-radio-btn">
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="all"
-                  name="product-category"
-                  value="1"
-                  defaultChecked
-                  onChange={() => filteredtype("All")}
-                />
-                <label htmlFor="all">All</label>
-                <br />
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="injectables"
-                  name="product-category"
-                  value="2"
-                  onChange={() => filteredtype("Injectables")}
-                />
-                <label htmlFor="injectables">Injectables</label>
-                <br />
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="syrup"
-                  name="product-category"
-                  value="3"
-                  onChange={() => filteredtype("Syrup")}
-                />
-                <label htmlFor="syrup">Syrup</label>
-                <br />
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="tablet"
-                  name="product-category"
-                  value="4"
-                  onChange={() => filteredtype("Tablet")}
-                />
-                <label htmlFor="tablet">Tablet</label>
-                <br />
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="capsule"
-                  name="product-category"
-                  value="5"
-                  onChange={() => filteredtype("Capsule")}
-                />
-                <label htmlFor="capsule">Capsule</label>
-                <br />
-              </form>
+            <div className="mb-3">
+              <label
+                className="my-2"
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  color: "#565656",
+                }}
+              >
+                Products By Therapeutic Class
+              </label>
+              <select
+                className="form-control form-select"
+                name="sm"
+                onChange={(e) => {
+                  setSelectedClass(e.target.value);
+                }}
+                value={selectedClass}
+              >
+                <option disabled selected>
+                  Select ..
+                </option>
+                <option value="all">All</option>
+                <option value="antibiotic">Antibiotic</option>
+                <option value="anthelmentics">Anthelmentics</option>
+                <option value="anti-histamine">Anti-histamine</option>
+                <option value="anti-ulcerant">Anti-ulcerant</option>
+                <option value="anti-diabetic">Anti-diabetic</option>
+                <option value="anti-fungal">Anti-fungal</option>
+                <option value="anti-parasitic">Anti-parasitic</option>
+                <option value="anti-viral">Anti-viral</option>
+                <option value="anti-spasmodic">Anti-spasmodic agent</option>
+                <option value="anti-neuropathic">Anti-neuropathic Agent</option>
+                <option value="antidepressant">
+                  Antidepressant & Anxiolytic
+                </option>
+                <option value="cardiovascular">Cardiovascular Drug</option>
+                <option value="gastroprokinetic">Gastroprokinetic Agent</option>
+                <option value="leukotrine">
+                  Leukotrine receptor antagonist
+                </option>
+                <option value="mucolytic">Mucolytic Agent</option>
+                <option value="pde">PDE inhibitors</option>
+                <option value="nsaids">NSAIDs</option>
+                <option value="hand-sanitizer">
+                  Hand Sanitizer & Anticeptic Agent
+                </option>
+                <option value="vitamin">Vitamin & Minerals</option>
+              </select>
             </div>
-            <div className="">
-            <label className="my-2" style={{fontSize:'18px',fontWeight:'500',color:'#565656'}}>No of Products:</label>
+
+            <div className="productFilterContent">
+              <div className="productFilterContent1">
+                <h3 className="filterHeading" style={{ fontWeight: "600" }}>
+                  Product Categories
+                </h3>
+                <form id="category-radio-btn">
+                  <input
+                    className="me-2"
+                    type="radio"
+                    id="all"
+                    name="product-category"
+                    value="1"
+                    defaultChecked
+                    onChange={() => filteredtype("All")}
+                  />
+                  <label htmlFor="all">All</label>
+                  <br />
+                  <input
+                    className="me-2"
+                    type="radio"
+                    id="injectables"
+                    name="product-category"
+                    value="2"
+                    onChange={() => filteredtype("Injectables")}
+                  />
+                  <label htmlFor="injectables">Injectables</label>
+                  <br />
+                  <input
+                    className="me-2"
+                    type="radio"
+                    id="syrup"
+                    name="product-category"
+                    value="3"
+                    onChange={() => filteredtype("Syrup")}
+                  />
+                  <label htmlFor="syrup">Syrup</label>
+                  <br />
+                  <input
+                    className="me-2"
+                    type="radio"
+                    id="tablet"
+                    name="product-category"
+                    value="4"
+                    onChange={() => filteredtype("Tablet")}
+                  />
+                  <label htmlFor="tablet">Tablet</label>
+                  <br />
+                  <input
+                    className="me-2"
+                    type="radio"
+                    id="capsule"
+                    name="product-category"
+                    value="5"
+                    onChange={() => filteredtype("Capsule")}
+                  />
+                  <label htmlFor="capsule">Capsule</label>
+                  <br />
+                </form>
+              </div>
+              {/* <div className="">
+                <label
+                  className="my-2"
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: "500",
+                    color: "#565656",
+                  }}
+                >
+                  No of Products
+                </label>
                 <select
-            className="form-control form-select"
-            name="sm"
-            onChange={(e) => {
-              setSelected(e.target.value);
-             
-            }}
-            value={selected}
-          >
-            <option selected>5</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-            
-          </select>
+                  className="form-control form-select"
+                  name="sm"
+                  onChange={(e) => {
+                    setSelected(e.target.value);
+                  }}
+                  value={selected}
+                >
+                  <option selected>5</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </div> */}
             </div>
-            
-            <div className="">
-            <label className="my-2" style={{fontSize:'18px',fontWeight:'500',color:'#565656'}}>Products By Therapeutic Class:</label>
-                <select
-            className="form-control form-select"
-            name="sm"
-            onChange={(e) => {
-              setSelectedClass(e.target.value);
-             
-            }}
-            value={selectedClass}
-          >
-            <option disabled selected>Select ..</option>
-            <option value="all">All</option>
-            <option value="antibiotic">Antibiotic</option>
-            <option value="anthelmentics">Anthelmentics</option>
-            <option value="anti-histamine">Anti-histamine</option>
-            <option value="anti-ulcerant">Anti-ulcerant</option>
-            <option value="anti-diabetic">Anti-diabetic</option>
-            <option value="anti-fungal">Anti-fungal</option>
-            <option value="anti-parasitic">Anti-parasitic</option>
-            <option value="anti-viral">Anti-viral</option>
-            <option value="anti-spasmodic">Anti-spasmodic agent</option>
-            <option value="anti-neuropathic">Anti-neuropathic Agent</option>
-            <option value="antidepressant">Antidepressant & Anxiolytic</option>
-            <option value="cardiovascular">Cardiovascular Drug</option>
-            <option value="gastroprokinetic">Gastroprokinetic Agent</option>
-            <option value="leukotrine">Leukotrine receptor antagonist</option>
-            <option value="mucolytic">Mucolytic Agent</option>
-            <option value="pde">PDE inhibitors</option>
-            <option value="nsaids">NSAIDs</option>
-            <option value="hand-sanitizer">Hand Sanitizer & Anticeptic Agent</option>
-            <option value="vitamin">Vitamin & Minerals</option>
-            
-          </select>
-            </div>
-
-            
-            </div>
-
-
-
-
           </div>
 
+
           <div className="col-sm-12 col-lg-9 mt-0">
-            <div className="row">
+            <div className="row mb-3">
+              <div className="col-lg-6">
+                Select Items Per Page
+                <div class="btn-group ms-3" role="group" aria-label="First group">
+                <button className={selected === '5' ? 'btn  btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="5">5</button>
+                <button className={selected === '10' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="10">10</button>
+                <button className={selected === '20' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="20">20</button>
+                <button className={selected === '50' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="50">50</button>
+                <button className={selected === '100' ?'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="100">100</button>
+                
+                </div> 
+              </div>
+              <div className="col-lg-6 d-flex justify-content-end">
+              Item Per Page  : &nbsp; <span style={{fontWeight:'600',color:'#0066b3'}}>{selected}</span>  
+                </div> 
+            </div>
+            <div className="row ">
               {displayUsers}
               <ReactPaginate
                 previousLabel={
