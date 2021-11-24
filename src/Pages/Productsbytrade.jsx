@@ -70,7 +70,7 @@ const Products_bytrade = (props) => {
     }
   }
 
-  const [selected, setSelected] = useState(5);
+  const [selected, setSelected] = useState('5');
 
   const [pageNumber, setPageNumber] = useState(0)
   const perPage = selected;
@@ -191,7 +191,7 @@ return (
 
               </div>
 
-              <div className="">
+              {/* <div className="">
             <label className="my-2" style={{fontSize:'18px',fontWeight:'500',color:'#565656'}}>No of Products:</label>
                 <select
             className="form-control form-select"
@@ -210,11 +210,30 @@ return (
             <option value="100">100</option>
             
           </select>
-            </div>
+            </div> */}
             </div>
           </div>
 
           <div className="col-sm-12 col-lg-9 mt-0">
+
+
+          <div className="row mb-3">
+              <div className="col-lg-6">
+                Select Items Per Page
+                <div class="btn-group ms-3" role="group" aria-label="First group">
+                <button className={selected === '5' ? 'btn  btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="5">5</button>
+                <button className={selected === '10' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="10">10</button>
+                <button className={selected === '20' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="20">20</button>
+                <button className={selected === '50' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="50">50</button>
+                <button className={selected === '100' ?'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="100">100</button>
+                
+                </div> 
+              </div>
+              <div className="col-lg-6 d-flex justify-content-end">
+              Item Per Page  : &nbsp; <span style={{fontWeight:'600',color:'#0066b3'}}>{selected}</span>  
+                </div> 
+            </div>
+
             <div className="cards ">
               <div className="row">
                 {displayUsers}

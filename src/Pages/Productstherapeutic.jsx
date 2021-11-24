@@ -288,6 +288,7 @@ const Products_therapeutic = (props) => {
               Item Per Page  : &nbsp; <span style={{fontWeight:'600',color:'#0066b3'}}>{selected}</span>  
                 </div> 
             </div>
+           
             <div className="row ">
               {displayUsers}
               <ReactPaginate

@@ -4,7 +4,7 @@ import BannerWithText from "../components/ReusableComponents/BannerImgComponents
 import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 import ReactPaginate from 'react-paginate';
-import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
+import { ByGeneric } from "../components/HomeComponents/ProductsData/productbygenricdata";
 
 const Products_bygeneric = (props) => {
   const LinksBan = [
@@ -20,29 +20,29 @@ const Products_bygeneric = (props) => {
     },
   ];
 
-  const [obj, setObj] = useState(ByTherapeutic);
+  const [obj, setObj] = useState(ByGeneric);
   const filteredtype = (type) => {
     if (type === "All") {
-      setObj(ByTherapeutic);
+      setObj(ByGeneric);
       setPageNumber(0);
     } else if (type === "Syrup") {
-      const filterd = ByTherapeutic.filter((category) => category.type === "Syrup");
+      const filterd = ByGeneric.filter((category) => category.type === "Syrup");
       setObj(filterd);
       setPageNumber(0);
     } else if (type === "Tablet") {
-      const filterd = ByTherapeutic.filter(
+      const filterd = ByGeneric.filter(
         (category) => category.type === "Tablet"
       );
       setObj(filterd);
       setPageNumber(0);
     } else if (type === "Capsule") {
-      const filterd = ByTherapeutic.filter(
+      const filterd = ByGeneric.filter(
         (category) => category.type === "Capsule"
       );
       setObj(filterd);
       setPageNumber(0);
     } else if (type === "Injectables") {
-      const filterd = ByTherapeutic.filter(
+      const filterd = ByGeneric.filter(
         (category) => category.type === "Injectables"
       );
       setObj(filterd);
@@ -50,7 +50,7 @@ const Products_bygeneric = (props) => {
     }
   };
 
-  const [selected, setSelected] = useState(5);
+  const [selected, setSelected] = useState('5');
 
 
   const [pageNumber, setPageNumber] = useState(0);
@@ -156,7 +156,7 @@ const Products_bygeneric = (props) => {
                 <br />
               </form>
             </div>
-            <div className="">
+            {/* <div className="">
             <label className="my-2" style={{fontSize:'18px',fontWeight:'500',color:'#565656'}}>No of Products:</label>
                 <select
             className="form-control form-select"
@@ -175,7 +175,7 @@ const Products_bygeneric = (props) => {
             
           </select>
             </div>
-            
+             */}
           
 
             </div>
@@ -183,6 +183,26 @@ const Products_bygeneric = (props) => {
           </div>
 
           <div className="col-sm-12 col-lg-9 mt-0">
+
+
+          
+          <div className="row mb-3">
+              <div className="col-lg-6">
+                Select Items Per Page
+                <div class="btn-group ms-3" role="group" aria-label="First group">
+                <button className={selected === '5' ? 'btn  btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="5">5</button>
+                <button className={selected === '10' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="10">10</button>
+                <button className={selected === '20' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="20">20</button>
+                <button className={selected === '50' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="50">50</button>
+                <button className={selected === '100' ?'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="100">100</button>
+                
+                </div> 
+              </div>
+              <div className="col-lg-6 d-flex justify-content-end">
+              Item Per Page  : &nbsp; <span style={{fontWeight:'600',color:'#0066b3'}}>{selected}</span>  
+                </div> 
+            </div>
+
             <div className="row">
             {displayUsers}
               <ReactPaginate
