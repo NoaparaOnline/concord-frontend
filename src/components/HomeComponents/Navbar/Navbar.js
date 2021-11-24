@@ -19,8 +19,6 @@ import profileLogo from "../../../Statics/assets/profile-logo.png";
 import Notifications from "../../ReusableComponents/modals/Notifications/Notifications";
 import ChangePassword from "../../ReusableComponents/modals/ChangePassword/ChangePassword";
 import SearchBar from "../../ReusableComponents/SearchComponent/SearchBar";
-import { ByTrade } from "../ProductsData/productsbytradedata";
-import { ByGeneric } from "../ProductsData/productbygenricdata";
 import { ByTherapeutic } from "../ProductsData/productbytheraputic";
 import { FirstTime } from "../ProductsData/productsfirstimelaunch";
 //
@@ -28,7 +26,7 @@ import { FirstTime } from "../ProductsData/productsfirstimelaunch";
 const Navbars = (props) => {
   const history = useHistory();
 
-  const allarray = [ByTrade,ByGeneric,ByTherapeutic,FirstTime]
+  const allarray = [ByTherapeutic,FirstTime]
   const AllmergeData = [];
   allarray.map((item)=>{
     return(

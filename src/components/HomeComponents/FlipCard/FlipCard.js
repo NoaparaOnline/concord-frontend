@@ -6,8 +6,11 @@ import { getSingleProductDataObj } from "../../../Store/Actions/directorActions"
 
 const FlipCard = (props) => {
   const { card } = props;
-  const { title, text1, text2, img, btn, btnlink, innerdata } = card;
+  const { title, text1, text2, img, btn, btnlink, innerdata, innerComposition } = card;
   const dispatch = useDispatch();
+  console.log(props,"propsflip");
+  const currentpath = props?.location?.pathname;
+  console.log(currentpath,"currentpath");
   return (
     <div>
       <div className="flip-card" style={{ marginBottom: "50%" }}>
@@ -19,7 +22,7 @@ const FlipCard = (props) => {
                   className="card-title front-text text-white"
                   style={{ fontSize: "19px", fontWeight: "500" }}
                 >
-                  {title}
+                  {currentpath === '/products_bygeneric' ? innerComposition : title}
                 </h5>
                 <h6
                   className="card-title front-text text-white"
@@ -52,7 +55,7 @@ const FlipCard = (props) => {
                 {btn}
               </Link> */}
               <div
-                onClick={() => props?.history?.push("/prod_details",{data : card})}
+                onClick={() => props?.history?.push("/prod_details",{data : {...card,from:props?.location?.pathname}})}
                 className="btn  rounded-pill colr_btn"
               >
                 {btn}
@@ -100,7 +103,7 @@ const FlipCard = (props) => {
                 {btn}
               </Link> */}
               <div
-                   onClick={() => props?.history?.push("/prod_details",{data : card})}
+                   onClick={() => props?.history?.push("/prod_details",{data : {...card,from:props?.location?.pathname}})}
                 className="btn  rounded-pill colr_btn"
               >
                 {btn}

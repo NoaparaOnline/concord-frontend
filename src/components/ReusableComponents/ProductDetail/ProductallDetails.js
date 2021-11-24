@@ -32,9 +32,9 @@ const ProductallDetails = (props) => {
       subLink: "/products",
     },
     {
-      subLinkName: viewData?.backpagename,
-      subDash: "/",
-      subLink: viewData?.backpagelink,
+      subLinkName: viewData?.from === '/products_bytrade' ? 'By Trade Name' : viewData?.from === '/products_bygeneric' ? 'By Generic Name' : viewData?.from === '/products_therapeutic' ? 'By Therapeutic Class' : viewData?.from === '/products_firsttime' ? 'First Time Launching' : '' ,
+      subDash:  viewData?.from === '/products_bytrade' ? '/' : viewData?.from === '/products_bygeneric' ? '/' : viewData?.from === '/products_therapeutic' ? '/' : viewData?.from === '/products_firsttime' ? '/' : '',
+      subLink: viewData?.from,
     },
   ];
 
@@ -191,7 +191,7 @@ const ProductallDetails = (props) => {
       />
 
       <div className="container mb-5">
-        <Link to={viewData?.backpagelink} style={{ textDecoration: "none" }}>
+        <Link to={viewData?.from} style={{ textDecoration: "none" }}>
           <span style={{ fontSize: "22px", color: "#565656" }}>
             <i className="fa fa-angle-left" aria-hidden="true"></i> Back
           </span>

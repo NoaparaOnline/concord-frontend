@@ -3,8 +3,8 @@ import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
-import { ByTrade } from "../components/HomeComponents/ProductsData/productsbytradedata";
 import ReactPaginate from 'react-paginate';
+import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
 
 
 const Products_bytrade = (props) => {
@@ -23,45 +23,45 @@ const Products_bytrade = (props) => {
 
  
 
-  const [obj , setObj] = useState(ByTrade);
+  const [obj , setObj] = useState(ByTherapeutic);
 
 
   const filteredtype = (type) => {
     if (type==="All") {
-      setObj(ByTrade)
+      setObj(ByTherapeutic)
       setPageNumber(0);
       
     }
     else if (type==="Syrup") {
-      const filterd = ByTrade.filter(category => 
+      const filterd = ByTherapeutic.filter(category => 
         category.type === "Syrup" )
       setObj(filterd);
       setPageNumber(0);
       
     }
     else if (type==="Tablet") {
-      const filterd = ByTrade.filter(category => 
+      const filterd = ByTherapeutic.filter(category => 
         category.type === "Tablet" )
       setObj(filterd);
       setPageNumber(0);
       
     }
     else if (type==="Capsule") {
-      const filterd = ByTrade.filter(category => 
+      const filterd = ByTherapeutic.filter(category => 
         category.type === "Capsule" )
       setObj(filterd);
       setPageNumber(0);
       
     }
     else if (type==="Hand Rub") {
-      const filterd = ByTrade.filter(category => 
+      const filterd = ByTherapeutic.filter(category => 
         category.type === "Hand Rub" )
       setObj(filterd);
       setPageNumber(0);
       
     }
     else if (type==="Injectables") {
-      const filterd = ByTrade.filter(category => 
+      const filterd = ByTherapeutic.filter(category => 
         category.type === "Injectables" )
       setObj(filterd);
       setPageNumber(0);

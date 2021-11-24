@@ -4,7 +4,7 @@ import BannerWithText from "../components/ReusableComponents/BannerImgComponents
 import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 import ReactPaginate from 'react-paginate';
-import { ByGeneric } from "../components/HomeComponents/ProductsData/productbygenricdata";
+import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
 
 const Products_bygeneric = (props) => {
   const LinksBan = [
@@ -20,29 +20,30 @@ const Products_bygeneric = (props) => {
     },
   ];
 
-  const [obj, setObj] = useState(ByGeneric);
+  const [obj, setObj] = useState(ByTherapeutic);
+
   const filteredtype = (type) => {
     if (type === "All") {
-      setObj(ByGeneric);
+      setObj(ByTherapeutic);
       setPageNumber(0);
     } else if (type === "Syrup") {
-      const filterd = ByGeneric.filter((category) => category.type === "Syrup");
+      const filterd = ByTherapeutic.filter((category) => category.type === "Syrup");
       setObj(filterd);
       setPageNumber(0);
     } else if (type === "Tablet") {
-      const filterd = ByGeneric.filter(
+      const filterd = ByTherapeutic.filter(
         (category) => category.type === "Tablet"
       );
       setObj(filterd);
       setPageNumber(0);
     } else if (type === "Capsule") {
-      const filterd = ByGeneric.filter(
+      const filterd = ByTherapeutic.filter(
         (category) => category.type === "Capsule"
       );
       setObj(filterd);
       setPageNumber(0);
     } else if (type === "Injectables") {
-      const filterd = ByGeneric.filter(
+      const filterd = ByTherapeutic.filter(
         (category) => category.type === "Injectables"
       );
       setObj(filterd);
