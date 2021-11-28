@@ -183,7 +183,7 @@ const Footer = () => {
 
                   <ul className="list-unstyled">
                   <li className="">
-              <span className="Typograpy_lastblock_Span">Call :</span> <span>+8801991145006</span>
+              <span className="Typograpy_lastblock_Span">Call :</span> <span>01991146559</span>
               </li>
               <li className="">
               <span className="Typograpy_lastblock_Span">Email:</span> info@concordpharma-bd.com
