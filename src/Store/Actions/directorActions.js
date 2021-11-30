@@ -1,5 +1,6 @@
 import axios from "axios";
 import { toast } from "react-toastify";
+import { BASEURL } from "../../services/HttpProvider";
 import apiServices from "../../services/requestHandler";
 import localStoreUtil from "../../Utils/localstore.util";
 import { directorConstants } from "../Constants/directorConstant";
@@ -18,7 +19,7 @@ export const getSchedule = (uid) => async (dispatch) => {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
       // `https://concord-backend-prod.herokuapp.com/api/schedules/read?child_uid=${uid}`,
-      `https://concord-backend-m1.herokuapp.com/api/schedules/read?child_uid=${uid}`,
+      `${BASEURL}/schedules/read?child_uid=${uid}`,
       // `https://concord-backend-m2.herokuapp.com/api/schedules/read?child_uid=${uid}`,
       { headers: head }
     );
@@ -70,7 +71,7 @@ export const getDoctors = (uid) => async (dispatch) => {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
       // `https://concord-backend-prod.herokuapp.com/api/doctors/read?child_uid=${uid}`,
-      `https://concord-backend-m1.herokuapp.com/api/doctors/read?child_uid=${uid}`,
+      `${BASEURL}/doctors/read?child_uid=${uid}`,
       // `https://concord-backend-m2.herokuapp.com/api/doctors/read?child_uid=${uid}`,
       { headers: head }
     );
@@ -104,7 +105,7 @@ export const getCustomers = (uid) => async (dispatch) => {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
       // `https://concord-backend-prod.herokuapp.com/api/customers/read?child_uid=${uid}`,
-      `https://concord-backend-m1.herokuapp.com/api/customers/read?child_uid=${uid}`,
+      `${BASEURL}/customers/read?child_uid=${uid}`,
       // `https://concord-backend-m2.herokuapp.com/api/customers/read?child_uid=${uid}`,
       { headers: head }
     );
@@ -247,7 +248,7 @@ export const getAssignedto = () => async (dispatch) => {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
       // `https://concord-backend-prod.herokuapp.com/api/fieldstaffs/childs`,
-      `https://concord-backend-m1.herokuapp.com/api/fieldstaffs/childs`,
+      `${BASEURL}/fieldstaffs/childs`,
       // `https://concord-backend-m2.herokuapp.com/api/fieldstaffs/childs`,
       { headers: head }
     );
@@ -269,7 +270,7 @@ export const getChildsData = (uid, role) => async (dispatch) => {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
       // `https://concord-backend-prod.herokuapp.com/api/fieldstaffs/childs?child_uid=${uid}`,
-      `https://concord-backend-m1.herokuapp.com/api/fieldstaffs/childs?child_uid=${uid}`,
+      `${BASEURL}/fieldstaffs/childs?child_uid=${uid}`,
       // `https://concord-backend-m2.herokuapp.com/api/fieldstaffs/childs?child_uid=${uid}`,
       { headers: head }
     );
@@ -306,7 +307,7 @@ export const getSingleScheduleDetail = (data) => (dispatch) => {
 export const SendGridMailApi = (data) => async (dispatch) => {
   axios
     // .post("https://concord-backend-prod.herokuapp.com/api/users/mail/send", data,)
-    .post("https://concord-backend-m1.herokuapp.com/api/users/mail/send", data,)
+    .post(BASEURL + "/users/mail/send", data,)
     // .post("https://concord-backend-m2.herokuapp.com/api/users/mail/send", data,)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
