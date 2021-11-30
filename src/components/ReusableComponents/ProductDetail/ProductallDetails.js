@@ -7,9 +7,9 @@ import TableCustomComponent from "../TableCustomComponent";
 
 const ProductallDetails = (props) => {
 
-  const [show, setShow] = useState(false);
   const [showText, setShowText] = useState(false);
   const onClick = () => setShowText(true);
+  const [show, setShow] = useState(false);
   const onHide = () => setShowText(false);
   const handleClose = () => setShow(false);
   const handleShow = () => {
@@ -197,9 +197,9 @@ const ProductallDetails = (props) => {
           </span>
         </Link>
         <div className="row">
-          <div className="col-lg-4 allborder">
             {/* className="allborder" */}
 
+          <div className="col-lg-4 allborder">
             <div
               onClick={() => {
                 handleShow();
