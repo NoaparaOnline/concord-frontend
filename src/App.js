@@ -51,6 +51,7 @@ import Relikofkids from "./components/ReusableComponents/ProductDetail/Relikofki
 import Acedol from "./components/ReusableComponents/ProductDetail/Acedol";
 import Error404 from "./Pages/Error404";
 import ProductallDetails from "./components/ReusableComponents/ProductDetail/ProductallDetails";
+import PrivacyAndPolicy from "./Pages/PrivacyAndPolicy";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -197,6 +198,12 @@ function App() {
 
         <Route exact path="/about">
           <About />
+        </Route>
+
+        {/*         Privacy And Policy             */}
+
+        <Route exact path="/privacy-policy">
+          <PrivacyAndPolicy />
         </Route>
 
         {/*          Main About Page SubMenu Page             */}

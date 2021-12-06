@@ -70,7 +70,7 @@ const FlipCard = (props) => {
                   className="card-title front-text text-white"
                   style={{ fontSize: "19px", fontWeight: "500" }}
                 >
-                  {title}
+                 {currentpath === '/products_bygeneric' ? innerComposition : title}
                 </h5>
                 <h6
                   className="card-title front-text text-white"
