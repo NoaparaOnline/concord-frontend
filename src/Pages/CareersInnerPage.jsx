@@ -3,6 +3,7 @@ import moment from "moment";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { BASEURL } from "../services/HttpProvider";
 
 const CareersInnerPage = (props) => {
   const [file, setFile] = useState();
@@ -26,7 +27,7 @@ const CareersInnerPage = (props) => {
       );
 
       let res = await axios.post(
-        `https://concordpharma-bd.com/api/users/mail/send_w_attachment`,
+        `${BASEURL}/users/mail/send_w_attachment`,
         formdata,
         {
           headers: {
