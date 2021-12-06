@@ -7,12 +7,14 @@ import { BASEURL } from "../services/HttpProvider";
 
 const CareersInnerPage = (props) => {
   const [file, setFile] = useState();
+  const [disableBtn, setdisableBtn] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const submitHandler = async (data) => {
+    setdisableBtn(true);
     let formdata = new FormData();
     if (file === undefined || file === null) {
       toast.error("please upload Report");
@@ -37,8 +39,10 @@ const CareersInnerPage = (props) => {
       );
       if (res?.data?.response_code === 200) {
         toast.success("Applied Successfully");
+        setdisableBtn(false);
       } else {
         toast.error(res?.data?.response_message);
+        setdisableBtn(false);
       }
     }
     console.log(data);
@@ -212,6 +216,7 @@ const CareersInnerPage = (props) => {
                         borderRadius: "0px",
                       }}
                       value={"Submit"}
+                      disabled={disableBtn}
                     />
                   </div>
                 </div>
