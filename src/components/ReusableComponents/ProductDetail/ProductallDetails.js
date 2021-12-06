@@ -86,7 +86,7 @@ const ProductallDetails = (props) => {
                           {item?.innerSubData}
 
                         </p>
-{/* 08 bytrade */}
+               {/* 08 bytrade */}
                {item?.isSublist ? (
                 <ul>
                   {item?.listSubData?.map(item => <li>{item}</li>)}

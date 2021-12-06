@@ -13,10 +13,10 @@ const Careers = () => {
   ];
   const CareersLinks = [
     {
-        name: "MPO",
-        btnlink: "/careers-inner-page",
-        namelink: "/careers-inner-page",
-        postdate: "Posted 3 month ago",
+      name: "MPO",
+      btnlink: "/careers-inner-page",
+      namelink: "/careers-inner-page",
+      postdate: "Posted 3 month ago",
     },
     {
       name: "RSM",
@@ -29,7 +29,7 @@ const Careers = () => {
       btnlink: "/careers-inner-page",
       namelink: "/careers-inner-page",
       postdate: "Posted 3 month ago",
-    }
+    },
   ];
 
   return (
@@ -37,8 +37,7 @@ const Careers = () => {
       <BannerWithText
         heading={"ALL JOBS"}
         subHeading={`JOBS`}
-        
-        backposit={'center right'}
+        backposit={"center right"}
         backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url()`}
         LinksBan={LinksBan}
         height={""}
@@ -57,7 +56,6 @@ const Careers = () => {
 
           {CareersLinks.map((ob, index) => {
             return (
-
               <div key={ob.id} className="card col-lg-12 mb-3">
                 <div className="card-body">
                   <Link
@@ -72,13 +70,20 @@ const Careers = () => {
                   </Link>
 
                   <span className="d-flex justify-content-end">
-                  <Link to={ob.btnlink} style={{textDecoration:'none' ,color:'#fff'}}>
-                    <div
-                      className="btn btn-primary"
-                      style={{ fontSize: "14px", backgroundColor: "#0066b3",borderRadius:'0px' }}
+                    <Link
+                      to={{ pathname: ob.btnlink, state: { data: ob } }}
+                      style={{ textDecoration: "none", color: "#fff" }}
                     >
-                      Apply Now
-                    </div>
+                      <div
+                        className="btn btn-primary"
+                        style={{
+                          fontSize: "14px",
+                          backgroundColor: "#0066b3",
+                          borderRadius: "0px",
+                        }}
+                      >
+                        Apply Now
+                      </div>
                     </Link>
                   </span>
                 </div>
