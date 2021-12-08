@@ -131,61 +131,68 @@ const Products_therapeutic = (props) => {
         <div className="row">
           <div className="col-sm-12 col-lg-3">
             <div className="mb-3">
-              <label
-                className="my-2"
-                style={{
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  color: "#565656",
-                }}
-              >
-                Products By Therapeutic Class
-              </label>
-              <select
-                className="form-control form-select"
-                name="sm"
-                onChange={(e) => {
-                  setSelectedClass(e.target.value);
-                }}
-                value={selectedClass}
-              >
-                <option disabled selected>
-                  Select ..
-                </option>
-                <option value="all">All</option>
-                <option value="antibiotic">Antibiotic</option>
-                <option value="anthelmentics">Anthelmentics</option>
-                <option value="anti-histamine">Anti-histamine</option>
-                <option value="anti-ulcerant">Anti-ulcerant</option>
-                <option value="anti-diabetic">Anti-diabetic</option>
-                <option value="anti-fungal">Anti-fungal</option>
-                <option value="anti-parasitic">Anti-parasitic</option>
-                <option value="anti-viral">Anti-viral</option>
-                <option value="anti-spasmodic">Anti-spasmodic agent</option>
-                <option value="anti-neuropathic">Anti-neuropathic Agent</option>
-                <option value="antidepressant">
-                  Antidepressant & Anxiolytic
-                </option>
-                <option value="cardiovascular">Cardiovascular Drug</option>
-                <option value="gastroprokinetic">Gastroprokinetic Agent</option>
-                <option value="leukotrine">
-                  Leukotrine receptor antagonist
-                </option>
-                <option value="mucolytic">Mucolytic Agent</option>
-                <option value="pde">PDE inhibitors</option>
-                <option value="nsaids">NSAIDs</option>
-                <option value="hand-sanitizer">
-                  Hand Sanitizer & Anticeptic Agent
-                </option>
-                <option value="vitamin">Vitamin & Minerals</option>
-              </select>
+              <div className="productFilterContent1" style={{borderBottom: 'none', borderColor: '#0066b3', backgroundColor: '#0066b3'}}>
+                <label
+                  className="my-2"
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: "500",
+                    color: "#fff",
+                  }}
+                >
+                  Therapeutic Class
+                </label>
+              </div>
+              <div className="productFilterContent1">
+                <select
+                  className="form-control form-select"
+                  name="sm"
+                  onChange={(e) => {
+                    setSelectedClass(e.target.value);
+                  }}
+                  value={selectedClass}
+                >
+                  <option disabled selected>
+                    Select ..
+                  </option>
+                  <option value="all">All</option>
+                  <option value="antibiotic">Antibiotic</option>
+                  <option value="anthelmentics">Anthelmentics</option>
+                  <option value="anti-histamine">Anti-histamine</option>
+                  <option value="anti-ulcerant">Anti-ulcerant</option>
+                  <option value="anti-diabetic">Anti-diabetic</option>
+                  <option value="anti-fungal">Anti-fungal</option>
+                  <option value="anti-parasitic">Anti-parasitic</option>
+                  <option value="anti-viral">Anti-viral</option>
+                  <option value="anti-spasmodic">Anti-spasmodic agent</option>
+                  <option value="anti-neuropathic">Anti-neuropathic Agent</option>
+                  <option value="antidepressant">
+                    Antidepressant & Anxiolytic
+                  </option>
+                  <option value="cardiovascular">Cardiovascular Drug</option>
+                  <option value="gastroprokinetic">Gastroprokinetic Agent</option>
+                  <option value="leukotrine">
+                    Leukotrine receptor antagonist
+                  </option>
+                  <option value="mucolytic">Mucolytic Agent</option>
+                  <option value="pde">PDE inhibitors</option>
+                  <option value="nsaids">NSAIDs</option>
+                  <option value="hand-sanitizer">
+                    Hand Sanitizer & Anticeptic Agent
+                  </option>
+                  <option value="vitamin">Vitamin & Minerals</option>
+                </select>
+              </div>
+             
             </div>
 
             <div className="productFilterContent">
-              <div className="productFilterContent1">
-                <h3 className="filterHeading" style={{ fontWeight: "600" }}>
-                  Product Categories
-                </h3>
+              <div className="productFilterContent1" style={{borderBottom: 'none', borderColor: '#0066b3',  backgroundColor: '#0066b3'}}>
+                  <h3 className="filterHeading" style={{ fontWeight: "500",  color: '#fff' }}>
+                    Product Categories
+                  </h3>
+              </div>
+              <div className="productFilterContent1" >
                 <form id="category-radio-btn">
                   <input
                     className="me-2"
@@ -274,8 +281,8 @@ const Products_therapeutic = (props) => {
           <div className="col-sm-12 col-lg-9 mt-0">
             <div className="row mb-3">
               <div className="col-lg-6">
-                Select Items Per Page
-                <div class="btn-group ms-3" role="group" aria-label="First group">
+                <div className="mr-3" style={{fontWeight: '500'}}>Select Items Per Page</div>
+                <div class="btn-group" role="group" aria-label="First group">
                 <button className={selected === '5' ? 'btn  btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="5">5</button>
                 <button className={selected === '10' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="10">10</button>
                 <button className={selected === '20' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="20">20</button>

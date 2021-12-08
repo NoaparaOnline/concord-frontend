@@ -45,7 +45,6 @@ const CareersInnerPage = (props) => {
         setdisableBtn(false);
       }
     }
-    console.log(data);
   };
   return (
     <>
