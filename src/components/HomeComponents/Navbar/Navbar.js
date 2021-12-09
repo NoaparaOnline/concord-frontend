@@ -500,7 +500,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/facilities_product"
                           >
-                            Product
+                            Production
                           </NavLink>
                         </li>
                         <li>

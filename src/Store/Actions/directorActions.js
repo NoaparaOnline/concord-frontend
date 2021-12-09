@@ -305,16 +305,18 @@ export const getSingleScheduleDetail = (data) => (dispatch) => {
 };
 
 export const SendGridMailApi = (data) => async (dispatch) => {
-  axios
+const response = await axios
     // .post("https://concord-backend-prod.herokuapp.com/api/users/mail/send", data,)
     .post(BASEURL + "/users/mail/send", data,)
     // .post("https://concord-backend-m2.herokuapp.com/api/users/mail/send", data,)
-    .then(function (response) {
-      console.log(JSON.stringify(response.data));
+    .then(function (response) { 
+      return response.data;
     })
     .catch(function (error) {
-      console.log(error);
+      return error;
     });
+
+    return response;
 };
 
 export const getSingleProductDataObj = (data) =>  (dispatch) => {

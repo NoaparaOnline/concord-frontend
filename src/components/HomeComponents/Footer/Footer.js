@@ -43,9 +43,9 @@ const Footer = () => {
           </li>
           <li>
           {/* Telemedicine Link */}
-              <Link to='#' className="linkFoot">
+              <a target="_blank" href='https://mdxdmfr.com' className="linkFoot">
                 Tele Medicine
-              </Link>
+              </a>
             
           </li>
           <li>
@@ -163,7 +163,7 @@ const Footer = () => {
 
 
 
-              <Link to='#' >
+              <a target="_blank" href='https://play.google.com/store/apps/details?id=com.concordmpo' >
               <img
               alt=""
                 loading="lazy"
@@ -172,7 +172,7 @@ const Footer = () => {
                 }
                 className="imghightwidth"
               />
-              </Link>
+              </a>
             </figure>
 
 
@@ -197,15 +197,15 @@ const Footer = () => {
               
                <li >
               
-                  <Link to='/' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
+                  <a href='tel:01991146559' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
                   <i className="fa fa-phone"></i>
                       <span className="ms-2">Enquiry</span>
-                  </Link>
+                  </a>
                 
               </li>
               <li >
             
-                  <Link to='/' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
+                  <Link to='/facilities_ourdistribution' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
                   <i className="fa fa-globe"></i>
                   <span className="ms-2">Distribution Center</span>
                   </Link>

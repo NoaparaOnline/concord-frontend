@@ -189,9 +189,9 @@ const Facilities_ourdistribution = () => {
         fontsize={"60px"}
 
       />
-      <div className="container">
+      {/* <div className="container">
         <img alt="" src={mapimage} width="100%" height="100%"/>
-      </div>
+      </div> */}
 
       <div className="my-5 mx-5">
         <div className="row">
