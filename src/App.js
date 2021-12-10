@@ -226,7 +226,7 @@ function App() {
           <Careers />
         </Route>
         {/*       Careers Inner Page      */}
-        <Route exact path="/careers-inner-page">
+        <Route exact path="/careers-inner-page/:job_id">
           <CareersInnerPage />
         </Route>
 

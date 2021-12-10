@@ -44,3 +44,21 @@ export const getallNotification = () => async (dispatch) => {
       toast.error(response?.data?.response_message);
     }
   };
+
+  export const getAllThana = () => async (dispatch) => {
+    const response = await apiServices.getAllThana();
+    dispatch({
+      type: staticConstants.GET_THANA_REQUEST,
+    })
+
+    if(response?.data?.response_code === 200){
+      dispatch({
+        type: staticConstants.GET_THANA_SUCCESS,
+        payload: response?.data?.response_data
+      })
+    }else{
+      dispatch({
+        type: staticConstants.GET_THANA_FAIL,
+      })
+    }
+  }

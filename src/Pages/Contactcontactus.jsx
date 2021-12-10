@@ -22,22 +22,7 @@ const Contact_contactus = () => {
       subLink: "/contact",
     },
   ];
-  const [state, setState] = React.useState({ 
-    DropSel: "",
-    Name: "",
-    Email: "",
-    Numbers: "",
-    Subject: "",
-    Message: "",
-  });
-  const handleChange = (evt) => {
-    const value = evt.target.value;
-    setState({
-      ...state,
-      [evt.target.name]: value,
-    });
-  };
-  
+
   const [success, setSuccess] = useState(false);
   const {
     register,
