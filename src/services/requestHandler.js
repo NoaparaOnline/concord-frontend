@@ -28,6 +28,7 @@ const SERVICE_URLS = {
   getallNotification: "notifications/read",
   // seeAllNotification: "notifications/read",
   seeAllNotification: "notifications/read?is_seen=1",
+  getAllThana: "region-classifications/read-thanas"
 
 };
 
@@ -126,6 +127,10 @@ const SchedulesApprovalStatusChanges = (data) =>
     feature: featureConstants.static,
   });
 
+  const getAllThana = () => 
+    get(SERVICE_URLS.getAllThana, {}, {
+      feature:featureConstants.static
+    });
 
 //=========================
 
@@ -155,5 +160,6 @@ const apiServices = {
   getdistributioncenter,
   getallNotification,
   seeAllNotification,
+  getAllThana
 };
 export default apiServices;

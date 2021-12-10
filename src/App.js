@@ -52,6 +52,7 @@ import Acedol from "./components/ReusableComponents/ProductDetail/Acedol";
 import Error404 from "./Pages/Error404";
 import ProductallDetails from "./components/ReusableComponents/ProductDetail/ProductallDetails";
 import PrivacyAndPolicy from "./Pages/PrivacyAndPolicy";
+import Abouthealthassociates from "./Pages/Abouthealthassociates";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -212,6 +213,10 @@ function App() {
           <Aboutvisionmission />
         </Route>
 
+        <Route exact path="/about_health_associates">
+          <Abouthealthassociates />
+        </Route>
+
         <Route exact path="/about_message_chairmen">
           <Aboutmessagechairmen />
         </Route>
@@ -226,7 +231,7 @@ function App() {
           <Careers />
         </Route>
         {/*       Careers Inner Page      */}
-        <Route exact path="/careers-inner-page">
+        <Route exact path="/careers-inner-page/:job_id">
           <CareersInnerPage />
         </Route>
 

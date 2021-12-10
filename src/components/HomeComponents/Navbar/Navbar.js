@@ -356,7 +356,7 @@ const Navbars = (props) => {
                           <Link
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="#"
+                            to="/about_health_associates"
                           >
                             Health Associates{" "}
                           </Link>

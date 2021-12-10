@@ -2,10 +2,28 @@ import axios from "axios";
 import moment from "moment";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { BASEURL } from "../services/HttpProvider";
+import { useHistory, useParams } from "react-router-dom";
 
 const CareersInnerPage = (props) => {
+  const history = useHistory();
+  const { job_id } = useParams();
+
+  const jobLevelList = [
+    {name: 'Executive'},
+    {name: 'Sr. Executive'},
+    {name: 'Assistant Manager'},
+    {name: 'Deputy Manager'},
+    {name: 'Manager'},
+    {name: 'Assistant General Manager'},
+    {name: 'General Manager'},
+    {name: 'Sales Manager'},
+    {name: 'National Sales Manager'},
+  ]
+
+
   const [file, setFile] = useState();
   const [disableBtn, setdisableBtn] = useState(false);
   const {
@@ -13,11 +31,15 @@ const CareersInnerPage = (props) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+
+  const thanaList = useSelector(state => state.static.thanaList)
+
   const submitHandler = async (data) => {
     setdisableBtn(true);
     let formdata = new FormData();
     if (file === undefined || file === null) {
-      toast.error("please upload Report");
+      toast.error("Please upload Report");
       return;
     } else {
       formdata.append("recipients", "hr@concordpharma-bd.com");
@@ -25,7 +47,11 @@ const CareersInnerPage = (props) => {
       formdata.append("subject", "Applied for Job");
       formdata.append(
         "body",
-        `<span>Email : ${data?.email}</span> <br/> <span>Phone : ${data?.phone}</span> <br/> <span>Full Name : ${data?.name}</span> <br/>  `
+        `<span> Email : ${data?.email}</span> <br/> 
+          <span>Phone : ${data?.phone}</span> <br/> 
+          <span>Full Name : ${data?.name}</span> <br/> 
+          <span>Interested Area: ${data?.interested_area}</span> </br>
+          <span>Interested Job Level: ${data.interested_job}</span></br>`
       );
 
       let res = await axios.post(
@@ -40,6 +66,7 @@ const CareersInnerPage = (props) => {
       if (res?.data?.response_code === 200) {
         toast.success("Applied Successfully");
         setdisableBtn(false);
+        history.push('/careers')
       } else {
         toast.error(res?.data?.response_message);
         setdisableBtn(false);
@@ -161,7 +188,7 @@ const CareersInnerPage = (props) => {
                       id="jobapp_phone"
                       required="required"
                       autocomplete="off"
-                      placeholder="0301 2345678"
+                      placeholder="+880XXXXXXXX"
                       {...register("phone", {
                         required: {
                           value: true,
@@ -174,6 +201,79 @@ const CareersInnerPage = (props) => {
                     ) : (
                       ""
                     )}
+                  </div>
+                
+                 
+                </div>
+                {
+                  job_id == '3' && 
+                  <div className="row">
+                    <div className="col-lg-3 mb-4 ">
+                        <label for="jobapp_full_name">
+                          Interested Job Level
+                        </label>
+                      </div>
+                      <div className="col-lg-9">
+                          <select
+                            name="interested_job"
+                            class="form-control sjb-required"
+                            id="interested_job"
+                            autocomplete="off"
+                            {...register("interested_job", {
+                              required: {
+                                value: true,
+                                message: "This field is required field",
+                              },
+                            })}
+                          >
+                            <option value="">Select Interested Job Level</option>
+                            {
+                              jobLevelList.map((ob, index) => {
+                              return <option value={ob.name}>{ob.name}</option>
+                              })
+                            }
+                          </select>
+                          {errors?.interested_job?.message ? (
+                            <div className="text-error">{errors?.interested_job?.message}</div>
+                          ) : (
+                            ""
+                          )}
+                      </div>
+                  </div>
+                }
+               
+
+                <div className="row">
+                <div className="col-lg-3 mb-4 ">
+                    <label for="jobapp_full_name">
+                      Interested Area
+                    </label>
+                  </div>
+                  <div className="col-lg-9">
+                      <select
+                        name="interested_area"
+                        class="form-control sjb-required"
+                        id="interested_area"
+                        autocomplete="off"
+                        {...register("interested_area", {
+                          required: {
+                            value: true,
+                            message: "This field is required field",
+                          },
+                        })}
+                      >
+                        <option value="">Select Interested Area</option>
+                        {
+                          thanaList.map((ob, index) => {
+                           return <option value={ob.name}>{ob.name}</option>
+                          })
+                        }
+                      </select>
+                      {errors?.interested_area?.message ? (
+                        <div className="text-error">{errors?.interested_area?.message}</div>
+                      ) : (
+                        ""
+                      )}
                   </div>
                 </div>
                 <div className="row">

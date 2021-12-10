@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { getAllThana } from "../Store/Actions/staticActions";
 
 const Careers = () => {
   const LinksBan = [
@@ -13,24 +15,39 @@ const Careers = () => {
   ];
   const CareersLinks = [
     {
-      name: "MPO",
+      id: 0,
+      name: "Medical Promotion Officer (MPO)",
       btnlink: "/careers-inner-page",
       namelink: "/careers-inner-page",
       postdate: "Posted 3 month ago",
     },
     {
-      name: "RSM",
+      id: 1,
+      name: "Area Manager (AM)",
       btnlink: "/careers-inner-page",
       namelink: "/careers-inner-page",
       postdate: "Posted 3 month ago",
     },
     {
-      name: "AM",
+      id: 2,
+      name: "Regional Sales Manager (RSM)",
+      btnlink: "/careers-inner-page",
+      namelink: "/careers-inner-page",
+      postdate: "Posted 3 month ago",
+    },
+    {
+      id: 3,
+      name: "Other Positions",
       btnlink: "/careers-inner-page",
       namelink: "/careers-inner-page",
       postdate: "Posted 3 month ago",
     },
   ];
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllThana())
+  }, [])
 
   return (
     <div>
@@ -56,7 +73,7 @@ const Careers = () => {
 
           {CareersLinks.map((ob, index) => {
             return (
-              <div key={ob.id} className="card col-lg-12 mb-3">
+              <div key={index} className="card col-lg-12 mb-3">
                 <div className="card-body">
                   <Link
                     to={ob.namelink}
@@ -71,7 +88,7 @@ const Careers = () => {
 
                   <span className="d-flex justify-content-end">
                     <Link
-                      to={{ pathname: ob.btnlink, state: { data: ob } }}
+                      to={{ pathname: ob.btnlink+`/${ob.id}`, state: { data: ob } }}
                       style={{ textDecoration: "none", color: "#fff" }}
                     >
                       <div
