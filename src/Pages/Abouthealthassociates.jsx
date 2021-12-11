@@ -144,7 +144,7 @@ const Abouthealthassociates = () => {
               </h5>
 
               <div style={{lineHeight: '30px',
-    color: '#666666'}} className="text-justify ">
+                    color: '#666666'}} className="text-justify ">
                 With world class technology and cutting-edge applications, DMFR Molecular Lab is here to set a measurable impact and revolutionize the diagnostic healthcare in Bangladesh. A host of investigations, analytical testing standards and expert diagnostics are what we aim to deliver. Our relentless efforts and endeavor are to deliver the most accurate, reliable and careful analytical testing standards at par with the international quality standards within the reach of every common man.
                <ul className="mt-4">
                 <li>At DMFR, reports are Accurate, Detailed, and Dependable for timely diagnosis and therapeutic investigation of disease.

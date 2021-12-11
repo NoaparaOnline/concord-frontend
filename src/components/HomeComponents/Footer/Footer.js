@@ -99,12 +99,12 @@ const Footer = () => {
           </li>
            <ul className="list-unstyled list-inline mt-3">
           <li className="list-inline-item">
-        <a href="#!" className="sbtn btn-large mx-1 text-white linkFoot" title="Facebook">
+        <a href="https://www.facebook.com/concordbd" target="_blank" className="sbtn btn-large mx-1 text-white linkFoot" title="Facebook">
           <i className="fa fa-facebook-square fa-2x" ></i>
         </a>
       </li>
       <li className="list-inline-item">
-        <a href="#!" className="sbtn btn-large mx-1 text-white linkFoot" title="Linkedin">
+        <a href="https://www.linkedin.com/company/concord-pharmaceauticals-ltd" target="_blank" className="sbtn btn-large mx-1 text-white linkFoot" title="Linkedin">
           <i className="fa fa-linkedin-square fa-2x" ></i>
         </a>
       </li>
@@ -114,7 +114,7 @@ const Footer = () => {
         </a>
       </li>
       <li className="list-inline-item">
-        <a href="#!" className="sbtn btn-large mx-1 text-white linkFoot" title="Youtube">
+        <a href="https://www.youtube.com/channel/UCMmBlHrIraXle71-M1g_m6w" target="_blank" className="sbtn btn-large mx-1 text-white linkFoot" title="Youtube">
           <i className="fa fa-youtube-square fa-2x" ></i>
         </a>
       </li>

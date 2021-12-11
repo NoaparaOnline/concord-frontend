@@ -29,7 +29,7 @@ const About = () => {
       id: 2,
       imageURL: Aboutcard3,
       text: "Chairman's Profile",
-      link: "#",
+      link: "/about_chairmen_profile",
     },
     {
       id: 3,

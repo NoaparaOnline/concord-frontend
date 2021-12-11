@@ -5,8 +5,12 @@ import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 import ReactPaginate from "react-paginate";
 import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
+import useMediaQuery from "../components/ReusableComponents/MediaQueryCustomHook";
 
 const Products_therapeutic = (props) => {
+
+  const isDesktoplg = useMediaQuery('(min-width: 992px)');
+
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -131,7 +135,7 @@ const Products_therapeutic = (props) => {
         <div className="row">
           <div className="col-sm-12 col-lg-3">
             <div className="mb-3">
-              <div className="productFilterContent1" style={{borderBottom: 'none', borderColor: '#0066b3', backgroundColor: '#0066b3'}}>
+              <div className="productFilterContent1" style={{ borderBottom: 'none', borderColor: '#0066b3', backgroundColor: '#0066b3' }}>
                 <label
                   className="my-2"
                   style={{
@@ -183,14 +187,14 @@ const Products_therapeutic = (props) => {
                   <option value="vitamin">Vitamin & Minerals</option>
                 </select>
               </div>
-             
+
             </div>
 
             <div className="productFilterContent">
-              <div className="productFilterContent1" style={{borderBottom: 'none', borderColor: '#0066b3',  backgroundColor: '#0066b3'}}>
-                  <h3 className="filterHeading" style={{ fontWeight: "500",  color: '#fff' }}>
-                    Product Categories
-                  </h3>
+              <div className="productFilterContent1" style={{ borderBottom: 'none', borderColor: '#0066b3', backgroundColor: '#0066b3' }}>
+                <h3 className="filterHeading" style={{ fontWeight: "500", color: '#fff' }}>
+                  Product Categories
+                </h3>
               </div>
               <div className="productFilterContent1" >
                 <form id="category-radio-btn">
@@ -247,33 +251,7 @@ const Products_therapeutic = (props) => {
                   <br />
                 </form>
               </div>
-              {/* <div className="">
-                <label
-                  className="my-2"
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: "500",
-                    color: "#565656",
-                  }}
-                >
-                  No of Products
-                </label>
-                <select
-                  className="form-control form-select"
-                  name="sm"
-                  onChange={(e) => {
-                    setSelected(e.target.value);
-                  }}
-                  value={selected}
-                >
-                  <option selected>5</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="20">20</option>
-                  <option value="50">50</option>
-                  <option value="100">100</option>
-                </select>
-              </div> */}
+
             </div>
           </div>
 
@@ -281,21 +259,21 @@ const Products_therapeutic = (props) => {
           <div className="col-sm-12 col-lg-9 mt-0">
             <div className="row mb-3">
               <div className="col-lg-6">
-                <div className="mr-3" style={{fontWeight: '500'}}>Select Items Per Page</div>
+                <div className="mr-3" style={{ fontWeight: '500' }}>Select Items Per Page</div>
                 <div class="btn-group" role="group" aria-label="First group">
-                <button className={selected === '5' ? 'btn  btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="5">5</button>
-                <button className={selected === '10' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="10">10</button>
-                <button className={selected === '20' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="20">20</button>
-                <button className={selected === '50' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="50">50</button>
-                <button className={selected === '100' ?'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="100">100</button>
-                
-                </div> 
+                  <button className={selected === '5' ? 'btn  btn-secondary' : 'btn btn-light  '} style={{ width: isDesktoplg ? "70px":"55px"}} onClick={(e) => setSelected(e.target.value)} value="5">5</button>
+                  <button className={selected === '10' ? 'btn btn-secondary' : 'btn btn-light  '} style={{ width:  isDesktoplg ?"70px":"55px"}} onClick={(e) => setSelected(e.target.value)} value="10">10</button>
+                  <button className={selected === '20' ? 'btn btn-secondary' : 'btn btn-light  '} style={{ width:  isDesktoplg ?"70px":"55px"}} onClick={(e) => setSelected(e.target.value)} value="20">20</button>
+                  <button className={selected === '50' ? 'btn btn-secondary' : 'btn btn-light  '} style={{ width:  isDesktoplg ?"70px":"55px"}} onClick={(e) => setSelected(e.target.value)} value="50">50</button>
+                  <button className={selected === '100' ? 'btn btn-secondary' : 'btn btn-light  '} style={{ width: isDesktoplg ?"70px":"55px"}} onClick={(e) => setSelected(e.target.value)} value="100">100</button>
+
+                </div>
               </div>
               <div className="col-lg-6 d-flex justify-content-end">
-              Item Per Page  : &nbsp; <span style={{fontWeight:'600',color:'#0066b3'}}>{selected}</span>  
-                </div> 
+                Item Per Page  : &nbsp; <span style={{ fontWeight: '600', color: '#0066b3' }}>{selected}</span>
+              </div>
             </div>
-           
+
             <div className="row ">
               {displayUsers}
               <ReactPaginate
