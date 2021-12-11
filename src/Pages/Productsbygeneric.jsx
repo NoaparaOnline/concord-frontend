@@ -5,8 +5,11 @@ import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 import ReactPaginate from 'react-paginate';
 import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
+import useMediaQuery from "../components/ReusableComponents/MediaQueryCustomHook";
 
 const Products_bygeneric = (props) => {
+  const isDesktoplg = useMediaQuery('(min-width: 992px)');
+  
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -191,11 +194,11 @@ const Products_bygeneric = (props) => {
               <div className="col-lg-6">
                 Select Items Per Page
                 <div class="btn-group ms-3" role="group" aria-label="First group">
-                <button className={selected === '5' ? 'btn  btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="5">5</button>
-                <button className={selected === '10' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="10">10</button>
-                <button className={selected === '20' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="20">20</button>
-                <button className={selected === '50' ? 'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="50">50</button>
-                <button className={selected === '100' ?'btn btn-secondary':'btn btn-light  '} style={{width:"70px"}} onClick={(e)=> setSelected(e.target.value)} value="100">100</button>
+                <button className={selected === '5' ? 'btn  btn-secondary':'btn btn-light  '} style={{width: isDesktoplg ? "70px":"55px"}} onClick={(e)=> setSelected(e.target.value)} value="5">5</button>
+                <button className={selected === '10' ? 'btn btn-secondary':'btn btn-light  '} style={{width: isDesktoplg ? "70px":"55px"}} onClick={(e)=> setSelected(e.target.value)} value="10">10</button>
+                <button className={selected === '20' ? 'btn btn-secondary':'btn btn-light  '} style={{width: isDesktoplg ? "70px":"55px"}} onClick={(e)=> setSelected(e.target.value)} value="20">20</button>
+                <button className={selected === '50' ? 'btn btn-secondary':'btn btn-light  '} style={{width: isDesktoplg ? "70px":"55px"}} onClick={(e)=> setSelected(e.target.value)} value="50">50</button>
+                <button className={selected === '100' ?'btn btn-secondary':'btn btn-light  '} style={{width: isDesktoplg ? "70px":"55px"}} onClick={(e)=> setSelected(e.target.value)} value="100">100</button>
                 
                 </div> 
               </div>

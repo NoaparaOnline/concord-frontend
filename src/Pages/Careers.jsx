@@ -76,7 +76,7 @@ const Careers = () => {
               <div key={index} className="card col-lg-12 mb-3">
                 <div className="card-body">
                   <Link
-                    to={ob.namelink}
+                    to={{ pathname: ob.namelink+`/${ob.id}`, state: { data: ob } }}
                     style={{
                       fontSize: "16px",
                       color: "#0066b3",

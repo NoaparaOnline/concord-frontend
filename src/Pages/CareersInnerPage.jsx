@@ -102,7 +102,7 @@ const CareersInnerPage = (props) => {
             <div className="row">
               <form onSubmit={handleSubmit(submitHandler)}>
                 <div className="row">
-                  <div className="col-lg-3 mb-4">
+                  <div className="col-lg-3 my-2">
                     <label for="jobapp_full_name">
                       Full Name
                       <span
@@ -134,7 +134,7 @@ const CareersInnerPage = (props) => {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-lg-3 mb-4 ">
+                  <div className="col-lg-3 my-2 ">
                     <label for="jobapp_full_name">
                       Email
                       <span
@@ -169,7 +169,7 @@ const CareersInnerPage = (props) => {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-lg-3 mb-4 ">
+                  <div className="col-lg-3 my-2 ">
                     <label for="jobapp_full_name">
                       Phone
                       <span
@@ -208,7 +208,7 @@ const CareersInnerPage = (props) => {
                 {
                   job_id == '3' && 
                   <div className="row">
-                    <div className="col-lg-3 mb-4 ">
+                    <div className="col-lg-3 my-2 ">
                         <label for="jobapp_full_name">
                           Interested Job Level
                         </label>
@@ -244,7 +244,7 @@ const CareersInnerPage = (props) => {
                
 
                 <div className="row">
-                <div className="col-lg-3 mb-4 ">
+                <div className="col-lg-3 my-3 ">
                     <label for="jobapp_full_name">
                       Interested Area
                     </label>
@@ -277,7 +277,7 @@ const CareersInnerPage = (props) => {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-lg-3 mb-4 ">
+                  <div className="col-lg-3 my-2 ">
                     <label for="jobapp_full_name">
                       Attach Resume
                       <span
@@ -304,7 +304,7 @@ const CareersInnerPage = (props) => {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col mb-3">
+                  <div className="col my-5">
                     <input
                       className="btn "
                       type="submit"
