@@ -4,7 +4,7 @@ import { getToken, logout } from "../Utils/auth.util";
 // const BASE_URL = "prod link";
 // https://dmfr-backend.herokuapp.com/api/v1/
 // https://concord-backend-m1.herokuapp.com/
-export const BASEURL = "http://127.0.0.1:5000/api"
+export const BASEURL = "https://concordpharma-bd.com/api"
 const BASE_URL = BASEURL;
 // const BASE_URL = "https://concord-backend-m2.herokuapp.com/api";
 // const BASE_URL = "https://concord-backend-prod.herokuapp.com/api";
