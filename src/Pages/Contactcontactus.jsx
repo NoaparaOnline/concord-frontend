@@ -31,33 +31,40 @@ const Contact_contactus = () => {
   } = useForm();
 
   const submitHandler = async (data) => {
-      const RecipentEmail ='info@concordpharma-bd.com'
-      // const RecipentEmail ='shahzaibqadir7@gmail.com'
-      const apiData = {
-        recipients: [RecipentEmail],
-        subject: data?.dropsel,
-        body: `<p>Email enquiry from Contact-Us form Concord Pharma</p>
-        <strong>Name</strong> : ${data?.name}
-                      <br/>
-                      <strong>Email</strong> : ${data?.email}
-                      <br/>
-                      <strong>Number</strong> : ${data?.phone}
-                      <br/>
-                      <strong>Subject</strong> : ${data?.subject}
-                      <br/>
-                      <strong>Message</strong> : <span className="text-justify">${data?.message}</span>
-                      <br/>
-                      `,
-      };
-      const res = await dispatch(SendGridMailApi(apiData));
-      if(res?.response_code == 200){
-        setSuccess(true);
-        toast.info("Email Send Successfully")
+      if(validateEmail(data.email)){
+        const RecipentEmail ='info@concordpharma-bd.com'
+        // const RecipentEmail ='shahzaibqadir7@gmail.com'
+        const apiData = {
+          recipients: [RecipentEmail],
+          subject: data?.dropsel,
+          body: `<p>Email enquiry from Contact-Us form Concord Pharma</p>
+          <strong>Name</strong> : ${data?.name}
+                        <br/>
+                        <strong>Email</strong> : ${data?.email}
+                        <br/>
+                        <strong>Number</strong> : ${data?.phone}
+                        <br/>
+                        <strong>Subject</strong> : ${data?.subject}
+                        <br/>
+                        <strong>Message</strong> : <span className="text-justify">${data?.message}</span>
+                        <br/>
+                        `,
+        };
+        const res = await dispatch(SendGridMailApi(apiData));
+        if(res?.response_code == 200){
+          setSuccess(true);
+          toast.info("Email Send Successfully")
+        }
+        else{
+            setSuccess(false)
+          toast.error("Email Not Send")
+        }
+
       }
       else{
-          setSuccess(false)
-        toast.error("Email Not Send")
+        toast.error("Please Enter Valid Email")
       }
+     
     
   };
 
@@ -84,8 +91,7 @@ const Contact_contactus = () => {
               <div className="service-content1">
                 <h3>For Corporate Business</h3>
                 <span style={{ color: "#565656" }}>
-                  Faysal Md. Shaheen Manager &amp; Head, Int’l Business
-                  Department
+               Head-Office : Sima Blossom (11th Floor), House#3(New) 390(Old) Road#16(New) #27(old), Dhanmondi,Dhaka-1206
                 </span>
               </div>
 
@@ -97,7 +103,7 @@ const Contact_contactus = () => {
             <div className="serviceBox1">
               <div className="service-content1">
                 <h3>Phone</h3>
-                <span style={{ color: "#565656" }}>01991146559</span>
+                <span style={{ color: "#565656" }}>+01991146559</span>
               </div>
               <div className="service-icon1">
                 <i className="fa fa-phone"></i>
@@ -119,10 +125,10 @@ const Contact_contactus = () => {
                 <h3>Email</h3>
                 <a
                   className="secnav"
-                  href="mailto:info@concordpharma-bd.com"
+                  href="mailto:headoffice@concordpharma-bd.com"
                   style={{ color: "#565656", textDecoration: "none" }}
                 >
-                  info@concordpharma-bd.com
+                   headoffice@concordpharma-bd.com
                 </a>
               </div>
               <div className="service-icon1">
@@ -148,7 +154,7 @@ const Contact_contactus = () => {
             <div className="serviceBox1">
               <div className="service-content1">
                 <h3>Phone</h3>
-                <span style={{ color: "#565656" }}>88-02-9146311-13</span>
+                <span style={{ color: "#565656" }}><br/>01991145006 , 880248120339<b></b> </span>
               </div>
               <div className="service-icon1">
                 <i className="fa fa-phone"></i>
