@@ -23,7 +23,7 @@ const About = () => {
       id: 1,
       imageURL: Aboutcard2,
       text: "Health Associates",
-      link: "#",
+      link: "/about_health_associates",
     },
     {
       id: 2,
