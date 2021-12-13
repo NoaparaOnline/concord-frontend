@@ -183,10 +183,19 @@ const Footer = () => {
 
                   <ul className="list-unstyled">
                   <li className="">
-              <span className="Typograpy_lastblock_Span">Call :</span> <span>01991146559</span>
+              <span className="Typograpy_lastblock_Span">Call :</span><a href="tel:++01991146559"   className="text-white"
+                  style={{textDecoration:'none'}}><span>01991146559</span></a> 
               </li>
               <li className="">
-              <span className="Typograpy_lastblock_Span">Email:</span> info@concordpharma-bd.com
+             
+              <span className="Typograpy_lastblock_Span">Email:</span> 
+              <a
+                  href="mailto:info@concordpharma-bd.com"
+                  className="text-white"
+                  style={{textDecoration:'none'}}
+                >
+                   info@concordpharma-bd.com
+                </a>
               </li>
               <li className="mb-2">
               <span className="Typograpy_lastblock_Span">Visitor Count</span>

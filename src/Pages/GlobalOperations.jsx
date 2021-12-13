@@ -122,7 +122,16 @@ const GlobalOPerations = () => {
             <div className="mb-4">
 
               For any further information or export:
-              <div><span>Email: <Link>Cplibd.export@gmail.com</Link></span></div>
+              <div><span>Email: 
+                
+              <a
+                  href="mailto:Cplibd.export@gmail.com"
+           
+                  style={{textDecoration:'none'}}
+                >
+                   Cplibd.export@gmail.com
+                </a>
+                 </span></div>
               <div><span>Cell: +8801991145006 (Whatsapp & Viber associated)</span></div>
 
 
