@@ -1,0 +1,26 @@
+image: node:16
+
+# Workflow Configuration
+
+pipelines:
+  branches:
+    prod:
+    - parallel:
+      - step:
+          name: dependencies setup and build creation
+          caches:
+            - node
+          script:
+            - npm install --force
+            - npm run build
+          artifacts:
+            - build/**
+      - step:
+          name: deployment on remote server
+          deployment: prod server
+          script:
+            - pipe: 'atlassian/sftp-deploy:0.5.8'
+              variables:
+                USER: $username
+                SERVER: $server_ip
+                REMOTE_PATH: '/var/www/html/rippledmfr-frontend/build/'
