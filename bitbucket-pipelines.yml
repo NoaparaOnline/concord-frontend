@@ -21,6 +21,6 @@ pipelines:
               variables:
                 USER: $username
                 SERVER: $server_ip
-                REMOTE_PATH: '/var/www/html/concord-frontend/build/'
+                REMOTE_PATH: '/srv/concord-frontend/build/'
                 LOCAL_PATH: "build/**"
                 EXTRA_ARGUMENTS: "-C"
