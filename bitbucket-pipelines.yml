@@ -1,17 +1,14 @@
 image: node:16
 
-# Workflow Configuration
-
 pipelines:
   branches:
     prod:
-    - parallel:
       - step:
           name: dependencies setup and build creation
           caches:
             - node
           script:
-            - npm install --force
+            - npm install
             - npm run build
           artifacts:
             - build/**
@@ -23,4 +20,6 @@ pipelines:
               variables:
                 USER: $username
                 SERVER: $server_ip
-                REMOTE_PATH: '/var/www/html/rippledmfr-frontend/build/'
+                REMOTE_PATH: '/var/www/html/concord-frontend/build/'
+                LOCAL_PATH: "build/**"
+                EXTRA_ARGUMENTS: "-C"
