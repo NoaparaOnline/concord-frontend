@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Dapzinfr from "../../../Statics/assets/first-time-launching/Dapazin-5-eng.jpg";
 import Dapzinbk from "../../../Statics/assets/first-time-launching/Dapazin-5_Ban.jpg";
 import Modal from "react-bootstrap/Modal";
-import { useSelector } from "react-redux";
 
 const DapzineTablet = () => {
   const LinksBan = [
@@ -34,9 +33,7 @@ const DapzineTablet = () => {
   const handleShow = () => {
     setShow(true);
   };
-  const productssingleobj = useSelector(
-    (state) => state?.director?.getsingleproductobj
-  );
+ 
   const Text = () => {
     return (
       <div>

@@ -1,16 +1,10 @@
 import React from "react";
 import "./FlipCard.css";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { getSingleProductDataObj } from "../../../Store/Actions/directorActions";
 
 const FlipCard = (props) => {
   const { card } = props;
-  const { title, text1, text2, img, btn, btnlink, innerdata, innerComposition } = card;
-  const dispatch = useDispatch();
-  console.log(props,"propsflip");
+  const { title, text1, text2,  btn,innerComposition } = card;
   const currentpath = props?.location?.pathname;
-  console.log(currentpath,"currentpath");
   return (
     <div>
       <div className="flip-card" style={{ marginBottom: "50%" }}>

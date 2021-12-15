@@ -1,13 +1,9 @@
 import React from 'react'
 import './FlipCard.css'
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { getSingleProductDataObj } from "../../../Store/Actions/directorActions";
 
 const SingleCard = (props) => {
   const { card } = props;
-  const {title, text1, text2, img, btn, btnlink, innerdata, innerComposition } = card;
-  const dispatch = useDispatch();
+  const {title, text1, text2,  btn,  innerComposition } = card;
   const currentpath = props?.location?.pathname;
  
   return (

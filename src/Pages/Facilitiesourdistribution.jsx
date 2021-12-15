@@ -1,7 +1,6 @@
 import React from "react";
 import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/Distributionbanner.jpg";
-import mapimage from "../Statics/assets/map.png";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 const Facilities_ourdistribution = () => {
    const cards = [

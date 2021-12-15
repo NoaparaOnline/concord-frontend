@@ -43,7 +43,7 @@ const Footer = () => {
           </li>
           <li>
           {/* Telemedicine Link */}
-              <a target="_blank" href='https://mdxdmfr.com' className="linkFoot">
+              <a target="_blank" rel="noreferrer" href='https://mdxdmfr.com' className="linkFoot">
                 Tele Medicine
               </a>
             
@@ -99,12 +99,12 @@ const Footer = () => {
           </li>
            <ul className="list-unstyled list-inline mt-3">
           <li className="list-inline-item">
-        <a href="https://www.facebook.com/concordbd" target="_blank" className="sbtn btn-large mx-1 text-white linkFoot" title="Facebook">
+        <a href="https://www.facebook.com/concordbd" target="_blank" rel="noreferrer"  className="sbtn btn-large mx-1 text-white linkFoot" title="Facebook">
           <i className="fa fa-facebook-square fa-2x" ></i>
         </a>
       </li>
       <li className="list-inline-item">
-        <a href="https://www.linkedin.com/company/concord-pharmaceauticals-ltd" target="_blank" className="sbtn btn-large mx-1 text-white linkFoot" title="Linkedin">
+        <a href="https://www.linkedin.com/company/concord-pharmaceauticals-ltd" target="_blank" rel="noreferrer" className="sbtn btn-large mx-1 text-white linkFoot" title="Linkedin">
           <i className="fa fa-linkedin-square fa-2x" ></i>
         </a>
       </li>
@@ -114,7 +114,7 @@ const Footer = () => {
         </a>
       </li>
       <li className="list-inline-item">
-        <a href="https://www.youtube.com/channel/UCMmBlHrIraXle71-M1g_m6w" target="_blank" className="sbtn btn-large mx-1 text-white linkFoot" title="Youtube">
+        <a href="https://www.youtube.com/channel/UCMmBlHrIraXle71-M1g_m6w" target="_blank" rel="noreferrer" className="sbtn btn-large mx-1 text-white linkFoot" title="Youtube">
           <i className="fa fa-youtube-square fa-2x" ></i>
         </a>
       </li>
@@ -122,7 +122,7 @@ const Footer = () => {
 
         {/* <div className="widget-area">
               <div className="socialiconm">
-                <a className="soicon" href="https://www.facebook.com/concordbd/" title="Facebook" target="_blank" rel="noopener"><i className="fa fa-facebook"></i></a>
+                <a className="soicon" href="https://www.facebook.com/concordbd/" title="Facebook" target="_blank" rel="noreferrer" rel="noopener"><i className="fa fa-facebook"></i></a>
                 <a className="soicon" href="#" title="Twitter"><i className="fa fa-twitter"></i></a>
                 <a className="soicon" href="#" title="Instagram"><i className="fa fa-instagram"></i></a>
                 <a className="soicon" href="#" title="Youtube"><i className="fa fa-youtube"></i></a>
@@ -163,7 +163,7 @@ const Footer = () => {
 
 
 
-              <a target="_blank" href='https://play.google.com/store/apps/details?id=com.concordmpo' >
+              <a target="_blank" rel="noreferrer" href='https://play.google.com/store/apps/details?id=com.concordmpo' >
               <img
               alt=""
                 loading="lazy"

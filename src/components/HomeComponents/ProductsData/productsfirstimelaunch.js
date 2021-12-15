@@ -1,11 +1,4 @@
-import acedolfr from '../../../Statics/assets/first-time-launching/Acedol-Tabletfr.jpg';
-import acedolbk from '../../../Statics/assets/first-time-launching/ban-Acedol-Tabletbk.jpg';
 
-import acubis25fr from '../../../Statics/assets/first-time-launching/Acubis-2.5-eng.jpg';
-import acubis25bk from '../../../Statics/assets/first-time-launching/Acubis-2.5-ban.jpg';
-
-import conzi100fr from '../../../Statics/assets/first-time-launching/Conzi-100-ml-eng.jpg';
-import conzi100bk from '../../../Statics/assets/first-time-launching/Conzi-100-ml-ban.jpg';
 
 import dapazin5fr from '../../../Statics/assets/first-time-launching/Dapazin-5-eng.jpg';
 import dapazin5bk from '../../../Statics/assets/first-time-launching/Dapazin-5_Ban.jpg';
@@ -13,8 +6,6 @@ import dapazin5bk from '../../../Statics/assets/first-time-launching/Dapazin-5_B
 import dapazin10fr from '../../../Statics/assets/first-time-launching/Dapazin-10-eng.jpg';
 import dapazin10bk from '../../../Statics/assets/first-time-launching/Dapazin-10-ban.jpg';
 
-import dopagut60fr from '../../../Statics/assets/first-time-launching/Dopagut-60-ml-eng.jpg';
-import dopagut60bk from '../../../Statics/assets/first-time-launching/Dopagut-60-ml-ban.jpg';
 
 import relikof25fr from '../../../Statics/assets/first-time-launching/Relikof-2.5_Eng.jpg';
 import relikof25bk from '../../../Statics/assets/first-time-launching/Relikof-2.5_Eng.jpg';
@@ -22,8 +13,6 @@ import relikof25bk from '../../../Statics/assets/first-time-launching/Relikof-2.
 import relikofkidzfr from '../../../Statics/assets/first-time-launching/Relikof-Kidz-eng.jpg';
 import relikofkidzbk from '../../../Statics/assets/first-time-launching/Relikof-Kidz-ban.jpg';
 
-import unilorfr from '../../../Statics/assets/first-time-launching/Unilor-Tablet-eng.jpg';
-import unilorbk from '../../../Statics/assets/first-time-launching/Unilor-Tablet-ban.jpg';
 
 export const FirstTime = [
   // {

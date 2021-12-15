@@ -160,7 +160,6 @@ const Notifications = (props) => {
     (state) => state?.static?.newnotification
   );
 
-  console.log(allnotification,"allnotification")
 
   const dispatch = useDispatch();
   useEffect(() => {

@@ -99,7 +99,6 @@ const DistributionCenter = (
                   return (
                     <React.Fragment key={ob.id}>
                       <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-                        {console.log("ob",ob)}
                         <DashCard
                         
                         datahead={

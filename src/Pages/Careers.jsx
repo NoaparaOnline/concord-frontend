@@ -47,6 +47,7 @@ const Careers = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllThana())
+      // eslint-disable-next-line
   }, [])
 
   return (

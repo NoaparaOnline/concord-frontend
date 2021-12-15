@@ -2,7 +2,6 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { BASEURL } from "../../services/HttpProvider";
 import apiServices from "../../services/requestHandler";
-import localStoreUtil from "../../Utils/localstore.util";
 import { directorConstants } from "../Constants/directorConstant";
 import { logInConstants } from "../Constants/loginConstant";
 

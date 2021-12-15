@@ -85,7 +85,7 @@ const Sitemap = () => {
     <rect x="386" y="78" fill="#fff" opacity="0" width="135" height="50"></rect>
   </Link><Link to="/facilities">
     <rect x="541" y="75" fill="#fff" opacity="0" width="128" height="50"></rect>
-  </Link><a xlinkHref="https://www.mdxdmfr.com" target="_blank">
+  </Link><a  href="https://www.mdxdmfr.com" rel="noreferrer" target="_blank">
     <rect x="722" y="77" fill="#fff" opacity="0" width="171" height="50"></rect>
   </a><Link to="/media">
     <rect x="948" y="78" fill="#fff" opacity="0" width="100" height="52"></rect>
