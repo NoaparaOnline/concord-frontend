@@ -8,6 +8,7 @@ pipelines:
           caches:
             - node
           script:
+            - export CI=false
             - npm install
             - npm run build
           artifacts:
