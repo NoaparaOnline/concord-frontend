@@ -57,7 +57,8 @@ const DistributionCenter = (
 
         reverse={false}
         TableCardGrid={
-          <div className="row">
+          <div className="row" >
+
             <div className="row">
               <div className="col-3 mb-2">
                 <i
@@ -71,7 +72,9 @@ const DistributionCenter = (
                   style={{
                     padding: "0.375rem 2.5rem",
                     borderRadius: "10px",
-                    minWidth: "240px"
+                    minWidth: "240px",
+                    
+                    
                   }}
                   placeholder="Search"
                   onChange={(e) => searchItems2(e.target.value)}
@@ -184,11 +187,11 @@ const DistributionCenter = (
                   
                 })
                 : distributioncenter.map((ob, index) => (
-                  <React.Fragment key={ob.id}>
+                  <React.Fragment key={ob?.id}>
                     <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
                       <DashCard
                         datahead={
-                          ob?.areas[0]?.parent?.name
+                          ob?.name
                         }
                         dataname={
                              
@@ -252,7 +255,7 @@ const DistributionCenter = (
                             if(obdep?.is_primary)
                               {
                                 return (
-                                  `${obdep?.address.street_address} ,${obdep?.address.area} ,${obdep?.address.province}, ${obdep?.address.city}` 
+                                  `${obdep?.address.street_address === undefined ? "" : obdep?.address.street_address +','} ${obdep?.address.area === undefined ? "N/A" : obdep?.address.area +','} ${obdep?.address.province === undefined ? "" : obdep?.address.province +','} ${obdep?.address.city === undefined ? "" : obdep?.address.city } ` 
                                   );
                               }
                               else{

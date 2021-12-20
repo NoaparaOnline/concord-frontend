@@ -72,7 +72,7 @@ const Stocks = ({
         { dataField: "quantity", text: "Quantity", formatter: nullChecker, sort: true },
 
 
-        { dataField: "product.formula", text: "Formula", formatter: nullChecker, sort: true },
+        { dataField: "product.formula", text: "Formulas", formatter: nullChecker, sort: true },
 
         { dataField: "product.price", text: "Price", sort: true },
 
@@ -196,7 +196,7 @@ const Stocks = ({
                                             pagination={selectedTabbledata.length > 10 ? paginationFactory() : null}
                                             bordered={false}
                                             condensed
-                                            wrapperClasses="table-responsive"
+                                             
                                         />
                                     )}
                                 </div>

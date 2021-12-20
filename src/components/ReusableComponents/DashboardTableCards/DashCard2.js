@@ -9,6 +9,10 @@ const DashCard = ({
   dataaddress,
 
 }) => {
+
+
+  console.log(dataaddress,"Testing")
+
   return (
     <>
       <div
@@ -76,10 +80,10 @@ const DashCard = ({
                     </span>
                   </div>
                   <div className="mt-2">
-                    <a
+                    {/* <a
                       href="/#"
                       style={{ textDecoration: "none", color: "#0066b3" }}
-                    >
+                    > */}
                       <i className="fa fa-envelope text-break" aria-hidden="true">
                         <span
                           className="ms-3"
@@ -95,16 +99,16 @@ const DashCard = ({
 
                       </i>
 
-                    </a>
+                    {/* </a> */}
                   </div>
 
                   <div className="mt-2">
-                    <a
+                    {/* <a
                       href="/#"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ textDecoration: "none", color: "#0066b3" }}
-                    >
+                    > */}
                       <i
                         className="fa fa-map-marker text-break"
                         aria-hidden="true"
@@ -126,7 +130,7 @@ const DashCard = ({
                         </span>
 
                       </i>
-                    </a>
+                    {/* </a> */}
                   </div>
                 </div>
               </div>

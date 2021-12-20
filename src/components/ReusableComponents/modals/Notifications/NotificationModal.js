@@ -26,7 +26,7 @@ const NotificationModal = (props) => {
 
   const tabHandler = async (item) => {
     setSelectedTab(item);
-    if(item === "New Notification"){
+    if(item === "Recent Notification"){
       const apiData = newnotification?.map(item => {
         return item?.id
       })
@@ -56,7 +56,7 @@ const NotificationModal = (props) => {
         >
           <div className="row ">
             <div className="col-12">
-              {["All Notifications", "New Notification"].map((item, index) => (
+              {["All Notifications", "Recent Notification"].map((item, index) => (
                 <div
                   className="d-flex d-inline-flex col-6"
                   key={index + 1}
@@ -70,7 +70,7 @@ const NotificationModal = (props) => {
                         ? "dashboardBtnList-item-active py-2"
                         : "default-color-and-hover py-2"
                     }
-                    shownotification={item === "New Notification"}
+                    shownotification={item === "Recent Notification"}
                     notificationCount={notificationcount}
                   />
                 </div>
@@ -99,7 +99,7 @@ const NotificationModal = (props) => {
                     </>
                   ))
                 ) : newnotification?.length > 0 &&
-                  selectedTab === "New Notification" ? (
+                  selectedTab === "Recent Notification" ? (
                   newnotification?.map((item, index) => (
                     <>
                       {item === undefined ? null : (

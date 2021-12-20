@@ -209,7 +209,7 @@ const OrderHistory = (
                                             pagination={paginationFactory()}
                                             bordered={false}
                                             condensed
-                                            wrapperClasses="table-responsive"
+                                             
                                         />
                                     )}
                                     </div>

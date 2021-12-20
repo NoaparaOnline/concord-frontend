@@ -56,7 +56,7 @@ const StatuschangedModal = (props) => {
               <div className="d-flex justify-content-center  me-3 ">
                 <div
                   className="card cardlogmodel"
-                  style={{ minWidth: "50%", width: "400px", height: "200px" }}
+                  style={{ minWidth: "50%", width: "400px", height: "230px" }}
                 >
 
                   <div className="">
@@ -112,7 +112,7 @@ const StatuschangedModal = (props) => {
                       </div>
 
                       <button
-                        className="btn btn-primary rounded-pill btn-block mb-2"
+                        className="btn btn-primary rounded-pill btn-block mb-3"
                         style={{
                           color: "#fff",
                           backgroundColor: "#0066b3",

@@ -5,7 +5,7 @@ import { BrowserRouter as Router,  Route , NavLink} from "react-router-dom";
 import SiderbarBtn from "../../components/ReusableComponents/SidebarDashboard/SiderbarBtn";
 import icon0 from "../../Statics/assets/Sidebar/0.png";
 import icon1 from "../../Statics/assets/Sidebar/6.png";
-import icon2 from "../../Statics/assets/Sidebar/7.png";
+// import icon2 from "../../Statics/assets/Sidebar/7.png";
 import icon3 from "../../Statics/assets/Sidebar/8.png";
 import icon4 from "../../Statics/assets/Sidebar/9.png";
 import icon5 from "../../Statics/assets/Sidebar/10.png";
@@ -17,7 +17,7 @@ import { useDispatch } from "react-redux";
 import { logoutUser } from "../../Store/Actions/loginActions";
 import DirectorScheduleCreate from "../../components/ReusableComponents/modals/DirectorScheduleCreate/DirectorScheduleCreate";
 import DirectorApprovalStatusChange from "../../components/ReusableComponents/modals/DirectorApprovalStatusChange/DirectorApprovalStatusChange";
-import Schedules from "./Schedules";
+// import Schedules from "./Schedules";
 import Products from "./Products";
 import NewlyProducts from "./NewlyProducts";
 import DistributionCenter from "./DistributionCenter";
@@ -63,9 +63,9 @@ const DirectorDashboard = (props) => {
     setShow(!show);
   };
   // MODAL OPEN FUCNTION
-  const handleShow = () => {
-    setShow(!show);
-  };
+  // const handleShow = () => {
+  //   setShow(!show);
+  // }; 
 
 
   const [show3, setShow3] = useState(false);
@@ -95,9 +95,9 @@ const DirectorDashboard = (props) => {
     setShow1(!show1);
   };
   // ===================2nd Modal
-  const handleShow1 = () => {
-    setShow1(!show1);
-  };
+  // const handleShow1 = () => {
+  //   setShow1(!show1);
+  // };
 
  
   // Selected Buttons
@@ -149,7 +149,7 @@ const DirectorDashboard = (props) => {
           selectedTab0={selectedTab0}
           />
         </Route>
-        <Route path={`${props.match.path}/schedule`}>
+        {/* <Route path={`${props.match.path}/schedule`}>
           <Schedules
           sidebarOpen={sidebarOpen}
           openSidebar={openSidebar}
@@ -157,7 +157,7 @@ const DirectorDashboard = (props) => {
           handleShow={handleShow}
           deopdefaultSorted={deopdefaultSorted}
           />
-        </Route>
+        </Route> */}
         <Route path={`${props.match.path}/products`}>
           <Products
           sidebarOpen={sidebarOpen}
@@ -216,7 +216,7 @@ const DirectorDashboard = (props) => {
                 btnroute=""
                 btnName="Reports"
               />
-              <SiderbarBtn
+              {/* <SiderbarBtn
                 imgbtn={icon2}
                 Colr="#CB912B"
                 {...props}
@@ -224,7 +224,7 @@ const DirectorDashboard = (props) => {
                 btnroute="schedule"
                 
                 btnName="Schedule"
-              />
+              /> */}
               <SiderbarBtn
                 imgbtn={icon3}
                 Colr="#7F2987"

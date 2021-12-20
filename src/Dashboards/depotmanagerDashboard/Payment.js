@@ -171,7 +171,7 @@ const Payment = ({
                       pagination={order.length > 10 ? paginationFactory() : null}
                       bordered={false}
                       condensed
-                      wrapperClasses="table-responsive"
+                       
                     />
                   )}
                 </div>

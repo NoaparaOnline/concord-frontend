@@ -382,7 +382,7 @@ const Schedules = ({
                         }
                         bordered={false}
                         condensed
-                        wrapperClasses="table-responsive"
+                         
                       />
                     </div>
                   )}

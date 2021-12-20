@@ -199,7 +199,7 @@ const DeliveryStatus = (
                           bordered={false}
                           noDataIndication={emptyDataMessage}
                           condensed
-                          wrapperClasses="table-responsive"
+                           
                         />
     )}
                       </div>

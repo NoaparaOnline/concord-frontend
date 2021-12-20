@@ -275,7 +275,7 @@ const NewlyProducts = (
                           }
                           bordered={false}
                           condensed
-                          wrapperClasses="table-responsive"
+                          // wrapperClasses="table-responsive"
                         />
      )}
                       </div>

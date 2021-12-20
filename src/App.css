@@ -416,3 +416,12 @@ img {max-width: 100%; }
   align-items: center !important;
 }
 
+.react-bootstrap-table {
+  height: 500px;
+  overflow: auto;
+}
+
+.customfixed{
+  height: 500px;
+  overflow: auto;
+}
