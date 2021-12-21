@@ -1,0 +1,26 @@
+image: node:16
+
+pipelines:
+  branches:
+    prod:
+      - step:
+          name: dependencies setup and build creation
+          caches:
+            - node
+          script:
+            - export CI=false
+            - npm install
+            - npm run build
+          artifacts:
+            - build/**
+      - step:
+          name: deployment on remote server
+          deployment: prod server
+          script:
+            - pipe: 'atlassian/sftp-deploy:0.5.8'
+              variables:
+                USER: $username
+                SERVER: $server_ip
+                REMOTE_PATH: '/srv/concord-frontend/build/'
+                LOCAL_PATH: "build/**"
+                EXTRA_ARGUMENTS: "-C"
