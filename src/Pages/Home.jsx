@@ -27,13 +27,13 @@ const label = {
 const milestone_data = [
   {
     id: 0,
-    year: '2011',
-    text: 'Concord Project Managements Established'
+    year: '2010',
+    text: 'Inauguration of CONCORD'
   },
   {
     id: 1,
-    year: '2014',
-    text: 'Continuing with various Projects'
+    year: '2010',
+    text: 'Factory Establish'
   },
 ];
 
