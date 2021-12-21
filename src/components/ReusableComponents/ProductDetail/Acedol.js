@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import acedolfr from '../../../Statics/assets/first-time-launching/Acedol-Tabletfr.jpg';
 import acedolbk from '../../../Statics/assets/first-time-launching/ban-Acedol-Tabletbk.jpg';
 import Modal from "react-bootstrap/Modal";
-import { useSelector } from "react-redux";
 
 const Acedol = () => {
   const LinksBan = [
@@ -34,10 +33,7 @@ const Acedol = () => {
   const handleShow = () => {
     setShow(true);
   };
-  const productssingleobj = useSelector(
-    (state) => state?.director?.getsingleproductobj
-  );
-  console.log("productssingleobj", productssingleobj);
+
   const Text = () => {
     return (
       <div>

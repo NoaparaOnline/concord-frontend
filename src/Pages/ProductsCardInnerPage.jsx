@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import acedolfr from "../Statics/assets/TabletsFrontBack/innerpagacedolfr.png";
 import acedolbk from "../Statics/assets/TabletsFrontBack/innerpagacedolbk.png";
 import Modal from "react-bootstrap/Modal";
-import { useSelector } from "react-redux";
 
 const ProductsCardInnerPage = () => {
   const LinksBan = [
@@ -34,7 +33,6 @@ const ProductsCardInnerPage = () => {
   const handleShow = () => {
     setShow(true);
   };
-  const productssingleobj = useSelector((state) => state?.director?.getsingleproductobj);
  
  
   const Text = () => {

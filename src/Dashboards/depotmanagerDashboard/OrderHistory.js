@@ -78,6 +78,29 @@ const OrderHistory = (
             sort: true
         },
         {
+            dataField: "approved_by_am",
+            text: "Approved By",
+            
+            style: (cell, row) => {
+                if (cell === "pending" ) return { color: "#C0B627", fontWeight: "500" };
+                else if (cell === "cancelled" || cell === "declined")
+                    return { color: "red", fontWeight: "500" };
+                else if (
+                    cell === "paid" ||
+                    cell === "delivered" ||
+                    cell === "submitted"
+                    || cell === "submitted_to_depot"
+                    || cell === "received"
+                    || cell === "approved"
+                )
+                    return { color: "green", fontWeight: "500" };
+                else if (cell === "dispatched" ||  cell === "unpaid" ||  cell === "deposited")
+                    return { color: "blue", fontWeight: "500" };
+            },
+            formatter:capitalize,
+            sort: true
+        },
+        {
             dataField: "payment_status",
             text: "Payment Status",
             style: (cell, row) => {
@@ -108,7 +131,7 @@ const OrderHistory = (
 
     // EPOCH TO DATE FORMATE TABLE USING MOMENT PAKAGE
     function dateFormatter(cell) {
-        return <span>{moment.unix(cell).format("MMM DD, YYYY")}</span>;
+        return <span>{moment.unix(cell).format("MMM DD, YYYY  HH:mm A")}</span>;
     }
 
     //OLD ORDER COLUMN BUTTON FORMATTER
@@ -209,7 +232,7 @@ const OrderHistory = (
                                             pagination={paginationFactory()}
                                             bordered={false}
                                             condensed
-                                            wrapperClasses="table-responsive"
+                                             
                                         />
                                     )}
                                     </div>

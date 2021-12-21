@@ -160,7 +160,6 @@ const Notifications = (props) => {
     (state) => state?.static?.newnotification
   );
 
-  console.log(allnotification,"allnotification")
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -174,7 +173,7 @@ const Notifications = (props) => {
     if (item === "All Notifications") {
       dispatch(getallNotification())
     }
-    else if (item === "New Notification") {
+    else if (item === "Recent Notification") {
       dispatch(seeAllNotification())
     }
     
@@ -205,7 +204,7 @@ const Notifications = (props) => {
         >
           <div className="row ">
             <div className="col-12">
-              {["All Notifications", "New Notification"].map((item, index) => (
+              {["All Notifications", "Recent Notification"].map((item, index) => (
                 <div
                   className="d-flex d-inline-flex col-6"
                   key={index + 1}
@@ -219,7 +218,7 @@ const Notifications = (props) => {
                         ? "dashboardBtnList-item-active py-2"
                         : "default-color-and-hover py-2"
                     }
-                    shownotification={item === "New Notification"}
+                    shownotification={item === "Recent Notification"}
                     notificationCount={notificationcount}
                   />
                 </div>
@@ -250,7 +249,7 @@ const Notifications = (props) => {
                     </>
                   ))
                 ) : newnotification?.length > 0 &&
-                  selectedTab === "New Notification" ? (
+                  selectedTab === "Recent Notification" ? (
                   newnotification?.map((item, index) => (
                     <>
                       {item === undefined ? null : (

@@ -281,7 +281,7 @@ const Products = (
                           }
                           bordered={false}
                           condensed
-                          wrapperClasses="table-responsive"
+                           
                         />
      )}
                       </div>

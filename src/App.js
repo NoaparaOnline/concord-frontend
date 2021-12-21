@@ -9,7 +9,6 @@ import Contact from "./Pages/Contact";
 import Facilities from "./Pages/Facilities";
 import GlobalOperations from "./Pages/GlobalOperations";
 import Home from "./Pages/Home";
-import Login from "./Pages/Login";
 import Media from "./Pages/Media";
 import Products from "./Pages/Products";
 import Sitemap from "./Pages/Sitemap";
@@ -97,7 +96,6 @@ function App() {
             }
           );
           noti.onclick = (event) => {
-            console.log(event, "Notification clicked.");
             // if (event?.currentTarget?.data?.url) {
             //   window.location.href = event?.currentTarget?.data?.url;
             // }

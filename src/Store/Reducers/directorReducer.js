@@ -14,6 +14,10 @@ const initialState = {
     assignedtompo: [], 
     scheduleidstate: [],
     getsingleproductobj: [],
+    getsingledistributionobj: [],
+    getsingledistributionobjall: [],
+    getsingledistributionobjmedicine: [],
+    getsingledistributionobjgift: [],
 };
 export const directorReducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -45,6 +49,14 @@ export const directorReducer = (state = initialState, { type, payload }) => {
             return { ...state, scheduleidstate : payload };
    case directorConstants.GET_SINGLE_PRODUCT_OBJ:
             return { ...state, getsingleproductobj : payload };
+   case directorConstants.GET_SINGLE_DISTRIBUTIONCENTER_OBJ:
+            return { ...state, getsingledistributionobj : payload };
+   case directorConstants.GET_SINGLE_DISTRIBUTIONCENTER_OBJ_STOCK_ALL:
+            return { ...state, getsingledistributionobjall : payload };
+   case directorConstants.GET_SINGLE_DISTRIBUTIONCENTER_OBJ_STOCK_MED:
+            return { ...state, getsingledistributionobjmedicine : payload };
+   case directorConstants.GET_SINGLE_DISTRIBUTIONCENTER_OBJ_STOCK_GIFT:
+            return { ...state, getsingledistributionobjgift : payload };
     default:
       return state;
   }

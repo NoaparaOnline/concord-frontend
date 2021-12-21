@@ -2,16 +2,13 @@ import React from "react";
 
 import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/parallax_contact.jpg";
-import DirectorImg from "../Statics/assets/chairman-profile.jpg";
 import ewvila from '../Statics/assets/Sliderlogos/1.png'
 import dmfr from '../Statics/assets/Sliderlogos/2.png'
 import toticell from '../Statics/assets/Sliderlogos/3.png'
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 
 const Abouthealthassociates = () => {
-  const DirectorInfo = {
-    name: "Md. Faizur Rahman",
-  };
+ 
   const LinksBan = [
     {
       subLinkName: "Home",

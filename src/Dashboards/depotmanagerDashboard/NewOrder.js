@@ -46,10 +46,10 @@ const NewOrder = (
         { dataField: "order_id", text: "Orders ID", sort: true },
         { dataField: "customer.name", text: "Customer Name", sort: true },
         // {dataField:(data) => moment('order_datetime').format("L")  ,text:'Customer Name',},
-        { dataField: "customer.market__street_address", text: "Market & Address",  sort: true },
+        { dataField: "customer.market__street_address", text: "Market Address",  sort: true },
         {
             dataField: "order_datetime",
-            text: "Order Date/Time",
+            text: "Date And Time",
             formatter: dateFormatter,
             sort: true
         },
@@ -115,7 +115,7 @@ const NewOrder = (
 
     // EPOCH TO DATE FORMATE TABLE USING MOMENT PAKAGE
     function dateFormatter(cell) {
-        return <span>{moment.unix(cell).format("MMM DD, YYYY")}</span>;
+        return <span>{moment.unix(cell).format("MMM DD, YYYY HH:mm A")}</span>;
     }
 
 
@@ -229,7 +229,7 @@ const NewOrder = (
                                             bordered={false}
                                             noDataIndication={emptyDataMessage}
                                             condensed
-                                            wrapperClasses="table-responsive"
+                                             
                                         />
                                     )}
                                 </div>

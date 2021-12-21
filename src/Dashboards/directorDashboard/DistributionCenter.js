@@ -3,17 +3,20 @@
 import React, { useEffect, useState } from 'react'
 import Loader from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
 import DashboardMainCard from '../../components/ReusableComponents/DashboardMainCard/DashboardMainCard';
 import DashCard from '../../components/ReusableComponents/DashboardTableCards/DashCard2';
 import NavbarDash from '../../components/ReusableComponents/NavbarDash/NavbarDash';
-import { getDistributioncenter } from '../../Store/Actions/directorActions';
+import { getDistributioncenter, getSingleDistributionObj, getSingleDistributionObjWithUid } from '../../Store/Actions/directorActions';
 
 const DistributionCenter = (
-  {
-    sidebarOpen,
-    openSidebar,
-  }
+  props
 ) => {
+
+  const sidebarOpen = props?.sidebarOpen;
+  const openSidebar = props?.openSidebar;
+
+  const history = useHistory(); 
 
   const distributioncenter = useSelector((state) => state?.director?.distributioncenter);
   const dispatch = useDispatch();
@@ -57,7 +60,8 @@ const DistributionCenter = (
 
         reverse={false}
         TableCardGrid={
-          <div className="row">
+          <div className="row" >
+
             <div className="row">
               <div className="col-3 mb-2">
                 <i
@@ -71,7 +75,9 @@ const DistributionCenter = (
                   style={{
                     padding: "0.375rem 2.5rem",
                     borderRadius: "10px",
-                    minWidth: "240px"
+                    minWidth: "240px",
+                    
+                    
                   }}
                   placeholder="Search"
                   onChange={(e) => searchItems2(e.target.value)}
@@ -99,7 +105,8 @@ const DistributionCenter = (
                   return (
                     <React.Fragment key={ob.id}>
                       <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
-                        {console.log("ob",ob)}
+                       
+                       
                         <DashCard
                         
                         datahead={
@@ -185,11 +192,19 @@ const DistributionCenter = (
                   
                 })
                 : distributioncenter.map((ob, index) => (
-                  <React.Fragment key={ob.id}>
+                  <React.Fragment key={ob?.id}>
+
                     <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
+                  <div 
+                  onClick={() => {
+                    history.push("/director-dashboard/distribution-center/stocksdetails");
+                    dispatch(getSingleDistributionObj(ob?.uid));
+                  }}
+                  style={{cursor:'pointer'}}
+                 >
                       <DashCard
                         datahead={
-                          ob?.areas[0]?.parent?.name
+                          ob?.name
                         }
                         dataname={
                              
@@ -253,7 +268,7 @@ const DistributionCenter = (
                             if(obdep?.is_primary)
                               {
                                 return (
-                                  `${obdep?.address.street_address} ,${obdep?.address.area} ,${obdep?.address.province}, ${obdep?.address.city}` 
+                                  `${obdep?.address.street_address === undefined ? "" : obdep?.address.street_address +','} ${obdep?.address.area === undefined ? "N/A" : obdep?.address.area +','} ${obdep?.address.province === undefined ? "" : obdep?.address.province +','} ${obdep?.address.city === undefined ? "" : obdep?.address.city } ` 
                                   );
                               }
                               else{
@@ -263,6 +278,8 @@ const DistributionCenter = (
                           
                         }
                         />
+                  </div>    
+
                     </div>
                   </React.Fragment>
                 ))

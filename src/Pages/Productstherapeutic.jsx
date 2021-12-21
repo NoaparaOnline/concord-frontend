@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { FlipCard } from "../components";
@@ -33,7 +33,6 @@ const Products_therapeutic = (props) => {
       ? obj
       : obj?.filter((item) => item?.theraputic_class === selectedClass);
 
-  console.log(filterClass, "filterClass");
 
   const filteredtype = (type) => {
     if (type === "All") {
@@ -74,13 +73,8 @@ const Products_therapeutic = (props) => {
     }
   };
   const [selected, setSelected] = useState('5');
-  let [defaultandfilter, setDefaultandfilter] = useState(obj);
 
-  // useEffect(() => {
-  //   setDefaultandfilter(obj);
-  // }, [obj])
 
-  console.log(selectedClass, "selectedClass");
 
   const [pageNumber, setPageNumber] = useState(0);
   const perPage = selected;
@@ -88,7 +82,6 @@ const Products_therapeutic = (props) => {
 
   // defaultandfilter = selectedClass ? filterClass : (selectedClass==="all" || selectedClass===null) ? obj : obj
 
-  console.log(defaultandfilter, "defaultandfilter");
   const displayUsers =
     filterClass.length === 0 ? (
       <div className="d-flex justify-content-center mb-5">

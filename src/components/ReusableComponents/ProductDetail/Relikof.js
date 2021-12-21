@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import acedolfr from "../../../Statics/assets/first-time-launching/Relikof-2.5_Eng.jpg";
 import acedolbk from "../../../Statics/assets/first-time-launching/Relikof-2.5_Eng.jpg";
 import Modal from "react-bootstrap/Modal";
-import { useSelector } from "react-redux";
 
 const Relikof = () => {
   const LinksBan = [
@@ -34,9 +33,7 @@ const Relikof = () => {
   const handleShow = () => {
     setShow(true);
   };
-  const productssingleobj = useSelector(
-    (state) => state?.director?.getsingleproductobj
-  );
+
   const Text = () => {
     return (
       <div>

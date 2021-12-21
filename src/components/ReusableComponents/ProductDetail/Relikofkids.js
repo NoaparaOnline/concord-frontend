@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import acedolfr from "../../../Statics/assets/first-time-launching/Relikof-Kidz-eng.jpg";
 import acedolbk from "../../../Statics/assets/first-time-launching/Relikof-Kidz-ban.jpg";
 import Modal from "react-bootstrap/Modal";
-import { useSelector } from "react-redux";
 
 const Relikofkids = () => {
   const LinksBan = [
@@ -34,10 +33,7 @@ const Relikofkids = () => {
   const handleShow = () => {
     setShow(true);
   };
-  const productssingleobj = useSelector(
-    (state) => state?.director?.getsingleproductobj
-  );
-  console.log("productssingleobj", productssingleobj);
+
   const Text = () => {
     return (
       <div>

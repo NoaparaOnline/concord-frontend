@@ -51,7 +51,7 @@ const Contact_contactus = () => {
                         `,
         };
         const res = await dispatch(SendGridMailApi(apiData));
-        if(res?.response_code == 200){
+        if(res?.response_code === 200){
           setSuccess(true);
           toast.info("Email Send Successfully")
         }

@@ -80,6 +80,16 @@ const TableInnerPage = (props) => {
                   {productidstate?.ordered_by?.name}
                 </div>
               </div>
+              <div className="row py-3  ">
+              
+                <div className="col-lg-6">
+                  <span style={{ fontWeight: "600", color: "#565656"  }}>
+                     Ordered By: &nbsp;
+                  </span>{" "}
+                  <span className="text-capitalize" style={{color:'green' ,fontWeight:'500'}}>{productidstate?.approved_by_am}</span>
+                  
+                </div>
+              </div>
               
             </div>
 

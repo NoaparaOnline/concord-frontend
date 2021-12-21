@@ -14,7 +14,6 @@ import {
 } from "../components";
 
 import React from 'react'
-import card from "../components/HomeComponents/FlipCardsHome/CardData";
 import { Link } from 'react-router-dom'
 
 

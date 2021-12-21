@@ -1866,7 +1866,6 @@ export const ByTherapeutic = [
     title: "Convit B  200 Syrup",
 
     theraputic_class: "vitamin",
-    theraputic_class: "antibiotic",
     text1: " ",
     text2: " ",
     img: [
@@ -10668,7 +10667,6 @@ export const ByTherapeutic = [
     backpagename: "By Therapeutic Class",
     backpagelink: "/products_therapeutic",
 
-    backpagename: "By Trade Name",
     innerMainHeading: "Roclav 500",
     innerComposition: "Cefuroxime BP and Clavulanic Acid BP",
     innerdata: [

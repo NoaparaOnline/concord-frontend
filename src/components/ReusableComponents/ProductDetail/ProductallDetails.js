@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { CompanyLogos } from "../../../components";
 import BannerWithText from "../../../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Link } from "react-router-dom";
@@ -17,7 +17,6 @@ const ProductallDetails = (props) => {
   };
   const viewData = props?.location?.state?.data;
 
-  console.log(viewData, "currentdata");
 
 
   const LinksBan = [

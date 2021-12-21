@@ -11,7 +11,6 @@ import flag7 from "../Statics/assets/flags/fl7.jpg";
 import flag8 from "../Statics/assets/flags/fl8.jpg";
 import flag9 from "../Statics/assets/flags/fl9.jpg";
 import flag10 from "../Statics/assets/flags/fl10.jpg";
-import { Link } from 'react-router-dom'
 
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 const GlobalOPerations = () => {

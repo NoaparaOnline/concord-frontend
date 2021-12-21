@@ -23,10 +23,6 @@ const DependentDropdowns = (props) => {
     (status) => status?.role?.category?.name === "sm"
   );
 
-  // console.log("rsmdata",rsmdata);
-  // console.log("amdata",amdata);
-  // console.log("mpodata",mpodata);
-  // console.log("filterd",filterd);
 
   const defaultval = {
     sm: "Select SM ...",

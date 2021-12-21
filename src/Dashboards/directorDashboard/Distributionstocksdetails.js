@@ -1,3 +1,24 @@
+// import React from 'react'
+// import { useSelector } from 'react-redux';
+
+// const Distributionstocksdetails = (props) => {
+
+//     const getsingledistributionobj = useSelector((state) => state?.director?.getsingledistributionobj);
+    
+//     console.log(getsingledistributionobj,"Testing")
+
+//     return (
+//         <div>
+//             Hello
+//         </div>
+//     )
+// }
+
+// export default Distributionstocksdetails
+
+
+
+/* eslint-disable */
 import React, { useEffect, useState } from 'react'
 //REACT-BOOTSTRAP-TABLE IMPORTS
 import BootstrapTable from "react-bootstrap-table-next";
@@ -13,30 +34,38 @@ import DashboardMainCard from "../../components/ReusableComponents/DashboardMain
 import Loader from 'react-loader-spinner';
 import DashboardBtnList from '../../components/ReusableComponents/DashboardBtnList/DashboardBtnList';
 import { getStocksGiftProduct, getStocksMedicineProduct, getStocksProduct } from '../../Store/Actions/deportmanagerActions';
+import { getSingleDistributionObjWithUid } from '../../Store/Actions/directorActions';
+import { Link } from 'react-router-dom';
 
-const Stocks = ({
-    sidebarOpen,
-    openSidebar,
-    deopdefaultSorted,
-}) => {
-
+const Distributionstocksdetails = (props) => {
+    const {
+        sidebarOpen,
+        openSidebar,
+        deopdefaultSorted,
+        Heading,
+        linkRoute
+    } = props;
+   const getsingledistributionobj = useSelector((state) => state?.director?.getsingledistributionobj);
 
     const dispatch = useDispatch();
-    const stock = useSelector((state) => state?.deport?.stock);
-    const stockmedicine = useSelector((state) => state?.deport?.stockmedicine);
-    const stockgift = useSelector((state) => state?.deport?.stockgift);
+    let getsingledistributionobjall = useSelector((state) => state?.director?.getsingledistributionobjall);
+    let getsingledistributionobjmedicine = useSelector((state) => state?.director?.getsingledistributionobjmedicine);
+    let getsingledistributionobjgift = useSelector((state) => state?.director?.getsingledistributionobjgift);
+
+
 
     useEffect(() => {
-        setSelectedTabbledata(stock)
-            dispatch(getStocksProduct());
-        dispatch(getStocksMedicineProduct());
-        dispatch(getStocksGiftProduct())
+        setSelectedTabbledata(getsingledistributionobjall)
+        dispatch(getSingleDistributionObjWithUid(getsingledistributionobj,''));
+        dispatch(getSingleDistributionObjWithUid(getsingledistributionobj,'/medicine'));
+        dispatch(getSingleDistributionObjWithUid(getsingledistributionobj,'/gift'));
+       
        // eslint-disable-next-line
       }, []);
     useEffect(() => {
-        setSelectedTabbledata(stock)
+        setSelectedTabbledata(getsingledistributionobjall)
        // eslint-disable-next-line
-      }, [stock]);
+      }, [getsingledistributionobjall]);
 
     const tabledataHandler = async (item) => {
         setSelectedTabbledata(item);
@@ -46,35 +75,36 @@ const Stocks = ({
       const tabHandler = (item) => {
         setSelectedTab1(item);
         if (item === "All") {
-          tabledataHandler(stock);
+          tabledataHandler(getsingledistributionobjall);
         }
         else if (item === "Medicine") {
-          tabledataHandler(stockmedicine);
+          tabledataHandler(getsingledistributionobjmedicine);
         }
         else if (item === "Gift") {
-          tabledataHandler(stockgift);
+          tabledataHandler(getsingledistributionobjgift);
         }
       };
       // USE STATES 
     
       const [selectedTab1, setSelectedTab1] = useState("All");
-      const [selectedTabbledata, setSelectedTabbledata] = useState(stock);
+      const [selectedTabbledata, setSelectedTabbledata] = useState(getsingledistributionobjall);
     
 
     // STOCKS COLUMN HEADERS
     const DepomanagerStock = [
 
+        
         { dataField: "product.name", text: "Product Name", sort: true },
 
         { dataField: "product.category.name", text: "Category Name", sort: true },
-
-
+        
+        { dataField: "product.formula", text: "Product Formula", sort: true },
+        
         { dataField: "quantity", text: "Quantity", formatter: nullChecker, sort: true },
 
-
-        { dataField: "product.formula", text: "Formulas", formatter: nullChecker, sort: true },
-
         { dataField: "product.price", text: "Price", sort: true },
+
+
 
     ];
     // STOCKS COLUMN HEADERS
@@ -102,7 +132,36 @@ const Stocks = ({
             <NavbarDash
                 sidebarOpen={sidebarOpen}
                 openSidebar={openSidebar}
-                Heading="Stocks"
+                Heading={Heading}
+                BackBtn={
+                    <>
+                      <Link
+                        to={linkRoute}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <span
+                          style={{
+                            fontSize: "20px",
+                            fontWeight: "600",
+                            color: "#3F4254",
+                            marginBottom:'10px'
+                          }}
+                        >
+                          <i
+                            className="fa fa-angle-left"
+                            aria-hidden="true"
+                            style={{
+                              fontSize: "20px",
+                              fontWeight: "600",
+                              color: "#3F4254",
+                              
+                            }}
+                          ></i>{" "}
+                          Back
+                        </span>
+                      </Link>
+                    </>
+                  }
             />
 
 
@@ -210,4 +269,4 @@ const Stocks = ({
     )
 }
 
-export default Stocks
+export default Distributionstocksdetails

@@ -30,7 +30,6 @@ export const getallNotification = () => async (dispatch) => {
   };
   export const seeAllNotification = () => async (dispatch) => {
     const response = await apiServices.seeAllNotification();
-    console.log(response);
     if (response?.data?.response_code === 200) {
       dispatch({
         type: staticConstants.NEW_NOTIFICATIONS,
