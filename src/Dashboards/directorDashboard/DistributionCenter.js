@@ -3,17 +3,20 @@
 import React, { useEffect, useState } from 'react'
 import Loader from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
 import DashboardMainCard from '../../components/ReusableComponents/DashboardMainCard/DashboardMainCard';
 import DashCard from '../../components/ReusableComponents/DashboardTableCards/DashCard2';
 import NavbarDash from '../../components/ReusableComponents/NavbarDash/NavbarDash';
-import { getDistributioncenter } from '../../Store/Actions/directorActions';
+import { getDistributioncenter, getSingleDistributionObj, getSingleDistributionObjWithUid } from '../../Store/Actions/directorActions';
 
 const DistributionCenter = (
-  {
-    sidebarOpen,
-    openSidebar,
-  }
+  props
 ) => {
+
+  const sidebarOpen = props?.sidebarOpen;
+  const openSidebar = props?.openSidebar;
+
+  const history = useHistory(); 
 
   const distributioncenter = useSelector((state) => state?.director?.distributioncenter);
   const dispatch = useDispatch();
@@ -102,6 +105,8 @@ const DistributionCenter = (
                   return (
                     <React.Fragment key={ob.id}>
                       <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
+                       
+                       
                         <DashCard
                         
                         datahead={
@@ -188,7 +193,15 @@ const DistributionCenter = (
                 })
                 : distributioncenter.map((ob, index) => (
                   <React.Fragment key={ob?.id}>
+
                     <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
+                  <div 
+                  onClick={() => {
+                    history.push("/director-dashboard/distribution-center/stocksdetails");
+                    dispatch(getSingleDistributionObj(ob?.uid));
+                  }}
+                  style={{cursor:'pointer'}}
+                 >
                       <DashCard
                         datahead={
                           ob?.name
@@ -265,6 +278,8 @@ const DistributionCenter = (
                           
                         }
                         />
+                  </div>    
+
                     </div>
                   </React.Fragment>
                 ))

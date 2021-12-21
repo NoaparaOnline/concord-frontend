@@ -101,7 +101,7 @@ const DeliveryStatus = (
 
     // EPOCH TO DATE FORMATE TABLE USING MOMENT PAKAGE
     function dateFormatter(cell) {
-        return <span>{moment.unix(cell).format("MMM DD, YYYY")}</span>;
+        return <span>{moment.unix(cell).format("MMM DD, YYYY HH:mm A")}</span>;
     }
 
     //APPEND MARKET AND ADDRESS FIELDS

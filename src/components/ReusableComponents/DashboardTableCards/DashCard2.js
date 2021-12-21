@@ -11,7 +11,6 @@ const DashCard = ({
 }) => {
 
 
-  console.log(dataaddress,"Testing")
 
   return (
     <>

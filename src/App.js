@@ -96,7 +96,6 @@ function App() {
             }
           );
           noti.onclick = (event) => {
-            console.log(event, "Notification clicked.");
             // if (event?.currentTarget?.data?.url) {
             //   window.location.href = event?.currentTarget?.data?.url;
             // }

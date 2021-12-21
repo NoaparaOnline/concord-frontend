@@ -38,7 +38,6 @@ const Schedules = ({
   
 
   // const user = JSON.parse(localStorage.getItem('userConcord'));
-  // console.log("User Uid",user.uid)
 
   //   const filterdDirector = schedule.filter(
   //   (status) => status?.assigned_to.uid === user.uid
@@ -130,7 +129,7 @@ const Schedules = ({
 
   // EPOCH TO DATE FORMATE TABLE USING MOMENT PAKAGE
   function dateFormatter(cell) {
-    return <span>{moment.unix(cell).format("MMM DD, YYYY")}</span>;
+    return <span>{moment.unix(cell).format("MMM DD, YYYY HH:mm A")}</span>;
   }
   //UpperCase Cell
   function uppercase(cell) {

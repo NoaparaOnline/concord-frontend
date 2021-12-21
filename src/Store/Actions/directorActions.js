@@ -103,9 +103,8 @@ export const getCustomers = (uid) => async (dispatch) => {
   try {
     const head = { "x-session-key": token.key, "x-session-type": token.type };
     const response = await axios.get(
-      // `https://concord-backend-prod.herokuapp.com/api/customers/read?child_uid=${uid}`,
+    
       `${BASEURL}/customers/read?child_uid=${uid}`,
-      // `https://concord-backend-m2.herokuapp.com/api/customers/read?child_uid=${uid}`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {
@@ -323,4 +322,77 @@ export const getSingleProductDataObj = (data) =>  (dispatch) => {
     type: directorConstants.GET_SINGLE_PRODUCT_OBJ,
     payload: data,
   });
+};
+
+
+export const getSingleDistributionObj = (data) => (dispatch) => {
+  dispatch({
+    type: directorConstants.GET_SINGLE_DISTRIBUTIONCENTER_OBJ,
+    payload: data,
+  });
+};
+
+export const getSingleDistributionObjWithUid = (uid,type) => async (dispatch) => {
+  
+  dispatch({
+    type: logInConstants.SET_LOADER,
+    payload: true,
+  });
+
+  const token = JSON.parse(localStorage.getItem("tokenConcord"));
+
+
+  try {
+    const head = { "x-session-key": token.key, "x-session-type": token.type };
+    const response = await axios.get(
+    
+      `${BASEURL}/stocks/read${type}?distribution_center_uid=${uid}`,
+     
+      { headers: head }
+    );
+    if (response?.data?.response_code === 200) {
+      if (type === "/medicine"){
+        dispatch({
+          type: directorConstants.GET_SINGLE_DISTRIBUTIONCENTER_OBJ_STOCK_MED,
+          payload: response?.data?.response_data,
+        });
+        dispatch({
+          type: logInConstants.SET_LOADER,
+          payload: false,
+        });
+      }
+      else if (type === "/gift"){
+        dispatch({
+          type: directorConstants.GET_SINGLE_DISTRIBUTIONCENTER_OBJ_STOCK_GIFT,
+          payload: response?.data?.response_data,
+        });
+        dispatch({
+          type: logInConstants.SET_LOADER,
+          payload: false,
+        });
+      }
+      else{
+        dispatch({
+          type: directorConstants.GET_SINGLE_DISTRIBUTIONCENTER_OBJ_STOCK_ALL,
+          payload: response?.data?.response_data,
+        });
+        dispatch({
+          type: logInConstants.SET_LOADER,
+          payload: false,
+        });
+      }
+    }
+    else{
+      dispatch({
+        type: logInConstants.SET_LOADER,
+        payload: false,
+      });
+    }
+  } catch (error) {
+    dispatch({
+      type: logInConstants.SET_LOADER,
+      payload: false,
+    });
+    return "fail";
+  }
 };

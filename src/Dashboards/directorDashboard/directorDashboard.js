@@ -23,9 +23,10 @@ import NewlyProducts from "./NewlyProducts";
 import DistributionCenter from "./DistributionCenter";
 import Departmentheads from "./Departmentheads";
 import Reports from "./Reports";
-import ScheduleInnerPage from "./ScheduleInnerPage";
+// import ScheduleInnerPage from "./ScheduleInnerPage";
 import Notifications from "../../components/ReusableComponents/modals/Notifications/Notifications";
 import ChangePassword from "../../components/ReusableComponents/modals/ChangePassword/ChangePassword";
+import Distributionstocksdetails from "./Distributionstocksdetails";
 
 
 
@@ -185,12 +186,23 @@ const DirectorDashboard = (props) => {
           />     
         </Route>
 
-        <Route path={`/director-dashboard/schedule-detail`}>
+        {/* <Route path={`/director-dashboard/schedule-detail`}>
           <ScheduleInnerPage
              sidebarOpen={sidebarOpen}
              openSidebar={openSidebar}
              Heading="Schedule"
              linkRoute="/director-dashboard/schedule"
+             {...props}
+          />
+        </Route> */}
+
+        <Route path={`/director-dashboard/distribution-center/stocksdetails`}>
+          <Distributionstocksdetails
+             sidebarOpen={sidebarOpen}
+             openSidebar={openSidebar}
+             deopdefaultSorted={deopdefaultSorted}
+             Heading="Distribution Center Stock Details"
+             linkRoute="/director-dashboard/distributioncenter"
              {...props}
           />
         </Route>

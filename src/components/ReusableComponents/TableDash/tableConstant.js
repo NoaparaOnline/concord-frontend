@@ -120,7 +120,7 @@ export const Directordashproducthead = (handleEdit) => {
 
 
 // function dateFormatter(cell) {
-//   return (<span>{moment.unix(cell).format('MMM DD, YYYY')}</span>)
+//   return (<span>{moment.unix(cell).format('MMM DD, YYYY HH:mm A')}</span>)
 // }
 
 // function btnFormatter(cell) {
