@@ -21,33 +21,53 @@ const Media_milestone = () => {
     const milestone_data = [
         {
             id: 0,
-            year: '2011',
-            text: 'Concord Project Managements Established'
+            year: '2010',
+            text: 'Inauguration of CONCORD'
         },
         {
             id: 1,
-            year: '2014',
-            text: 'Continuing with various Projects'
+            year: '2010',
+            text: 'Factory Establish'
         },
         {
             id: 2,
-            year: '2017',
-            text: 'Financial Stability'
+            year: '2011',
+            text: 'Depot Establish'
         },
         {
             id: 3,
-            year: '2019',
-            text: 'More Than 250 Products'
+            year: '2012',
+            text: 'Annual Conference'
         },
         {
             id: 4,
             year: '2014',
-            text: 'Continuing with various Projects'
+            text: 'GMP Approval'
         },
         {
             id: 5,
-            year: '2017',
-            text: 'Financial Stability'
+            year: '2014',
+            text: 'First Export'
+        },
+        {
+            id: 6,
+            year: '2015',
+            text: 'Dapazin (First time in Bangladesh) launching program'
+        },
+        {
+            id: 7,
+            year: '2016',
+            text: 'Relikof (First time in Bangladesh) launching'
+        },
+        {
+            id: 8,
+            year: '2018',
+            text: 'Health Associates Establish'
+        },
+        {
+            id: 9,
+            year: '2021',
+            text: '1 million $ Export of Dapazin'
         },
       ];
 
