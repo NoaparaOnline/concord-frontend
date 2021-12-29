@@ -206,13 +206,13 @@ const Notifications = (props) => {
             <div className="col-12">
               {["All Notifications", "Recent Notification"].map((item, index) => (
                 <div
-                  className="d-flex d-inline-flex col-6"
+                  className="d-flex d-inline-flex col-6 p-1"
                   key={index + 1}
                   onClick={() => tabHandler(item)}
                 >
                   <DashboardBtnList
                     label={item}
-                    labelStyle={selectedTab === item ? { color: "#fff" } : ""}
+                    labelStyle={selectedTab === item ? { color: "#fff" } : "" }
                     className={
                       selectedTab === item
                         ? "dashboardBtnList-item-active py-2"
