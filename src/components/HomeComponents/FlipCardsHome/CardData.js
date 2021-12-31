@@ -9,7 +9,6 @@ import Dopagutbk from '../../../Statics/assets/TabletsFrontBack/ban-Dopagut-60-m
 import histaminefr from '../../../Statics/assets/TabletsFrontBack/Anti-histaminefr.jpg';
 import histaminebk from '../../../Statics/assets/TabletsFrontBack/Anti-histaminebk.jpg';
 export const card = [
-
     {
         id:0,
         title:'Acedol Tablet',
