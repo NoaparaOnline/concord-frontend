@@ -79,7 +79,7 @@ function SearchBar({ placeholder, data }) {
                 >
                     {value.img.map((ob,index) => {
                 return (
-                    <img alt="" src={ob.imgf} width="20%" height="100%"/>
+                    <img alt={value.title} src={ob.imgf} width="20%" height="100%"/>
                 );
                     })}
                   <p>{value.title}</p>

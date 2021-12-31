@@ -29,7 +29,7 @@ const Globaloperation = () => {
           <div className="card card_custom">
             <div className="card-body">
               <h1 className="card-title colrry">Global Operation</h1>
-              <img src={imgss} className="card-img-top" alt="..." />
+              <img src={imgss} className="card-img-top" alt="global operation" />
             </div>
             <h4 className="card-title text-title px-2 ml-3">
               <strong className="Typography_styling">

@@ -143,7 +143,7 @@ const Footer = () => {
             <Link to='#' >
              
               <img
-              alt=""
+              alt="ios"
                 loading="lazy"
                 src={
                   "https://www.ri-demo.co/concord/final/wp-content/uploads/2019/06/ios.png"
@@ -156,7 +156,7 @@ const Footer = () => {
 
               <a target="_blank" rel="noreferrer" href='https://play.google.com/store/apps/details?id=com.concordmpo' >
               <img
-              alt=""
+              alt="android"
                 loading="lazy"
                 src={
                   "https://www.ri-demo.co/concord/final/wp-content/uploads/2019/06/android.png"

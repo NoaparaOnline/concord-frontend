@@ -16,7 +16,6 @@ import TeleMedicine from "./Pages/TeleMedicine";
 import Aboutmessagechairmen from "./Pages/Aboutmessagechairmen";
 import Aboutvisionmission from "./Pages/Aboutvisionmission";
 import Contactcontactus from "./Pages/Contactcontactus";
-import Contactourdistribution from "./Pages/Contactourdistribution";
 import Facilitiesourdistribution from "./Pages/Facilitiesourdistribution";
 import Facilitiesproduct from "./Pages/Facilitiesproduct";
 import Facilitiesquality from "./Pages/Facilitiesquality";
@@ -268,9 +267,7 @@ function App() {
           <Contactcontactus />
         </Route>
 
-        <Route exact path="/contact_ourdistribution">
-          <Contactourdistribution />
-        </Route>
+      
 
         {/*          Facilities Page             */}
 

@@ -4,6 +4,7 @@ import BannerWithText from "../../../components/ReusableComponents/BannerImgComp
 import { Link } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import TableCustomComponent from "../TableCustomComponent";
+import { Helmet } from "react-helmet";
 
 const ProductallDetails = (props) => {
 
@@ -178,7 +179,10 @@ const ProductallDetails = (props) => {
 
 
   return (
-    <div>
+    <>
+       <Helmet>
+        <title>Product Detail - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         subHeading={viewData?.innerMainHeading}
 
@@ -212,7 +216,7 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-front d-flex justify-content-center align-items-center">
                     <div className="card " style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt="" src={viewData?.img?.map(item => item.imgf)} width="100%" height="100%" />
+                        <img alt={viewData?.innerMainHeading} src={viewData?.img?.map(item => item.imgf)} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -220,7 +224,7 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-back d-flex justify-content-center align-items-center">
                     <div className="card" style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt="" src={viewData?.img?.map(item => item.imge)} width="100%" height="100%" />
+                        <img alt={viewData?.innerMainHeading} src={viewData?.img?.map(item => item.imge)} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -392,7 +396,7 @@ const ProductallDetails = (props) => {
       </Modal>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

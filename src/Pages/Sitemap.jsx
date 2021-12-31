@@ -4,6 +4,7 @@ import bannerimg from "../Statics/assets/sitemapbanner.jpg";
 import sitemap from "../Statics/assets/sitemap.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Sitemap = () => {
   const LinksBan = [
@@ -14,7 +15,11 @@ const Sitemap = () => {
     },
   ];
   return (
-    <div >
+    <>
+      <Helmet>
+        <title>Site map - Concord Pharma</title>
+      </Helmet>
+
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Site map"}
@@ -144,7 +149,7 @@ const Sitemap = () => {
 
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

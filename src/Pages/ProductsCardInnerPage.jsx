@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import acedolfr from "../Statics/assets/TabletsFrontBack/innerpagacedolfr.png";
 import acedolbk from "../Statics/assets/TabletsFrontBack/innerpagacedolbk.png";
 import Modal from "react-bootstrap/Modal";
+import { Helmet } from "react-helmet";
 
 const ProductsCardInnerPage = () => {
   const LinksBan = [
@@ -37,7 +38,8 @@ const ProductsCardInnerPage = () => {
  
   const Text = () => {
     return(
-      <div>
+      <>
+    
            
             <h2   style={{
                   fontSize: "20px",
@@ -155,13 +157,16 @@ const ProductsCardInnerPage = () => {
          :null
             }
           </div>
-       </div>
+       </>
     )
   };
 
 
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Product Detail - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         subHeading={`ACEDOL`}
         
@@ -195,7 +200,7 @@ const ProductsCardInnerPage = () => {
                   <div className="flip-card-front d-flex justify-content-center align-items-center">
                     <div className="card " style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt="" src={acedolfr} width="100%" height="100%" />
+                        <img alt="acedolfr" src={acedolfr} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -203,7 +208,7 @@ const ProductsCardInnerPage = () => {
                   <div className="flip-card-back d-flex justify-content-center align-items-center">
                     <div className="card" style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt="" src={acedolbk} width="100%" height="100%" />
+                        <img alt="acedolbk" src={acedolbk} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -343,13 +348,13 @@ const ProductsCardInnerPage = () => {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <div className="allborder d-flex justify-content-center align-items-center">
-            <img alt="" src={acedolfr} className="img-fluid" />
+            <img alt="acedolfr" src={acedolfr} className="img-fluid" />
           </div>
         </Modal.Body>
       </Modal>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

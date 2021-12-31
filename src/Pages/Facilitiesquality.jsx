@@ -3,6 +3,7 @@ import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/fac-QC-ban.jpg";
 import facrd from "../Statics/assets/fac-QC.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { Helmet } from "react-helmet";
 const Facilities_quality = () => {
   const LinksBan = [
     {
@@ -18,7 +19,10 @@ const Facilities_quality = () => {
   ];
 
   return (
-    <div>
+    <>
+    <Helmet>
+        <title>Quality Control - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Quality Control"}
@@ -97,7 +101,7 @@ const Facilities_quality = () => {
       </div>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

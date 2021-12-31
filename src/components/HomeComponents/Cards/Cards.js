@@ -48,7 +48,7 @@ const Cards = () => {
             >
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 imgmargin">
-                  <img alt="" src={ob.imageURL} width="100%" height="100%"/>
+                  <img alt="facilities" src={ob.imageURL} width="100%" height="100%"/>
                 </div>
                 <div
                   className="col-lg-6 col-md-6 col-sm-12 smallscr_responsive"

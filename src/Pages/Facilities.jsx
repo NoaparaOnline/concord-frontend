@@ -8,6 +8,7 @@ import facilitiescard2 from '../Statics/assets/facilities/fac2.png'
 import facilitiescard3 from '../Statics/assets/facilities/fac3.png'
 import facilitiescard4 from '../Statics/assets/facilities/fac4.png'
 import facilitiescard5 from '../Statics/assets/facilities/fac5.png'
+import { Helmet } from 'react-helmet';
 
 
 const Facilities = () => {
@@ -57,7 +58,10 @@ const Facilities = () => {
   ];
   return (
 
-    <div>
+    <>
+    <Helmet>
+        <title>Facilities - Concord Pharma</title>
+      </Helmet>
       <BannerWithText imgSrc={bannerimg} heading={'Facilities'} subHeading={`FACILITIES`}
         LinksBan={LinksBan}
         height={"400px"}
@@ -96,7 +100,7 @@ const Facilities = () => {
 
 
       <CompanyLogos />
-    </div>
+    </>
   )
 }
 

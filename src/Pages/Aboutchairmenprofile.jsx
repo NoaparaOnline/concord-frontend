@@ -4,6 +4,7 @@ import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/parallax_contact.jpg";
 import DirectorImg from "../Statics/assets/chairman-profile.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { Helmet } from "react-helmet";
 
 const Aboutchairmenprofile = () => {
   const DirectorInfo = {
@@ -23,6 +24,12 @@ const Aboutchairmenprofile = () => {
   ];
 
   return (
+    <>
+    <Helmet>
+        <title>
+        About Chairmen Profile - Concord Pharma
+        </title>
+      </Helmet>
     <div>
       <BannerWithText
         imgSrc={bannerimg}
@@ -45,7 +52,7 @@ const Aboutchairmenprofile = () => {
             <img
               class="alignnone size-medium wp-image-24556"
               src={DirectorImg}
-              alt=""
+              alt="director"
               width="240"
               height="300"
               sizes="(max-width: 240px) 100vw, 240px"
@@ -163,6 +170,7 @@ const Aboutchairmenprofile = () => {
 
       <CompanyLogos />
     </div>
+    </>
   );
 };
 

@@ -1,11 +1,15 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 
 const Error404 = (props) => {
 
     
     return (
-        <div>
+        <>
+            <Helmet>
+        <title>404 - Concord Pharma</title>
+      </Helmet>
             <section class="page-404 page-404-default">
 	<div class="container">
 		<div className="center my-5" style={{height:'30vh'}}>				
@@ -35,7 +39,7 @@ const Error404 = (props) => {
 		</div>
 	</div>
 </section>
-        </div>
+        </>
     )
 }
 

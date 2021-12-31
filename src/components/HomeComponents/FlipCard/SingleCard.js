@@ -22,7 +22,7 @@ const SingleCard = (props) => {
               {card?.img?.map((ob,index) => {
                 return (
                   <img key={ob.id} src={ob.imgf} className="card-img-top p-3"    height="100%"
-                  width="100%" alt="..." />
+                  width="100%" alt={currentpath === '/products_bygeneric' ? innerComposition : title} />
                 );
               })}
               <div

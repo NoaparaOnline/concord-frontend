@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { CompanyLogos } from "../components";
@@ -46,12 +47,15 @@ const Careers = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getAllThana())
-      // eslint-disable-next-line
-  }, [])
+    dispatch(getAllThana());
+    // eslint-disable-next-line
+  }, []);
 
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Careers - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         heading={"ALL JOBS"}
         subHeading={`JOBS`}
@@ -77,7 +81,10 @@ const Careers = () => {
               <div key={index} className="card col-lg-12 mb-3">
                 <div className="card-body">
                   <Link
-                    to={{ pathname: ob.namelink+`/${ob.id}`, state: { data: ob } }}
+                    to={{
+                      pathname: ob.namelink + `/${ob.id}`,
+                      state: { data: ob },
+                    }}
                     style={{
                       fontSize: "16px",
                       color: "#0066b3",
@@ -89,7 +96,10 @@ const Careers = () => {
 
                   <span className="d-flex justify-content-end">
                     <Link
-                      to={{ pathname: ob.btnlink+`/${ob.id}`, state: { data: ob } }}
+                      to={{
+                        pathname: ob.btnlink + `/${ob.id}`,
+                        state: { data: ob },
+                      }}
                       style={{ textDecoration: "none", color: "#fff" }}
                     >
                       <div
@@ -123,7 +133,7 @@ const Careers = () => {
       </div>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

@@ -7,6 +7,7 @@ import productscard1 from '../Statics/assets/products/p1.svg'
 import productscard2 from '../Statics/assets/products/p2.svg'
 import productscard3 from '../Statics/assets/products/p3.svg'
 import productscard4 from '../Statics/assets/products/p4.svg'
+import { Helmet } from 'react-helmet';
 
 
   
@@ -54,7 +55,10 @@ const Products = () => {
     return (
 
     
-    <div>
+    <>
+     <Helmet>
+        <title>Products - Concord Pharma</title>
+      </Helmet>
     <BannerWithText imgSrc={bannerimg} heading={'Products'} subHeading={`PRODUCTS`}
     LinksBan={LinksBan}
     height={"400px"}
@@ -92,7 +96,7 @@ const Products = () => {
 
 
         <CompanyLogos/> 
-     </div>
+     </>
     )
 }
 

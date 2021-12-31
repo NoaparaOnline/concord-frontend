@@ -40,7 +40,7 @@ const FlipCard = (props) => {
                       className="card-img-top p-3"
                       height="100%"
                       width="100%"
-                      alt="..."
+                      alt={currentpath === '/products_bygeneric' ? innerComposition : title}
                     />
                   </>
                 );
@@ -88,7 +88,7 @@ const FlipCard = (props) => {
                       className="card-img-top p-3"
                       height="100%"
                       width="100%"
-                      alt="..."
+                      alt={currentpath === '/products_bygeneric' ? innerComposition : title}
                     />
                   </>
                 );

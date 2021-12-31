@@ -7,6 +7,7 @@ import Aboutcard1 from '../Statics/assets/mission-vissioncard1.svg'
 import Aboutcard2 from '../Statics/assets/health-icon2.svg'
 import Aboutcard3 from '../Statics/assets/profile3.svg'
 import Aboutcard4 from '../Statics/assets/Chairman-message4.svg'
+import { Helmet } from 'react-helmet';
 
 
 const About = () => {
@@ -50,6 +51,12 @@ const About = () => {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>
+        About - Concord Pharma
+        </title>
+      </Helmet>
     <div>
       <BannerWithText
         imgSrc={bannerimg}
@@ -94,6 +101,7 @@ const About = () => {
 
       <CompanyLogos />
     </div>
+    </>
   )
 }
 

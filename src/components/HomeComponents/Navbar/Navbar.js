@@ -84,7 +84,7 @@ const Navbars = (props) => {
         <div className="container" >
           <Link to="/">
             <img
-              alt=""
+              alt="logo"
               src={logo}
               style={{ minWidth: "150px", minHeight: "40px", height: 60 }}
             />
@@ -147,7 +147,7 @@ const Navbars = (props) => {
                             >
                               <img
                                 src={profileLogo}
-                                alt=""
+                                alt="user"
                                 width="25"
                                 height="25"
                                 className="rounded-circle"

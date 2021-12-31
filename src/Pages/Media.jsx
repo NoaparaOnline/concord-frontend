@@ -8,6 +8,7 @@ import mediacard2 from '../Statics/assets/Media/photo.svg'
 import mediacard3 from '../Statics/assets/Media/post.svg'
 import mediacard4 from '../Statics/assets/Media/milestone.svg'
 import mediacard5 from '../Statics/assets/Media/responsibilities.svg'
+import { Helmet } from 'react-helmet';
 
 const Media = () => {
    
@@ -56,7 +57,10 @@ const Media = () => {
     
    
     return (
-        <div>
+        <>
+        <Helmet>
+        <title>Media - Concord Pharma</title>
+      </Helmet>
         <BannerWithText imgSrc={bannerimg}
           heading={'Media'}
           subHeading={`MEDIA`}
@@ -91,7 +95,7 @@ const Media = () => {
         </div>
   
         <CompanyLogos />
-      </div>
+      </>
     )
 }
 

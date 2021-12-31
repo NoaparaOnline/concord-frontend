@@ -9,7 +9,7 @@ const ZoominCards = ({abcard}) => {
       <div className="singleBox">
 			<div>
 				<Link to={abcard.link} className="Link_hover_Style">
-        <img alt="" src={abcard.imageURL} width="100%" height="100%"/>
+        <img alt="facilities" src={abcard.imageURL} width="100%" height="100%"/>
         <p className="boxContent">{abcard.text}</p>
         </Link>
 			</div>
