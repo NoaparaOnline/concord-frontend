@@ -19,25 +19,25 @@ const Products = () => {
         id:0,
         imageURL: productscard1,
         text: "By Trade Name",
-        link: "/products_bytrade",
+        link: "/by_trade_name",
       },
       {
         id:1,
         imageURL: productscard2,
         text: "By Generic Name",
-        link: "/products_bygeneric",
+        link: "/by_generic_name",
       },
       {
         id:2,
         imageURL: productscard3,
         text: "By Therapeutic Class",
-        link: "/products_therapeutic",
+        link: "/by-therapeutic-class",
       },
       {
         id:3,
         imageURL: productscard4,
         text: "First Time Launching",
-        link: "/products_firsttime",
+        link: "/first-time-launching",
       },
     ];
     

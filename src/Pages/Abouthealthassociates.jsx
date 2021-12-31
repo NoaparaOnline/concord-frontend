@@ -27,7 +27,7 @@ const Abouthealthassociates = () => {
     <>
      <Helmet>
         <title>
-        About Health - Concord Pharma
+        Health Associates - Concord Pharma
         </title>
       </Helmet>
     <div>

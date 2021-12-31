@@ -129,7 +129,7 @@ export const FirstTime = [
   //   ],
   //   btn: "Read More",
   //   backpagename: "First Time Launching",
-  //   backpagelink: "/products_firsttime",
+  //   backpagelink: "/first-time-launching",
   //   btnlink: "/acedolcopy-tablet",
   //   type: 'Tablet'
   // },
@@ -322,7 +322,7 @@ export const FirstTime = [
   //     ],
   //   btn: "Read More",
   //   backpagename: "First Time Launching",
-  //   backpagelink: "/products_firsttime",
+  //   backpagelink: "/first-time-launching",
   //   btnlink: "#",
   //   type: 'Tablet'
   // },
@@ -482,7 +482,7 @@ export const FirstTime = [
   //   ],
   //   btn: "Read More",
   //   backpagename: "First Time Launching",
-  //   backpagelink: "/products_firsttime",
+  //   backpagelink: "/first-time-launching",
   //   btnlink: "#",
   //   type: 'Syrup'
   // },
@@ -648,7 +648,7 @@ export const FirstTime = [
       ],
     btn: "Read More",
     backpagename: "First Time Launching",
-    backpagelink: "/products_firsttime",
+    backpagelink: "/first-time-launching",
     btnlink: "/dapzine-tablet",
     type: 'Tablet'
   },
@@ -812,7 +812,7 @@ export const FirstTime = [
       ],
     btn: "Read More",
     backpagename: "First Time Launching",
-    backpagelink: "/products_firsttime",
+    backpagelink: "/first-time-launching",
     btnlink: "#",
     type: 'Tablet'
   },
@@ -929,7 +929,7 @@ export const FirstTime = [
   //     ],
   //   btn: "Read More",
   //   backpagename: "First Time Launching",
-  //   backpagelink: "/products_firsttime",
+  //   backpagelink: "/first-time-launching",
   //   btnlink: "#",
   //   type: 'Syrup'
   // },
@@ -1091,7 +1091,7 @@ export const FirstTime = [
       ],
     btn: "Read More",
     backpagename: "First Time Launching",
-    backpagelink: "/products_firsttime",
+    backpagelink: "/first-time-launching",
     btnlink: "/relikof-syrup",
     type: 'Syrup'
   },
@@ -1253,7 +1253,7 @@ export const FirstTime = [
       ],
     btn: "Read More",
     backpagename: "First Time Launching",
-    backpagelink: "/products_firsttime",
+    backpagelink: "/first-time-launching",
     btnlink: "/relikof-kids-syrup",
     type: 'Syrup'
   },
@@ -1454,7 +1454,7 @@ export const FirstTime = [
   //     ],
   //   btn: "Read More",
   //   backpagename: "First Time Launching",
-  //   backpagelink: "/products_firsttime",
+  //   backpagelink: "/first-time-launching",
   //   btnlink: "#",
   //   type: 'Tablet'
   // },

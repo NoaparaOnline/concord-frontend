@@ -18,25 +18,25 @@ const About = () => {
       id: 0,
       imageURL: Aboutcard1,
       text: "Vision & Mission",
-      link: "/about_vision_mission",
+      link: "/vision_mission",
     },
     {
       id: 1,
       imageURL: Aboutcard2,
       text: "Health Associates",
-      link: "/about_health_associates",
+      link: "/health_associates",
     },
     {
       id: 2,
       imageURL: Aboutcard3,
       text: "Chairman's Profile",
-      link: "/about_chairmen_profile",
+      link: "/chairmen_profile",
     },
     {
       id: 3,
       imageURL: Aboutcard4,
       text: "Message from Chairman",
-      link: "/about_message_chairmen",
+      link: "/message_from_chairmen",
     },
   ];
 

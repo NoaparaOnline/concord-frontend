@@ -70,7 +70,7 @@ const Home = (props) => {
             <div className="row">
               <div className="col-md-12 d-flex justify-content-center my-5 text-primary">
                 <Link
-                  to="/media_milestone"
+                  to="/milestones"
                   style={{
                     textDecoration: "none",
                     fontWeight: 500,

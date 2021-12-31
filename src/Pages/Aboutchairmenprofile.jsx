@@ -27,7 +27,7 @@ const Aboutchairmenprofile = () => {
     <>
     <Helmet>
         <title>
-        About Chairmen Profile - Concord Pharma
+        Chairmen Profile - Concord Pharma
         </title>
       </Helmet>
     <div>

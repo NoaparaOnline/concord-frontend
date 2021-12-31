@@ -21,7 +21,7 @@ const DapzineTablet = () => {
     {
       subLinkName: "First Time Launching",
       subDash: "/",
-      subLink: "/products_firsttime",
+      subLink: "/first-time-launching",
     },
   ];
 
@@ -193,7 +193,7 @@ Nursing mother: Discontinue Dapazin or discontinue nursing.
       />
 
       <div className="container mb-5">
-        <Link to="/products_firsttime" style={{ textDecoration: "none" }}>
+        <Link to="/first-time-launching" style={{ textDecoration: "none" }}>
           <span style={{ fontSize: "22px", color: "#565656" }}>
             <i className="fa fa-angle-left" aria-hidden="true"></i> Back
           </span>

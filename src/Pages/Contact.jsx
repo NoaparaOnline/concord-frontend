@@ -15,14 +15,14 @@ const Contact = () => {
           id: 1,
           imageURL: contactcard1,
           text: "Our Distribution Network",
-          link: "/facilities_ourdistribution",
+          link: "/our_distribution_network",
         },
         
         {
           id: 2,
           imageURL: contactcard2,
           text: "Contact Us",
-          link: "/contact_contactus",
+          link: "/contactus",
         },
         
       ];

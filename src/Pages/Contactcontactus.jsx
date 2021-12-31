@@ -72,7 +72,7 @@ const Contact_contactus = () => {
   return (
     <>
     <Helmet>
-        <title>Contact Us - Concord Pharma</title>
+        <title>Contactus - Concord Pharma</title>
       </Helmet>
       <BannerWithText
         imgSrc={bannerimg}

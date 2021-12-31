@@ -34,7 +34,7 @@ const Slideshow = () => {
       logo: "",
       text: "Delivering all over the country",
       btn: "Know More",
-      btnlink: "/globalOperations",
+      btnlink: "/global_operation",
     },
 
   ];

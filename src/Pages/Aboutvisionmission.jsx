@@ -42,7 +42,7 @@ const About_vision_mission = () => {
        <Helmet>
 
         <title>
-        Vision & Mission - Concord Pharma
+        Vision Mission - Concord Pharma
         </title>
       </Helmet>
     <div>

@@ -21,7 +21,7 @@ const Relikof = () => {
     {
         subLinkName: "First Time Launching",
         subDash: "/",
-        subLink: "/products_firsttime",
+        subLink: "/first-time-launching",
       },
   ];
 
@@ -97,7 +97,7 @@ const Relikof = () => {
       />
 
       <div className="container mb-5">
-        <Link to="/products_firsttime" style={{ textDecoration: "none" }}>
+        <Link to="/first-time-launching" style={{ textDecoration: "none" }}>
           <span style={{ fontSize: "22px", color: "#565656" }}>
             <i className="fa fa-angle-left" aria-hidden="true"></i> Back
           </span>

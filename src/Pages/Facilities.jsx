@@ -19,31 +19,31 @@ const Facilities = () => {
       id: 0,
       imageURL: facilitiescard1,
       text: "Research and Development",
-      link: "/facilities_researchdevrsttime",
+      link: "/research-and-development",
     },
     {
       id: 1,
       imageURL: facilitiescard2,
       text: "Production",
-      link: "/facilities_product",
+      link: "/product",
     },
     {
       id: 2,
       imageURL: facilitiescard3,
       text: "Quality Control",
-      link: "/facilities_quality",
+      link: "/quality",
     },
     {
       id: 3,
       imageURL: facilitiescard4,
       text: "Warehouse",
-      link: "/facilities_warhouse",
+      link: "/warhouse",
     },
     {
       id: 4,
       imageURL: facilitiescard5,
       text: "Our Distribution Network",
-      link: "/facilities_ourdistribution",
+      link: "/our_distribution_network",
     },
   ];
 

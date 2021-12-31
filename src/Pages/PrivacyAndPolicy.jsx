@@ -5,7 +5,7 @@ const PrivacyAndPolicy = () => {
   return (
     <>
      <Helmet>
-        <title>Privacy and Policy - Concord Pharma</title>
+        <title>Privacy Policy - Concord Pharma</title>
       </Helmet>
     <div className="container">
       <div className="row d-flex justify-content-center">

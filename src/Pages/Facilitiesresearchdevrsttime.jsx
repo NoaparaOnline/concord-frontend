@@ -23,7 +23,7 @@ const Facilities_researchdevrsttime = () => {
   return (
     <>
     <Helmet>
-        <title>Research & Development - Concord Pharma</title>
+        <title>Research And Development - Concord Pharma</title>
       </Helmet>
       <BannerWithText
         imgSrc={bannerimg}

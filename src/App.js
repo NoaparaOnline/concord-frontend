@@ -125,6 +125,7 @@ function App() {
         {/*          Root Page             */}
 
         <Route exact path="/" render={(props) => <Navbar {...props} />} />
+        <Route exact path="/:page/:page" render={(props) => <Navbar {...props} />} />
 
         {/*          Navbar             */}
 
@@ -153,6 +154,9 @@ function App() {
         {/*          FixedRight             */}
 
         <Route exact path="/">
+          <FixedRight />
+        </Route>
+        <Route exact path="/:page/:page">
           <FixedRight />
         </Route>
         <Route
@@ -206,19 +210,19 @@ function App() {
 
         {/*          Main About Page SubMenu Page             */}
 
-        <Route exact path="/about_vision_mission">
+        <Route exact path="/vision_mission">
           <Aboutvisionmission />
         </Route>
 
-        <Route exact path="/about_health_associates">
+        <Route exact path="/health_associates">
           <Abouthealthassociates />
         </Route>
 
-        <Route exact path="/about_message_chairmen">
+        <Route exact path="/message_from_chairmen">
           <Aboutmessagechairmen />
         </Route>
 
-        <Route exact path="/about_chairmen_profile">
+        <Route exact path="/chairmen_profile">
           <Aboutchairmenprofile />
         </Route>
 
@@ -228,7 +232,7 @@ function App() {
           <Careers />
         </Route>
         {/*       Careers Inner Page      */}
-        <Route exact path="/careers-inner-page/:job_id">
+        <Route exact path="/careers-detail/:job_id">
           <CareersInnerPage />
         </Route>
 
@@ -263,7 +267,7 @@ function App() {
 
         {/*          Contact Page SubMenu Page             */}
 
-        <Route exact path="/contact_contactus">
+        <Route exact path="/contactus">
           <Contactcontactus />
         </Route>
 
@@ -277,29 +281,29 @@ function App() {
 
         {/*          Facilities SubMenu Page          */}
 
-        <Route exact path="/facilities_ourdistribution">
+        <Route exact path="/our_distribution_network">
           <Facilitiesourdistribution />
         </Route>
 
-        <Route exact path="/facilities_product">
+        <Route exact path="/product">
           <Facilitiesproduct />
         </Route>
 
-        <Route exact path="/facilities_quality">
+        <Route exact path="/quality">
           <Facilitiesquality />
         </Route>
 
-        <Route exact path="/facilities_researchdevrsttime">
+        <Route exact path="/research-and-development">
           <Facilitiesresearchdevrsttime />
         </Route>
 
-        <Route exact path="/facilities_warhouse">
+        <Route exact path="/warhouse">
           <Facilitieswarhouse />
         </Route>
 
         {/*          GlobalOperation Page          */}
 
-        <Route exact path="/globalOperations">
+        <Route exact path="/global_operation">
           <GlobalOperations />
         </Route>
 
@@ -311,23 +315,23 @@ function App() {
 
         {/*          Media Submenu Page          */}
 
-        <Route exact path="/media_milestone">
+        <Route exact path="/milestones">
           <Mediamilestone />
         </Route>
 
-        <Route exact path="/media_photo">
+        <Route exact path="/photo">
           <Mediaphoto />
         </Route>
 
-        <Route exact path="/media_socialmedia">
+        <Route exact path="/social_media_post">
           <Mediasocialmedia />
         </Route>
 
-        <Route exact path="/media_socialresponsiblities">
+        <Route exact path="/social_responsiblities">
           <Mediasocialresponsiblities />
         </Route>
 
-        <Route exact path="/media_video">
+        <Route exact path="/video">
           <Mediavideo />
         </Route>
 
@@ -339,24 +343,24 @@ function App() {
 
         {/*          Products Submenu Page          */}
         <Route
-         exact path="/products_bygeneric"
+         exact path="/by_generic_name"
           render={(props) => <Productsbygeneric {...props} />}
         />
 
 
         <Route
-         exact path="/products_bytrade"
+         exact path="/by_trade_name"
           render={(props) => <Productsbytrade {...props} />}
         />
         
         
         <Route
-         exact path="/products_firsttime"
+         exact path="/first-time-launching"
           render={(props) => <Productsfirsttime {...props} />}
         />
         
         <Route
-         exact path="/products_therapeutic"
+         exact path="/by-therapeutic-class"
           render={(props) => <Productstherapeutic {...props} />}
         />
 
@@ -367,7 +371,7 @@ function App() {
         {/* All Inner Page */}
         
         <Route
-          path="/prod_details"
+          path="/prod_details/:prodname"
           render={(props) => <ProductallDetails {...props} />}
         />
         {/* <Route exact path="/prod_details">
@@ -433,6 +437,9 @@ function App() {
         />
 
         <Route exact path="/">
+          <Footer />
+        </Route>
+        <Route exact path="/:page/:page">
           <Footer />
         </Route>
       </Router>
