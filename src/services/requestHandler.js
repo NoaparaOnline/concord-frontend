@@ -18,6 +18,8 @@ const SERVICE_URLS = {
   getSchedules: "schedules/read",
   addSchedules: "schedules/create",
   SchedulesApprovalStatusChanges: "schedules/status",
+  getSM: 'users/read/sm',
+
   // getdoctors: "doctors/read",
   // getcustomers: "customers/read",
   // getassignedto: "fieldstaffs/childs",
@@ -132,6 +134,14 @@ const SchedulesApprovalStatusChanges = (data) =>
       feature:featureConstants.static
     });
 
+    const getSm = async () =>
+  get(
+    SERVICE_URLS.getSM,
+    {},
+    {
+      feature: featureConstants.static,
+    }
+  );
 //=========================
 
 const apiServices = {
@@ -160,6 +170,8 @@ const apiServices = {
   getdistributioncenter,
   getallNotification,
   seeAllNotification,
-  getAllThana
+  getAllThana,
+  getSm,
+
 };
 export default apiServices;
