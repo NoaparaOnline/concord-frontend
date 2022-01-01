@@ -13,9 +13,9 @@ import {
   Globaloperation,
 } from "../components";
 
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const label = {
   HeadFacilities: "Facilities",
@@ -27,21 +27,22 @@ const label = {
 const milestone_data = [
   {
     id: 0,
-    year: '2010',
-    text: 'Inauguration of CONCORD'
+    year: "2010",
+    text: "Inauguration of CONCORD",
   },
   {
     id: 1,
-    year: '2010',
-    text: 'Factory Establish'
+    year: "2010",
+    text: "Factory Establish",
   },
 ];
 
-
 const Home = (props) => {
   return (
-    <div>
-
+    <>
+      <Helmet>
+        <title>Concord Pharma</title>
+      </Helmet>
 
       {/* <Navbar/> */}
       <Carousel />
@@ -49,20 +50,17 @@ const Home = (props) => {
       <WeAreServing />
       <TextSectionContainer />
 
-
       <Heading
         heading={label.HeadFacilities}
-        subheading={'Leading Human Medicine Manufacturer in Bangladesh'} />
-
-
-
+        subheading={"Leading Human Medicine Manufacturer in Bangladesh"}
+      />
 
       <Cards />
       <Heading heading={label.Our_Affiliates} />
       <Affiliates />
       <Globaloperation />
       <Heading heading={label.HeadOurProduct} />
-      <HomeCards {...props}/>
+      <HomeCards {...props} />
 
       <Milestones
         heading={label}
@@ -71,19 +69,22 @@ const Home = (props) => {
           <>
             <div className="row">
               <div className="col-md-12 d-flex justify-content-center my-5 text-primary">
-                <Link to='/media_milestone' style={{ 
-                  textDecoration: 'none', 
-                  fontWeight: 500,
-                  fontSize:'12px',
-                  lineHeight:'1.7em',
-                  padding:'11px 30px' ,
-                  backgroundColor:'#0066b3',
-                  width:'170px',
-                  height:'50px',
-                  justifyContent:'center',
-                   }} 
-                  className="btn btn-primary rounded-pill d-flex align-items-center">
-                    <span>VIEW MORE</span>
+                <Link
+                  to="/milestones"
+                  style={{
+                    textDecoration: "none",
+                    fontWeight: 500,
+                    fontSize: "12px",
+                    lineHeight: "1.7em",
+                    padding: "11px 30px",
+                    backgroundColor: "#0066b3",
+                    width: "170px",
+                    height: "50px",
+                    justifyContent: "center",
+                  }}
+                  className="btn btn-primary rounded-pill d-flex align-items-center"
+                >
+                  <span>VIEW MORE</span>
                 </Link>
               </div>
             </div>
@@ -96,14 +97,9 @@ const Home = (props) => {
 
       <CompanyLogos />
 
-
       {/* <Footer /> */}
+    </>
+  );
+};
 
-
-
-    </div>
-  )
-}
-
-export default Home
-
+export default Home;

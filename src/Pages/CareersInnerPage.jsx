@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { BASEURL } from "../services/HttpProvider";
 import { useHistory, useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const CareersInnerPage = (props) => {
   const history = useHistory();
@@ -75,6 +76,9 @@ const CareersInnerPage = (props) => {
   };
   return (
     <>
+    <Helmet>
+        <title>Careers Detail - Concord Pharma</title>
+      </Helmet>
       <div className="container">
         <div className="row d-flex justify-content-center">
           <div className="col-7">

@@ -24,6 +24,7 @@ import Payment from "./Payment";
 import Notifications from "../../components/ReusableComponents/modals/Notifications/Notifications";
 import ChangePassword from "../../components/ReusableComponents/modals/ChangePassword/ChangePassword";
 import Error404 from "../../Pages/Error404";
+import { Helmet } from "react-helmet";
 
 
 const DepotmanagerDashboard = (props) => {
@@ -164,7 +165,10 @@ const DepotmanagerDashboard = (props) => {
 } 
 
   return (
-
+<>
+    <Helmet>
+        <title>Dashboard - Concord Pharma</title>
+      </Helmet>
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
       <Router>
 
@@ -320,7 +324,7 @@ const DepotmanagerDashboard = (props) => {
               to="#"
               >
               <li className="mb-2 ms-4">
-                <img src={icon111} alt="" width="36" height="36" />
+                <img src={icon111} alt="icon" width="36" height="36" />
                 <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#DB2323", fontWeight: '700' }}>Notification</span>
               </li>
             </NavLink>
@@ -336,7 +340,7 @@ const DepotmanagerDashboard = (props) => {
               to="#"
               >
               <li className="mb-2 ms-4">
-                <img src={icon112} alt="" width="36" height="36" />
+                <img src={icon112} alt="icon" width="36" height="36" />
                 <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#6421FF", fontWeight: '700' }}>Change Password</span>
               </li>
             </NavLink>
@@ -369,6 +373,8 @@ const DepotmanagerDashboard = (props) => {
       <ChangePassword show={show4} onHide={handleClose4} {...props}  />
 
     </div>
+</>
+
   );
 };
 

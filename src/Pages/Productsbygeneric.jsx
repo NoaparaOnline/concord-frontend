@@ -6,6 +6,7 @@ import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 import ReactPaginate from 'react-paginate';
 import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
 import useMediaQuery from "../components/ReusableComponents/MediaQueryCustomHook";
+import { Helmet } from "react-helmet";
 
 const Products_bygeneric = (props) => {
   const isDesktoplg = useMediaQuery('(min-width: 992px)');
@@ -83,7 +84,10 @@ const Products_bygeneric = (props) => {
   };
 
   return (
-    <div>
+    <>
+    <Helmet>
+        <title>By Generic Name - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         heading={"By Generic Name"}
         subHeading={`BY GENERIC NAME`}
@@ -231,7 +235,7 @@ const Products_bygeneric = (props) => {
       </div>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

@@ -1,133 +1,132 @@
-import React from 'react'
+import React, { useState } from "react";
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import DashboardBtnList from "../../components/ReusableComponents/DashboardBtnList/DashboardBtnList";
-import ColorFullDashCard from "../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard";
-import DashCharts from "../../components/ReusableComponents/DashCharts/DashCharts";
-import DashboardMainCard from '../../components/ReusableComponents/DashboardMainCard/DashboardMainCard';
+// import ColorFullDashCard from "../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard";
+// import DashCharts from "../../components/ReusableComponents/DashCharts/DashCharts";
+import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
+import DashboardHeaderAndTile from "../../components/ReusableComponents/dashboardheaderandtile/DashboardHeaderAndTile";
+import { useEffect } from "react";
+import PrescriptionReport from "./PrescriptionReport";
+import DCRReport from "./DCRReport";
+import DoctorReport from "./DoctorReport";
+import ProductReport from "./ProductReport";
 
-const Reports = ({
+const Reports = (props) => {
   
-    sidebarOpen,
-    openSidebar,
-    tabHandler0,    
-    selectedTab0,
-}) => {
+ 
+  const { sidebarOpen, openSidebar, tabHandler0, selectedTab0 } = props;
+
+  const [selectedtile, setselectedtile] = useState("Prescription Report");
+  const FromView = props?.location?.state?.key;
+  const tabHandler = (item) => {
+    setselectedtile(item);
+  };
   const buttonname1 = ["All", "Region"];
-
+  useEffect(() => {
+    console.log(FromView);
+   
+    if (FromView === "fromPrescription") {
+      setselectedtile("Prescription Report");
+    } else if (FromView === "fromDCR") {
+      setselectedtile("DCR Report");
+    } else if (FromView === "fromDoctor") {
+      setselectedtile("Doctor Report");
+    } else if (FromView === "fromProduct") {
+      setselectedtile("Product Report");
+    } 
+    // eslint-disable-next-line
+  }, [FromView]);
   return (
-        <>
-            <NavbarDash
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            Heading="Reports"
-          />
-          <DashboardMainCard
-              classnamewidth="96%"
-
-            reverse={false}
-            floatleftrightbutton={
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-12 ">
-                    <div className="d-flex justify-content-end mb-4 ">
-                      {buttonname1.map((item, index) => (
-                        <div
-                          className="d-flex d-inline-flex"
-                          key={index + 1}
-                          onClick={() => tabHandler0(item)}
-                        >
-                          <DashboardBtnList
-                            label={selectedTab0 === item ? item : 
-                            <>
-                            {item}
-                            </>
-                            }
-                            bntStyle={{
-                              borderRadius:
-                                index === 0
-                                  ? "10px 0px 0px 10px"
-                                  : index === buttonname1.length - 1
-                                    ? "0px 10px 10px 0px"
-                                    : "",
-                              width:
-                                index === 0
-                                  ? "80px"
-                                    : "",
-                            }}
-                            className={
-                              selectedTab0 === item
-                                ? "dashboardBtnList-item-active py-2"
-                                : "default-color-and-hover py-2"
-                            }
-                          />
-                        </div>
-                      ))}
+    <>
+      <NavbarDash
+        sidebarOpen={sidebarOpen}
+        openSidebar={openSidebar}
+        Heading="Reports"
+      />
+      <DashboardMainCard
+        classnamewidth="96%"
+        reverse={false}
+        floatleftrightbutton={
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12 ">
+                <div className="d-flex justify-content-end mb-4 ">
+                  {buttonname1.map((item, index) => (
+                    <div
+                      className="d-flex d-inline-flex"
+                      key={index + 1}
+                      onClick={() => tabHandler0(item)}
+                    >
+                      <DashboardBtnList
+                        label={selectedTab0 === item ? item : <>{item}</>}
+                        bntStyle={{
+                          borderRadius:
+                            index === 0
+                              ? "10px 0px 0px 10px"
+                              : index === buttonname1.length - 1
+                              ? "0px 10px 10px 0px"
+                              : "",
+                          width: index === 0 ? "80px" : "",
+                        }}
+                        className={
+                          selectedTab0 === item
+                            ? "dashboardBtnList-item-active py-2"
+                            : "default-color-and-hover py-2"
+                        }
+                      />
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
-            }
-            colorfulcards={
-              <div className="container">
-                <div className="row d-flex justify-content-center mb-3">
-                  <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-                    <ColorFullDashCard
-                      headtext="By Value"
-                      textl="BTK 24,000"
-                      textr="34%"
-                      classname="colrcardblue"
-                    />
-                  </div>
-                  <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-                    <ColorFullDashCard
-                      headtext="By Product"
-                      textl="2,478"
-                      textr="64%"
-                      classname="colrcardseagreen"
-                    />
-                  </div>
-                  <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-                    <ColorFullDashCard
-                      headtext="By Prescription"
-                      textl="1,151"
-                      textr="20%"
-                      classname="colrcardred"
-                    />
-                  </div>
-                  <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-                    <ColorFullDashCard
-                      headtext="By Customer"
-                      textl="1,200"
-                      textr="34%"
-                      classname="colrcardorange"
-                    />
-                  </div>
-                </div>
-              </div>
-            }
-            DivChartComponent={
-              <>
-                <div className="row d-flex justify-content-center">
-                  <div className="col-lg-6 mb-3 ">
-                    <DashCharts heading="By Value" />
-                  </div>
-                  <div className="col-lg-6 mb-3 ">
-                    <DashCharts heading="By Prescription" />
-                  </div>
-                </div>
-                <div className="row d-flex justify-content-center">
-                  <div className="col-lg-6 mb-3 ">
-                    <DashCharts heading="By Product" />
-                  </div>
-                  <div className="col-lg-6 mb-3 ">
-                    <DashCharts heading="By Customer" />
-                  </div>
-                </div>
-              </>
-            }
-          />  
-        </>
-    )
-}
+            </div>
+          </div>
+        }
+        colorfulcards={
 
-export default Reports
+          <DashboardHeaderAndTile
+            options={[
+              "Prescription Report",
+              "DCR Report",
+              "Doctor Report",
+              "Product Report",
+            ]}
+            classname={[
+              "colrcardblue",
+              "colrcardseagreen",
+              "colrcardred",
+              "colrcardorange",
+            ]}
+            // icons={[
+            //   appointment,
+            //   prescription,
+            //   MyDoctors,
+            //   appointmentBook,
+            //   payment,
+            //   medical,
+            //   cart,
+            // ]}
+            tabHandler={tabHandler}
+            value={selectedtile}
+          />
+        }
+        DivChartComponent={<>
+        
+        <div className="container mt-5">
+        {selectedtile === "Prescription Report" ? (
+          <PrescriptionReport {...props} />
+        ) : selectedtile === "DCR Report" ? (
+          <DCRReport {...props} />
+        ) : selectedtile === "Doctor Report" ? (
+          <DoctorReport {...props} />
+        ) : selectedtile === "Product Report" ? (
+          <ProductReport {...props} />
+        ) : null}
+      </div>
+
+        </>}
+      />
+    </>
+  );
+};
+
+export default Reports;

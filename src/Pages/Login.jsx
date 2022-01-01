@@ -12,6 +12,7 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router";
 
 import Loader from "react-loader-spinner";
+import { Helmet } from "react-helmet";
 
 
 
@@ -65,7 +66,10 @@ const Login = (props) => {
 
 
   return (
-    <div>
+    <>
+    <Helmet>
+        <title>Concord Pharma</title>
+      </Helmet>
       <Modal show={props.show} onHide={props.onHide} centered size="sm">
 
         <Modal.Header>
@@ -254,7 +258,7 @@ const Login = (props) => {
           </div>
         </Modal.Body>
       </Modal>
-    </div>
+    </>
   );
 };
 

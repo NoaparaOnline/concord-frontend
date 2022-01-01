@@ -1,7 +1,12 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const PrivacyAndPolicy = () => {
   return (
+    <>
+     <Helmet>
+        <title>Privacy Policy - Concord Pharma</title>
+      </Helmet>
     <div className="container">
       <div className="row d-flex justify-content-center">
         <div className="col-8 my-5 text-justify">
@@ -85,6 +90,7 @@ const PrivacyAndPolicy = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

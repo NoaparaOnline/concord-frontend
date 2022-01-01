@@ -29,7 +29,7 @@ const Globaloperation = () => {
           <div className="card card_custom">
             <div className="card-body">
               <h1 className="card-title colrry">Global Operation</h1>
-              <img src={imgss} className="card-img-top" alt="..." />
+              <img src={imgss} className="card-img-top" alt="global operation" />
             </div>
             <h4 className="card-title text-title px-2 ml-3">
               <strong className="Typography_styling">
@@ -37,7 +37,7 @@ const Globaloperation = () => {
               </strong>
               , a leading human medicine manufacturer in Bangladesh. We always thrive to introduce top notch quality
             </h4>
-            <Link to="/globalOperations" className="btn btn-primary d-flex justify-content-center rounded-pill colr_btn m-auto mb-3" style={{color:'#fff',backgroundColor:'#0066b3'}}>
+            <Link to="/global_operation" className="btn btn-primary d-flex justify-content-center rounded-pill colr_btn m-auto mb-3" style={{color:'#fff',backgroundColor:'#0066b3'}}>
               Read More
             </Link>
           </div>

@@ -5,6 +5,7 @@ import BannerWithText from "../components/ReusableComponents/BannerImgComponents
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Modal from 'react-bootstrap/Modal'
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 const Media_photo = () => {
 
     // BannerWithText Wale Ki Links Ka Object
@@ -51,7 +52,10 @@ function importAll(data) {
     return (
 
 
-        <div>
+        <>
+          <Helmet>
+        <title>Photo - Concord Pharma</title>
+      </Helmet>
             <BannerWithText
                 imgSrc={bannerimg}
                 heading={"Photo"}
@@ -75,7 +79,7 @@ function importAll(data) {
                        handleShow();
                        handleimage(item);
                    }}>
-                        <img alt="" src={images[item].default} className="img-fluid zoom" style={{ border: '1px solid #f3f3f3', overflow: 'hidden', borderRadius: '20px' }} />
+                        <img alt="gallery" src={images[item].default} className="img-fluid zoom" style={{ border: '1px solid #f3f3f3', overflow: 'hidden', borderRadius: '20px' }} />
                         
                     </Link>
                     </div>
@@ -85,7 +89,7 @@ function importAll(data) {
                         <Modal.Header closeButton>
                         </Modal.Header>
                         <Modal.Body >
-                        <img alt="" src={imag} width="100%" height="100%"/>
+                        <img alt="gallery" src={imag} width="100%" height="100%"/>
                         </Modal.Body>
                     </Modal>
 
@@ -98,7 +102,7 @@ function importAll(data) {
 
             <CompanyLogos />
 
-        </div>
+        </>
     )
 }
 

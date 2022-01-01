@@ -6,6 +6,7 @@ import ewvila from '../Statics/assets/Sliderlogos/1.png'
 import dmfr from '../Statics/assets/Sliderlogos/2.png'
 import toticell from '../Statics/assets/Sliderlogos/3.png'
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { Helmet } from "react-helmet";
 
 const Abouthealthassociates = () => {
  
@@ -23,6 +24,12 @@ const Abouthealthassociates = () => {
   ];
 
   return (
+    <>
+     <Helmet>
+        <title>
+        Health Associates - Concord Pharma
+        </title>
+      </Helmet>
     <div>
       <BannerWithText
         imgSrc={bannerimg}
@@ -46,7 +53,7 @@ const Abouthealthassociates = () => {
             <img
               class="alignnone size-medium wp-image-24556"
               src={ewvila}
-              alt=""
+              alt="ewvilamedica"
               width="300"
               height="180"
               sizes="(max-width: 240px) 100vw, 240px"
@@ -115,7 +122,7 @@ const Abouthealthassociates = () => {
             <img
               class="alignnone size-medium wp-image-24556"
               src={dmfr}
-              alt=""
+              alt="dmfr"
               width="300"
               height="100"
               sizes="(max-width: 240px) 100vw, 240px"
@@ -176,7 +183,7 @@ const Abouthealthassociates = () => {
             <img
               class="alignnone size-medium wp-image-24556"
               src={toticell}
-              alt=""
+              alt="toticell"
               width="300"
               height="100"
               sizes="(max-width: 240px) 100vw, 240px"
@@ -241,6 +248,7 @@ const Abouthealthassociates = () => {
 
       <CompanyLogos />
     </div>
+    </>
   );
 };
 

@@ -6,6 +6,7 @@ import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 import ReactPaginate from 'react-paginate';
 import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
 import useMediaQuery from "../components/ReusableComponents/MediaQueryCustomHook";
+import { Helmet } from "react-helmet";
 
 
 const Products_bytrade = (props) => {
@@ -102,7 +103,10 @@ const Products_bytrade = (props) => {
   }
 
 return (
-    <div>
+    <>
+       <Helmet>
+        <title>By Trade Name - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         heading={"By Trade Name"}
         subHeading={`BY TRADE NAME`}
@@ -258,7 +262,7 @@ return (
       </div>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

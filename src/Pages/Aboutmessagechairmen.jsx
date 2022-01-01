@@ -4,6 +4,7 @@ import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/parallax_contact.jpg";
 import DirectorImg from "../Statics/assets/Managing-Director.png";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { Helmet } from 'react-helmet';
 
 
 const About_message_chairmen = () => {
@@ -32,7 +33,13 @@ const About_message_chairmen = () => {
 
 
   return (
-    <div>
+    <>
+    <Helmet>
+        <title>
+        Message From Chairmen - Concord Pharma
+        </title>
+      </Helmet>
+<div>
 
       <BannerWithText
         imgSrc={bannerimg}
@@ -72,6 +79,7 @@ const About_message_chairmen = () => {
       <CompanyLogos />
 
     </div>
+    </>
   )
 }
 

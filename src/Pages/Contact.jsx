@@ -5,6 +5,7 @@ import BannerWithText from '../components/ReusableComponents/BannerImgComponents
 import ZoominCards from '../components/ReusableComponents/ZoominCards';
 import contactcard1 from '../Statics/assets/contact/contact.svg'
 import contactcard2 from '../Statics/assets/contact/distribution.svg'
+import { Helmet } from 'react-helmet';
 
 
 const Contact = () => {
@@ -14,14 +15,14 @@ const Contact = () => {
           id: 1,
           imageURL: contactcard1,
           text: "Our Distribution Network",
-          link: "/facilities_ourdistribution",
+          link: "/our_distribution_network",
         },
         
         {
           id: 2,
           imageURL: contactcard2,
           text: "Contact Us",
-          link: "/contact_contactus",
+          link: "/contactus",
         },
         
       ];
@@ -36,7 +37,10 @@ const Contact = () => {
       ];
 
     return (
-        <div>
+        <>
+        <Helmet>
+        <title>Contact - Concord Pharma</title>
+      </Helmet>
         <BannerWithText imgSrc={bannerimg}
           heading={'Contact'}
           subHeading={`Contact`}
@@ -71,7 +75,7 @@ const Contact = () => {
         </div>
   
         <CompanyLogos />
-      </div>
+      </>
     )
 }
 

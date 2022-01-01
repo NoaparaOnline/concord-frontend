@@ -276,9 +276,9 @@ const Notifications = (props) => {
                   >
                     <span
                       className="light-Color-Para"
-                      style={{ fontSize: "24px" }}
+                      style={{ fontSize: "24px",color:"#0066b3" ,fontWeight:'600' }}
                     >
-                      no notification to show
+                      No Notification To Show
                     </span>
                   </div>
                 )}

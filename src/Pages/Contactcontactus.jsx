@@ -7,6 +7,7 @@ import { SendGridMailApi } from "../Store/Actions/directorActions";
 import { toast } from "react-toastify";
 import {validateEmail} from '../Utils/functions'
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet";
 
 const Contact_contactus = () => {
   const dispatch = useDispatch();
@@ -69,7 +70,10 @@ const Contact_contactus = () => {
   };
 
   return (
-    <div>
+    <>
+    <Helmet>
+        <title>Contactus - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Contact Us"}
@@ -373,7 +377,7 @@ const Contact_contactus = () => {
       </div>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

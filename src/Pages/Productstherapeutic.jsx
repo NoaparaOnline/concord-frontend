@@ -6,6 +6,7 @@ import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 import ReactPaginate from "react-paginate";
 import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
 import useMediaQuery from "../components/ReusableComponents/MediaQueryCustomHook";
+import { Helmet } from "react-helmet";
 
 const Products_therapeutic = (props) => {
 
@@ -111,7 +112,10 @@ const Products_therapeutic = (props) => {
     setPageNumber(selected);
   };
   return (
-    <div>
+    <>
+       <Helmet>
+        <title>By Therapeutic Class - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         heading={"By Therapeutic Class"}
         subHeading={`BY THERAPEUTIC CLASS`}
@@ -295,7 +299,7 @@ const Products_therapeutic = (props) => {
       </div>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

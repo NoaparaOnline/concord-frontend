@@ -3,6 +3,7 @@ import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/warehouse-1.jpg";
 import facrd from "../Statics/assets/warehouse-1.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { Helmet } from "react-helmet";
 const Facilities_warhouse = () => {
   const LinksBan=[
     {
@@ -18,7 +19,10 @@ const Facilities_warhouse = () => {
   ];
  
   return (
-    <div>
+    <>
+        <Helmet>
+        <title>Warehouse - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Warehouse"}
@@ -38,7 +42,7 @@ const Facilities_warhouse = () => {
           <div className="col-sm-12 col-lg-5">
             
               <div className="allborder">
-                <img alt="" src={facrd} className="zoom" width="100%" height="100%" />   
+                <img alt="warehouse" src={facrd} className="zoom" width="100%" height="100%" />   
               </div>
     
           </div>
@@ -69,7 +73,7 @@ const Facilities_warhouse = () => {
       </div>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 
