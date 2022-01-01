@@ -401,22 +401,22 @@ export const getSingleDistributionObjWithUid = (uid,type) => async (dispatch) =>
 export const getUsers = (uid, user) => async (dispatch) => {
   const token = JSON.parse(localStorage.getItem('tokenConcord'));
   try {
-    if (user == 'sm') {
+    if (user === 'sm') {
       dispatch({
         type: LOADER_CONSTANT.SM_LOADING,
         payload: true,
       });
-    } else if (user == 'rsm') {
+    } else if (user === 'rsm') {
       dispatch({
         type: LOADER_CONSTANT.RSM_LOADING,
         payload: true,
       });
-    } else if (user == 'am') {
+    } else if (user === 'am') {
       dispatch({
         type: LOADER_CONSTANT.AM_LOADING,
         payload: true,
       });
-    } else if (user == 'mpo') {
+    } else if (user === 'mpo') {
       dispatch({
         type: LOADER_CONSTANT.MPO_LOADING,
         payload: true,
@@ -425,7 +425,7 @@ export const getUsers = (uid, user) => async (dispatch) => {
 
     const head = { 'x-session-key': token.key, 'x-session-type': token.type };
     const response = await axios.get(
-      BASEURL + `/users/read/${user}?manager_uid=${uid}`,
+      BASEURL + `/fieldstaffs/childs/${user}?child_uid=${uid}`,
       { headers: head }
     );
     if (response?.data?.response_code === 200) {
@@ -523,6 +523,41 @@ export const ViewRegionalSalesManagerManagerAction = () => async (dispatch) => {
     } else {
       dispatch({
         type: VIEW_RSM_CONSTANT.VIEW_RSM_ERROR,
+        payload: true,
+      });
+    }
+  } catch {}
+};
+
+
+export const ViewChildSalesManagerManagerAction = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: VIEW_SM_CONSTANT.VIEW_SM_LOADING,
+      payload: true,
+    });
+    // const token =await JSON.parse(localStorage.getItem("tokenConcord"));
+    // let res= await axios.get(BASEURL+'fieldstaffs/childs/sm',{
+    //   headers:{
+    //     'x-session-token':token?.key,
+    //     'x-session-key':token?.type
+    //   }
+    // })
+    let res = await apiServices.getChildSm()
+
+    console.log(res,"ers");
+    if (res?.data?.response_code === 200) {
+      dispatch({
+        type: VIEW_SM_CONSTANT.VIEW_SM_LOADING,
+        payload: false,
+      });
+      dispatch({
+        type: VIEW_SM_CONSTANT.VIEW_SM_SUCCESS,
+        payload: res?.data?.response_data,
+      });
+    } else {
+      dispatch({
+        type: VIEW_SM_CONSTANT.VIEW_SM_ERROR,
         payload: true,
       });
     }

@@ -5,11 +5,11 @@ const FlipCard = (props) => {
   const { card } = props;
   const { title, text1, text2,  btn,innerComposition } = card;
   const currentpath = props?.location?.pathname;
-  const getFirstWord = string => {
-    const words = string.split(' ');
-    return words[0].toLowerCase();
-};
-  let titleprod = getFirstWord(title);
+//   const getFirstWord = string => {
+//     const words = string.split(' ');
+//     return words[0].toLowerCase();
+// };
+  // let titleprod = getFirstWord(title);
   return (
     <div>
       <div className="flip-card" style={{ marginBottom: "50%" }}>
