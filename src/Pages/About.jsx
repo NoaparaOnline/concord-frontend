@@ -7,6 +7,7 @@ import Aboutcard1 from '../Statics/assets/mission-vissioncard1.svg'
 import Aboutcard2 from '../Statics/assets/health-icon2.svg'
 import Aboutcard3 from '../Statics/assets/profile3.svg'
 import Aboutcard4 from '../Statics/assets/Chairman-message4.svg'
+import { Helmet } from 'react-helmet';
 
 
 const About = () => {
@@ -17,25 +18,25 @@ const About = () => {
       id: 0,
       imageURL: Aboutcard1,
       text: "Vision & Mission",
-      link: "/about_vision_mission",
+      link: "/vision_mission",
     },
     {
       id: 1,
       imageURL: Aboutcard2,
       text: "Health Associates",
-      link: "/about_health_associates",
+      link: "/health_associates",
     },
     {
       id: 2,
       imageURL: Aboutcard3,
       text: "Chairman's Profile",
-      link: "/about_chairmen_profile",
+      link: "/chairmen_profile",
     },
     {
       id: 3,
       imageURL: Aboutcard4,
       text: "Message from Chairman",
-      link: "/about_message_chairmen",
+      link: "/message_from_chairmen",
     },
   ];
 
@@ -50,6 +51,12 @@ const About = () => {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>
+        About - Concord Pharma
+        </title>
+      </Helmet>
     <div>
       <BannerWithText
         imgSrc={bannerimg}
@@ -94,6 +101,7 @@ const About = () => {
 
       <CompanyLogos />
     </div>
+    </>
   )
 }
 

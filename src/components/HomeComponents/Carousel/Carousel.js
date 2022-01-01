@@ -34,7 +34,7 @@ const Slideshow = () => {
       logo: "",
       text: "Delivering all over the country",
       btn: "Know More",
-      btnlink: "/globalOperations",
+      btnlink: "/global_operation",
     },
 
   ];
@@ -61,7 +61,7 @@ const Slideshow = () => {
             <div className="slider-wrapper">
               <div className="slider zoom-in-zoom-out">
                 <img
-                  alt=""
+                  alt="slider"
                   className="img-fluid"
                   style={{ objectFit: "cover", height: '600px', width: "100%" }}
                   src={each.img}
@@ -76,7 +76,7 @@ const Slideshow = () => {
                       <div>
                         <div className="">
                           {index === 0 ?
-                            <img alt="" className={`d-inline img-inline-res`}
+                            <img alt="logo" className={`d-inline img-inline-res`}
                               src={each.logo} /> : null
                           }
 

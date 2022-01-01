@@ -1,18 +1,20 @@
 import React from "react";
 import "./ColorFullDashCard.css";
-const ColorFullDashCard = ({classname,headtext,textl,textr}) => {
+const ColorFullDashCard = ({active,classname,headtext,textl,textr}) => {
   return (
     <>
       <div
-        className={`card style_custom ${classname}`}
+        className={`card ${active ? "tile-btn-active":"style_custom"} ${classname}`}
         style={{
           borderRadius: "10px",
           padding: "10px 10px",
+          width:'80%',
+          
         }}
       >
         
 
-          <div className="ms-2" style={{color:'#fff',fontSize:'15px',fontWeight:'400'}}>{headtext}</div>
+          <div className="mt-5 text-center" style={{color:'#fff',fontSize:'20px',fontWeight:'500',height:'60px'}}>{headtext}</div>
         <nav className="navbar">
           <div className="navbar__left navbar_left_float_custom">
             <h6 style={{color:'#fff',fontWeight:'600'}}>

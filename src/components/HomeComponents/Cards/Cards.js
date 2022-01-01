@@ -12,28 +12,28 @@ const Cards = () => {
       name: "Production",
       imageURL: first,
       text: "Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
-      link: "/facilities_product",
+      link: "/product",
     },
     {
       id:1,
       name: "Research & Development",
       imageURL: second,
       text: "Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
-      link: "/facilities_researchdevrsttime",
+      link: "/research-and-development",
     },
     {
       id:2,
       name: "Quality Control",
       imageURL: third,
       text: "Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
-      link: "/facilities_quality",
+      link: "/quality",
     },
     {
       id:3,
       name: "Warehouse",
       imageURL: fourth,
       text: "Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
-      link: "/facilities_warhouse",
+      link: "/warhouse",
     },
   ];
   return (
@@ -48,7 +48,7 @@ const Cards = () => {
             >
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 imgmargin">
-                  <img alt="" src={ob.imageURL} width="100%" height="100%"/>
+                  <img alt="facilities" src={ob.imageURL} width="100%" height="100%"/>
                 </div>
                 <div
                   className="col-lg-6 col-md-6 col-sm-12 smallscr_responsive"

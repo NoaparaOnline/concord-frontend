@@ -8,7 +8,7 @@ const SidebarDashboard = (props) => {
       props.history.push('/');
   }
   return (
-      <div className={sidebarOpen ? "sidebar_responsive " : ""} id="sidebar">
+      <div className={sidebarOpen ? "sidebar_responsive" : ""} id="sidebar">
         <div className="sidebar__title">
           <div className="d-flex justify-content-center">
            <Link onClick={homepage} to="/">

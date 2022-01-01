@@ -84,7 +84,7 @@ const Navbars = (props) => {
         <div className="container" >
           <Link to="/">
             <img
-              alt=""
+              alt="logo"
               src={logo}
               style={{ minWidth: "150px", minHeight: "40px", height: 60 }}
             />
@@ -147,7 +147,7 @@ const Navbars = (props) => {
                             >
                               <img
                                 src={profileLogo}
-                                alt=""
+                                alt="user"
                                 width="25"
                                 height="25"
                                 className="rounded-circle"
@@ -347,7 +347,7 @@ const Navbars = (props) => {
                         <li>
                           <NavLink
                             className="dropdown-item navmenu_custome_li"
-                            to="/about_vision_mission"
+                            to="/vision_mission"
                           >
                             Vision & Mission
                           </NavLink>
@@ -356,7 +356,7 @@ const Navbars = (props) => {
                           <Link
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/about_health_associates"
+                            to="/health_associates"
                           >
                             Health Associates{" "}
                           </Link>
@@ -365,7 +365,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/about_chairmen_profile"
+                            to="/chairmen_profile"
                           >
                             Chairman’s Profile{" "}
                           </NavLink>
@@ -374,7 +374,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/about_message_chairmen"
+                            to="/message_from_chairmen"
                           >
                             Message from Chairman
                           </NavLink>
@@ -385,7 +385,7 @@ const Navbars = (props) => {
                   <li className="nav-item">
                     <NavLink
                       className="nav-link secnav"
-                      to="/globalOperations"
+                      to="/global_operation"
                       activeClassName="active"
                     >
                       global operation
@@ -423,7 +423,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/products_bytrade"
+                            to="/by_trade_name"
                           >
                             By trade name
                           </NavLink>
@@ -432,7 +432,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/products_bygeneric"
+                            to="/by_generic_name"
                           >
                             By generic name
                           </NavLink>
@@ -441,7 +441,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/products_therapeutic"
+                            to="/by-therapeutic-class"
                           >
                             By therapeutic class
                           </NavLink>
@@ -450,7 +450,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/products_firsttime"
+                            to="/first-time-launching"
                           >
                             first time launching
                           </NavLink>
@@ -489,7 +489,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/facilities_researchdevrsttime"
+                            to="/research-and-development"
                           >
                             Research and Development
                           </NavLink>
@@ -498,7 +498,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/facilities_product"
+                            to="/product"
                           >
                             Production
                           </NavLink>
@@ -507,7 +507,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/facilities_quality"
+                            to="/quality"
                           >
                             Quality Control
                           </NavLink>
@@ -516,7 +516,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/facilities_warhouse"
+                            to="/warhouse"
                           >
                             Warehouse
                           </NavLink>
@@ -525,7 +525,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/facilities_ourdistribution"
+                            to="/our_distribution_network"
                           >
                             Our distribution network
                           </NavLink>
@@ -574,8 +574,8 @@ const Navbars = (props) => {
                         aria-labelledby="dropdownMenuOffset"
                         style={{ listStyle: "none", background: "white" }}
                       >
-                        {/* Video Routing Path = /media_video */}
-                        {/* social responsibilities Routing Path = /media_socialresponsiblities */}
+                        {/* Video Routing Path = /video */}
+                        {/* social responsibilities Routing Path = /social_responsiblities */}
 
                         <li>
                           <Link
@@ -590,7 +590,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/media_photo"
+                            to="/photo"
                           >
                             photo
                           </NavLink>
@@ -599,7 +599,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/media_socialmedia"
+                            to="/social_media_post"
                           >
                             social media post
                           </NavLink>
@@ -608,7 +608,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/media_milestone"
+                            to="/milestones"
                           >
                             mile stones
                           </NavLink>
@@ -656,7 +656,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/facilities_ourdistribution"
+                            to="/our_distribution_network"
                           >
                             our distribution network
                           </NavLink>
@@ -665,7 +665,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/contact_contactus"
+                            to="/contactus"
                           >
                             contact us
                           </NavLink>

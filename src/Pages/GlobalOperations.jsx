@@ -13,6 +13,7 @@ import flag9 from "../Statics/assets/flags/fl9.jpg";
 import flag10 from "../Statics/assets/flags/fl10.jpg";
 
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { Helmet } from "react-helmet";
 const GlobalOPerations = () => {
   const flagsCol1 = [
     {
@@ -59,24 +60,24 @@ const GlobalOPerations = () => {
 
   const LinksBan = [
     {
-      subLinkName: 'Home',
-      subDash: '/',
-      subLink: '/'
+      subLinkName: "Home",
+      subDash: "/",
+      subLink: "/",
     },
-
-
   ];
 
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Global Operation - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Global Operation"}
         subHeading={`GLOBAL OPERATION`}
         LinksBan={LinksBan}
         height={"400px"}
-        
-        backposit={'center'}
+        backposit={"center"}
         backimg={`linear-gradient(rgba(20, 20, 19, 0.4), rgba(20, 20, 19, 0.2)),url(${bannerimg})`}
         backgroundSize={"100% 400px"}
         conmarpad={"mt-5 pt-5"}
@@ -91,7 +92,12 @@ const GlobalOPerations = () => {
                 return (
                   <>
                     <div className="col-lg-5 col-md-5 col-md-6  col-sm-6 col-xs-12 mb-4  d-flex justify-content-center">
-                      <img className="mb-3 me-5  boxImgShadow" alt="" width="100%" src={ob.imageURL} />
+                      <img
+                        className="mb-3 me-5  boxImgShadow"
+                        alt="global operations"
+                        width="100%"
+                        src={ob.imageURL}
+                      />
                     </div>
                   </>
                 );
@@ -99,50 +105,64 @@ const GlobalOPerations = () => {
             </div>
           </div>
           <div className="col-lg-7 col-sm-12 text-justify">
-
-
             <div className="mb-4">
-
-              <strong className="Typography_styling">Concord Pharmaceuticals Limited (CPL),</strong> a leading human medicine manufacturer in Bangladesh. We always thrive to introduce top notch quality human medicine for the health & wellbeing of the nation worldwide. With the philosophy “Better medicine Better life…” CPL has started its export journey since 2015. Hence its efforts to improve quality never ends up. We continuously sets next level of standards and feels passionate to achieve all that. All the manufacturing processes are followed by <strong >ISO 9001:2015 & WHO-GMP</strong> guidelines to produce quality products.
-
+              <strong className="Typography_styling">
+                Concord Pharmaceuticals Limited (CPL),
+              </strong>{" "}
+              a leading human medicine manufacturer in Bangladesh. We always
+              thrive to introduce top notch quality human medicine for the
+              health & wellbeing of the nation worldwide. With the philosophy
+              “Better medicine Better life…” CPL has started its export journey
+              since 2015. Hence its efforts to improve quality never ends up. We
+              continuously sets next level of standards and feels passionate to
+              achieve all that. All the manufacturing processes are followed by{" "}
+              <strong>ISO 9001:2015 & WHO-GMP</strong> guidelines to produce
+              quality products.
             </div>
             <div className="mb-4">
-
-              <strong >CPL</strong> has 112 dosage form of different therapeutic classes like Antibiotics, Antiviral, Antidiabetics, Anti-Ulcerants, Analgesics & Antipyretics, Antihistamine, Antidepressant, Cardiovascular, Vitamins & minerals, NSAIDs etc.
+              <strong>CPL</strong> has 112 dosage form of different therapeutic
+              classes like Antibiotics, Antiviral, Antidiabetics,
+              Anti-Ulcerants, Analgesics & Antipyretics, Antihistamine,
+              Antidepressant, Cardiovascular, Vitamins & minerals, NSAIDs etc.
             </div>
             <div className="mb-4">
-
-              Presently <strong >CPL</strong> products are exporting to Bhutan, Cambodia, Myanmar, Sri Lanka, Vietnam, Thailand, Liberia, Yemen, Afghanistan and Congo now. During this marvelous journey the company has achieved accreditation from Ministry of Health, Cambodia and currently holds the Yemen GMP certificate.
+              Presently <strong>CPL</strong> products are exporting to Bhutan,
+              Cambodia, Myanmar, Sri Lanka, Vietnam, Thailand, Liberia, Yemen,
+              Afghanistan and Congo now. During this marvelous journey the
+              company has achieved accreditation from Ministry of Health,
+              Cambodia and currently holds the Yemen GMP certificate.
             </div>
             <div className="mb-4">
-
-              We’ve consistently been recognized in the international arena for our exceptional outcomes and service for worldwide wholesalers, government agencies, major importers, chain of drug stores, contract manufacturing and relief organizations. We are concerned to tie-up with new business partners and we welcome prospective agents for our medicines.
+              We’ve consistently been recognized in the international arena for
+              our exceptional outcomes and service for worldwide wholesalers,
+              government agencies, major importers, chain of drug stores,
+              contract manufacturing and relief organizations. We are concerned
+              to tie-up with new business partners and we welcome prospective
+              agents for our medicines.
             </div>
             <div className="mb-4">
-
               For any further information or export:
-              <div><span>Email: 
-                
-              <a
-                  href="mailto:Cplibd.export@gmail.com"
-           
-                  style={{textDecoration:'none'}}
-                >
-                   Cplibd.export@gmail.com
-                </a>
-                 </span></div>
-              <div><span>Cell: +8801991145006 (Whatsapp & Viber associated)</span></div>
-
-
+              <div>
+                <span>
+                  Email:
+                  <a
+                    href="mailto:Cplibd.export@gmail.com"
+                    style={{ textDecoration: "none" }}
+                  >
+                    Cplibd.export@gmail.com
+                  </a>
+                </span>
+              </div>
+              <div>
+                <span>Cell: +8801991145006 (Whatsapp & Viber associated)</span>
+              </div>
             </div>
-
-
           </div>
         </div>
       </div>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

@@ -71,28 +71,28 @@ const Footer = () => {
                   <ul className="list-unstyled">
                   <li>
               
-              <Link to='/products_bytrade' className="linkFoot">
+              <Link to='/by_trade_name' className="linkFoot">
                 By Trade Name
               </Link>
             
           </li>
           <li>
           
-              <Link to='/products_bygeneric' className="linkFoot">
+              <Link to='/by_generic_name' className="linkFoot">
                 By Generic Name
               </Link>
             
           </li>
           <li>
           
-              <Link to='/products_therapeutic' className="linkFoot">
+              <Link to='/by-therapeutic-class' className="linkFoot">
                 By Therapeutic Class
               </Link>
             
           </li>
           <li>
           
-              <Link to='/products_firsttime' className="linkFoot">
+              <Link to='/first-time-launching' className="linkFoot">
                 First Class Launching
               </Link>
             
@@ -143,7 +143,7 @@ const Footer = () => {
             <Link to='#' >
              
               <img
-              alt=""
+              alt="ios"
                 loading="lazy"
                 src={
                   "https://www.ri-demo.co/concord/final/wp-content/uploads/2019/06/ios.png"
@@ -156,7 +156,7 @@ const Footer = () => {
 
               <a target="_blank" rel="noreferrer" href='https://play.google.com/store/apps/details?id=com.concordmpo' >
               <img
-              alt=""
+              alt="android"
                 loading="lazy"
                 src={
                   "https://www.ri-demo.co/concord/final/wp-content/uploads/2019/06/android.png"
@@ -205,7 +205,7 @@ const Footer = () => {
               </li>
               <li >
             
-                  <Link to='/facilities_ourdistribution' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
+                  <Link to='/our_distribution_network' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
                   <i className="fa fa-globe"></i>
                   <span className="ms-2">Distribution Center</span>
                   </Link>

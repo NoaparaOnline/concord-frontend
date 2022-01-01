@@ -8,6 +8,7 @@ import mediacard2 from '../Statics/assets/Media/photo.svg'
 import mediacard3 from '../Statics/assets/Media/post.svg'
 import mediacard4 from '../Statics/assets/Media/milestone.svg'
 import mediacard5 from '../Statics/assets/Media/responsibilities.svg'
+import { Helmet } from 'react-helmet';
 
 const Media = () => {
    
@@ -22,19 +23,19 @@ const Media = () => {
           id: 1,
           imageURL: mediacard2,
           text: "Photo",
-          link: "/media_photo",
+          link: "/photo",
         },
         {
           id: 2,
           imageURL: mediacard3,
           text: "Social Media Post",
-          link: "/media_socialmedia",
+          link: "/social_media_post",
         },
         {
           id: 3,
           imageURL: mediacard4,
           text: "Milestones",
-          link: "/media_milestone",
+          link: "/milestones",
         },
         {
           id: 4,
@@ -56,7 +57,10 @@ const Media = () => {
     
    
     return (
-        <div>
+        <>
+        <Helmet>
+        <title>Media - Concord Pharma</title>
+      </Helmet>
         <BannerWithText imgSrc={bannerimg}
           heading={'Media'}
           subHeading={`MEDIA`}
@@ -91,7 +95,7 @@ const Media = () => {
         </div>
   
         <CompanyLogos />
-      </div>
+      </>
     )
 }
 

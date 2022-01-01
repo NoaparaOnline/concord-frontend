@@ -21,7 +21,7 @@ const Acedol = () => {
     {
       subLinkName: "First Time Launching",
       subDash: "/",
-      subLink: "/products_firsttime",
+      subLink: "/first-time-launching",
     },
   ];
 
@@ -238,7 +238,7 @@ const Acedol = () => {
       />
 
       <div className="container mb-5">
-        <Link to="/products_firsttime" style={{ textDecoration: "none" }}>
+        <Link to="/first-time-launching" style={{ textDecoration: "none" }}>
           <span style={{ fontSize: "22px", color: "#565656" }}>
             <i className="fa fa-angle-left" aria-hidden="true"></i> Back
           </span>
@@ -260,7 +260,7 @@ const Acedol = () => {
                   <div className="flip-card-front d-flex justify-content-center align-items-center">
                     <div className="card " style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt="" src={acedolfr} width="100%" height="100%" />
+                        <img alt="acedolfr" src={acedolfr} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -268,7 +268,7 @@ const Acedol = () => {
                   <div className="flip-card-back d-flex justify-content-center align-items-center">
                     <div className="card" style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt="" src={acedolbk} width="100%" height="100%" />
+                        <img alt="acedolbk" src={acedolbk} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -419,7 +419,7 @@ const Acedol = () => {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <div className="allborder d-flex justify-content-center align-items-center">
-            <img alt="" src={acedolfr} className="img-fluid" />
+            <img alt="acedolfr" src={acedolfr} className="img-fluid" />
           </div>
         </Modal.Body>
       </Modal>

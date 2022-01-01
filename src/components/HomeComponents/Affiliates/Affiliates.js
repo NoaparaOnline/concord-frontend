@@ -60,9 +60,9 @@ const Affiliates = () => {
         
           <div>
         <Slider {...properties}  className={"slick-slide-affiliates"} id="id_tog">
-          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={ewvila}/></div>
-          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={dmfr}/></div>
-          <div className="carddivslider"><img alt="" className="imag_style mx-auto" src={toticell}/></div>
+          <div className="carddivslider"><img alt="affiliates" className="imag_style mx-auto" src={ewvila}/></div>
+          <div className="carddivslider"><img alt="affiliates" className="imag_style mx-auto" src={dmfr}/></div>
+          <div className="carddivslider"><img alt="affiliates" className="imag_style mx-auto" src={toticell}/></div>
         </Slider>
           </div>
                     </div>

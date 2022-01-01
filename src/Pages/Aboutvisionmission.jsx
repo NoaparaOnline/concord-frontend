@@ -4,6 +4,7 @@ import bannerimg from "../Statics/assets/vision-missionBanner.jpg";
 import vision1 from "../Statics/assets/vision1.jpg";
 import vision2 from "../Statics/assets/vision2.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { Helmet } from "react-helmet";
 
 const About_vision_mission = () => {
   const visioncards = [
@@ -37,6 +38,13 @@ const About_vision_mission = () => {
   ];
 
   return (
+    <>
+       <Helmet>
+
+        <title>
+        Vision Mission - Concord Pharma
+        </title>
+      </Helmet>
     <div>
       <BannerWithText
         imgSrc={bannerimg}
@@ -59,7 +67,7 @@ const About_vision_mission = () => {
             <React.Fragment key={ob.id}>
               <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3">
                 <div className="card d-flex justify-content-center" style={{ border: 'none' }}>
-                  <img alt="" src={ob.imageURL} className="img-fluid" />
+                  <img alt="vision" src={ob.imageURL} className="img-fluid" />
                   <h5 className="text-center mb-4" style={{ color: "#0066b3", fontWeight: '600', fontSize: '36px',fontFamily: 'Montserrat, sans-serif '}}>{ob.name}</h5>
                   <p className="text-justify" style={{ color: "#565656", fontWeight: '400', fontSize: '17px' }}>{ob.text}</p>
                 </div>
@@ -72,6 +80,7 @@ const About_vision_mission = () => {
 
       <CompanyLogos />
     </div>
+    </>
   );
 };
 

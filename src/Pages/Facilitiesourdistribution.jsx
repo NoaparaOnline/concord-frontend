@@ -2,6 +2,7 @@ import React from "react";
 import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/Distributionbanner.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { Helmet } from "react-helmet";
 const Facilities_ourdistribution = () => {
    const cards = [
     {
@@ -173,7 +174,10 @@ const Facilities_ourdistribution = () => {
    ];
 
   return (
-    <div>
+    <>
+    <Helmet>
+        <title>Our Distribution Network - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Our Distribution Network"}
@@ -283,7 +287,7 @@ const Facilities_ourdistribution = () => {
       </div>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

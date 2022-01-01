@@ -18,6 +18,8 @@ const SERVICE_URLS = {
   getSchedules: "schedules/read",
   addSchedules: "schedules/create",
   SchedulesApprovalStatusChanges: "schedules/status",
+  getSM: 'users/read/sm',
+  
   // getdoctors: "doctors/read",
   // getcustomers: "customers/read",
   // getassignedto: "fieldstaffs/childs",
@@ -28,7 +30,9 @@ const SERVICE_URLS = {
   getallNotification: "notifications/read",
   // seeAllNotification: "notifications/read",
   seeAllNotification: "notifications/read?is_seen=1",
-  getAllThana: "region-classifications/read-thanas"
+  getAllThana: "region-classifications/read-thanas",
+  childSm:'fieldstaffs/childs/sm'
+
 
 };
 
@@ -132,6 +136,22 @@ const SchedulesApprovalStatusChanges = (data) =>
       feature:featureConstants.static
     });
 
+    const getSm = async () =>
+  get(
+    SERVICE_URLS.getSM,
+    {},
+    {
+      feature: featureConstants.static,
+    }
+  );
+  const getChildSm = async () =>
+  get(
+    SERVICE_URLS.childSm,
+    {},
+    {
+      feature: featureConstants.static,
+    }
+  );
 //=========================
 
 const apiServices = {
@@ -160,6 +180,9 @@ const apiServices = {
   getdistributioncenter,
   getallNotification,
   seeAllNotification,
-  getAllThana
+  getAllThana,
+  getSm,
+  getChildSm
+
 };
 export default apiServices;

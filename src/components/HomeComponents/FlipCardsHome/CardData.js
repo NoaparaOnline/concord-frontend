@@ -20,7 +20,7 @@ export const card = [
             imge:acedolbk,
         }],
         backpagename: "First Time Launching",
-        backpagelink: "/products_firsttime",
+        backpagelink: "/first-time-launching",
         innerMainHeading: "Acedol",
         innerComposition: "Aceclofenac BP",
         innerdata:[
@@ -309,7 +309,7 @@ export const card = [
         },
       ],
         backpagename: "First Time Launching",
-        backpagelink: "/products_firsttime",
+        backpagelink: "/first-time-launching",
         btnlink:'/acedol-tablet'
     },
     {
@@ -465,7 +465,7 @@ export const card = [
     ],
         btn:'Read More',
         backpagename: "First Time Launching",
-        backpagelink: "/products_firsttime",
+        backpagelink: "/first-time-launching",
         btnlink:'/acedol-tablet'
     },
     {
@@ -577,7 +577,7 @@ export const card = [
         ],
         btn:'Read More',
         backpagename: "First Time Launching",
-        backpagelink: "/products_firsttime",
+        backpagelink: "/first-time-launching",
         btnlink:'/acedol-tablet'
 
     },
@@ -740,7 +740,7 @@ export const card = [
         ],
         btn:'Read More',
         backpagename: "First Time Launching",
-        backpagelink: "/products_firsttime",
+        backpagelink: "/first-time-launching",
         btnlink:'/acedol-tablet'
 
     },

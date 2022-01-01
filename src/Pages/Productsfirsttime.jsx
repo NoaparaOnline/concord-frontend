@@ -5,6 +5,7 @@ import { FlipCard } from "../components";
 import SingleCard from "../components/HomeComponents/FlipCard/SingleCard";
 
 import { FirstTime } from '../components/HomeComponents/ProductsData/productsfirstimelaunch';
+import { Helmet } from 'react-helmet';
 const Products_firsttime = (props) => {
    
     const LinksBan = [
@@ -23,7 +24,10 @@ const Products_firsttime = (props) => {
     
 
     return (
-        <div>
+        <>
+        <Helmet>
+        <title>First Time Launching - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         heading={"First Time Launching"}
         subHeading={`FIRST TIME LAUNCHING`}
@@ -73,7 +77,7 @@ const Products_firsttime = (props) => {
           </div>
 
       <CompanyLogos />
-    </div>
+    </>
     )
 }
 

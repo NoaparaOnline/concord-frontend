@@ -4,6 +4,7 @@ import BannerWithText from "../../../components/ReusableComponents/BannerImgComp
 import { Link } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import TableCustomComponent from "../TableCustomComponent";
+import { Helmet } from "react-helmet";
 
 const ProductallDetails = (props) => {
 
@@ -31,8 +32,8 @@ const ProductallDetails = (props) => {
       subLink: "/products",
     },
     {
-      subLinkName: viewData?.from === '/products_bytrade' ? 'By Trade Name' : viewData?.from === '/products_bygeneric' ? 'By Generic Name' : viewData?.from === '/products_therapeutic' ? 'By Therapeutic Class' : viewData?.from === '/products_firsttime' ? 'First Time Launching' : '' ,
-      subDash:  viewData?.from === '/products_bytrade' ? '/' : viewData?.from === '/products_bygeneric' ? '/' : viewData?.from === '/products_therapeutic' ? '/' : viewData?.from === '/products_firsttime' ? '/' : '',
+      subLinkName: viewData?.from === '/by_trade_name' ? 'By Trade Name' : viewData?.from === '/by_generic_name' ? 'By Generic Name' : viewData?.from === '/by-therapeutic-class' ? 'By Therapeutic Class' : viewData?.from === '/first-time-launching' ? 'First Time Launching' : '' ,
+      subDash:  viewData?.from === '/by_trade_name' ? '/' : viewData?.from === '/by_generic_name' ? '/' : viewData?.from === '/by-therapeutic-class' ? '/' : viewData?.from === '/first-time-launching' ? '/' : '',
       subLink: viewData?.from,
     },
   ];
@@ -178,7 +179,10 @@ const ProductallDetails = (props) => {
 
 
   return (
-    <div>
+    <>
+       <Helmet>
+        <title>Product Detail - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         subHeading={viewData?.innerMainHeading}
 
@@ -212,7 +216,7 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-front d-flex justify-content-center align-items-center">
                     <div className="card " style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt="" src={viewData?.img?.map(item => item.imgf)} width="100%" height="100%" />
+                        <img alt={viewData?.innerMainHeading} src={viewData?.img?.map(item => item.imgf)} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -220,7 +224,7 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-back d-flex justify-content-center align-items-center">
                     <div className="card" style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt="" src={viewData?.img?.map(item => item.imge)} width="100%" height="100%" />
+                        <img alt={viewData?.innerMainHeading} src={viewData?.img?.map(item => item.imge)} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -386,13 +390,13 @@ const ProductallDetails = (props) => {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <div className="allborder d-flex justify-content-center align-items-center">
-            <img alt="" src={viewData?.img?.map(item => item.imgf)} />
+            <img alt={viewData?.innerMainHeading} src={viewData?.img?.map(item => item.imgf)} />
           </div>
         </Modal.Body>
       </Modal>
 
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 

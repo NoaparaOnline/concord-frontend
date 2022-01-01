@@ -17,7 +17,7 @@ const SiderbarBtn = (props) => {
             to='/'
             >
             <li className="mb-2 ms-4">
-              <img src={imgbtn} alt="" width="36" height="36" />
+              <img src={imgbtn} alt="logo" width="36" height="36" />
               <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: Colr, fontWeight: '700' }}>{btnName}</span>
             </li>
           </NavLink>
@@ -32,7 +32,7 @@ const SiderbarBtn = (props) => {
               to={`${match.path}/${btnroute}`} 
               >
               <li className="mb-2 ms-4">
-                <img src={imgbtn} alt="" width="36" height="36" />
+                <img src={imgbtn} alt="logo" width="36" height="36" />
                 <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: Colr, fontWeight: '700' }}>{btnName}</span>
               </li>
             </NavLink>

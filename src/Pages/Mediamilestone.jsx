@@ -2,6 +2,7 @@ import React from 'react'
 import { CompanyLogos,Milestones } from '../components'
 import bannerimg from "../Statics/assets/milestonebanner.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { Helmet } from 'react-helmet';
 const Media_milestone = () => {
 
     // BannerWithText Wale Ki Links Ka Object
@@ -75,7 +76,10 @@ const Media_milestone = () => {
         Milestones: "Milestones",
       };
     return (
-        <div>
+        <>
+        <Helmet>
+        <title>Milestones - Concord Pharma</title>
+      </Helmet>
             <BannerWithText
                 imgSrc={bannerimg}
                 heading={"Milestones"}
@@ -105,7 +109,7 @@ const Media_milestone = () => {
 
             <CompanyLogos />
 
-        </div>
+        </>
     )
 }
 

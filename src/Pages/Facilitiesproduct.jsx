@@ -3,6 +3,7 @@ import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/fac-production-ban.jpg";
 import facrd from "../Statics/assets/fac-production.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { Helmet } from 'react-helmet';
 
 const Facilities_product = () => {
     
@@ -20,7 +21,10 @@ const Facilities_product = () => {
     },
   ];
   return (
-        <div>
+        <>
+            <Helmet>
+        <title>Production - Concord Pharma</title>
+      </Helmet>
         <BannerWithText
           imgSrc={bannerimg}
           heading={"Production"}
@@ -40,7 +44,7 @@ const Facilities_product = () => {
          
             <div className="col-sm-12 col-lg-5">
               <div className="allborder">
-              <img alt="" src={facrd} className="zoom" width="100%" height="100%" />
+              <img alt="production" src={facrd} className="zoom" width="100%" height="100%" />
               </div>
             </div>
          
@@ -60,7 +64,7 @@ Concord Pharmaceuticals Ltd. ensures & meets the growing requirements of cGMP re
 
         <CompanyLogos/>
 
-      </div>
+      </>
     )
 }
 

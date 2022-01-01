@@ -30,7 +30,7 @@ const CompanyLogos = () => {
                 {img.map((ob,index) => {
             return (
                     <div key={ob.id} className="col-lg-3 col-md-6   d-flex justify-content-center">
-                    <img alt=""  key={ob.id} src={ob.imgl} width="130" height="130"/>                   
+                    <img alt="company"  key={ob.id} src={ob.imgl} width="130" height="130"/>                   
                     </div>
                        );
                     })}

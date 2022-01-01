@@ -266,7 +266,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
     
     innerMainHeading: "Acedol",
     innerComposition: "Aceclofenac BP",
@@ -396,7 +396,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Acedol SR",
     innerComposition: "Aceclofenac BP",
@@ -527,7 +527,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Acubis",
 
@@ -722,7 +722,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Acubis 5",
     innerComposition: "Bisoprolol Fumarate BP",
@@ -916,7 +916,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Acudipin",
     innerComposition: "Amlodipine BP",
@@ -1066,7 +1066,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Acusan",
     innerComposition: "Losartan Potassium",
@@ -1208,7 +1208,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "",
     innerComposition: "",
@@ -1338,7 +1338,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Alatin",
     innerComposition: "Cetirizine Dihydrochloride BP",
@@ -1468,7 +1468,7 @@ export const ByTherapeutic = [
         imge: brocast10bk,
       },
     ],
-    backpagelink: "/products_bytrade",
+    backpagelink: "/by_trade_name",
     backpagename: "By Trade Name",
     innerMainHeading: "Brocast",
     innerComposition: "Montelukast",
@@ -1624,7 +1624,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Brokof",
     innerComposition: "Bromhexine Hydrochloride BP",
@@ -1745,7 +1745,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Ceprocon",
     innerComposition: "Ciprofloxacin Hydrochloride USP",
@@ -1876,7 +1876,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Convit B",
     innerComposition: "Vitamin B Complex",
@@ -2001,7 +2001,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Convit®Z",
     innerComposition: "Vitamin-B Complex & Zinc",
@@ -2137,7 +2137,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Convit®Z",
     innerComposition: "Vitamin-B Complex & Zinc",
@@ -2273,7 +2273,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Conzi",
     innerComposition: "Zinc Sulphate",
@@ -2412,7 +2412,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Dapazin",
     innerComposition: "Dapagliflozin INN",
@@ -2556,7 +2556,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Dapazin 10",
     innerComposition: "Dapagliflozin INN",
@@ -2700,7 +2700,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Dopagut",
     innerComposition: "Domperidone BP",
@@ -2828,7 +2828,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Dopagut",
     innerComposition: "Domperidone BP",
@@ -2956,7 +2956,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Doribac",
     innerComposition: "Flucloxacillin BP",
@@ -3124,7 +3124,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Doribac",
     innerComposition: "Flucloxacillin BP",
@@ -3292,7 +3292,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Doribac",
     innerComposition: "Flucloxacillin BP",
@@ -3460,7 +3460,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Erectus",
     innerComposition: "Tadalafil INN",
@@ -3604,7 +3604,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Erectus",
     innerComposition: "Tadalafil INN",
@@ -3748,7 +3748,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Esmax 20",
     innerComposition: "Esomeprazole USP",
@@ -3918,7 +3918,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Esmax 40",
     innerComposition: "Esomeprazole USP",
@@ -4088,7 +4088,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Fexocon",
     innerComposition: "Fexofenadine Hydrochloride USP",
@@ -4261,7 +4261,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Fexocon 180",
     innerComposition: "Fexofenadine Hydrochloride USP",
@@ -4434,7 +4434,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Flunapen 50",
     innerComposition: "Fluconazole",
@@ -4618,7 +4618,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Flunapen 150",
     innerComposition: "Fluconazole",
@@ -4804,7 +4804,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "",
     innerComposition: "",
@@ -4848,7 +4848,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "",
     innerComposition: "",
@@ -4892,7 +4892,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Holicef® Injection",
     innerComposition: "Ceftriaxone BP",
@@ -5042,7 +5042,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Holicef® Injection",
     innerComposition: "Ceftriaxone BP",
@@ -5192,7 +5192,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Linacon",
     innerComposition: "Linagliptin INN",
@@ -5318,7 +5318,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Macrobac 15",
     innerComposition: "Azithromycin BP",
@@ -5459,7 +5459,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Macrobac 35",
     innerComposition: "Azithromycin BP",
@@ -5600,7 +5600,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Macrobac 500",
     innerComposition: "Azithromycin BP",
@@ -5741,7 +5741,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Maxdol",
     innerComposition: "Ketorolac Tromethamine USP",
@@ -5865,7 +5865,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Maxdol",
     innerComposition: "Ketorolac Tromethamine USP",
@@ -5989,7 +5989,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Maxdol 30 Injection",
     innerComposition: "Ketorolac Tromethamine USP",
@@ -6119,7 +6119,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Maxdol 60 Injection",
     innerComposition: "Ketorolac Tromethamine USP",
@@ -6249,7 +6249,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Maxvit 2000",
     innerComposition: "Cholecalciferol BP",
@@ -6385,7 +6385,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Maxvit 4000",
     innerComposition: "Cholecalciferol BP",
@@ -6521,7 +6521,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Microcef 50ml",
     innerComposition: "Cefixime Trihydrate BP",
@@ -6657,7 +6657,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Microcef",
     innerComposition: "Cefixime Trihydrate BP",
@@ -6793,7 +6793,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Microcef",
     innerComposition: "Cefixime Trihydrate BP",
@@ -6929,7 +6929,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Monocal",
     innerComposition: "Calcium  500",
@@ -7055,7 +7055,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Monocal-D",
     innerComposition: "Calcium USP  500 mg & Vitamin D3 USP 200 IU ",
@@ -7179,7 +7179,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "My zinc",
     innerComposition: "Zinc USP 20 mg",
@@ -7308,7 +7308,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Neovera 6",
     innerComposition: "Ivermectin BP",
@@ -7455,7 +7455,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Neovera 12",
     innerComposition: "Ivermectin BP",
@@ -7602,7 +7602,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Neuroprax",
     innerComposition: "Vit-B1+Vit-B6+Vit-B12      ",
@@ -7718,7 +7718,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Norxit",
     innerComposition: "Flupentixol 0.5 mg & Melitracen 10 mg",
@@ -7829,7 +7829,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Norxit",
     innerComposition: "Flupentixol 0.5 mg & Melitracen 10 mg",
@@ -7940,7 +7940,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Novotril",
     innerComposition: "Clonazepam BP",
@@ -8066,7 +8066,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "OPmax",
     innerComposition: "Omeprazole BP",
@@ -8218,7 +8218,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Picocef",
     innerComposition: "Cefuroxime",
@@ -8383,7 +8383,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Pregacap",
     innerComposition: "Pregabalin INN",
@@ -8539,7 +8539,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Pregacap 75",
     innerComposition: "Pregabalin INN",
@@ -8696,7 +8696,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Relikof® Kidz Linctus",
     innerComposition: "Citric Acid Monohydrate BP",
@@ -8825,7 +8825,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Sefcon 500",
     innerComposition: "Cefradine BP",
@@ -8970,7 +8970,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Sefcon",
     innerComposition: "Cefradine BP",
@@ -9116,7 +9116,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Unirab",
     innerComposition: "Rabeprazole Sodium INN 20 mg",
@@ -9244,7 +9244,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Optivas",
     innerComposition: "Atorvastatin INN",
@@ -9385,7 +9385,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Panagra",
     innerComposition: "Sildenafil USP",
@@ -9527,7 +9527,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Peacepil",
     innerComposition: "Bromazepam BP 3 mg",
@@ -9658,7 +9658,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Picocef",
     innerComposition: "Cefuroxime",
@@ -9823,7 +9823,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Picocef 500",
     innerComposition: "Cefuroxime",
@@ -9988,7 +9988,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Plavas® Plus",
     innerComposition: "Clopidogrel + Aspirin",
@@ -10130,7 +10130,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Polimet",
     innerComposition: "Metformin Hydrochloride BP",
@@ -10200,7 +10200,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Polimet 850",
     innerComposition: "Metformin Hydrochloride BP",
@@ -10270,7 +10270,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "",
     innerComposition: "",
@@ -10314,7 +10314,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "",
     innerComposition: "",
@@ -10358,7 +10358,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Radibac",
     innerComposition: "Levofloxacin",
@@ -10488,7 +10488,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Roclav",
     innerComposition: "Cefuroxime BP and Clavulanic Acid BP",
@@ -10665,7 +10665,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Roclav 500",
     innerComposition: "Cefuroxime BP and Clavulanic Acid BP",
@@ -10842,7 +10842,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Rosucard",
     innerComposition: "Rosuvastatin INN 10 mg",
@@ -10949,7 +10949,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Rotagan",
     innerComposition: "Favipiravir INN 200 mg",
@@ -11077,7 +11077,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Tispa",
     innerComposition: "Tiemonium Methylsulfate INN",
@@ -11203,7 +11203,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Unilor",
     innerComposition: "Desloratadine INN",
@@ -11366,7 +11366,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Vildaglip",
     innerComposition: "Vildagliptin INN",
@@ -11484,7 +11484,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "Vildaglip® M",
     innerComposition: "Vildagliptin INN & Metformin HCl BP",
@@ -11611,7 +11611,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "X-dol 60",
     innerComposition: "Etoricoxib INN",
@@ -11770,7 +11770,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "X-dol 90",
     innerComposition: "Etoricoxib INN",
@@ -11930,7 +11930,7 @@ export const ByTherapeutic = [
       },
     ],
     backpagename: "By Therapeutic Class",
-    backpagelink: "/products_therapeutic",
+    backpagelink: "/by-therapeutic-class",
 
     innerMainHeading: "X-dol 120",
     innerComposition: "Etoricoxib INN",

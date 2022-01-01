@@ -7,6 +7,7 @@ import productscard1 from '../Statics/assets/products/p1.svg'
 import productscard2 from '../Statics/assets/products/p2.svg'
 import productscard3 from '../Statics/assets/products/p3.svg'
 import productscard4 from '../Statics/assets/products/p4.svg'
+import { Helmet } from 'react-helmet';
 
 
   
@@ -18,25 +19,25 @@ const Products = () => {
         id:0,
         imageURL: productscard1,
         text: "By Trade Name",
-        link: "/products_bytrade",
+        link: "/by_trade_name",
       },
       {
         id:1,
         imageURL: productscard2,
         text: "By Generic Name",
-        link: "/products_bygeneric",
+        link: "/by_generic_name",
       },
       {
         id:2,
         imageURL: productscard3,
         text: "By Therapeutic Class",
-        link: "/products_therapeutic",
+        link: "/by-therapeutic-class",
       },
       {
         id:3,
         imageURL: productscard4,
         text: "First Time Launching",
-        link: "/products_firsttime",
+        link: "/first-time-launching",
       },
     ];
     
@@ -54,7 +55,10 @@ const Products = () => {
     return (
 
     
-    <div>
+    <>
+     <Helmet>
+        <title>Products - Concord Pharma</title>
+      </Helmet>
     <BannerWithText imgSrc={bannerimg} heading={'Products'} subHeading={`PRODUCTS`}
     LinksBan={LinksBan}
     height={"400px"}
@@ -92,7 +96,7 @@ const Products = () => {
 
 
         <CompanyLogos/> 
-     </div>
+     </>
     )
 }
 

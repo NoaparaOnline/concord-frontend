@@ -3,6 +3,7 @@ import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/fac-RD-ban.jpg";
 import facrd from "../Statics/assets/fac-RD.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
+import { Helmet } from "react-helmet";
 
 const Facilities_researchdevrsttime = () => {
 
@@ -20,7 +21,10 @@ const Facilities_researchdevrsttime = () => {
     },
   ];
   return (
-    <div>
+    <>
+    <Helmet>
+        <title>Research And Development - Concord Pharma</title>
+      </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
         heading={"Research & Development"}
@@ -40,7 +44,7 @@ const Facilities_researchdevrsttime = () => {
 
           <div className="col-sm-12 col-lg-5 " >
             <div className="allborder">
-            <img alt="" src={facrd} className="zoom" width="100%" height="100%" />
+            <img alt="research & development" src={facrd} className="zoom" width="100%" height="100%" />
             </div>
           </div>
 
@@ -68,7 +72,7 @@ const Facilities_researchdevrsttime = () => {
         </div>
       </div>
       <CompanyLogos />
-    </div>
+    </>
   );
 };
 
