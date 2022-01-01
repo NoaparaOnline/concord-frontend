@@ -390,7 +390,7 @@ const ProductallDetails = (props) => {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <div className="allborder d-flex justify-content-center align-items-center">
-            <img alt="" src={viewData?.img?.map(item => item.imgf)} />
+            <img alt={viewData?.innerMainHeading} src={viewData?.img?.map(item => item.imgf)} />
           </div>
         </Modal.Body>
       </Modal>
