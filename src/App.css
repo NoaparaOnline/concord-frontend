@@ -436,3 +436,9 @@ img {max-width: 100%; }
 -webkit-box-shadow: 7px 3px 20px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 7px 3px 20px 0px rgba(0,0,0,0.75);
 }
+
+.dashboard-date-filter {
+  border-radius: 10px;
+  box-shadow: #565656;
+
+}

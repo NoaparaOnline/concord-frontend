@@ -4,7 +4,6 @@ import DashboardBtnList from "../../components/ReusableComponents/DashboardBtnLi
 // import ColorFullDashCard from "../../components/ReusableComponents/ColorFullDashCard/ColorFullDashCard";
 // import DashCharts from "../../components/ReusableComponents/DashCharts/DashCharts";
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
-// import { useDispatch } from "react-redux";
 import DashboardHeaderAndTile from "../../components/ReusableComponents/dashboardheaderandtile/DashboardHeaderAndTile";
 import { useEffect } from "react";
 import PrescriptionReport from "./PrescriptionReport";
@@ -13,11 +12,12 @@ import DoctorReport from "./DoctorReport";
 import ProductReport from "./ProductReport";
 
 const Reports = (props) => {
+  
+ 
   const { sidebarOpen, openSidebar, tabHandler0, selectedTab0 } = props;
 
   const [selectedtile, setselectedtile] = useState("Prescription Report");
   const FromView = props?.location?.state?.key;
-  // const dispatch = useDispatch();
   const tabHandler = (item) => {
     setselectedtile(item);
   };
@@ -82,42 +82,7 @@ const Reports = (props) => {
           </div>
         }
         colorfulcards={
-          // <div className="container">
-          //   <div className="row d-flex justify-content-center mb-3">
-          //     <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-          //       <ColorFullDashCard
-          //         headtext="By Value"
-          //         textl="BTK 24,000"
-          //         textr="34%"
-          //         classname="colrcardblue"
-          //       />
-          //     </div>
-          //     <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-          //       <ColorFullDashCard
-          //         headtext="By Product"
-          //         textl="2,478"
-          //         textr="64%"
-          //         classname="colrcardseagreen"
-          //       />
-          //     </div>
-          //     <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-          //       <ColorFullDashCard
-          //         headtext="By Prescription"
-          //         textl="1,151"
-          //         textr="20%"
-          //         classname="colrcardred"
-          //       />
-          //     </div>
-          //     <div className="col-xl-3 col-md-6 col-sm-6 mb-3">
-          //       <ColorFullDashCard
-          //         headtext="By Customer"
-          //         textl="1,200"
-          //         textr="34%"
-          //         classname="colrcardorange"
-          //       />
-          //     </div>
-          //   </div>
-          // </div>
+
           <DashboardHeaderAndTile
             options={[
               "Prescription Report",

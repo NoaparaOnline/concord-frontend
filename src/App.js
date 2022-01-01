@@ -125,7 +125,7 @@ function App() {
         {/*          Root Page             */}
 
         <Route exact path="/" render={(props) => <Navbar {...props} />} />
-        <Route exact path="/:page/:page" render={(props) => <Navbar {...props} />} />
+        {/* <Route exact path="/:page/:page" render={(props) => <Navbar {...props} />} /> */}
 
         {/*          Navbar             */}
 
@@ -156,9 +156,9 @@ function App() {
         <Route exact path="/">
           <FixedRight />
         </Route>
-        <Route exact path="/:page/:page">
+        {/* <Route exact path="/:page/:page">
           <FixedRight />
-        </Route>
+        </Route> */}
         <Route
           exact
           path="/:page"
@@ -371,9 +371,13 @@ function App() {
         {/* All Inner Page */}
         
         <Route
-          path="/prod_details/:prodname"
+          path="/prod_details"
           render={(props) => <ProductallDetails {...props} />}
         />
+        {/* <Route
+          path="/prod_details/:prodname"
+          render={(props) => <ProductallDetails {...props} />}
+        /> */}
         {/* <Route exact path="/prod_details">
           <ProductallDetails
           
@@ -437,9 +441,6 @@ function App() {
         />
 
         <Route exact path="/">
-          <Footer />
-        </Route>
-        <Route exact path="/:page/:page">
           <Footer />
         </Route>
       </Router>

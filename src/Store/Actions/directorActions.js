@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { BASEURL } from "../../services/HttpProvider";
 import apiServices from "../../services/requestHandler";
-import { directorConstants } from "../Constants/directorConstant";
+import { directorConstants, LOADER_CONSTANT, VIEW_RSM_CONSTANT, VIEW_SM_CONSTANT, VIEW_USER_CONSTANT } from "../Constants/directorConstant";
 import { logInConstants } from "../Constants/loginConstant";
 
 
@@ -395,4 +395,171 @@ export const getSingleDistributionObjWithUid = (uid,type) => async (dispatch) =>
     });
     return "fail";
   }
+};
+
+
+export const getUsers = (uid, user) => async (dispatch) => {
+  const token = JSON.parse(localStorage.getItem('tokenConcord'));
+  try {
+    if (user === 'sm') {
+      dispatch({
+        type: LOADER_CONSTANT.SM_LOADING,
+        payload: true,
+      });
+    } else if (user === 'rsm') {
+      dispatch({
+        type: LOADER_CONSTANT.RSM_LOADING,
+        payload: true,
+      });
+    } else if (user === 'am') {
+      dispatch({
+        type: LOADER_CONSTANT.AM_LOADING,
+        payload: true,
+      });
+    } else if (user === 'mpo') {
+      dispatch({
+        type: LOADER_CONSTANT.MPO_LOADING,
+        payload: true,
+      });
+    }
+
+    const head = { 'x-session-key': token.key, 'x-session-type': token.type };
+    const response = await axios.get(
+      BASEURL + `/fieldstaffs/childs/${user}?child_uid=${uid}`,
+      { headers: head }
+    );
+    if (response?.data?.response_code === 200) {
+      if (user === 'sm') {
+        dispatch({
+          type: LOADER_CONSTANT.SM_LOADING,
+          payload: false,
+        });
+
+        dispatch({
+          type: VIEW_USER_CONSTANT.GET_SM,
+          payload: response?.data?.response_data,
+        });
+      } else if (user === 'rsm') {
+        dispatch({
+          type: LOADER_CONSTANT.RSM_LOADING,
+          payload: false,
+        });
+        dispatch({
+          type: VIEW_USER_CONSTANT.GET_RSM,
+          payload: response?.data?.response_data,
+        });
+      } else if (user === 'am') {
+        dispatch({
+          type: LOADER_CONSTANT.AM_LOADING,
+          payload: false,
+        });
+        dispatch({
+          type: VIEW_USER_CONSTANT.GET_AM,
+          payload: response?.data?.response_data,
+        });
+      } else if (user === 'mpo') {
+        dispatch({
+          type: LOADER_CONSTANT.MPO_LOADING,
+          payload: false,
+        });
+        dispatch({
+          type: VIEW_USER_CONSTANT.GET_MPO,
+          payload: response?.data?.response_data,
+        });
+      } else {
+        // dispatch({
+        //   type: ORDER_CONSTANTS.ORDER_GET_USER,
+        //   payload: response?.data?.response_data,
+        // });
+      }
+    }
+  } catch (error) {
+    return 'Fail';
+  }
+};
+
+export const ViewSalesManagerManagerAction = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: VIEW_SM_CONSTANT.VIEW_SM_LOADING,
+      payload: true,
+    });
+
+    let response = await apiServices.getSm();
+    if (response?.data?.response_code === 200) {
+      dispatch({
+        type: VIEW_SM_CONSTANT.VIEW_SM_LOADING,
+        payload: false,
+      });
+      dispatch({
+        type: VIEW_SM_CONSTANT.VIEW_SM_SUCCESS,
+        payload: response?.data?.response_data,
+      });
+    } else {
+      dispatch({
+        type: VIEW_SM_CONSTANT.VIEW_SM_ERROR,
+        payload: true,
+      });
+    }
+  } catch {}
+};
+export const ViewRegionalSalesManagerManagerAction = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: VIEW_RSM_CONSTANT.VIEW_RSM_LOADING,
+      payload: true,
+    });
+
+    let response = await apiServices.getRsm();
+    if (response?.data?.response_code === 200) {
+      dispatch({
+        type: VIEW_RSM_CONSTANT.VIEW_RSM_LOADING,
+        payload: false,
+      });
+      dispatch({
+        type: VIEW_RSM_CONSTANT.VIEW_RSM_SUCCESS,
+        payload: response?.data?.response_data,
+      });
+    } else {
+      dispatch({
+        type: VIEW_RSM_CONSTANT.VIEW_RSM_ERROR,
+        payload: true,
+      });
+    }
+  } catch {}
+};
+
+
+export const ViewChildSalesManagerManagerAction = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: VIEW_SM_CONSTANT.VIEW_SM_LOADING,
+      payload: true,
+    });
+    // const token =await JSON.parse(localStorage.getItem("tokenConcord"));
+    // let res= await axios.get(BASEURL+'fieldstaffs/childs/sm',{
+    //   headers:{
+    //     'x-session-token':token?.key,
+    //     'x-session-key':token?.type
+    //   }
+    // })
+    let res = await apiServices.getChildSm()
+
+    console.log(res,"ers");
+    if (res?.data?.response_code === 200) {
+      dispatch({
+        type: VIEW_SM_CONSTANT.VIEW_SM_LOADING,
+        payload: false,
+      });
+      dispatch({
+        type: VIEW_SM_CONSTANT.VIEW_SM_SUCCESS,
+        payload: res?.data?.response_data,
+      });
+    } else {
+      dispatch({
+        type: VIEW_SM_CONSTANT.VIEW_SM_ERROR,
+        payload: true,
+      });
+    }
+  } catch {}
 };
