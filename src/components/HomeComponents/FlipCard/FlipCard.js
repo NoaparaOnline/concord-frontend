@@ -54,7 +54,7 @@ const FlipCard = (props) => {
                 {btn}
               </Link> */}
               <div
-                onClick={() => props?.history?.push(`/prod_details/${titleprod}`,{data : {...card,from:props?.location?.pathname}})}
+                onClick={() => props?.history?.push(`/prod_details`,{data : {...card,from:props?.location?.pathname}})}
                 className="btn  rounded-pill colr_btn"
               >
                 {btn}
@@ -102,7 +102,7 @@ const FlipCard = (props) => {
                 {btn}
               </Link> */}
               <div
-                   onClick={() => props?.history?.push(`/prod_details/${titleprod}`,{data : {...card,from:props?.location?.pathname}})}
+                   onClick={() => props?.history?.push(`/prod_details`,{data : {...card,from:props?.location?.pathname}})}
                 className="btn  rounded-pill colr_btn"
               >
                 {btn}
