@@ -1,6 +1,8 @@
 import {
   directorConstants,
+  DOCTOR_CONSTANT,
   LOADER_CONSTANT,
+  STOCKS_CONSTANT,
   VIEW_RSM_CONSTANT,
   VIEW_SM_CONSTANT,
   VIEW_USER_CONSTANT,
@@ -34,8 +36,12 @@ const initialState = {
   mpo: [],
   salesManager: [],
   regionalSalesManager: [],
-
+  stock:[],
+  doctor1:[],
   loading: false,
+  loadingStocks: false,
+  loadingDoctor:false
+
 };
 export const directorReducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -91,18 +97,36 @@ export const directorReducer = (state = initialState, { type, payload }) => {
       return { ...state, am: payload };
     case VIEW_USER_CONSTANT.GET_MPO:
       return { ...state, mpo: payload };
-      case VIEW_SM_CONSTANT.VIEW_SM_LOADING:
+    case VIEW_SM_CONSTANT.VIEW_SM_LOADING:
       return { ...state, loading: payload };
     case VIEW_SM_CONSTANT.VIEW_SM_SUCCESS:
       return { ...state, salesManager: payload };
     case VIEW_SM_CONSTANT.VIEW_SM_ERROR:
       return { ...state, loading: payload };
-      case VIEW_RSM_CONSTANT.VIEW_RSM_LOADING:
-        return { ...state, loading: payload };
-      case VIEW_RSM_CONSTANT.VIEW_RSM_SUCCESS:
-        return { ...state, regionalSalesManager: payload };
-      case VIEW_RSM_CONSTANT.VIEW_RSM_ERROR:
-        return { ...state, loading: payload };
+    case VIEW_RSM_CONSTANT.VIEW_RSM_LOADING:
+      return { ...state, loading: payload };
+    case VIEW_RSM_CONSTANT.VIEW_RSM_SUCCESS:
+      return { ...state, regionalSalesManager: payload };
+    case VIEW_RSM_CONSTANT.VIEW_RSM_ERROR:
+      return { ...state, loading: payload };
+    case DOCTOR_CONSTANT.DOCTOR_LOADING:
+      return { ...state, loadingDoctor: payload, doctor: [] };
+
+    case DOCTOR_CONSTANT.DOCTOR_SUCESS:
+      return { ...state, doctor1: payload };
+
+    case DOCTOR_CONSTANT.DOCTOR_ERROR:
+      return { ...state, doctor1: payload };
+
+    case STOCKS_CONSTANT.STOCKS_LOADING:
+      return { ...state, loadingStocks: payload, stock: [] };
+
+    case STOCKS_CONSTANT.STOCKS_SUCESS:
+      return { ...state, stock: payload };
+
+    case STOCKS_CONSTANT.STOCKS_ERROR:
+      return { ...state, stock: payload };
+
     default:
       return state;
   }
