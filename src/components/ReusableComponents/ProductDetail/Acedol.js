@@ -37,7 +37,7 @@ const Acedol = () => {
   const Text = () => {
     return (
       <div>
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -45,7 +45,7 @@ const Acedol = () => {
           }}
         >
           CONTRAINDICATION AND PRECAUTION
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -64,7 +64,7 @@ const Acedol = () => {
           whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis
           or urticaria or who are hypersensitive to these drugs.
         </p>
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -72,7 +72,7 @@ const Acedol = () => {
           }}
         >
           SIDE-EFFECT
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -87,7 +87,7 @@ const Acedol = () => {
           abnormal hepatic enzyme levels and raised serum creatinine have
           occasionally been reported.
         </p>
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -95,7 +95,7 @@ const Acedol = () => {
           }}
         >
           OVER DOSAGE
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -109,7 +109,7 @@ const Acedol = () => {
           should be given for complications such as hypotension,
           gastro-intestinal irritation, respiratory depression, and convulsions.
         </p>
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -117,7 +117,7 @@ const Acedol = () => {
           }}
         >
           DRUG INTERACTION
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -135,7 +135,7 @@ const Acedol = () => {
           24 hours of each other, since NSAIDs may increase Methotrexate plasma
           levels, resulting in increased toxicity.
         </p>
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -143,7 +143,7 @@ const Acedol = () => {
           }}
         >
           USE IN PREGNANCY AND LACTATION
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -155,7 +155,7 @@ const Acedol = () => {
           unless the potential benefits to the mother outweigh the possible
           risks to the fetus.
         </p>
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -163,7 +163,7 @@ const Acedol = () => {
           }}
         >
           STORAGE
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -174,7 +174,7 @@ const Acedol = () => {
           Store in a cool (Below 30⁰ C. Temp.), dry place and protect from
           light. Keep all medicines out of the reach of children.
         </p>
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -182,7 +182,7 @@ const Acedol = () => {
           }}
         >
           COMMERCIAL PACK
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -304,7 +304,7 @@ const Acedol = () => {
                 </span>
               </p>
 
-              <h2
+              <h1
                 style={{
                   fontSize: "20px",
                   color: "#232323",
@@ -312,7 +312,7 @@ const Acedol = () => {
                 }}
               >
                 PHARMACOLOGY
-              </h2>
+              </h1>
               <p
                 style={{
                   fontSize: "16px",
@@ -326,7 +326,7 @@ const Acedol = () => {
                 production of prostaglandin.
               </p>
 
-              <h2
+              <h1
                 style={{
                   fontSize: "20px",
                   color: "#232323",
@@ -334,7 +334,7 @@ const Acedol = () => {
                 }}
               >
                 INDICATION
-              </h2>
+              </h1>
               <p
                 style={{
                   fontSize: "16px",
@@ -346,7 +346,7 @@ const Acedol = () => {
                 rheumatoid arthritis and ankylosing spondylitis.
               </p>
 
-              <h2
+              <h1
                 style={{
                   fontSize: "20px",
                   color: "#232323",
@@ -354,7 +354,7 @@ const Acedol = () => {
                 }}
               >
                 DOSAGE AND ADMINISTRATION
-              </h2>
+              </h1>
               <p
                 style={{
                   fontSize: "16px",
