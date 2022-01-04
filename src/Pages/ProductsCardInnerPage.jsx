@@ -41,11 +41,11 @@ const ProductsCardInnerPage = () => {
       <>
     
            
-            <h2   style={{
+            <h1   style={{
                   fontSize: "20px",
                   color: "#232323",
                   fontWeight: "600",
-                }}>CONTRAINDICATION AND PRECAUTION</h2>
+                }}>CONTRAINDICATION AND PRECAUTION</h1>
             <p
              style={{
               fontSize: "16px",
@@ -54,11 +54,11 @@ const ProductsCardInnerPage = () => {
             }}
             >Aceclofenac should not be administered to patients with active or suspected peptic ulcer or gastro-intestinal bleeding. It should not be given to patients with moderate to severe renal impairment. Close medical surveillance is also imperative in patients suffering from severe impairment of hepatic function. It should not be prescribed during pregnancy, unless there are compelling reasons for doing so. The lowest effective dosage should be used. Aceclofenac should not be administered to patients previously sensitive to Aceclofenac or in whom aspirin or NSAIDs precipitate attacks of asthma, acute rhinitis or urticaria or who are hypersensitive to these drugs.</p>
             
-            <h2   style={{
+            <h1   style={{
                   fontSize: "20px",
                   color: "#232323",
                   fontWeight: "600",
-                }}>SIDE-EFFECT</h2>
+                }}>SIDE-EFFECT</h1>
             <p
              style={{
               fontSize: "16px",
@@ -66,11 +66,11 @@ const ProductsCardInnerPage = () => {
               fontWeight: "400",
             }}
             >The majority of side-effects observed have been reversible and of a minor nature and include gastro-intestinal disorders (dyspepsia, abdominal pain, nausea and diarrhea) and occasional occurrence of dizziness. Dermatological complaints including pruritus and rash and abnormal hepatic enzyme levels and raised serum creatinine have occasionally been reported.</p>
-            <h2  style={{
+            <h1  style={{
                   fontSize: "20px",
                   color: "#232323",
                   fontWeight: "600",
-                }}>OVER DOSAGE</h2>
+                }}>OVER DOSAGE</h1>
             <p
              style={{
               fontSize: "16px",
@@ -78,12 +78,12 @@ const ProductsCardInnerPage = () => {
               fontWeight: "400",
             }}
             >There are no human data available on the consequences of Aceclofenac over dosage. If over dosage is observed, therapeutic measures should be taken according to symptoms; supportive and symptomatic treatment should be given for complications such as hypotension, gastro-intestinal irritation, respiratory depression, and convulsions.</p>
-            <h2
+            <h1
               style={{
                 fontSize: "20px",
                 color: "#232323",
                 fontWeight: "600",
-              }}>DRUG INTERACTION</h2>
+              }}>DRUG INTERACTION</h1>
             <p
              style={{
               fontSize: "16px",
@@ -91,13 +91,13 @@ const ProductsCardInnerPage = () => {
               fontWeight: "400",
             }}
             >Lithium and Digoxin: Aceclofenac, like many NSAIDs may increase plasma concentrations of lithium and Digoxin. Diuretics: Aceclofenac, like other NSAIDs, may interact the activity of diuretics. Anticoagulants: Like other NSAIDs, Aceclofenac may enhance the activity of anticoagulant. Close monitoring of patients on combined anticoagulants and Aceclofenac therapy should be undertaken. Methotrexate: Caution should be exercised if NSAIDs and Methotrexate are administered within 24 hours of each other, since NSAIDs may increase Methotrexate plasma levels, resulting in increased toxicity.</p>
-            <h2
+            <h1
               style={{
                 fontSize: "20px",
                 color: "#232323",
                 fontWeight: "600",
               }}
-            >USE IN PREGNANCY AND LACTATION</h2>
+            >USE IN PREGNANCY AND LACTATION</h1>
             <p
              style={{
               fontSize: "16px",
@@ -105,13 +105,13 @@ const ProductsCardInnerPage = () => {
               fontWeight: "400",
             }}
             >The use of Aceclofenac should be avoided in pregnancy and lactation unless the potential benefits to the mother outweigh the possible risks to the fetus.</p>
-            <h2
+            <h1
               style={{
                 fontSize: "20px",
                 color: "#232323",
                 fontWeight: "600",
               }}
-            >STORAGE</h2>
+            >STORAGE</h1>
             <p
              style={{
               fontSize: "16px",
@@ -119,12 +119,12 @@ const ProductsCardInnerPage = () => {
               fontWeight: "400",
             }}
             >Store in a cool (Below 30⁰ C. Temp.), dry place and protect from light. Keep all medicines out of the reach of children.</p>
-            <h2
+            <h1
               style={{
                 fontSize: "20px",
                 color: "#232323",
                 fontWeight: "600",
-              }}>COMMERCIAL PACK</h2>
+              }}>COMMERCIAL PACK</h1>
             <p
              style={{
               fontSize: "16px",
@@ -244,7 +244,7 @@ const ProductsCardInnerPage = () => {
                 </span>
               </p>
 
-              <h2
+              <h1
                 style={{
                   fontSize: "20px",
                   color: "#232323",
@@ -252,7 +252,7 @@ const ProductsCardInnerPage = () => {
                 }}
               >
                 PHARMACOLOGY
-              </h2>
+              </h1>
               <p
                 style={{
                   fontSize: "16px",
@@ -266,7 +266,7 @@ const ProductsCardInnerPage = () => {
                 production of prostaglandin.
               </p>
 
-              <h2
+              <h1
                 style={{
                   fontSize: "20px",
                   color: "#232323",
@@ -274,7 +274,7 @@ const ProductsCardInnerPage = () => {
                 }}
               >
                 INDICATION
-              </h2>
+              </h1>
               <p
                 style={{
                   fontSize: "16px",
@@ -286,7 +286,7 @@ const ProductsCardInnerPage = () => {
                 rheumatoid arthritis and ankylosing spondylitis.
               </p>
 
-              <h2
+              <h1
                 style={{
                   fontSize: "20px",
                   color: "#232323",
@@ -294,7 +294,7 @@ const ProductsCardInnerPage = () => {
                 }}
               >
                 DOSAGE AND ADMINISTRATION
-              </h2>
+              </h1>
               <p
                 style={{
                   fontSize: "16px",

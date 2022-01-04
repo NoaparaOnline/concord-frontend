@@ -16,7 +16,7 @@ export const tableConstants = (handleEdit) => {
       },
     },
     {
-      title: 'Market & Address',
+      title: 'Market Address',
       render: rowData => {
         return <span>{rowData.marketadd}</span>;
       },

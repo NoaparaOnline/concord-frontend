@@ -34,12 +34,12 @@ const PrivacyAndPolicy = () => {
             This policy is not applicable to any information collected offline
             or via channels other than this website.
           </p>
-          <h2 style={{ color: "#0066b3" }}>Consent</h2>
+          <h1 style={{ color: "#0066b3",fontSize: '2rem' }}>Consent</h1>
           <p>
             By using our website, you hereby consent to our Privacy Policy and
             agree to its terms.
           </p>
-          <h2 style={{ color: "#0066b3" }}>Information we collect</h2>
+          <h1 style={{ color: "#0066b3",fontSize: '2rem' }}>Information we collect</h1>
           <p>
             The personal information that you are asked to provide, and the
             reasons why you are asked to provide it, will be made clear to you
@@ -56,7 +56,7 @@ const PrivacyAndPolicy = () => {
             information, including items such as name, company name, address,
             email address, and telephone number.
           </p>
-          <h2 style={{ color: "#0066b3" }}>How we use your information</h2>
+          <h1 style={{ color: "#0066b3" }}>How we use your information</h1>
           <p>
             We use the information we collect in various ways, including to:
           </p>
@@ -74,7 +74,7 @@ const PrivacyAndPolicy = () => {
             <li>Send you emails</li>
             <li>Find and prevent fraud</li>
           </ul>
-          <h2 style={{ color: "#0066b3" }}>Log Files</h2>
+          <h1 style={{ color: "#0066b3",fontSize: '2rem' }}>Log Files</h1>
           <p>
             Concord Pharmaceuticals Ltd. follows a standard procedure of using
             log files. These files log visitors when they visit websites. All

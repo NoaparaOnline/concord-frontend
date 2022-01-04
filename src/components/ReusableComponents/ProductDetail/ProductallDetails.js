@@ -45,7 +45,7 @@ const ProductallDetails = (props) => {
         {viewData?.innerdata1?.map((item) => {
           return (
             <>
-              <h2 style={{
+              <h1 style={{
                 fontSize: "20px",
                 color: "#232323",
                 fontWeight: "600",
@@ -53,7 +53,7 @@ const ProductallDetails = (props) => {
 
                 {item?.innerHead}
 
-              </h2>
+              </h1>
               <p
                 style={{
                   fontSize: "16px",
@@ -257,7 +257,7 @@ const ProductallDetails = (props) => {
               {viewData?.innerdata?.map((item) => {
                 return (
                   <>
-                    <h2 style={{
+                    <h1 style={{
                       fontSize: "20px",
                       color: "#232323",
                       fontWeight: "600",
@@ -265,7 +265,7 @@ const ProductallDetails = (props) => {
 
                       {item?.innerHead}
 
-                    </h2>
+                    </h1>
                     <p
                       style={{
                         fontSize: "16px",
@@ -280,7 +280,7 @@ const ProductallDetails = (props) => {
 
                     {item?.isinnerSub ? (
                       <>
-                        <h2 style={{
+                        <h1 style={{
                           fontSize: "20px",
                           color: "#232323",
                           fontWeight: "600",
@@ -288,7 +288,7 @@ const ProductallDetails = (props) => {
 
                           {item?.innerSubHead}
 
-                        </h2>
+                        </h1>
                         <p
                           style={{
                             fontSize: "16px",
@@ -303,7 +303,7 @@ const ProductallDetails = (props) => {
                     ) : null}
                     {item?.isinnerSub1 ? (
                       <>
-                        <h2 style={{
+                        <h1 style={{
                           fontSize: "20px",
                           color: "#232323",
                           fontWeight: "600",
@@ -311,7 +311,7 @@ const ProductallDetails = (props) => {
 
                           {item?.innerSubHead1}
 
-                        </h2>
+                        </h1>
                         <p
                           style={{
                             fontSize: "16px",

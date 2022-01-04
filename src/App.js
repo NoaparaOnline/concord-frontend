@@ -417,10 +417,18 @@ function App() {
        
 
         {/* 404 Page */}
-        <Route path="*">
+        {/* <Route path="*">
             <Error404 />
-          </Route>
+          </Route> */}
 
+          <Route
+          path="*"
+          render={(props) =>
+            props.location.pathname !== "/reset-password" && (
+              <Error404 />
+              )
+            }
+        />
         </Switch>
 
 

@@ -442,3 +442,6 @@ img {max-width: 100%; }
   box-shadow: #565656;
 
 }
+.textfontsize{
+  font-size: 50px !important;
+}

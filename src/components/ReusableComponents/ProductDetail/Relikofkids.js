@@ -39,7 +39,7 @@ const Relikofkids = () => {
       <div>
         
        
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -47,7 +47,7 @@ const Relikofkids = () => {
           }}
         >
           COMMERCIAL PACK
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -148,17 +148,17 @@ const Relikofkids = () => {
                 Relikof Kidz
               </h1>
              
-              <h2
-              >Generic Name: </h2>
+              <h1
+              >Generic Name: </h1>
             <p>Citric Acid Monohydrate BP</p>
 
-            <h2> Strength: </h2>
+            <h1> Strength: </h1>
             <p>31.25 mg/ 5 ml</p>
 
-            <h2> Dosage form: </h2>
+            <h1> Dosage form: </h1>
             <p>Linctus</p>
 
-            <h2>INDICATION</h2>
+            <h1>INDICATION</h1>
             <p>Relikof® linctus is indicated for relief of all types of non-productive (dry) coughs, specially-<br/>
 • Environment induced dry cough<br/>
 • Cold induced dry cough<br/>
@@ -170,7 +170,7 @@ const Relikofkids = () => {
 
 
 
-            <h2>DOSAGE AND ADMINISTRATION</h2>
+            <h1>DOSAGE AND ADMINISTRATION</h1>
             <p>Child (1 month-12 Years): Relikof® Kidz Linctus 5-10 ml (1-2 teaspoon), 3-4 times daily.
  
            </p>

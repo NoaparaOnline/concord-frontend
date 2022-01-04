@@ -31,8 +31,8 @@ const SERVICE_URLS = {
   // seeAllNotification: "notifications/read",
   seeAllNotification: "notifications/read?is_seen=1",
   getAllThana: "region-classifications/read-thanas",
-  childSm:'fieldstaffs/childs/sm'
-
+  childSm:'fieldstaffs/childs/sm',
+  getdoctors: 'doctors/read',
 
 };
 
@@ -152,6 +152,11 @@ const SchedulesApprovalStatusChanges = (data) =>
       feature: featureConstants.static,
     }
   );
+
+  const getstocksofSm = (uid) =>
+  get(SERVICE_URLS.getStocksMedicineProducts + `?child_uid=${uid}`, { feature: featureConstants.static });
+  const getsmdoctors = (uid) =>
+  get(SERVICE_URLS.getdoctors + `?child_uid=${uid}`, { feature: featureConstants.static });
 //=========================
 
 const apiServices = {
@@ -182,7 +187,8 @@ const apiServices = {
   seeAllNotification,
   getAllThana,
   getSm,
-  getChildSm
-
+  getChildSm,
+  getsmdoctors,
+  getstocksofSm
 };
 export default apiServices;

@@ -6,7 +6,7 @@ export const tableConstants = (handleEdit) => {
   return [
     'Orders ID',
     'Customer Name',
-    'Market & Address',
+    'Market Address',
     'Order Date/Time',
     'Payment Type',
     'Delivery Status',
@@ -19,7 +19,7 @@ export const deliverystatus = (handleEdit) => {
   return [
     'Orders ID',
     'Customer Name',
-    'Market & Address',
+    'Market Address',
     'Order Date/Time',
     'Delivery Status',
     'Proceed By',
@@ -103,7 +103,7 @@ export const Directordashproducthead = (handleEdit) => {
 //   { dataField: 'order_id', text: 'Orders ID', sort: true },
 //   { dataField: 'customer.name', text: 'Customer Name', },
 //   // {dataField:(data) => moment('order_datetime').format("L")  ,text:'Customer Name',},
-//   { dataField: 'customer.market.name', text: 'Market & Address', },
+//   { dataField: 'customer.market.name', text: 'Market Address', },
 //   { dataField: 'order_datetime', text: 'Order Date/Time', formatter: dateFormatter },
 //   { dataField: 'payment_type', text: 'Payment Type', },
 //   { dataField: 'delivery_status', text: 'Delivery Status' },

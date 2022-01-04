@@ -60,6 +60,7 @@ const DCRReport = () => {
 
     }
 
+
     let areaManagerOption = [];
     am?.map((item) =>
         areaManagerOption?.push({
@@ -72,8 +73,8 @@ const DCRReport = () => {
     sm?.map((item) =>
         salesManagerOption?.push({
         label: item?.name,
-        value: item?.key,
-        key: item?.key,
+        value: item?.name,
+        key: item?.uid,
     })
     );
 
@@ -127,7 +128,7 @@ const DCRReport = () => {
                         <FormLabel>Start Date</FormLabel>
 
                             <input
-                                type="datetime-local"
+                                type="date"
                                 className="input-login-modal"
                                 value={from}
                                 onChange={(e) => setFrom(e.target.value)}
@@ -137,7 +138,7 @@ const DCRReport = () => {
                         <FormLabel>End Date</FormLabel>
                             
                             <input
-                                type="datetime-local"
+                                type="date"
                                 className="input-login-modal"
                                 value={to}
                                 onChange={(e) => setTo(e.target.value)}
@@ -283,16 +284,17 @@ const DCRReport = () => {
                         from !== undefined && to !== undefined ?
                             <div className='table-responsive' >
 
-                                <table style={{ tableLayout: 'fixed', width: '500px' }}>
+                                <table style={{ tableLayout: 'fixed', width: '500px', marginTop: '15px' }}>
                                     {/* className='table-responsive' */}
                                     <thead>
                                         <tr>
-                                            <td style={{ width: '120px',fontWeight:'bold' }}>Name</td>
+                                            <td style={{ width: '120px', fontWeight: 'bold' }}>Name</td>
                                             {dateArray?.map((item) => {
                                                 return (
                                                     <th style={{ width: '80px' }}>{item}</th>
                                                 )
                                             })}
+                                            <td style={{ width: '120px', fontWeight: 'bold' }}>Sum</td>
 
 
 
@@ -300,13 +302,19 @@ const DCRReport = () => {
                                     </thead>
                                     <tbody>
                                         {prescription?.map((item) => {
-                                            return <tr>
-                                                <td>{item?.user}</td>
-                                                {item?.prescription?.map((item) => (
-                                                    <td>{item}</td>
-                                                ))}
-                                            </tr>
+
+                                            return (
+                                                <tr style={{ backgroundColor: item?.user?.role === "mpo" ? 'lightgray' : item?.user?.role === "rsm" ? 'lightgoldenrodyellow' : item?.user?.role === "am" ? 'lightskyblue' : item?.user?.role === "sm" ? 'lightslategray' : null }}>
+                                                    <td>
+                                                        {item?.user?.name}
+
+                                                    </td>
+                                                    {item?.dcr?.map((item_) => <td>{item_}</td>)}
+                                                    <td>{item?.sum}</td>
+                                                </tr>
+                                            )
                                         })}
+
 
                                     </tbody>
                                 </table>

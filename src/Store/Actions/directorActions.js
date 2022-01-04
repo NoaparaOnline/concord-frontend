@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { BASEURL } from "../../services/HttpProvider";
 import apiServices from "../../services/requestHandler";
-import { directorConstants, LOADER_CONSTANT, VIEW_RSM_CONSTANT, VIEW_SM_CONSTANT, VIEW_USER_CONSTANT } from "../Constants/directorConstant";
+import { directorConstants, DOCTOR_CONSTANT, LOADER_CONSTANT, STOCKS_CONSTANT, VIEW_RSM_CONSTANT, VIEW_SM_CONSTANT, VIEW_USER_CONSTANT } from "../Constants/directorConstant";
 import { logInConstants } from "../Constants/loginConstant";
 
 
@@ -562,4 +562,58 @@ export const ViewChildSalesManagerManagerAction = () => async (dispatch) => {
       });
     }
   } catch {}
+};
+
+export const GetSMDoctors = (uid) => async (dispatch) => {
+  try {
+    dispatch({
+      type: DOCTOR_CONSTANT.DOCTOR_LOADING,
+      payload: true,
+    });
+
+    let res = await apiServices.getsmdoctors(uid);
+
+    if (res?.data?.response_code === 200) {
+      dispatch({
+        type: DOCTOR_CONSTANT.DOCTOR_LOADING,
+        payload: false,
+      });
+      dispatch({
+        type: DOCTOR_CONSTANT.DOCTOR_SUCESS,
+        payload: res?.data?.response_data,
+      });
+    } else {
+      dispatch({
+        type: DOCTOR_CONSTANT.DOCTOR_ERROR,
+        payload: [],
+      });
+    }
+  } catch { }
+};
+
+export const GetSMStocks = (uid) => async (dispatch) => {
+  try {
+    dispatch({
+      type: STOCKS_CONSTANT.STOCKS_LOADING,
+      payload: true,
+    });
+
+    let res = await apiServices.getstocksofSm(uid);
+
+    if (res?.data?.response_code === 200) {
+      dispatch({
+        type: STOCKS_CONSTANT.STOCKS_LOADING,
+        payload: false,
+      });
+      dispatch({
+        type: STOCKS_CONSTANT.STOCKS_SUCESS,
+        payload: res?.data?.response_data,
+      });
+    } else {
+      dispatch({
+        type: STOCKS_CONSTANT.STOCKS_ERROR,
+        payload: [],
+      });
+    }
+  } catch { }
 };
