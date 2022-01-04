@@ -39,7 +39,7 @@ const Relikof = () => {
       <div>
         
        
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -47,7 +47,7 @@ const Relikof = () => {
           }}
         >
           COMMERCIAL PACK
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -148,31 +148,31 @@ const Relikof = () => {
                 Relikof
               </h1>
              
-              <h2
+              <h1
               style={{
                 fontSize: "20px",
                 color: "#232323",
                 fontWeight: "600",
-              }}>Generic Name: </h2>
+              }}>Generic Name: </h1>
             <p>Citric Acid Monohydrate BP</p>
 
-            <h2
+            <h1
             style={{
                 fontSize: "20px",
                 color: "#232323",
                 fontWeight: "600",
-              }}> Strength: </h2>
+              }}> Strength: </h1>
             <p>125 mg/ 5 ml</p>
 
-            <h2
+            <h1
             style={{
                 fontSize: "20px",
                 color: "#232323",
                 fontWeight: "600",
-              }}> Dosage form: </h2>
+              }}> Dosage form: </h1>
             <p>Linctus</p>
 
-            <h2>INDICATION</h2>
+            <h1>INDICATION</h1>
             Relikof® linctus is indicated for relief of all types of non-productive (dry) coughs, specially-<br/>
 • Environment induced dry cough<br/>
 • Smoking induced dry cough<br/>
@@ -183,7 +183,7 @@ const Relikof = () => {
 
 
 
-            <h2>DOSAGE AND ADMINISTRATION</h2>
+            <h1>DOSAGE AND ADMINISTRATION</h1>
             <p>Adults and children over 12 years: Relikof® Linctus 5 ml (1 teaspoon), 3-4 times daily.
  
            </p>

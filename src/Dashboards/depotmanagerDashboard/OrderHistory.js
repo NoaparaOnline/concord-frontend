@@ -45,7 +45,7 @@ const OrderHistory = (
         { dataField: "order_id", text: "Orders ID", sort: true },
         { dataField: "customer.name", text: "Customer Name", sort: true },
         {
-            dataField: "customer.market__street_address", text: "Market & Address",
+            dataField: "customer.market__street_address", text: "Market Address",
             sort: true
         },
         {

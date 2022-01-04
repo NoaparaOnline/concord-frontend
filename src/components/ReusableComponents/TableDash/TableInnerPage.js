@@ -55,7 +55,7 @@ const TableInnerPage = (props) => {
               <div className="row py-3  ">
                 <div className="col-lg-6">
                   <span style={{ fontWeight: "600", color: "#565656"  }}>
-                  Market & Address: &nbsp;
+                  Market Address: &nbsp;
                   </span>{" "}
                   {productidstate?.customer?.market__street_address}
                   </div>
@@ -103,7 +103,7 @@ const TableInnerPage = (props) => {
               <td style={{ border: "none" }}>{productidstate?.customer?.name}</td>
             </tr>
             <tr style={{ border: "none", padding: "10px" }}>
-              <td style={{ border: "none" ,fontWeight: "500"}}>Market & Address: </td>
+              <td style={{ border: "none" ,fontWeight: "500"}}>Market Address: </td>
               <td style={{ border: "none" }}>
               {productidstate?.customer?.market?.name}
               <br/>

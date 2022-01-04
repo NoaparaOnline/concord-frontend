@@ -124,7 +124,7 @@ const PrescriptionReport = () => {
           <FormLabel>Start Date</FormLabel>
 
           <input
-            type="datetime-local"
+            type="date"
             className="input-login-modal"
             value={from}
             onChange={(e) => setFrom(e.target.value)}
@@ -134,7 +134,7 @@ const PrescriptionReport = () => {
           <FormLabel>End Date</FormLabel>
 
           <input
-            type="datetime-local"
+            type="date"
             className="input-login-modal"
             value={to}
             onChange={(e) => setTo(e.target.value)}
@@ -244,38 +244,49 @@ const PrescriptionReport = () => {
         </Col>
       </Row>
 
-      {loading ? (
-        <div className="d-flex justify-content-center mt-5">
-          <Loader height={25} width={30} type="Bars" color="black" />
-          &nbsp; Generating Report
-        </div>
-      ) : from !== undefined && to !== undefined ? (
-        <div className="table-responsive">
-          <table style={{ tableLayout: "fixed", width: "500px" }}>
-            {/* className='table-responsive' */}
-            <thead>
-              <tr>
-                <td style={{ width: "120px", fontWeight: "bold" }}>Name</td>
-                {dateArray?.map((item) => {
-                  return <th style={{ width: "80px" }}>{item}</th>;
-                })}
-              </tr>
-            </thead>
-            <tbody>
-              {prescription?.map((item) => {
-                return (
-                  <tr>
-                    <td>{item?.user}</td>
-                    {item?.prescription?.map((item) => (
-                      <td>{item}</td>
-                    ))}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      ) : null}
+
+      {loading ? <div className="d-flex justify-content-center mt-5">
+                        <Loader height={25} width={30} type="Bars" color="black" />
+                        &nbsp; Generating Report
+                    </div> :
+                        from !== undefined && to !== undefined ?
+                            <div className='table-responsive' >
+
+                                <table style={{ tableLayout: 'fixed', width: '500px' ,marginTop:'15px'}}>
+                                    {/* className='table-responsive' */}
+                                    <thead>
+                                        <tr>
+                                            <td style={{ width: '120px', fontWeight: 'bold' }}>Name</td>
+                                            {dateArray?.map((item) => {
+                                                return (
+                                                    <th style={{ width: '80px' }}>{item}</th>
+                                                )
+                                            })}
+                                            <th style={{ width: '80px' }}>Sum</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {prescription?.map((item) => {
+
+                                            return (
+                                                <tr style={{backgroundColor:item?.user?.role === "mpo" ? 'lightgray' : item?.user?.role === "rsm" ? 'lightgoldenrodyellow' : item?.user?.role === "am" ? 'lightskyblue' : item?.user?.role === "sm" ? 'lightslategray':null}}>
+                                                    <td>
+                                                        {item?.user?.name}
+
+                                                    </td>
+
+                                                    {item?.prescription?.map((item_) => <td>{item_}</td>)}
+                                                    <td>{item?.sum}</td>
+                                                </tr>
+                                            )
+                                        })}
+                                
+
+                                    </tbody>
+                                </table>
+                            </div> : null}
     </>
   );
 };

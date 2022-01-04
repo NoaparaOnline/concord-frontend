@@ -38,7 +38,7 @@ const DapzineTablet = () => {
     return (
       <div>
         
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -46,7 +46,7 @@ const DapzineTablet = () => {
           }}
         >
           SIDE-EFFECT
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -56,7 +56,7 @@ const DapzineTablet = () => {
         >
          Dapagliflozin may cause female genital mycotic infections, nasopharyngitis and urinary tract infections.
         </p>
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -64,7 +64,7 @@ const DapzineTablet = () => {
           }}
         >
           OVER DOSAGE
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -74,7 +74,7 @@ const DapzineTablet = () => {
         >
           There were no reports of overdose during the clinical development program for Dapagliflozin.
         </p>
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -82,7 +82,7 @@ const DapzineTablet = () => {
           }}
         >
           DRUG INTERACTION
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -97,7 +97,7 @@ MAO Inhibitors: May enhance the hypoglycemic effect of hypoglycemic agents.<br/>
 Selective Serotonin Reuptake Inhibitors: - May enhance the hypoglycemic effect of hypoglycemic agents.
 </p>
         
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -105,7 +105,7 @@ Selective Serotonin Reuptake Inhibitors: - May enhance the hypoglycemic effect o
           }}
         >
           USE IN PREGNANCY AND LACTATION
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -117,7 +117,7 @@ Selective Serotonin Reuptake Inhibitors: - May enhance the hypoglycemic effect o
             There are no adequate well controlled studies in pregnant women. Use during pregnancy only if the potential benefit justifies the potential risk to fetus.
 Nursing mother: Discontinue Dapazin or discontinue nursing.
         </p>
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -125,7 +125,7 @@ Nursing mother: Discontinue Dapazin or discontinue nursing.
           }}
         >
           STORAGE
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -135,7 +135,7 @@ Nursing mother: Discontinue Dapazin or discontinue nursing.
         >
           Store in a cool (below 300) and dry place. Keep away from light and out of reach of children.
         </p>
-        <h2
+        <h1
           style={{
             fontSize: "20px",
             color: "#232323",
@@ -143,7 +143,7 @@ Nursing mother: Discontinue Dapazin or discontinue nursing.
           }}
         >
           COMMERCIAL PACK
-        </h2>
+        </h1>
         <p
           style={{
             fontSize: "16px",
@@ -259,7 +259,7 @@ Nursing mother: Discontinue Dapazin or discontinue nursing.
                 </span>
               </p>
 
-              <h2
+              <h1
                 style={{
                   fontSize: "20px",
                   color: "#232323",
@@ -267,7 +267,7 @@ Nursing mother: Discontinue Dapazin or discontinue nursing.
                 }}
               >
                 PHARMACOLOGY
-              </h2>
+              </h1>
               <p
                 style={{
                   fontSize: "16px",
@@ -286,7 +286,7 @@ Nursing mother: Discontinue Dapazin or discontinue nursing.
                 urinary glucose excretion.
               </p>
 
-              <h2
+              <h1
                 style={{
                   fontSize: "20px",
                   color: "#232323",
@@ -294,7 +294,7 @@ Nursing mother: Discontinue Dapazin or discontinue nursing.
                 }}
               >
                 INDICATION
-              </h2>
+              </h1>
               <p
                 style={{
                   fontSize: "16px",
@@ -327,7 +327,7 @@ Nursing mother: Discontinue Dapazin or discontinue nursing.
                 less than 45 mL/min/1.73 m2.
               </p>
 
-              <h2
+              <h1
                 style={{
                   fontSize: "20px",
                   color: "#232323",
@@ -335,7 +335,7 @@ Nursing mother: Discontinue Dapazin or discontinue nursing.
                 }}
               >
                 DOSAGE AND ADMINISTRATION
-              </h2>
+              </h1>
               <p
                 style={{
                   fontSize: "16px",

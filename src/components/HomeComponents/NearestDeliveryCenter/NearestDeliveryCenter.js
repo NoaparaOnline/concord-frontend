@@ -161,13 +161,14 @@ const NearestDeliveryCenter = ({heading}) => {
     const [ob, setOb] = useState(null)
     const handleChange = (event) => {
         setSelectedValue(event.target.value)
-        const filtererd =  cards.filter(item => item.id === event.target.value)
+        console.log(event.target.value,"Testing Event Val");
+        const filtererd =  cards.filter(item => item.id === Number(event.target.value))
+
         if(filtererd.length > 0){
             setOb(filtererd[0])
         }
-       
     }
-
+    console.log(ob,"Testing OB")
 
     return (
         <div>

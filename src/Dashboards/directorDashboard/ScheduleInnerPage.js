@@ -133,7 +133,7 @@ const ScheduleInnerPage = (props) => {
                 </div>
                 <div className="col-lg-6">
                   <span style={{ fontWeight: "600", color: "#565656"  }}>
-                    Market & Address <br/>
+                    Market Address <br/>
                   </span>{" "}
                   {scheduleidstate?.is_doctor_customer
                     ? scheduleidstate?.doctor?.market?.name
@@ -179,7 +179,7 @@ const ScheduleInnerPage = (props) => {
             <tr style={{ border: "none", padding: "20px" }}>
               <td style={{ border: "none",fontWeight: "500" }}>Schedule By: </td>
               <td style={{ border: "none" }}>{scheduleidstate?.scheduled_by.name}</td>
-              <td style={{ border: "none",fontWeight: "500" }}>Market & Address: </td>
+              <td style={{ border: "none",fontWeight: "500" }}>Market Address: </td>
               <td style={{ border: "none" }}>{scheduleidstate?.is_doctor_customer ? scheduleidstate?.doctor.market.name  : scheduleidstate?.customer.market.name}<span className="text-capitalize">,{scheduleidstate?.is_doctor_customer ? scheduleidstate?.doctor.market.parent.name  : scheduleidstate?.customer.market.parent.name}</span></td>
              
             </tr>
