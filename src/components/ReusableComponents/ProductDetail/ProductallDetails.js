@@ -20,18 +20,17 @@ const ProductallDetails = (props) => {
 
   
   const { id } = useParams();
-  const [obj , setObj] = useState(ByTherapeutic);
   
   // let productdata = [];
-  // obj?.filter((item) =>
+  // ByTherapeutic?.filter((item) =>
   // if
   //   id === item?.id ? productdata.push(item) : ""
   // );
   
-  console.log(obj,"Testing Data")
+  console.log(ByTherapeutic,"Testing Data")
   console.log(id,"Testing Data id")
 
-  const productdata = obj?.filter((item) => (
+  const productdata = ByTherapeutic?.filter((item) => (
     item?.id === Number(id) ?  item : null
   )) 
 

@@ -1,6 +1,4 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import ProductallDetails from "../../ReusableComponents/ProductDetail/ProductallDetails";
 import "./FlipCard.css";
 
 const FlipCard = (props) => {
