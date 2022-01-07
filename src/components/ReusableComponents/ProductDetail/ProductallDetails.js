@@ -32,7 +32,7 @@ const ProductallDetails = (props) => {
   console.log(id,"Testing Data id")
 
   const productdata = obj?.filter((item) => (
-    item?.id == id ?  item : null
+    item?.id === Number(id) ?  item : null
   )) 
 
 
