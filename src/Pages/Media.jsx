@@ -29,7 +29,7 @@ const Media = () => {
           id: 2,
           imageURL: mediacard3,
           text: "Social Media Post",
-          link: "/social_media_post",
+          link: "/social-media-post",
         },
         {
           id: 3,

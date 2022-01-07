@@ -13,7 +13,7 @@ const SingleCard = (props) => {
 <div className="card flipcard_custom">
               <div className="card-body">
                 <h5 className="card-title text-white">
-                {currentpath === '/by_generic_name' ? innerComposition : title}
+                {currentpath === '/by-generic-name' ? innerComposition : title}
 
                 </h5>
                 <h6 className="card-title text-white">{text1}</h6>
@@ -22,11 +22,11 @@ const SingleCard = (props) => {
               {card?.img?.map((ob,index) => {
                 return (
                   <img key={ob.id} src={ob.imgf} className="card-img-top p-3"    height="100%"
-                  width="100%" alt={currentpath === '/by_generic_name' ? innerComposition : title} />
+                  width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} />
                 );
               })}
               <div
-                onClick={() => props?.history?.push("/prod_details",{data : {...card,from:props?.location?.pathname}})}
+                onClick={() => props?.history?.push("/prod-details",{data : {...card,from:props?.location?.pathname}})}
                 className="btn  rounded-pill colr_btn"
               >
                 {btn}

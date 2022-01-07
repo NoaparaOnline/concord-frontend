@@ -210,19 +210,19 @@ function App() {
 
         {/*          Main About Page SubMenu Page             */}
 
-        <Route exact path="/vision_mission">
+        <Route exact path="/vision-mission">
           <Aboutvisionmission />
         </Route>
 
-        <Route exact path="/health_associates">
+        <Route exact path="/health-associates">
           <Abouthealthassociates />
         </Route>
 
-        <Route exact path="/message_from_chairmen">
+        <Route exact path="/message-from-chairmen">
           <Aboutmessagechairmen />
         </Route>
 
-        <Route exact path="/chairmen_profile">
+        <Route exact path="/chairmen-profile">
           <Aboutchairmenprofile />
         </Route>
 
@@ -281,7 +281,7 @@ function App() {
 
         {/*          Facilities SubMenu Page          */}
 
-        <Route exact path="/our_distribution_network">
+        <Route exact path="/our-distribution-network">
           <Facilitiesourdistribution />
         </Route>
 
@@ -303,7 +303,7 @@ function App() {
 
         {/*          GlobalOperation Page          */}
 
-        <Route exact path="/global_operation">
+        <Route exact path="/global-operation">
           <GlobalOperations />
         </Route>
 
@@ -323,11 +323,11 @@ function App() {
           <Mediaphoto />
         </Route>
 
-        <Route exact path="/social_media_post">
+        <Route exact path="/social-media-post">
           <Mediasocialmedia />
         </Route>
 
-        <Route exact path="/social_responsiblities">
+        <Route exact path="/social-responsiblities">
           <Mediasocialresponsiblities />
         </Route>
 
@@ -343,13 +343,13 @@ function App() {
 
         {/*          Products Submenu Page          */}
         <Route
-         exact path="/by_generic_name"
+         exact path="/by-generic-name"
           render={(props) => <Productsbygeneric {...props} />}
         />
 
 
         <Route
-         exact path="/by_trade_name"
+         exact path="/by-trade-name"
           render={(props) => <Productsbytrade {...props} />}
         />
         
@@ -371,14 +371,14 @@ function App() {
         {/* All Inner Page */}
         
         <Route
-          path="/prod_details"
+          path="/prod-details"
           render={(props) => <ProductallDetails {...props} />}
         />
         {/* <Route
-          path="/prod_details/:prodname"
+          path="/prod-details/:prodname"
           render={(props) => <ProductallDetails {...props} />}
         /> */}
-        {/* <Route exact path="/prod_details">
+        {/* <Route exact path="/prod-details">
           <ProductallDetails
           
           />

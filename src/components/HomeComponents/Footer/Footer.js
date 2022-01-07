@@ -71,14 +71,14 @@ const Footer = () => {
                   <ul className="list-unstyled">
                   <li>
               
-              <Link to='/by_trade_name' className="linkFoot">
+              <Link to='/by-trade-name' className="linkFoot">
                 By Trade Name
               </Link>
             
           </li>
           <li>
           
-              <Link to='/by_generic_name' className="linkFoot">
+              <Link to='/by-generic-name' className="linkFoot">
                 By Generic Name
               </Link>
             
@@ -205,7 +205,7 @@ const Footer = () => {
               </li>
               <li >
             
-                  <Link to='/our_distribution_network' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
+                  <Link to='/our-distribution-network' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
                   <i className="fa fa-globe"></i>
                   <span className="ms-2">Distribution Center</span>
                   </Link>

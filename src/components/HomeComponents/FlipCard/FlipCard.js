@@ -21,7 +21,7 @@ const FlipCard = (props) => {
                   className="card-title front-text text-white"
                   style={{ fontSize: "19px", fontWeight: "500" }}
                 >
-                  {currentpath === '/by_generic_name' ? innerComposition : title}
+                  {currentpath === '/by-generic-name' ? innerComposition : title}
                 </h5>
                 <h6
                   className="card-title front-text text-white"
@@ -45,7 +45,7 @@ const FlipCard = (props) => {
                       className="card-img-top p-3"
                       height="100%"
                       width="100%"
-                      alt={currentpath === '/by_generic_name' ? innerComposition : title}
+                      alt={currentpath === '/by-generic-name' ? innerComposition : title}
                     />
                   </>
                 );
@@ -54,7 +54,7 @@ const FlipCard = (props) => {
                 {btn}
               </Link> */}
               <div
-                onClick={() => props?.history?.push(`/prod_details`,{data : {...card,from:props?.location?.pathname}})}
+                onClick={() => props?.history?.push(`/prod-details`,{data : {...card,from:props?.location?.pathname}})}
                 className="btn  rounded-pill colr_btn"
               >
                 {btn}
@@ -69,7 +69,7 @@ const FlipCard = (props) => {
                   className="card-title front-text text-white"
                   style={{ fontSize: "19px", fontWeight: "500" }}
                 >
-                 {currentpath === '/by_generic_name' ? innerComposition : title}
+                 {currentpath === '/by-generic-name' ? innerComposition : title}
                 </h5>
                 <h6
                   className="card-title front-text text-white"
@@ -93,7 +93,7 @@ const FlipCard = (props) => {
                       className="card-img-top p-3"
                       height="100%"
                       width="100%"
-                      alt={currentpath === '/by_generic_name' ? innerComposition : title}
+                      alt={currentpath === '/by-generic-name' ? innerComposition : title}
                     />
                   </>
                 );
@@ -102,7 +102,7 @@ const FlipCard = (props) => {
                 {btn}
               </Link> */}
               <div
-                   onClick={() => props?.history?.push(`/prod_details`,{data : {...card,from:props?.location?.pathname}})}
+                   onClick={() => props?.history?.push(`/prod-details`,{data : {...card,from:props?.location?.pathname}})}
                 className="btn  rounded-pill colr_btn"
               >
                 {btn}

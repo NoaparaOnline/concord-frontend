@@ -32,8 +32,8 @@ const ProductallDetails = (props) => {
       subLink: "/products",
     },
     {
-      subLinkName: viewData?.from === '/by_trade_name' ? 'By Trade Name' : viewData?.from === '/by_generic_name' ? 'By Generic Name' : viewData?.from === '/by-therapeutic-class' ? 'By Therapeutic Class' : viewData?.from === '/first-time-launching' ? 'First Time Launching' : '' ,
-      subDash:  viewData?.from === '/by_trade_name' ? '/' : viewData?.from === '/by_generic_name' ? '/' : viewData?.from === '/by-therapeutic-class' ? '/' : viewData?.from === '/first-time-launching' ? '/' : '',
+      subLinkName: viewData?.from === '/by-trade-name' ? 'By Trade Name' : viewData?.from === '/by-generic-name' ? 'By Generic Name' : viewData?.from === '/by-therapeutic-class' ? 'By Therapeutic Class' : viewData?.from === '/first-time-launching' ? 'First Time Launching' : '' ,
+      subDash:  viewData?.from === '/by-trade-name' ? '/' : viewData?.from === '/by-generic-name' ? '/' : viewData?.from === '/by-therapeutic-class' ? '/' : viewData?.from === '/first-time-launching' ? '/' : '',
       subLink: viewData?.from,
     },
   ];

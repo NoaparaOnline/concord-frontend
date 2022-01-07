@@ -73,7 +73,7 @@ function SearchBar({ placeholder, data }) {
             {filteredData.slice(0, 15).map((value, key) => {
               return (
                 <div
-                  onClick={() => history?.push("/prod_details",{data : value})}
+                  onClick={() => history?.push("/prod-details",{data : value})}
                   style={{ textDecoration: "none" }}
                   className="dataItem"
                 >

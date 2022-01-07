@@ -15,7 +15,7 @@ const Contact = () => {
           id: 1,
           imageURL: contactcard1,
           text: "Our Distribution Network",
-          link: "/our_distribution_network",
+          link: "/our-distribution-network",
         },
         
         {
