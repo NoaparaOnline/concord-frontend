@@ -1,10 +1,11 @@
 import React, {  useState } from "react";
 import { CompanyLogos } from "../../../components";
 import BannerWithText from "../../../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import TableCustomComponent from "../TableCustomComponent";
 import { Helmet } from "react-helmet";
+import { ByTherapeutic } from "../../HomeComponents/ProductsData/productbytheraputic";
 
 const ProductallDetails = (props) => {
 
@@ -16,8 +17,31 @@ const ProductallDetails = (props) => {
   const handleShow = () => {
     setShow(true);
   };
-  const viewData = props?.location?.state?.data;
 
+  
+  const { id } = useParams();
+  const [obj , setObj] = useState(ByTherapeutic);
+  
+  // let productdata = [];
+  // obj?.filter((item) =>
+  // if
+  //   id === item?.id ? productdata.push(item) : ""
+  // );
+  
+  console.log(obj,"Testing Data")
+  console.log(id,"Testing Data id")
+
+  const productdata = obj?.filter((item) => (
+    item?.id == id ?  item : null
+  )) 
+
+
+  // console.log(productdata,"Testing Filter")
+
+  const viewData = props?.location?.state?.data ? props?.location?.state?.data : productdata[0];
+  
+
+  console.log(viewData,"Testing ViewData")
 
 
   const LinksBan = [

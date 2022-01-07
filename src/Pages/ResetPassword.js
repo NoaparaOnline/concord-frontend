@@ -10,7 +10,6 @@ import { Helmet } from "react-helmet";
 const ResetPassword = (props) => {
   const params = queryString.parse(props.location.search);
 
-  console.log(params,"Testing Params");
 
   const dispatch = useDispatch();
   const {

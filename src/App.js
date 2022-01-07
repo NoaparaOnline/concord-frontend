@@ -142,6 +142,19 @@ function App() {
             )
           }
         />
+        <Route
+          exact
+          path="/:page/:name/:id"
+          render={(props) =>
+            props.location.pathname !== "/depotmanager-dashboard" &&
+            props.location.pathname !== "/depotmanager-dashboard/" &&
+            props.location.pathname !== "/director-dashboard" &&
+            props.location.pathname !== "/director-dashboard/" && (
+              // && props.location.pathname !== '/reset-password'
+              <Navbar {...props} />
+            )
+          }
+        />
 
 
         {/* Resest Password */}
@@ -162,6 +175,17 @@ function App() {
         <Route
           exact
           path="/:page"
+          render={(props) =>
+            props.location.pathname !== "/depotmanager-dashboard" &&
+            props.location.pathname !== "/depotmanager-dashboard/" &&
+            props.location.pathname !== "/director-dashboard" &&
+            props.location.pathname !== "/director-dashboard/" &&
+            props.location.pathname !== "/reset-password" && <FixedRight />
+          }
+        />
+        <Route
+          exact
+          path="/:page/:name/:id"
           render={(props) =>
             props.location.pathname !== "/depotmanager-dashboard" &&
             props.location.pathname !== "/depotmanager-dashboard/" &&
@@ -371,7 +395,7 @@ function App() {
         {/* All Inner Page */}
         
         <Route
-          path="/prod-details"
+          path="/prod-details/:name/:id"
           render={(props) => <ProductallDetails {...props} />}
         />
         {/* <Route
@@ -441,7 +465,22 @@ function App() {
             props.location.pathname !== "/depotmanager-dashboard" &&
             props.location.pathname !== "/depotmanager-dashboard/" &&
             props.location.pathname !== "/director-dashboard" &&
-            props.location.pathname !== "/director-dashboard/" && (
+            props.location.pathname !== "/director-dashboard/"
+             && (
+              //  && props.location.pathname !== '/reset-password'
+              <Footer />
+              )
+            }
+        />
+        <Route
+          exact
+          path="/:page/:name/:id"
+          render={(props) =>
+            props.location.pathname !== "/depotmanager-dashboard" &&
+            props.location.pathname !== "/depotmanager-dashboard/" &&
+            props.location.pathname !== "/director-dashboard" &&
+            props.location.pathname !== "/director-dashboard/"
+             && (
               //  && props.location.pathname !== '/reset-password'
               <Footer />
               )

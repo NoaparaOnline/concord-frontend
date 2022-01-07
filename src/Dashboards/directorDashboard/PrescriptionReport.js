@@ -26,7 +26,6 @@ const PrescriptionReport = () => {
   const loadingMPO = useSelector((state) => state?.director?.loadingMpo);
   const sm = useSelector((state) => state?.director?.salesManager);
 
-  console.log(sm, "Testing Sm");
 
   const rsm = useSelector((state) => state?.director?.rsm);
   const am = useSelector((state) => state?.director?.am);

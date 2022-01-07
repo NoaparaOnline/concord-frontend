@@ -1,15 +1,19 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import ProductallDetails from "../../ReusableComponents/ProductDetail/ProductallDetails";
 import "./FlipCard.css";
 
 const FlipCard = (props) => {
   const { card } = props;
-  const { title, text1, text2,  btn,innerComposition } = card;
+  const { title, text1, text2, btn, innerComposition,id } = card;
   const currentpath = props?.location?.pathname;
-//   const getFirstWord = string => {
-//     const words = string.split(' ');
-//     return words[0].toLowerCase();
-// };
-  // let titleprod = getFirstWord(title);
+  const getFirstWord = (string) => {
+    const words = string.split(" ");
+    return words[0].toLowerCase();
+  };
+  
+  const proname = getFirstWord(title);
+
   return (
     <div>
       <div className="flip-card" style={{ marginBottom: "50%" }}>
@@ -21,7 +25,9 @@ const FlipCard = (props) => {
                   className="card-title front-text text-white"
                   style={{ fontSize: "19px", fontWeight: "500" }}
                 >
-                  {currentpath === '/by-generic-name' ? innerComposition : title}
+                  {currentpath === "/by-generic-name"
+                    ? innerComposition
+                    : title}
                 </h5>
                 <h6
                   className="card-title front-text text-white"
@@ -45,7 +51,11 @@ const FlipCard = (props) => {
                       className="card-img-top p-3"
                       height="100%"
                       width="100%"
-                      alt={currentpath === '/by-generic-name' ? innerComposition : title}
+                      alt={
+                        currentpath === "/by-generic-name"
+                          ? innerComposition
+                          : title
+                      }
                     />
                   </>
                 );
@@ -54,7 +64,11 @@ const FlipCard = (props) => {
                 {btn}
               </Link> */}
               <div
-                onClick={() => props?.history?.push(`/prod-details`,{data : {...card,from:props?.location?.pathname}})}
+                onClick={() =>
+                  props?.history?.push(`/prod-details/${proname}`, {
+                    data: { ...card, from: props?.location?.pathname },
+                  })
+                }
                 className="btn  rounded-pill colr_btn"
               >
                 {btn}
@@ -69,7 +83,9 @@ const FlipCard = (props) => {
                   className="card-title front-text text-white"
                   style={{ fontSize: "19px", fontWeight: "500" }}
                 >
-                 {currentpath === '/by-generic-name' ? innerComposition : title}
+                  {currentpath === "/by-generic-name"
+                    ? innerComposition
+                    : title}
                 </h5>
                 <h6
                   className="card-title front-text text-white"
@@ -93,7 +109,11 @@ const FlipCard = (props) => {
                       className="card-img-top p-3"
                       height="100%"
                       width="100%"
-                      alt={currentpath === '/by-generic-name' ? innerComposition : title}
+                      alt={
+                        currentpath === "/by-generic-name"
+                          ? innerComposition
+                          : title
+                      }
                     />
                   </>
                 );
@@ -102,7 +122,11 @@ const FlipCard = (props) => {
                 {btn}
               </Link> */}
               <div
-                   onClick={() => props?.history?.push(`/prod-details`,{data : {...card,from:props?.location?.pathname}})}
+                onClick={() =>
+                  props?.history?.push(`/prod-details/${proname}/${id}`, {
+                    data: { ...card, from: props?.location?.pathname },
+                  })
+                }
                 className="btn  rounded-pill colr_btn"
               >
                 {btn}

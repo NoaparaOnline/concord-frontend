@@ -168,7 +168,6 @@ const NearestDeliveryCenter = ({heading}) => {
             setOb(filtererd[0])
         }
     }
-    console.log(ob,"Testing OB")
 
     return (
         <div>
