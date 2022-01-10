@@ -108,7 +108,8 @@ import BannerWithText from "../components/ReusableComponents/BannerImgComponents
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Helmet } from "react-helmet";
 
-const Media_photo = () => {
+const Media_photo = (props) => {
+  const eventName = props?.location?.state;
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -134,7 +135,8 @@ const Media_photo = () => {
   }
 
   const images = importAll(
-    require.context("../Statics/assets/mediaPhoto", false, /\.(png|jpe?g|svg)$/)
+    eventName === 'Annualconfirence2014' ?
+      require.context(`../Statics/assets/Annualconfirence2014`, false, /\.(png|jpe?g|svg|JPG)$/) : eventName === 'Annualconfirence2013' ? require.context(`../Statics/assets/Annualconfirence2013`, false, /\.(png|jpe?g|svg|JPG)$/) : eventName === 'Dapazinelunchingprogram' ? require.context(`../Statics/assets/Dapazinelunchingprogram`, false, /\.(png|jpe?g|svg|JPG)$/) : null
   );
 
   const imagesData = Object.keys(images);
@@ -157,24 +159,24 @@ const Media_photo = () => {
         fontsize={"60px"}
       />
       <div className="container my-5">
-      <div className="row">
-            {imagesData?.map((item, index) => {
-              return (
-                <div className="col-lg-4 col-md-6 col-sm-12 mt-5 center-childrens">
-                  <a data-fancybox="gallery" href={images[item].default}>
-                    <img
-                      width="400px"
-                      height="250px"
-                      alt="gallery"
-                      src={images[item].default}
-                    />
-                  </a>
-                </div>
-              );
-            })}
-          </div>
+        <div className="row">
+          {imagesData?.map((item, index) => {
+            return (
+              <div className="col-lg-4 col-md-6 col-sm-12 mt-5 center-childrens">
+                <a data-fancybox="gallery" href={images[item].default}>
+                  <img
+                    width="400px"
+                    height="250px"
+                    alt="gallery"
+                    src={images[item].default}
+                  />
+                </a>
+              </div>
+            );
+          })}
+        </div>
       </div>
-       <CompanyLogos />
+      <CompanyLogos />
 
     </>
   );

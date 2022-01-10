@@ -590,11 +590,20 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
+                            to="/events"
+                          >
+                            Events
+                          </NavLink>
+                        </li>
+                        {/* <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item navmenu_custome_li"
                             to="/photo"
                           >
                             photo
                           </NavLink>
-                        </li>
+                        </li> */}
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}

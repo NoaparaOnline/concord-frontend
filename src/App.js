@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { BrowserRouter as Router, Route ,Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer, FixedRight } from "./components";
 import About from "./Pages/About";
@@ -51,6 +51,7 @@ import Error404 from "./Pages/Error404";
 import ProductallDetails from "./components/ReusableComponents/ProductDetail/ProductallDetails";
 import PrivacyAndPolicy from "./Pages/PrivacyAndPolicy";
 import Abouthealthassociates from "./Pages/Abouthealthassociates";
+import MediaEvents from "./Pages/MediaEvents";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -77,30 +78,30 @@ function App() {
       .catch(function (err) {
         console.log("Unable to get permission to notify.", err);
       });
-    
 
-      navigator?.serviceWorker?.addEventListener("message", (message) => {
-        console.log(message,"message")
-        if (!("Notification" in window)) {
-          toast.error("This browser does not support desktop notification");
-        } else if (Notification.permission === "granted") {
-          const noti = new Notification(
-            message?.data?.["firebase-messaging-msg-data"]?.notification?.title,
-            {
-              icon: message?.data?.["firebase-messaging-msg-data"]?.notification
-                ?.image,
-              body: message?.data?.["firebase-messaging-msg-data"]?.notification
-                ?.body,
-              data: message?.data?.["firebase-messaging-msg-data"]?.data,
-            }
-          );
-          noti.onclick = (event) => {
-            // if (event?.currentTarget?.data?.url) {
-            //   window.location.href = event?.currentTarget?.data?.url;
-            // }
-          };
-        }
-      });
+
+    navigator?.serviceWorker?.addEventListener("message", (message) => {
+      console.log(message, "message")
+      if (!("Notification" in window)) {
+        toast.error("This browser does not support desktop notification");
+      } else if (Notification.permission === "granted") {
+        const noti = new Notification(
+          message?.data?.["firebase-messaging-msg-data"]?.notification?.title,
+          {
+            icon: message?.data?.["firebase-messaging-msg-data"]?.notification
+              ?.image,
+            body: message?.data?.["firebase-messaging-msg-data"]?.notification
+              ?.body,
+            data: message?.data?.["firebase-messaging-msg-data"]?.data,
+          }
+        );
+        noti.onclick = (event) => {
+          // if (event?.currentTarget?.data?.url) {
+          //   window.location.href = event?.currentTarget?.data?.url;
+          // }
+        };
+      }
+    });
 
     window.scrollTo(0, 0);
   }, [dispatch]);
@@ -120,7 +121,7 @@ function App() {
       />
 
       <Router>
-        
+
         <ScrollToTop />
         {/*          Root Page             */}
 
@@ -197,262 +198,271 @@ function App() {
 
 
 
-          <Switch>
+        <Switch>
 
-          
-        {/*          Front Home Page             */}
-        <Route
-         exact path="/"
-          render={(props) => <Home {...props} />}
-        />
-        {/* <Route exact path="/">
+
+          {/*          Front Home Page             */}
+          <Route
+            exact path="/"
+            render={(props) => <Home {...props} />}
+          />
+          {/* <Route exact path="/">
           <Home  />
         </Route> */}
 
 
-        {/*          Home Page             */}
-        <Route
-         exact path="/home"
-          render={(props) => <Home {...props} />}
-        />
-        {/* <Route exact path="/home">
+          {/*          Home Page             */}
+          <Route
+            exact path="/home"
+            render={(props) => <Home {...props} />}
+          />
+          {/* <Route exact path="/home">
           <Home  />
         </Route> */}
 
 
-        {/*          Main About Page             */}
+          {/*          Main About Page             */}
 
-        <Route exact path="/about">
-          <About />
-        </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
 
-        {/*         Privacy And Policy             */}
+          {/*         Privacy And Policy             */}
 
-        <Route exact path="/privacy-policy">
-          <PrivacyAndPolicy />
-        </Route>
+          <Route exact path="/privacy-policy">
+            <PrivacyAndPolicy />
+          </Route>
 
-        {/*          Main About Page SubMenu Page             */}
+          {/*          Main About Page SubMenu Page             */}
 
-        <Route exact path="/vision-mission">
-          <Aboutvisionmission />
-        </Route>
+          <Route exact path="/vision-mission">
+            <Aboutvisionmission />
+          </Route>
 
-        <Route exact path="/health-associates">
-          <Abouthealthassociates />
-        </Route>
+          <Route exact path="/health-associates">
+            <Abouthealthassociates />
+          </Route>
 
-        <Route exact path="/message-from-chairmen">
-          <Aboutmessagechairmen />
-        </Route>
+          <Route exact path="/message-from-chairmen">
+            <Aboutmessagechairmen />
+          </Route>
 
-        <Route exact path="/chairmen-profile">
-          <Aboutchairmenprofile />
-        </Route>
+          <Route exact path="/chairmen-profile">
+            <Aboutchairmenprofile />
+          </Route>
 
-        {/*          Careers Page              */}
+          {/*          Careers Page              */}
 
-        <Route exact path="/careers">
-          <Careers />
-        </Route>
-        {/*       Careers Inner Page      */}
-        <Route exact path="/careers-detail/:job_id">
-          <CareersInnerPage />
-        </Route>
+          <Route exact path="/careers">
+            <Careers />
+          </Route>
+          {/*       Careers Inner Page      */}
+          <Route exact path="/careers-detail/:job_id">
+            <CareersInnerPage />
+          </Route>
 
-        {/* Dashboards */}
+          {/* Dashboards */}
 
-        {/* <Route
+          {/* <Route
            path="/depotmanager-dashboard"
            render={(props) => <DepotmanagerDashboard {...props} />}/>
         */}
-        <PrivateRoute
-        routelink={"depot_manager"}
-          path="/depotmanager-dashboard"
-          component={DepotmanagerDashboard}
-        />
-        <PrivateRoute
-         routelink={"director"}
-          path="/director-dashboard"
-          component={DirectorDashboard}
-        />
+          <PrivateRoute
+            routelink={"depot_manager"}
+            path="/depotmanager-dashboard"
+            component={DepotmanagerDashboard}
+          />
+          <PrivateRoute
+            routelink={"director"}
+            path="/director-dashboard"
+            component={DirectorDashboard}
+          />
 
-        {/* Private Convert */}
-        {/* <Route 
+          {/* Private Convert */}
+          {/* <Route 
         path="/director-dashboard"
         render={(props) => <DirectorDashboard {...props} />}
         /> */}
 
-        {/*          Contact Page             */}
+          {/*          Contact Page             */}
 
-        <Route exact path="/contact">
-          <Contact />
-        </Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
 
-        {/*          Contact Page SubMenu Page             */}
+          {/*          Contact Page SubMenu Page             */}
 
-        <Route exact path="/contactus">
-          <Contactcontactus />
-        </Route>
-
-      
-
-        {/*          Facilities Page             */}
-
-        <Route exact path="/facilities">
-          <Facilities />
-        </Route>
-
-        {/*          Facilities SubMenu Page          */}
-
-        <Route exact path="/our-distribution-network">
-          <Facilitiesourdistribution />
-        </Route>
-
-        <Route exact path="/product">
-          <Facilitiesproduct />
-        </Route>
-
-        <Route exact path="/quality">
-          <Facilitiesquality />
-        </Route>
-
-        <Route exact path="/research-and-development">
-          <Facilitiesresearchdevrsttime />
-        </Route>
-
-        <Route exact path="/warhouse">
-          <Facilitieswarhouse />
-        </Route>
-
-        {/*          GlobalOperation Page          */}
-
-        <Route exact path="/global-operation">
-          <GlobalOperations />
-        </Route>
-
-        {/*          Media Page          */}
-
-        <Route exact path="/media">
-          <Media />
-        </Route>
-
-        {/*          Media Submenu Page          */}
-
-        <Route exact path="/milestones">
-          <Mediamilestone />
-        </Route>
-
-        <Route exact path="/photo">
-          <Mediaphoto />
-        </Route>
-
-        <Route exact path="/social-media-post">
-          <Mediasocialmedia />
-        </Route>
-
-        <Route exact path="/social-responsiblities">
-          <Mediasocialresponsiblities />
-        </Route>
-
-        <Route exact path="/video">
-          <Mediavideo />
-        </Route>
-
-        {/*          Products Page          */}
-
-        <Route exact path="/products">
-          <Products />
-        </Route>
-
-        {/*          Products Submenu Page          */}
-        <Route
-         exact path="/by-generic-name"
-          render={(props) => <Productsbygeneric {...props} />}
-        />
-
-
-        <Route
-         exact path="/by-trade-name"
-          render={(props) => <Productsbytrade {...props} />}
-        />
-        
-        
-        <Route
-         exact path="/first-time-launching"
-          render={(props) => <Productsfirsttime {...props} />}
-        />
-        
-        <Route
-         exact path="/by-therapeutic-class"
-          render={(props) => <Productstherapeutic {...props} />}
-        />
+          <Route exact path="/contactus">
+            <Contactcontactus />
+          </Route>
 
 
 
-        {/*          Products Inner Pages         */}
-        
-        {/* All Inner Page */}
-        
-        <Route
-          path="/prod-details/:name/:id"
-          render={(props) => <ProductallDetails {...props} />}
-        />
-        {/* <Route
+          {/*          Facilities Page             */}
+
+          <Route exact path="/facilities">
+            <Facilities />
+          </Route>
+
+          {/*          Facilities SubMenu Page          */}
+
+          <Route exact path="/our-distribution-network">
+            <Facilitiesourdistribution />
+          </Route>
+
+          <Route exact path="/product">
+            <Facilitiesproduct />
+          </Route>
+
+          <Route exact path="/quality">
+            <Facilitiesquality />
+          </Route>
+
+          <Route exact path="/research-and-development">
+            <Facilitiesresearchdevrsttime />
+          </Route>
+
+          <Route exact path="/warhouse">
+            <Facilitieswarhouse />
+          </Route>
+
+          {/*          GlobalOperation Page          */}
+
+          <Route exact path="/global-operation">
+            <GlobalOperations />
+          </Route>
+
+          {/*          Media Page          */}
+
+          <Route exact path="/media">
+            <Media />
+          </Route>
+
+          {/*          Media Submenu Page          */}
+
+          <Route exact path="/milestones">
+            <Mediamilestone />
+          </Route>
+
+          <Route
+            exact path="/photo"
+            render={(props) => <Mediaphoto {...props} />}
+          />
+
+
+          <Route exact path="/social-media-post">
+            <Mediasocialmedia />
+          </Route>
+
+          <Route exact path="/social-responsiblities">
+            <Mediasocialresponsiblities />
+          </Route>
+
+          <Route exact path="/video">
+            <Mediavideo />
+          </Route>
+          <Route
+            exact path="/events"
+            render={(props) => <MediaEvents {...props} />}
+          />
+          {/* <Route exact path="/media/events">
+          <MediaEvents />
+        </Route> */}
+
+          {/*          Products Page          */}
+
+          <Route exact path="/products">
+            <Products />
+          </Route>
+
+          {/*          Products Submenu Page          */}
+          <Route
+            exact path="/by-generic-name"
+            render={(props) => <Productsbygeneric {...props} />}
+          />
+
+
+          <Route
+            exact path="/by-trade-name"
+            render={(props) => <Productsbytrade {...props} />}
+          />
+
+
+          <Route
+            exact path="/first-time-launching"
+            render={(props) => <Productsfirsttime {...props} />}
+          />
+
+          <Route
+            exact path="/by-therapeutic-class"
+            render={(props) => <Productstherapeutic {...props} />}
+          />
+
+
+
+          {/*          Products Inner Pages         */}
+
+          {/* All Inner Page */}
+
+          <Route
+            path="/prod-details/:name/:id"
+            render={(props) => <ProductallDetails {...props} />}
+          />
+          {/* <Route
           path="/prod-details/:prodname"
           render={(props) => <ProductallDetails {...props} />}
         /> */}
-        {/* <Route exact path="/prod-details">
+          {/* <Route exact path="/prod-details">
           <ProductallDetails
           
           />
         </Route> */}
-        {/* All Inner Page */}
+          {/* All Inner Page */}
 
 
 
-        <Route exact path="/acedol-tablet">
-          <ProductsCardInnerPage />
-        </Route>
-        <Route exact path="/dapzine-tablet">
-          <DapzineTablet />
-        </Route>
-        <Route exact path="/relikof-syrup">
-          <Relikof />
-        </Route>
-        <Route exact path="/relikof-kids-syrup">
-          <Relikofkids />
-        </Route>
-        <Route exact path="/acedolcopy-tablet">
-          <Acedol />
-        </Route>
+          <Route exact path="/acedol-tablet">
+            <ProductsCardInnerPage />
+          </Route>
+          <Route exact path="/dapzine-tablet">
+            <DapzineTablet />
+          </Route>
+          <Route exact path="/relikof-syrup">
+            <Relikof />
+          </Route>
+          <Route exact path="/relikof-kids-syrup">
+            <Relikofkids />
+          </Route>
+          <Route exact path="/acedolcopy-tablet">
+            <Acedol />
+          </Route>
 
-        {/*          Sitemap Page          */}
+          {/*          Sitemap Page          */}
 
-        <Route exact path="/sitemap">
-          <Sitemap />
-        </Route>
+          <Route exact path="/sitemap">
+            <Sitemap />
+          </Route>
 
-        {/*          TeleMedicine          */}
+          {/*          TeleMedicine          */}
 
-        <Route exact path="/teleMedicine">
-          <TeleMedicine />
-        </Route>
-       
+          <Route exact path="/teleMedicine">
+            <TeleMedicine />
+          </Route>
 
-        {/* 404 Page */}
-        {/* <Route path="*">
+
+          {/* 404 Page */}
+          {/* <Route path="*">
             <Error404 />
           </Route> */}
 
           <Route
-          path="*"
-          render={(props) =>
-            props.location.pathname !== "/reset-password" && (
-              <Error404 />
+            path="*"
+            render={(props) =>
+              props.location.pathname !== "/reset-password" && (
+                <Error404 />
               )
             }
-        />
+          />
         </Switch>
 
 
@@ -466,11 +476,11 @@ function App() {
             props.location.pathname !== "/depotmanager-dashboard/" &&
             props.location.pathname !== "/director-dashboard" &&
             props.location.pathname !== "/director-dashboard/"
-             && (
+            && (
               //  && props.location.pathname !== '/reset-password'
               <Footer />
-              )
-            }
+            )
+          }
         />
         <Route
           exact
@@ -480,11 +490,11 @@ function App() {
             props.location.pathname !== "/depotmanager-dashboard/" &&
             props.location.pathname !== "/director-dashboard" &&
             props.location.pathname !== "/director-dashboard/"
-             && (
+            && (
               //  && props.location.pathname !== '/reset-password'
               <Footer />
-              )
-            }
+            )
+          }
         />
 
         <Route exact path="/">
