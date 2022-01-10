@@ -3,9 +3,17 @@ import './FlipCard.css'
 
 const SingleCard = (props) => {
   const { card } = props;
-  const {title, text1, text2,  btn,  innerComposition } = card;
+  const {title, text1, text2,  btn,  innerComposition,id } = card;
   const currentpath = props?.location?.pathname;
  
+  const getFirstWord = (string) => {
+    const words = string.split(" ");
+    return words[0].toLowerCase();
+  };
+  
+  const proname = getFirstWord(title);
+
+
   return (
         <div>
 
@@ -26,7 +34,7 @@ const SingleCard = (props) => {
                 );
               })}
               <div
-                onClick={() => props?.history?.push("/prod-details",{data : {...card,from:props?.location?.pathname}})}
+                onClick={() => props?.history?.push(`/prod-details/${proname}/${id}`,{data : {...card,from:props?.location?.pathname}})}
                 className="btn  rounded-pill colr_btn"
               >
                 {btn}
