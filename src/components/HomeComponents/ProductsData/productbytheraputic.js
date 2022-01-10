@@ -378,7 +378,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -508,7 +508,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -704,7 +704,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -898,7 +898,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -1048,7 +1048,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -1190,7 +1190,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -1320,7 +1320,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -1451,7 +1451,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -1468,7 +1468,7 @@ export const ByTherapeutic = [
         imge: brocast10bk,
       },
     ],
-    backpagelink: "/by_trade_name",
+    backpagelink: "/by-trade-name",
     backpagename: "By Trade Name",
     innerMainHeading: "Brocast",
     innerComposition: "Montelukast",
@@ -1606,7 +1606,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -1727,7 +1727,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -1857,7 +1857,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -1983,7 +1983,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -2119,7 +2119,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -2255,7 +2255,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -2394,7 +2394,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -2538,7 +2538,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -2682,7 +2682,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -2810,7 +2810,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -2938,7 +2938,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -3106,7 +3106,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -3274,7 +3274,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -3442,7 +3442,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -3586,7 +3586,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -3730,7 +3730,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -3900,7 +3900,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -4070,7 +4070,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -4243,7 +4243,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -4416,7 +4416,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -4600,7 +4600,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -4785,7 +4785,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
   // Yaha Tk Entry Hui Hai
@@ -4829,7 +4829,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Hand Rub",
   },
 
@@ -4873,7 +4873,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Hand Rub",
   },
 
@@ -5023,7 +5023,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Injectables",
   },
 
@@ -5173,7 +5173,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Injectables",
   },
 
@@ -5299,7 +5299,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -5440,7 +5440,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -5581,7 +5581,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -5722,7 +5722,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -5846,7 +5846,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -5970,7 +5970,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -6100,7 +6100,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Injectables",
   },
 
@@ -6230,7 +6230,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Injectables",
   },
 
@@ -6366,7 +6366,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -6502,7 +6502,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -6638,7 +6638,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -6774,7 +6774,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -6910,7 +6910,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -7036,7 +7036,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -7160,7 +7160,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -7289,7 +7289,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -7436,7 +7436,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -7583,7 +7583,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -7699,7 +7699,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -7810,7 +7810,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -7921,7 +7921,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -8047,7 +8047,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Tablet",
   },
 
@@ -8199,7 +8199,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -8364,7 +8364,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -8520,7 +8520,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -8677,7 +8677,7 @@ export const ByTherapeutic = [
     ],
 
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -8806,7 +8806,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -8952,7 +8952,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -9097,7 +9097,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Syrup",
   },
 
@@ -9225,7 +9225,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "Capsule",
   },
 
@@ -9367,7 +9367,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -9508,7 +9508,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -9639,7 +9639,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -9804,7 +9804,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -9969,7 +9969,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -10111,7 +10111,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -10181,7 +10181,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -10251,7 +10251,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -10295,7 +10295,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -10339,7 +10339,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -10469,7 +10469,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -10646,7 +10646,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -10823,7 +10823,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -10931,7 +10931,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
   {
@@ -11058,7 +11058,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -11184,7 +11184,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -11347,7 +11347,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -11465,7 +11465,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -11592,7 +11592,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -11751,7 +11751,7 @@ export const ByTherapeutic = [
       },
     ],
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -11911,7 +11911,7 @@ export const ByTherapeutic = [
     ],
 
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 
@@ -12071,7 +12071,7 @@ export const ByTherapeutic = [
     ],
 
     btn: "Read More",
-    btnlink: "/prod_details",
+    btnlink: "/prod-details",
     type: "tablet",
   },
 ];

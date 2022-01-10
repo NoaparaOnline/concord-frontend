@@ -347,7 +347,7 @@ const Navbars = (props) => {
                         <li>
                           <NavLink
                             className="dropdown-item navmenu_custome_li"
-                            to="/vision_mission"
+                            to="/vision-mission"
                           >
                             Vision & Mission
                           </NavLink>
@@ -356,7 +356,7 @@ const Navbars = (props) => {
                           <Link
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/health_associates"
+                            to="/health-associates"
                           >
                             Health Associates{" "}
                           </Link>
@@ -365,7 +365,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/chairmen_profile"
+                            to="/chairmen-profile"
                           >
                             Chairman’s Profile{" "}
                           </NavLink>
@@ -374,7 +374,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/message_from_chairmen"
+                            to="/message-from-chairmen"
                           >
                             Message from Chairman
                           </NavLink>
@@ -385,7 +385,7 @@ const Navbars = (props) => {
                   <li className="nav-item">
                     <NavLink
                       className="nav-link secnav"
-                      to="/global_operation"
+                      to="/global-operation"
                       activeClassName="active"
                     >
                       global operation
@@ -423,7 +423,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/by_trade_name"
+                            to="/by-trade-name"
                           >
                             By trade name
                           </NavLink>
@@ -432,7 +432,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/by_generic_name"
+                            to="/by-generic-name"
                           >
                             By generic name
                           </NavLink>
@@ -525,7 +525,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/our_distribution_network"
+                            to="/our-distribution-network"
                           >
                             Our distribution network
                           </NavLink>
@@ -575,13 +575,13 @@ const Navbars = (props) => {
                         style={{ listStyle: "none", background: "white" }}
                       >
                         {/* Video Routing Path = /video */}
-                        {/* social responsibilities Routing Path = /social_responsiblities */}
+                        {/* social responsibilities Routing Path = /social-responsiblities */}
 
                         <li>
                           <Link
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="#"
+                            to="/video"
                           >
                             video
                           </Link>
@@ -590,16 +590,25 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
+                            to="/events"
+                          >
+                            Events
+                          </NavLink>
+                        </li>
+                        {/* <li>
+                          <NavLink
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item navmenu_custome_li"
                             to="/photo"
                           >
                             photo
                           </NavLink>
-                        </li>
+                        </li> */}
                         <li>
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/social_media_post"
+                            to="/social-media-post"
                           >
                             social media post
                           </NavLink>
@@ -656,7 +665,7 @@ const Navbars = (props) => {
                           <NavLink
                             style={{ fontSize: "13px", fontWeight: "500" }}
                             className="dropdown-item navmenu_custome_li"
-                            to="/our_distribution_network"
+                            to="/our-distribution-network"
                           >
                             our distribution network
                           </NavLink>

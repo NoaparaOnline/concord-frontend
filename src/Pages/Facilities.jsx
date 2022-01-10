@@ -43,7 +43,7 @@ const Facilities = () => {
       id: 4,
       imageURL: facilitiescard5,
       text: "Our Distribution Network",
-      link: "/our_distribution_network",
+      link: "/our-distribution-network",
     },
   ];
 

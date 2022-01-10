@@ -22,7 +22,7 @@ const ProductsCardInnerPage = () => {
     {
       subLinkName: "By Trade Name",
       subDash: "/",
-      subLink: "/by_trade_name",
+      subLink: "/by-trade-name",
     },
   ];
 
@@ -178,7 +178,7 @@ const ProductsCardInnerPage = () => {
       />
 
       <div className="container mb-5">
-        <Link to="/by_trade_name" style={{ textDecoration: "none" }}>
+        <Link to="/by-trade-name" style={{ textDecoration: "none" }}>
           <span style={{ fontSize: "22px", color: "#565656" }}>
             <i className="fa fa-angle-left" aria-hidden="true"></i> Back
           </span>

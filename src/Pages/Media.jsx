@@ -17,19 +17,19 @@ const Media = () => {
           id: 0,
           imageURL: mediacard1,
           text: "Video",
-          link: "#",
+          link: "/video",
         },
         {
           id: 1,
           imageURL: mediacard2,
-          text: "Photo",
-          link: "/photo",
+          text: "Events",
+          link: "/events",
         },
         {
           id: 2,
           imageURL: mediacard3,
           text: "Social Media Post",
-          link: "/social_media_post",
+          link: "/social-media-post",
         },
         {
           id: 3,

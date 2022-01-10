@@ -23,7 +23,6 @@ const Reports = (props) => {
   };
   const buttonname1 = ["All", "Region"];
   useEffect(() => {
-    console.log(FromView);
    
     if (FromView === "fromPrescription") {
       setselectedtile("Prescription Report");
