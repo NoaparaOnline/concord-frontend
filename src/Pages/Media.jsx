@@ -22,8 +22,8 @@ const Media = () => {
         {
           id: 1,
           imageURL: mediacard2,
-          text: "Photo",
-          link: "/photo",
+          text: "Events",
+          link: "/events",
         },
         {
           id: 2,

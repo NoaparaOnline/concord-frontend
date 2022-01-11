@@ -35,7 +35,6 @@ const ProductallDetails = (props) => {
   )) 
 
 
-  // console.log(productdata,"Testing Filter")
 
   const viewData = props?.location?.state?.data ? props?.location?.state?.data : productdata[0];
   
