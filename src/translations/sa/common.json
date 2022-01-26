@@ -1,0 +1,111 @@
+{
+    "home": {
+        "maintitle": "DMFR المختبرات والتشخيص الجزيئي",
+        "mainslider": {
+            "headingsl1":"",
+            "descriptionsl1":"",
+            "description1sl1":"",
+             
+            "headingsl2":"",
+            "descriptionsl2":"",
+            "description1sl2":"",
+            
+            "headingsl3":"",
+            "descriptionsl3":"",
+            "description1sl3":"",
+            
+            "headingsl4":"",
+            "descriptionsl4":"",
+            "description1sl4":"",
+            
+            "headingsl5":"",
+            "descriptionsl5":"",
+            "description1sl5":"",
+            
+            "headingsl6":"",
+            "descriptionsl6":"",
+            "description1sl6":"",
+            
+            "headingsl7":"",
+            "descriptionsl7":"",
+            "description1sl7":""
+                       
+        },
+        "mainServiceCard":{
+            "headingsv1":"",
+            "descriptionsv1":"",
+
+            "headingsv2":"",
+            "descriptionsv2":"",
+
+            "headingsv3":"",
+            "descriptionsv3":"",
+            
+            "headingsv4":"",
+            "descriptionsv4":""
+        },
+        "mainRevVideoText":{
+            "video-head":"",
+            "head-first":"",
+            "head-second":"",
+            "head-sub":"",
+            "des-p1":"",
+            "des-p2":"",
+            "des-p3":"",
+            "link-name":""
+        },
+        "mainheading1": "", 
+        "mainheadingsub":"",
+        "mainOurService":{
+            "heading1":"",
+            "details1":{
+                "head":"",
+                "details":""
+            },
+            "heading2":"",
+            "details2":{
+                "head":"",
+                "details":""
+            },
+            "heading3":"",
+            "details3":{
+                "head":"",
+                "details":""
+            },
+            "heading4":"",
+            "details4":{
+                "head":"",
+                "details":""
+            },
+            "heading5":"",
+            "details5":{
+                "head":"",
+                "details":""
+            },
+            "heading6":"",
+            "details6":{
+                "head":"",
+                "details":""
+            }
+        },
+        "mainheading2": "",
+        "mainheadingsub2": "",
+        "mainpakages":{
+            "gender":"",
+            "pakages":"",
+            "category1":"",
+            "category2":"",
+            "category3":"",
+            "category4":"",
+            "category5":"",
+            "category6":"",
+           
+            "type1":"",
+            "type2":"",
+            "type3":"",
+            "type4":""
+
+        }
+
+    }
+}

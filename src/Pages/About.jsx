@@ -8,9 +8,11 @@ import Aboutcard2 from '../Statics/assets/health-icon2.svg'
 import Aboutcard3 from '../Statics/assets/profile3.svg'
 import Aboutcard4 from '../Statics/assets/Chairman-message4.svg'
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 
 const About = () => {
+  const {t} = useTranslation("common")
 
   // Zoomcards Map Data
   const aboutcard = [
@@ -54,7 +56,7 @@ const About = () => {
     <>
       <Helmet>
         <title>
-        About - Concord Pharma
+        {t("about.maintitle")}
         </title>
       </Helmet>
     <div>
@@ -71,11 +73,6 @@ const About = () => {
         fontsize={"60px"}
       />
       <Heading heading={"About Us"} />
-
-
-
-
-
       {/* Zoom Cards */}
       <div className="container my-5">
         <div className="row d-flex justify-content-center">

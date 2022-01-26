@@ -1,5 +1,4 @@
 import React from "react";
-
 import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/parallax_contact.jpg";
 import DirectorImg from "../Statics/assets/chairman-profile.jpg";
