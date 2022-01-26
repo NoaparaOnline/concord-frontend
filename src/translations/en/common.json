@@ -177,5 +177,17 @@
 
     "home":{
        "view_more":"View More"
+    },
+    "facilities_product":{
+    "helmet":{
+        "prod_concord_text":"Production - Concord Pharma"
+    },
+    "banner_with_text":{
+        "production_text":"Production",
+        "desc_1":"Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
+        "desc_2":"Our production incorporates technological excellence in manufacturing, processing & packaging of various dosage forms & formulations like Tablet, Capsule, Syrup, Suspension & Injectable products.",
+        "desc_3":"Concord Pharmaceuticals Ltd. ensures & meets the growing requirements of cGMP regulations and other quality systems for all stage of production & in process control. The company is certified by the Quality Management System of ISO- 9001:2008 and WHO cGMP."
     }
+    }
+
 }
