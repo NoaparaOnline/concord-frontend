@@ -19,25 +19,25 @@ const About = () => {
     {
       id: 0,
       imageURL: Aboutcard1,
-      text: "Vision & Mission",
+      text: t("about.vision_text"),
       link: "/vision-mission",
     },
     {
       id: 1,
       imageURL: Aboutcard2,
-      text: "Health Associates",
+      text: t("about.health_text"),
       link: "/health-associates",
     },
     {
       id: 2,
       imageURL: Aboutcard3,
-      text: "Chairman's Profile",
+      text: t("about.chairman_text"),
       link: "/chairmen-profile",
     },
     {
       id: 3,
       imageURL: Aboutcard4,
-      text: "Message from Chairman",
+      text:  t("about.msg_chairman_text"),
       link: "/message-from-chairmen",
     },
   ];
@@ -56,14 +56,14 @@ const About = () => {
     <>
       <Helmet>
         <title>
-        {t("about.maintitle")}
+        {t("about.helmet.title_text")}
         </title>
       </Helmet>
     <div>
       <BannerWithText
         imgSrc={bannerimg}
-        heading={'About Us'}
-        subHeading={`about us`}
+        heading={t("about.helmet.title_text")}
+        subHeading={t("about.helmet.title_text").toLowerCase()}
         backposit={'center right'}
         backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
         LinksBan={LinksBan}

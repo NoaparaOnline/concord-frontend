@@ -14,7 +14,9 @@ import flag10 from "../Statics/assets/flags/fl10.jpg";
 
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 const GlobalOPerations = () => {
+  const {t}=useTranslation('common');
   const flagsCol1 = [
     {
       id: 0,
@@ -69,12 +71,12 @@ const GlobalOPerations = () => {
   return (
     <>
       <Helmet>
-        <title>Global Operation - Concord Pharma</title>
+        <title>{t('global_operations.helmet.title_text')}</title>
       </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
-        heading={"Global Operation"}
-        subHeading={`GLOBAL OPERATION`}
+        heading={t('globaloperation.global_operation_text')}
+        subHeading={t('globaloperation.global_operation_text').toUpperCase()}
         LinksBan={LinksBan}
         height={"400px"}
         backposit={"center"}
@@ -107,44 +109,27 @@ const GlobalOPerations = () => {
           <div className="col-lg-7 col-sm-12 text-justify">
             <div className="mb-4">
               <strong className="Typography_styling">
-                Concord Pharmaceuticals Limited (CPL),
-              </strong>{" "}
-              a leading human medicine manufacturer in Bangladesh. We always
-              thrive to introduce top notch quality human medicine for the
-              health & wellbeing of the nation worldwide. With the philosophy
-              “Better medicine Better life…” CPL has started its export journey
-              since 2015. Hence its efforts to improve quality never ends up. We
-              continuously sets next level of standards and feels passionate to
-              achieve all that. All the manufacturing processes are followed by{" "}
-              <strong>ISO 9001:2015 & WHO-GMP</strong> guidelines to produce
-              quality products.
+              {t('globaloperation.cpl_text')+" "}
+              </strong>
+              {t('global_operations.desc_1_text')}
+              <strong>{t('global_operations.desc_2_text')}</strong> {t('global_operations.desc_3_text')}
             </div>
             <div className="mb-4">
-              <strong>CPL</strong> has 112 dosage form of different therapeutic
-              classes like Antibiotics, Antiviral, Antidiabetics,
-              Anti-Ulcerants, Analgesics & Antipyretics, Antihistamine,
-              Antidepressant, Cardiovascular, Vitamins & minerals, NSAIDs etc.
+              <strong>{t('global_operations.cpl_text')+" "}</strong> 
+              {t('global_operations.desc_4_text')}
             </div>
             <div className="mb-4">
-              Presently <strong>CPL</strong> products are exporting to Bhutan,
-              Cambodia, Myanmar, Sri Lanka, Vietnam, Thailand, Liberia, Yemen,
-              Afghanistan and Congo now. During this marvelous journey the
-              company has achieved accreditation from Ministry of Health,
-              Cambodia and currently holds the Yemen GMP certificate.
+            {t('global_operations.presently_text')+" "}<strong>{t('global_operations.cpl_text')+" "}</strong> products are exporting to Bhutan,
+            {t('global_operations.desc_5_text')}
             </div>
             <div className="mb-4">
-              We’ve consistently been recognized in the international arena for
-              our exceptional outcomes and service for worldwide wholesalers,
-              government agencies, major importers, chain of drug stores,
-              contract manufacturing and relief organizations. We are concerned
-              to tie-up with new business partners and we welcome prospective
-              agents for our medicines.
+            {t('global_operations.desc_6_text')}
             </div>
             <div className="mb-4">
-              For any further information or export:
+            {t('global_operations.desc_7_text')}
               <div>
                 <span>
-                  Email:
+                {t('global_operations.email_text')+": "}
                   <a
                     href="mailto:Cplibd.export@gmail.com"
                     style={{ textDecoration: "none" }}
@@ -154,7 +139,7 @@ const GlobalOPerations = () => {
                 </span>
               </div>
               <div>
-                <span>Cell: +8801991145006 (Whatsapp & Viber associated)</span>
+                <span> {t('global_operations.cell_text')}</span>
               </div>
             </div>
           </div>

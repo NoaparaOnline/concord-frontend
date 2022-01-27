@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "font-awesome/css/font-awesome.min.css";
 import "./NearestDeliveryCenter.css";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next"; 
 const NearestDeliveryCenter = ({ heading }) => {
   const { t } = useTranslation("common");
   const cards = [

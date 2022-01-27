@@ -4,15 +4,17 @@ import bannerimg from "../Statics/assets/warehouse-1.jpg";
 import facrd from "../Statics/assets/warehouse-1.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 const Facilities_warhouse = () => {
+  const {t}=useTranslation('common')
   const LinksBan=[
     {
-     subLinkName:'Home',
+     subLinkName:t('facilities_warehouse.home_text'),
      subDash:'/',
      subLink:'/'
     },
     {
-     subLinkName:'Facilities',
+     subLinkName:t('facilities_warehouse.facilities_text'),
      subDash:'/',
      subLink:'/facilities'
     },
@@ -21,12 +23,12 @@ const Facilities_warhouse = () => {
   return (
     <>
         <Helmet>
-        <title>Warehouse - Concord Pharma</title>
+        <title>{t('facilities_warehouse.helmet.title_text')}</title>
       </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
-        heading={"Warehouse"}
-        subHeading={`WAREHOUSE`}
+        heading={t('facilities_warehouse.warehouse_text')}
+        subHeading={t('facilities_warehouse.warehouse_text').toUpperCase()}
         LinksBan={LinksBan}
         height={"400px"}
         
@@ -51,22 +53,10 @@ const Facilities_warhouse = () => {
             <div
               style={{ padding: "10px", lineHeight: "1.7em", fontSize: "17px" }}
             >
-              Our warehouse is a highly controlled & strictly maintained all
-              environmental regulations. The area is equipped with highly
-              temperature regulated, proper storage & handling system. All
-              security measures are well established with appropriate
-              fire-fighting equipment and controlled access to the building.
+      {t('facilities_warehouse.desc_text_1')}
               <br />
               <br />
-              Our sampling & quarantine areas with separate storage location
-              allows the proper placing of penicillin, cephalosporin and general
-              products. We maintain controlled room conditions for specific
-              materials to confirm the standard compliance. We maintain
-              retention sample in separate room under standard conditions. All
-              the materials are stored in the warehouse by pallet racking. The
-              movement system of the materials maintains a strict ‘first in
-              first out’ procedure and shelf life of products are strictly
-              monitored.
+   {t('facilities_warehouse.desc_text_2')}
             </div>
           </div>
         </div>
