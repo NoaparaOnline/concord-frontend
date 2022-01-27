@@ -4,10 +4,6 @@ import './Milestones.css'
 const Milestones = ({ heading ,milestone_data,button,colorclass}) => {
 
 
-    
-
-
-
     return (
         <div className={colorclass}>
             <div className=" pt-3">

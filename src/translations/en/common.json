@@ -1,0 +1,181 @@
+{ 
+  "helmet":{
+    "concord_pharma":"Concord Pharma"
+  },
+  "heading":{
+"load_human_medicine_text":"Leading Human Medicine Manufacturer in Bangladesh"
+  },
+  
+"label":{
+    "facilities_text": "Facilities",
+    "our_product_text": "Our Products",
+    "milestones_text": "Milestones",
+    "our_affiliates": "Our Affiliates"
+},
+  "slide_show":{
+    "pharma_text":"Pharmaceuticals Ltd.",
+    "get_started_btn":"GET STARTED NOW",
+    "10_int_text":"10 INTERNATIONAL DESTINATIONS",
+    "know_btn":"Know More",
+    "nationwide_text":"NATIONWIDE DISTRIBUTION NETWORK",
+    "better_medicine_text":"Better Medicine Better Life",
+    "exporting_qlty_text":"Exporting Quality",
+    "delivering_all_text":"Delivering all over the country"
+  },
+  "we_are_serving":{
+       "serving_text":"We Are Serving",
+       "bangladesh_text":"Bangladesh",
+       "you_text":"You",
+       "world_text":"World"
+       
+  },
+"text_section_container":{
+  "desc_text":"CONCORD Pharmaceuticals Ltd., a fast growing pharmaceutical company is committed to manufacture quality medicines through strict adherence to internationally accepted standards of Good Manufacturing Practice with a motto of 'Better Medicine Better Life ...'. CONCORD Pharmaceuticals is a sister concern of country's one of the leading business conglomerate NOA-PARA GROUP which is involved in local & international Trading, Fertilizer, Cement, Coal & many other multiple diversified business sectors. The factory of CONCORD Pharmaceuticals Ltd. (CPL) is situated at Kanchpur, BSCIC in Narayangonj district and 15 km far from Dhaka city. The company produces various types of drugs which include tablets, capsules, oral liquids etc. Since its beginning, CONCORD has launched many new and innovative products in order to fulfill unmet demand of the medical community. Production facilities have built up the integrated system of Research and Development, Quality Control & Assurance to fulfill the medicine need of population of Bangladesh and all over the world."
+},
+"cards":{
+"prod_text":"Production",
+"research_devlop_text":"Research & Development",
+"quality_control_text":"Quality Control",
+"ware_house_text":"Warehouse",
+"desc":"Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
+"read_me_btn":"Read Me"
+},
+ "affiliates":{
+  "hospitals_text":"Hospitals",
+  "retailers_text":"Retailers",
+  "clinics_text":"Clinics",
+  "pharmacies_text":"Pharmacies"
+
+ },
+ "globaloperation":{
+ "what_we_do_text":"What we do",
+ "manufacturing_text":"Manufacturing",
+ "exporting_text":"Exporting",
+ "serving_text":"Serving",
+ "read_more_text":"Read More",
+ "global_operation_text":"Global Operation",
+ "cpl_text":" Concord Pharmaceuticals Limited (CPL)",
+ "desc_text":", a leading human medicine manufacturer in Bangladesh. We always thrive to introduce top notch quality"
+ },
+ 
+ "milestone":{
+    "year_text": "2010",
+    "inaufuration_text":"Inauguration of CONCORD",
+    "factory_text": "Factory Establish"
+ },
+ "nearestdeliverycenter":{
+ "card1":{
+    "area_text": "Central",
+    "name_text": "Md.Khairul Alam",
+    "position_text":"Head of Distribution",
+    "num_text": "01991146267",
+    "map_name2":"Google Map",
+    "map_name": "35 Bijoy Nagar dhaka-1000."
+ },
+ "card2":{
+    "area_text": "Dhaka",
+    "name_text": "Md. Sabbir Hossain",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145305",
+    "map_name2":"Google Map",
+    "map_name": "35 Bijoy Nagar dhaka-1000."
+ },
+ "card3":{
+    "area_text": "Barisal",
+    "name_text": "Md. Saidur Rahman Rimon",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145334",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd.D/S Tower, 1st floor, Shahid Altaf Memorial Girls School Road,South Alekanda, Barishal"
+ },
+ "card4":{
+    "area_text": "Jessore",
+    "name_text": "Md. Iqbal Mahamud",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145318",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd,Naznin Vila 1/B Ghop Center Road. Jessore"
+ },
+ "card5":{
+    "area_text": "Comilla",
+    "name_text": "Md. Sariful Islam",
+    "position_text":"DIC-Executive",
+    "num_text": "01991145365",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd.Nahar Villa, 447-Nozrul Avenue Kandir Par, Cumilla"
+ },
+ "card6":{
+    "area_text": "Noakhali",
+    "name_text": "Md. Moniruzzaman",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145350",
+    "map_name2":"Google Map",
+    "map_name": "Amena Monjil (1st Floor), Holding No. 247,Shahid Shah Alam Bir Uttam Sarak,Modhusudonpur, Maijdee Court,Noakahli – 3800."
+ },
+ "card7":{
+    "area_text": "Mymenshingh",
+    "name_text": "Md. Alam Mia",
+    "position_text":"DIC-Executive",
+    "num_text": "01991145376",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd,291 Maskanda, Mymenshingh"
+ },
+ "card8":{
+    "area_text": "Chittagong",
+    "name_text": "Md. Baharul Islam",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145385",
+    "map_name2":"Google Map",
+    "map_name": "House No: X-51,Road No:07,Block:A Chandgoan R/A Chittagong Depot"
+ }, 
+ "card9":{
+    "area_text": "Rangpur",
+    "name_text": "Md.Asaduzzama",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145305",
+    "map_name2":"Google Map",
+    "map_name": "House No: X-51,Road No:07,Block:A Chandgoan R/A Chittagong Depot"
+ },
+ "card10":{
+    "area_text": "Rajshahi",
+    "name_text": "Md. Abdul Motin",
+    "position_text":"DIC- Executive",
+    "num_text": "01991-145401",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd.House No-115,Sector No-02,Road No-02,Uposhahor Rajshahi."
+ },
+ "card11":{
+    "area_text": "Jhenaidah",
+    "name_text": "Md.Ashraful Isalm",
+    "position_text":"DIC- Executive",
+    "num_text": "01991-146103",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd.DR. Sheikh Mohammod Aminul Haque,30 Dukhi Mahmud sorok,Arappur, Jhenaidah. Bus Stand Dhaka Road , Bridze er Pase."
+ },
+ "text":{
+     "nearest_text":"Nearest",
+     "delivery_center":"Delivery Center",
+     "select_are_text":"Select Area",
+     "desc_text":"We serve the whole nation by covering entire Bangladesh. You can track the nearest delivery center simply by selecting the area",
+     "central_text":"Central",
+     "dhaka_text":"Dhaka",
+     "barisal_text":"Barisal",
+     "jessore_text":"Jessore",
+     "comilla_text":"Comilla",
+     "noakhali_text":"Noakhali",
+     "mymenshingh_text":"Mymenshingh",
+     "chittagong_text":"Chittagong",
+     "rangpur_text":"Rangpur",
+     "rajshahi_text":"Rajshahi",
+     "jhenaidah_text":"Jhenaidah",
+     "call_at_number":"For more details please call at our number.",
+      "number":"01991146559",
+      "no_support_video":"Your browser does not support the video tag."
+
+ }
+ },
+
+    "home":{
+       "view_more":"View More"
+    }
+}

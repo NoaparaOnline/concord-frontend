@@ -5,35 +5,36 @@ import carousel1 from "../../../Statics/assets/carousel1.jpg";
 import carousel2 from "../../../Statics/assets/carousel2.jpg";
 import carousel4 from "../../../Statics/assets/carousel4.jpg";
 import { Link } from 'react-router-dom'
-
+import { useTranslation } from 'react-i18next';
 import "./Carousel.css";
 const Slideshow = () => {
+  const {t} = useTranslation("common")
   const data = [
     {
       id:0,
-      title: "Pharmaceuticals Ltd.",
+      title: t('slide_show.pharma_text'),
       img: carousel2,
       logo: whitebglogo,
-      text: "Better Medicine Better Life",
-      btn: "GET STARTED NOW",
+      text: t('slide_show.better_medicine_text'),
+      btn: t('slide_show.get_started_btn'),
       btnlink: "/about",
     },
     {
       id:1,
-      title: "10 INTERNATIONAL DESTINATIONS",
+      title: t('slide_show.10_int_text'),
       img: carousel4,
       logo: "",
-      text: "Exporting Quality",
-      btn: "Know More",
+      text: t('slide_show.exporting_qlty_text'),
+      btn: t('slide_show.know_btn'),
       btnlink: "/contact",
     },
     {
       id:2,
-      title: "NATIONWIDE DISTRIBUTION NETWORK",
+      title: t('slide_show.nationwide_text'),
       img: carousel1,
       logo: "",
-      text: "Delivering all over the country",
-      btn: "Know More",
+      text: t('slide_show.delivering_all_text'),
+      btn: t('slide_show.know_btn'),
       btnlink: "/global-operation",
     },
 
