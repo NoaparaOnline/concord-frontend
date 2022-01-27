@@ -4,15 +4,18 @@ import bannerimg from "../Statics/assets/mediasocialmediapost.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
+
 const Media_socialmedia = () => {
+  const {t}=useTranslation('common')
   const LinksBan = [
     {
-      subLinkName: "Home",
+      subLinkName: t('media_social_media.home_text'),
       subDash: "/",
       subLink: "/",
     },
     {
-      subLinkName: "Media",
+      subLinkName: t('media_social_media.media_text'),
       subDash: "/",
       subLink: "/media",
     },
@@ -20,41 +23,41 @@ const Media_socialmedia = () => {
   const latestpost = [
     {
       id: 0,
-      post: "Concord Pharmaceuticals ltd Launched Dapazin in Myanmar 25TH August 2019.",
+      post: t('media_social_media.post_latest_1'),
       postLink: "#",
     },
     {
       id: 1,
-      post: "Concord Pharmaceuticals ltd Launched Dapazin Cambodia 25TH August 2017",
+      post: t('media_social_media.post_latest_2'),
       postLink: "#",
     },
     {
       id: 2,
-      post: "Attend Medi Vietnam Pharma EXPO 3rd to 5th December 2014",
+      post: t('media_social_media.post_latest_3'),
       postLink: "#",
     },
   ];
   const socialpost = [
     {
-      head: "Concord Pharmaceuticals ltd Launched Dapazin in Myanmar 25TH August 2019.",
+      head: t('media_social_media.post_social_head_1'),
       headLink: "#",
-      text: "Concord Pharmaceuticals Ltd., Bangladesh launched  Dapazin  for the first time  with the collaboration with Zar & Zar Co., Ltd in Hotel Melia Yangon, Myanmar.It was officially opened by Prof. Tint SweLatt President, Myanmar Diabetic Association (MMDI) and highlighted how revolutionary Dapagliflozin in the field of medicine and the current global concern of SGLT-2 Inhibitor in managing Type-2 diabetes. He emphasized that every county can play a role by preventing and managing this disease, and promoting prudent use ...",
-      date: "August 25, 2019",
+      text: t('media_social_media.post_social_text_1'),
+      date: t('media_social_media.post_social_date_1'),
       dateLink: "#",
     },
     {
-      head: "Concord Pharmaceuticals ltd Launched Dapazin Cambodia 25TH August 2017",
+      head: t('media_social_media.post_social_head_2'),
       headLink: "#",
-      text: "Concord Pharmaceutical Ltslaunched successfully  Dapazin first time in Cambodia at Concord Pharmaceuticals Ltd  Bangladesh launched  Dapazin  for the first time  with the collaboration with Cambodia Corporation Pharma Ltd in Cambodia .Chairman of  Concord Pharmaceuticals Ltd has enlightened the team with  the future vision and mission of the company and added some appreciating words from his part to the marketing and sales team followed by opening ceremony speech.Cambodian Cooperation Pharma chairman give opening ...",
-      date: "August 25, 2017",
+      text: t('media_social_media.post_social_text_2'),
+      date: t('media_social_media.post_social_date_2'),
       dateLink: "#",
     },
 
     {
-      head: "Attend Medi Vietnam Pharma EXPO 3rd to 5th December 2014",
+      head: t('media_social_media.post_social_head_2'),
       headLink: "#",
-      text: "Concord Pharmaceuticals Ltd. has joined  21st Vietnam International Medical Hospital Pharmaceutical  Exhibition In Hanoi Ho Chi Minh City named  Medi Vietnam Pharm Expo in 2014. It includes medical and laboratory equipment, pharmaceutical products and medical instruments, machines and materials used in hospitals, ophthalmology and dental products and technology.This fair aims to bridge between domestic and international organization in the pharmaceutical & health sector. More than 100 companies from 18 countries will display Pharmaceutical products , packaging and ...",
-      date: "November 3, 2014",
+      text: t('media_social_media.post_social_text_2'),
+      date: t('media_social_media.post_social_date_2'),
       dateLink: "#",
     },
   ];
@@ -62,13 +65,13 @@ const Media_socialmedia = () => {
   return (
     <>
       <Helmet>
-        <title>Social Media Post - Concord Pharma</title>
+        <title>{t('media_social_media.helmet.title_text')}</title>
       </Helmet>
 
       <BannerWithText
         imgSrc={bannerimg}
-        heading={"All Blog Posts"}
-        subHeading={`Social Media Post`}
+        heading={t('media_social_media.all_blog_post')}
+        subHeading={t('media_social_media.social_post_text')}
         LinksBan={LinksBan}
         height={"400px"}
         backposit={"center right"}
@@ -132,7 +135,7 @@ const Media_socialmedia = () => {
                   color: "#0066b3",
                 }}
               >
-                Latest Posts
+                {t('media_social_media.latest_post')}
               </h3>
               <div
                 style={{

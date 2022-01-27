@@ -3,17 +3,18 @@ import { CompanyLogos,Milestones } from '../components'
 import bannerimg from "../Statics/assets/milestonebanner.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 const Media_milestone = () => {
-
+const {t}=useTranslation('common');
     // BannerWithText Wale Ki Links Ka Object
     const LinksBan = [
         {
-            subLinkName: 'Home',
+            subLinkName: t('media_milestones.home_text'),
             subDash: '/',
             subLink: '/'
         },
         {
-            subLinkName: 'Media',
+            subLinkName: t('media_milestones.media_text'),
             subDash: '/',
             subLink: '/media'
         },
@@ -22,68 +23,69 @@ const Media_milestone = () => {
     const milestone_data = [
         {
             id: 0,
-            year: '2010',
-            text: 'Inauguration of CONCORD'
+            year: t('media_milestones.year_1'),
+            text: t('media_milestones.text_1')
         },
         {
             id: 1,
-            year: '2010',
-            text: 'Factory Establish'
+            year: t('media_milestones.year_2'),
+            text: t('media_milestones.text_2')
         },
         {
             id: 2,
-            year: '2011',
-            text: 'Depot Establish'
+            year: t('media_milestones.year_3'),
+            text: t('media_milestones.text_3')
         },
         {
             id: 3,
-            year: '2012',
-            text: 'Annual Conference'
+            year: t('media_milestones.year_4'),
+            text: t('media_milestones.text_4')
         },
         {
             id: 4,
-            year: '2014',
-            text: 'GMP Approval'
+            year: t('media_milestones.year_5'),
+            text: t('media_milestones.text_5')
         },
         {
             id: 5,
-            year: '2014',
-            text: 'First Export'
+            year: t('media_milestones.year_6'),
+            text: t('media_milestones.text_6')
         },
         {
             id: 6,
-            year: '2015',
-            text: 'Dapazin (First time in Bangladesh) launching program'
+            year: t('media_milestones.year_7'),
+            text: t('media_milestones.text_7')
         },
         {
             id: 7,
-            year: '2016',
-            text: 'Relikof (First time in Bangladesh) launching'
+            year: t('media_milestones.year_8'),
+            text: t('media_milestones.text_8')
         },
         {
             id: 8,
-            year: '2018',
-            text: 'Health Associates Establish'
+            year: t('media_milestones.year_9'),
+            text: t('media_milestones.text_9')
         },
         {
             id: 9,
-            year: '2021',
-            text: '1 million $ Export of Dapazin'
+            year: t('media_milestones.year_10'),
+            text: t('media_milestones.text_10')
         },
       ];
+      
 
       const label = {
-        Milestones: "Milestones",
+        Milestones: t('media_milestones.milestones_text'),
       };
     return (
         <>
         <Helmet>
-        <title>Milestones - Concord Pharma</title>
+        <title>{t('media_milestones.helmet.title_text')}</title>
       </Helmet>
             <BannerWithText
                 imgSrc={bannerimg}
-                heading={"Milestones"}
-                subHeading={`Milestones`}
+                heading={t('media_milestones.milestones_text')}
+                subHeading={t('media_milestones.milestones_text').toUpperCase()}
                 LinksBan={LinksBan}
                 height={"400px"}
                 

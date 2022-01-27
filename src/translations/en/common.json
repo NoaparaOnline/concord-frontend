@@ -367,7 +367,104 @@
          "desc_text_1":"Our warehouse is a highly controlled & strictly maintained all environmental regulations. The area is equipped with highly temperature regulated, proper storage & handling system. All security measures are well established with appropriate fire-fighting equipment and controlled access to the building.",
          "desc_text_2":"Our sampling & quarantine areas with separate storage location allows the proper placing of penicillin, cephalosporin and general products. We maintain controlled room conditions for specific materials to confirm the standard compliance. We maintain retention sample in separate room under standard conditions. All the materials are stored in the warehouse by pallet racking. The movement system of the materials maintains a strict ‘first in first out’ procedure and shelf life of products are strictly monitored."
          
+      },
+      "media_milestones":{
+         "year_1":"2010",
+         "year_2":"2010",
+         "year_3":"2011",
+         "year_4":"2012",
+         "year_5":"2014",
+         "year_6":"2014",
+         "year_7":"2015",
+         "year_8":"2016",
+         "year_9":"2018",
+         "year_10":"2021",
+         "text_1":"Inauguration of CONCORD",
+         "text_2":"Factory Establish",
+         "text_3":"Depot Establish",
+         "text_4":"Annual Conference",
+         "text_5":"GMP Approval",
+         "text_6":"First Export",
+         "text_7":"Dapazin (First time in Bangladesh) launching program",
+         "text_8":"Relikof (First time in Bangladesh) launching",
+         "text_9":"Health Associates Establish",
+         "text_10":"1 million $ Export of Dapazin",
+         "milestones_text":"Milestones",
+         "home_text":"Home",
+         "media_text":"Media",
+         "helmet":{
+            "title_text":"Milestones - Concord Pharma"
+         }   
+      },
+      "media":{
+          "text_1":"Video",
+          "text_2":"Events",
+          "text_3":"Social Media Post",
+          "text_4":"Milestones",
+          "text_5":"Social Responsibilities",
+          "media_text":"Media",
+          "home_text":"Home",
+          "helmet":{
+            "title_text":"Media - Concord Pharma"
+         }  
+      },
+      "video":{
+         "media_text":"Media",
+          "home_text":"Home",
+          "title":"This is a unique title",
+          "video_text":"Videos",
+          "helmet":{
+            "title_text":"Videos - Concord Pharma"
+            
+         }  
+      },
+      "media_events":{
+         "home_text":"Home",
+         "events_text":"Events",
+         "media_text":"Media",
+         "event_1":"Annual Confrence 2013",
+         "event_2":"Annual Confrence 2014",
+         "event_3":"Dapazine Lunching Program",
+         "view_more_text":"View More",
+         "helmet":{
+            "title_text":"Events - Concord Pharma"
+            
+         } 
       }
+      ,"media_photo":{
+         "home_text":"Home",
+         "media_text":"Media",
+         "photo_text":"Photos",
+         "helmet":{
+            "title_text":"Photo - Concord Pharma"
+            
+         } 
+      },
+      "media_social_media":{
+         "post_latest_1":"Concord Pharmaceuticals ltd Launched Dapazin in Myanmar 25TH August 2019.",
+         "post_latest_2":"Concord Pharmaceuticals ltd Launched Dapazin Cambodia 25TH August 2017",
+         "post_latest_3":"Attend Medi Vietnam Pharma EXPO 3rd to 5th December 2014",
+         "post_social_head_1":"Concord Pharmaceuticals ltd Launched Dapazin in Myanmar 25TH August 2019.",
+         "post_social_text_1":"Concord Pharmaceuticals Ltd., Bangladesh launched  Dapazin  for the first time  with the collaboration with Zar & Zar Co., Ltd in Hotel Melia Yangon, Myanmar.It was officially opened by Prof. Tint SweLatt President, Myanmar Diabetic Association (MMDI) and highlighted how revolutionary Dapagliflozin in the field of medicine and the current global concern of SGLT-2 Inhibitor in managing Type-2 diabetes. He emphasized that every county can play a role by preventing and managing this disease, and promoting prudent use ...",
+         "post_social_date_1":"August 25, 2019",
+         "post_social_head_2":"Concord Pharmaceuticals ltd Launched Dapazin Cambodia 25TH August 2017",
+         "post_social_text_2":"Concord Pharmaceutical Ltslaunched successfully  Dapazin first time in Cambodia at Concord Pharmaceuticals Ltd  Bangladesh launched  Dapazin  for the first time  with the collaboration with Cambodia Corporation Pharma Ltd in Cambodia .Chairman of  Concord Pharmaceuticals Ltd has enlightened the team with  the future vision and mission of the company and added some appreciating words from his part to the marketing and sales team followed by opening ceremony speech.Cambodian Cooperation Pharma chairman give opening ...",
+         "post_social_date_2":"August 25, 2017",
+         "post_social_head_3":"Attend Medi Vietnam Pharma EXPO 3rd to 5th December 2014",
+         "post_social_text_3":"Concord Pharmaceuticals Ltd. has joined  21st Vietnam International Medical Hospital Pharmaceutical  Exhibition In Hanoi Ho Chi Minh City named  Medi Vietnam Pharm Expo in 2014. It includes medical and laboratory equipment, pharmaceutical products and medical instruments, machines and materials used in hospitals, ophthalmology and dental products and technology.This fair aims to bridge between domestic and international organization in the pharmaceutical & health sector. More than 100 companies from 18 countries will display Pharmaceutical products , packaging and ...",
+         "post_social_date_3":"November 3, 2014",
+         "home_text":"Home",
+         "media_text":"Media",
+         "latest_post":" Latest Posts",
+         "all_blog_post":"All Blog Posts",
+         "social_post_text":"Social Media Post",
+         "helmet":{
+            "title_text":"Social Media Post - Concord Pharma"
+            
+         } 
+      }
+
+    
    }
 
 
