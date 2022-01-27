@@ -545,7 +545,6 @@ export const ViewChildSalesManagerManagerAction = () => async (dispatch) => {
     // })
     let res = await apiServices.getChildSm()
 
-    console.log(res,"ers");
     if (res?.data?.response_code === 200) {
       dispatch({
         type: VIEW_SM_CONSTANT.VIEW_SM_LOADING,

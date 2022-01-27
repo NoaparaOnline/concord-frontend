@@ -27,6 +27,13 @@ function SearchBar({ placeholder, data }) {
     setWordEntered("");
   };
 
+  const getFirstWord = (string) => {
+    const words = string.split(" ");
+    return words[0].toLowerCase();
+  };
+  
+ 
+
   return (
     <>
   
@@ -73,7 +80,7 @@ function SearchBar({ placeholder, data }) {
             {filteredData.slice(0, 15).map((value, key) => {
               return (
                 <div
-                  onClick={() => history?.push("/prod_details",{data : value})}
+                  onClick={() => history?.push(`/prod-details/${getFirstWord(value.title)}/${value.id}`,{data : value})}
                   style={{ textDecoration: "none" }}
                   className="dataItem"
                 >

@@ -14,7 +14,7 @@ export const data = [
         imge: acubis25bk,
       },
     ],
-    backpagelink: "/by_generic_name",
+    backpagelink: "/by-generic-name",
     innerMainHeading: "Holicef® Injection",
     innerComposition: "Ceftriaxone BP",
     innerData: [

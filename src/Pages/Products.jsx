@@ -19,13 +19,13 @@ const Products = () => {
         id:0,
         imageURL: productscard1,
         text: "By Trade Name",
-        link: "/by_trade_name",
+        link: "/by-trade-name",
       },
       {
         id:1,
         imageURL: productscard2,
         text: "By Generic Name",
-        link: "/by_generic_name",
+        link: "/by-generic-name",
       },
       {
         id:2,
