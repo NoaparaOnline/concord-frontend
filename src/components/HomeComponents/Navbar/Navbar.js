@@ -21,22 +21,22 @@ import ChangePassword from "../../ReusableComponents/modals/ChangePassword/Chang
 import SearchBar from "../../ReusableComponents/SearchComponent/SearchBar";
 import { ByTherapeutic } from "../ProductsData/productbytheraputic";
 import { FirstTime } from "../ProductsData/productsfirstimelaunch";
+import { useTranslation } from "react-i18next";
 //
 
 const Navbars = (props) => {
+  const { t, i18n } = useTranslation("common");
+  const [langtoggle, setLangtoggle] = useState("en");
   const history = useHistory();
 
-  const allarray = [ByTherapeutic,FirstTime]
+  const allarray = [ByTherapeutic, FirstTime];
   const AllmergeData = [];
-  allarray.map((item)=>{
-    return(
-      item.map((item1) =>{
-        AllmergeData.push(item1)
-      })
-    );
-  })
+  allarray.map((item) => {
+    return item.map((item1) => {
+      AllmergeData.push(item1);
+    });
+  });
 
-  
   const userRole = useSelector((state) => state?.logIn?.userRole);
   const dispatch = useDispatch();
   const logoutHandler = () => {
@@ -80,8 +80,8 @@ const Navbars = (props) => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top custom-nav " >
-        <div className="container" >
+      <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top custom-nav ">
+        <div className="container">
           <Link to="/">
             <img
               alt="logo"
@@ -102,11 +102,11 @@ const Navbars = (props) => {
             <span className="navbar-toggler-icon "></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent" >
-            <div className="ms-auto" >
-              <div className="row" >
-                <ul className="navbar-nav  justify-content-end text-uppercase fontsizefamily" >
-                  <li className="nav-item " >
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="ms-auto">
+              <div className="row">
+                <ul className="navbar-nav  justify-content-end text-uppercase fontsizefamily">
+                  <li className="nav-item ">
                     <NavLink
                       className="nav-link firstnav"
                       aria-current="page"
@@ -116,7 +116,7 @@ const Navbars = (props) => {
                       {/* <span className="custom_span_style"></span> */}
                     </NavLink>
                   </li>
-                  <li className="nav-item" >
+                  <li className="nav-item">
                     <NavLink
                       className="nav-link firstnav"
                       aria-current="page"
@@ -126,10 +126,7 @@ const Navbars = (props) => {
                     </NavLink>
                   </li>
                   <div className="col-sm-3">
-                    
-                    <SearchBar
-                    placeholder="Search" data={AllmergeData} 
-                    />
+                    <SearchBar placeholder="Search" data={AllmergeData} />
                   </div>
 
                   {user ? (
@@ -261,7 +258,12 @@ const Navbars = (props) => {
                       style={{ listStyle: "none", background: "white" }}
                     >
                       <li>
-                        <Link className="dropdown-item conCapitalized " to="#">
+                        <div
+                          className="dropdown-item conCapitalized "
+                          onClick={() => {
+                            i18n.changeLanguage("en");
+                          }}
+                        >
                           <span>
                             {" "}
                             <img
@@ -271,10 +273,14 @@ const Navbars = (props) => {
                             />{" "}
                             english
                           </span>
-                        </Link>
+                        </div>
                       </li>
                       <li>
-                        <Link className="dropdown-item conCapitalized" to="#">
+                        <div className="dropdown-item conCapitalized" 
+                        onClick={() => {
+                          i18n.changeLanguage("ar");
+                        }}
+                        >
                           <span>
                             {" "}
                             <img
@@ -284,10 +290,14 @@ const Navbars = (props) => {
                             />
                             arabic{" "}
                           </span>
-                        </Link>
+                        </div>
                       </li>
                       <li>
-                        <Link className="dropdown-item conCapitalized" to="#">
+                        <div className="dropdown-item conCapitalized"
+                        onClick={() => {
+                          i18n.changeLanguage("ban");
+                        }}
+                        >
                           <span>
                             {" "}
                             <img
@@ -297,7 +307,7 @@ const Navbars = (props) => {
                             />
                             bengali
                           </span>
-                        </Link>
+                        </div>
                       </li>
                     </ul>
                   </li>
