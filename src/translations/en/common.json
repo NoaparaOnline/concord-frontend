@@ -695,7 +695,7 @@
          "actions_text":"Actions",
          "no_data_to_display":"No Data to Display",
          "view_btn_name":"View",
-         "payments":"Payments"
+         "payments_text":"Payment"
       },
       "header_dash":{
          "sun_text":"Sunday",
