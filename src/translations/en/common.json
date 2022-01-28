@@ -459,6 +459,18 @@
             "title_text":"Social Media Post - Concord Pharma"      
          } 
       },
+
+      "contact":{
+         "dist_network_text":"Our Distribution Network",
+         "contact_us_text":"Contact Us",
+         "home_text":"Home",
+         "contact_text":"Contact",
+         "helmet":{
+            "title_text":"Contact - Concord Pharma"
+            
+         } 
+      },
+     
       "contact_contact_us":{
          "helmet":{
             "title_text":"Contactus - Concord Pharma"
@@ -494,9 +506,58 @@
          "text_5":"Message",
          "submit_btn":"Submit",
          "field_req_text":"This field is required field"
-      }
-
-    
+      },
+      "carrers":{
+         "home_text":"Home",
+         "pos_1_text":"Medical Promotion Officer (MPO)",
+         "date_1_text":"Posted 3 month ago",
+         "pos_2_text":"Area Manager (AM)",
+         "date_2_text":"Posted 3 month ago",
+         "pos_3_text":"Regional Sales Manager (RSM)",
+         "date_3_text":"Posted 3 month ago",
+         "pos_4_text":"Other Positions",
+         "date_4_text":"Posted 3 month ago",
+         "job_arch":"Job Archives",
+         "all_jobs_text":"All Jobs",
+         "apply_now":"Apply Now",
+         "jobs_text":"Jobs",
+         "helmet":{
+            "title_text":"Contactus - Concord Pharma"
+            
+         } 
+      },
+      "career_inner_page":{
+         "name_text_1":"Executive",
+         "name_text_2":"Sr. Executive",
+         "name_text_3":"Assistant Manager",
+         "name_text_4":"Deputy Manager",
+         "name_text_5":"Manager",
+         "name_text_6":"Assistant General ManagerAssistant General Manager",
+         "name_text_7":"General Manager",
+         "name_text_8":"Sales Manager",
+         "name_text_9":"National Sales Manager",
+         "upload_report":"Please upload Report",
+         "applied_success_text":"Applied Successfully",
+         "desc_text":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+         "apply_online_text":"Apply Online",
+         "full_name_text":"Full Name",
+         "email_text":"Email",
+         "phone_text":"Phone",
+         "interested_area_text":"Interested Area",
+         "placeholder_phone":"+880XXXXXXXX",
+          "field_req_text":"this field is required field",
+          "interested_job_lvl":"Interested Job Level",
+          "opt_text_level":"Select Interested Job Level",
+          "opt_1_text_area":"Select Interested Area",
+          "attach_resume":"Attach Resume",
+          "submit_text":"Submit",
+         "helmet":{
+            "title_text":"Careers Detail - Concord Pharma"
+         } 
+      } 
+   
+      
    }
+   
 
 
