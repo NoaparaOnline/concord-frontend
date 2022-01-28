@@ -52,13 +52,13 @@ export const payment = (handleEdit) => {
 
 
 
-export const tableinner = (handleEdit) => {
+export const tableinner = (t) => {
   return [
-    'S.No',
-    'Product Name',
-    'Quantity',
-    'Trade Price',
-    'Amount',
+    t('table_inner_page.s_no'),
+    t('table_inner_page.product_name_text'),
+    t('table_inner_page.quantity_text'),
+    t('table_inner_page.trade_price_text'),
+    t('table_inner_page.amount_text'),
 
   ];
 };

@@ -1,8 +1,9 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 const HeaderDash = () => {
+ const {t}=useTranslation('common')
   const today = new Date();
-  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var days = [ t('header_dash.sun_text'), t('header_dash.mon_text'), t('header_dash.tue_text'),t('header_dash.wed_text') , t('header_dash.thu_text'), t('header_dash.fri_text'),t('header_dash.sat_text')];
   const date = today.getFullYear() + " / " + (today.getMonth() + 1) + " / " + today.getDate();
   const day = days[today.getDay()];
   return (

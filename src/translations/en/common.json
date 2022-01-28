@@ -623,7 +623,90 @@
          "contact":"contact",
          "our_dist_net_text":"our distribution network",
          "contact_us":"contact us"
+      },
+      "order_history":{
+         "order_id":"Orders ID",
+         "customer_name":"Customer Name",
+         "market_address":"Market Address",
+         "order_date_time":"Order Date/Time",
+         "payment_type":"Payment Type",
+         "delivery_status":"Delivery Status",
+         "approved_by":"Approved By",
+         "payment_status":"Payment Status",
+         "proceed_by":"Proceed By",
+         "actions_text":"Actions",
+         "view_btn_name":"View",
+         "order_request_text":"Order Request",
+         "no_data_to_display":"No Data to Display"
+      },
+      "inner_page":{
+         "back":"Back"
+      },
+      "table_inner_page":{
+         "order_id":"OrderID",
+         "customer_name":"Customer Name",
+         "market_address":"Market Address",
+         "order_date_time":"Order Date/Time",
+         "proceed_by":"Proceed By",
+         "mpo_text":"MPO",
+         "ordered_by":"Ordered By",
+         "sub_total":"Sub Total",
+         "value_added":"A value-added tax %",
+         "payment_type":"Payment Type",
+         "total_text":"Total",
+         "s_no":"S.No",
+         "product_name_text":"Product Name",
+         "quantity_text":"Quantity",
+         "trade_price_text":"Trade Price",
+         "amount_text":"Amount"
+      },
+      "stocks":{
+         "product_name":"Product Name",
+         "category_name":"Category Name",
+         "qty_text":"Quantity",
+         "formulas_text":"Formulas",
+         "price_text":"Price",
+         "all_text":"All",
+         "medicine_text":"Medicine",
+         "gift_text":"Gift",
+         "no_data_to_display":"No Data to Display",
+         "stocks":"Stocks"
+      },
+      "delivery_status":{
+         "order_id":"Orders ID",
+         "customer_name":"Customer Name",
+         "market_address":"Market Address",
+         "order_date_time":"Order Date/Time",
+         "payment_type":"Payment Type",
+         "delivery_status":"Delivery Status",
+         "payment_status":"Payment Status",
+         "proceed_by":"Proceed By",
+         "actions_text":"Actions",
+         "view_btn_name":"View",
+         "order_request_text":"Order Request",
+         "no_data_to_display":"No Data to Display"
+      },
+      "payment":{
+         "customer_name":"Customer Name",
+         "payment_type":"Payment Type",
+         "payment_status":"Payment Status",
+         "vat_text":"Vat",
+         "total_text":"Total",
+         "actions_text":"Actions",
+         "no_data_to_display":"No Data to Display",
+         "view_btn_name":"View",
+         "payments":"Payments"
+      },
+      "header_dash":{
+         "sun_text":"Sunday",
+         "mon_text" :"Monday",
+         "tue_text":"Tuesday",
+         "wed_text":"Wednesday",
+         "thu_text":"Thursday",
+         "fri_text":"Friday",
+         "sat_text":"Saturday"
       }
+      
    }
    
 

@@ -16,6 +16,7 @@ import Loader from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
 import { getoldOrder, getSingleOrder } from '../../Store/Actions/deportmanagerActions';
 import moment from 'moment';
+import { useTranslation } from 'react-i18next';
 
 
 const DeliveryStatus = (
@@ -25,7 +26,7 @@ const DeliveryStatus = (
         deopdefaultSorted,
       }
       ) => {
-        
+        const {t} =useTranslation('common')
         const oldorder = useSelector((state) => state?.deport?.oldorder);
         const dispatch = useDispatch();
         
@@ -37,22 +38,22 @@ const DeliveryStatus = (
  
      //Delivery Status COLUMN HEADERS
   const DepomanagerDelivery = [
-    { dataField: "order_id", text: "Orders ID", sort: true },
-    { dataField: "customer.name", text: "Customer Name", sort: true },
+    { dataField: "order_id", text: t('delivery_status.order_id'), sort: true },
+    { dataField: "customer.name", text: t('delivery_status.customer_name'), sort: true },
     {
-      dataField: "customer.market__street_address", text: "Market Address",
+      dataField: "customer.market__street_address", text: t('delivery_status.market_address') ,
        sort: true
     },
     {
       dataField: "order_datetime",
-      text: "Order Date/Time",
+      text:  t('delivery_status.order_date_time'),
       formatter: dateFormatter,
       sort: true
     },
-    { dataField: "payment_type", text: "Payment Type", sort: true },
+    { dataField: "payment_type", text: t('delivery_status.payment_type'), sort: true },
     {
       dataField: "delivery_status",
-      text: "Delivery Status",
+      text: t('delivery_status.delivery_status') ,
       style: (cell, row) => {
         if (cell === "pending") return { color: "#C0B627", fontWeight: "500"};
         else if (cell === "cancelled" || cell === "declined")
@@ -72,7 +73,7 @@ const DeliveryStatus = (
     },
     {
       dataField: "payment_status",
-      text: "Payment Status",
+      text: t('delivery_status.payment_status'),
       style: (cell, row) => {
         if (cell === "pending") return { color: "#C0B627", fontWeight: "500" };
         else if (cell === "cancelled" || cell === "declined" ||  cell === "deposited")
@@ -89,8 +90,8 @@ const DeliveryStatus = (
       },
       sort: true
     },
-    { dataField: "ordered_by.name", text: "Proceed By", sort: true },
-    { dataField: "customer", formatter: btnFormatterdelivery, text: "Actions" },
+    { dataField: "ordered_by.name", text: t('delivery_status.proceed_by') , sort: true },
+    { dataField: "customer", formatter: btnFormatterdelivery, text: t('delivery_status.actions_text')},
   ];
 
 
@@ -134,7 +135,7 @@ const DeliveryStatus = (
              className={`btn`}
              style={{ borderRadius: "5px",backgroundColor:'#22A6AC' }}
             >
-              <span style={{  color: "#fff" }}>View</span>  
+              <span style={{  color: "#fff" }}> {t('delivery_status.view_btn_name')}</span>  
             </div>
               </Link>
           </div>
@@ -142,13 +143,13 @@ const DeliveryStatus = (
       </>
     );
   }
-  const emptyDataMessage = () => { return 'No Data to Display';}
+  const emptyDataMessage = () => { return t('delivery_status.no_data_to_display') ;}
     return (
         <>
          <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="Delivery Status"
+            Heading= {t('delivery_status.delivery_status')} 
           />
 
             <DashboardMainCard
