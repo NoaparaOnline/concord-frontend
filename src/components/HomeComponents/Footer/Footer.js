@@ -9,7 +9,6 @@ const Footer = () => {
   return (
 
     <>
-
       <div className="backg">
 
 

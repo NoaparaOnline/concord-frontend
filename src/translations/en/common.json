@@ -582,9 +582,48 @@
          "copyright_text":"© Copyright 2021. All Right reserved.",
          "dev_by_text":"Designed and Developed by",
          "ripple_intra_text":"Ripple Intra"
+      },
+      "header":{
+         "site_map_text":"Sitemap",
+         "careers_text":"careers",
+         "search_text":"Search",
+         "dashboard_text":"Dashboard",
+         "notifications_text":"Notifications",
+         "change_password_text":"Change Password",
+         "logout_text":"Log Out",
+         "login_text":"login",
+         "english_text":"English",
+         "arabic_text":"arabic",
+         "bengali_text":"bengali",
+         "home_text":"HOME",
+         "about_us_text":"ABOUT-US",
+         "vision_mission_text":"Vision & Mission",
+         "health_ass_text":"Health Associates",
+         "chairmans_profile":"Chairman’s Profile",
+         "msg_frm_chair":"Message from Chairman",
+         "global_operation":"Gloabl Operation",
+         "products_text":"Products",
+         "by_trade_name":"By trade name",
+         "by_generic_name":"By generic name",
+         "by_therap_class":"By therapeutic class",
+         "first_time_launch":"first time launching",
+         "facilities_text":"Facilities",
+         "reserch_and_develop":"Research and Development",
+         "production_text":"Production",
+         "quality_control_text":"Quality Control",
+         "warehouse_text":"Warehouse",
+         "our_distribution_network":"Our distribution network",
+         "tele_medicine":"Tele-Medicine",
+         "media_text":"media",
+         "video_text":"video",
+         "events_text":"Events",
+         "social_media_post":"social media post",
+         "mile_stones_text":"mile stones",
+         "social_resp_text":"social responsibilities",
+         "contact":"contact",
+         "our_dist_net_text":"our distribution network",
+         "contact_us":"contact us"
       }
-   
-      
    }
    
 
