@@ -8,17 +8,19 @@ import { toast } from "react-toastify";
 import {validateEmail} from '../Utils/functions'
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 const Contact_contactus = () => {
   const dispatch = useDispatch();
+  const {t}=useTranslation('common')
   const LinksBan = [
     {
-      subLinkName: "Home",
+      subLinkName: t('contact_contact_us.home_text'),
       subDash: "/",
       subLink: "/",
     },
     {
-      subLinkName: "Contact",
+      subLinkName: t('contact_contact_us.contact_text'),
       subDash: "/",
       subLink: "/contact",
     },
@@ -54,16 +56,16 @@ const Contact_contactus = () => {
         const res = await dispatch(SendGridMailApi(apiData));
         if(res?.response_code === 200){
           setSuccess(true);
-          toast.info("Email Send Successfully")
+          toast.info(t('contact_contact_us.email_sent'))
         }
         else{
             setSuccess(false)
-          toast.error("Email Not Send")
+          toast.error(t('contact_contact_us.email_not_sent'))
         }
 
       }
       else{
-        toast.error("Please Enter Valid Email")
+        toast.error(t('contact_contact_us.invalid_email'))
       }
      
     
@@ -72,12 +74,12 @@ const Contact_contactus = () => {
   return (
     <>
     <Helmet>
-        <title>Contactus - Concord Pharma</title>
+        <title>{t('contact_contact_us.helmet.title_text')}</title>
       </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
-        heading={"Contact Us"}
-        subHeading={`CONTACT US`}
+        heading={t('contact_contact_us.contact_text')}
+        subHeading={t('contact_contact_us.contact_text').toUpperCase()}
         LinksBan={LinksBan}
         
         backposit={'center right'}
@@ -93,9 +95,9 @@ const Contact_contactus = () => {
           <div className="col-lg-6">
             <div className="serviceBox1">
               <div className="service-content1">
-                <h3>For Corporate Business</h3>
+                <h3>{t('contact_contact_us.corporate_business')}</h3>
                 <span style={{ color: "#565656" }}>
-               Head-Office : Sima Blossom (11th Floor), House#3(New) 390(Old) Road#16(New) #27(old), Dhanmondi,Dhaka-1206
+               {t('contact_contact_us.address')}
                 </span>
               </div>
 
@@ -106,8 +108,8 @@ const Contact_contactus = () => {
 
             <div className="serviceBox1">
               <div className="service-content1">
-                <h3>Phone</h3>
-                <span style={{ color: "#565656" }}>+01991146559</span>
+                <h3>{t('contact_contact_us.phone_text')}</h3>
+                <span style={{ color: "#565656" }}>{t('contact_contact_us.phone_number')}</span>
               </div>
               <div className="service-icon1">
                 <i className="fa fa-phone"></i>
@@ -116,8 +118,8 @@ const Contact_contactus = () => {
 
             <div className="serviceBox1">
               <div className="service-content1">
-                <h3>Fax</h3>
-                <span style={{ color: "#565656" }}>01991146559</span>
+                <h3>{t('contact_contact_us.fax_text')}</h3>
+                <span style={{ color: "#565656" }}>{t('contact_contact_us.fax_num')}</span>
               </div>
               <div className="service-icon1">
                 <i className="fa fa-fax" aria-hidden="true"></i>
@@ -126,7 +128,7 @@ const Contact_contactus = () => {
 
             <div className="serviceBox1">
               <div className="service-content1">
-                <h3>Email</h3>
+                <h3>{t('contact_contact_us.email_text')}</h3>
                 <a
                   className="secnav"
                   href="mailto:headoffice@concordpharma-bd.com"
@@ -143,10 +145,9 @@ const Contact_contactus = () => {
           <div className="col-lg-6">
             <div className="serviceBox1">
               <div className="service-content1">
-                <h3>For International Business</h3>
+                <h3>{t('contact_contact_us.int_business')}</h3>
                 <span style={{ color: "#565656" }}>
-                  Faysal Md. Shaheen Manager &amp; Head, Int’l Business
-                  Department
+                  {t('contact_contact_us.name')} &amp; {t('contact_contact_us.business_deprt')}
                 </span>
               </div>
 
@@ -157,8 +158,8 @@ const Contact_contactus = () => {
 
             <div className="serviceBox1">
               <div className="service-content1">
-                <h3>Phone</h3>
-                <span style={{ color: "#565656" }}><br/>01991145006 , 880248120339<b></b> </span>
+                <h3> {t('contact_contact_us.phone_text')}</h3>
+                <span style={{ color: "#565656" }}><br/>{t('contact_contact_us.int_phone_number')}<b></b> </span>
               </div>
               <div className="service-icon1">
                 <i className="fa fa-phone"></i>
@@ -167,8 +168,8 @@ const Contact_contactus = () => {
 
             <div className="serviceBox1">
               <div className="service-content1">
-                <h3>Fax</h3>
-                <span style={{ color: "#565656" }}>+88-02-9146483</span>
+                <h3>{t('contact_contact_us.fax_text')}</h3>
+                <span style={{ color: "#565656" }}>{t('contact_contact_us.int_fax')}</span>
               </div>
               <div className="service-icon1">
                 <i className="fa fa-fax" aria-hidden="true"></i>
@@ -177,7 +178,9 @@ const Contact_contactus = () => {
 
             <div className="serviceBox1">
               <div className="service-content1">
-                <h3>Email</h3>
+                <h3>
+                {t('contact_contact_us.email_text')}
+                  </h3>
                 <a
                   className="secnav"
                   href="mailto:info@concordpharma-bd.com"
@@ -210,10 +213,18 @@ const Contact_contactus = () => {
                     })}
                     
                   >
-                    <option>General Inquiry</option>
-                    <option>Sales</option>
-                    <option>Delivery Service</option>
-                    <option>Complaints & Suggestions</option>
+                    <option>
+                    {t('contact_contact_us.opt_1')}
+                     </option>
+                    <option>
+                    {t('contact_contact_us.opt_2')}
+                      </option>
+                    <option>
+                    {t('contact_contact_us.opt_3')}
+                     </option>
+                    <option>
+                    {t('contact_contact_us.opt_4')}
+                      </option>
                   </select>
                   {errors?.dropsel?.message ? (
                       <div className="text-error">{errors?.dropsel?.message}</div>
@@ -227,14 +238,14 @@ const Contact_contactus = () => {
                     type="name"
                     className="form-control"
                     id=""
-                    placeholder="Name"
+                    placeholder= {t('contact_contact_us.text_1')}
                     required="required"
                     name="Name"
                     autocomplete="off"
                     {...register("name", {
                       required: {
                         value: true,
-                        message: "This field is required field",
+                        message: t('contact_contact_us.field_req_text'),
                       },
                     })}
                   />
@@ -253,12 +264,12 @@ const Contact_contactus = () => {
                     id=""
                     name="Email"
                     required="required"
-                    placeholder="Email"
+                    placeholder= {t('contact_contact_us.text_2')}
                     autocomplete="off"
                     {...register("email", {
                       required: {
                         value: true,
-                        message: "This field is required field",
+                        message: t('contact_contact_us.field_req_text'),
                       },
                     })}
                   />
@@ -275,12 +286,12 @@ const Contact_contactus = () => {
                     id=""
                     name="Numbers"
                     required="required"
-                    placeholder="Contact Number"
+                    placeholder= {t('contact_contact_us.text_3')}
                     autocomplete="off"
                     {...register("phone", {
                       required: {
                         value: true,
-                        message: "This field is required field",
+                        message: t('contact_contact_us.field_req_text'),
                       },
                     })}
                   />
@@ -299,12 +310,12 @@ const Contact_contactus = () => {
                     id=""
                     name="Subject"
                     required="required"
-                    placeholder="Subject"
+                    placeholder= {t('contact_contact_us.text_4')}
                     autocomplete="off"
                     {...register("subject", {
                       required: {
                         value: true,
-                        message: "This field is required field",
+                        message: t('contact_contact_us.field_req_text'),
                       },
                     })}
                     
@@ -323,11 +334,11 @@ const Contact_contactus = () => {
                     rows="3"
                     name="Message"
                     required="required"
-                    placeholder="Message"
+                    placeholder= {t('contact_contact_us.text_5')}
                     {...register("message", {
                       required: {
                         value: true,
-                        message: "This field is required field",
+                        message: t('contact_contact_us.field_req_text'),
                       },
                     })}
                     
@@ -343,7 +354,9 @@ const Contact_contactus = () => {
                 <div className="form-group">
                  {
                     success ? 
-                    <label style={{color:'#0066b3'}}>Your response has been sent successfully</label> : ""
+                    <label style={{color:'#0066b3'}}>
+                      {t('contact_contact_us.resp_sent_text')}
+                     </label> : ""
                   } 
                  </div>
                   <button
@@ -351,7 +364,9 @@ const Contact_contactus = () => {
                     className="btn btn-primary rounded-pill px-5 colr"
                     style={{ fontWeight: "600", backgroundColor: "#0066b3" }}
                   >
-                  <span>SUBMIT</span>
+                  <span>
+                  {t('contact_contact_us.submit_btn')}
+                    </span>
                 </button>
               </form>
             </div>

@@ -415,7 +415,6 @@
           "video_text":"Videos",
           "helmet":{
             "title_text":"Videos - Concord Pharma"
-            
          }  
       },
       "media_events":{
@@ -427,8 +426,7 @@
          "event_3":"Dapazine Lunching Program",
          "view_more_text":"View More",
          "helmet":{
-            "title_text":"Events - Concord Pharma"
-            
+            "title_text":"Events - Concord Pharma"     
          } 
       }
       ,"media_photo":{
@@ -437,7 +435,6 @@
          "photo_text":"Photos",
          "helmet":{
             "title_text":"Photo - Concord Pharma"
-            
          } 
       },
       "media_social_media":{
@@ -459,9 +456,44 @@
          "all_blog_post":"All Blog Posts",
          "social_post_text":"Social Media Post",
          "helmet":{
-            "title_text":"Social Media Post - Concord Pharma"
-            
+            "title_text":"Social Media Post - Concord Pharma"      
          } 
+      },
+      "contact_contact_us":{
+         "helmet":{
+            "title_text":"Contactus - Concord Pharma"
+            
+         } ,
+         "home_text":"Home",
+         "contact_text":"Contact",
+         "email_sent":"Email Sent Successfully",
+         "email_not_sent":"Email Not Sent",
+         "invalid_email":"Please Enter Valid Email",
+         "contact_us":"Contact Us",
+         "corporate_business":"For Corporate Business",
+         "address":"Head-Office : Sima Blossom (11th Floor), House#3(New) 390(Old) Road#16(New) #27(old), Dhanmondi,Dhaka-1206",
+         "phone_text":"Phone",
+         "phone_number":"+01991146559",
+         "fax_num":"01991146559",
+         "fax_text":"Fax",
+         "email_text":"Email",
+         "int_business":"For International Business",
+         "name":"Faysal Md. Shaheen Manager",
+         "business_deprt":"Head, Int’l Business Department",
+         "int_phone_number":"01991145006 , 880248120339",
+         "int_fax":"+88-02-9146483",
+         "opt_1":"General Inquiry",
+         "opt_2":"Sales",
+         "opt_3":"Delivery Service",
+         "opt_4":"Complaints & Suggestions",
+         "resp_sent_text":"Your response has been sent successfully",
+         "text_1":"Name",
+         "text_2":"Email",
+         "text_3":"Contact Number",
+         "text_4":"Subject",
+         "text_5":"Message",
+         "submit_btn":"Submit",
+         "field_req_text":"This field is required field"
       }
 
     
