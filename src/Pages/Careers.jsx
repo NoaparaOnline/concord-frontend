@@ -56,7 +56,7 @@ const Careers = () => {
   return (
     <>
       <Helmet>
-        <title> {t('carrers.pos_1_text')} Careers - Concord Pharma</title>
+        <title> {t('carrers.helmet.title_text')}</title>
       </Helmet>
       <BannerWithText
         heading={t('carrers.all_jobs_text')}

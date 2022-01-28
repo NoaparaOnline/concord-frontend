@@ -522,7 +522,7 @@
          "apply_now":"Apply Now",
          "jobs_text":"Jobs",
          "helmet":{
-            "title_text":"Contactus - Concord Pharma"
+            "title_text":"Careers - Concord Pharma"
             
          } 
       },
@@ -554,7 +554,35 @@
          "helmet":{
             "title_text":"Careers Detail - Concord Pharma"
          } 
-      } 
+      },
+      "footer":{
+         "quick_links":"Quick Links",
+         "home_text":"Home",
+         "about_us_text":"About Us",
+         "facility_text":"Our Facility",
+         "tele_med_text":"Tele Medicine",
+         "media_text":"Media",
+         "contact_us_text":"Contact Us",
+         "our_prod_text":"Our Products",
+         "our_trade_name_text":"By Trade Name",
+         "by_generic_name_text":"By Generic Name",
+         "by_therap_text":" By Therapeutic Class",
+         "first_class_laun":"First Class Launching",
+         "subsc_news_text":"Subscribe for Newsletter",
+         "your_email":"Your Email",
+         "subs_text":"SUBSCRIBE",
+         "downl_apps_text":"Download Apps",
+         "get_in_touch_text":"Get In Touch",
+         "call_text":"Call",
+         "phone_number_text":"01991146559",
+         "email_text":"Email",
+         "visitor_count_text":"Visitor Count",
+         "enquiry_text":"Enquiry",
+         "distribution_center_text":"Distribution Center",
+         "copyright_text":"© Copyright 2021. All Right reserved.",
+         "dev_by_text":"Designed and Developed by",
+         "ripple_intra_text":"Ripple Intra"
+      }
    
       
    }
