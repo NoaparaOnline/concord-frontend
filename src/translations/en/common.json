@@ -63,6 +63,17 @@
     "inaufuration_text":"Inauguration of CONCORD",
     "factory_text": "Factory Establish"
  },
+ "site_map":{
+"helmet":{
+   "title_text":"Sitemap - Concord Pharma"
+},
+"home_text":"Home",
+"site_map":"Site Map"
+
+ },
+ "fixed_right":{
+"phone_number":"+01991146559"
+ },
  "nearestdeliverycenter":{
 
  "card1":{
@@ -309,6 +320,19 @@
             "title_text": "Message From Chairmen - Concord Pharma"
           }
       },
+
+      "products":{
+         "helmet":{
+            "title_text":"Products - Concord Pharma"
+         },
+        "products_text":"Products",
+         "by_trade_name":"By Trade Name",
+         "by_generic_name":"By Generic Name",
+         "by_threr_class":"By Therapeutic Class",
+         "first_time_launching":"First Time Launching",
+         "home_text":"Home"
+
+      },
       "facilities":{
          "research_and_development_text": "Research and Development",
          "production_text":"Production",
@@ -522,8 +546,7 @@
          "apply_now":"Apply Now",
          "jobs_text":"Jobs",
          "helmet":{
-            "title_text":"Careers - Concord Pharma"
-            
+            "title_text":"Careers - Concord Pharma"     
          } 
       },
       "career_inner_page":{
@@ -624,6 +647,37 @@
          "our_dist_net_text":"our distribution network",
          "contact_us":"contact us"
       },
+      "login":{
+         "helmet":{
+          "title_text":"Concord Pharma"
+          },
+          "login_text":"Login",
+          "forgot_pass_text":"Forgot Password",
+          "user_name_email":"Username/email",
+          "email_text":"Email",
+          "field_req_text":"This field is required field",
+          "password_text":"Password",
+          "enter_email_for_verif":"Enter Email for Verification",
+          "back_to_log":"Back to Login",
+          "submit_text":"Submit"
+      },
+      "depot_dashboard":{
+       "helmet":{
+          "title_text":"Dashboard - Concord Pharma" 
+       },
+       "home_text":"Home",
+       "order_history_text" :"Order History",
+       "new_order_text" :"New Order",
+       "stocks_text":"Stocks",
+       "delivery_stat_text":"Delivery Status",
+       "payment_text":"Payment",
+       "notification_text":"Notification",
+       "change_pass_text":"Change Password",
+       "logout_text":"Logout",
+       "depot_manager_text":"Depot Manager",
+       "dhaka_text":"Dhaka",
+       "search_text":"Search"
+      },
       "order_history":{
          "order_id":"Orders ID",
          "customer_name":"Customer Name",
@@ -637,7 +691,8 @@
          "actions_text":"Actions",
          "view_btn_name":"View",
          "order_request_text":"Order Request",
-         "no_data_to_display":"No Data to Display"
+         "no_data_to_display":"No Data to Display",
+         "search_text":"Search"
       },
       "inner_page":{
          "back":"Back"
@@ -660,6 +715,23 @@
          "trade_price_text":"Trade Price",
          "amount_text":"Amount"
       },
+      "new_order":{
+         "order_id":"OrderID",
+         "customer_name":"Customer Name",
+         "market_address":"Market Address",
+         "date_time_text":"Date and Time",
+         "payment_type":"Payment Type",
+         "delivery_status":"Delivery Status",
+         "payment_status":"Payment Status",
+         "proceed_by":"Proceed By",
+         "toggle_dropdown":"Toggle Dropdown",
+         "update_status":"Update Status",
+         "view_btn_text":"View",
+         "new_order":"New Order",
+         "no_data_to_display":"No Data to Display",
+         "search_text":"Search"
+
+      },
       "stocks":{
          "product_name":"Product Name",
          "category_name":"Category Name",
@@ -670,7 +742,8 @@
          "medicine_text":"Medicine",
          "gift_text":"Gift",
          "no_data_to_display":"No Data to Display",
-         "stocks":"Stocks"
+         "stocks":"Stocks",
+         "search_text":"Search"
       },
       "delivery_status":{
          "order_id":"Orders ID",
@@ -684,7 +757,8 @@
          "actions_text":"Actions",
          "view_btn_name":"View",
          "order_request_text":"Order Request",
-         "no_data_to_display":"No Data to Display"
+         "no_data_to_display":"No Data to Display",
+         "search_text":"Search"
       },
       "payment":{
          "customer_name":"Customer Name",
@@ -695,7 +769,26 @@
          "actions_text":"Actions",
          "no_data_to_display":"No Data to Display",
          "view_btn_name":"View",
-         "payments_text":"Payment"
+         "payments_text":"Payment",
+         "search_text":"Search"
+      },
+      "notification":{
+      "notifications_text":"Notifications",
+      "all_notifications":"All Notifications",
+      "recent_notifications": "Recent Notification",
+      "no_notifications_text":"No Notification To Show"
+      },
+      "change_password":{
+      "change_password_text":"Change Password",
+      "old_password_text":"Old Password",
+      "new_password_text":"New Password",
+      "new_password_confirm":"New Password Confirm",
+      "enter_old_pass":"Enter Old Password",
+      "enter_new_pass":"Enter New Password",
+      "enter_new_pass_again":"Enter New Password Again",
+      "field_req_text":"This field is required field",
+      "password_changed_succ":"Password Changed Successfully",
+      "provide_same_pass":"Please Provide the same password"
       },
       "header_dash":{
          "sun_text":"Sunday",
@@ -705,8 +798,164 @@
          "thu_text":"Thursday",
          "fri_text":"Friday",
          "sat_text":"Saturday"
-      }
-      
+      },
+      "director_dashboard":{
+         "helmet":{
+            "title_text":"Dashboard - Concord Pharma"
+         },
+         "dist_cent_sto_deta":"Distribution Center Stock Details",
+         "home_text":"Home",
+         "reports_text":"Reports",
+         "products_text":"Products",
+         "newly_launched":"Newly Launched",
+         "dist_center":"Distribution Center",
+         "dpt_head":"Department Head",
+         "notification":"Notification",
+         "change_password":"Change Password",
+         "logout_text":"Logout",
+         "director_text":"Director",
+         "all_text":"All",
+         "region_text":"Region"
+         
+      },
+      "director_approval_status_change":{
+         "update_approval_stat":"Update Approval Status",
+         "approval_status":"Approval Status",
+         "approved_text":"approved",
+         "awaiting_approval":"Awaiting Approval",
+         "cancelled_text":"cancelled",
+         "update_status":"Update Status"
+      },
+      "director_scheule_create":{
+         "add_new_sch":"Add New Schedules",
+         "select_text":"Select...",
+         "assigned_to":"Assigned To",
+         "user_type":"User Type",
+         "doctor_tetx":"Doctor",
+         "customer_text":"Customer",
+         "name_text":"Name",
+         "field_req_text": "this field is required field",
+         "time_text":"Time",
+         "add_schedule":"Add Schedule"
+      },
+      "reports":{
+        "reports_text":"Reports",
+        "all_text":"All",
+        "region_text":"Region",
+        "presc_report":"Prescription Report",
+        "dcr_report":"DCR Report",
+        "dctr_report":"Doctor Report",
+        "prod_report":"Product Report"
+        
+      },
+      "prescription_report":{
+         "presc_report_text":"Prescription Report",
+         "start_date":"Start Date",
+         "end_date":"End Date",
+         "select_sales_manager":"Select Sales Manager",
+         "select_reg_sales_manager":"Select Regional Sales Manager",
+         "select_area_manager":"Select Area Manager",
+         "select_mpo":"Select MPO",
+         "gener_report_text":"Generating Report",
+         "name_text":"Name",
+         "sum_text":"Sum"
+      },
+      "dcr_report":{
+         "dcr_report_text":"DCR Report",
+         "start_date":"Start Date",
+         "end_date":"End Date",
+         "select_sales_manager":"Select Sales Manager",
+         "select_reg_sales_manager":"Select Regional Sales Manager",
+         "select_area_manager":"Select Area Manager",
+         "select_mpo":"Select MPO",
+         "gener_report_text":"Generating Report",
+         "name_text":"Name",
+         "sum_text":"Sum"
+      },
+      "doctor_report":{
+         "dctr_report_text":"Doctor Report",
+         "start_date":"Start Date",
+         "end_date":"End Date",
+         "generate_report_btn":"Generate Report",
+         "gener_report_text":"Generating Report",
+         "name_text":"Name",
+         "enter_date_to_gen_rep":"Enter date to generate report"
+      },
+      "product_report":{
+         "prod_report_text":"Product Report",
+         "start_date":"Start Date",
+         "end_date":"End Date",
+         "select_sales_manager":"Select Sales Manager",
+         "select_doctor":"Select Doctor",
+         "select_stock":"Select Stock",
+         "gener_report_text":"Generating Report",
+         "name_text":"Name",
+         "sum_text":"Sum"
+      },
+      "director_products":{
+         "name_text":"Name",
+         "cat_name":"Category Name",
+         "qty_text":"Quantity",
+         "price_text":"Price",
+         "retail_price":"Retail Price",
+         "added_by_text":"Added By",
+         "n_a":"N/A",
+         "list_text":"List",
+         "grid_text":"Grid",
+         "products_text":"Products",
+         "search_text":"Search",
+         "tp_text":"T.P",
+         "rp_text":"R.P",
+         "product_added_by":"Product Added By"
+      },
+      "newly_launched":{
+         "name_text":"Name",
+         "cat_name":"Category Name",
+         "qty_text":"Quantity",
+         "price_text":"Price",
+         "retail_price":"Retail Price",
+         "added_by_text":"Added By",
+         "list_text":"List",
+         "grid_text":"Grid",
+         "n_a":"N/A",
+         "newly_launched":"Newly Launched",
+         "search_text":"Search"
+      },
+      "distribution_center":{
+       "dist_center":"Distribution Center",
+       "search_text":"Search",
+       "n_a":"N/A"
+      },
+      "distribution_stocks_details":{
+         "all_text":"All",
+         "medicine_text":"Medicine",
+         "gift_text":"Gift",
+         "product_name_text":"Product Name",
+         "cat_name":"Category Name",
+         "product_formula":"Product Formula",
+         "qty_text":"Quantity",
+         "price_text":"Price",
+         "n_a":"N/A",
+         "no_data_to_display":"No Data to Display",
+         "back_text":"Back",
+         "search_text":"Search"
+
+      },
+      "department_head":{
+         "department_head_text":"Department Head",
+         "search_text":"Search"
+      },
+     "actions":{
+      "status_updated":"Status Updated Successfuly",
+      "error_text":"Error",
+      "schedule_added":"Schedule Added Successfully",
+      "login_successful":"Login Successful",
+      "un_authorized_access":"UnAuthorized Access",
+      "email_sent_text":"An Email has been sent to your email address",
+      "password_reset_success":"Successful Password Reset",
+      "password_change_success":"Successful Password Change",
+      "logout_text":"User Logout"
+     }
    }
    
 

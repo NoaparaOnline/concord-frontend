@@ -2,6 +2,7 @@ import {logInConstants} from '../Constants/loginConstant';
 import apiServices from "../../services/requestHandler";
 import { logout,saveUser,setToken,setUserRole } from "../../Utils/auth.util";
 import { toast } from "react-toastify";
+import i18next from "i18next";
 
   export const loginUser = (data) => async (dispatch) => {
     try {
@@ -36,12 +37,11 @@ import { toast } from "react-toastify";
             type: logInConstants.USER_TYPE,
             payload: response?.data?.response_data?.token?.user?.role.category?.name,
           });
-          
-          toast.info("Login Successful");
+          toast.info(i18next.t("common:actions.login_successful"));
           return response?.data?.response_data?.token.user?.role.category?.name;
         }
         else{
-          toast.error("UnAuthorized Access");
+          toast.error(i18next.t("common:actions.un_authorized_access"));
           dispatch({
             type: logInConstants.SET_LOADER,
             payload: false,
@@ -70,7 +70,7 @@ import { toast } from "react-toastify";
     try {
       const response = await apiServices.forgotPassword(data);
       if (response?.data?.response_code === 200) {
-        toast.info("An Email has been sent to your email address");
+        toast.info(i18next.t("common:actions.email_sent_text"));
       } else {
         toast.error(response?.data?.response_message);
       }
@@ -83,7 +83,7 @@ import { toast } from "react-toastify";
     try {
       const response = await apiServices.resetPassword(data);
       if (response?.response_code === 200) {
-        toast.info("Successful Password Reset");
+        toast.info(i18next.t("common:actions.password_reset_success"));
         return "success";
       } else {
         toast.error(response?.response_message);
@@ -98,7 +98,7 @@ import { toast } from "react-toastify";
     try {
       const response = await apiServices.changePassword(data);
       if (response?.response_code === 200) {
-        toast.info("Successful Password Change");
+        toast.info(i18next.t("common:actions.password_change_success"));
         return "success";
       } else {
         toast.error(response?.response_message);
@@ -118,7 +118,7 @@ import { toast } from "react-toastify";
         type: logInConstants.LOG_OUT_USER,
         payload: null,
       });
-      toast.info("User Logout");
+      toast.info(i18next.t("common:actions.logout_text"));
     } catch (error) {
     }
   };

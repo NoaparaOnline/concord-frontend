@@ -70,8 +70,7 @@ const DirectorScheduleCreate = (props) => {
             className=""
             style={{ fontWeight: "600", fontSize: "22px", color: "#0066b3" }}
           >
-            {" "}
-            Add New Schedules{" "}
+         
           </span>
         </Modal.Header>
         <Modal.Body>

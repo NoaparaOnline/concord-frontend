@@ -168,6 +168,7 @@ const Stocks = ({
                                         style={{ fontSize: "15px" }}
                                     />
                                     <SearchBar
+                                    placeholder={t('stocks.search_text')}
                                         {...props.searchProps}
                                         style={{
                                             padding: "0.375rem 2.5rem",

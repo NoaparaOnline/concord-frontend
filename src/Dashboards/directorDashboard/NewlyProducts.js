@@ -16,6 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import { useDispatch, useSelector } from 'react-redux';
 import { getProductsnew } from '../../Store/Actions/directorActions';
+import { useTranslation } from 'react-i18next';
 
 
 const NewlyProducts = (
@@ -30,6 +31,7 @@ const NewlyProducts = (
 
   const productnew = useSelector((state) => state?.director?.productnew);
   const dispatch = useDispatch();
+  const {t}=useTranslation('common')
 
   useEffect(() => {
     setSelectedTabbledata(productnew)
@@ -41,7 +43,7 @@ const NewlyProducts = (
   }, [])
 
   const [selectedTabbledata, setSelectedTabbledata] = useState(productnew);
-  const [selectedTab3, setSelectedTab3] = useState("List");
+  const [selectedTab3, setSelectedTab3] = useState( t('newly_launched.list_text'));
 
   const tabledataHandler = async (item) => {
     setSelectedTabbledata(item);
@@ -50,45 +52,43 @@ const NewlyProducts = (
   const tabHandler3 = (item) => {
     setSelectedTab3(item);
 
-    if (item === "List") {
+    if (item === t('newly_launched.list_text')) {
       tabledataHandler(productnew);
-    } else if (item === "Grid") {
+    } else if (item === t('newly_launched.grid_text')) {
       tabledataHandler(productnew);
     }
   };
 
-
-
   const DirectorProductsAll = [
     {
       dataField: "name",
-      text: "Name",
+      text: t('newly_launched.name_text'),
       sort: true,
     },
     {
       dataField: "category.name",
-      text: "Category Name",
+      text: t('newly_launched.cat_name'),
       sort: true,
     },
     {
       dataField: "quantity",
-      text: "Quantity",
+      text: t('newly_launched.qty_text'),
       formatter: nullChecker,
       sort: true,
     },
     {
       dataField: "price",
-      text: "Price",
+      text: t('newly_launched.price_text'),
       sort: true,
     },
     {
       dataField: "price",
-      text: "Retail Price",
+      text:  t('newly_launched.retail_price'),
       sort: true,
     },
     {
       dataField: "created_by._cls",
-      text: "Added By",
+      text: t('newly_launched.added_by_text'),
       formatter: nullChecker,
       sort: true,
     },
@@ -98,14 +98,14 @@ const NewlyProducts = (
   function nullChecker(cell) {
     return (
       <>
-        <div>{!cell ? "N/A" : cell}</div>
+        <div>{!cell ? t('newly_launched.n_a')  : cell}</div>
       </>
     );
   }
 
   const { SearchBar } = Search;
   const loader = useSelector((state) => state?.logIn?.loader);
-  const buttonname3 = ["List", "Grid"];
+  const buttonname3 = [ t('newly_launched.list_text') ,  t('newly_launched.grid_text')];
 
   const [filteredResults1, setFilteredResults1] = useState([]);
   const [searchInput1, setSearchInput1] = useState("");
@@ -131,14 +131,14 @@ const NewlyProducts = (
           <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="Newly Launched"
+            Heading= {t('newly_launched.newly_launched')} 
           />
 
           
             <DashboardMainCard
               classnamewidth="96%"
 
-              reverse={selectedTab3 === "List" ? true : false}
+              reverse={selectedTab3 ===  t('newly_launched.list_text') ? true : false}
               SelectedButtons={
                 <div className="">
                   {buttonname3.map((item, index) => (
@@ -150,7 +150,7 @@ const NewlyProducts = (
                       <DashboardBtnList
                         label={item}
                         iconclassname={
-                          item === "List" ? "fa fa-list" : "fa fa-th"
+                          item === t('newly_launched.list_text') ? "fa fa-list" : "fa fa-th"
                         }
                         bntStyle={{
                           borderRadius:
@@ -187,7 +187,7 @@ const NewlyProducts = (
                           borderRadius: "10px",
                           minWidth: "240px"
                         }}
-                        placeholder="Search"
+                        placeholder= {t('newly_launched.search_text')}
                         onChange={(e) => searchItems1(e.target.value)}
                       />
                     </div>
@@ -244,6 +244,7 @@ const NewlyProducts = (
                         />
                         <SearchBar
                           {...props.searchProps}
+                          placeholder={t('newly_launched.search_text')}
                           style={{
                             padding: "0.375rem 2.5rem",
                             borderRadius: "10px",

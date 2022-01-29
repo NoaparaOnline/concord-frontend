@@ -25,10 +25,11 @@ import Notifications from "../../components/ReusableComponents/modals/Notificati
 import ChangePassword from "../../components/ReusableComponents/modals/ChangePassword/ChangePassword";
 import Error404 from "../../Pages/Error404";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 
 const DepotmanagerDashboard = (props) => {
-
+ const {t}=useTranslation('common')
 
 
 
@@ -167,7 +168,7 @@ const DepotmanagerDashboard = (props) => {
   return (
 <>
     <Helmet>
-        <title>Dashboard - Concord Pharma</title>
+        <title>{t('depot_dashboard.helmet.title_text')}</title>
       </Helmet>
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
       <Router>
@@ -221,7 +222,7 @@ const DepotmanagerDashboard = (props) => {
           <InnerPage
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="Order History"
+            Heading= {t('depot_dashboard.order_history_text')} 
             linkRoute="/depotmanager-dashboard"
             {...props}
           />
@@ -230,7 +231,7 @@ const DepotmanagerDashboard = (props) => {
           <InnerPage
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="New Order"
+            Heading= {t('depot_dashboard.new_order_text')} 
             linkRoute="/depotmanager-dashboard/neworder"
             {...props}
           />
@@ -239,7 +240,7 @@ const DepotmanagerDashboard = (props) => {
           <InnerPage
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="Delivery Status"
+            Heading=  {t('depot_dashboard.delivery_stat_text')} 
             linkRoute="/depotmanager-dashboard/deliverystatus"
             {...props}
           />
@@ -248,7 +249,7 @@ const DepotmanagerDashboard = (props) => {
           <InnerPage
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="Payment"
+            Heading=   {t('depot_dashboard.payment_text')}
             linkRoute="/depotmanager-dashboard/payment"
             {...props}
           />
@@ -268,7 +269,7 @@ const DepotmanagerDashboard = (props) => {
                 Colr="#0066b3"
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #089DA4" }}
-                btnName="Home"
+                btnName= {t('depot_dashboard.home_text')} 
                 disablelink={true}
                 classlogout={"sidebar__logout"}
                 onClick={homepage}
@@ -279,7 +280,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #089DA4" }}
                 btnroute=""
-                btnName="Order History"
+                btnName= {t('depot_dashboard.order_history_text')} 
               />
               <SiderbarBtn
                 imgbtn={icon2}
@@ -287,7 +288,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #CB912B" }}
                 btnroute="neworder"
-                btnName="New Order"
+                btnName= {t('depot_dashboard.new_order_text')}
               />
               <SiderbarBtn
                 imgbtn={icon3}
@@ -295,7 +296,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #7F2987" }}
                 btnroute="stocks"
-                btnName="Stocks"
+                btnName= {t('depot_dashboard.stocks_text')}
               />
               <SiderbarBtn
                 imgbtn={icon4}
@@ -303,7 +304,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #4B8F8C" }}
                 btnroute="deliverystatus"
-                btnName="Delivery Status"
+                btnName= {t('depot_dashboard.delivery_stat_text')}
               />
               <SiderbarBtn
                 imgbtn={icon5}
@@ -311,7 +312,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 btnroute="payment"
-                btnName="Payment"
+                btnName= {t('depot_dashboard.payment_text')}
               />
               <div className="mt-3">
               <NavLink
@@ -325,7 +326,7 @@ const DepotmanagerDashboard = (props) => {
               >
               <li className="mb-2 ms-4">
                 <img src={icon111} alt="icon" width="36" height="36" />
-                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#DB2323", fontWeight: '700' }}>Notification</span>
+                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#DB2323", fontWeight: '700' }}> {t('depot_dashboard.notification_text')} </span>
               </li>
             </NavLink>
             </div>
@@ -341,7 +342,7 @@ const DepotmanagerDashboard = (props) => {
               >
               <li className="mb-2 ms-4">
                 <img src={icon112} alt="icon" width="36" height="36" />
-                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#6421FF", fontWeight: '700' }}>Change Password</span>
+                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#6421FF", fontWeight: '700' }}> {t('depot_dashboard.change_pass_text')}</span>
               </li>
             </NavLink>
             </div>
@@ -351,7 +352,7 @@ const DepotmanagerDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 disablelink={true}
-                btnName="Logout"
+                btnName= {t('depot_dashboard.logout_text')} 
                 classlogout={"sidebar__logout"}
                 onClick={logouthandler}
               />
@@ -359,8 +360,8 @@ const DepotmanagerDashboard = (props) => {
           }
           sidebarOpen={sidebarOpen}
           closeSidebar={closeSidebar}
-          DesignationUser="Depot Manager"
-          Loca="Dhaka"
+          DesignationUser={t('depot_dashboard.depot_manager_text')}
+          Loca={t('depot_dashboard.dhaka_text')}
           {...props}
         />
       </Router>

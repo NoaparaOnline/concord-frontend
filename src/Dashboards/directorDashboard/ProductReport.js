@@ -15,8 +15,10 @@ import {
   GetSMStocks,
   ViewChildSalesManagerManagerAction,
 } from "../../Store/Actions/directorActions";
+import { useTranslation } from "react-i18next";
 
 const ProductReport = () => {
+  const {t}=useTranslation('common')
   const [doctor, setDoctor] = useState(null);
   const [smID, setSMID] = useState(null);
 
@@ -111,7 +113,7 @@ const ProductReport = () => {
       <Row>
         <Col xxs="12">
           {/* <Breadcrumb heading="Doctors" match={match} /> */}
-          <h4>Product Report</h4>
+          <h4> {t('product_report.prod_report_text')}</h4>
           <div
             style={{ border: "1px solid #000", width: "100%" }}
             className="mb-5"
@@ -120,7 +122,7 @@ const ProductReport = () => {
       </Row>
       <Row className="mb-3">
         <Col lg={6}>
-          <FormLabel>Start Date</FormLabel>
+          <FormLabel>{t('product_report.start_date')} </FormLabel>
 
           <input
             type="date"
@@ -130,7 +132,7 @@ const ProductReport = () => {
           ></input>
         </Col>
         <Col lg={6}>
-          <FormLabel>End Date</FormLabel>
+          <FormLabel> {t('product_report.end_date')}</FormLabel>
 
           <input
             type="date"
@@ -144,7 +146,7 @@ const ProductReport = () => {
       <Row>
         <Col lg={6}>
           <FormGroup>
-            <FormLabel>Select Sales Manager</FormLabel>
+            <FormLabel>{t('product_report.select_sales_manager')}</FormLabel>
             {loadingSM ? (
               <div className="">
                 <Loader height={18} width={18} type="Oval" color="#0066B3" />
@@ -171,7 +173,7 @@ const ProductReport = () => {
         </Col>
         <Col lg={6}>
           <FormGroup>
-            <FormLabel>Select Doctor </FormLabel>
+            <FormLabel> {t('product_report.select_doctor')} </FormLabel>
             {loadingDoctor ? (
               <div className="">
                 <Loader height={18} width={18} type="Oval" color="#0066B3" />
@@ -195,7 +197,7 @@ const ProductReport = () => {
         </Col>
         <Col lg={6}>
           <FormGroup>
-            <FormLabel>Select Stock</FormLabel>
+            <FormLabel> {t('product_report.select_stock')}</FormLabel>
             {loadingStocks ? (
               <div className="">
                 <Loader height={18} width={18} type="Oval" color="#0066B3" />
@@ -221,7 +223,7 @@ const ProductReport = () => {
       {loading ? (
         <div className="d-flex justify-content-center mt-5">
           <Loader height={25} width={30} type="Bars" color="black" />
-          &nbsp; Generating Report
+          &nbsp; {t('product_report.gener_report_text')}
         </div>
       ) : from !== undefined && to !== undefined ? (
         <div className="table-responsive">
@@ -231,11 +233,11 @@ const ProductReport = () => {
             {/* className='table-responsive' */}
             <thead>
               <tr>
-                <td style={{ width: "120px", fontWeight: "bold" }}>Name</td>
+                <td style={{ width: "120px", fontWeight: "bold" }}>{t('product_report.name_text')}</td>
                 {dateArray?.map((item) => {
                   return <th style={{ width: "80px" }}>{item}</th>;
                 })}
-                <th style={{ width: "80px" }}>Sum</th>
+                <th style={{ width: "80px" }}>{t('product_report.sum_text')}</th>
               </tr>
             </thead>
             <tbody>

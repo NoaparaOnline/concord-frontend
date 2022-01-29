@@ -10,28 +10,29 @@ import PrescriptionReport from "./PrescriptionReport";
 import DCRReport from "./DCRReport";
 import DoctorReport from "./DoctorReport";
 import ProductReport from "./ProductReport";
+import { useTranslation } from "react-i18next";
 
 const Reports = (props) => {
-  
+   const {t}=useTranslation('common')
  
   const { sidebarOpen, openSidebar, tabHandler0, selectedTab0 } = props;
 
-  const [selectedtile, setselectedtile] = useState("Prescription Report");
+  const [selectedtile, setselectedtile] = useState(t('reports.presc_report'));
   const FromView = props?.location?.state?.key;
   const tabHandler = (item) => {
     setselectedtile(item);
   };
-  const buttonname1 = ["All", "Region"];
+  const buttonname1 = [ t('reports.all_text'), t('reports.region_text')];
   useEffect(() => {
    
     if (FromView === "fromPrescription") {
-      setselectedtile("Prescription Report");
+      setselectedtile(t('reports.presc_report'));
     } else if (FromView === "fromDCR") {
-      setselectedtile("DCR Report");
+      setselectedtile(t('reports.dcr_report'));
     } else if (FromView === "fromDoctor") {
-      setselectedtile("Doctor Report");
+      setselectedtile(t('reports.dctr_report'));
     } else if (FromView === "fromProduct") {
-      setselectedtile("Product Report");
+      setselectedtile(t('reports.dcr_report'));
     } 
     // eslint-disable-next-line
   }, [FromView]);
@@ -40,7 +41,7 @@ const Reports = (props) => {
       <NavbarDash
         sidebarOpen={sidebarOpen}
         openSidebar={openSidebar}
-        Heading="Reports"
+        Heading={t('reports.reports_text')}
       />
       <DashboardMainCard
         classnamewidth="96%"
@@ -84,10 +85,10 @@ const Reports = (props) => {
 
           <DashboardHeaderAndTile
             options={[
-              "Prescription Report",
-              "DCR Report",
-              "Doctor Report",
-              "Product Report",
+              t('reports.presc_report'),
+              t('reports.dcr_report'),
+              t('reports.dctr_report'),
+              t('reports.prod_report')
             ]}
             classname={[
               "colrcardblue",
@@ -111,13 +112,13 @@ const Reports = (props) => {
         DivChartComponent={<>
         
         <div className="container mt-5">
-        {selectedtile === "Prescription Report" ? (
+        {selectedtile ===  t('reports.presc_report') ? (
           <PrescriptionReport {...props} />
-        ) : selectedtile === "DCR Report" ? (
-          <DCRReport {...props} />
-        ) : selectedtile === "Doctor Report" ? (
+        ) : selectedtile === t('reports.dcr_report')? (
+          <DCRReport ort {...props} />
+        ) : selectedtile === t('reports.dctr_report') ? (
           <DoctorReport {...props} />
-        ) : selectedtile === "Product Report" ? (
+        ) : selectedtile === t('reports.prod_report') ? (
           <ProductReport {...props} />
         ) : null}
       </div>
