@@ -945,6 +945,33 @@
          "department_head_text":"Department Head",
          "search_text":"Search"
       },
+      "privacy_policy":{
+       "helmet":{
+          "title_text":"Privacy Policy - Concord Pharma"
+       },
+       "text_1":" Privacy Policy for Concord Pharmaceuticals Ltd",
+       "text_2":"At Concord Pharmaceuticals Ltd. , accessible from https://concordpharma-bd.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Concord Pharmaceuticals Ltd. and how we use it.",
+       "text_3":"If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us. ",
+       "text_4":"This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in Concord Pharmaceuticals Ltd. . This policy is not applicable to any information collected offline or via channels other than this website.",
+       "text_5":"By using our website, you hereby consent to our Privacy Policy and agree to its terms.",
+       "text_6":"Information we collect",
+       "text_7":"The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.",
+       "text_8":"If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.",
+       "text_9":"When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.",
+       "text_10":"How we use your information",
+       "text_11":" We use the information we collect in various ways, including to:",
+       "text_12":"Provide, operate, and maintain our website",
+       "text_13":"Improve, personalize, and expand our website",
+       "text_14":"Develop new products, services, features, and functionality",
+       "text_15":"Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes",
+       "text_16":"Send you emails",
+       "text_17":"Find and prevent fraud",
+       "text_18":"Log Files",
+       "text_19":"Concord Pharmaceuticals Ltd. follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services’ analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users’ movement on the website, and gathering demographic information.",
+       "text_20":"Consent",
+       "text_21":"Understand and analyze how you use our website"
+
+      },
      "actions":{
       "status_updated":"Status Updated Successfuly",
       "error_text":"Error",
