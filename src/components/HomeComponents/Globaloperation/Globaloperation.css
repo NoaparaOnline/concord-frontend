@@ -147,7 +147,7 @@
     text-decoration: 2px underline;
     margin: 0px 0px 6px !important;
     padding: 0px 0px 2px !important;
-    font-size: 15px !important;
+    /* font-size: 15px !important; */
     font-weight: 600 !important;
     letter-spacing: 2px;
     position: relative;
