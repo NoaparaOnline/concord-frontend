@@ -3,17 +3,19 @@ import BannerWithText from "../components/ReusableComponents/BannerImgComponents
 import { Helmet } from "react-helmet";
 import bannerimg from "../Statics/assets/mediaphotobanner.jpg";
 import { Button } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 
 
 export default function MediaEvents(props) {
+    const {t}=useTranslation('common')
     const LinksBan = [
         {
-            subLinkName: "Home",
+            subLinkName: t('media_events.home_text'),
             subDash: "/",
             subLink: "/",
         },
         {
-            subLinkName: "Media",
+            subLinkName: t('media_events.media_text'),
             subDash: "/",
             subLink: "/media",
         },
@@ -53,12 +55,12 @@ export default function MediaEvents(props) {
     return (
         <>
             <Helmet>
-                <title>Events - Concord Pharma</title>
+                <title>{t('media_events.helmet.title_text')}</title>
             </Helmet>
             <BannerWithText
                 imgSrc={bannerimg}
-                heading={"Events"}
-                subHeading={`Events`}
+                heading={t('media_events.events_text')}
+                subHeading={t('media_events.events_text').toUpperCase()}
                 LinksBan={LinksBan}
                 height={"400px"}
                 backposit={"center right"}
@@ -70,7 +72,7 @@ export default function MediaEvents(props) {
             <div className='container'>
                 <div className='row d-flex justify-content-between'>
                     <div className='col-lg-5 p-3' style={{border:'2px solid lightblue',borderRadius:'15px'}}>
-                        <h4 className='text-center'>Annual Confrence 2013</h4>
+                        <h4 className='text-center'>{t('media_events.event_1')}</h4>
                         <div className='row'>
                             {event1?.map((item, index) => {
                                 return (
@@ -86,12 +88,12 @@ export default function MediaEvents(props) {
                             })}
                         </div>
                         <div className='d-flex justify-content-center mt-4'>
-                            <Button className='' onClick={() => moreImages("Annualconfirence2013")}>View More</Button>
+                            <Button className='' onClick={() => moreImages("Annualconfirence2013")}>{t('media_events.view_more_text')}</Button>
                         </div>
 
                     </div>
                     <div className='col-lg-5 p-3' style={{border:'2px solid lightblue',borderRadius:'15px'}}>
-                        <h4 className='text-center'>Annual Confrence 2014</h4>
+                        <h4 className='text-center'>{t('media_events.event_2')}</h4>
                         <div className='row '>
                             {event2?.map((item, index) => {
                                 return (
@@ -107,14 +109,14 @@ export default function MediaEvents(props) {
                             })}
                         </div>
                         <div className='d-flex justify-content-center mt-4'>
-                            <Button className='' onClick={() => moreImages("Annualconfirence2014")}>View More</Button>
+                            <Button className='' onClick={() => moreImages("Annualconfirence2014")}>{t('media_events.view_more_text')}</Button>
                         </div>
                     </div>
 
                 </div>
                 <div className='row mt-5 mb-3 d-flex justify-content-between'>
                     <div className='col-lg-5 p-3' style={{border:'2px solid lightblue',borderRadius:'15px'}}>
-                        <h4 className='text-center'>Dapazine Lunching Program</h4>
+                        <h4 className='text-center'>{t('media_events.event_3')}</h4>
                         <div className='row'>
                             {event3?.map((item, index) => {
                                 return (
@@ -130,7 +132,7 @@ export default function MediaEvents(props) {
                             })}
                         </div>
                         <div className='d-flex justify-content-center mt-4'>
-                            <Button className='' onClick={() => moreImages("Dapazinelunchingprogram")}>View More</Button>
+                            <Button className='' onClick={() => moreImages("Dapazinelunchingprogram")}>{t('media_events.view_more_text')}   </Button>
                         </div>
                     </div>
 

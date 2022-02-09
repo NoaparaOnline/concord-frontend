@@ -145,11 +145,12 @@ import { getallNotification, seeAllNotification } from "../../../../Store/Action
 import DashboardBtnList from "../../DashboardBtnList/DashboardBtnList";
 import SingleNotificationCard from '../../SingleNotificationCard/SingleNotificationCard'
 import Loader from "react-loader-spinner";
+import { useTranslation } from "react-i18next";
 
 const Notifications = (props) => {
-  const [selectedTab, setSelectedTab] = useState("All Notifications");
+  const {t}=useTranslation('common')
+  const [selectedTab, setSelectedTab] = useState(t('notification.all_notifications'));
   const loading = useSelector((state) => state?.logIn?.loader);
-
   const allnotification = useSelector(
     (state) => state?.static?.allnotification
   );
@@ -163,17 +164,18 @@ const Notifications = (props) => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    setSelectedTab("All Notifications");
-  }, []);
+    setSelectedTab(t('notification.all_notifications'));
+    
+  }, [t]);
  
 
 
   const tabHandler = async (item) => {
     setSelectedTab(item);
-    if (item === "All Notifications") {
+    if (item === t('notification.all_notifications')) {
       dispatch(getallNotification())
     }
-    else if (item === "Recent Notification") {
+    else if (item === t('notification.recent_notifications')) {
       dispatch(seeAllNotification())
     }
     
@@ -187,7 +189,7 @@ const Notifications = (props) => {
         centered
         onHide={() => {
           props?.onHide();
-          setSelectedTab("All Notifications");
+          setSelectedTab(t('notification.all_notifications'));
           // setnotificationData(notification);
         }}
       >
@@ -196,7 +198,7 @@ const Notifications = (props) => {
             className=""
             style={{ fontWeight: "600", fontSize: "26px", color: "#0066b3" }}
           >
-           Notifications
+            {t('notification.notifications_text')}
           </span>
         </Modal.Header>
         <Modal.Body
@@ -204,7 +206,7 @@ const Notifications = (props) => {
         >
           <div className="row ">
             <div className="col-12">
-              {["All Notifications", "Recent Notification"].map((item, index) => (
+              {[t('notification.all_notifications'), t('notification.recent_notifications')].map((item, index) => (
                 <div
                   className="d-flex d-inline-flex col-6 p-1"
                   key={index + 1}
@@ -218,7 +220,7 @@ const Notifications = (props) => {
                         ? "dashboardBtnList-item-active py-2"
                         : "default-color-and-hover py-2"
                     }
-                    shownotification={item === "Recent Notification"}
+                    shownotification={item === t('notification.recent_notifications')}
                     notificationCount={notificationcount}
                   />
                 </div>
@@ -233,7 +235,7 @@ const Notifications = (props) => {
             ) : (
               <div>
                 {allnotification?.length > 0 &&
-                  selectedTab === "All Notifications" ? (
+                  selectedTab === t('notification.all_notifications') ? (
                   allnotification?.map((item, index) => (
                     <>
                       {item === undefined ? null : (
@@ -249,7 +251,7 @@ const Notifications = (props) => {
                     </>
                   ))
                 ) : newnotification?.length > 0 &&
-                  selectedTab === "Recent Notification" ? (
+                  selectedTab === t('notification.recent_notifications') ? (
                   newnotification?.map((item, index) => (
                     <>
                       {item === undefined ? null : (
@@ -278,7 +280,7 @@ const Notifications = (props) => {
                       className="light-Color-Para"
                       style={{ fontSize: "24px",color:"#0066b3" ,fontWeight:'600' }}
                     >
-                      No Notification To Show
+                     {t('notification.no_notifications_text')}
                     </span>
                   </div>
                 )}

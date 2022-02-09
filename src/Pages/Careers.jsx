@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { CompanyLogos } from "../components";
@@ -7,9 +8,10 @@ import BannerWithText from "../components/ReusableComponents/BannerImgComponents
 import { getAllThana } from "../Store/Actions/staticActions";
 
 const Careers = () => {
+  const {t}=useTranslation('common')
   const LinksBan = [
     {
-      subLinkName: "Home",
+      subLinkName: t('carrers.home_text'),
       subDash: "/",
       subLink: "/",
     },
@@ -17,31 +19,31 @@ const Careers = () => {
   const CareersLinks = [
     {
       id: 0,
-      name: "Medical Promotion Officer (MPO)",
+      name: t('carrers.pos_1_text'),
       btnlink: "/careers-detail",
       namelink: "/careers-detail",
-      postdate: "Posted 3 month ago",
+      postdate:  t('carrers.date_1_text') ,
     },
     {
       id: 1,
-      name: "Area Manager (AM)",
+      name: t('carrers.pos_2_text'),
       btnlink: "/careers-detail",
       namelink: "/careers-detail",
-      postdate: "Posted 3 month ago",
+      postdate:  t('carrers.date_2_text') ,
     },
     {
       id: 2,
-      name: "Regional Sales Manager (RSM)",
+      name: t('carrers.pos_3_text'),
       btnlink: "/careers-detail",
       namelink: "/careers-detail",
-      postdate: "Posted 3 month ago",
+      postdate: t('carrers.date_3_text') ,
     },
     {
       id: 3,
-      name: "Other Positions",
+      name: t('carrers.pos_4_text'),
       btnlink: "/careers-detail",
       namelink: "/careers-detail",
-      postdate: "Posted 3 month ago",
+      postdate: t('carrers.date_4_text'),
     },
   ];
 
@@ -54,11 +56,11 @@ const Careers = () => {
   return (
     <>
       <Helmet>
-        <title>Careers - Concord Pharma</title>
+        <title> {t('carrers.helmet.title_text')}</title>
       </Helmet>
       <BannerWithText
-        heading={"ALL JOBS"}
-        subHeading={`JOBS`}
+        heading={t('carrers.all_jobs_text')}
+        subHeading={t('carrers.jobs_text').toUpperCase()}
         backposit={"center right"}
         backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url()`}
         LinksBan={LinksBan}
@@ -72,7 +74,7 @@ const Careers = () => {
         <div className="row">
           <h3>
             <span style={{ fontSize: "24px", color: "#0066b3" }}>
-              Job Archives
+              {t('carrers.job_arch')}
             </span>
           </h3>
 
@@ -110,7 +112,8 @@ const Careers = () => {
                           borderRadius: "0px",
                         }}
                       >
-                        Apply Now
+                        {t('carrers.apply_now')}
+                      
                       </div>
                     </Link>
                   </span>

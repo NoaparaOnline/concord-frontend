@@ -5,11 +5,13 @@ import sitemap from "../Statics/assets/sitemap.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 const Sitemap = () => {
+  const {t}=useTranslation('common')
   const LinksBan = [
     {
-      subLinkName: "Home",
+      subLinkName: t('site_map.home_text'),
       subDash: "/",
       subLink: "/",
     },
@@ -17,13 +19,13 @@ const Sitemap = () => {
   return (
     <>
       <Helmet>
-        <title>Sitemap - Concord Pharma</title>
+        <title> {t('site_map.helmet.title_text')}</title>
       </Helmet>
 
       <BannerWithText
         imgSrc={bannerimg}
-        heading={"Site map"}
-        subHeading={`SITE MAP`}
+        heading= {t('site_map.site_map')}
+        subHeading={t('site_map.site_map').toUpperCase()}
         LinksBan={LinksBan}
         
         backposit={'center right'}
@@ -114,7 +116,7 @@ const Sitemap = () => {
     <rect x="313" y="240" fill="#fff" opacity="0" width="195" height="50"></rect>
   </Link><Link to="/product">
     <rect x="558" y="242" fill="#fff" opacity="0" width="191" height="50"></rect>
-  </Link><Link to="/photo">
+  </Link><Link to="/events">
     <rect x="785" y="239" fill="#fff" opacity="0" width="194" height="50"></rect>
   </Link><Link to="/contactus">
     <rect x="1015" y="241" fill="#fff" opacity="0" width="194" height="50"></rect>

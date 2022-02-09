@@ -10,8 +10,11 @@ import NavbarDash from "../NavbarDash/NavbarDash";
 
 import { Link } from "react-router-dom";
 import TableInnerPage from "./TableInnerPage";
+import { useTranslation } from "react-i18next";
 
 const InnerPage = (props) => {
+
+  const {t}=useTranslation('common')
   // const formatDate = (timestamp) => {
   //   return new Intl.DateTimeFormat("en-US").format(timestamp);
   // };
@@ -51,7 +54,7 @@ const InnerPage = (props) => {
                     
                   }}
                 ></i>{" "}
-                Back
+               {t('inner_page.back')}
               </span>
             </Link>
           </>

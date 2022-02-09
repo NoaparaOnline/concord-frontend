@@ -1,5 +1,5 @@
 import React from "react";
-const DashCard = ({
+const   DashCard = ({
 
   datahead,
   dataname,

@@ -3,15 +3,14 @@ import "./FlipCard.css";
 
 const FlipCard = (props) => {
   const { card } = props;
-  const { title, text1, text2, btn, innerComposition,id } = card;
+  const { title, text1, text2, btn, innerComposition, id } = card;
   const currentpath = props?.location?.pathname;
   const getFirstWord = (string) => {
     const words = string.split(" ");
     return words[0].toLowerCase();
   };
-  
-  const proname = getFirstWord(title);
 
+  const proname = getFirstWord(title);
   return (
     <div>
       <div className="flip-card" style={{ marginBottom: "50%" }}>

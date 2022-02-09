@@ -1,0 +1,989 @@
+{ 
+  "helmet":{
+    "concord_pharma":"Concord Pharma"
+  },
+  "heading":{
+"load_human_medicine_text":"Leading Human Medicine Manufacturer in Bangladesh"
+  },
+  
+"label":{
+    "facilities_text": "Facilities",
+    "our_product_text": "Our Products",
+    "milestones_text": "Milestones",
+    "our_affiliates": "Our Affiliates"
+},
+  "slide_show":{
+    "pharma_text":"Pharmaceuticals Ltd.",
+    "get_started_btn":"GET STARTED NOW",
+    "10_int_text":"10 INTERNATIONAL DESTINATIONS",
+    "know_btn":"Know More",
+    "nationwide_text":"NATIONWIDE DISTRIBUTION NETWORK",
+    "better_medicine_text":"Better Medicine Better Life",
+    "exporting_qlty_text":"Exporting Quality",
+    "delivering_all_text":"Delivering all over the country"
+  },
+  "we_are_serving":{
+       "serving_text":"We Are Serving",
+       "bangladesh_text":"Bangladesh",
+       "you_text":"You",
+       "world_text":"World"
+       
+  },
+"text_section_container":{
+  "desc_text":"CONCORD Pharmaceuticals Ltd., a fast growing pharmaceutical company is committed to manufacture quality medicines through strict adherence to internationally accepted standards of Good Manufacturing Practice with a motto of 'Better Medicine Better Life ...'. CONCORD Pharmaceuticals is a sister concern of country's one of the leading business conglomerate NOA-PARA GROUP which is involved in local & international Trading, Fertilizer, Cement, Coal & many other multiple diversified business sectors. The factory of CONCORD Pharmaceuticals Ltd. (CPL) is situated at Kanchpur, BSCIC in Narayangonj district and 15 km far from Dhaka city. The company produces various types of drugs which include tablets, capsules, oral liquids etc. Since its beginning, CONCORD has launched many new and innovative products in order to fulfill unmet demand of the medical community. Production facilities have built up the integrated system of Research and Development, Quality Control & Assurance to fulfill the medicine need of population of Bangladesh and all over the world."
+},
+"cards":{
+"prod_text":"Production",
+"research_devlop_text":"Research & Development",
+"quality_control_text":"Quality Control",
+"ware_house_text":"Warehouse",
+"desc":"Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
+"read_me_btn":"Read Me"
+},
+ "affiliates":{
+  "hospitals_text":"Hospitals",
+  "retailers_text":"Retailers",
+  "clinics_text":"Clinics",
+  "pharmacies_text":"Pharmacies"
+
+ },
+ "globaloperation":{
+ "what_we_do_text":"What we do",
+ "manufacturing_text":"Manufacturing",
+ "exporting_text":"Exporting",
+ "serving_text":"Serving",
+ "read_more_text":"Read More",
+ "global_operation_text":"Global Operation",
+ "cpl_text":" Concord Pharmaceuticals Limited (CPL)",
+ "desc_text":", a leading human medicine manufacturer in Bangladesh. We always thrive to introduce top notch quality"
+ },
+ 
+ "milestone":{
+    "year_text": "2010",
+    "inaufuration_text":"Inauguration of CONCORD",
+    "factory_text": "Factory Establish"
+ },
+ "site_map":{
+"helmet":{
+   "title_text":"Sitemap - Concord Pharma"
+},
+"home_text":"Home",
+"site_map":"Site Map"
+
+ },
+ "fixed_right":{
+"phone_number":"+01991146559"
+ },
+ "nearestdeliverycenter":{
+
+ "card1":{
+    "area_text": "Central",
+    "name_text": "Md.Khairul Alam",
+    "position_text":"Head of Distribution",
+    "num_text": "01991146267",
+    "map_name2":"Google Map",
+    "map_name": "35 Bijoy Nagar dhaka-1000."
+ },
+ "card2":{
+    "area_text": "Dhaka",
+    "name_text": "Md. Sabbir Hossain",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145305",
+    "map_name2":"Google Map",
+    "map_name": "35 Bijoy Nagar dhaka-1000."
+ },
+ "card3":{
+    "area_text": "Barisal",
+    "name_text": "Md. Saidur Rahman Rimon",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145334",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd.D/S Tower, 1st floor, Shahid Altaf Memorial Girls School Road,South Alekanda, Barishal"
+ },
+ "card4":{
+    "area_text": "Jessore",
+    "name_text": "Md. Iqbal Mahamud",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145318",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd,Naznin Vila 1/B Ghop Center Road. Jessore"
+ },
+ "card5":{
+    "area_text": "Comilla",
+    "name_text": "Md. Sariful Islam",
+    "position_text":"DIC-Executive",
+    "num_text": "01991145365",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd.Nahar Villa, 447-Nozrul Avenue Kandir Par, Cumilla"
+ },
+ "card6":{
+    "area_text": "Noakhali",
+    "name_text": "Md. Moniruzzaman",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145350",
+    "map_name2":"Google Map",
+    "map_name": "Amena Monjil (1st Floor), Holding No. 247,Shahid Shah Alam Bir Uttam Sarak,Modhusudonpur, Maijdee Court,Noakahli – 3800."
+ },
+ "card7":{
+    "area_text": "Mymenshingh",
+    "name_text": "Md. Alam Mia",
+    "position_text":"DIC-Executive",
+    "num_text": "01991145376",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd,291 Maskanda, Mymenshingh"
+ },
+ "card8":{
+    "area_text": "Chittagong",
+    "name_text": "Md. Baharul Islam",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145385",
+    "map_name2":"Google Map",
+    "map_name": "House No: X-51,Road No:07,Block:A Chandgoan R/A Chittagong Depot"
+ }, 
+ "card9":{
+    "area_text": "Rangpur",
+    "name_text": "Md.Asaduzzama",
+    "position_text":"DIC- Executive",
+    "num_text": "01991145305",
+    "map_name2":"Google Map",
+    "map_name": "House No: X-51,Road No:07,Block:A Chandgoan R/A Chittagong Depot"
+ },
+ "card10":{
+    "area_text": "Rajshahi",
+    "name_text": "Md. Abdul Motin",
+    "position_text":"DIC- Executive",
+    "num_text": "01991-145401",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd.House No-115,Sector No-02,Road No-02,Uposhahor Rajshahi."
+ },
+ "card11":{
+    "area_text": "Jhenaidah",
+    "name_text": "Md.Ashraful Isalm",
+    "position_text":"DIC- Executive",
+    "num_text": "01991-146103",
+    "map_name2":"Google Map",
+    "map_name": "Concord Pharmaceuticals Ltd.DR. Sheikh Mohammod Aminul Haque,30 Dukhi Mahmud sorok,Arappur, Jhenaidah. Bus Stand Dhaka Road , Bridze er Pase."
+ },
+ "helmet":{
+   "title_text" :"Our Distribution Network - Concord Pharma"
+},
+
+ "text":{
+    "home_text":"Home",
+    "contact_text":"Contact",
+    "our_distribution_network":"Our Distribution Network",
+    "facilities_text":"Facilities",
+     "nearest_text":"Nearest",
+     "delivery_center":"Delivery Center",
+     "select_are_text":"Select Area",
+     "desc_text":"We serve the whole nation by covering entire Bangladesh. You can track the nearest delivery center simply by selecting the area",
+     "central_text":"Central",
+     "dhaka_text":"Dhaka",
+     "barisal_text":"Barisal",
+     "jessore_text":"Jessore",
+     "comilla_text":"Comilla",
+     "noakhali_text":"Noakhali",
+     "mymenshingh_text":"Mymenshingh",
+     "chittagong_text":"Chittagong",
+     "rangpur_text":"Rangpur",
+     "rajshahi_text":"Rajshahi",
+     "jhenaidah_text":"Jhenaidah",
+     "call_at_number":"For more details please call at our number.",
+      "number":"01991146559",
+      "no_support_video":"Your browser does not support the video tag."
+
+ }
+ },
+    "home":{
+       "view_more":"View More"
+    },
+
+   "global_operations":{
+      "helmet":{
+         "title_text" :"Global Operation - Concord Pharma"
+      },
+         "desc_1_text":"a leading human medicine manufacturer in Bangladesh. We always thrive to introduce top notch quality human medicine for the health & wellbeing of the nation worldwide. With the philosophy “Better medicine Better life…” CPL has started its export journey since 2015. Hence its efforts to improve quality never ends up. We continuously sets next level of standards and feels passionate to achieve all that. All the manufacturing processes are followed by",
+         "desc_2_text":"ISO 9001:2015 & WHO-GMP",
+         "desc_3_text":"guidelines to produce quality products.",
+         "desc_4_text":"has 112 dosage form of different therapeutic classes like Antibiotics, Antiviral, Antidiabetics, Anti-Ulcerants, Analgesics & Antipyretics, Antihistamine, Antidepressant, Cardiovascular, Vitamins & minerals, NSAIDs etc.",
+         "cpl_text":"CPL",
+         "presently_text":"Presently",
+         "desc_5_text":"products are exporting to Bhutan, Cambodia, Myanmar, Sri Lanka, Vietnam, Thailand, Liberia, Yemen, Afghanistan and Congo now. During this marvelous journey the company has achieved accreditation from Ministry of Health, Cambodia and currently holds the Yemen GMP certificate.",
+         "desc_6_text":"We’ve consistently been recognized in the international arena for our exceptional outcomes and service for worldwide wholesalers, government agencies, major importers, chain of drug stores, contract manufacturing and relief organizations. We are concerned to tie-up with new business partners and we welcome prospective agents for our medicines.",
+          "desc_7_text":"For any further information or export:",
+          "email_text":"Email",
+          "cell_text":"Cell: +8801991145006 (Whatsapp & Viber associated)" 
+      },
+      "about":{
+        "vision_text": "Vision & Mission",
+         "health_text":"Health Associates",
+         "chairman_text":"Chairman's Profile",
+         "msg_chairman_text":"Message from Chairman",
+         "helmet":{
+            "title_text":"About Us"
+         }
+      },
+      "about_vission_mission":{
+         "vision_text":"Vision",
+         "vision_desc":"Our vision is to reach a level of excellence in pharmaceuticals and other allied sectors through an enduring commitment to sustainable quality, and to achieve a global standard through the instruction of a culture of excellence.",
+         "mission_text":"Mission",
+         "mission_desc":"Our mission is to benefit people and improve their quality of life through our product. As generic company our growth is closely knitted to the satisfaction of our customers. Through their satisfaction our aim is therefore to grow by providing diversified services including launching of new molecules. We are committed to to achieving our goal through skilled, creative and motivated employees.",
+          "home_text":"Home",
+          "vission_mission_text":"Vision & Mission",
+          "about_us_text":"About Us",
+       "helmet":{
+      "title_text":" Vision Mission - Concord Pharma"
+       }
+
+      },
+      "about_health_associates":{
+         "helmet":{
+            "title_text":" Health Associates - Concord Pharma"
+         },
+        "home_text":"Home",
+        "about_us_text":"About Us",
+        "health_assc_text":"Health Associates",
+        "ewvm_head":" EW VILLA MEDICA SINCE 1963",
+        "ewvm_text":"EW VILLA MEDICA",
+        "desc_1_text":"is a global healthcare group, an integration of two leading experts in",
+        "desc_2_text":"Advanced Cell Therapy- VILLA MEDICA",
+        "desc_3_text":"This synergy builds a greater depth of expertise and acumen for Ew Villa Medica into being ‘the premium medical tourism destination’ for optimum health and vitality.",
+        "desc_4_text":"It offers the most advanced, comprehensive & personalized regenerative medicine and wellness solutions through integrating cell therapies, biomedical diagnostic and therapeutic devices.",
+        "desc_5_text":"It specializes in Regenerative & Bio-Molecular Medicine which has tremendous promise especially in treatment of chronic degenerative diseases, age-related diseases, anti-aging and rejuvenation.",
+        "desc_6_text":"EW Villa Medica reflects the changing needs of the consumers today and recognizes that optimum health is all about being free from illness, being & looking youthful and holistic healing. Hence, it offers a several signature therapies in harmony with innovative technologies, holistic methods and revolutionary knowhow to reverse age, redefine youth, renew illness and reinvent the quality of life.",
+        "desc_7_text":"EW Villa Medica, The Futuristic & Fabulous Wellness Clinic Has Arrived in Dhaka, Bangladesh…",
+        "desc_8_text":"This premium treatment center offers complete and comprehensive health solutions, integrated wellness programs and innovative cosmetic therapies in soul soothing luxury to relax and recover, under one roof",
+        "and_text":"and ",
+        "europe_text":"EUROPEAN WELLNESS",
+        "address_text":"Address",
+        "address1_desc":"Navana Newbury Place, 4/1/A (5 Floor), Sobhanbag Mirpur Road, Sher-E-Bangla Nagar, Dhaka- 1207, Bangladesh",
+        "phone_number_1":"09606213232",
+        "email_text":"Email",
+        "hotline_text":"Hotline",
+        "dmfr_head":"WORLD CLASS MEDICAL INSTRUMENTS & EXCELLENT SERVICE QUALITY",
+        "desc_9_text":"With world class technology and cutting-edge applications, DMFR Molecular Lab is here to set a measurable impact and revolutionize the diagnostic healthcare in Bangladesh. A host of investigations, analytical testing standards and expert diagnostics are what we aim to deliver. Our relentless efforts and endeavor are to deliver the most accurate, reliable and careful analytical testing standards at par with the international quality standards within the reach of every common man.",
+        "desc_10_text":"At DMFR, reports are Accurate, Detailed, and Dependable for timely diagnosis and therapeutic investigation of disease.",
+        "desc_11_text":"DMFR is maintaining good laboratory practice following stringent process of internal service quality audits, quality control & assurance programs.",
+        "desc_12_text":"DMFR has web reporting facilities for patient report management.",
+        "desc_13_text":"At DMFR, we collect and process the specimen through our logistics experts and take utmost care to deliver the reports efficiently within the committed time.",
+        "desc_14_text":"With world-class technology and cutting-edge applications, DMFR is here to set a measurable impact and revolutionize diagnostic healthcare in Bangladesh.",
+        "desc_15_text":"DMFR provides a lifetime membership card to patients.",
+        "address2_desc" :"Navana Newbury Place, 4/1/A (7th Floor), Sobhanbag, Mirpur Road, Sher-E-Bangla Nagar, Dhaka-1207, Bangladesh",
+        "phone_number2":"0960621313233",
+        "toticell_head":"TOTICELL, AND ADVANCED REGERATIVE HEALTHCARE CENTRE FOR UMET MEDICAL NEEDS",
+        "desc_16_text":"TotiCell, the world class regenerative healthcare center that is strategically located in the heart of Dhaka Metropolitan Mega city and approximately 5 minutes south of National Parliament House and only 50 minutes south of the Hazrat Shahjalal International Airport (HSIA). The board of directors and the scientific board behind TotiCell is committed to offer best practice of health care service in Bangladesh. The boards offer required supervision to implement our mission and comprehend our vision and safeguard good governance while planning out the strategic objectives. The expert team ensure adherence to high excellence and world class standards in health care and scientific development to fulfill unmet medical need by Regenerative Medicine. Regenerative therapies bring dramatic improvements in various medical conditions including musculoskeletal conditions including all types of arthritis, sport associated injuries, tendinopathies, neuropathy, fibromyalgia, autoimmune diseases, sexual health and anti-aging.",
+        "desc_17_text":"Safety and quality are our priority, TotiCell offer advanced Regenerative Medicine (RM) aiming to improve the quality of life through innovative and breakthrough technologies to ensure best medical practices for healing and cure in current time. Our research and highly efficient Regenerative Medicine and Technology (RMT) empower us to formulate, produce therapeutics complying with the local and international guidelines for the safest and best medical practices in our established well equipped GMP facility for various medical conditions. The national and international physicians and scientists specializing in integrative and regenerative medicine at TotiCell confirm safe, effective and lasting regenerative therapies using platelet rich plasma (PRP), stromal vascular fraction (SVF) and stem cells.",
+        "desc_18_text":"We apply cell for regenerative therapy at its best condition, exploiting human cell and tissue- based therapeutic modalities for Aesthetic and Orthopedic related indications including Pain Management, Sexual Enhancement, Facial Rejuvenation and Hair Regrowth. TotiCell apply activating adult stem cells with small-molecule drugs or PRP to regenerate/replenish target cells. PRP is an extract of your own blood that govern the tissue healing process with secreting biomolecules activating the cellular signaling like stem cell trafficking, proliferation, and differentiation, angiogenesis, accelerate bone regeneration, releasing more than 300 active substances involved in coagulation, immune cell recruitment and inflammation, wound healing and tissue repair and remodeling with a complex effect on pro/anti-inflammatory and anabolic/catabolic processes.",  
+        "desc_19_text":"Our specialty in Orthobiologics, a branch of regenerative medicine that refers to the use of biological substances to help musculoskeletal injuries heal quicker. They are used to improve the healing of fractured bones and injured muscles, tendons and ligaments and are derived from substances that are naturally found in your body. Here PRP comes in handy to boost your body’s natural healing powers and speed up recovery of broken bones and injured muscles, tendons, and ligaments. Our orthopedic specialists infuse these ortho-biologics (prepared at our GMP facility) in patients using ultrasound guided injection.",
+        "desc_20_text":"Our Specialty in Regenerative Aesthetics (RA), an exciting discipline to maintain/restore youth & beauty in men and women. TotiCell offer various therapies options for hair restoration, erectile dysfunction (ED) in men, vampire face lift, sexual dysfunction in women, urinary incontinence, and non-invasive breast lift and scar repair.",
+        "desc_21_text":"DMFR has introduced Bio-Safety Level-3 (BSL-3) facility molecular lab for the first time in the private sector of Bangladesh.",
+        "address3_desc":"TotiCell Health & Research Sima Blossom 7th Floor, House#03 (New), 390 (Old), Road#16 (New), 27(Old), Dhanmondi, Dhaka",
+        "phone_number3":"09606213234"
+      },
+      "about_chairmen_profile":{
+         "helmet":{
+           "title_text": "Chairmen Profile - Concord Pharma"
+         },
+         "home_text":"Home",
+         "about_us_text":"About Us",
+         "chairman_text":"Chairman Profile",
+         "director_info_name":"Md. Faizur Rahman",
+         "desc_1_text":" Md. Faizur Rahman is the founder and Group Chairman of",
+         "desc_2_text":"Noapara Group",
+         "desc_3_text":"Bangladesh. Noapara Group is a Bangladeshi owned company with a long history in the South East Asia realm. Right from the beginning the company started with a strong focus on innovation under the leadership of Mr. Rahman the group has made significant progress by laying a strong foundation for ambitious growth through new ventures, alliances and acquisitions.",
+         "desc_4_text":"He contemplates his company continued the drive for innovation, finding new and unique ways to improve on existing solutions. Mr. Rahman emphasized that innovation has been integral to the success and growth for Noapara Group.",
+         "desc_5_text":"In 1990, Noapara Traders purchased the raw materials of NPKS fertilizer and producing known as “Bengal MisraSar” at South Bengal Fertilizer Mills Ltd. producing international grade of NPKS fertilizers at Noapara. Mr. Rahman also designated as the",
+         "desc_6_text":"1st vice chairman of Bangladesh Fertilizer Association (BFA).",
+         "desc_7_text":"Being as an honorable chairman of a leading group of companies he never fail to thank to those who joined with him in his journey from his nascent stage to till date in creating the group of companies. His business is now highly diversified from imports to manufacturing. “Noapara Group” is now manufacturing quality cement and using latest state of the art technology. In Noapara Cement deserves to fulfill the needs of our country in achieving affordable housing for all. Mr. Rahman also the",
+         "desc_8_text":"Treasurer of Bangladesh Cement Manufacturers Association (BCMA)",
+         "desc_9_text":"His main motto is to enhance the development of our nation in the field’s food, health and housing. Noapara Group believes in giving back to the society and country through various initiatives and corporate social service activities.",
+         "desc_10_text":"Bangladesh is densely populated country. Our nation’s facilities in good quality seeds, crops storage facilities and ample supply of good fertilizer is not enough. Noapara group’s aim and mission is to fulfill this goal and achieve self-sufficiency in the field of agricultural production of grains and help our nation feed all our people.",
+         "desc_11_text":"In Bangladesh, Pharmaceutical sector is one of the core sector which is contributing the second largest revenue to the country’s economy. “CONCORD Pharmaceuticals Ltd.” is determined to manufacture high quality health care products that improve the quality of life of people.In this connection the company works on the fields of diabetes and cardiac sectors. For the first time in Bangladesh he launched DAPAZIN (Dapagliflozin) especially for type to diabetes patients. Mr. Rahman believes in “Better Medicine Better life” which contributes towards the growth of a healthy Nation.",
+         "desc_12_text":"Under the leadership of Mr. Rahman, EW Villa Medica (a German regenerative medicine center) comply to works with Bangladesh by practicing a joint venture project stem cell treatment which is perform a vital role in the history of modern health care services.",
+         "desc_13_text":"Mr. Rahman believes that his three products- quality cement, quality fertilizer NPKS and international quality medicine will fulfill human’s three basic needs i.e affordable food, quality housing and medicine. Besides, his companies imports food grains, coal and others important fertilizers to meet the demand of our nation.",
+         "desc_14_text":"He conferred a series of awards for his various types of work in the socio-economic sectors some of them he was awarded",
+         "desc_15_text":"Business Excellence Awards – 2014",
+         "desc_16_text":"Singapore. And also received",
+         "desc_17_text":"Sofol Khudro Uddyogta Somomanona Podok – 2014",
+         "desc_18_text":"In 2017 he received the",
+         "desc_19_text":"FOBANA Business power award",
+         "desc_20_text":"at Florida, North America."
+
+      },
+      "about_message_chairmen":{
+         "home_text":"Home",
+         "about_us_text":"About Us",
+         "name":"Md.Faizur Rahman",
+         "message_head":"Message from Chairman",
+         "message":"The Chairman of the company believes that Concord Pharmaceuticals Ltd is committed to provide the best in pharmaceutical care through quality, diligence and transparency. Concord Pharmaceutical Limited aims to keep their customers satisfied, look to grow and seek to become a name of global reckoning in future.",
+         "helmet":{
+            "title_text": "Message From Chairmen - Concord Pharma"
+          }
+      },
+
+      "products":{
+         "helmet":{
+            "title_text":"Products - Concord Pharma"
+         },
+        "products_text":"Products",
+         "by_trade_name":"By Trade Name",
+         "by_generic_name":"By Generic Name",
+         "by_threr_class":"By Therapeutic Class",
+         "first_time_launching":"First Time Launching",
+         "home_text":"Home"
+
+      },
+      "facilities":{
+         "research_and_development_text": "Research and Development",
+         "production_text":"Production",
+         "quality_control_text": "Quality Control",
+         "warehouse_text": "Warehouse",
+         "distribution_text": "Our Distribution Network",
+         "facilities_text":"Facilities",
+         "helmet":{
+            "title_text":"Facilities - Concord Pharma"
+         }
+      },
+      "facilities_researh_dev":{
+         "helmet":{
+            "title_text":"Research And Development - Concord Pharma"
+         },
+         "home_text":"Home",
+         "facilities_text":"Facilities",
+         "research_dev_text":"Research & Development",
+         "desc":"Concord Pharmaceuticals Ltd. gives intensive emphasis on Research & Development to innovate new formulations & dosage forms. Our R& D is doing continuous attempt for improving quality & competency of our products. Our R &D team consisting of multidisciplinary experts of pharmacist, Chemists, Microbiologists with extensive experience in term of quality and business with integration of advanced technological changes conforming international standards. We have developed various formulation like Sustained release, Sugar free formulations, various coating technology, stability of liquid preparations by our R & D team. Our Research & Development lab is equipped with modern technology & equipment maintaining environmental control & controlled room environments We are always improving our R & D for development of new products, processes and services for best quality medicines."
+      },
+      "facilities_product":{
+         "helmet":{
+             "prod_concord_text":"Production - Concord Pharma"
+         },
+         "banner_with_text":{
+             "production_text":"Production",
+             "desc_1":"Concord Pharmaceuticals Ltd is equipped with state of the art manufacturing facilities including modern technology & expertise, latest equipment & advancements.",
+             "desc_2":"Our production incorporates technological excellence in manufacturing, processing & packaging of various dosage forms & formulations like Tablet, Capsule, Syrup, Suspension & Injectable products.",
+             "desc_3":"Concord Pharmaceuticals Ltd. ensures & meets the growing requirements of cGMP regulations and other quality systems for all stage of production & in process control. The company is certified by the Quality Management System of ISO- 9001:2008 and WHO cGMP."
+         }
+        },
+
+      "facilities_quality":{
+         "helmet":{
+            "title_text":"Quality Control - Concord Pharma"
+         },
+         "home_text":"Home",
+         "facilities_text":"Facilities",
+         "quality_control_text":"Quality Control",
+         "desc_text_1":"Our motto is “Better medicine better life”. Our quality control laboratory is equipped with highly sophisticated equipments to conform good laboratory practice guideline so as to guarantee consistent product quality.",
+         "desc_text_2":"An excellent team of professionals having excellent knowledge & concepts of quality systems and cGMP is working to ensure quality assurance at each stage right from receiving of starting materials to finished products to assure the highest international standards. We ensure systems, facilities & process validations, HVAC, clean room regulations, approval of raw, packaging & finished goods and proper documentation of technical quality parameters to serve best quality medicine for the nation.",
+         "desc_text_3":"The System of Quality Control in Concord Pharmaceuticals ensures that:",
+         "desc_text_4":"The Pharmaceutical Products are designed and developed in a way that takes into account the requirements of Good Manufacturing Practices (cGMP)",
+         "desc_text_5":"Adequate arrangements are made for Manufacture, Supply and Use of correct starting and packaging materials",
+         "desc_text_6":"Adequate Controls on starting materials, Intermediate products and Bulk Products. Calibrations and Validations are carried out.",
+         "desc_text_7":"The Finished products are correctly processed and checked in accordance with established procedures.",
+         "desc_text_8":"The Products are not released for sale or supplied before authorized persons have certified that each production batch has been produced and controlled in accordance with the requirements of the label claim and any other provisions relevant to Production, Control and Release of products."
+      },
+      "facilities_warehouse":{
+         "helmet":{
+            "title_text":"Warehouse - Concord Pharma"
+         },
+         "home_text":"Home",
+         "facilities_text":"Facilities",
+         "warehouse_text":"Warehouse",
+         "desc_text_1":"Our warehouse is a highly controlled & strictly maintained all environmental regulations. The area is equipped with highly temperature regulated, proper storage & handling system. All security measures are well established with appropriate fire-fighting equipment and controlled access to the building.",
+         "desc_text_2":"Our sampling & quarantine areas with separate storage location allows the proper placing of penicillin, cephalosporin and general products. We maintain controlled room conditions for specific materials to confirm the standard compliance. We maintain retention sample in separate room under standard conditions. All the materials are stored in the warehouse by pallet racking. The movement system of the materials maintains a strict ‘first in first out’ procedure and shelf life of products are strictly monitored."
+         
+      },
+      "media_milestones":{
+         "year_1":"2010",
+         "year_2":"2010",
+         "year_3":"2011",
+         "year_4":"2012",
+         "year_5":"2014",
+         "year_6":"2014",
+         "year_7":"2015",
+         "year_8":"2016",
+         "year_9":"2018",
+         "year_10":"2021",
+         "text_1":"Inauguration of CONCORD",
+         "text_2":"Factory Establish",
+         "text_3":"Depot Establish",
+         "text_4":"Annual Conference",
+         "text_5":"GMP Approval",
+         "text_6":"First Export",
+         "text_7":"Dapazin (First time in Bangladesh) launching program",
+         "text_8":"Relikof (First time in Bangladesh) launching",
+         "text_9":"Health Associates Establish",
+         "text_10":"1 million $ Export of Dapazin",
+         "milestones_text":"Milestones",
+         "home_text":"Home",
+         "media_text":"Media",
+         "helmet":{
+            "title_text":"Milestones - Concord Pharma"
+         }   
+      },
+      "media":{
+          "text_1":"Video",
+          "text_2":"Events",
+          "text_3":"Social Media Post",
+          "text_4":"Milestones",
+          "text_5":"Social Responsibilities",
+          "media_text":"Media",
+          "home_text":"Home",
+          "helmet":{
+            "title_text":"Media - Concord Pharma"
+         }  
+      },
+      "video":{
+         "media_text":"Media",
+          "home_text":"Home",
+          "title":"This is a unique title",
+          "video_text":"Videos",
+          "helmet":{
+            "title_text":"Videos - Concord Pharma"
+         }  
+      },
+      "media_events":{
+         "home_text":"Home",
+         "events_text":"Events",
+         "media_text":"Media",
+         "event_1":"Annual Confrence 2013",
+         "event_2":"Annual Confrence 2014",
+         "event_3":"Dapazine Lunching Program",
+         "view_more_text":"View More",
+         "helmet":{
+            "title_text":"Events - Concord Pharma"     
+         } 
+      }
+      ,"media_photo":{
+         "home_text":"Home",
+         "media_text":"Media",
+         "photo_text":"Photos",
+         "helmet":{
+            "title_text":"Photo - Concord Pharma"
+         } 
+      },
+      "media_social_media":{
+         "post_latest_1":"Concord Pharmaceuticals ltd Launched Dapazin in Myanmar 25TH August 2019.",
+         "post_latest_2":"Concord Pharmaceuticals ltd Launched Dapazin Cambodia 25TH August 2017",
+         "post_latest_3":"Attend Medi Vietnam Pharma EXPO 3rd to 5th December 2014",
+         "post_social_head_1":"Concord Pharmaceuticals ltd Launched Dapazin in Myanmar 25TH August 2019.",
+         "post_social_text_1":"Concord Pharmaceuticals Ltd., Bangladesh launched  Dapazin  for the first time  with the collaboration with Zar & Zar Co., Ltd in Hotel Melia Yangon, Myanmar.It was officially opened by Prof. Tint SweLatt President, Myanmar Diabetic Association (MMDI) and highlighted how revolutionary Dapagliflozin in the field of medicine and the current global concern of SGLT-2 Inhibitor in managing Type-2 diabetes. He emphasized that every county can play a role by preventing and managing this disease, and promoting prudent use ...",
+         "post_social_date_1":"August 25, 2019",
+         "post_social_head_2":"Concord Pharmaceuticals ltd Launched Dapazin Cambodia 25TH August 2017",
+         "post_social_text_2":"Concord Pharmaceutical Ltslaunched successfully  Dapazin first time in Cambodia at Concord Pharmaceuticals Ltd  Bangladesh launched  Dapazin  for the first time  with the collaboration with Cambodia Corporation Pharma Ltd in Cambodia .Chairman of  Concord Pharmaceuticals Ltd has enlightened the team with  the future vision and mission of the company and added some appreciating words from his part to the marketing and sales team followed by opening ceremony speech.Cambodian Cooperation Pharma chairman give opening ...",
+         "post_social_date_2":"August 25, 2017",
+         "post_social_head_3":"Attend Medi Vietnam Pharma EXPO 3rd to 5th December 2014",
+         "post_social_text_3":"Concord Pharmaceuticals Ltd. has joined  21st Vietnam International Medical Hospital Pharmaceutical  Exhibition In Hanoi Ho Chi Minh City named  Medi Vietnam Pharm Expo in 2014. It includes medical and laboratory equipment, pharmaceutical products and medical instruments, machines and materials used in hospitals, ophthalmology and dental products and technology.This fair aims to bridge between domestic and international organization in the pharmaceutical & health sector. More than 100 companies from 18 countries will display Pharmaceutical products , packaging and ...",
+         "post_social_date_3":"November 3, 2014",
+         "home_text":"Home",
+         "media_text":"Media",
+         "latest_post":" Latest Posts",
+         "all_blog_post":"All Blog Posts",
+         "social_post_text":"Social Media Post",
+         "helmet":{
+            "title_text":"Social Media Post - Concord Pharma"      
+         } 
+      },
+
+      "contact":{
+         "dist_network_text":"Our Distribution Network",
+         "contact_us_text":"Contact Us",
+         "home_text":"Home",
+         "contact_text":"Contact",
+         "helmet":{
+            "title_text":"Contact - Concord Pharma"
+            
+         } 
+      },
+     
+      "contact_contact_us":{
+         "helmet":{
+            "title_text":"Contactus - Concord Pharma"
+            
+         } ,
+         "home_text":"Home",
+         "contact_text":"Contact",
+         "email_sent":"Email Sent Successfully",
+         "email_not_sent":"Email Not Sent",
+         "invalid_email":"Please Enter Valid Email",
+         "contact_us":"Contact Us",
+         "corporate_business":"For Corporate Business",
+         "address":"Head-Office : Sima Blossom (11th Floor), House#3(New) 390(Old) Road#16(New) #27(old), Dhanmondi,Dhaka-1206",
+         "phone_text":"Phone",
+         "phone_number":"+01991146559",
+         "fax_num":"01991146559",
+         "fax_text":"Fax",
+         "email_text":"Email",
+         "int_business":"For International Business",
+         "name":"Faysal Md. Shaheen Manager",
+         "business_deprt":"Head, Int’l Business Department",
+         "int_phone_number":"01991145006 , 880248120339",
+         "int_fax":"+88-02-9146483",
+         "opt_1":"General Inquiry",
+         "opt_2":"Sales",
+         "opt_3":"Delivery Service",
+         "opt_4":"Complaints & Suggestions",
+         "resp_sent_text":"Your response has been sent successfully",
+         "text_1":"Name",
+         "text_2":"Email",
+         "text_3":"Contact Number",
+         "text_4":"Subject",
+         "text_5":"Message",
+         "submit_btn":"Submit",
+         "field_req_text":"This field is required field"
+      },
+      "carrers":{
+         "home_text":"Home",
+         "pos_1_text":"Medical Promotion Officer (MPO)",
+         "date_1_text":"Posted 3 month ago",
+         "pos_2_text":"Area Manager (AM)",
+         "date_2_text":"Posted 3 month ago",
+         "pos_3_text":"Regional Sales Manager (RSM)",
+         "date_3_text":"Posted 3 month ago",
+         "pos_4_text":"Other Positions",
+         "date_4_text":"Posted 3 month ago",
+         "job_arch":"Job Archives",
+         "all_jobs_text":"All Jobs",
+         "apply_now":"Apply Now",
+         "jobs_text":"Jobs",
+         "helmet":{
+            "title_text":"Careers - Concord Pharma"     
+         } 
+      },
+      "career_inner_page":{
+         "name_text_1":"Executive",
+         "name_text_2":"Sr. Executive",
+         "name_text_3":"Assistant Manager",
+         "name_text_4":"Deputy Manager",
+         "name_text_5":"Manager",
+         "name_text_6":"Assistant General ManagerAssistant General Manager",
+         "name_text_7":"General Manager",
+         "name_text_8":"Sales Manager",
+         "name_text_9":"National Sales Manager",
+         "upload_report":"Please upload Report",
+         "applied_success_text":"Applied Successfully",
+         "desc_text":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+         "apply_online_text":"Apply Online",
+         "full_name_text":"Full Name",
+         "email_text":"Email",
+         "phone_text":"Phone",
+         "interested_area_text":"Interested Area",
+         "placeholder_phone":"+880XXXXXXXX",
+          "field_req_text":"this field is required field",
+          "interested_job_lvl":"Interested Job Level",
+          "opt_text_level":"Select Interested Job Level",
+          "opt_1_text_area":"Select Interested Area",
+          "attach_resume":"Attach Resume",
+          "submit_text":"Submit",
+         "helmet":{
+            "title_text":"Careers Detail - Concord Pharma"
+         } 
+      },
+      "footer":{
+         "quick_links":"Quick Links",
+         "home_text":"Home",
+         "about_us_text":"About Us",
+         "facility_text":"Our Facility",
+         "tele_med_text":"Tele Medicine",
+         "media_text":"Media",
+         "contact_us_text":"Contact Us",
+         "our_prod_text":"Our Products",
+         "our_trade_name_text":"By Trade Name",
+         "by_generic_name_text":"By Generic Name",
+         "by_therap_text":" By Therapeutic Class",
+         "first_class_laun":"First Class Launching",
+         "subsc_news_text":"Subscribe for Newsletter",
+         "your_email":"Your Email",
+         "subs_text":"SUBSCRIBE",
+         "downl_apps_text":"Download Apps",
+         "get_in_touch_text":"Get In Touch",
+         "call_text":"Call",
+         "phone_number_text":"01991146559",
+         "email_text":"Email",
+         "visitor_count_text":"Visitor Count",
+         "enquiry_text":"Enquiry",
+         "distribution_center_text":"Distribution Center",
+         "copyright_text":"© Copyright 2021. All Right reserved.",
+         "dev_by_text":"Designed and Developed by",
+         "ripple_intra_text":"Ripple Intra"
+      },
+      "header":{
+         "site_map_text":"Sitemap",
+         "careers_text":"careers",
+         "search_text":"Search",
+         "dashboard_text":"Dashboard",
+         "notifications_text":"Notifications",
+         "change_password_text":"Change Password",
+         "logout_text":"Log Out",
+         "login_text":"login",
+         "english_text":"English",
+         "arabic_text":"arabic",
+         "bengali_text":"bengali",
+         "home_text":"HOME",
+         "about_us_text":"ABOUT-US",
+         "vision_mission_text":"Vision & Mission",
+         "health_ass_text":"Health Associates",
+         "chairmans_profile":"Chairman’s Profile",
+         "msg_frm_chair":"Message from Chairman",
+         "global_operation":"Gloabl Operation",
+         "products_text":"Products",
+         "by_trade_name":"By trade name",
+         "by_generic_name":"By generic name",
+         "by_therap_class":"By therapeutic class",
+         "first_time_launch":"first time launching",
+         "facilities_text":"Facilities",
+         "reserch_and_develop":"Research and Development",
+         "production_text":"Production",
+         "quality_control_text":"Quality Control",
+         "warehouse_text":"Warehouse",
+         "our_distribution_network":"Our distribution network",
+         "tele_medicine":"Tele-Medicine",
+         "media_text":"media",
+         "video_text":"video",
+         "events_text":"Events",
+         "social_media_post":"social media post",
+         "mile_stones_text":"mile stones",
+         "social_resp_text":"social responsibilities",
+         "contact":"contact",
+         "our_dist_net_text":"our distribution network",
+         "contact_us":"contact us"
+      },
+      "login":{
+         "helmet":{
+          "title_text":"Concord Pharma"
+          },
+          "login_text":"Login",
+          "forgot_pass_text":"Forgot Password",
+          "user_name_email":"Username/email",
+          "email_text":"Email",
+          "field_req_text":"This field is required field",
+          "password_text":"Password",
+          "enter_email_for_verif":"Enter Email for Verification",
+          "back_to_log":"Back to Login",
+          "submit_text":"Submit"
+      },
+      "depot_dashboard":{
+       "helmet":{
+          "title_text":"Dashboard - Concord Pharma" 
+       },
+       "home_text":"Home",
+       "order_history_text" :"Order History",
+       "new_order_text" :"New Order",
+       "stocks_text":"Stocks",
+       "delivery_stat_text":"Delivery Status",
+       "payment_text":"Payment",
+       "notification_text":"Notification",
+       "change_pass_text":"Change Password",
+       "logout_text":"Logout",
+       "depot_manager_text":"Depot Manager",
+       "dhaka_text":"Dhaka",
+       "search_text":"Search"
+      },
+      "order_history":{
+         "order_id":"Orders ID",
+         "customer_name":"Customer Name",
+         "market_address":"Market Address",
+         "order_date_time":"Order Date/Time",
+         "payment_type":"Payment Type",
+         "delivery_status":"Delivery Status",
+         "approved_by":"Approved By",
+         "payment_status":"Payment Status",
+         "proceed_by":"Proceed By",
+         "actions_text":"Actions",
+         "view_btn_name":"View",
+         "order_request_text":"Order Request",
+         "no_data_to_display":"No Data to Display",
+         "search_text":"Search"
+      },
+      "inner_page":{
+         "back":"Back"
+      },
+      "table_inner_page":{
+         "order_id":"OrderID",
+         "customer_name":"Customer Name",
+         "market_address":"Market Address",
+         "order_date_time":"Order Date/Time",
+         "proceed_by":"Proceed By",
+         "mpo_text":"MPO",
+         "ordered_by":"Ordered By",
+         "sub_total":"Sub Total",
+         "value_added":"A value-added tax %",
+         "payment_type":"Payment Type",
+         "total_text":"Total",
+         "s_no":"S.No",
+         "product_name_text":"Product Name",
+         "quantity_text":"Quantity",
+         "trade_price_text":"Trade Price",
+         "amount_text":"Amount"
+      },
+      "new_order":{
+         "order_id":"OrderID",
+         "customer_name":"Customer Name",
+         "market_address":"Market Address",
+         "date_time_text":"Date and Time",
+         "payment_type":"Payment Type",
+         "delivery_status":"Delivery Status",
+         "payment_status":"Payment Status",
+         "proceed_by":"Proceed By",
+         "toggle_dropdown":"Toggle Dropdown",
+         "update_status":"Update Status",
+         "view_btn_text":"View",
+         "new_order":"New Order",
+         "no_data_to_display":"No Data to Display",
+         "search_text":"Search"
+
+      },
+      "stocks":{
+         "product_name":"Product Name",
+         "category_name":"Category Name",
+         "qty_text":"Quantity",
+         "formulas_text":"Formulas",
+         "price_text":"Price",
+         "all_text":"All",
+         "medicine_text":"Medicine",
+         "gift_text":"Gift",
+         "no_data_to_display":"No Data to Display",
+         "stocks":"Stocks",
+         "search_text":"Search"
+      },
+      "delivery_status":{
+         "order_id":"Orders ID",
+         "customer_name":"Customer Name",
+         "market_address":"Market Address",
+         "order_date_time":"Order Date/Time",
+         "payment_type":"Payment Type",
+         "delivery_status":"Delivery Status",
+         "payment_status":"Payment Status",
+         "proceed_by":"Proceed By",
+         "actions_text":"Actions",
+         "view_btn_name":"View",
+         "order_request_text":"Order Request",
+         "no_data_to_display":"No Data to Display",
+         "search_text":"Search"
+      },
+      "payment":{
+         "customer_name":"Customer Name",
+         "payment_type":"Payment Type",
+         "payment_status":"Payment Status",
+         "vat_text":"Vat",
+         "total_text":"Total",
+         "actions_text":"Actions",
+         "no_data_to_display":"No Data to Display",
+         "view_btn_name":"View",
+         "payments_text":"Payment",
+         "search_text":"Search"
+      },
+      "notification":{
+      "notifications_text":"Notifications",
+      "all_notifications":"All Notifications",
+      "recent_notifications": "Recent Notification",
+      "no_notifications_text":"No Notification To Show"
+      },
+      "change_password":{
+      "change_password_text":"Change Password",
+      "old_password_text":"Old Password",
+      "new_password_text":"New Password",
+      "new_password_confirm":"New Password Confirm",
+      "enter_old_pass":"Enter Old Password",
+      "enter_new_pass":"Enter New Password",
+      "enter_new_pass_again":"Enter New Password Again",
+      "field_req_text":"This field is required field",
+      "password_changed_succ":"Password Changed Successfully",
+      "provide_same_pass":"Please Provide the same password"
+      },
+      "header_dash":{
+         "sun_text":"Sunday",
+         "mon_text" :"Monday",
+         "tue_text":"Tuesday",
+         "wed_text":"Wednesday",
+         "thu_text":"Thursday",
+         "fri_text":"Friday",
+         "sat_text":"Saturday"
+      },
+      "director_dashboard":{
+         "helmet":{
+            "title_text":"Dashboard - Concord Pharma"
+         },
+         "dist_cent_sto_deta":"Distribution Center Stock Details",
+         "home_text":"Home",
+         "reports_text":"Reports",
+         "products_text":"Products",
+         "newly_launched":"Newly Launched",
+         "dist_center":"Distribution Center",
+         "dpt_head":"Department Head",
+         "notification":"Notification",
+         "change_password":"Change Password",
+         "logout_text":"Logout",
+         "director_text":"Director",
+         "all_text":"All",
+         "region_text":"Region"
+         
+      },
+      "director_approval_status_change":{
+         "update_approval_stat":"Update Approval Status",
+         "approval_status":"Approval Status",
+         "approved_text":"approved",
+         "awaiting_approval":"Awaiting Approval",
+         "cancelled_text":"cancelled",
+         "update_status":"Update Status"
+      },
+      "director_scheule_create":{
+         "add_new_sch":"Add New Schedules",
+         "select_text":"Select...",
+         "assigned_to":"Assigned To",
+         "user_type":"User Type",
+         "doctor_tetx":"Doctor",
+         "customer_text":"Customer",
+         "name_text":"Name",
+         "field_req_text": "this field is required field",
+         "time_text":"Time",
+         "add_schedule":"Add Schedule"
+      },
+      "reports":{
+        "reports_text":"Reports",
+        "all_text":"All",
+        "region_text":"Region",
+        "presc_report":"Prescription Report",
+        "dcr_report":"DCR Report",
+        "dctr_report":"Doctor Report",
+        "prod_report":"Product Report"
+        
+      },
+      "prescription_report":{
+         "presc_report_text":"Prescription Report",
+         "start_date":"Start Date",
+         "end_date":"End Date",
+         "select_sales_manager":"Select Sales Manager",
+         "select_reg_sales_manager":"Select Regional Sales Manager",
+         "select_area_manager":"Select Area Manager",
+         "select_mpo":"Select MPO",
+         "gener_report_text":"Generating Report",
+         "name_text":"Name",
+         "sum_text":"Sum"
+      },
+      "dcr_report":{
+         "dcr_report_text":"DCR Report",
+         "start_date":"Start Date",
+         "end_date":"End Date",
+         "select_sales_manager":"Select Sales Manager",
+         "select_reg_sales_manager":"Select Regional Sales Manager",
+         "select_area_manager":"Select Area Manager",
+         "select_mpo":"Select MPO",
+         "gener_report_text":"Generating Report",
+         "name_text":"Name",
+         "sum_text":"Sum"
+      },
+      "doctor_report":{
+         "dctr_report_text":"Doctor Report",
+         "start_date":"Start Date",
+         "end_date":"End Date",
+         "generate_report_btn":"Generate Report",
+         "gener_report_text":"Generating Report",
+         "name_text":"Name",
+         "enter_date_to_gen_rep":"Enter date to generate report"
+      },
+      "product_report":{
+         "prod_report_text":"Product Report",
+         "start_date":"Start Date",
+         "end_date":"End Date",
+         "select_sales_manager":"Select Sales Manager",
+         "select_doctor":"Select Doctor",
+         "select_stock":"Select Stock",
+         "gener_report_text":"Generating Report",
+         "name_text":"Name",
+         "sum_text":"Sum"
+      },
+      "director_products":{
+         "name_text":"Name",
+         "cat_name":"Category Name",
+         "qty_text":"Quantity",
+         "price_text":"Price",
+         "retail_price":"Retail Price",
+         "added_by_text":"Added By",
+         "n_a":"N/A",
+         "list_text":"List",
+         "grid_text":"Grid",
+         "products_text":"Products",
+         "search_text":"Search",
+         "tp_text":"T.P",
+         "rp_text":"R.P",
+         "product_added_by":"Product Added By"
+      },
+      "newly_launched":{
+         "name_text":"Name",
+         "cat_name":"Category Name",
+         "qty_text":"Quantity",
+         "price_text":"Price",
+         "retail_price":"Retail Price",
+         "added_by_text":"Added By",
+         "list_text":"List",
+         "grid_text":"Grid",
+         "n_a":"N/A",
+         "newly_launched":"Newly Launched",
+         "search_text":"Search"
+      },
+      "distribution_center":{
+       "dist_center":"Distribution Center",
+       "search_text":"Search",
+       "n_a":"N/A"
+      },
+      "distribution_stocks_details":{
+         "all_text":"All",
+         "medicine_text":"Medicine",
+         "gift_text":"Gift",
+         "product_name_text":"Product Name",
+         "cat_name":"Category Name",
+         "product_formula":"Product Formula",
+         "qty_text":"Quantity",
+         "price_text":"Price",
+         "n_a":"N/A",
+         "no_data_to_display":"No Data to Display",
+         "back_text":"Back",
+         "search_text":"Search"
+
+      },
+      "department_head":{
+         "department_head_text":"Department Head",
+         "search_text":"Search"
+      },
+      "privacy_policy":{
+       "helmet":{
+          "title_text":"Privacy Policy - Concord Pharma"
+       },
+       "text_1":" Privacy Policy for Concord Pharmaceuticals Ltd",
+       "text_2":"At Concord Pharmaceuticals Ltd. , accessible from https://concordpharma-bd.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Concord Pharmaceuticals Ltd. and how we use it.",
+       "text_3":"If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us. ",
+       "text_4":"This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in Concord Pharmaceuticals Ltd. . This policy is not applicable to any information collected offline or via channels other than this website.",
+       "text_5":"By using our website, you hereby consent to our Privacy Policy and agree to its terms.",
+       "text_6":"Information we collect",
+       "text_7":"The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.",
+       "text_8":"If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.",
+       "text_9":"When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.",
+       "text_10":"How we use your information",
+       "text_11":" We use the information we collect in various ways, including to:",
+       "text_12":"Provide, operate, and maintain our website",
+       "text_13":"Improve, personalize, and expand our website",
+       "text_14":"Develop new products, services, features, and functionality",
+       "text_15":"Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes",
+       "text_16":"Send you emails",
+       "text_17":"Find and prevent fraud",
+       "text_18":"Log Files",
+       "text_19":"Concord Pharmaceuticals Ltd. follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services’ analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users’ movement on the website, and gathering demographic information.",
+       "text_20":"Consent",
+       "text_21":"Understand and analyze how you use our website"
+
+      },
+     "actions":{
+      "status_updated":"Status Updated Successfuly",
+      "error_text":"Error",
+      "schedule_added":"Schedule Added Successfully",
+      "login_successful":"Login Successful",
+      "un_authorized_access":"UnAuthorized Access",
+      "email_sent_text":"An Email has been sent to your email address",
+      "password_reset_success":"Successful Password Reset",
+      "password_change_success":"Successful Password Change",
+      "logout_text":"User Logout"
+     }
+   }
+   
+
+

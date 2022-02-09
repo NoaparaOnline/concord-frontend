@@ -16,43 +16,46 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useTranslation } from 'react-i18next';
 
-const label = {
-  HeadFacilities: "Facilities",
-  HeadOurProduct: "Our Products",
-  Milestones: "Milestones",
-  Our_Affiliates: "Our Affiliates",
-};
 
-const milestone_data = [
-  {
-    id: 0,
-    year: "2010",
-    text: "Inauguration of CONCORD",
-  },
-  {
-    id: 1,
-    year: "2010",
-    text: "Factory Establish",
-  },
-];
 
 const Home = (props) => {
+
+  const {t} = useTranslation("common")
+  const label = {
+    HeadFacilities: t('label.facilities_text'),
+    HeadOurProduct: t('label.our_product_text'),
+    Milestones: t('label.milestones_text'),
+    Our_Affiliates: t('label.our_affiliates'),
+  };
+  const milestone_data = [
+    {
+      id: 0,
+      year: t('milestone.year_text'),
+      text: t('milestone.inaufuration_text'),
+    },
+    {
+      id: 1,
+      year: t('milestone.year_text'),
+      text: t('milestone.factory_text'),
+    },
+  ];
+  
   return (
     <>
       <Helmet>
-        <title>Concord Pharma</title>
+        <title>{t('helmet.concord_pharma')}</title>
       </Helmet>
 
       {/* <Navbar/> */}
       <Carousel />
-
       <WeAreServing />
       <TextSectionContainer />
 
       <Heading
         heading={label.HeadFacilities}
-        subheading={"Leading Human Medicine Manufacturer in Bangladesh"}
+        subheading={t('heading.load_human_medicine_text')}
       />
 
       <Cards />
@@ -84,7 +87,7 @@ const Home = (props) => {
                   }}
                   className="btn btn-primary rounded-pill d-flex align-items-center"
                 >
-                  <span>VIEW MORE</span>
+                  <span>{t('home.view_more').toUpperCase()}</span>
                 </Link>
               </div>
             </div>

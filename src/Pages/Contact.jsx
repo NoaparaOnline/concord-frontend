@@ -6,22 +6,23 @@ import ZoominCards from '../components/ReusableComponents/ZoominCards';
 import contactcard1 from '../Statics/assets/contact/contact.svg'
 import contactcard2 from '../Statics/assets/contact/distribution.svg'
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 
 const Contact = () => {
-    
+    const {t}=useTranslation('common')
     const contactcard = [
         {
           id: 1,
           imageURL: contactcard1,
-          text: "Our Distribution Network",
+          text:  t("contact.dist_network_text"),
           link: "/our-distribution-network",
         },
         
         {
           id: 2,
           imageURL: contactcard2,
-          text: "Contact Us",
+          text: t("contact.contact_us_text"),
           link: "/contactus",
         },
         
@@ -29,7 +30,7 @@ const Contact = () => {
 
       const LinksBan = [
         {
-          subLinkName: 'Home',
+          subLinkName: t("contact.home_text"),
           subDash: '/',
           subLink: '/'
         },
@@ -39,11 +40,11 @@ const Contact = () => {
     return (
         <>
         <Helmet>
-        <title>Contact - Concord Pharma</title>
+        <title>{t("contact.helmet.title_text")}</title>
       </Helmet>
         <BannerWithText imgSrc={bannerimg}
-          heading={'Contact'}
-          subHeading={`Contact`}
+          heading={t("contact.contact_text")}
+          subHeading={t("contact.contact_text").toUpperCase()}
           LinksBan={LinksBan}
           
         backposit={'center right'}
@@ -53,7 +54,7 @@ const Contact = () => {
           conmarpad={"mt-5 pt-5"}
           fontsize={"60px"}
           />
-        <Heading heading={"Contact"} />
+        <Heading heading={t("contact.contact_text")} />
   
   
   

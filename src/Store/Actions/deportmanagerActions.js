@@ -2,6 +2,7 @@ import { toast } from "react-toastify";
 import apiServices from "../../services/requestHandler";
 import { deportConstants } from "../Constants/deportmanagerConstant";
 import { logInConstants } from "../Constants/loginConstant";
+import i18next from "i18next";
 
 export const getoldOrder = (data) => async (dispatch) => {
   dispatch({
@@ -156,10 +157,11 @@ export const statusChange = (data) => async (dispatch) => {
   
   if (response?.response_code === 200) {
     dispatch(getnewOrder());
-    toast.info("Status Updated Successfully");
+    toast.info(i18next.t("common:actions.status_updated"));
    
   } else {
-    toast.error("Error");
+    toast.error(i18next.t("common:actions.error_text"));
+  
   }
 };
 

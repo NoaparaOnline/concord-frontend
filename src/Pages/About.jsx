@@ -8,34 +8,36 @@ import Aboutcard2 from '../Statics/assets/health-icon2.svg'
 import Aboutcard3 from '../Statics/assets/profile3.svg'
 import Aboutcard4 from '../Statics/assets/Chairman-message4.svg'
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 
 const About = () => {
+  const {t} = useTranslation("common")
 
   // Zoomcards Map Data
   const aboutcard = [
     {
       id: 0,
       imageURL: Aboutcard1,
-      text: "Vision & Mission",
+      text: t("about.vision_text"),
       link: "/vision-mission",
     },
     {
       id: 1,
       imageURL: Aboutcard2,
-      text: "Health Associates",
+      text: t("about.health_text"),
       link: "/health-associates",
     },
     {
       id: 2,
       imageURL: Aboutcard3,
-      text: "Chairman's Profile",
+      text: t("about.chairman_text"),
       link: "/chairmen-profile",
     },
     {
       id: 3,
       imageURL: Aboutcard4,
-      text: "Message from Chairman",
+      text:  t("about.msg_chairman_text"),
       link: "/message-from-chairmen",
     },
   ];
@@ -54,14 +56,14 @@ const About = () => {
     <>
       <Helmet>
         <title>
-        About - Concord Pharma
+        {t("about.helmet.title_text")}
         </title>
       </Helmet>
     <div>
       <BannerWithText
         imgSrc={bannerimg}
-        heading={'About Us'}
-        subHeading={`about us`}
+        heading={t("about.helmet.title_text")}
+        subHeading={t("about.helmet.title_text").toLowerCase()}
         backposit={'center right'}
         backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
         LinksBan={LinksBan}
@@ -71,11 +73,6 @@ const About = () => {
         fontsize={"60px"}
       />
       <Heading heading={"About Us"} />
-
-
-
-
-
       {/* Zoom Cards */}
       <div className="container my-5">
         <div className="row d-flex justify-content-center">

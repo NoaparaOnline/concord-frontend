@@ -107,17 +107,19 @@ import bannerimg from "../Statics/assets/mediaphotobanner.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 const Media_photo = (props) => {
+  const {t}=useTranslation('common')
   const eventName = props?.location?.state;
   const LinksBan = [
     {
-      subLinkName: "Home",
+      subLinkName:t('media_photo.home_text') ,
       subDash: "/",
       subLink: "/",
     },
     {
-      subLinkName: "Media",
+      subLinkName:t('media_photo.media_text'),
       subDash: "/",
       subLink: "/media",
     },
@@ -144,12 +146,12 @@ const Media_photo = (props) => {
   return (
     <>
       <Helmet>
-        <title>Photo - Concord Pharma</title>
+        <title>{t('media_photo.helmet.title_text')}</title>
       </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
-        heading={"Photo"}
-        subHeading={`Photo`}
+        heading={t('media_photo.photo_text')}
+        subHeading={t('media_photo.photo_text').toUpperCase()}
         LinksBan={LinksBan}
         height={"400px"}
         backposit={"center right"}

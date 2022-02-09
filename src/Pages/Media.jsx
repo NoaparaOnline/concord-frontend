@@ -9,38 +9,39 @@ import mediacard3 from '../Statics/assets/Media/post.svg'
 import mediacard4 from '../Statics/assets/Media/milestone.svg'
 import mediacard5 from '../Statics/assets/Media/responsibilities.svg'
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 const Media = () => {
-   
+    const {t}=useTranslation('common')
     const mediacard = [
         {
           id: 0,
           imageURL: mediacard1,
-          text: "Video",
+          text: t('media.text_1'),
           link: "/video",
         },
         {
           id: 1,
           imageURL: mediacard2,
-          text: "Events",
+          text: t('media.text_2'),
           link: "/events",
         },
         {
           id: 2,
           imageURL: mediacard3,
-          text: "Social Media Post",
+          text: t('media.text_3'),
           link: "/social-media-post",
         },
         {
           id: 3,
           imageURL: mediacard4,
-          text: "Milestones",
+          text: t('media.text_4'),
           link: "/milestones",
         },
         {
           id: 4,
           imageURL: mediacard5,
-          text: "Social Responsibilities",
+          text: t('media.text_5'),
           link: "#",
         },
       ];
@@ -48,7 +49,7 @@ const Media = () => {
       // BannerWithText Wale Ki Links Ka Object
       const LinksBan = [
         {
-          subLinkName: 'Home',
+          subLinkName:t('media.home_text') ,
           subDash: '/',
           subLink: '/'
         },
@@ -59,11 +60,11 @@ const Media = () => {
     return (
         <>
         <Helmet>
-        <title>Media - Concord Pharma</title>
+        <title>{t('media.helmet.title_text')}</title>
       </Helmet>
         <BannerWithText imgSrc={bannerimg}
-          heading={'Media'}
-          subHeading={`MEDIA`}
+          heading={t('media.media_text')}
+          subHeading={t('media.media_text').toUpperCase()}
           LinksBan={LinksBan}
           height={"400px"}
           
@@ -73,7 +74,7 @@ const Media = () => {
           conmarpad={"mt-5 pt-5"}
           fontsize={"60px"}
           />
-        <Heading heading={"Media"} />
+        <Heading heading={t('media.media_text')} />
   
   
   

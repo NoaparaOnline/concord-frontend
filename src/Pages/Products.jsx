@@ -8,35 +8,36 @@ import productscard2 from '../Statics/assets/products/p2.svg'
 import productscard3 from '../Statics/assets/products/p3.svg'
 import productscard4 from '../Statics/assets/products/p4.svg'
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 
   
 const Products = () => {
-
+ const {t}=useTranslation('common')
     // Zoomcards Map Data
     const productscard = [
       {
         id:0,
         imageURL: productscard1,
-        text: "By Trade Name",
+        text:  t('products.by_trade_name') ,
         link: "/by-trade-name",
       },
       {
         id:1,
         imageURL: productscard2,
-        text: "By Generic Name",
+        text: t('products.by_generic_name'),
         link: "/by-generic-name",
       },
       {
         id:2,
         imageURL: productscard3,
-        text: "By Therapeutic Class",
+        text: t('products.by_threr_class'),
         link: "/by-therapeutic-class",
       },
       {
         id:3,
         imageURL: productscard4,
-        text: "First Time Launching",
+        text: t('products.first_time_launching'),
         link: "/first-time-launching",
       },
     ];
@@ -44,7 +45,7 @@ const Products = () => {
 
     const LinksBan = [
       {
-        subLinkName: 'Home',
+        subLinkName: t('products.home_text'),
         subDash: '/',
         subLink: '/'
       },
@@ -57,9 +58,9 @@ const Products = () => {
     
     <>
      <Helmet>
-        <title>Products - Concord Pharma</title>
+        <title> {t('products.helmet.title_text')} </title>
       </Helmet>
-    <BannerWithText imgSrc={bannerimg} heading={'Products'} subHeading={`PRODUCTS`}
+    <BannerWithText imgSrc={bannerimg} heading={  t('products.products_text')} subHeading={ t('products.products_text')}
     LinksBan={LinksBan}
     height={"400px"}
     
@@ -69,7 +70,7 @@ const Products = () => {
     conmarpad={"mt-5 pt-5"}
     fontsize={"60px"}
     />
-    <Heading heading={"Products"}/>
+    <Heading heading={ t('products.products_text')}/>
         
         
      {/* Zoom Cards */}
