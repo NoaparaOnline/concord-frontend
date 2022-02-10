@@ -131,8 +131,8 @@ const TableInnerPage = (props) => {
             index + 1,
             item?.name,
             item?.quantity,
-            item?.price,
-            (item?.quantity*item?.price),
+            item?.price?.toFixed(2),
+            (item?.quantity*item?.price).toFixed(2),
             
           ];
         })}
@@ -146,28 +146,28 @@ const TableInnerPage = (props) => {
               <td></td>
               <td></td>
               <td></td>
-              <td>{productidstate.subtotal_amount}</td>
+              <td>{productidstate?.subtotal_amount?.toFixed(2)}</td>
             </tr>
             <tr>
               <td>A value-added tax %</td>
               <td></td>
               <td></td>
               <td></td>
-              <td>{Math.round((productidstate.vat_rate-1)*100)}%</td>
+              <td>{Math.round((productidstate.vat_rate-1)*100).toFixed(2)}%</td>
             </tr>
             <tr>
               <td>Payment Type</td>
               <td></td>
               <td></td>
               <td></td>
-              <td>{productidstate.payment_type}</td>
+              <td>{productidstate?.payment_type}</td>
             </tr>
             <tr>
               <td>Total</td>
               <td></td>
               <td></td>
               <td></td>
-              <td>{productidstate.vat_rate*productidstate.subtotal_amount}</td>
+              <td>{(productidstate?.vat_rate*productidstate?.subtotal_amount).toFixed(2)}</td>
             </tr>
            
           </>
