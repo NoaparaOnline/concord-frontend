@@ -2,8 +2,10 @@ import React from "react";
 import imgss from '../../../Statics/assets/bigCardimag.jpg'
 import { Link } from "react-router-dom";
 import "./Globaloperation.css";
+import useMediaQuery from "../../ReusableComponents/MediaQueryCustomHook";
 
 const Globaloperation = () => {
+  const isDesktoplg = useMediaQuery('(min-width: 992px)');
   return (
 
     
@@ -13,10 +15,10 @@ const Globaloperation = () => {
           <div className="section-card-back"></div>
           <div className="section-card-position">
             <div className="section-card-overlay">
-              <h6 className="section-card-subHead">What we do</h6>
-              <h3 className="section-card-heading p-0">Manufacturing</h3>
-              <h3 className="section-card-heading p-0">Exporting </h3>
-              <h3 className="section-card-heading p-0">Serving</h3>
+              <h6 className="section-card-subHead" style={{fontSize: isDesktoplg ? "" : "12px" }}>What we do</h6>
+              <h3 className="section-card-heading p-0" style={{fontSize: isDesktoplg ? "" : "12px" }}>Manufacturing</h3>
+              <h3 className="section-card-heading p-0" style={{fontSize: isDesktoplg ? "" : "12px" }}>Exporting </h3>
+              <h3 className="section-card-heading p-0" style={{fontSize: isDesktoplg ? "" : "12px" }}>Serving</h3>
             </div>
               <Link
                 to="/"
