@@ -91,7 +91,7 @@ const Slideshow = () => {
                     <p className={index === 0 ? `typograpy_title0` : `typograpy_title`}> {each.text}</p>
                   </div>
                   <Link to={each.btnlink} className="btn btn-custom-animation rounded-pill me-auto pt-2 pb-2 " style={{ color: '#fff', backgroundColor: '#0066b3' }} >
-                    <span className="btn_text_typography">{each.btn}</span>
+                  <span className="btn_text_typography">{each.btn}</span>
                   </Link>
                 </div>
               </div>
