@@ -1,11 +1,17 @@
 import React from 'react'
-import { CompanyLogos,Milestones } from '../components'
+import { CompanyLogos, Milestones } from '../components'
 import bannerimg from "../Statics/assets/milestonebanner.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import { filterComponentData } from '../Utils/functions';
 const Media_milestone = () => {
-const {t}=useTranslation('common');
+    const component = useSelector((state) => state?.cmsReducer?.components);
+    const lang = useSelector((state) => state?.cmsReducer?.language);
+    const media_milestones = filterComponentData(component, "media_milestones", lang)
+    const milestoneheader = filterComponentData(component, "milestone_heading", lang)
+    const { t } = useTranslation('common');
     // BannerWithText Wale Ki Links Ka Object
     const LinksBan = [
         {
@@ -71,42 +77,42 @@ const {t}=useTranslation('common');
             year: t('media_milestones.year_10'),
             text: t('media_milestones.text_10')
         },
-      ];
-      
+    ];
 
-      const label = {
+
+    const label = {
         Milestones: t('media_milestones.milestones_text'),
-      };
+    };
     return (
         <>
-        <Helmet>
-        <title>{t('media_milestones.helmet.title_text')}</title>
-      </Helmet>
+            <Helmet>
+                <title>{t('media_milestones.helmet.title_text')}</title>
+            </Helmet>
             <BannerWithText
                 imgSrc={bannerimg}
                 heading={t('media_milestones.milestones_text')}
                 subHeading={t('media_milestones.milestones_text').toUpperCase()}
                 LinksBan={LinksBan}
                 height={"400px"}
-                
-        backposit={'center right'}
-        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
+
+                backposit={'center right'}
+                backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
                 backgroundSize={"100% 400px"}
                 conmarpad={"mt-5 pt-5"}
                 fontsize={"60px"}
             />
 
 
-            <Milestones 
-            milestone_data={milestone_data}
-            heading={label}
-            button={
-                <>
-                <div className="mt-5">
+            <Milestones
+                milestone_data={media_milestones?.length > 1 ? media_milestones : milestone_data}
+                heading={milestoneheader?.heading ? milestoneheader?.heading : label}
+                button={
+                    <>
+                        <div className="mt-5">
 
-                </div>
-                </>
-            }
+                        </div>
+                    </>
+                }
             />
 
             <CompanyLogos />

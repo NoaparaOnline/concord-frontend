@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "font-awesome/css/font-awesome.min.css";
 import "./NearestDeliveryCenter.css";
-import { useTranslation } from "react-i18next"; 
-const NearestDeliveryCenter = ({ heading }) => {
+import { useTranslation } from "react-i18next";
+const NearestDeliveryCenter = ({ heading, nearest_delivery_center, nearest_delivery_center_user, nearest_delivery_center_list }) => {
   const { t } = useTranslation("common");
+  const [testarray, settestarray] = useState([]);
+  // useEffect(() => {
+  //   let t = nearest_delivery_center_user?.map((item, index) => (
+  //     item["id"] = index
+  //   ))
+  //   settestarray(t)
+  // }, [])
   const cards = [
     {
       id: 0,
@@ -151,17 +158,31 @@ const NearestDeliveryCenter = ({ heading }) => {
   ];
 
   const [selectedValue, setSelectedValue] = useState(0);
+  // console.log(selectedValue, "selectedValue");
   const [ob, setOb] = useState(null);
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
-    console.log(event.target.value, "Testing Event Val");
-    const filtererd = cards.filter(
-      (item) => item.id === Number(event.target.value)
-    );
+    if (nearest_delivery_center_user?.length > 1) {
 
-    if (filtererd.length > 0) {
-      setOb(filtererd[0]);
+      const filtererd = nearest_delivery_center_user.filter(
+        (item) => item?.area?.toLowerCase() == event.target.value?.toLowerCase()
+      );
+
+      if (filtererd.length > 0) {
+        setOb(filtererd[0]);
+      }
+      console.log(filtererd, "filtererd");
+    } else {
+      const filtererd = cards?.filter(
+        (item) => item.id == Number(event.target.value)
+      );
+
+
+      if (filtererd.length > 0) {
+        setOb(filtererd[0]);
+      }
     }
+
   };
 
   return (
@@ -171,10 +192,13 @@ const NearestDeliveryCenter = ({ heading }) => {
           <div className="col-lg-5 ">
             <div className="row">
               <div className="col-lg-12">
-                <h1 className="siz text-left " style={{ color: "#0066b3" }}>
-                  {t("nearestdeliverycenter.text.nearest_text")} <br />{" "}
-                  {t("nearestdeliverycenter.text.delivery_center")}
-                </h1>
+                {
+                  nearest_delivery_center?.heading ? <span dangerouslySetInnerHTML={{ __html: nearest_delivery_center?.heading }} /> : <h1 className="siz text-left " style={{ color: "#0066b3" }}>
+                    {t("nearestdeliverycenter.text.nearest_text")} <br />{" "}
+                    {t("nearestdeliverycenter.text.delivery_center")}
+                  </h1>
+                }
+
               </div>
             </div>
             <div className="row">
@@ -187,7 +211,7 @@ const NearestDeliveryCenter = ({ heading }) => {
                     lineHeight: 1.5,
                   }}
                 >
-                  {t("nearestdeliverycenter.text.desc_text")}
+                  {nearest_delivery_center?.desc ? nearest_delivery_center?.desc : t("nearestdeliverycenter.text.desc_text")}
                 </p>
                 <label
                   htmlFor="area"
@@ -198,7 +222,7 @@ const NearestDeliveryCenter = ({ heading }) => {
                     lineHeight: 1.5,
                   }}
                 >
-                  {t("nearestdeliverycenter.text.select_are_text") + ":"} &nbsp;
+                  {nearest_delivery_center?.area ? nearest_delivery_center?.area : t("nearestdeliverycenter.text.select_are_text") + ":"} &nbsp;
                 </label>
                 <select
                   name="area"
@@ -206,41 +230,53 @@ const NearestDeliveryCenter = ({ heading }) => {
                   id="area"
                   onChange={handleChange}
                 >
-                  <option value="0">
-                    {t("nearestdeliverycenter.text.central_text")}
-                  </option>
-                  <option value="1">
-                    {t("nearestdeliverycenter.text.dhaka_text")}
-                  </option>
-                  <option value="2">
-                    {t("nearestdeliverycenter.text.barisal_text")}
-                  </option>
-                  <option value="3">
-                    {t("nearestdeliverycenter.text.jessore_text")}
-                  </option>
-                  <option value="4">
-                    {t("nearestdeliverycenter.text.comilla_text")}
-                  </option>
-                  <option value="5">
-                    {t("nearestdeliverycenter.text.noakhali_text")}
-                  </option>
-                  <option value="6">
-                    {t("nearestdeliverycenter.text.mymenshingh_text")}
-                  </option>
-                  <option value="7">
-                    {t("nearestdeliverycenter.text.chittagong_text")}
-                  </option>
-                  <option value="8">
-                    {t("nearestdeliverycenter.text.rangpur_text")}
-                  </option>
-                  <option value="9">
-                    {t("nearestdeliverycenter.text.rajshahi_text")}
-                  </option>
-                  <option value="10">
-                    {t("nearestdeliverycenter.text.jhenaidah_text")}
-                  </option>
+                  {
+                    nearest_delivery_center_list?.length < 1 ?
+                      <>
+                        <option value="0">
+                          {t("nearestdeliverycenter.text.central_text")}
+                        </option>
+                        <option value="1">
+                          {t("nearestdeliverycenter.text.dhaka_text")}
+                        </option>
+                        <option value="2">
+                          {t("nearestdeliverycenter.text.barisal_text")}
+                        </option>
+                        <option value="3">
+                          {t("nearestdeliverycenter.text.jessore_text")}
+                        </option>
+                        <option value="4">
+                          {t("nearestdeliverycenter.text.comilla_text")}
+                        </option>
+                        <option value="5">
+                          {t("nearestdeliverycenter.text.noakhali_text")}
+                        </option>
+                        <option value="6">
+                          {t("nearestdeliverycenter.text.mymenshingh_text")}
+                        </option>
+                        <option value="7">
+                          {t("nearestdeliverycenter.text.chittagong_text")}
+                        </option>
+                        <option value="8">
+                          {t("nearestdeliverycenter.text.rangpur_text")}
+                        </option>
+                        <option value="9">
+                          {t("nearestdeliverycenter.text.rajshahi_text")}
+                        </option>
+                        <option value="10">
+                          {t("nearestdeliverycenter.text.jhenaidah_text")}
+                        </option></> :
+                      nearest_delivery_center_list?.map((item, idx) => (
+
+                        <option value={item?.name}>
+                          {item?.name}
+                        </option>
+                      ))
+                  }
+
                 </select>
-                {ob && (
+
+                {nearest_delivery_center_list?.length < 1 ? ob && (
                   <div className="card col-lg-10 mb-5 p-3">
                     <div
                       className="text-left"
@@ -311,7 +347,7 @@ const NearestDeliveryCenter = ({ heading }) => {
                               className="fa fa-map-marker"
                               aria-hidden="true"
                             ></i>
-                          
+
                             <span>{ob.mapname}</span>
                           </a>
                         </div>
@@ -323,8 +359,98 @@ const NearestDeliveryCenter = ({ heading }) => {
                             style={{ textDecoration: "none", color: "#0066b3" }}
                           >
                             <i className="fa fa-map" aria-hidden="true"></i>
-                         
+
                             <span>{ob.mapname2}</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : ob && (
+                  <div className="card col-lg-10 mb-5 p-3">
+                    <div
+                      className="text-left"
+                      style={{ color: "#0066b3", minHeight: "240px" }}
+                    >
+                      <div
+                        style={{
+                          borderBottom: "1px solid #0066b3",
+                          fontSize: "24px",
+                          fontWeight: "500",
+                        }}
+                      >
+                        {ob?.area}
+                      </div>
+
+                      <div className="mt-2">
+                        <div className="mt-2">
+                          <i className="fa fa-user" aria-hidden="true"></i>{" "}
+                          <span style={{ color: "#565656", fontSize: "19px" }}>
+                            {ob?.name}
+                          </span>
+                        </div>
+                        <div className="mt-2">
+                          <i className="fa fa-briefcase" aria-hidden="true"></i>{" "}
+                          <span
+                            style={{
+                              color: "#565656",
+                              fontSize: "16px",
+                              fontWeight: "400",
+                            }}
+                          >
+                            {ob?.desc}
+                          </span>
+                        </div>
+                        <div className="mt-2">
+                          <i className="fa fa-phone" aria-hidden="true"></i>{" "}
+                          <span
+                            style={{
+                              color: "#565656",
+                              fontSize: "16px",
+                              fontWeight: "400",
+                            }}
+                          >
+                            {ob?.contact}
+                          </span>
+                        </div>
+                        <div className="mt-2">
+                          <a
+                            // href={ob.locationlink}
+                            style={{ textDecoration: "none", color: "#0066b3" }}
+                          >
+                            <i
+                              className="fa fa-envelope"
+                              aria-hidden="true"
+                            ></i>
+                            <span>{ob.email}</span>
+                          </a>
+                        </div>
+
+                        <div className="mt-2">
+                          <a
+                            href={ob?.locationlink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: "none", color: "#0066b3" }}
+                          >
+                            <i
+                              className="fa fa-map-marker"
+                              aria-hidden="true"
+                            ></i>
+
+                            <span>{ob.address}</span>
+                          </a>
+                        </div>
+                        <div className="my-2">
+                          <a
+                            href={ob?.locationlink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: "none", color: "#0066b3" }}
+                          >
+                            <i className="fa fa-map" aria-hidden="true"></i>
+
+                            <span>{ob.map}</span>
                           </a>
                         </div>
                       </div>
@@ -341,7 +467,7 @@ const NearestDeliveryCenter = ({ heading }) => {
                     lineHeight: 1.5,
                   }}
                 >
-                  {t("nearestdeliverycenter.text.call_at_number")}
+                  {nearest_delivery_center?.contact ? nearest_delivery_center?.contact : t("nearestdeliverycenter.text.call_at_number")}
                 </p>
                 <span style={{ color: "#0066b3" }}>
                   <i className="fa fa-phone"></i>
@@ -355,7 +481,7 @@ const NearestDeliveryCenter = ({ heading }) => {
                     lineHeight: 1.5,
                   }}
                 >
-                    {t("nearestdeliverycenter.text.number")}
+                  {nearest_delivery_center?.contactnum ? nearest_delivery_center?.contactnum : t("nearestdeliverycenter.text.number")}
                 </span>
               </div>
             </div>
@@ -363,10 +489,10 @@ const NearestDeliveryCenter = ({ heading }) => {
           <div className="col-lg-5">
             <video autoPlay muted loop width="100%" height="100%">
               <source
-                src="https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/video.mp4"
+                src={nearest_delivery_center?.videolink ? nearest_delivery_center?.videolink : "https://www.ri-demo.co/concord/final-2/wp-content/uploads/2019/06/video.mp4"}
                 type="video/mp4"
               />
-               {t("nearestdeliverycenter.text.no_support_video")}
+              {t("nearestdeliverycenter.text.no_support_video")}
             </video>
           </div>
         </div>

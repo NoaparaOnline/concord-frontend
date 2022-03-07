@@ -2,16 +2,18 @@ import React from "react";
 import "./WeAreServing.css";
 import ReactTypingEffect from "react-typing-effect";
 import { useTranslation } from "react-i18next";
-const WeAreServing = () => {
+const WeAreServing = ({ weareserving, servingentity }) => {
+  const list = servingentity?.map(({ text }) => text);
+
   const { t } = useTranslation("common");
   return (
     <div className="colrbck">
       <div className="container wrapper">
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-6">
-            <span className="static-txt">{t('we_are_serving.serving_text')}</span>
+            <span className="static-txt">{weareserving?.text ? weareserving?.text : t('we_are_serving.serving_text')}</span>
             <ReactTypingEffect
-              text={[t('we_are_serving.bangladesh_text'),t('we_are_serving.you_text') , t('we_are_serving.world_text')]}
+              text={list?.length < 1 ? [t('we_are_serving.bangladesh_text'), t('we_are_serving.you_text'), t('we_are_serving.world_text')] : list}
               cursorRenderer={(cursor) => (
                 <h1
                   style={{
@@ -26,7 +28,7 @@ const WeAreServing = () => {
               displayTextRenderer={(text, i) => {
                 return (
                   <h1>
-                    {text.split("").map((char, i) => {
+                    {text?.split("").map((char, i) => {
                       const key = `${i}`;
                       return (
                         <span
@@ -37,7 +39,7 @@ const WeAreServing = () => {
                             fontWeight: 700,
                           }}
                         >
-                          {char.toUpperCase()}
+                          {char?.toUpperCase()}
                         </span>
                       );
                     })}

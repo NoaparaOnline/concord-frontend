@@ -110,16 +110,17 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 
 const Media_photo = (props) => {
-  const {t}=useTranslation('common')
-  const eventName = props?.location?.state;
+  const { t } = useTranslation('common')
+  const eventName = props?.location?.state?.replaceAll(' ', '');
+
   const LinksBan = [
     {
-      subLinkName:t('media_photo.home_text') ,
+      subLinkName: t('media_photo.home_text'),
       subDash: "/",
       subLink: "/",
     },
     {
-      subLinkName:t('media_photo.media_text'),
+      subLinkName: t('media_photo.media_text'),
       subDash: "/",
       subLink: "/media",
     },
@@ -128,20 +129,25 @@ const Media_photo = (props) => {
   //import All images from Client folder from static/images/clients
   // Note to add any image in client slider add image in client folder and be cautious for image size
   function importAll(data) {
+    console.log(data, "data");
+    if (data?.length < 1) {
+      return;
+    }
     let images = {};
-    data.keys().map((item, index) => {
-      images[item.replace("./", "")] = data(item);
+    data?.keys()?.map((item, index) => {
+      images[item?.replace("./", "")] = data(item);
       return "";
     });
     return images;
   }
 
   const images = importAll(
-    eventName === 'Annualconfirence2014' ?
-      require.context(`../Statics/assets/Annualconfirence2014`, false, /\.(png|jpe?g|svg|JPG)$/) : eventName === 'Annualconfirence2013' ? require.context(`../Statics/assets/Annualconfirence2013`, false, /\.(png|jpe?g|svg|JPG)$/) : eventName === 'Dapazinelunchingprogram' ? require.context(`../Statics/assets/Dapazinelunchingprogram`, false, /\.(png|jpe?g|svg|JPG)$/) : null
+    eventName === 'AnnualConfrence2014' ?
+      require.context(`../Statics/assets/Annualconfirence2014`, false, /\.(png|jpe?g|svg|JPG)$/) : eventName == 'AnnualConfrence2013' ? require.context(`../Statics/assets/Annualconfirence2013`, false, /\.(png|jpe?g|svg|JPG)$/) : eventName == 'DapazineLunchingProgram' ? require.context(`../Statics/assets/Dapazinelunchingprogram`, false, /\.(png|jpe?g|svg|JPG)$/) : null
   );
 
-  const imagesData = Object.keys(images);
+
+  const imagesData = images?.length < 1 ? [] : Object.keys(images);
 
   return (
     <>

@@ -6,7 +6,7 @@ import fourth from "../../../Statics/assets/warehouse-1.jpg";
 import first from "../../../Statics/assets/fac-production.jpg";
 import "./Cards.css";
 import { useTranslation } from "react-i18next";
-const Cards = () => {
+const Cards = ({ facilitieCard }) => {
   const { t } = useTranslation("common");
   const cards = [
     {
@@ -40,45 +40,86 @@ const Cards = () => {
   ];
   return (
     <div className="container">
-      <div className="row" style={{ padding: "10px" }}>
-        {cards.map((ob, index) => {
-          return (
-            <div
-              key={ob.id}
-              className="col-12 col-xl-6 mt-5 mx-auto"
-              style={{ display: "flex", flexDirection: "row", padding: "10px" }}
-            >
-              <div className="row">
-                <div className="col-lg-6 col-md-6 col-sm-12 imgmargin">
-                  <img
-                    alt="facilities"
-                    src={ob.imageURL}
-                    width="100%"
-                    height="100%"
-                  />
-                </div>
-                <div
-                  className="col-lg-6 col-md-6 col-sm-12 smallscr_responsive"
-                  style={{
-                    alignItems: "flex-start",
-                    flexDirection: "column",
-                    display: "flex",
-                  }}
-                >
-                  <h5 style={{ color: "#337ab7", fontSize: "24px" }}>
-                    {ob.name}
-                  </h5>
-                  <p className="text-justify">{ob.text}</p>
+      {
+        facilitieCard?.length < 1 ? <div className="row" style={{ padding: "10px" }}>
+          {cards.map((ob, index) => {
+            return (
+              <div
+                key={ob.id}
+                className="col-12 col-xl-6 mt-5 mx-auto"
+                style={{ display: "flex", flexDirection: "row", padding: "10px" }}
+              >
+                <div className="row">
+                  <div className="col-lg-6 col-md-6 col-sm-12 imgmargin">
+                    <img
+                      alt="facilities"
+                      src={ob.imageURL}
+                      width="100%"
+                      height="100%"
+                    />
+                  </div>
+                  <div
+                    className="col-lg-6 col-md-6 col-sm-12 smallscr_responsive"
+                    style={{
+                      alignItems: "flex-start",
+                      flexDirection: "column",
+                      display: "flex",
+                    }}
+                  >
+                    <h5 style={{ color: "#337ab7", fontSize: "24px" }}>
+                      {ob.name}
+                    </h5>
+                    <p className="text-justify">{ob.text}</p>
 
-                  <Link to={ob.link} className="dd">
-                {t('cards.read_me_btn')}
-                  </Link>
+                    <Link to={ob.link} className="dd">
+                      {t('cards.read_me_btn')}
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div> : <div className="row" style={{ padding: "10px" }}>
+          {facilitieCard?.map((ob, index) => {
+            return (
+              <div
+                key={ob.index}
+                className="col-12 col-xl-6 mt-5 mx-auto"
+                style={{ display: "flex", flexDirection: "row", padding: "10px" }}
+              >
+                <div className="row">
+                  <div className="col-lg-6 col-md-6 col-sm-12 imgmargin">
+                    <img
+                      alt="facilities"
+                      src={ob?.image}
+                      width="100%"
+                      height="100%"
+                    />
+                  </div>
+                  <div
+                    className="col-lg-6 col-md-6 col-sm-12 smallscr_responsive"
+                    style={{
+                      alignItems: "flex-start",
+                      flexDirection: "column",
+                      display: "flex",
+                    }}
+                  >
+                    <h5 style={{ color: "#337ab7", fontSize: "24px" }}>
+                      {ob?.heading}
+                    </h5>
+                    <p className="text-justify">{ob?.desc}</p>
+
+                    <Link to={ob?.link} className="dd">
+                      {ob?.button ? ob?.button : t('cards.read_me_btn')}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      }
+
     </div>
   );
 };

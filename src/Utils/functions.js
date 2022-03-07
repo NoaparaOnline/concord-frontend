@@ -96,6 +96,28 @@ export const validateEmail = (email) => {
 
 
 export const isSupported = () =>
-'Notification' in window &&
-'serviceWorker' in navigator &&
-'PushManager' in window
+  'Notification' in window &&
+  'serviceWorker' in navigator &&
+  'PushManager' in window
+
+
+
+
+export const filterComponentData = (componetcms, slugname, lang) => {
+
+  const Component = componetcms?.filter(
+    (item) => item?.slug === slugname
+  );
+  if (Component?.length < 1) {
+    return []
+  }
+  let data = []
+  Object.keys(Component[0]?.content)?.map((item) => {
+    if (item?.includes(lang)) {
+      data = Component[0]?.content[item]
+
+    }
+  })
+  return data
+
+}

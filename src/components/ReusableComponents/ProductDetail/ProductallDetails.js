@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { CompanyLogos } from "../../../components";
 import BannerWithText from "../../../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Link, useParams } from "react-router-dom";
@@ -18,28 +18,28 @@ const ProductallDetails = (props) => {
     setShow(true);
   };
 
-  
+
   const { id } = useParams();
-  
+
   // let productdata = [];
   // ByTherapeutic?.filter((item) =>
   // if
   //   id === item?.id ? productdata.push(item) : ""
   // );
-  
-  console.log(ByTherapeutic,"Testing Data")
-  console.log(id,"Testing Data id")
+
+  console.log(ByTherapeutic, "Testing Data")
+  console.log(id, "Testing Data id")
 
   const productdata = ByTherapeutic?.filter((item) => (
-    item?.id === Number(id) ?  item : null
-  )) 
+    item?.id === Number(id) ? item : null
+  ))
 
 
 
   const viewData = props?.location?.state?.data ? props?.location?.state?.data : productdata[0];
-  
 
-  console.log(viewData,"Testing ViewData")
+
+  console.log(viewData, "Testing ViewData")
 
 
   const LinksBan = [
@@ -54,8 +54,8 @@ const ProductallDetails = (props) => {
       subLink: "/products",
     },
     {
-      subLinkName: viewData?.from === '/by-trade-name' ? 'By Trade Name' : viewData?.from === '/by-generic-name' ? 'By Generic Name' : viewData?.from === '/by-therapeutic-class' ? 'By Therapeutic Class' : viewData?.from === '/first-time-launching' ? 'First Time Launching' : '' ,
-      subDash:  viewData?.from === '/by-trade-name' ? '/' : viewData?.from === '/by-generic-name' ? '/' : viewData?.from === '/by-therapeutic-class' ? '/' : viewData?.from === '/first-time-launching' ? '/' : '',
+      subLinkName: viewData?.from === '/by-trade-name' ? 'By Trade Name' : viewData?.from === '/by-generic-name' ? 'By Generic Name' : viewData?.from === '/by-therapeutic-class' ? 'By Therapeutic Class' : viewData?.from === '/first-time-launching' ? 'First Time Launching' : '',
+      subDash: viewData?.from === '/by-trade-name' ? '/' : viewData?.from === '/by-generic-name' ? '/' : viewData?.from === '/by-therapeutic-class' ? '/' : viewData?.from === '/first-time-launching' ? '/' : '',
       subLink: viewData?.from,
     },
   ];
@@ -64,7 +64,7 @@ const ProductallDetails = (props) => {
   const Text = () => {
     return (
       <div>
-        {viewData?.innerdata1?.map((item) => {
+        {viewData?.desc2 ? <div dangerouslySetInnerHTML={{ __html: viewData?.desc2 }} /> : viewData?.moredesc ? <div dangerouslySetInnerHTML={{ __html: viewData?.moredesc }} /> : viewData?.descmore ? <div dangerouslySetInnerHTML={{ __html: viewData?.descmore }} /> : viewData?.innerdata1?.map((item) => {
           return (
             <>
               <h1 style={{
@@ -89,60 +89,60 @@ const ProductallDetails = (props) => {
 
 
               {item?.isinnerSub ? (
-                      <>
-                        <h6 style={{
-                          color: "#232323",
-                          fontWeight: "600",
-                        }}>
+                <>
+                  <h6 style={{
+                    color: "#232323",
+                    fontWeight: "600",
+                  }}>
 
-                          {item?.innerSubHead}
+                    {item?.innerSubHead}
 
-                        </h6>
-                        <p
-                          style={{
-                            fontSize: "16px",
-                            color: "#565656",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item?.innerSubData}
+                  </h6>
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      color: "#565656",
+                      fontWeight: "400",
+                    }}
+                  >
+                    {item?.innerSubData}
 
-                        </p>
-               {/* 08 bytrade */}
-               {item?.isSublist ? (
-                <ul>
-                  {item?.listSubData?.map(item => <li>{item}</li>)}
-                </ul>
+                  </p>
+                  {/* 08 bytrade */}
+                  {item?.isSublist ? (
+                    <ul>
+                      {item?.listSubData?.map(item => <li>{item}</li>)}
+                    </ul>
+                  ) : null}
+                </>
               ) : null}
-                      </>
-                    ) : null}
-                    {item?.isinnerSub1 ? (
-                      <>
-                        <h6 style={{
-                          color: "#232323",
-                          fontWeight: "600",
-                        }}>
+              {item?.isinnerSub1 ? (
+                <>
+                  <h6 style={{
+                    color: "#232323",
+                    fontWeight: "600",
+                  }}>
 
-                          {item?.innerSubHead1}
+                    {item?.innerSubHead1}
 
-                        </h6>
-                        <p
-                          style={{
-                            fontSize: "16px",
-                            color: "#565656",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item?.innerSubData1}
+                  </h6>
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      color: "#565656",
+                      fontWeight: "400",
+                    }}
+                  >
+                    {item?.innerSubData1}
 
-                        </p>
-                        {item?.isSublist1 ? (
-                <ul>
-                  {item?.listSubData1?.map(item => <li>{item}</li>)}
-                </ul>
+                  </p>
+                  {item?.isSublist1 ? (
+                    <ul>
+                      {item?.listSubData1?.map(item => <li>{item}</li>)}
+                    </ul>
+                  ) : null}
+                </>
               ) : null}
-                      </>
-                    ) : null}
 
 
               {item?.istable ? (
@@ -157,7 +157,7 @@ const ProductallDetails = (props) => {
 
 
 
-              
+
 
 
               {item?.islist ? (
@@ -202,7 +202,7 @@ const ProductallDetails = (props) => {
 
   return (
     <>
-       <Helmet>
+      <Helmet>
         <title>Product Detail - Concord Pharma</title>
       </Helmet>
       <BannerWithText
@@ -222,7 +222,7 @@ const ProductallDetails = (props) => {
           </span>
         </Link>
         <div className="row">
-            {/* className="allborder" */}
+          {/* className="allborder" */}
 
           <div className="col-lg-4 allborder">
             <div
@@ -238,7 +238,7 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-front d-flex justify-content-center align-items-center">
                     <div className="card " style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt={viewData?.innerMainHeading} src={viewData?.img?.map(item => item.imgf)} width="100%" height="100%" />
+                        <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imgf) : viewData?.image} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -246,7 +246,7 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-back d-flex justify-content-center align-items-center">
                     <div className="card" style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt={viewData?.innerMainHeading} src={viewData?.img?.map(item => item.imge)} width="100%" height="100%" />
+                        <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imge) : viewData?.flipedimage} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -265,7 +265,7 @@ const ProductallDetails = (props) => {
                   fontWeight: "600",
                 }}
               >
-                {viewData?.innerMainHeading}
+                {viewData?.name ? viewData?.name : viewData?.innerMainHeading}
               </h1>
               <h5
                 style={{
@@ -273,10 +273,10 @@ const ProductallDetails = (props) => {
                   fontWeight: "600",
                 }}
               >
-                {viewData?.innerComposition}
+                {viewData?.subtitle ? viewData?.subtitle : viewData?.innerComposition}
               </h5>
 
-              {viewData?.innerdata?.map((item) => {
+              {viewData?.desc ? <div dangerouslySetInnerHTML={{ __html: viewData?.desc }} /> : viewData?.innerdata?.map((item) => {
                 return (
                   <>
                     <h1 style={{
@@ -412,7 +412,7 @@ const ProductallDetails = (props) => {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <div className="allborder d-flex justify-content-center align-items-center">
-            <img alt={viewData?.innerMainHeading} src={viewData?.img?.map(item => item.imgf)} />
+            <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imgf) : viewData?.image} />
           </div>
         </Modal.Body>
       </Modal>

@@ -5,9 +5,15 @@ import BannerWithText from "../components/ReusableComponents/BannerImgComponents
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { filterComponentData } from "../Utils/functions";
 
 const Mediavideo = () => {
-  const {t}=useTranslation('common');
+  const component = useSelector((state) => state?.cmsReducer?.components);
+  const lang = useSelector((state) => state?.cmsReducer?.language);
+  const media_video = filterComponentData(component, "media_video", lang)
+
+  const { t } = useTranslation('common');
 
   const LinksBan = [
     {
@@ -33,7 +39,7 @@ const Mediavideo = () => {
     "https://www.youtube.com/embed/LfLTSxROOpg",
   ];
 
- 
+
 
 
   return (
@@ -55,7 +61,7 @@ const Mediavideo = () => {
       />
       <div className="container my-5">
         <div className="row">
-          {videolinks.map((item) => {
+          {media_video?.length < 1 ? videolinks.map((item) => {
             return (
               <div class="col-lg-4 col-md-6 col-sm-12 my-4">
                 <iframe
@@ -66,6 +72,24 @@ const Mediavideo = () => {
                     overflow: "hidden",
                   }}
                   src={item}
+                  title={t('video.title')}
+                  frameBorder={0}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen="true"
+                ></iframe>
+              </div>
+            );
+          }) : media_video?.map((item) => {
+            return (
+              <div class="col-lg-4 col-md-6 col-sm-12 my-4">
+                <iframe
+                  style={{
+                    width: "100%",
+                    height: "350px",
+                    border: "none",
+                    overflow: "hidden",
+                  }}
+                  src={item?.link}
                   title={t('video.title')}
                   frameBorder={0}
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"

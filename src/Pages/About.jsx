@@ -9,11 +9,17 @@ import Aboutcard3 from '../Statics/assets/profile3.svg'
 import Aboutcard4 from '../Statics/assets/Chairman-message4.svg'
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import { filterComponentData } from '../Utils/functions';
 
 
 const About = () => {
-  const {t} = useTranslation("common")
-
+  const component = useSelector((state) => state?.cmsReducer?.components);
+  const lang = useSelector((state) => state?.cmsReducer?.language);
+  const about_us = filterComponentData(component, "about_us_cards", lang)
+  const about_us_heading = filterComponentData(component, "about_us_heading", lang)
+  const { t } = useTranslation("common")
+  console.log(about_us, "about_us");
   // Zoomcards Map Data
   const aboutcard = [
     {
@@ -37,7 +43,7 @@ const About = () => {
     {
       id: 3,
       imageURL: Aboutcard4,
-      text:  t("about.msg_chairman_text"),
+      text: t("about.msg_chairman_text"),
       link: "/message-from-chairmen",
     },
   ];
@@ -56,48 +62,55 @@ const About = () => {
     <>
       <Helmet>
         <title>
-        {t("about.helmet.title_text")}
+          {about_us_heading?.heading ? about_us_heading?.heading : t("about.helmet.title_text")}
         </title>
       </Helmet>
-    <div>
-      <BannerWithText
-        imgSrc={bannerimg}
-        heading={t("about.helmet.title_text")}
-        subHeading={t("about.helmet.title_text").toLowerCase()}
-        backposit={'center right'}
-        backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
-        LinksBan={LinksBan}
-        height={"400px"}
-        backgroundSize={"100% 400px"}
-        conmarpad={"mt-5 pt-5"}
-        fontsize={"60px"}
-      />
-      <Heading heading={"About Us"} />
-      {/* Zoom Cards */}
-      <div className="container my-5">
-        <div className="row d-flex justify-content-center">
+      <div>
+        <BannerWithText
+          imgSrc={bannerimg}
+          heading={t("about.helmet.title_text")}
+          subHeading={t("about.helmet.title_text").toLowerCase()}
+          backposit={'center right'}
+          backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
+          LinksBan={LinksBan}
+          height={"400px"}
+          backgroundSize={"100% 400px"}
+          conmarpad={"mt-5 pt-5"}
+          fontsize={"60px"}
+        />
+        <Heading heading={"About Us"} />
+        {/* Zoom Cards */}
+        <div className="container my-5">
+          <div className="row d-flex justify-content-center">
 
-          {aboutcard.map((ob, index) => (
-            <React.Fragment key={ob.id}>
-              <div className='col-xl-2  col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3'>
-                <ZoominCards abcard={ob} />
-              </div>
-            </React.Fragment>
-          )
-          )}
+            {about_us?.length < 1 ? aboutcard.map((ob, index) => (
+              <React.Fragment key={ob.id}>
+                <div className='col-xl-2  col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3'>
+                  <ZoominCards abcard={ob} />
+                </div>
+              </React.Fragment>
+            )
+            ) : about_us?.map((ob, index) => (
+              <React.Fragment key={index}>
+                <div className='col-xl-2  col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3'>
+                  <ZoominCards abcard={ob} />
+                </div>
+              </React.Fragment>
+            )
+            )}
 
 
+          </div>
         </div>
+
+
+
+
+
+
+
+        <CompanyLogos />
       </div>
-
-
-
-
-
-
-
-      <CompanyLogos />
-    </div>
     </>
   )
 }

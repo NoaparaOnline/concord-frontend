@@ -1,48 +1,65 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './FlipCard.css'
 
 const SingleCard = (props) => {
   const { card } = props;
-  const {title, text1, text2,  btn,  innerComposition,id } = card;
+  const { title, text1, text2, btn, innerComposition, id } = card;
   const currentpath = props?.location?.pathname;
- 
+
   const getFirstWord = (string) => {
     const words = string.split(" ");
     return words[0].toLowerCase();
   };
-  
-  const proname = getFirstWord(title);
+  // useEffect(() => {
+  //   let imgs = []
+  //   imgs.push({ imgf: card?.imgf })
+  //   imgs.push({ imge: card?.imge })
+
+  //   card["img"] = imgs
+  // }, [])
+
+
+  const proname = getFirstWord(card?.name ? card?.name : title);
 
 
   return (
-        <div>
+    <div>
 
-<div className="card cardstyle">
-<div className="card flipcard_custom">
-              <div className="card-body">
-                <h5 className="card-title text-white">
-                {currentpath === '/by-generic-name' ? innerComposition : title}
+      <div className="card cardstyle">
+        <div className="card flipcard_custom">
+          <div className="card-body">
+            <h5 className="card-title text-white">
+              {currentpath === '/by-generic-name' ? innerComposition : title}
 
-                </h5>
-                <h6 className="card-title text-white">{text1}</h6>
-                <h6 className="card-title text-white">{text2}</h6>
-               </div>
-              {card?.img?.map((ob,index) => {
-                return (
-                  <img key={ob.id} src={ob.imgf} className="card-img-top p-3"    height="100%"
+            </h5>
+            <h6 className="card-title text-white">{text1}</h6>
+            <h6 className="card-title text-white">{text2}</h6>
+          </div>
+          <img src={card?.imgf} className="card-img-top p-3" height="100%"
+            width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} />
+          {/* {card?.img?.length < 1 ? <img src={imgf} className="card-img-top p-3" height="100%"
+            width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} /> : card?.img?.map((ob, index) => {
+              return (
+                <img key={ob.id} src={ob.imgf} className="card-img-top p-3" height="100%"
                   width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} />
-                );
-              })}
-              <div
-                onClick={() => props?.history?.push(`/prod-details/${proname}/${id}`,{data : {...card,from:props?.location?.pathname}})}
-                className="btn  rounded-pill colr_btn"
-              >
-                {btn}
-              </div>
-            </div>
-            </div>
-</div>
-    )
+              );
+            })} */}
+          {card?.img?.map((ob, index) => {
+            return (
+              <img key={index} src={ob.imgf} className="card-img-top p-3" height="100%"
+                width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} />
+            );
+          })}
+          <div
+            onClick={() => props?.history?.push(`/prod-details/${proname}/${id}`, { data: { ...card, from: props?.location?.pathname } })}
+            className="btn  rounded-pill colr_btn"
+          >
+            {btn}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default SingleCard

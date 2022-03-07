@@ -1,0 +1,6 @@
+export const cmsConstants = {
+    READ_COMPONENT: 'READ_COMPONENT',
+    LANGUAGE_SELECTED: 'LANGUAGE_SELECTED',
+    READ_LANG: 'READ_LANG',
+
+  };
