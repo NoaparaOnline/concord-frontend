@@ -279,12 +279,17 @@ const Navbars = (props) => {
                             >
                               <span>
                                 {" "}
-                                <img
-                                  src={item?.flag}
-                                  alt="english"
-                                  style={{ width: "22px", marginRight: "10px", display: !item?.flag ? 'none' : 'block' }}
-                                />{" "}
-                                {item?.name ? item?.name : t('header.english_text')}
+                                <div className="row">
+                                  <div className="col-4 mt-1 ml-1 "> <img
+                                    src={item?.flag}
+                                    alt="english"
+                                    style={{ width: "22px", marginRight: "10px", display: !item?.flag ? 'none' : 'block' }}
+                                  />{" "}</div>
+                                  <div className="col-6 p-0 m-0 d-flex justify-content-start">
+                                    {item?.name ? item?.name : t('header.english_text')}
+                                  </div>
+                                </div>
+
                               </span>
                             </div>
                           </li>
