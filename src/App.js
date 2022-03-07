@@ -53,14 +53,17 @@ import PrivacyAndPolicy from "./Pages/PrivacyAndPolicy";
 import Abouthealthassociates from "./Pages/Abouthealthassociates";
 import MediaEvents from "./Pages/MediaEvents";
 import { isSupported } from "./Utils/functions";
+import { getCmscomponent } from "./Store/Actions/cmsAction";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
+
   // Get User From Local Storage
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     dispatch(getUser());
+    dispatch(getCmscomponent())
     if ("serviceWorker" in navigator) {
       navigator?.serviceWorker
         .register("./firebase-messaging-sw.js")
@@ -72,20 +75,20 @@ function App() {
         });
     }
 
-    if("Notification" in window){
+    if ("Notification" in window) {
       Notification.requestPermission()
-      .then(async function () {
-        // console.log(result);
-        const token = await test?.getToken(messaging);
-        localStorage.setItem("fcmConcord", token);
-      })
-      .catch(function (err) {
-        console.log("Unable to get permission to notify.", err);
-      });
+        .then(async function () {
+          // console.log(result);
+          const token = await test?.getToken(messaging);
+          localStorage.setItem("fcmConcord", token);
+        })
+        .catch(function (err) {
+          console.log("Unable to get permission to notify.", err);
+        });
 
     }
-    
-    if(isSupported()){
+
+    if (isSupported()) {
       navigator?.serviceWorker?.addEventListener("message", (message) => {
         console.log(message, "message")
         if (!("Notification" in window)) {
@@ -412,9 +415,13 @@ function App() {
           {/* All Inner Page */}
 
           <Route
-            path="/prod-details/:name/:id"
+            path="/prod-details/:name"
             render={(props) => <ProductallDetails {...props} />}
           />
+          {/* <Route
+            path="/prod-details/:name/:id"
+            render={(props) => <ProductallDetails {...props} />}
+          /> */}
           {/* <Route
           path="/prod-details/:prodname"
           render={(props) => <ProductallDetails {...props} />}

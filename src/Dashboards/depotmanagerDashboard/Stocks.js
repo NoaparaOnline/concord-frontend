@@ -13,6 +13,7 @@ import DashboardMainCard from "../../components/ReusableComponents/DashboardMain
 import Loader from 'react-loader-spinner';
 import DashboardBtnList from '../../components/ReusableComponents/DashboardBtnList/DashboardBtnList';
 import { getStocksGiftProduct, getStocksMedicineProduct, getStocksProduct } from '../../Store/Actions/deportmanagerActions';
+import { useTranslation } from 'react-i18next';
 
 const Stocks = ({
     sidebarOpen,
@@ -20,7 +21,7 @@ const Stocks = ({
     deopdefaultSorted,
 }) => {
 
-
+    const {t}=useTranslation('common')
     const dispatch = useDispatch();
     const stock = useSelector((state) => state?.deport?.stock);
     const stockmedicine = useSelector((state) => state?.deport?.stockmedicine);
@@ -45,36 +46,36 @@ const Stocks = ({
       // Tabhandler Medicine And Gift
       const tabHandler = (item) => {
         setSelectedTab1(item);
-        if (item === "All") {
+        if (item ===   t('stocks.all_text')) {
           tabledataHandler(stock);
         }
-        else if (item === "Medicine") {
+        else if (item ===   t('stocks.medicine_text') ) {
           tabledataHandler(stockmedicine);
         }
-        else if (item === "Gift") {
+        else if (item ===  t('stocks.gift_text')) {
           tabledataHandler(stockgift);
         }
       };
       // USE STATES 
     
-      const [selectedTab1, setSelectedTab1] = useState("All");
+      const [selectedTab1, setSelectedTab1] = useState(t('stocks.all_text'));
       const [selectedTabbledata, setSelectedTabbledata] = useState(stock);
     
 
     // STOCKS COLUMN HEADERS
     const DepomanagerStock = [
 
-        { dataField: "product.name", text: "Product Name", sort: true },
+        { dataField: "product.name", text: t('stocks.product_name'), sort: true },
 
-        { dataField: "product.category.name", text: "Category Name", sort: true },
-
-
-        { dataField: "quantity", text: "Quantity", formatter: nullChecker, sort: true },
+        { dataField: "product.category.name", text:  t('stocks.category_name'), sort: true },
 
 
-        { dataField: "product.formula", text: "Formulas", formatter: nullChecker, sort: true },
+        { dataField: "quantity", text:  t('stocks.qty_text'), formatter: nullChecker, sort: true },
 
-        { dataField: "product.price", text: "Price", sort: true },
+
+        { dataField: "product.formula", text:  t('stocks.formulas_text') , formatter: nullChecker, sort: true },
+
+        { dataField: "product.price", text:  t('stocks.price_text') , sort: true },
 
     ];
     // STOCKS COLUMN HEADERS
@@ -92,17 +93,17 @@ const Stocks = ({
 
     const { SearchBar } = Search;
 
-    const buttonname = ["All", "Medicine", "Gift"]
+    const buttonname = [ t('stocks.all_text'), t('stocks.medicine_text'),t('stocks.gift_text')]
     const loader = useSelector((state) => state?.logIn?.loader);
 
 
-    const emptyDataMessage = () => { return 'No Data to Display';}
+    const emptyDataMessage = () => { return  t('stocks.no_data_to_display');}
     return (
         <>
             <NavbarDash
                 sidebarOpen={sidebarOpen}
                 openSidebar={openSidebar}
-                Heading="Stocks"
+                Heading= { t('stocks.stocks')}
             />
 
 
@@ -135,7 +136,6 @@ const Stocks = ({
                                                         : index === buttonname.length - 1
                                                             ? "80px"
                                                             : "",
-
                                             }}
                                             className={
                                                 selectedTab1 === item
@@ -168,6 +168,7 @@ const Stocks = ({
                                         style={{ fontSize: "15px" }}
                                     />
                                     <SearchBar
+                                    placeholder={t('stocks.search_text')}
                                         {...props.searchProps}
                                         style={{
                                             padding: "0.375rem 2.5rem",

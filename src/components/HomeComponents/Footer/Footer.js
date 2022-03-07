@@ -2,12 +2,13 @@ import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const {t}=useTranslation('common')
   return (
 
     <>
-
       <div className="backg">
 
 
@@ -17,48 +18,54 @@ const Footer = () => {
             <div className="container p-1">
               <div className="row mt-4">
                 <div className="col-lg-3 col-md-6 mb-4 mb-md-0 first1">
-                  <h5 className="text-capitalize fhead">Quick Links</h5>
+                  <h5 className="text-capitalize fhead"> {t('footer.quick_links')}</h5>
 
                   <ul className="list-unstyled mb-0" style={{textDecoration:'none'}}>
                   <li>
               
               <Link to="/home" className="linkFoot">
-                Home
+                {t('footer.home_text')}
+              
               </Link>
             
           </li>
           <li>
           
               <Link to='/about' className="linkFoot">
-                About Us
+              {t('footer.about_us_text')}
+              
               </Link>
             
           </li>
           <li>
           
               <Link to='/facilities' className="linkFoot">
-                Our Facility
+              {t('footer.facility_text')}
+               
               </Link>
             
           </li>
           <li>
           {/* Telemedicine Link */}
               <a target="_blank" rel="noreferrer" href='https://mdxdmfr.com' className="linkFoot">
-                Tele Medicine
+              {t('footer.tele_med_text')}
+              
               </a>
             
           </li>
           <li>
           
               <Link to='/media' className="linkFoot">
-                Media
+              {t('footer.media_text')}
+              
               </Link>
             
           </li>
           <li>
           
               <Link to="/contact" className="linkFoot">
-                Contact Us
+              {t('footer.contact_us_text')}
+               
               </Link>
             
           </li>
@@ -66,34 +73,40 @@ const Footer = () => {
                 </div>
 
                 <div className="col-lg-3 col-md-6 mb-4 mb-md-0 second2">
-                  <h5 className="text-capitalize fhead">Our Products</h5>
+                  <h5 className="text-capitalize fhead">
+                  {t('footer.our_prod_text')}
+                   </h5>
 
                   <ul className="list-unstyled">
                   <li>
               
               <Link to='/by-trade-name' className="linkFoot">
-                By Trade Name
+              {t('footer.our_trade_name_text')}
+                
               </Link>
             
           </li>
           <li>
           
               <Link to='/by-generic-name' className="linkFoot">
-                By Generic Name
+              {t('footer.by_generic_name_text')}
+              
               </Link>
             
           </li>
           <li>
           
               <Link to='/by-therapeutic-class' className="linkFoot">
-                By Therapeutic Class
+              {t('footer.by_therap_text')}
+               
               </Link>
             
           </li>
           <li>
           
               <Link to='/first-time-launching' className="linkFoot">
-                First Class Launching
+              {t('footer.first_class_laun')}
+               
               </Link>
             
           </li>
@@ -125,19 +138,21 @@ const Footer = () => {
                 </div>
 
                  <div className="col-lg-3 col-md-6  mb-4 mb-md-0 second2 ">
-                  <h5 className="text-capitalize fhead">Subscribe for Newsletter</h5>
+                  <h5 className="text-capitalize fhead"> 
+                  {t('footer.subsc_news_text')}
+                 </h5>
 
 
                   <div className="form-row">
                                         <div className="col dk-footer-form">
-                                            <input type="email" className="form-control form-control-custom" placeholder="Your Email..."/>
+                                            <input type="email" className="form-control form-control-custom" placeholder= {t('footer.your_email')}/>
                                             <button type="submit">
-                                                <span className="btn-style-custom" style={{fontSize:'12px',fontWeight:'500'}}>SUBSCRIBE</span>
+                                                <span className="btn-style-custom" style={{fontSize:'12px',fontWeight:'500'}}> {t('footer.subs_text')}</span>
                                             </button>
                                         </div>
                                     </div>
 
-            <h5 className="fhead mt-2">Download Apps</h5>
+            <h5 className="fhead mt-2"> {t('footer.downl_apps_text')} </h5>
             <figure style={{ display: "flex", margin: "12px" }}>
              
             <Link to='#' >
@@ -170,26 +185,27 @@ const Footer = () => {
                 </div>
 
                 <div className="col-lg-3 col-md-12  mb-4 mb-md-0 ">
-                  <h5 className="text-capitalize fhead">Get In Touch</h5>
+                  <h5 className="text-capitalize fhead"> {t('footer.get_in_touch_text')}</h5>
 
                   <ul className="list-unstyled">
                   <li className="">
-              <span className="Typograpy_lastblock_Span">Call :</span><a href="tel:++01991146559"   className="text-white"
-                  style={{textDecoration:'none'}}><span>01991146559</span></a> 
+              <span className="Typograpy_lastblock_Span"> {t('footer.call_text')+":"}</span><a href="tel:++01991146559"   className="text-white"
+                  style={{textDecoration:'none'}}><span> {t('footer.phone_number_text')}</span></a> 
               </li>
               <li className="">
              
-              <span className="Typograpy_lastblock_Span">Email:</span> 
+              <span className="Typograpy_lastblock_Span">  {t('footer.email_text')} </span> 
               <a
                   href="mailto:info@concordpharma-bd.com"
                   className="text-white"
                   style={{textDecoration:'none'}}
                 >
+                  {t('footer.home_text')}
                    info@concordpharma-bd.com
                 </a>
               </li>
               <li className="mb-2">
-              <span className="Typograpy_lastblock_Span">Visitor Count</span>
+              <span className="Typograpy_lastblock_Span"> {t('footer.visitor_count_text')} </span>
               <span className="ms-2"><Link to='https://www.freecounterstat.com" title="website hits counter'>
               <img src="https://counter10.stat.ovh/private/freecounterstat.php?c=wg2el4krc3mzdqf834cy12ftxqsuyh4l" border="0" title="website hits counter" alt="website hits counter"/>
               </Link></span>
@@ -199,7 +215,7 @@ const Footer = () => {
               
                   <a href='tel:01991146559' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
                   <i className="fa fa-phone"></i>
-                      <span className="ms-2">Enquiry</span>
+                      <span className="ms-2"> {t('footer.enquiry_text')}</span>
                   </a>
                 
               </li>
@@ -207,7 +223,7 @@ const Footer = () => {
             
                   <Link to='/our-distribution-network' className="" style={{color: '#fff' ,textDecoration: 'none'}}>
                   <i className="fa fa-globe"></i>
-                  <span className="ms-2">Distribution Center</span>
+                  <span className="ms-2"> {t('footer.distribution_center_text')}</span>
                   </Link>
                 
               </li>
@@ -239,13 +255,17 @@ const Footer = () => {
           style={{ display: "flex", justifyContent: "space-between" }}
         >
           <p className="FooterlastContainercolor m-1">
-            © Copyright 2021. All Right reserved.
+          {t('footer.copyright_text')}
+          
           </p>
           <p className="FooterlastContainercolor m-1">
-            Designed and Developed by{" "}
+          {t('footer.dev_by_text')}
+        
 
             <Link to="#" style={{ textDecoration: "none" }}>
-              <span style={{ color: "#fff" }}>Ripple Intra</span>
+              <span style={{ color: "#fff" }}>
+              {t('footer.ripple_intra_text')}
+                </span>
             </Link>
 
           </p>

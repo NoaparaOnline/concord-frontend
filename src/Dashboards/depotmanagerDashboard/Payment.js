@@ -6,13 +6,13 @@ import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.m
 import paginationFactory from "react-bootstrap-table2-paginator";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
-//
 import NavbarDash from "../../components/ReusableComponents/NavbarDash/NavbarDash";
 import { useDispatch, useSelector } from "react-redux";
 import DashboardMainCard from "../../components/ReusableComponents/DashboardMainCard/DashboardMainCard";
 import Loader from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
 import {  getOrder, getSingleOrder } from '../../Store/Actions/deportmanagerActions';
+import { useTranslation } from 'react-i18next';
 
 const Payment = ({
   sidebarOpen,
@@ -23,6 +23,7 @@ const Payment = ({
 
   const order = useSelector((state) => state?.deport?.order);
   const dispatch = useDispatch();
+  const {t}=useTranslation('common')
 
   useEffect(() => {
       dispatch(getOrder());
@@ -34,14 +35,14 @@ const Payment = ({
   const loader = useSelector((state) => state?.logIn?.loader);
   //PAYMENT COLUMN HEADERS
   const DepomanagerPayment = [
-    { dataField: "customer.name", text: "Customer Name", sort: true },
+    { dataField: "customer.name", text: t('payment.customer_name'), sort: true },
    
   
-    { dataField: "payment_type", text: "Payment Type", sort: true },
+    { dataField: "payment_type", text: t('payment.payment_type'), sort: true },
 
     {
       dataField: "payment_status",
-      text: "Payment Status",
+      text:  t('payment.payment_status'),
       style: (cell, row) => {
         if (cell === "pending") return { color: "#C0B627", fontWeight: "500" };
         else if (cell === "cancelled" || cell === "declined")
@@ -58,12 +59,12 @@ const Payment = ({
       }, sort: true
     },
 
-    { dataField: "vat_rate", text: "Vat", formatter:Vitval, sort: true },
+    { dataField: "vat_rate", text:  t('payment.vat_text'),formatter:Vitval, sort: true },
     
-    { dataField: "subtotal_amount", text: "Total",formatter:Totalval, sort: true },  
+    { dataField: "subtotal_amount", text: t('payment.total_text') ,formatter:Totalval, sort: true },  
     
     
-    { dataField: "customer", formatter: btnFormatterpay, text: "Actions" },
+    { dataField: "customer", formatter: btnFormatterpay, text: t('payment.actions_text')  },
   ];
 
   const { SearchBar } = Search;
@@ -103,7 +104,7 @@ const Payment = ({
              className={` btn`}
              style={{ borderRadius: "5px",backgroundColor:'#22A6AC' }}
             >
-                <span style={{color:'#fff'}}>View</span>
+                <span style={{color:'#fff'}}> {t('payment.view_btn_name')}</span>
             </div>
               </Link>
           </div>
@@ -112,14 +113,14 @@ const Payment = ({
     );
   }
 
-  const emptyDataMessage = () => { return 'No Data to Display';}
+  const emptyDataMessage = () => { return  t('payment.no_data_to_display');}
   return (
     <>
 
       <NavbarDash
         sidebarOpen={sidebarOpen}
         openSidebar={openSidebar}
-        Heading="Payment"
+        Heading= {t('payment.payments_text')}
       />
 
       <DashboardMainCard
@@ -144,6 +145,7 @@ const Payment = ({
                     style={{ fontSize: "15px" }}
                   />
                   <SearchBar
+                  placeholder={t('payment.search_text')}
                     {...props.searchProps}
                     style={{
                       padding: "0.375rem 2.5rem",

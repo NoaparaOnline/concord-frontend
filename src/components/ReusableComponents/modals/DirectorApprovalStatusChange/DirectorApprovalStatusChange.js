@@ -3,9 +3,10 @@ import { useForm } from "react-hook-form";
 import {  Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import {  SchedulesApprovalStatusChange } from '../../../../Store/Actions/directorActions';
+import { useTranslation } from 'react-i18next';
 
 const DirectorApprovalStatusChange = (props) => {
-
+  const {t}=useTranslation('t')
     
     const schedule = useSelector((state) => state?.director?.schedule);
     const approvaluid = useSelector((state) => state?.director?.approvaluid);
@@ -57,8 +58,8 @@ const DirectorApprovalStatusChange = (props) => {
             className=""
             style={{ fontWeight: "600", fontSize: "22px", color: "#0066b3" }}
           >
-            
-            Update Approval Status
+            {t('director_approval_status_change.update_approval_stat')}
+           
           </span>
         </Modal.Header>
         <Modal.Body>
@@ -73,7 +74,7 @@ const DirectorApprovalStatusChange = (props) => {
                 <div className="col-lg-12">
                   
                   <div className="form-group">
-                        <label>Approval Status</label>
+                        <label> {t('director_approval_status_change.approval_status')}</label>
                         <select className="form-control form-select text-capitalize" id="exampleFormControlSelect1" onChange={(e) => {
                           setDropdown1(e.target.value)
                         }}
@@ -82,15 +83,15 @@ const DirectorApprovalStatusChange = (props) => {
                           <option selected className="text-capitalize">{approvaluid.approval_status}</option>
                           {
                             approvaluid.approval_status === "Approved" ? "" :
-                              <option className="text-capitalize">approved</option>
+                              <option className="text-capitalize"> {t('director_approval_status_change.approved_text')} </option>
                           }
                           {
                             approvaluid.approval_status === "Awaiting Approval" ? "" :
-                              <option className="text-capitalize">Awaiting Approval</option>
+                              <option className="text-capitalize"> {t('director_approval_status_change.awaiting_approval')} </option>
                           }
                           {
                             approvaluid.approval_status === "Cancelled" ? "" :
-                              <option className="text-capitalize">cancelled</option>
+                              <option className="text-capitalize"> {t('director_approval_status_change.cancelled_text')}</option>
                           }
 
 {/* {uniqueItems
@@ -109,7 +110,7 @@ const DirectorApprovalStatusChange = (props) => {
               </div>
               <input
                 type="submit"
-                value="Update Status"
+                value= {t('director_approval_status_change.update_status')}
                 className="headerBtn-red btn-block mx-auto"
                 style={{ width: "85%", textAlign: "center" }}
               />

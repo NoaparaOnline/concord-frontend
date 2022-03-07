@@ -9,8 +9,10 @@ import { useState } from 'react';
 import axios from 'axios';
 import { BASEURL } from '../../services/HttpProvider';
 import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 const DoctorReport = () => {
+    const {t}=useTranslation('common')
     const [loading, setLoading] = useState(false)
     const [prescription, setPrescription] = useState([])
 
@@ -21,7 +23,7 @@ const DoctorReport = () => {
     let convertTo = moment(to).unix();
     const getPrescriptionReport = async () => {
         if(from === undefined || to === undefined){
-            toast.error("Please Enter Dates To Generate Report")
+            toast.error(t('doctor_report.enter_date_to_gen_rep'))
              return;   
         }
         setLoading(true)
@@ -58,13 +60,13 @@ const DoctorReport = () => {
             <Row >
                         <Col xxs="12">
                             {/* <Breadcrumb heading="Doctors" match={match} /> */}
-                            <h4>Doctor Report</h4>
+                            <h4>{t('doctor_report.dctr_report_text')}</h4>
                             <div style={{border:'1px solid #000',width:'100%'}} className="mb-5" />
                         </Col>
                     </Row>
                     <Row className="mb-3">
                         <Col lg={6}>
-                        <FormLabel>Start Date</FormLabel>
+                        <FormLabel>{t('doctor_report.start_date')} </FormLabel>
 
                             <input
                                 type="date"
@@ -74,7 +76,7 @@ const DoctorReport = () => {
                             ></input>
                         </Col>
                         <Col lg={6}>
-                        <FormLabel>End Date</FormLabel>
+                        <FormLabel>{t('doctor_report.end_date')} </FormLabel>
                             
                             <input
                                 type="date"
@@ -87,7 +89,7 @@ const DoctorReport = () => {
 
                     <Row>
                             <Col lg={4}>
-                                <button className={`btn me-2`} style={{ backgroundColor: "#22A6AC",color:'#fff' }} onClick={getPrescriptionReport}>Generate Report</button>
+                                <button className={`btn me-2`} style={{ backgroundColor: "#22A6AC",color:'#fff' }} onClick={getPrescriptionReport}>{t('doctor_report.generate_report_btn')}</button>
                             </Col>
                         </Row>
 
@@ -96,7 +98,7 @@ const DoctorReport = () => {
 
                         {loading ? <div className="d-flex justify-content-center mt-5">
                         <Loader height={25} width={30} type="Bars" color="black" />
-                        &nbsp; Generating Report
+                        &nbsp; {t('doctor_report.gener_report_text')}
                     </div>
                         :
                         from !== undefined && to !== undefined ?
@@ -106,7 +108,7 @@ const DoctorReport = () => {
                                     {/* className='table-responsive' */}
                                     <thead>
                                         <tr>
-                                            <td style={{ width: '120px',fontWeight:'bold' }}>Name</td>
+                                            <td style={{ width: '120px',fontWeight:'bold' }}>{t('doctor_report.name_text')}</td>
                                             {dateArray?.map((item) => {
                                                 return (
                                                     <th style={{ width: '80px' }}>{item}</th>
