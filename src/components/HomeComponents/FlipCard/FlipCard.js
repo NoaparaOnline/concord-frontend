@@ -83,7 +83,7 @@ const FlipCard = (props) => {
               </Link> */}
                 <div
                   onClick={() =>
-                    props?.history?.push(`/prod-details/${proname}`, {
+                    props?.history?.push(`/prod-details/${card?.category}/${proname}`, {
                       data: { ...card, from: props?.location?.pathname },
                     })
                   }
@@ -151,7 +151,7 @@ const FlipCard = (props) => {
               </Link> */}
                 <div
                   onClick={() =>
-                    props?.history?.push(`/prod-details/${proname}`, {
+                    props?.history?.push(`/prod-details/${card?.category}/${proname}`, {
                       data: { ...card, from: props?.location?.pathname },
                     })
                   }
