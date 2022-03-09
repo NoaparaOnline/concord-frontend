@@ -4,16 +4,25 @@ import bannerimg from "../Statics/assets/mediaphotobanner.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { filterComponentData } from "../Utils/functions";
 
 const Mediavideo = () => {
+  const component = useSelector((state) => state?.cmsReducer?.components);
+  const lang = useSelector((state) => state?.cmsReducer?.language);
+  const media_video = filterComponentData(component, "media_video", lang)
+
+  const { t } = useTranslation('common');
+
   const LinksBan = [
     {
-      subLinkName: "Home",
+      subLinkName: t('video.home_text'),
       subDash: "/",
       subLink: "/",
     },
     {
-      subLinkName: "Media",
+      subLinkName: t('video.media_text'),
       subDash: "/",
       subLink: "/media",
     },
@@ -30,18 +39,18 @@ const Mediavideo = () => {
     "https://www.youtube.com/embed/LfLTSxROOpg",
   ];
 
- 
+
 
 
   return (
     <>
       <Helmet>
-        <title>Videos - Concord Pharma</title>
+        <title>{t('video.helmet.title_text')}</title>
       </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
-        heading={"Videos"}
-        subHeading={`Videos`}
+        heading={t('video.video_text')}
+        subHeading={t('video.video_text')}
         LinksBan={LinksBan}
         height={"400px"}
         backposit={"center right"}
@@ -52,7 +61,7 @@ const Mediavideo = () => {
       />
       <div className="container my-5">
         <div className="row">
-          {videolinks.map((item) => {
+          {media_video?.length < 1 ? videolinks.map((item) => {
             return (
               <div class="col-lg-4 col-md-6 col-sm-12 my-4">
                 <iframe
@@ -63,7 +72,25 @@ const Mediavideo = () => {
                     overflow: "hidden",
                   }}
                   src={item}
-                  title="This is a unique title"
+                  title={t('video.title')}
+                  frameBorder={0}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  allowFullScreen="true"
+                ></iframe>
+              </div>
+            );
+          }) : media_video?.map((item) => {
+            return (
+              <div class="col-lg-4 col-md-6 col-sm-12 my-4">
+                <iframe
+                  style={{
+                    width: "100%",
+                    height: "350px",
+                    border: "none",
+                    overflow: "hidden",
+                  }}
+                  src={item?.link}
+                  title={t('video.title')}
                   frameBorder={0}
                   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                   allowFullScreen="true"

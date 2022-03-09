@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { FlipCard } from "../components";
@@ -7,11 +7,19 @@ import ReactPaginate from 'react-paginate';
 import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
 import useMediaQuery from "../components/ReusableComponents/MediaQueryCustomHook";
 import { Helmet } from "react-helmet";
+import { useSelector } from "react-redux";
+import { filterComponentData } from "../Utils/functions";
 
 
 const Products_bytrade = (props) => {
   const isDesktoplg = useMediaQuery('(min-width: 992px)');
-  
+  const component = useSelector((state) => state?.cmsReducer?.components);
+  const lang = useSelector((state) => state?.cmsReducer?.language);
+
+  const product_categories = filterComponentData(component, "product_categories", lang)
+  const product_category_header = filterComponentData(component, "product_category_header", lang)
+  const products = filterComponentData(component, "products", lang)
+
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -25,86 +33,136 @@ const Products_bytrade = (props) => {
     },
   ];
 
- 
 
-  const [obj , setObj] = useState(ByTherapeutic);
 
+  const [obj, setObj] = useState(products?.length < 1 ? ByTherapeutic : products);
+
+  useEffect(() => {
+    setObj(products?.length < 1 ? ByTherapeutic : products)
+  }, [products])
 
   const filteredtype = (type) => {
-    if (type==="All") {
-      setObj(ByTherapeutic)
-      setPageNumber(0);
-      
-    }
-    else if (type==="Syrup") {
-      const filterd = ByTherapeutic.filter(category => 
-        category.type === "Syrup" )
-      setObj(filterd);
-      setPageNumber(0);
-      
-    }
-    else if (type==="Tablet") {
-      const filterd = ByTherapeutic.filter(category => 
-        category.type === "Tablet" )
-      setObj(filterd);
-      setPageNumber(0);
-      
-    }
-    else if (type==="Capsule") {
-      const filterd = ByTherapeutic.filter(category => 
-        category.type === "Capsule" )
-      setObj(filterd);
-      setPageNumber(0);
-      
-    }
-    else if (type==="Hand Rub") {
-      const filterd = ByTherapeutic.filter(category => 
-        category.type === "Hand Rub" )
-      setObj(filterd);
-      setPageNumber(0);
-      
-    }
-    else if (type==="Injectables") {
-      const filterd = ByTherapeutic.filter(category => 
-        category.type === "Injectables" )
-      setObj(filterd);
-      setPageNumber(0);
-      
+    console.log(type, "type");
+    if (products?.length < 1) {
+      if (type == "All") {
+        setObj(ByTherapeutic)
+        setPageNumber(0);
 
+      }
+      else if (type == "Syrup") {
+        const filterd = ByTherapeutic.filter(category =>
+          category.type === "Syrup")
+        setObj(filterd);
+        setPageNumber(0);
+
+      }
+      else if (type == "Tablet") {
+        const filterd = ByTherapeutic.filter(category =>
+          category.type === "Tablet")
+        setObj(filterd);
+        setPageNumber(0);
+
+      }
+      else if (type == "Capsule") {
+        const filterd = ByTherapeutic.filter(category =>
+          category.type === "Capsule")
+        setObj(filterd);
+        setPageNumber(0);
+
+      }
+      else if (type == "Hand Rub") {
+        const filterd = ByTherapeutic.filter(category =>
+          category.type == "Hand Rub")
+        setObj(filterd);
+        setPageNumber(0);
+
+      }
+      else if (type == "Injectables") {
+        const filterd = ByTherapeutic.filter(category =>
+          category.type == "Injectables")
+        setObj(filterd);
+        setPageNumber(0);
+
+
+      }
     }
+    else {
+      if (type == "All") {
+        setObj(products)
+        setPageNumber(0);
+
+      }
+      else if (type == "Syrup") {
+        const filterd = products?.filter(category =>
+          category.category == "Syrup")
+        setObj(filterd);
+        setPageNumber(0);
+
+      }
+      else if (type == "Tablet") {
+        const filterd = products?.filter(category =>
+          category.category == "Tablet")
+        setObj(filterd);
+        setPageNumber(0);
+
+      }
+      else if (type == "Capsule") {
+        const filterd = products.filter(category =>
+          category.category == "Capsule")
+        setObj(filterd);
+        setPageNumber(0);
+
+      }
+      else if (type == "Hand Rub") {
+        const filterd = products?.filter(category =>
+          category.category == "Hand Rub")
+        setObj(filterd);
+        setPageNumber(0);
+
+      }
+      else if (type == "Injectables") {
+        const filterd = products?.filter(category =>
+          category.category == "Injectables")
+        setObj(filterd);
+        setPageNumber(0);
+
+
+      }
+    }
+
   }
 
   const [selected, setSelected] = useState('5');
 
   const [pageNumber, setPageNumber] = useState(0)
   const perPage = selected;
-  const pageVisited =pageNumber * perPage;
-  
-  const displayUsers = obj
-  .slice(pageVisited , pageVisited + perPage)
-  .map((ob, index) => (
-    <React.Fragment key={ob.id}>
-      <>
-        <div className="col-lg-4 d-none d-lg-block d-md-none">
-          <FlipCard card={ob} {...props} />
-        </div>
-        <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
-          <SingleCard card={ob} {...props} />
-        </div>
-       
-      </>
-    </React.Fragment>
-  ));
- 
-  const pageCount = Math.ceil(obj.length/ perPage) ;
+  const pageVisited = pageNumber * perPage;
 
-  const changePage = ({selected}) => {
+  const displayUsers = products?.length < 1 ? products : obj
+    .slice(pageVisited, pageVisited + perPage)
+    .map((ob, index) => (
+      <React.Fragment key={index}>
+        <>
+          <div className="col-lg-4 d-none d-lg-block d-md-none">
+            <FlipCard card={ob} {...props} />
+          </div>
+          <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
+            <SingleCard card={ob} {...props} />
+          </div>
+
+        </>
+      </React.Fragment>
+    ));
+
+  const pageCount = Math.ceil(obj?.length / perPage);
+
+  const changePage = ({ selected }) => {
     setPageNumber(selected);
   }
 
-return (
+  return (
     <>
-       <Helmet>
+      <Helmet>
         <title>By Trade Name - Concord Pharma</title>
       </Helmet>
       <BannerWithText
@@ -113,7 +171,7 @@ return (
         LinksBan={LinksBan}
         height={""}
         backgroundSize={""}
-        
+
         // backposit={'center right'}
         backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url()`}
         conmarpad={""}
@@ -127,73 +185,91 @@ return (
 
               <div className="productFilterContent1">
 
-              <h3 className="filterHeading" style={{ fontWeight: "600" }}>
-                Product Categories
-              </h3>
-              <form id="category-radio-btn" style={{color:'#666666'}}>
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="all"
-                  name="product-category"
-                  value="1"
-                  defaultChecked
-                
-                  onChange={()=>filteredtype("All")}
-                />
-                <label htmlFor="all">All</label>
-                <br />
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="injectables"
-                  name="product-category"
-                  value="2"
-                  onChange={()=>filteredtype("Injectables")}
-                />
-                <label htmlFor="injectables">Injectables</label>
-                <br />
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="syrup"
-                  name="product-category"
-                  value="3"
-                  onChange={()=>filteredtype("Syrup")}
-                />
-                <label htmlFor="syrup">Syrup</label>
-                <br />
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="tablet"
-                  name="product-category"
-                  value="4"
-                  onChange={()=>filteredtype("Tablet")}
-                />
-                <label htmlFor="tablet">Tablet</label>
-                <br/>
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="capsule"
-                  name="product-category"
-                  value="5"
-                  onChange={()=>filteredtype("Capsule")}
-                />
-                <label htmlFor="capsule">Capsule</label>
-                <br />
-                <input
-                  className="me-2"
-                  type="radio"
-                  id="handrub"
-                  name="product-category"
-                  value="6"
-                  onChange={()=>filteredtype("Hand Rub")}
+                <h3 className="filterHeading" style={{ fontWeight: "600" }}>
+                  {product_category_header?.heading ? product_category_header?.heading : "Product Categories"}
+                </h3>
+                <form id="category-radio-btn" style={{ color: '#666666' }}>
+                  <input
+                    className="me-2"
+                    type="radio"
+                    id="all"
+                    name="product-category"
+                    value="1"
+                    defaultChecked
 
-                />
-                <label htmlFor="handrub">Hand Rub</label>
-              </form>
+                    onChange={() => filteredtype("All")}
+                  />
+                  <label htmlFor="all">All</label>
+                  <br />
+                  {
+                    product_categories?.length < 1 ?
+                      <>
+                        <input
+                          className="me-2"
+                          type="radio"
+                          id="injectables"
+                          name="product-category"
+                          value="2"
+                          onChange={() => filteredtype("Injectables")}
+                        />
+                        <label htmlFor="injectables">Injectables</label>
+                        <br />
+                        <input
+                          className="me-2"
+                          type="radio"
+                          id="syrup"
+                          name="product-category"
+                          value="3"
+                          onChange={() => filteredtype("Syrup")}
+                        />
+                        <label htmlFor="syrup">Syrup</label>
+                        <br />
+                        <input
+                          className="me-2"
+                          type="radio"
+                          id="tablet"
+                          name="product-category"
+                          value="4"
+                          onChange={() => filteredtype("Tablet")}
+                        />
+                        <label htmlFor="tablet">Tablet</label>
+                        <br />
+                        <input
+                          className="me-2"
+                          type="radio"
+                          id="capsule"
+                          name="product-category"
+                          value="5"
+                          onChange={() => filteredtype("Capsule")}
+                        />
+                        <label htmlFor="capsule">Capsule</label>
+                        <br />
+                        <input
+                          className="me-2"
+                          type="radio"
+                          id="handrub"
+                          name="product-category"
+                          value="6"
+                          onChange={() => filteredtype("Hand Rub")}
+
+                        />
+                        <label htmlFor="handrub">Hand Rub</label></> : product_categories?.splice(0, product_categories?.length)?.map((item) => (
+                          <>
+                            <label htmlFor={item?.name}>{item?.name}</label>
+                            <br />
+                            <input
+                              className="me-2"
+                              type="radio"
+                              id="capsule"
+                              name="product-category"
+                              value={item?.name}
+                              onChange={() => filteredtype(item?.name)}
+                            />
+                          </>
+                        ))
+                  }
+
+                </form>
 
 
               </div>
@@ -224,36 +300,49 @@ return (
           <div className="col-sm-12 col-lg-9 mt-0">
 
 
-          <div className="row mb-3">
+            <div className="row mb-3">
               <div className="col-lg-6">
                 Select Items Per Page
                 <div class="btn-group ms-3" role="group" aria-label="First group">
-                <button className={selected === '5' ? 'btn  btn-secondary':'btn btn-light  '} style={{width: isDesktoplg ? "70px":"55px"}} onClick={(e)=> setSelected(e.target.value)} value="5">5</button>
-                <button className={selected === '10' ? 'btn btn-secondary':'btn btn-light  '} style={{width: isDesktoplg ? "70px":"55px"}} onClick={(e)=> setSelected(e.target.value)} value="10">10</button>
-                <button className={selected === '20' ? 'btn btn-secondary':'btn btn-light  '} style={{width: isDesktoplg ? "70px":"55px"}} onClick={(e)=> setSelected(e.target.value)} value="20">20</button>
-                <button className={selected === '50' ? 'btn btn-secondary':'btn btn-light  '} style={{width: isDesktoplg ? "70px":"55px"}} onClick={(e)=> setSelected(e.target.value)} value="50">50</button>
-                <button className={selected === '100' ?'btn btn-secondary':'btn btn-light  '} style={{width: isDesktoplg ? "70px":"55px"}} onClick={(e)=> setSelected(e.target.value)} value="100">100</button>
-                
-                </div> 
+                  <button className={selected === '5' ? 'btn  btn-secondary' : 'btn btn-light  '} style={{ width: isDesktoplg ? "70px" : "55px" }} onClick={(e) => setSelected(e.target.value)} value="5">5</button>
+                  <button className={selected === '10' ? 'btn btn-secondary' : 'btn btn-light  '} style={{ width: isDesktoplg ? "70px" : "55px" }} onClick={(e) => setSelected(e.target.value)} value="10">10</button>
+                  <button className={selected === '20' ? 'btn btn-secondary' : 'btn btn-light  '} style={{ width: isDesktoplg ? "70px" : "55px" }} onClick={(e) => setSelected(e.target.value)} value="20">20</button>
+                  <button className={selected === '50' ? 'btn btn-secondary' : 'btn btn-light  '} style={{ width: isDesktoplg ? "70px" : "55px" }} onClick={(e) => setSelected(e.target.value)} value="50">50</button>
+                  <button className={selected === '100' ? 'btn btn-secondary' : 'btn btn-light  '} style={{ width: isDesktoplg ? "70px" : "55px" }} onClick={(e) => setSelected(e.target.value)} value="100">100</button>
+
+                </div>
               </div>
               <div className="col-lg-6 d-flex justify-content-end">
-              Item Per Page  : &nbsp; <span style={{fontWeight:'600',color:'#0066b3'}}>{selected}</span>  
-                </div> 
+                Item Per Page  : &nbsp; <span style={{ fontWeight: '600', color: '#0066b3' }}>{selected}</span>
+              </div>
             </div>
 
             <div className="cards ">
               <div className="row">
-                {displayUsers}
+                {products?.length < 1 ? displayUsers : obj?.slice(pageVisited, pageVisited + perPage)
+                  .map((ob, index) => (
+                    <React.Fragment key={index}>
+                      <>
+                        <div className="col-lg-4 d-none d-lg-block d-md-none">
+                          <FlipCard card={ob} {...props} />
+                        </div>
+                        <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
+                          <SingleCard card={ob} {...props} />
+                        </div>
+
+                      </>
+                    </React.Fragment>
+                  ))}
                 <ReactPaginate
-                previousLabel={<i  style={{fontSize:'20px' ,color: '#0066b3'}} className="fa fa-arrow-left"></i>}
-                nextLabel={<i  style={{fontSize:'20px' ,color: '#0066b3'}} className="fa fa-arrow-right"></i>}
-                pageCount={pageCount}
-                onPageChange={changePage}
-                containerClassName={"paginationcustom"}
-                subContainerClassName={"pages paginationcustom"}
-                activeClassName={"active"}
-               
-                forcePage={pageNumber}
+                  previousLabel={<i style={{ fontSize: '20px', color: '#0066b3' }} className="fa fa-arrow-left"></i>}
+                  nextLabel={<i style={{ fontSize: '20px', color: '#0066b3' }} className="fa fa-arrow-right"></i>}
+                  pageCount={pageCount}
+                  onPageChange={changePage}
+                  containerClassName={"paginationcustom"}
+                  subContainerClassName={"pages paginationcustom"}
+                  activeClassName={"active"}
+
+                  forcePage={pageNumber}
                 />
               </div>
             </div>

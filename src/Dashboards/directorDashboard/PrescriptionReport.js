@@ -14,9 +14,11 @@ import {
   getUsers,
   ViewChildSalesManagerManagerAction,
 } from "../../Store/Actions/directorActions";
+import { useTranslation } from "react-i18next";
 
 const PrescriptionReport = () => {
   const dispatch = useDispatch();
+  const {t}=useTranslation('common')
   const [loading, setLoading] = useState(false);
   const loadingSM = useSelector((state) => state?.director?.loadingSm);
   const [prescription, setPrescription] = useState([]);
@@ -111,7 +113,7 @@ const PrescriptionReport = () => {
       <Row>
         <Col xxs="12">
           {/* <Breadcrumb heading="Doctors" match={match} /> */}
-          <h4>Prescription Report</h4>
+          <h4>{t('prescription_report.presc_report_text')}</h4>
           <div
             style={{ border: "1px solid #000", width: "100%" }}
             className="mb-5"
@@ -120,8 +122,7 @@ const PrescriptionReport = () => {
       </Row>
       <Row className="mb-3">
         <Col lg={6}>
-          <FormLabel>Start Date</FormLabel>
-
+          <FormLabel>{t('prescription_report.start_date')}</FormLabel>
           <input
             type="date"
             className="input-login-modal"
@@ -130,7 +131,7 @@ const PrescriptionReport = () => {
           ></input>
         </Col>
         <Col lg={6}>
-          <FormLabel>End Date</FormLabel>
+          <FormLabel> {t('prescription_report.end_date')}</FormLabel>
 
           <input
             type="date"
@@ -144,7 +145,7 @@ const PrescriptionReport = () => {
       <Row>
         <Col lg={6}>
           <FormGroup>
-            <FormLabel>Select Sales Manager</FormLabel>
+            <FormLabel> {t('prescription_report.select_sales_manager')}</FormLabel>
             {loadingSM ? (
               <div className="">
                 <Loader height={18} width={18} type="Oval" color="#0066B3" />
@@ -172,7 +173,7 @@ const PrescriptionReport = () => {
         </Col>
         <Col lg={6}>
           <FormGroup>
-            <FormLabel>Select Regional Sales Manager</FormLabel>
+            <FormLabel> {t('prescription_report.select_reg_sales_manager')}</FormLabel>
             {loadingRSM ? (
               <div className="">
                 <Loader height={18} width={18} type="Oval" color="#0066B3" />
@@ -196,7 +197,7 @@ const PrescriptionReport = () => {
         </Col>
         <Col lg={6}>
           <FormGroup>
-            <FormLabel>Select Area Manager</FormLabel>
+            <FormLabel> {t('prescription_report.select_area_manager')}</FormLabel>
             {loadingAM ? (
               <div className="">
                 <Loader height={18} width={18} type="Oval" color="#0066B3" />
@@ -220,7 +221,7 @@ const PrescriptionReport = () => {
         </Col>
         <Col lg={6}>
           <FormGroup>
-            <FormLabel>Select MPO</FormLabel>
+            <FormLabel> {t('prescription_report.select_mpo')}</FormLabel>
             {loadingMPO ? (
               <div className="">
                 <Loader height={18} width={18} type="Oval" color="#0066B3" />
@@ -246,7 +247,7 @@ const PrescriptionReport = () => {
 
       {loading ? <div className="d-flex justify-content-center mt-5">
                         <Loader height={25} width={30} type="Bars" color="black" />
-                        &nbsp; Generating Report
+                        &nbsp;  {t('prescription_report.gener_report_text')} 
                     </div> :
                         from !== undefined && to !== undefined ?
                             <div className='table-responsive' >
@@ -255,13 +256,13 @@ const PrescriptionReport = () => {
                                     {/* className='table-responsive' */}
                                     <thead>
                                         <tr>
-                                            <td style={{ width: '120px', fontWeight: 'bold' }}>Name</td>
+                                            <td style={{ width: '120px', fontWeight: 'bold' }}> {t('prescription_report.name_text')}</td>
                                             {dateArray?.map((item) => {
                                                 return (
                                                     <th style={{ width: '80px' }}>{item}</th>
                                                 )
                                             })}
-                                            <th style={{ width: '80px' }}>Sum</th>
+                                            <th style={{ width: '80px' }}>  {t('prescription_report.sum_text')}</th>
 
 
                                         </tr>

@@ -1,11 +1,12 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { changePassword } from "../../../../Store/Actions/loginActions";
 const ChangePassword = (props) => {
- 
+ const {t}=useTranslation('common')
  
   const dispatch = useDispatch();
   
@@ -20,20 +21,16 @@ const ChangePassword = (props) => {
       const success = await dispatch(changePassword(apiData));
   
       if (success === "success") {
-      toast.info("Password Changed Successfully");
+
+      toast.info(t('change_password.password_changed_succ'));
       }
       props.onHide();
     }
     else {
-        toast.error("Please Provide the same password");
+        toast.error(t('change_password.provide_same_pass'));
         }
     
   };
-
-
-
-
-  
 
   const {
     register,
@@ -55,7 +52,7 @@ const ChangePassword = (props) => {
             className=""
             style={{ fontWeight: "600", fontSize: "22px", color: "#0066b3" }}
           >
-            Change Password
+            {t('change_password.change_password_text')}
           </span>
         </Modal.Header>
         <Modal.Body className="p-0">
@@ -70,17 +67,18 @@ const ChangePassword = (props) => {
                     <div className="row mb-1">
                       <div className="col-12">
                         <span className="label-name-login">
-                          Enter Old Password
+                        {t('change_password.enter_old_pass')}
+                     
                         </span>
                         {/* &nbsp; */}
                         <input
                           className="input-login-modal"
                           type="password"
-                          placeholder="Old Password"
+                          placeholder={t('change_password.old_password_text')}
                           {...register("password", {
                             required: {
                               value: true,
-                              message: "this field is required field",
+                              message:  t('change_password.field_req_text'),
                             },
                           })}
                         />
@@ -96,17 +94,18 @@ const ChangePassword = (props) => {
                     <div className="row mb-1">
                       <div className="col-12">
                         <span className="label-name-login">
-                          Enter New Password
+                        {t('change_password.enter_new_pass')}
+                       
                         </span>
                         {/* &nbsp; */}
                         <input
                           className="input-login-modal"
                           type="password"
-                          placeholder="New Password"
+                          placeholder={t('change_password.new_password_text')}
                           {...register("new_password", {
                             required: {
                               value: true,
-                              message: "this field is required field",
+                              message:t('change_password.field_req_text') ,
                             },
                           })}
                         />
@@ -123,17 +122,18 @@ const ChangePassword = (props) => {
                     <div className="row mb-1">
                       <div className="col-12">
                         <span className="label-name-login">
-                          Enter New Password Again
+                        {t('change_password.enter_new_pass_again')}
+                      
                         </span>
                         {/* &nbsp; */}
                         <input
                           className="input-login-modal"
                           type="password"
-                          placeholder="New Password Confirm"
+                          placeholder={t('change_password.new_password_confirm')}
                           {...register("new_password_next", {
                             required: {
                               value: true,
-                              message: "this field is required field",
+                              message:  t('change_password.field_req_text')  ,
                             },
                           })}
                         />
@@ -150,7 +150,7 @@ const ChangePassword = (props) => {
                     <div className="d-flex justify-content-center">
                       <input
                         type="submit"
-                        value="Change Password"
+                        value=  {t('change_password.change_password_text')}
                         className="btn btn-block rounded-pill  mb-2 mx-auto"
                         style={{
                           width: "85%",

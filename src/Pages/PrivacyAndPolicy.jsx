@@ -1,11 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
+
 
 const PrivacyAndPolicy = () => {
+  const {t}=useTranslation('common')
   return (
     <>
      <Helmet>
-        <title>Privacy Policy - Concord Pharma</title>
+        <title> {t('privacy_policy.helmet.title_text')}</title>
       </Helmet>
     <div className="container">
       <div className="row d-flex justify-content-center">
@@ -14,78 +17,60 @@ const PrivacyAndPolicy = () => {
             className="text-center"
             style={{ color: "#0066b3", fontWeight: "600" }}
           >
-            Privacy Policy for Concord Pharmaceuticals Ltd.{" "}
+            {t('privacy_policy.text_1')}
+       
           </h1>
           <p>
-            At Concord Pharmaceuticals Ltd. , accessible from
-            https://concordpharma-bd.com, one of our main priorities is the
-            privacy of our visitors. This Privacy Policy document contains types
-            of information that is collected and recorded by Concord
-            Pharmaceuticals Ltd. and how we use it.
+          {t('privacy_policy.text_2')}
+           
           </p>
           <p>
-            If you have additional questions or require more information about
-            our Privacy Policy, do not hesitate to contact us.
+          {t('privacy_policy.text_3')}
+  
           </p>
           <p>
-            This Privacy Policy applies only to our online activities and is
-            valid for visitors to our website with regards to the information
-            that they shared and/or collect in Concord Pharmaceuticals Ltd. .
-            This policy is not applicable to any information collected offline
-            or via channels other than this website.
+          {t('privacy_policy.text_4')}
+            
           </p>
-          <h1 style={{ color: "#0066b3",fontSize: '2rem' }}>Consent</h1>
+          <h1 style={{ color: "#0066b3",fontSize: '2rem' }}>  {t('privacy_policy.text_20')}</h1>
           <p>
-            By using our website, you hereby consent to our Privacy Policy and
-            agree to its terms.
+          {t('privacy_policy.text_5')}
+            
           </p>
-          <h1 style={{ color: "#0066b3",fontSize: '2rem' }}>Information we collect</h1>
+          <h1 style={{ color: "#0066b3",fontSize: '2rem' }}>  {t('privacy_policy.text_6')} </h1>
           <p>
-            The personal information that you are asked to provide, and the
-            reasons why you are asked to provide it, will be made clear to you
-            at the point we ask you to provide your personal information.
+          {t('privacy_policy.text_7')}
+     
           </p>
           <p>
-            If you contact us directly, we may receive additional information
-            about you such as your name, email address, phone number, the
-            contents of the message and/or attachments you may send us, and any
-            other information you may choose to provide.
+          {t('privacy_policy.text_8')}
+      
           </p>
           <p>
-            When you register for an Account, we may ask for your contact
-            information, including items such as name, company name, address,
-            email address, and telephone number.
+          {t('privacy_policy.text_9')}
+           
           </p>
-          <h1 style={{ color: "#0066b3" }}>How we use your information</h1>
+          <h1 style={{ color: "#0066b3" }}>  {t('privacy_policy.text_10')}  </h1>
           <p>
-            We use the information we collect in various ways, including to:
+          {t('privacy_policy.text_11')}
+           
           </p>
           <ul>
-            <li>Provide, operate, and maintain our website</li>
-            <li>Improve, personalize, and expand our website</li>
-            <li>Understand and analyze how you use our website</li>
-            <li>Develop new products, services, features, and functionality</li>
+            <li>  {t('privacy_policy.text_12')} </li>
+            <li>  {t('privacy_policy.text_13')} </li>
+            <li>  {t('privacy_policy.text_21')}</li>
+            <li>  {t('privacy_policy.text_14')} </li>
             <li>
-              Communicate with you, either directly or through one of our
-              partners, including for customer service, to provide you with
-              updates and other information relating to the website, and for
-              marketing and promotional purposes
+            {t('privacy_policy.text_15')}
+            
             </li>
-            <li>Send you emails</li>
-            <li>Find and prevent fraud</li>
+            <li>  {t('privacy_policy.text_16')} </li>
+            <li>  {t('privacy_policy.text_17')} </li>
           </ul>
-          <h1 style={{ color: "#0066b3",fontSize: '2rem' }}>Log Files</h1>
+          <h1 style={{ color: "#0066b3",fontSize: '2rem' }}>  {t('privacy_policy.text_18')} </h1>
           <p>
-            Concord Pharmaceuticals Ltd. follows a standard procedure of using
-            log files. These files log visitors when they visit websites. All
-            hosting companies do this and a part of hosting services’ analytics.
-            The information collected by log files include internet protocol
-            (IP) addresses, browser type, Internet Service Provider (ISP), date
-            and time stamp, referring/exit pages, and possibly the number of
-            clicks. These are not linked to any information that is personally
-            identifiable. The purpose of the information is for analyzing
-            trends, administering the site, tracking users’ movement on the
-            website, and gathering demographic information.
+          {t('privacy_policy.text_19')}
+      
           </p>
         </div>
       </div>

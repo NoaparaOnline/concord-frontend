@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import icon from '../../../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg'
 const DashboardTableCards = ({ob}) => {
+    const {t}=useTranslation('common')
+
   return (
     <>
       <div
@@ -29,12 +32,12 @@ const DashboardTableCards = ({ob}) => {
             <div className="row mb-3">
                 <div className="col-6 d-flex justify-content-start">
                     
-                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize',color:'grey'}}>T.P</span>
+                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize',color:'grey'}}>{t('director_products.tp_text')}</span>
 
                 </div>
                 <div className="col-6 d-flex justify-content-end">
                     
-                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize',color:'grey'}}>R.P</span>
+                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize',color:'grey'}}>{t('director_products.rp_text')}</span>
 
                 </div>
             </div>
@@ -48,10 +51,10 @@ const DashboardTableCards = ({ob}) => {
             </div>
             <div className="row mb-3">
                 <div className="col-12">
-                    <span style={{fontSize:'17px',fontWeight:'600',textTransform:'capitalize',color:'grey'}}>Product Added By</span>
+                    <span style={{fontSize:'17px',fontWeight:'600',textTransform:'capitalize',color:'grey'}}> {t('director_products.product_added_by')}</span>
                 </div>
                 <div className="col-12">
-                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize'}}>{ob.created_by._cls ? ob.created_by._cls : "N/A"}</span>
+                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize'}}>{ob.created_by._cls ? ob.created_by._cls :t('director_products.n_a')}</span>
                 </div>
              </div>
         </div>

@@ -4,7 +4,7 @@ import { BASEURL } from "../../services/HttpProvider";
 import apiServices from "../../services/requestHandler";
 import { directorConstants, DOCTOR_CONSTANT, LOADER_CONSTANT, STOCKS_CONSTANT, VIEW_RSM_CONSTANT, VIEW_SM_CONSTANT, VIEW_USER_CONSTANT } from "../Constants/directorConstant";
 import { logInConstants } from "../Constants/loginConstant";
-
+import i18next from "i18next";
 
 
 export const getSchedule = (uid) => async (dispatch) => {
@@ -46,7 +46,7 @@ export const addSchedule = (data) => async (dispatch) => {
   const response = await apiServices.addSchedules(data);
   if (response?.data?.response_code === 200) {
     dispatch(getSchedule(""));
-    toast.info("Schedule Added Successfully");
+    toast.info(i18next.t("common:actions.schedule_added"));
   } else {
     toast.error(response?.response_message);
   }
@@ -57,9 +57,9 @@ export const SchedulesApprovalStatusChange = (data) => async (dispatch) => {
 
   if (response?.response_code === 200) {
     dispatch(getSchedule(""));
-    toast.info("Status Updated Successfully");
+    toast.info(i18next.t("common:actions.status_updated"));
   } else {
-    toast.error("Error");
+    toast.error(i18next.t("common:actions.error_text"));
   }
 };
 
