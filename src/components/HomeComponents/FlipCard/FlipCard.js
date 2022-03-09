@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./FlipCard.css";
 
 const FlipCard = (props) => {
+  console.log(props,"Testing")
   const [toggle, settoggle] = useState(true)
   const { card } = props;
   const { title, text1, text2, btn, innerComposition, id } = card;
@@ -83,7 +84,7 @@ const FlipCard = (props) => {
               </Link> */}
                 <div
                   onClick={() =>
-                    props?.history?.push(`/prod-details/${proname}`, {
+                    props?.history?.push(`/prod-details/${card?.category}/${proname}`, {
                       data: { ...card, from: props?.location?.pathname },
                     })
                   }
@@ -151,7 +152,7 @@ const FlipCard = (props) => {
               </Link> */}
                 <div
                   onClick={() =>
-                    props?.history?.push(`/prod-details/${proname}`, {
+                    props?.history?.push(`/prod-details/${card?.category}/${proname}`, {
                       data: { ...card, from: props?.location?.pathname },
                     })
                   }

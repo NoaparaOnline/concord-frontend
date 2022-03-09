@@ -21,6 +21,7 @@ const SingleCard = (props) => {
 
   const proname = getFirstWord(card?.name ? card?.name : title);
 
+  console.log(card,"Testing")
 
   return (
     <div>
@@ -32,10 +33,10 @@ const SingleCard = (props) => {
               {currentpath === '/by-generic-name' ? innerComposition : title}
 
             </h5>
-            <h6 className="card-title text-white">{text1}</h6>
-            <h6 className="card-title text-white">{text2}</h6>
+            <h6 className="card-title text-white">{card?.name ? card?.name : text1}</h6>
+            <h6 className="card-title text-white">{card?.subtitle ? card?.subtitle : text2}</h6>
           </div>
-          <img src={card?.imgf} className="card-img-top p-3" height="100%"
+          <img src={card?.image} className="card-img-top p-3" height="100%"
             width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} />
           {/* {card?.img?.length < 1 ? <img src={imgf} className="card-img-top p-3" height="100%"
             width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} /> : card?.img?.map((ob, index) => {
@@ -44,17 +45,17 @@ const SingleCard = (props) => {
                   width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} />
               );
             })} */}
-          {card?.img?.map((ob, index) => {
+          {/* {card?.img?.map((ob, index) => {
             return (
               <img key={index} src={ob.imgf} className="card-img-top p-3" height="100%"
                 width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} />
             );
-          })}
+          })} */}
           <div
-            onClick={() => props?.history?.push(`/prod-details/${proname}/${id}`, { data: { ...card, from: props?.location?.pathname } })}
+            onClick={() => props?.history?.push(`/prod-details/${card?.category}/${proname}`, { data: { ...card, from: props?.location?.pathname } })}
             className="btn  rounded-pill colr_btn"
           >
-            {btn}
+            {card?.button ? card?.button : btn}
           </div>
         </div>
       </div>

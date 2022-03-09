@@ -7,7 +7,7 @@ const HomeCards = ({ props, product }) => {
 
   return (
     <div className="container  my-5 ">
-      <div className="container cards Responsive_Margin_Screen  ">
+      <div className="cards Responsive_Margin_Screen  ">
         {product?.length < 1 ? <div className="row  ">
           {card.map((ob, index) => (
             <React.Fragment key={ob.id}>
@@ -25,7 +25,7 @@ const HomeCards = ({ props, product }) => {
               </div>
             </React.Fragment>
           ))}
-        </div> : <div className="row  ">
+        </div> : <div className="row">
           {
             product?.map((item,index) => (
               <React.Fragment >
