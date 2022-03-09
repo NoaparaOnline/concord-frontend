@@ -19,6 +19,9 @@ const Products_therapeutic = (props) => {
   const product_categories = filterComponentData(component, "product_categories", lang)
   const product_category_header = filterComponentData(component, "product_category_header", lang)
   const products = filterComponentData(component, "products", lang)
+  const therapeutic_class_header = filterComponentData(component, "therapeutic_class_header", lang)
+  const therapeutic_class = filterComponentData(component, "therapeutic_class", lang)
+
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -35,11 +38,10 @@ const Products_therapeutic = (props) => {
   const [selectedClass, setSelectedClass] = useState("all");
 
   let [obj, setObj] = useState(ByTherapeutic);
-
   let filterClass =
     selectedClass == "all"
       ? obj
-      : obj?.filter((item) => item?.theraputic_class === selectedClass);
+      : obj?.filter((item) => item?.therapeutic_class?.toLowerCase() == selectedClass?.toLowerCase());
 
 
   useEffect(() => {
@@ -205,7 +207,7 @@ const Products_therapeutic = (props) => {
                     color: "#fff",
                   }}
                 >
-                  Therapeutic Class
+                  {therapeutic_class_header?.title ? therapeutic_class_header?.title : "Therapeutic Class"}
                 </label>
               </div>
               <div className="productFilterContent1">
@@ -217,35 +219,44 @@ const Products_therapeutic = (props) => {
                   }}
                   value={selectedClass}
                 >
-                  <option disabled selected>
-                    Select ..
-                  </option>
-                  <option value="all">All</option>
-                  <option value="antibiotic">Antibiotic</option>
-                  <option value="anthelmentics">Anthelmentics</option>
-                  <option value="anti-histamine">Anti-histamine</option>
-                  <option value="anti-ulcerant">Anti-ulcerant</option>
-                  <option value="anti-diabetic">Anti-diabetic</option>
-                  <option value="anti-fungal">Anti-fungal</option>
-                  <option value="anti-parasitic">Anti-parasitic</option>
-                  <option value="anti-viral">Anti-viral</option>
-                  <option value="anti-spasmodic">Anti-spasmodic agent</option>
-                  <option value="anti-neuropathic">Anti-neuropathic Agent</option>
-                  <option value="antidepressant">
-                    Antidepressant & Anxiolytic
-                  </option>
-                  <option value="cardiovascular">Cardiovascular Drug</option>
-                  <option value="gastroprokinetic">Gastroprokinetic Agent</option>
-                  <option value="leukotrine">
-                    Leukotrine receptor antagonist
-                  </option>
-                  <option value="mucolytic">Mucolytic Agent</option>
-                  <option value="pde">PDE inhibitors</option>
-                  <option value="nsaids">NSAIDs</option>
-                  <option value="hand-sanitizer">
-                    Hand Sanitizer & Anticeptic Agent
-                  </option>
-                  <option value="vitamin">Vitamin & Minerals</option>
+                  {
+                    therapeutic_class?.length < 1 ?
+                      <>
+                        <option disabled selected>
+                          Select ..
+                        </option>
+                        <option value="all">All</option>
+                        <option value="antibiotic">Antibiotic</option>
+                        <option value="anthelmentics">Anthelmentics</option>
+                        <option value="anti-histamine">Anti-histamine</option>
+                        <option value="anti-ulcerant">Anti-ulcerant</option>
+                        <option value="anti-diabetic">Anti-diabetic</option>
+                        <option value="anti-fungal">Anti-fungal</option>
+                        <option value="anti-parasitic">Anti-parasitic</option>
+                        <option value="anti-viral">Anti-viral</option>
+                        <option value="anti-spasmodic">Anti-spasmodic agent</option>
+                        <option value="anti-neuropathic">Anti-neuropathic Agent</option>
+                        <option value="antidepressant">
+                          Antidepressant & Anxiolytic
+                        </option>
+                        <option value="cardiovascular">Cardiovascular Drug</option>
+                        <option value="gastroprokinetic">Gastroprokinetic Agent</option>
+                        <option value="leukotrine">
+                          Leukotrine receptor antagonist
+                        </option>
+                        <option value="mucolytic">Mucolytic Agent</option>
+                        <option value="pde">PDE inhibitors</option>
+                        <option value="nsaids">NSAIDs</option>
+                        <option value="hand-sanitizer">
+                          Hand Sanitizer & Anticeptic Agent
+                        </option>
+                        <option value="vitamin">Vitamin & Minerals</option></> : therapeutic_class?.map((item) => (
+                          <option className="text-capitalize" value={item?.name}>
+                            {item?.name}
+                          </option>
+                        ))
+                  }
+
                 </select>
               </div>
 
@@ -365,7 +376,7 @@ const Products_therapeutic = (props) => {
             </div>
 
             <div className="row ">
-              {products?.length < 1 ? displayUsers : obj?.slice(pageVisited, pageVisited + perPage)
+              {products?.length < 1 ? displayUsers : filterClass?.slice(pageVisited, pageVisited + perPage)
                 .map((ob, index) => (
                   <React.Fragment key={index}>
                     <>
@@ -410,3 +421,4 @@ const Products_therapeutic = (props) => {
 };
 
 export default Products_therapeutic;
+

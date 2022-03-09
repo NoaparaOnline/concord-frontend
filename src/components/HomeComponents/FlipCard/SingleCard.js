@@ -21,7 +21,6 @@ const SingleCard = (props) => {
 
   const proname = getFirstWord(card?.name ? card?.name : title);
 
-  console.log(card,"Testing")
 
   return (
     <div>
