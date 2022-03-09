@@ -247,7 +247,8 @@ const Products_bygeneric = (props) => {
                           onChange={() => filteredtype("Hand Rub")}
 
                         />
-                        <label htmlFor="handrub">Hand Rub</label></> : product_categories?.splice(0, product_categories?.length)?.map((item) => (
+                        <label htmlFor="handrub">Hand Rub</label></> 
+                        : product_categories?.splice(0, product_categories?.length)?.map((item) => (
                           <>
                             <label htmlFor={item?.name}>{item?.name}</label>
                             <br />

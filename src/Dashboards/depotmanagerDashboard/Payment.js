@@ -74,7 +74,7 @@ const Payment = ({
   {
     return (
       <>
-      {row.vat_rate*row.subtotal_amount}
+      {(row.vat_rate*row.subtotal_amount).toFixed(2)}
       </>
     )
   }
