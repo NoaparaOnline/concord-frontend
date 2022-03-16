@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { Navbar, Footer, FixedRight } from "./components";
@@ -53,17 +53,26 @@ import PrivacyAndPolicy from "./Pages/PrivacyAndPolicy";
 import Abouthealthassociates from "./Pages/Abouthealthassociates";
 import MediaEvents from "./Pages/MediaEvents";
 import { isSupported } from "./Utils/functions";
-import { getCmscomponent } from "./Store/Actions/cmsAction";
+import { getCmscomponent, SelectedLanguage } from "./Store/Actions/cmsAction";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
 
   // Get User From Local Storage
   const dispatch = useDispatch();
-
+  const langs = useSelector((state) => state?.cmsReducer?.languages);
+  const lang = useSelector((state) => state?.cmsReducer?.language);
   useEffect(() => {
+
     dispatch(getUser());
-    dispatch(getCmscomponent())
+
+    dispatch(SelectedLanguage("en-US"));
+    dispatch(getCmscomponent());
+    window.onbeforeunload = () => {
+      localStorage.removeItem('lang');
+    }
+  }, [langs]);
+  useEffect(() => {
     if ("serviceWorker" in navigator) {
       navigator?.serviceWorker
         .register("./firebase-messaging-sw.js")

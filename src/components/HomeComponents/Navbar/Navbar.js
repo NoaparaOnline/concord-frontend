@@ -23,21 +23,74 @@ import { ByTherapeutic } from "../ProductsData/productbytheraputic";
 import { FirstTime } from "../ProductsData/productsfirstimelaunch";
 import { useTranslation } from "react-i18next";
 import { readLanguageAction, SelectedLanguage } from "../../../Store/Actions/cmsAction";
+import ReactFlagsSelect from "react-flags-select";
 //
 
 const Navbars = (props) => {
+  const [selected, setSelected] = useState("US");
+
   const { t, i18n } = useTranslation("common");
   const [langtoggle, setLangtoggle] = useState("en");
   const history = useHistory();
   const lang = useSelector((state) => state?.cmsReducer?.languages);
   const selectedLang = useSelector((state) => state?.cmsReducer?.language);
+  const [Local, setLocal] = useState([]);
+  const [customlocal, setCustomlocal] = useState([]);
+  const [customlabel, setCustomlabel] = useState();
 
+  let locvar = localStorage.getItem("lang") === null ? "US" : localStorage.getItem("lang").split('-')[1];
+  console.log(locvar, "locvar");
+  useEffect(() => {
+
+  }, [locvar])
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(SelectedLanguage("en-US"));
     dispatch(readLanguageAction());
   }, [])
 
+
+
+
+  const getids = () => {
+    let localcode = [];
+    let localcodebef = [];
+    lang?.map((item) => {
+
+      const firword = item?.locale;
+      let id = firword.split('-')[1]
+      let id0 = firword.split(id)[0]
+      localcode?.push(id);
+      localcodebef?.push(id0);
+
+    });
+
+    setLocal(localcode)
+    setCustomlocal(localcodebef)
+  }
+
+  const customlabels = () => {
+    let locallabel = {};
+    lang?.map((item) => {
+
+      const firword = item?.locale;
+      let id = firword.split('-')[1]
+      locallabel = {
+        ...locallabel,
+        [id]: item?.name,
+      };
+
+    });
+
+    setCustomlabel(locallabel)
+  }
+
+
+
+  useEffect(() => {
+    getids();
+    customlabels();
+  }, [lang])
 
   const allarray = [ByTherapeutic, FirstTime];
   const AllmergeData = [];
@@ -241,62 +294,21 @@ const Navbars = (props) => {
                     </li>
                   )}
 
-                  <li className="nav-item dropdown disablehover">
-                    <span
-                      className="nav-link firstnav dropdown-toggle"
-                      role="button"
-                      id="dropdownMenuOffset"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      data-bs-offset="10,20"
-                      onClick={() => setLangbtnshow(!langbtnshow)}
-                    >
-                      <img
-                        src={langlogo}
-                        alt="language"
-                        style={{ width: "23px" }}
-                      />
-                    </span>
+                  <ReactFlagsSelect
+                    countries={Local}
+                    selected={locvar}
+                    optionsSize={13}
+                    selectedSize={13}
+                    customLabels={customlabel}
+                    onSelect={(code) => {
+                      console.log(locvar, "locvar");
 
-                    <ul
-                      className={
-                        langbtnshow
-                          ? `dropdown-menu enablehover-menu dropdown-menu-right`
-                          : `disablehover-menu dropdown-menu-right`
-                      }
-                      aria-labelledby="dropdownMenuOffset"
-                      style={{ listStyle: "none", background: "white" }}
-                    >
-                      {
-                        lang?.map((item, idx) => (
-                          <li>
-                            <div
-                              className="dropdown-item conCapitalized "
-                              onClick={() => {
-                                // i18n.changeLanguage("en");
-                                dispatch(SelectedLanguage(item?.locale))
-                              }}
-                            >
-                              <span>
-                                {" "}
-                                <div className="row">
-                                  <div className="col-4 mt-1 ml-1 "> <img
-                                    src={item?.flag}
-                                    alt="english"
-                                    style={{ width: "22px", marginRight: "10px", display: !item?.flag ? 'none' : 'block' }}
-                                  />{" "}</div>
-                                  <div className="col-6 p-0 m-0 d-flex justify-content-start">
-                                    {item?.name ? item?.name : t('header.english_text')}
-                                  </div>
-                                </div>
-
-                              </span>
-                            </div>
-                          </li>
-                        ))
-                      }
-                    </ul>
-                  </li>
+                      localStorage.removeItem("lang");
+                      dispatch(SelectedLanguage(lang.filter((item) => item?.locale.includes(code))[0]?.locale));
+                      localStorage.setItem("lang", lang.filter((item) => item?.locale.includes(code))[0]?.locale)
+                      setSelected(code)
+                    }}
+                  />
                 </ul>
               </div>
 

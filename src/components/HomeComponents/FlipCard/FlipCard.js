@@ -11,10 +11,13 @@ const FlipCard = (props) => {
     return words[0].toLowerCase();
   };
   useEffect(() => {
-    let imgs = []
-    imgs.push({ imgf: card?.imgf ? card?.imgf : card?.image, imge: card?.imge ? card?.imge : card?.flipedimage })
+    if(props?.api){
 
-    card["img"] = imgs
+      let imgs = []
+      imgs.push({ imgf: card?.imgf ? card?.imgf : card?.image, imge: card?.imge ? card?.imge : card?.flipedimage })
+  
+      card["img"] = imgs
+    }
     settoggle(false)
 
   }, [])
@@ -68,7 +71,7 @@ const FlipCard = (props) => {
                     </>
                   );
                 }) : <img
-                  src={card?.image}
+                  src={card?.imge}
                   className="card-img-top p-3"
                   height="100%"
                   width="100%"
@@ -136,7 +139,7 @@ const FlipCard = (props) => {
                     </>
                   );
                 }) : <img
-                  src={card?.flipedimage}
+                  src={card?.imgf}
                   className="card-img-top p-3"
                   height="100%"
                   width="100%"

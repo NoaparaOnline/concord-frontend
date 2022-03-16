@@ -12,6 +12,8 @@ const Facilities_researchdevrsttime = () => {
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
   const facilities_research_and_developmen = filterComponentData(component, "facilities_research_and_development", lang)
+  const company_logs = filterComponentData(component, "company_logs", lang)
+
   // const facilities_production = filterComponentData(component, "facilities_production", lang)
   // const facilities_quality_control = filterComponentData(component, "facilities_quality_control", lang)
 
@@ -71,7 +73,7 @@ const Facilities_researchdevrsttime = () => {
           </div>
         </div>
       </div>
-      <CompanyLogos />
+      <CompanyLogos company_logs={company_logs}/>
     </>
   );
 };

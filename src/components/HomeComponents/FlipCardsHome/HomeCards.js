@@ -18,10 +18,10 @@ const HomeCards = ({ props, product }) => {
                     : `col-xxl-2 col-xl-4 col-lg-4  d-none d-lg-block d-md-none  custome-card-test mb-4`
                 }
               >
-                <FlipCard card={ob} {...props} />
+                <FlipCard card={ob} {...props} api={false}/>
               </div>
               <div className="custome_xs_screen  d-lg-none d-sm-block col-md-6 col-sm-12 col-xs-12  custome-card-test mb-4">
-                <SingleCard card={ob} {...props} />
+                <SingleCard card={ob} {...props} api={false}/>
               </div>
             </React.Fragment>
           ))}
@@ -37,10 +37,10 @@ const HomeCards = ({ props, product }) => {
                       : `col-xxl-2 col-xl-4 col-lg-4  d-none d-lg-block d-md-none  custome-card-test mb-4`
                   }
                 >
-                  <FlipCard card={item} {...props} />
+                  <FlipCard card={item} {...props} api={true}/>
                 </div>
                 <div className="custome_xs_screen  d-lg-none d-sm-block col-md-6 col-sm-12 col-xs-12  custome-card-test mb-4">
-                  <SingleCard card={item} {...props} />
+                  <SingleCard card={item} {...props} api={true}/>
                 </div>
               </React.Fragment>
             ))

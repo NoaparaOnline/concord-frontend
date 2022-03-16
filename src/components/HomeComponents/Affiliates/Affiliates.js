@@ -105,7 +105,7 @@ const Affiliates = ({ afliates }) => {
                       marginTop: 10,
                       width: 130,
                     }}
-                    className="navactive  rounded-pill mx-2 px-2 "
+                    className=" btncolrhov rounded-pill mx-2 px-2 "
                   >
                     <span>{item?.name?.toUpperCase()}</span>
                   </button>
