@@ -34,7 +34,6 @@ const Products_bytrade = (props) => {
   ];
 
   const [obj, setObj] = useState(products?.length < 1 ? ByTherapeutic : products);
-  console.log(JSON.stringify(ByTherapeutic));
 
   const filteredtype = (type) => {
     console.log(type, "type");
