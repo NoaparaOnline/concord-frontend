@@ -27,8 +27,6 @@ const ProductallDetails = (props) => {
   //   id === item?.id ? productdata.push(item) : ""
   // );
 
-  console.log(ByTherapeutic, "Testing Data")
-  console.log(id, "Testing Data id")
 
   const productdata = ByTherapeutic?.filter((item) => (
     item?.id === Number(id) ? item : null
@@ -38,8 +36,6 @@ const ProductallDetails = (props) => {
 
   const viewData = props?.location?.state?.data ? props?.location?.state?.data : productdata[0];
 
-
-  console.log(viewData, "Testing ViewData")
 
 
   const LinksBan = [
@@ -238,7 +234,7 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-front d-flex justify-content-center align-items-center">
                     <div className="card " style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imgf) : viewData?.imgf} width="100%" height="100%" />
+                        <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imgf) : viewData?.image} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -246,7 +242,7 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-back d-flex justify-content-center align-items-center">
                     <div className="card" style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imge) : viewData?.imge} width="100%" height="100%" />
+                        <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imge) : viewData?.flipedimage} width="100%" height="100%" />
                       </div>
                     </div>
                   </div>
@@ -412,7 +408,7 @@ const ProductallDetails = (props) => {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <div className="allborder d-flex justify-content-center align-items-center">
-            <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imgf) : viewData?.imgf} />
+            <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imgf) : viewData?.image} />
           </div>
         </Modal.Body>
       </Modal>
@@ -423,3 +419,4 @@ const ProductallDetails = (props) => {
 };
 
 export default ProductallDetails;
+// style='font-size: 20px; color: rgb(35, 35, 35); font-weight: 600;'

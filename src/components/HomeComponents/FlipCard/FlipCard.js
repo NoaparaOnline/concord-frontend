@@ -4,19 +4,20 @@ import "./FlipCard.css";
 const FlipCard = (props) => {
   const [toggle, settoggle] = useState(true)
   const { card } = props;
-  console.log(card,"card");
   const { title, text1, text2, btn, innerComposition, id } = card;
   const currentpath = props?.location?.pathname;
+  console.log(card, "card");
   const getFirstWord = (string) => {
+
     const words = string.split(" ");
     return words[0].toLowerCase();
   };
-  useEffect(() => {
-    if(props?.api){
 
+  useEffect(() => {
+    if (props?.api) {
       let imgs = []
       imgs.push({ imgf: card?.imgf ? card?.imgf : card?.image, imge: card?.imge ? card?.imge : card?.flipedimage })
-  
+
       card["img"] = imgs
     }
     settoggle(false)
@@ -45,7 +46,7 @@ const FlipCard = (props) => {
                     className="card-title front-text text-white"
                     style={{ fontSize: "14px", fontWeight: "400" }}
                   >
-                    {card?.name ? card?.name : text1}
+                    {card?.name ? card?.name : text1 != " " ? text1 : title}
                   </h6>
                   <h6
                     className="card-title front-text text-white"
@@ -113,7 +114,7 @@ const FlipCard = (props) => {
                     className="card-title front-text text-white"
                     style={{ fontSize: "14px", fontWeight: "400" }}
                   >
-                    {card?.name ? card?.name : text1}
+                    {card?.name ? card?.name : text1 != " " ? text1 : title}
                   </h6>
                   <h6
                     className="card-title front-text text-white"

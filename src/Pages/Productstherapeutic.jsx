@@ -36,8 +36,8 @@ const Products_therapeutic = (props) => {
   ];
 
   const [selectedClass, setSelectedClass] = useState("all");
-
   let [obj, setObj] = useState(ByTherapeutic);
+
   let filterClass =
     selectedClass == "all"
       ? obj
@@ -46,7 +46,7 @@ const Products_therapeutic = (props) => {
 
   useEffect(() => {
     setObj(products?.length < 1 ? ByTherapeutic : products)
-  }, [products])
+  }, [products?.length])
 
   const filteredtype = (type) => {
     console.log(type, "type");
