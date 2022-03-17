@@ -34,7 +34,7 @@ const Products_bygeneric = (props) => {
   const [obj, setObj] = useState(ByTherapeutic);
   useEffect(() => {
     setObj(products?.length < 1 ? ByTherapeutic : products)
-  }, [products])
+  }, [products?.length])
 
   const filteredtype = (type) => {
     console.log(type, "type");

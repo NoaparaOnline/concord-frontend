@@ -5,7 +5,6 @@ const SingleCard = (props) => {
   const { card } = props;
   const { title, text1, text2, btn, innerComposition, id } = card;
   const currentpath = props?.location?.pathname;
-
   const getFirstWord = (string) => {
     const words = string.split(" ");
     return words[0].toLowerCase();
@@ -35,7 +34,7 @@ const SingleCard = (props) => {
             <h6 className="card-title text-white">{card?.name ? card?.name : text1}</h6>
             <h6 className="card-title text-white">{card?.subtitle ? card?.subtitle : text2}</h6>
           </div>
-          <img src={props?.api ? card?.image : card?.imgf} className="card-img-top p-3" height="100%"
+          <img src={props?.api ? card?.image : card?.img ? card?.img[0]?.imgf : card?.imgf} className="card-img-top p-3" height="100%"
             width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} />
           {/* {card?.img?.length < 1 ? <img src={imgf} className="card-img-top p-3" height="100%"
             width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} /> : card?.img?.map((ob, index) => {

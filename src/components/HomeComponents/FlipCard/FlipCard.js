@@ -11,12 +11,12 @@ const FlipCard = (props) => {
     const words = string.split(" ");
     return words[0].toLowerCase();
   };
-  useEffect(() => {
-    if(props?.api){
 
+  useEffect(() => {
+    if (props?.api) {
       let imgs = []
       imgs.push({ imgf: card?.imgf ? card?.imgf : card?.image, imge: card?.imge ? card?.imge : card?.flipedimage })
-  
+
       card["img"] = imgs
     }
     settoggle(false)

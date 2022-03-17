@@ -39,13 +39,13 @@ const Navbars = (props) => {
   const [customlabel, setCustomlabel] = useState();
 
   let locvar = localStorage.getItem("lang") === null ? "US" : localStorage.getItem("lang").split('-')[1];
-  console.log(locvar, "locvar");
+
   useEffect(() => {
 
   }, [locvar])
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(SelectedLanguage("en-US"));
+    // dispatch(SelectedLanguage("en-US"));
     dispatch(readLanguageAction());
   }, [])
 

@@ -65,14 +65,15 @@ function App() {
   useEffect(() => {
 
     dispatch(getUser());
-
-    dispatch(SelectedLanguage("en-US"));
+    // dispatch(SelectedLanguage("en-US"));
     dispatch(getCmscomponent());
-    window.onbeforeunload = () => {
-      localStorage.removeItem('lang');
-    }
+    // window.onbeforeunload = () => {
+    //   localStorage.removeItem('lang');
+    // }
   }, [langs]);
   useEffect(() => {
+    localStorage.setItem("lang", "en-US")
+
     if ("serviceWorker" in navigator) {
       navigator?.serviceWorker
         .register("./firebase-messaging-sw.js")

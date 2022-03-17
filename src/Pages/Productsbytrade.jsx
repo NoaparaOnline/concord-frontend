@@ -37,9 +37,6 @@ const Products_bytrade = (props) => {
 
   const [obj, setObj] = useState(products?.length < 1 ? ByTherapeutic : products);
 
-  useEffect(() => {
-    setObj(products?.length < 1 ? ByTherapeutic : products)
-  }, [products])
 
   const filteredtype = (type) => {
     console.log(type, "type");
@@ -51,21 +48,21 @@ const Products_bytrade = (props) => {
       }
       else if (type == "Syrup") {
         const filterd = ByTherapeutic.filter(category =>
-          category.type === "Syrup")
+          category.type == "Syrup")
         setObj(filterd);
         setPageNumber(0);
 
       }
       else if (type == "Tablet") {
         const filterd = ByTherapeutic.filter(category =>
-          category.type === "Tablet")
+          category.type == "Tablet")
         setObj(filterd);
         setPageNumber(0);
 
       }
       else if (type == "Capsule") {
         const filterd = ByTherapeutic.filter(category =>
-          category.type === "Capsule")
+          category.type == "Capsule")
         setObj(filterd);
         setPageNumber(0);
 
@@ -131,23 +128,25 @@ const Products_bytrade = (props) => {
     }
 
   }
-
+  useEffect(() => {
+    setObj(products?.length < 1 ? ByTherapeutic : products)
+  }, [products?.length])
   const [selected, setSelected] = useState('5');
 
   const [pageNumber, setPageNumber] = useState(0)
   const perPage = selected;
   const pageVisited = pageNumber * perPage;
 
-  const displayUsers =  obj
+  const displayUsers = obj
     .slice(pageVisited, pageVisited + perPage)
     .map((ob, index) => (
       <React.Fragment key={index}>
         <>
           <div className="col-lg-4 d-none d-lg-block d-md-none">
-            <FlipCard card={ob} {...props} api={false}/>
+            <FlipCard card={ob} {...props} api={false} />
           </div>
           <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
-            <SingleCard card={ob} {...props} api={false}/>
+            <SingleCard card={ob} {...props} api={false} />
           </div>
 
         </>
@@ -324,10 +323,10 @@ const Products_bytrade = (props) => {
                     <React.Fragment key={index}>
                       <>
                         <div className="col-lg-4 d-none d-lg-block d-md-none">
-                          <FlipCard card={ob} {...props} api={true}/>
+                          <FlipCard card={ob} {...props} api={true} />
                         </div>
                         <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
-                          <SingleCard card={ob} {...props} api={true}/>
+                          <SingleCard card={ob} {...props} api={true} />
                         </div>
 
                       </>
