@@ -92,7 +92,7 @@ const Aboutchairmenprofile = () => {
                         lineHeight: '30px',
                         color: '#666666'
                       }} className="text-justify ">
-                        {t('about_chairmen_profile.desc_1_text')} <strong> {t('about_chairmen_profile.desc_2_text')}</strong>, Bangladesh. Noapara Group is a Bangladeshi owned company
+                        {t('about_chairmen_profile.desc_1_text')} <strong> {t('about_chairmen_profile.desc_2_text')}</strong>
                         {t('about_chairmen_profile.desc_3_text')}
                       </div>
                       <div style={{

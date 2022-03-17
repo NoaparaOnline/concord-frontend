@@ -18,7 +18,6 @@ const Facilities = () => {
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
   const facilities_cards = filterComponentData(component, "facilities_cards", lang)
-  console.log(facilities_cards);
   const { t } = useTranslation('common')
   // Zoomcards Map Data
   const facilitiescard = [

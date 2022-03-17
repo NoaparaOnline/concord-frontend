@@ -138,16 +138,16 @@ const Products_bytrade = (props) => {
   const perPage = selected;
   const pageVisited = pageNumber * perPage;
 
-  const displayUsers = products?.length < 1 ? products : obj
+  const displayUsers =  obj
     .slice(pageVisited, pageVisited + perPage)
     .map((ob, index) => (
       <React.Fragment key={index}>
         <>
           <div className="col-lg-4 d-none d-lg-block d-md-none">
-            <FlipCard card={ob} {...props} />
+            <FlipCard card={ob} {...props} api={false}/>
           </div>
           <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
-            <SingleCard card={ob} {...props} />
+            <SingleCard card={ob} {...props} api={false}/>
           </div>
 
         </>
@@ -324,10 +324,10 @@ const Products_bytrade = (props) => {
                     <React.Fragment key={index}>
                       <>
                         <div className="col-lg-4 d-none d-lg-block d-md-none">
-                          <FlipCard card={ob} {...props} />
+                          <FlipCard card={ob} {...props} api={true}/>
                         </div>
                         <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
-                          <SingleCard card={ob} {...props} />
+                          <SingleCard card={ob} {...props} api={true}/>
                         </div>
 
                       </>

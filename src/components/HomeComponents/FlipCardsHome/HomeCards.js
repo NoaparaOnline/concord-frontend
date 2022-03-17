@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { FlipCard } from "../../../components";
 import SingleCard from "../FlipCard/SingleCard";
+import SingleCardHome from "../FlipCard/SingleCardHome";
 import card from "./CardData";
 import "./HomeCards.css";
 const HomeCards = ({ props, product }) => {
@@ -18,10 +19,10 @@ const HomeCards = ({ props, product }) => {
                     : `col-xxl-2 col-xl-4 col-lg-4  d-none d-lg-block d-md-none  custome-card-test mb-4`
                 }
               >
-                <FlipCard card={ob} {...props} />
+                <FlipCard card={ob} {...props} api={false}/>
               </div>
               <div className="custome_xs_screen  d-lg-none d-sm-block col-md-6 col-sm-12 col-xs-12  custome-card-test mb-4">
-                <SingleCard card={ob} {...props} />
+                <SingleCardHome card={ob} {...props} api={false}/>
               </div>
             </React.Fragment>
           ))}
@@ -37,10 +38,10 @@ const HomeCards = ({ props, product }) => {
                       : `col-xxl-2 col-xl-4 col-lg-4  d-none d-lg-block d-md-none  custome-card-test mb-4`
                   }
                 >
-                  <FlipCard card={item} {...props} />
+                  <FlipCard card={item} {...props} api={true}/>
                 </div>
                 <div className="custome_xs_screen  d-lg-none d-sm-block col-md-6 col-sm-12 col-xs-12  custome-card-test mb-4">
-                  <SingleCard card={item} {...props} />
+                  <SingleCardHome card={item} {...props} api={true}/>
                 </div>
               </React.Fragment>
             ))

@@ -11,6 +11,8 @@ const Facilities_quality = () => {
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
   const facilities_quality_control = filterComponentData(component, "facilities_quality_control", lang)
+  const company_logs = filterComponentData(component, "company_logs", lang)
+
   const { t } = useTranslation('common')
   const LinksBan = [
     {
@@ -96,7 +98,7 @@ const Facilities_quality = () => {
         </div>
       </div>
 
-      <CompanyLogos />
+      <CompanyLogos company_logs={company_logs}/>
     </>
   );
 };

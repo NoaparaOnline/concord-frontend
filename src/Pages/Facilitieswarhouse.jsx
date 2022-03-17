@@ -8,9 +8,12 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { filterComponentData } from "../Utils/functions";
 const Facilities_warhouse = () => {
+
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
   const facilities_warehouse = filterComponentData(component, "facilities_warehouse", lang)
+  const company_logs = filterComponentData(component, "company_logs", lang)
+
   const { t } = useTranslation('common')
   const LinksBan = [
     {
@@ -56,9 +59,11 @@ const Facilities_warhouse = () => {
 
           <div className="col-sm-12 col-lg-7">
             {
-              facilities_warehouse?.desc ? <div
+              facilities_warehouse?.desc ? <><div
                 style={{ padding: "10px", lineHeight: "1.7em", fontSize: "17px" }}
-              >{facilities_warehouse?.desc}</div> : <div
+              >{facilities_warehouse?.desc?.split("<br />")[0]}</div><div
+              style={{ padding: "10px", lineHeight: "1.7em", fontSize: "17px" }}
+            >{facilities_warehouse?.desc?.split("<br />")[1]}</div></> : <div
                 style={{ padding: "10px", lineHeight: "1.7em", fontSize: "17px" }}
               >
                 {t('facilities_warehouse.desc_text_1')}
@@ -72,7 +77,7 @@ const Facilities_warhouse = () => {
         </div>
       </div>
 
-      <CompanyLogos />
+      <CompanyLogos company_logs={company_logs}/>
     </>
   );
 };

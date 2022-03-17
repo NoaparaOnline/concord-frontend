@@ -12,6 +12,8 @@ const Facilities_product = () => {
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
   const facilities_production = filterComponentData(component, "facilities_production", lang)
+  const company_logs = filterComponentData(component, "company_logs", lang)
+
   const { t } = useTranslation('common')
   // BannerWithText Wale Ki Links Ka Object
   const LinksBan = [
@@ -54,10 +56,17 @@ const Facilities_product = () => {
 
           <div className="col-sm-12 col-lg-7">
             {
-              facilities_production?.desc ? <div style={{ padding: '10px', lineHeight: '1.7em', fontSize: '17px' }}>
-                {facilities_production?.desc}
+              facilities_production?.desc ? <><div style={{ padding: '10px', lineHeight: '1.7em', fontSize: '17px' }}>
+                {facilities_production?.desc?.split("<br />")[0]}
 
-              </div> :
+              </div><div style={{ padding: '10px', lineHeight: '1.7em', fontSize: '17px' }}>
+                {facilities_production?.desc?.split("<br />")[1]}
+
+              </div>
+              <div style={{ padding: '10px', lineHeight: '1.7em', fontSize: '17px' }}>
+                {facilities_production?.desc?.split("<br />")[2]}
+
+              </div></> :
                 <div style={{ padding: '10px', lineHeight: '1.7em', fontSize: '17px' }}>
                   {t('facilities_product.banner_with_text.desc_1')}<br /><br />
                   {t('facilities_product.banner_with_text.desc_2')}<br /><br />
@@ -69,7 +78,7 @@ const Facilities_product = () => {
         </div>
       </div>
 
-      <CompanyLogos />
+      <CompanyLogos company_logs={company_logs}/>
 
     </>
   )

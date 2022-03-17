@@ -55,6 +55,7 @@ export default function MediaEvents(props) {
     const event3 = imagesData3?.slice(0, 6)
 
     const moreImages = (text) => {
+        console.log(text, "text");
         props?.history.push('/photo', text)
     }
     return (
@@ -95,7 +96,7 @@ export default function MediaEvents(props) {
                                     })}
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <Button className='' onClick={() => moreImages("Annualconfirence2013")}>{t('media_events.view_more_text')}</Button>
+                                    <Button className='' onClick={() => moreImages("AnnualConfrence2013")}>{t('media_events.view_more_text')}</Button>
                                 </div>
 
                             </div>
@@ -116,7 +117,7 @@ export default function MediaEvents(props) {
                                     })}
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <Button className='' onClick={() => moreImages("Annualconfirence2014")}>{t('media_events.view_more_text')}</Button>
+                                    <Button className='' onClick={() => moreImages("AnnualConfrence2014")}>{t('media_events.view_more_text')}</Button>
                                 </div>
                             </div>
 
@@ -139,7 +140,7 @@ export default function MediaEvents(props) {
                                     })}
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <Button className='' onClick={() => moreImages("Dapazinelunchingprogram")}>{t('media_events.view_more_text')}   </Button>
+                                    <Button className='' onClick={() => moreImages("DapazineLunchingProgram")}>{t('media_events.view_more_text')}   </Button>
                                 </div>
                             </div>
 

@@ -112,7 +112,6 @@ import { useTranslation } from "react-i18next";
 const Media_photo = (props) => {
   const { t } = useTranslation('common')
   const eventName = props?.location?.state?.replaceAll(' ', '');
-
   const LinksBan = [
     {
       subLinkName: t('media_photo.home_text'),
@@ -142,7 +141,7 @@ const Media_photo = (props) => {
   }
 
   const images = importAll(
-    eventName === 'AnnualConfrence2014' ?
+    eventName == 'AnnualConfrence2014' ?
       require.context(`../Statics/assets/Annualconfirence2014`, false, /\.(png|jpe?g|svg|JPG)$/) : eventName == 'AnnualConfrence2013' ? require.context(`../Statics/assets/Annualconfirence2013`, false, /\.(png|jpe?g|svg|JPG)$/) : eventName == 'DapazineLunchingProgram' ? require.context(`../Statics/assets/Dapazinelunchingprogram`, false, /\.(png|jpe?g|svg|JPG)$/) : null
   );
 
