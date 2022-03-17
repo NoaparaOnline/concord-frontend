@@ -35,7 +35,6 @@ const ProductallDetails = (props) => {
 
 
   const viewData = props?.location?.state?.data ? props?.location?.state?.data : productdata[0];
-  console.log(viewData, "viewData");
 
 
 
