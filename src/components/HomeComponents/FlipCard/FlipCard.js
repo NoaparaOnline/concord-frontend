@@ -4,6 +4,7 @@ import "./FlipCard.css";
 const FlipCard = (props) => {
   const [toggle, settoggle] = useState(true)
   const { card } = props;
+  console.log(card,"card");
   const { title, text1, text2, btn, innerComposition, id } = card;
   const currentpath = props?.location?.pathname;
   const getFirstWord = (string) => {
@@ -71,7 +72,7 @@ const FlipCard = (props) => {
                     </>
                   );
                 }) : <img
-                  src={card?.imge}
+                  src={card?.imge ? card?.imge : card?.image}
                   className="card-img-top p-3"
                   height="100%"
                   width="100%"
@@ -139,7 +140,7 @@ const FlipCard = (props) => {
                     </>
                   );
                 }) : <img
-                  src={card?.imgf}
+                  src={card?.imgf ? card?.imgf : card?.flipedimage}
                   className="card-img-top p-3"
                   height="100%"
                   width="100%"

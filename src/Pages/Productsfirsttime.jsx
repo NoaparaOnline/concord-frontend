@@ -63,11 +63,11 @@ const Products_firsttime = (props) => {
                  <SingleCard card={ob} {...props} />
                </div> */}
                   <div className="col-lg-3 d-none d-lg-block d-md-none">
-                    <FlipCard card={ob} {...props} />
+                    <FlipCard card={ob} {...props} api={false}/>
                   </div>
 
                   <div className="col-lg-3 d-lg-none d-sm-block col-md-6">
-                    <SingleCard card={ob} {...props} />
+                    <SingleCard card={ob} {...props} api={false}/>
                   </div>
                   {/* <div  className={index===0 || index===5 || index===9 ? `col-lg-2 offset-1 d-none d-lg-block d-md-none col-md-4 mt-3  col-sm-12 custome-card-test`:`col-lg-2 d-none d-lg-block d-md-none col-md-4 mt-3   col-sm-12 custome-card-test`}>
                  <FlipCard card={ob} {...props} />
@@ -87,11 +87,11 @@ const Products_firsttime = (props) => {
                  <SingleCard card={ob} {...props} />
                </div> */}
                   <div className="col-lg-3 d-none d-lg-block d-md-none">
-                    <FlipCard card={ob} {...props} />
+                    <FlipCard card={ob} {...props} api={true}/>
                   </div>
 
                   <div className="col-lg-3 d-lg-none d-sm-block col-md-6">
-                    <SingleCard card={ob} {...props} />
+                    <SingleCard card={ob} {...props} api={true}/>
                   </div>
                   {/* <div  className={index===0 || index===5 || index===9 ? `col-lg-2 offset-1 d-none d-lg-block d-md-none col-md-4 mt-3  col-sm-12 custome-card-test`:`col-lg-2 d-none d-lg-block d-md-none col-md-4 mt-3   col-sm-12 custome-card-test`}>
                  <FlipCard card={ob} {...props} />
