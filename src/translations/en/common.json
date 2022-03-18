@@ -685,7 +685,7 @@
          "order_date_time":"Order Date/Time",
          "payment_type":"Payment Type",
          "delivery_status":"Delivery Status",
-         "approved_by":"Approved By",
+         "approved_by":"Approval Status",
          "payment_status":"Payment Status",
          "proceed_by":"Proceed By",
          "actions_text":"Actions",

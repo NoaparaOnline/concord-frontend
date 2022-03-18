@@ -277,7 +277,7 @@ const PrescriptionReport = () => {
 
                                                     </td>
 
-                                                    {item?.prescription?.map((item_) => <td>{item_}</td>)}
+                                                    {item?.prescription?.map((item_) => <td>{item_?.length}</td>)}
                                                     <td>{item?.sum}</td>
                                                 </tr>
                                             )
