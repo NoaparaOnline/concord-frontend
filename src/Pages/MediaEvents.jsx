@@ -55,7 +55,6 @@ export default function MediaEvents(props) {
     const event3 = imagesData3?.slice(0, 6)
 
     const moreImages = (text) => {
-        console.log(text, "text");
         props?.history.push('/photo', text)
     }
     return (

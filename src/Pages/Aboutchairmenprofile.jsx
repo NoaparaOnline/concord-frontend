@@ -12,7 +12,6 @@ const Aboutchairmenprofile = () => {
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
   const chairman_profile = filterComponentData(component, "chairman_profile", lang)
-  console.log(chairman_profile, "chairman_profile");
   const { t } = useTranslation('common')
   const DirectorInfo = {
     name: t('about_chairmen_profile.director_info_name'),

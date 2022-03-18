@@ -3,7 +3,6 @@ import "./ZoominCards.css";
 import { Link } from 'react-router-dom'
 
 const ZoominCards = ({ abcard, html }) => {
-  console.log(abcard?.image,"abcard");
   return (
     <>
 

@@ -128,7 +128,6 @@ const Media_photo = (props) => {
   //import All images from Client folder from static/images/clients
   // Note to add any image in client slider add image in client folder and be cautious for image size
   function importAll(data) {
-    console.log(data, "data");
     if (data?.length < 1) {
       return;
     }

@@ -2,7 +2,6 @@ import React from 'react'
 import Heading from '../Heading/Heading'
 import './Milestones.css'
 const Milestones = ({ heading, milestone_data, button, colorclass }) => {
-    console.log(heading,"");
 
     return (
         <div className={colorclass}>

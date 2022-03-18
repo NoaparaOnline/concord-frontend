@@ -301,7 +301,6 @@ const Navbars = (props) => {
                     selectedSize={13}
                     customLabels={customlabel}
                     onSelect={(code) => {
-                      console.log(locvar, "locvar");
 
                       localStorage.removeItem("lang");
                       dispatch(SelectedLanguage(lang.filter((item) => item?.locale.includes(code))[0]?.locale));
