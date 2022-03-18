@@ -171,7 +171,6 @@ const NearestDeliveryCenter = ({ heading, nearest_delivery_center, nearest_deliv
       if (filtererd.length > 0) {
         setOb(filtererd[0]);
       }
-      console.log(filtererd, "filtererd");
     } else {
       const filtererd = cards?.filter(
         (item) => item.id == Number(event.target.value)

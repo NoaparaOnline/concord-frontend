@@ -49,7 +49,6 @@ const Products_therapeutic = (props) => {
   }, [products?.length])
 
   const filteredtype = (type) => {
-    console.log(type, "type");
     if (products?.length < 1) {
       if (type == "All") {
         setObj(ByTherapeutic)

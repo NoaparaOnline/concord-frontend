@@ -6,7 +6,6 @@ const FlipCard = (props) => {
   const { card } = props;
   const { title, text1, text2, btn, innerComposition, id } = card;
   const currentpath = props?.location?.pathname;
-  console.log(card, "card");
   const getFirstWord = (string) => {
 
     const words = string.split(" ");

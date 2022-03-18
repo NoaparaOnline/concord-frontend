@@ -16,7 +16,6 @@ const Media_socialmedia = () => {
   const media_latest_post_heading = filterComponentData(component, "media_latest_post_heading", lang)
 
 
-  console.log(social_media_post, "social_media_post");
   const { t } = useTranslation('common')
   const LinksBan = [
     {

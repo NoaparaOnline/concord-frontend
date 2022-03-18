@@ -19,7 +19,6 @@ const About = () => {
   const about_us = filterComponentData(component, "about_us_cards", lang)
   const about_us_heading = filterComponentData(component, "about_us_heading", lang)
   const { t } = useTranslation("common")
-  console.log(about_us, "about_us");
   // Zoomcards Map Data
   const aboutcard = [
     {

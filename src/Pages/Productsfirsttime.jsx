@@ -13,7 +13,6 @@ const Products_firsttime = (props) => {
   const lang = useSelector((state) => state?.cmsReducer?.language);
 
   const products = filterComponentData(component, "product_first_time_lanching", lang)
-  console.log(products, "products");
   const LinksBan = [
     {
       subLinkName: "Home",

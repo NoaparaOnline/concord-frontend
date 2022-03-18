@@ -19,7 +19,6 @@ const Products_bytrade = (props) => {
   const product_categories = filterComponentData(component, "product_categories", lang)
   const product_category_header = filterComponentData(component, "product_category_header", lang)
   const products = filterComponentData(component, "products", lang)
-
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -36,7 +35,6 @@ const Products_bytrade = (props) => {
   const [obj, setObj] = useState(products?.length < 1 ? ByTherapeutic : products);
 
   const filteredtype = (type) => {
-    console.log(type, "type");
     if (products?.length < 1) {
       if (type == "All") {
         setObj(ByTherapeutic)
@@ -125,7 +123,7 @@ const Products_bytrade = (props) => {
     }
 
   }
- 
+
   useEffect(() => {
 
     setObj(products?.length < 1 ? ByTherapeutic : products)
