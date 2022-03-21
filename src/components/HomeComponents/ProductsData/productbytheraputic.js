@@ -256,8 +256,8 @@ export const ByTherapeutic = [
     title: "Acedol Tablet",
     value: "acedol tablet",
     therapeutic_class: "nsaids",
-    text1: "",
-    text2: "",
+    text1: " ",
+    text2: " ",
     imgf: acedolfr,
     imge: acedolbk,
     img: [

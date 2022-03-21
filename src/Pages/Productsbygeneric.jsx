@@ -16,6 +16,7 @@ const Products_bygeneric = (props) => {
   const lang = useSelector((state) => state?.cmsReducer?.language);
 
   const product_categories = filterComponentData(component, "product_categories", lang)
+  let pc = [...product_categories.slice(1, product_categories?.length)]
   const product_category_header = filterComponentData(component, "product_category_header", lang)
   const products = filterComponentData(component, "products", lang)
   const LinksBan = [
@@ -139,7 +140,7 @@ const Products_bygeneric = (props) => {
       <React.Fragment key={ob.id}>
         <>
           <div className="col-lg-4 d-none d-lg-block d-md-none">
-            <FlipCard card={ob} {...props} api={false}/>
+            <FlipCard card={ob} {...props} api={false} />
           </div>
           <div className="col-lg-4 d-lg-none d-sm-block col-md-6">
             <SingleCard card={ob} {...props} api={false} />
@@ -246,21 +247,22 @@ const Products_bygeneric = (props) => {
                           onChange={() => filteredtype("Hand Rub")}
 
                         />
-                        <label htmlFor="handrub">Hand Rub</label></> 
-                        : product_categories?.splice(0, product_categories?.length)?.map((item) => (
-                          <>
-                            <label htmlFor={item?.name}>{item?.name}</label>
-                            <br />
-                            <input
-                              className="me-2"
-                              type="radio"
-                              id="capsule"
-                              name="product-category"
-                              value={item?.name}
-                              onChange={() => filteredtype(item?.name)}
-                            />
-                          </>
-                        ))
+                        <label htmlFor="handrub">Hand Rub</label></>
+                      :
+                      pc?.map((item) => (
+                        <>
+                          <input
+                            className="me-2"
+                            type="radio"
+                            id="capsule"
+                            name="product-category"
+                            value={item?.name}
+                            onChange={() => filteredtype(item?.name)}
+                          />
+                          <label htmlFor={item?.name}>{item?.name}</label>
+                          <br />
+                        </>
+                      ))
                   }
 
                 </form>
@@ -319,10 +321,10 @@ const Products_bygeneric = (props) => {
                   <React.Fragment key={index}>
                     <>
                       <div className="col-lg-4 d-none d-lg-block d-md-none">
-                        <FlipCard card={ob} {...props} api={true}/>
+                        <FlipCard card={ob} {...props} api={true} />
                       </div>
                       <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
-                        <SingleCard card={ob} {...props} api={true}/>
+                        <SingleCard card={ob} {...props} api={true} />
                       </div>
 
                     </>
