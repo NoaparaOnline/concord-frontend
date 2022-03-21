@@ -39,7 +39,7 @@ const FlipCard = (props) => {
                   >
                     {currentpath === "/by-generic-name"
                       ? innerComposition
-                      : title}
+                      : card?.name ? card?.name : title}
                   </h5>
                   <h6
                     className="card-title front-text text-white"
@@ -51,7 +51,7 @@ const FlipCard = (props) => {
                     className="card-title front-text text-white"
                     style={{ fontSize: "14px", fontWeight: "400" }}
                   >
-                    {card?.subtitle ? card?.subtitle : text2}
+                    {card?.text2 ? card?.text2 : text2}
                   </h6>
                 </div>
                 {card?.img ? card?.img?.map((ob, index) => {
@@ -107,7 +107,7 @@ const FlipCard = (props) => {
                   >
                     {currentpath === "/by-generic-name"
                       ? innerComposition
-                      : title}
+                      : card?.name ? card?.name : title}
                   </h5>
                   <h6
                     className="card-title front-text text-white"
@@ -119,7 +119,7 @@ const FlipCard = (props) => {
                     className="card-title front-text text-white"
                     style={{ fontSize: "14px", fontWeight: "400" }}
                   >
-                    {card?.subtitle ? card?.subtitle : text2}
+                    {card?.text2 ? card?.text2 : text2}
                   </h6>
                 </div>
                 {card?.img ? card?.img?.map((ob, index) => {

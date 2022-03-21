@@ -17,6 +17,8 @@ const Products_therapeutic = (props) => {
   const lang = useSelector((state) => state?.cmsReducer?.language);
 
   const product_categories = filterComponentData(component, "product_categories", lang)
+  let pc = [...product_categories.slice(1, product_categories?.length)]
+
   const product_category_header = filterComponentData(component, "product_category_header", lang)
   const products = filterComponentData(component, "products", lang)
   const therapeutic_class_header = filterComponentData(component, "therapeutic_class_header", lang)
@@ -160,11 +162,11 @@ const Products_therapeutic = (props) => {
         <React.Fragment key={ob.id}>
           <>
             <div className="col-lg-4 d-none d-lg-block d-md-none">
-              <FlipCard card={ob} {...props} api={false}/>
+              <FlipCard card={ob} {...props} api={false} />
             </div>
 
             <div className="col-lg-4 d-lg-none d-sm-block col-md-6">
-              <SingleCard card={ob} {...props} api={false}/>
+              <SingleCard card={ob} {...props} api={false} />
             </div>
           </>
         </React.Fragment>
@@ -333,10 +335,8 @@ const Products_therapeutic = (props) => {
                           onChange={() => filteredtype("Hand Rub")}
 
                         />
-                        <label htmlFor="handrub">Hand Rub</label></> : product_categories?.splice(0, product_categories?.length)?.map((item) => (
+                        <label htmlFor="handrub">Hand Rub</label></> : pc?.map((item) => (
                           <>
-                            <label htmlFor={item?.name}>{item?.name}</label>
-                            <br />
                             <input
                               className="me-2"
                               type="radio"
@@ -345,6 +345,8 @@ const Products_therapeutic = (props) => {
                               value={item?.name}
                               onChange={() => filteredtype(item?.name)}
                             />
+                            <label htmlFor={item?.name}>{item?.name}</label>
+                            <br />
                           </>
                         ))
                   }
@@ -380,10 +382,10 @@ const Products_therapeutic = (props) => {
                   <React.Fragment key={index}>
                     <>
                       <div className="col-lg-4 d-none d-lg-block d-md-none">
-                        <FlipCard card={ob} {...props} api={true}/>
+                        <FlipCard card={ob} {...props} api={true} />
                       </div>
                       <div className="col-lg-4 d-lg-none d-sm-block col-md-6 col-sm-6 col-xs-12">
-                        <SingleCard card={ob} {...props} api={true}/>
+                        <SingleCard card={ob} {...props} api={true} />
                       </div>
 
                     </>
