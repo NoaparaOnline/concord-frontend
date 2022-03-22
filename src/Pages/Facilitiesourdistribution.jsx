@@ -3,9 +3,15 @@ import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/Distributionbanner.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Helmet } from "react-helmet";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { filterComponentData } from "../Utils/functions";
 const Facilities_ourdistribution = () => {
-  const {t}=useTranslation('common')
+  const component = useSelector((state) => state?.cmsReducer?.components);
+  const lang = useSelector((state) => state?.cmsReducer?.language);
+  const nearest_delivery_center_user = filterComponentData(component, "nearest_delivery_center_user", lang)
+
+  const { t } = useTranslation('common')
   const cards = [
     {
       id: 0,
@@ -153,22 +159,22 @@ const Facilities_ourdistribution = () => {
   ];
 
   // BannerWithText Wale Ki Links Ka Object
-   const LinksBan=[
-     {
-      subLinkName:t('nearestdeliverycenter.text.home_text'),
-      subDash:'/',
-      subLink:'/'
-     },
-     {
-      subLinkName:t('nearestdeliverycenter.text.contact_text'),
-      subDash:'/',
-      subLink:'/contact'
-     },
-   ];
+  const LinksBan = [
+    {
+      subLinkName: t('nearestdeliverycenter.text.home_text'),
+      subDash: '/',
+      subLink: '/'
+    },
+    {
+      subLinkName: t('nearestdeliverycenter.text.contact_text'),
+      subDash: '/',
+      subLink: '/contact'
+    },
+  ];
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>{t('nearestdeliverycenter.helmet.title_text')}</title>
       </Helmet>
       <BannerWithText
@@ -177,7 +183,7 @@ const Facilities_ourdistribution = () => {
         subHeading={t('nearestdeliverycenter.text.our_distribution_network').toUpperCase()}
         LinksBan={LinksBan}
         height={"400px"}
-        
+
         backposit={'center left'}
         backimg={`linear-gradient(rgba(20, 20, 19, 0.6), rgba(20, 20, 19, 0.2)),url(${bannerimg})`}
         backgroundSize={"100% 400px"}
@@ -191,7 +197,7 @@ const Facilities_ourdistribution = () => {
 
       <div className="my-5 mx-5">
         <div className="row">
-          {cards.map((ob, index) => {
+          {nearest_delivery_center_user?.length < 1  ?cards.map((ob, index) => {
             return (
               <div className="col-lg-4 col-md-6 ">
                 <div
@@ -269,6 +275,90 @@ const Facilities_ourdistribution = () => {
                       >
                         <i className="fa fa-map" aria-hidden="true"></i>{"  "}
                         <span>{ob.mapname2}</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          }):nearest_delivery_center_user?.map((ob, index) => {
+            return (
+              <div className="col-lg-4 col-md-6 ">
+                <div
+                  className="text-left"
+                  style={{ color: "#0066b3", minHeight: "240px" }}
+                >
+                  <div
+                    style={{
+                      borderBottom: "1px solid #0066b3",
+                      fontSize: "24px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    {ob.name}
+                  </div>
+
+                  <div className="mt-2">
+                    <div className="mt-2">
+                      <i className="fa fa-user" aria-hidden="true"></i>{" "}
+                      <span style={{ color: "#565656", fontSize: "19px" }}>
+                        {ob.name}
+                      </span>
+                    </div>
+                    <div className="mt-2">
+                      <i className="fa fa-briefcase" aria-hidden="true"></i>{" "}
+                      <span
+                        style={{
+                          color: "#565656",
+                          fontSize: "16px",
+                          fontWeight: "400",
+                        }}
+                      >
+                        {ob.descignation}
+                      </span>
+                    </div>
+                    <div className="mt-2">
+                      <i className="fa fa-phone" aria-hidden="true"></i>{" "}
+                      <span
+                        style={{
+                          color: "#565656",
+                          fontSize: "16px",
+                          fontWeight: "400",
+                        }}
+                      >
+                        {ob.contact}
+                      </span>
+                    </div>
+                    <div className="mt-2">
+                      <a
+                        href={ob.email}
+                        style={{ textDecoration: "none", color: "#0066b3" }}
+                      >
+                        <i className="fa fa-envelope" aria-hidden="true"></i>{" "}
+                        <span>{ob.email}</span>
+                      </a>
+                    </div>
+
+                    <div className="mt-2">
+                      <a
+                        href={ob.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "#0066b3" }}
+                      >
+                        <i className="fa fa-map-marker" aria-hidden="true"></i>{"  "}
+                        <span>{ob.loc}</span>
+                      </a>
+                    </div>
+                    <div className="my-2">
+                      <a
+                        href={ob.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "#0066b3" }}
+                      >
+                        <i className="fa fa-map" aria-hidden="true"></i>{"  "}
+                        <span>{ob.map}</span>
                       </a>
                     </div>
                   </div>

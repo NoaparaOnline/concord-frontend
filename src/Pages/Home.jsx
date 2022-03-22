@@ -17,12 +17,35 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useTranslation } from 'react-i18next';
+import { useSelector } from "react-redux";
+import { filterComponentData } from "../Utils/functions";
 
 
 
 const Home = (props) => {
 
-  const {t} = useTranslation("common")
+
+  const component = useSelector((state) => state?.cmsReducer?.components);
+  const lang = useSelector((state) => state?.cmsReducer?.language);
+  const slider = filterComponentData(component, "slider", lang)
+  const weareserving = filterComponentData(component, "we_are_serving", lang)
+  const servingentity = filterComponentData(component, "serving_entity", lang)
+  const servingdesc = filterComponentData(component, "serving", lang)
+  const facilities = filterComponentData(component, "facilities", lang)
+  const facilitieCard = filterComponentData(component, "facilitiy_card", lang)
+  const afliatesheading = filterComponentData(component, "affiliates_heading", lang)
+  const afliates = filterComponentData(component, "our_affiliates", lang)
+  const service = filterComponentData(component, "service", lang)
+  const globaloperation = filterComponentData(component, "global_operations", lang)
+  const productheader = filterComponentData(component, "our_product_header", lang)
+  const product = filterComponentData(component, "home_product_card", lang)
+  const milestone = filterComponentData(component, "milestone", lang)
+  const milestoneheader = filterComponentData(component, "milestone_heading", lang)
+  const nearest_delivery_center_list = filterComponentData(component, "nearest_delivery_center_list", lang)
+  const nearest_delivery_center_user = filterComponentData(component, "nearest_delivery_center_users", lang)
+  const nearest_delivery_center = filterComponentData(component, "nearest_delivery_center", lang)
+  const company_logs = filterComponentData(component, "company_logs", lang)
+  const { t } = useTranslation("common")
   const label = {
     HeadFacilities: t('label.facilities_text'),
     HeadOurProduct: t('label.our_product_text'),
@@ -41,7 +64,7 @@ const Home = (props) => {
       text: t('milestone.factory_text'),
     },
   ];
-  
+
   return (
     <>
       <Helmet>
@@ -49,25 +72,25 @@ const Home = (props) => {
       </Helmet>
 
       {/* <Navbar/> */}
-      <Carousel />
-      <WeAreServing />
-      <TextSectionContainer />
+      <Carousel slides={slider} />
+      <WeAreServing weareserving={weareserving} servingentity={servingentity} />
+      <TextSectionContainer servingdesc={servingdesc} />
 
       <Heading
-        heading={label.HeadFacilities}
-        subheading={t('heading.load_human_medicine_text')}
+        heading={facilities?.heading ? facilities?.heading : label.HeadFacilities}
+        subheading={facilities?.text ? facilities?.text : t('heading.load_human_medicine_text')}
       />
 
-      <Cards />
-      <Heading heading={label.Our_Affiliates} />
-      <Affiliates />
-      <Globaloperation />
-      <Heading heading={label.HeadOurProduct} />
-      <HomeCards {...props} />
+      <Cards facilitieCard={facilitieCard} />
+      <Heading heading={afliatesheading?.heading ? afliatesheading?.heading : label.Our_Affiliates} />
+      <Affiliates afliates={afliates} />
+      <Globaloperation service={service} globaloperation={globaloperation} />
+      <Heading heading={productheader?.heading ? productheader?.heading : label.HeadOurProduct} />
+      <HomeCards props={props} product={product} />
 
       <Milestones
-        heading={label}
-        milestone_data={milestone_data}
+        heading={milestoneheader?.heading ? milestoneheader?.heading : label}
+        milestone_data={milestone?.length < 1 ? milestone_data : milestone}
         button={
           <>
             <div className="row">
@@ -96,9 +119,9 @@ const Home = (props) => {
         colorclassName={"colrbck"}
       />
 
-      <NearestDeliveryCenter heading={label} />
+      <NearestDeliveryCenter heading={label} nearest_delivery_center_list={nearest_delivery_center_list} nearest_delivery_center_user={nearest_delivery_center_user} nearest_delivery_center={nearest_delivery_center} />
 
-      <CompanyLogos />
+      <CompanyLogos company_logs={company_logs} />
 
       {/* <Footer /> */}
     </>

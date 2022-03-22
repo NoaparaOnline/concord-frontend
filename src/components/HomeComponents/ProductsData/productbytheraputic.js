@@ -255,9 +255,11 @@ export const ByTherapeutic = [
     id: 0,
     title: "Acedol Tablet",
     value: "acedol tablet",
-    theraputic_class: "nsaids",
-    text1: "",
-    text2: "",
+    therapeutic_class: "nsaids",
+    text1: " ",
+    text2: " ",
+    imgf: acedolfr,
+    imge: acedolbk,
     img: [
       {
         id: 0,
@@ -267,7 +269,7 @@ export const ByTherapeutic = [
     ],
     backpagename: "By Therapeutic Class",
     backpagelink: "/by-therapeutic-class",
-    
+
     innerMainHeading: "Acedol",
     innerComposition: "Aceclofenac BP",
     innerdata: [
@@ -387,7 +389,9 @@ export const ByTherapeutic = [
     title: "Acedol SR Tablet",
     text1: " ",
     text2: " ",
-    theraputic_class: "nsaids",
+    therapeutic_class: "nsaids",
+    imgf: acedolsrfr,
+    imge: acedolsrbk,
     img: [
       {
         id: 1,
@@ -515,10 +519,11 @@ export const ByTherapeutic = [
   {
     id: 2,
     title: "Acubis 2.5  Tablet",
-    theraputic_class: "cardiovascular",
+    therapeutic_class: "cardiovascular",
     text1: " ",
     text2: " ",
-
+    imgf: acubis25fr,
+    imge: acubis25bk,
     img: [
       {
         id: 2,
@@ -711,9 +716,11 @@ export const ByTherapeutic = [
   {
     id: 3,
     title: "Acubis 5  Tablet",
-    theraputic_class: "cardiovascular",
+    therapeutic_class: "cardiovascular",
     text1: " ",
     text2: " ",
+    imgf: acubis5fr,
+    imge: acubis5bk,
     img: [
       {
         id: 3,
@@ -905,9 +912,11 @@ export const ByTherapeutic = [
   {
     id: 4,
     title: "Acudipin Plus  Tablet",
-    theraputic_class: "cardiovascular",
+    therapeutic_class: "cardiovascular",
     text1: " ",
     text2: " ",
+    imgf: acudipinplusfr,
+    imge: acudipinplusbk,
     img: [
       {
         id: 4,
@@ -1055,9 +1064,11 @@ export const ByTherapeutic = [
   {
     id: 5,
     title: "Acusan 50  Tablet",
-    theraputic_class: "cardiovascular",
+    therapeutic_class: "cardiovascular",
     text1: " ",
     text2: " ",
+    imgf: acusan50fr,
+    imge: acusan50bk,
     img: [
       {
         id: 5,
@@ -1197,9 +1208,11 @@ export const ByTherapeutic = [
   {
     id: 6,
     title: "Acusan Plus  Tablet",
-    theraputic_class: "cardiovascular",
+    therapeutic_class: "cardiovascular",
     text1: " ",
     text2: " ",
+    imgf: acusanplusfr,
+    imge: acusanplusbk,
     img: [
       {
         id: 6,
@@ -1327,10 +1340,13 @@ export const ByTherapeutic = [
   {
     id: 7,
     title: "Alatin Tablet",
-    theraputic_class: "anti-histamine",
+    therapeutic_class: "anti-histamine",
     text1: " ",
     text2: " ",
+    imgf: alatinfr,
+    imge: alatinbk,
     img: [
+
       {
         id: 7,
         imgf: alatinfr,
@@ -1458,9 +1474,11 @@ export const ByTherapeutic = [
   {
     id: 8,
     title: "Brocast 10  Tablet",
-    theraputic_class: "leukotrine",
+    therapeutic_class: "leukotrine",
     text1: " ",
     text2: " ",
+    imgf: brocast10fr,
+    imge: brocast10bk,
     img: [
       {
         id: 8,
@@ -1613,9 +1631,11 @@ export const ByTherapeutic = [
   {
     id: 9,
     title: "Brokof 100  Syrup",
-    theraputic_class: "mucolytic",
+    therapeutic_class: "mucolytic",
     text1: " ",
     text2: " ",
+    imgf: brokof100fr,
+    imge: brokof100bk,
     img: [
       {
         id: 9,
@@ -1734,9 +1754,11 @@ export const ByTherapeutic = [
   {
     id: 10,
     title: "Ceprocon 500  Tablet",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
     text1: " ",
     text2: " ",
+    imgf: ceprocon500fr,
+    imge: ceprocon500bk,
     img: [
       {
         id: 10,
@@ -1865,9 +1887,11 @@ export const ByTherapeutic = [
     id: 11,
     title: "Convit B  200 Syrup",
 
-    theraputic_class: "vitamin",
+    therapeutic_class: "vitamin",
     text1: " ",
     text2: " ",
+    imgf: convitb200fr,
+    imge: convitb200bk,
     img: [
       {
         id: 11,
@@ -1990,9 +2014,11 @@ export const ByTherapeutic = [
   {
     id: 12,
     title: "Convit Z 100 ml Syrup",
-    theraputic_class: "vitamin",
+    therapeutic_class: "vitamin",
     text1: " ",
     text2: " ",
+    imgf: convitz100fr,
+    imge: convitz100bk,
     img: [
       {
         id: 12,
@@ -2126,9 +2152,11 @@ export const ByTherapeutic = [
   {
     id: 13,
     title: "Convit Z 200 ml Syrup",
-    theraputic_class: "vitamin",
+    therapeutic_class: "vitamin",
     text1: " ",
     text2: " ",
+    imgf: convitz200fr,
+    imge: convitz200bk,
     img: [
       {
         id: 13,
@@ -2262,9 +2290,11 @@ export const ByTherapeutic = [
   {
     id: 14,
     title: "Conzi 100 ml Syrup",
-    theraputic_class: "vitamin",
+    therapeutic_class: "vitamin",
     text1: " ",
     text2: " ",
+    imgf: conzi100fr,
+    imge: conzi100bk,
     img: [
       {
         id: 14,
@@ -2401,9 +2431,11 @@ export const ByTherapeutic = [
   {
     id: 15,
     title: "Dapazin 5 Tablet",
-    theraputic_class: "anti-diabetic",
+    therapeutic_class: "anti-diabetic",
     text1: " ",
     text2: " ",
+    imgf: dapazin5fr,
+    imge: dapazin5bk,
     img: [
       {
         id: 15,
@@ -2545,9 +2577,11 @@ export const ByTherapeutic = [
   {
     id: 16,
     title: "Dapazin 10 Tablet",
-    theraputic_class: "anti-diabetic",
+    therapeutic_class: "anti-diabetic",
     text1: " ",
     text2: " ",
+    imgf: dapazin10fr,
+    imge: dapazin10bk,
     img: [
       {
         id: 16,
@@ -2689,9 +2723,11 @@ export const ByTherapeutic = [
   {
     id: 17,
     title: "Dopagut 10 Tablet",
-    theraputic_class: "gastroprokinetic",
+    therapeutic_class: "gastroprokinetic",
     text1: " ",
     text2: " ",
+    imgf: dopagut10fr,
+    imge: dopagut10bk,
     img: [
       {
         id: 17,
@@ -2817,9 +2853,11 @@ export const ByTherapeutic = [
   {
     id: 18,
     title: "Dopagut 60 ml Syrup",
-    theraputic_class: "gastroprokinetic",
+    therapeutic_class: "gastroprokinetic",
     text1: " ",
     text2: " ",
+    imgf: dopagut60fr,
+    imge: dopagut60bk,
     img: [
       {
         id: 18,
@@ -2945,9 +2983,11 @@ export const ByTherapeutic = [
   {
     id: 19,
     title: "Doribac 100 ml Syrup",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
     text1: " ",
     text2: " ",
+    imgf: doribac100fr,
+    imge: doribac100bk,
     img: [
       {
         id: 19,
@@ -3113,9 +3153,11 @@ export const ByTherapeutic = [
   {
     id: 20,
     title: "Doribac 250 Capsule",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
     text1: " ",
     text2: " ",
+    imgf: doribac250fr,
+        imge: doribac250bk,
     img: [
       {
         id: 20,
@@ -3281,9 +3323,11 @@ export const ByTherapeutic = [
   {
     id: 21,
     title: "Doribac 500 Capsule",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
     text1: " ",
     text2: " ",
+    imgf: doribac500fr,
+    imge: doribac500bk,
     img: [
       {
         id: 21,
@@ -3449,9 +3493,11 @@ export const ByTherapeutic = [
   {
     id: 22,
     title: "Erectus 10 Tablet",
-    theraputic_class: "pde",
+    therapeutic_class: "pde",
     text1: " ",
     text2: " ",
+    imgf: erectus10fr,
+    imge: erectus10bk,
     img: [
       {
         id: 22,
@@ -3593,9 +3639,11 @@ export const ByTherapeutic = [
   {
     id: 23,
     title: "Erectus 20 Tablet",
-    theraputic_class: "pde",
+    therapeutic_class: "pde",
     text1: " ",
     text2: " ",
+    imgf: erectus20fr,
+    imge: erectus20bk,
     img: [
       {
         id: 23,
@@ -3737,9 +3785,11 @@ export const ByTherapeutic = [
   {
     id: 24,
     title: "Esmax 20 Capsule",
-    theraputic_class: "anti-ulcerant",
+    therapeutic_class: "anti-ulcerant",
     text1: " ",
     text2: " ",
+    imgf: esmax20fr,
+    imge: esmax20bk,
     img: [
       {
         id: 24,
@@ -3907,9 +3957,11 @@ export const ByTherapeutic = [
   {
     id: 25,
     title: "Esmax 40 Capsule",
-    theraputic_class: "anti-ulcerant",
+    therapeutic_class: "anti-ulcerant",
     text1: " ",
     text2: " ",
+    imgf: esmax40fr,
+    imge: esmax40bk,
     img: [
       {
         id: 25,
@@ -4077,9 +4129,11 @@ export const ByTherapeutic = [
   {
     id: 26,
     title: "Fexocon 120 Tablet",
-    theraputic_class: "anti-histamine",
+    therapeutic_class: "anti-histamine",
     text1: " ",
     text2: " ",
+    imgf: fexocon120fr,
+    imge: fexocon120bk,
     img: [
       {
         id: 26,
@@ -4250,8 +4304,10 @@ export const ByTherapeutic = [
   {
     id: 27,
     title: "Fexocon 180 Tablet",
-    theraputic_class: "anti-histamine",
+    therapeutic_class: "anti-histamine",
     text1: " ",
+    imgf: fexocon180fr,
+    imge: fexocon180bk,
     text2: " ",
     img: [
       {
@@ -4424,8 +4480,10 @@ export const ByTherapeutic = [
     id: 28,
     title: "Flunapen 50 Capsule",
     text1: " ",
-    theraputic_class: "anti-fungal",
+    therapeutic_class: "anti-fungal",
     text2: " ",
+    imgf: flunapen50fr,
+    imge: flunapen50bk,
     img: [
       {
         id: 28,
@@ -4607,9 +4665,11 @@ export const ByTherapeutic = [
   {
     id: 29,
     title: "Flunapen 150 Capsule",
-    theraputic_class: "anti-fungal",
+    therapeutic_class: "anti-fungal",
     text1: " ",
     text2: " ",
+    imgf: flunapen150fr,
+        imge: flunapen150bk,
     img: [
       {
         id: 29,
@@ -4793,9 +4853,11 @@ export const ByTherapeutic = [
   {
     id: 30,
     title: "Hexicon 50 ml Handrub",
-    theraputic_class: "hand-sanitizer",
+    therapeutic_class: "hand-sanitizer",
     text1: " ",
     text2: " ",
+    imgf: hexicon50fr,
+    imge: hexicon50bk,
     img: [
       {
         id: 30,
@@ -4836,10 +4898,12 @@ export const ByTherapeutic = [
   {
     id: 31,
     title: "Hexicon 250 ml Handrub",
-    theraputic_class: "hand-sanitizer",
+    therapeutic_class: "hand-sanitizer",
 
     text1: " ",
     text2: " ",
+    imgf: hexicon250fr,
+        imge: hexicon250bk,
     img: [
       {
         id: 31,
@@ -4880,10 +4944,12 @@ export const ByTherapeutic = [
   {
     id: 32,
     title: "Holicef 1gm IM Injection",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: holicef1gmfr,
+    imge: holicef1gmbk,
     img: [
       {
         id: 32,
@@ -5030,10 +5096,12 @@ export const ByTherapeutic = [
   {
     id: 33,
     title: "Holicef 500mg IV Injection",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: holicef500mgfr,
+    imge: holicef500mgbk,
     img: [
       {
         id: 33,
@@ -5180,10 +5248,12 @@ export const ByTherapeutic = [
   {
     id: 34,
     title: "Linacon 5  Tablet",
-    theraputic_class: "anti-diabetic",
+    therapeutic_class: "anti-diabetic",
 
     text1: " ",
     text2: " ",
+    imgf: linacon5fr,
+    imge: linacon5bk,
     img: [
       {
         id: 34,
@@ -5306,10 +5376,12 @@ export const ByTherapeutic = [
   {
     id: 35,
     title: "Macrobac 15  Tablet",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: macrobac15fr,
+        imge: macrobac15bk,
     img: [
       {
         id: 35,
@@ -5447,9 +5519,11 @@ export const ByTherapeutic = [
   {
     id: 36,
     title: "Macrobac 35  Tablet",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
+    imgf: macrobac35fr,
+        imge: macrobac35bk,
     text2: " ",
     img: [
       {
@@ -5588,10 +5662,12 @@ export const ByTherapeutic = [
   {
     id: 37,
     title: "Macrobac 500  Tablet",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: macrobac500fr,
+    imge: macrobac500bk,
     img: [
       {
         id: 37,
@@ -5729,10 +5805,12 @@ export const ByTherapeutic = [
   {
     id: 38,
     title: "Maxdol 10  Tablet",
-    theraputic_class: "nsaids",
+    therapeutic_class: "nsaids",
 
     text1: " ",
-    text2: " ",
+    text2: " ", 
+    imgf: maxdol10fr,
+    imge: maxdol10bk,
     img: [
       {
         id: 38,
@@ -5853,10 +5931,12 @@ export const ByTherapeutic = [
   {
     id: 39,
     title: "Maxdol 10  Tablet",
-    theraputic_class: "nsaids",
+    therapeutic_class: "nsaids",
 
     text1: " ",
     text2: " ",
+    imgf: maxdol10fr,
+        imge: maxdol10bk,
     img: [
       {
         id: 39,
@@ -5977,10 +6057,12 @@ export const ByTherapeutic = [
   {
     id: 40,
     title: "Maxdol 30 Injection",
-    theraputic_class: "nsaids",
+    therapeutic_class: "nsaids",
 
     text1: " ",
     text2: " ",
+    imgf: maxdol30fr,
+        imge: maxdol30bk,
     img: [
       {
         id: 40,
@@ -6107,10 +6189,12 @@ export const ByTherapeutic = [
   {
     id: 41,
     title: "Maxdol 60 Injection",
-    theraputic_class: "nsaids",
+    therapeutic_class: "nsaids",
 
     text1: " ",
     text2: " ",
+    imgf: maxdol60fr,
+    imge: maxdol60bk,
     img: [
       {
         id: 41,
@@ -6237,9 +6321,11 @@ export const ByTherapeutic = [
   {
     id: 42,
     title: "Maxvit D 20000 Tablet",
-    theraputic_class: "vitamin",
+    therapeutic_class: "vitamin",
 
     text1: " ",
+    imgf: maxvitd20000fr,
+    imge: maxvitd20000bk,
     text2: " ",
     img: [
       {
@@ -6373,10 +6459,12 @@ export const ByTherapeutic = [
   {
     id: 43,
     title: "Maxvit D 40000 Tablet",
-    theraputic_class: "vitamin",
+    therapeutic_class: "vitamin",
 
     text1: " ",
     text2: " ",
+    imgf: maxvitd40000fr,
+        imge: maxvitd40000bk,
     img: [
       {
         id: 43,
@@ -6509,10 +6597,12 @@ export const ByTherapeutic = [
   {
     id: 44,
     title: "Microcef 50ml Syrup",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: microcef50fr,
+    imge: microcef50bk,
     img: [
       {
         id: 44,
@@ -6645,10 +6735,12 @@ export const ByTherapeutic = [
   {
     id: 45,
     title: "Microcef 200 Capsule",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: microcef200fr,
+    imge: microcef200bk,
     img: [
       {
         id: 45,
@@ -6781,10 +6873,12 @@ export const ByTherapeutic = [
   {
     id: 46,
     title: "Microcef 400 Capsule",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: microcef400fr,
+    imge: microcef400bk,
     img: [
       {
         id: 46,
@@ -6917,10 +7011,12 @@ export const ByTherapeutic = [
   {
     id: 47,
     title: "Monocal D Box Tablet",
-    theraputic_class: "vitamin",
+    therapeutic_class: "vitamin",
 
     text1: " ",
     text2: " ",
+    imgf: monocaldboxfr,
+    imge: monocaldboxbk,
     img: [
       {
         id: 47,
@@ -7043,10 +7139,12 @@ export const ByTherapeutic = [
   {
     id: 48,
     title: "Monocal D Pot Tablet",
-    theraputic_class: "vitamin",
+    therapeutic_class: "vitamin",
 
     text1: " ",
     text2: " ",
+    imgf: monocaldpotfr,
+    imge: monocaldpotbk,
     img: [
       {
         id: 48,
@@ -7167,10 +7265,12 @@ export const ByTherapeutic = [
   {
     id: 49,
     title: "My Zinc Tablet",
-    theraputic_class: "vitamin",
+    therapeutic_class: "vitamin",
 
     text1: " ",
     text2: " ",
+    imgf: myzincfr,
+    imge: myzincbk,
     img: [
       {
         id: 49,
@@ -7296,10 +7396,12 @@ export const ByTherapeutic = [
   {
     id: 50,
     title: "Neovera 6 Tablet",
-    theraputic_class: "anti-parasitic",
+    therapeutic_class: "anti-parasitic",
 
     text1: " ",
     text2: " ",
+    imgf: novera6fr,
+    imge: novera6bk,
     img: [
       {
         id: 50,
@@ -7443,10 +7545,12 @@ export const ByTherapeutic = [
   {
     id: 51,
     title: "Novera 12 Tablet",
-    theraputic_class: "anti-parasitic",
+    therapeutic_class: "anti-parasitic",
 
     text1: " ",
     text2: " ",
+    imgf: novera12fr,
+    imge: novera12bk,
     img: [
       {
         id: 51,
@@ -7590,10 +7694,12 @@ export const ByTherapeutic = [
   {
     id: 52,
     title: "Neuroprax Pot Tablet",
-    theraputic_class: "anti-neuropathic",
+    therapeutic_class: "anti-neuropathic",
 
     text1: " ",
     text2: " ",
+    imgf: neuropraxpotfr,
+        imge: neuropraxpotbk,
     img: [
       {
         id: 52,
@@ -7706,10 +7812,12 @@ export const ByTherapeutic = [
   {
     id: 53,
     title: "Norxit Tablet",
-    theraputic_class: "antidepressant",
+    therapeutic_class: "antidepressant",
 
     text1: " ",
     text2: " ",
+    imgf: norxitfr,
+    imge: norxitbk,
     img: [
       {
         id: 53,
@@ -7817,9 +7925,11 @@ export const ByTherapeutic = [
   {
     id: 54,
     title: "Norxit Tablet",
-    theraputic_class: "antidepressant",
+    therapeutic_class: "antidepressant",
 
     text1: " ",
+    imgf: norxitfr,
+    imge: norxitbk,
     text2: " ",
     img: [
       {
@@ -7928,10 +8038,12 @@ export const ByTherapeutic = [
   {
     id: 55,
     title: "Novotril 0.5 Tablet",
-    theraputic_class: "antidepressant",
+    therapeutic_class: "antidepressant",
 
     text1: " ",
     text2: " ",
+    imgf: novotril05fr,
+    imge: novotril05bk,
     img: [
       {
         id: 55,
@@ -8054,10 +8166,12 @@ export const ByTherapeutic = [
   {
     id: 56,
     title: "Opmax 20 Capsule",
-    theraputic_class: "anti-ulcerant",
+    therapeutic_class: "anti-ulcerant",
 
     text1: " ",
     text2: " ",
+    imgf: opmax20fr,
+    imge: opmax20bk,
     img: [
       {
         id: 56,
@@ -8206,10 +8320,12 @@ export const ByTherapeutic = [
   {
     id: 57,
     title: "Picocef 70 Syrup",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: picocef70fr,
+    imge: picocef70bk,
     img: [
       {
         id: 57,
@@ -8371,9 +8487,11 @@ export const ByTherapeutic = [
   {
     id: 58,
     title: "Pregacap 50 Capsule",
-    theraputic_class: "anti-neuropathic",
+    therapeutic_class: "anti-neuropathic",
 
     text1: " ",
+    imgf: pregacap50fr,
+    imge: pregacap50bk,
     text2: " ",
     img: [
       {
@@ -8527,10 +8645,12 @@ export const ByTherapeutic = [
   {
     id: 59,
     title: "Pregacap 75 Capsule",
-    theraputic_class: "anti-neuropathic",
+    therapeutic_class: "anti-neuropathic",
 
     text1: " ",
     text2: " ",
+    imgf: pregacap75fr,
+    imge: pregacap75bk,
     img: [
       {
         id: 59,
@@ -8684,10 +8804,12 @@ export const ByTherapeutic = [
   {
     id: 60,
     title: "Relikof Kidz Syrup",
-    theraputic_class: "mucolytic",
+    therapeutic_class: "mucolytic",
 
     text1: " ",
     text2: " ",
+    imgf: relikofkidzfr,
+    imge: relikofkidzbk,
     img: [
       {
         id: 60,
@@ -8813,10 +8935,12 @@ export const ByTherapeutic = [
   {
     id: 61,
     title: "Sefcon 500 Capsule",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: sefcon500fr,
+    imge: sefcon500bk,
     img: [
       {
         id: 61,
@@ -8959,9 +9083,11 @@ export const ByTherapeutic = [
   {
     id: 62,
     title: "Sefcon DS 100ml Syrup",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
     text1: " ",
     text2: " ",
+    imgf: sefconds100fr,
+        imge: sefconds100bk,
     img: [
       {
         id: 62,
@@ -9104,10 +9230,12 @@ export const ByTherapeutic = [
   {
     id: 63,
     title: "Unirab 20 Capsule",
-    theraputic_class: "anti-ulcerant",
+    therapeutic_class: "anti-ulcerant",
 
     text1: " ",
     text2: " ",
+    imgf: unirab20fr,
+        imge: unirab20bk,
     img: [
       {
         id: 63,
@@ -9232,10 +9360,12 @@ export const ByTherapeutic = [
   {
     id: 64,
     title: "Optivas 10",
-    theraputic_class: "cardiovascular",
+    therapeutic_class: "cardiovascular",
 
     text1: " ",
     text2: " ",
+    imgf: optivas10fr,
+    imge: optivas10bk,
     img: [
       {
         id: 64,
@@ -9374,9 +9504,11 @@ export const ByTherapeutic = [
   {
     id: 65,
     title: "Panagra 100",
-    theraputic_class: "pde",
+    therapeutic_class: "pde",
     text1: " ",
     text2: " ",
+    imgf: panagra100fr,
+    imge: panagra100bk,
     img: [
       {
         id: 65,
@@ -9515,10 +9647,12 @@ export const ByTherapeutic = [
   {
     id: 66,
     title: "Peacepil",
-    theraputic_class: "antidepressant",
+    therapeutic_class: "antidepressant",
 
     text1: " ",
     text2: " ",
+    imgf: peacepil3fr,
+    imge: peacepil3bk,
     img: [
       {
         id: 66,
@@ -9646,10 +9780,12 @@ export const ByTherapeutic = [
   {
     id: 67,
     title: "Picocef 250",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: picocef250fr,
+    imge: picocef250bk,
     img: [
       {
         id: 67,
@@ -9811,9 +9947,11 @@ export const ByTherapeutic = [
   {
     id: 68,
     title: "Picocef 500",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
+    imgf: picocef500fr,
+    imge: picocef500bk,
     text2: " ",
     img: [
       {
@@ -9976,10 +10114,12 @@ export const ByTherapeutic = [
   {
     id: 69,
     title: "Plavas Plus",
-    theraputic_class: "cardiovascular",
+    therapeutic_class: "cardiovascular",
 
     text1: " ",
     text2: " ",
+    imgf: plavasplusfr,
+        imge: plavasplusbk,
     img: [
       {
         id: 69,
@@ -10118,9 +10258,11 @@ export const ByTherapeutic = [
   {
     id: 70,
     title: "Polimet 500",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
+    imgf: polimet500fr,
+        imge: polimet500bk,
     text2: " ",
     img: [
       {
@@ -10188,9 +10330,11 @@ export const ByTherapeutic = [
   {
     id: 71,
     title: "Polimet 850",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
+    imgf: polimet850fr,
+        imge: polimet850bk,
     text2: " ",
     img: [
       {
@@ -10258,10 +10402,12 @@ export const ByTherapeutic = [
   {
     id: 72,
     title: "Paramax 20",
-    theraputic_class: "anti-ulcerant",
+    therapeutic_class: "anti-ulcerant",
 
     text1: " ",
     text2: " ",
+    imgf: paramax20fr,
+        imge: paramax20bk,
     img: [
       {
         id: 72,
@@ -10302,10 +10448,12 @@ export const ByTherapeutic = [
   {
     id: 73,
     title: "Paramax 40",
-    theraputic_class: "anti-ulcerant",
+    therapeutic_class: "anti-ulcerant",
 
     text1: " ",
     text2: " ",
+    imgf: paramax40fr,
+    imge: paramax40bk,
     img: [
       {
         id: 73,
@@ -10346,10 +10494,12 @@ export const ByTherapeutic = [
   {
     id: 74,
     title: "Radibac 500",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: radibac500fr,
+    imge: radibac500bk,
     img: [
       {
         id: 74,
@@ -10476,9 +10626,11 @@ export const ByTherapeutic = [
   {
     id: 75,
     title: "Roclav 250",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
+    imgf: roclav250fr,
+    imge: roclav250bk,
     text2: " ",
     img: [
       {
@@ -10653,10 +10805,12 @@ export const ByTherapeutic = [
   {
     id: 76,
     title: "Roclav 500",
-    theraputic_class: "antibiotic",
+    therapeutic_class: "antibiotic",
 
     text1: " ",
     text2: " ",
+    imgf: roclav500fr,
+        imge: roclav500bk,
     img: [
       {
         id: 76,
@@ -10830,10 +10984,12 @@ export const ByTherapeutic = [
   {
     id: 77,
     title: "Rosucard 10",
-    theraputic_class: "cardiovascular",
+    therapeutic_class: "cardiovascular",
 
     text1: " ",
     text2: " ",
+    imgf: rosucard10fr,
+    imge: rosucard10bk,
     img: [
       {
         id: 77,
@@ -10937,10 +11093,12 @@ export const ByTherapeutic = [
   {
     id: 78,
     title: "Rotagan 200",
-    theraputic_class: "anti-viral",
+    therapeutic_class: "anti-viral",
 
     text1: " ",
     text2: " ",
+    imgf: rotagan200fr,
+    imge: rotagan200bk,
     img: [
       {
         id: 78,
@@ -11065,10 +11223,12 @@ export const ByTherapeutic = [
   {
     id: 79,
     title: "Tispa",
-    theraputic_class: "anti-spasmodic",
+    therapeutic_class: "anti-spasmodic",
 
     text1: " ",
     text2: " ",
+    imgf: tispafr,
+    imge: tispabk,
     img: [
       {
         id: 79,
@@ -11191,10 +11351,12 @@ export const ByTherapeutic = [
   {
     id: 80,
     title: "Unilor",
-    theraputic_class: "anti-histamine",
+    therapeutic_class: "anti-histamine",
 
     text1: " ",
     text2: " ",
+    imgf: unilorfr,
+    imge: unilorbk,
     img: [
       {
         id: 80,
@@ -11354,10 +11516,12 @@ export const ByTherapeutic = [
   {
     id: 81,
     title: "Vildaglip 50",
-    theraputic_class: "anti-diabetic",
+    therapeutic_class: "anti-diabetic",
 
     text1: " ",
     text2: " ",
+    imgf: vildaglip50fr,
+        imge: vildaglip50bk,
     img: [
       {
         id: 81,
@@ -11472,10 +11636,12 @@ export const ByTherapeutic = [
   {
     id: 82,
     title: "Vildaglip M 850",
-    theraputic_class: "anti-diabetic",
+    therapeutic_class: "anti-diabetic",
 
     text1: " ",
     text2: " ",
+    imgf: vildaglipm850fr,
+        imge: vildaglipm850bk,
     img: [
       {
         id: 82,
@@ -11599,10 +11765,12 @@ export const ByTherapeutic = [
   {
     id: 83,
     title: "X-Dol 60",
-    theraputic_class: "nsaids",
+    therapeutic_class: "nsaids",
 
     text1: " ",
     text2: " ",
+    imgf: xdol60fr,
+    imge: xdol60bk,
     img: [
       {
         id: 83,
@@ -11758,10 +11926,11 @@ export const ByTherapeutic = [
   {
     id: 84,
     title: "X-Dol 90",
-    theraputic_class: "nsaids",
+    therapeutic_class: "nsaids",
 
     text1: " ",
-    text2: " ",
+    text2: " ",imgf: xdol90fr,
+    imge: xdol90bk,
     img: [
       {
         id: 84,
@@ -11918,10 +12087,12 @@ export const ByTherapeutic = [
   {
     id: 85,
     title: "X-Dol 120",
-    theraputic_class: "nsaids",
+    therapeutic_class: "nsaids",
 
     text1: " ",
     text2: " ",
+    imgf: xdol120fr,
+        imge: xdol120bk,
     img: [
       {
         id: 85,

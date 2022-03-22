@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modal from "react-bootstrap/Modal";
 import {
   statusChange,
@@ -9,26 +9,30 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 const StatuschangedModal = (props) => {
-
-
-
+  const productuid = useSelector((state) => state?.deport?.productuid);
 
   const dispatch = useDispatch();
-
-  const productuid = useSelector((state) => state?.deport?.productuid);
   const [dropdown1, setDropdown1] = useState(productuid?.delivery_status);
   const [dropdown2, setDropdown2] = useState(productuid?.payment_status);
+  useEffect(() => {
+    setDropdown1(productuid?.delivery_status)
+    setDropdown2(productuid?.payment_status)
+  }, [dispatch])
+  console.log(dropdown2, "dropdown2", dropdown1);
+  console.log(productuid, "productuid");
 
 
   const onSubmit = () => {
     const apiData = {
-      delivery_status: dropdown1,
-      payment_status: dropdown2,
+      delivery_status: dropdown1 == undefined ? productuid?.delivery_status : dropdown1,
+      payment_status: dropdown2 == undefined ? productuid?.payment_status : dropdown2,
       uid: productuid.uid,
     }
     dispatch(statusChange(apiData));
     props.onHide();
   };
+
+
 
 
   return (
@@ -90,7 +94,8 @@ const StatuschangedModal = (props) => {
                       </div>
                       <div className="form-group">
                         <label>payment Status</label>
-                        <select className="form-control form-select" id="exampleFormControlSelect1" onChange={(e) => { setDropdown2(e.target.value) }}>
+                        <select className="form-control form-select" id="exampleFormControlSelect1"
+                          onChange={(e) => { setDropdown2(e.target.value) }}>
                           <option selected >{productuid?.payment_status}</option>
                           {
                             productuid?.payment_status === "Pending" || "pending" ? "" :

@@ -26,15 +26,15 @@ const Products = (
     deopdefaultSorted,
   }
 ) => {
-  const {t}=useTranslation('common')
+  const { t } = useTranslation('common')
   const productall = useSelector((state) => state?.director?.productall);
   const dispatch = useDispatch();
   useEffect(() => {
     setSelectedTabbledata(productall)
-         
+
   }, [productall])
   useEffect(() => {
-    dispatch(getProductsall());     
+    dispatch(getProductsall());
   }, [])
 
   const [selectedTabbledata, setSelectedTabbledata] = useState(productall);
@@ -81,23 +81,23 @@ const Products = (
     },
     {
       dataField: "category.name",
-      text:  t('director_products.cat_name') ,
+      text: t('director_products.cat_name'),
       sort: true,
     },
     {
       dataField: "quantity",
-      text: t('director_products.qty_text') ,
+      text: t('director_products.qty_text'),
       formatter: nullChecker,
       sort: true,
     },
     {
       dataField: "price",
-      text:  t('director_products.price_text') ,
+      text: t('director_products.price_text'),
       sort: true,
     },
     {
       dataField: "price",
-      text: t('director_products.retail_price') ,
+      text: t('director_products.retail_price'),
       sort: true,
     },
     {
@@ -112,7 +112,7 @@ const Products = (
   function nullChecker(cell) {
     return (
       <>
-        <div>{!cell ?  t('director_products.n_a') : cell}</div>
+        <div>{!cell ? t('director_products.n_a') : cell}</div>
       </>
     );
   }
@@ -124,172 +124,172 @@ const Products = (
   const loader = useSelector((state) => state?.logIn?.loader);
 
 
-    return (
-        <>
-             <NavbarDash
-            sidebarOpen={sidebarOpen}
-            openSidebar={openSidebar}
-            Heading= {t('director_products.products_text')} 
-          />
-            <DashboardMainCard
-              classnamewidth="96%"
+  return (
+    <>
+      <NavbarDash
+        sidebarOpen={sidebarOpen}
+        openSidebar={openSidebar}
+        Heading={t('director_products.products_text')}
+      />
+      <DashboardMainCard
+        classnamewidth="96%"
 
-              reverse={selectedTab2 === t('director_products.list_text') ? true : false}
-              SelectedButtons={
+        reverse={selectedTab2 === t('director_products.list_text') ? true : false}
+        SelectedButtons={
+          <div className="">
+            {buttonname3.map((item, index) => (
+              <div
+                className="d-flex d-inline-flex my-3"
+                key={index + 1}
+                onClick={() => tabHandler2(item)}
+              >
+                <DashboardBtnList
+                  label={item}
+                  iconclassname={
+                    item === t('director_products.list_text') ? "fa fa-list" : "fa fa-th"
+                  }
+                  bntStyle={{
+                    borderRadius:
+                      index === 0
+                        ? "10px 0px 0px 10px"
+                        : index === buttonname3.length - 1
+                          ? "0px 10px 10px 0px"
+                          : "",
+                  }}
+                  className={
+                    selectedTab2 === item
+                      ? "dashboardBtnList-item-active "
+                      : "default-color-and-hover "
+                  }
+                />
+              </div>
+            ))}
+          </div>
+        }
+        TableCardGrid={
+          <>
+            <div className="row">
+              <div className="row">
+                <div className="col-3 mb-2">
+                  <i
+                    className="fa fa-search"
+                    id="filtersubmit"
+                    style={{ fontSize: "15px" }}
+                  />
+                  <input
+                    className="form-control"
+                    icon="search"
+                    style={{
+                      padding: "0.375rem 2.5rem",
+                      borderRadius: "10px",
+                      minWidth: "240px"
+
+                    }}
+                    placeholder={t('director_products.search_text')}
+                    onChange={(e) => searchItems(e.target.value)}
+                  />
+                </div>
+              </div>
+
+              {loader ? (
+
+                <div className="d-flex justify-content-center">
+                  <Loader
+                    height={100}
+                    width={100}
+                    type="Rings"
+                    color="#0066b3"
+                  />
+                </div>
+
+              ) : (
+
+                searchInput.length >= 1
+                  ? filteredResults.map((item, index) => {
+                    return (
+                      <React.Fragment key={item.id}>
+                        <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                          <DashboardTableCards ob={item} />
+                        </div>
+                      </React.Fragment>
+                    );
+                  })
+                  : productall.map((item, index) => (
+                    <React.Fragment key={item.id}>
+                      <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
+                        <DashboardTableCards ob={item} />
+                      </div>
+                    </React.Fragment>
+                  ))
+
+              )}
+
+            </div>
+          </>
+        }
+        TableDiv={
+          <>
+            <ToolkitProvider
+              bootstrap4
+              keyField="id"
+              data={selectedTabbledata}
+              columns={DirectorProductsAll}
+              search
+            >
+              {(props) => (
                 <div className="">
-                  {buttonname3.map((item, index) => (
-                    <div
-                      className="d-flex d-inline-flex my-3"
-                      key={index + 1}
-                      onClick={() => tabHandler2(item)}
-                    >
-                      <DashboardBtnList
-                        label={item}
-                        iconclassname={
-                          item === t('director_products.list_text') ? "fa fa-list" : "fa fa-th"
-                        }
-                        bntStyle={{
-                          borderRadius:
-                            index === 0
-                              ? "10px 0px 0px 10px"
-                              : index === buttonname3.length - 1
-                                ? "0px 10px 10px 0px"
-                                : "",
-                        }}
-                        className={
-                          selectedTab2 === item
-                            ? "dashboardBtnList-item-active "
-                            : "default-color-and-hover "
-                        }
+                  <i
+                    className="fa fa-search"
+                    id="filtersubmit"
+                    style={{ fontSize: "15px" }}
+                  />
+                  <SearchBar
+                    placeholder={t('director_products.search_text')}
+                    {...props.searchProps}
+                    style={{
+                      padding: "0.375rem 2.5rem",
+                      borderRadius: "10px",
+                    }}
+                  />
+
+                  {loader ? (
+
+                    <div className="d-flex justify-content-center">
+                      <Loader
+                        height={100}
+                        width={100}
+                        type="Rings"
+                        color="#0066b3"
                       />
                     </div>
-                  ))}
+
+                  ) : (
+
+                    <BootstrapTable
+                      {...props.baseProps}
+                      // rowStyle={rowStyle}
+
+                      defaultSorted={deopdefaultSorted}
+                      // pagination={pagination}
+                      pagination={
+                        selectedTabbledata.length > 10
+                          ? paginationFactory()
+                          : null
+                      }
+                      bordered={false}
+                      condensed
+
+                    />
+                  )}
                 </div>
-              }
-              TableCardGrid={
-                <>
-                  <div className="row">
-                    <div className="row">
-                      <div className="col-3 mb-2">
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        <input
-                          className="form-control"
-                          icon="search"
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                            minWidth: "240px"
+              )}
+            </ToolkitProvider>
+          </>
+        }
+      />
 
-                          }}
-                          placeholder= {t('director_products.search_text')} 
-                          onChange={(e) => searchItems(e.target.value)}
-                        />
-                      </div>
-                    </div>
-
-                    {loader ? (
-           
-           <div className="d-flex justify-content-center">
-             <Loader
-               height={100}
-               width={100}
-               type="Rings"
-               color="#0066b3"
-             />
-           </div>
-      
-     ) : (
-
-                    searchInput.length >= 1
-                      ? filteredResults.map((item, index) => {
-                        return (
-                          <React.Fragment key={item.id}>
-                            <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
-                              <DashboardTableCards ob={item} />
-                            </div>
-                          </React.Fragment>
-                        );
-                      })
-                      : productall.map((item, index) => (
-                        <React.Fragment key={item.id}>
-                          <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4 ">
-                            <DashboardTableCards ob={item} />
-                          </div>
-                        </React.Fragment>
-                      ))
-
-     )}
-                 
-                  </div>
-                </>
-              }
-              TableDiv={
-                <>
-                  <ToolkitProvider
-                    bootstrap4
-                    keyField="id"
-                    data={selectedTabbledata}
-                    columns={DirectorProductsAll}
-                    search
-                  >
-                    {(props) => (
-                      <div className="">
-                        <i
-                          className="fa fa-search"
-                          id="filtersubmit"
-                          style={{ fontSize: "15px" }}
-                        />
-                        <SearchBar
-                        placeholder={t('director_products.search_text')} 
-                          {...props.searchProps}
-                          style={{
-                            padding: "0.375rem 2.5rem",
-                            borderRadius: "10px",
-                          }}
-                        />
-
-{loader ? (
-           
-           <div className="d-flex justify-content-center">
-             <Loader
-               height={100}
-               width={100}
-               type="Rings"
-               color="#0066b3"
-             />
-           </div>
-      
-     ) : (
-
-                        <BootstrapTable
-                          {...props.baseProps}
-                          // rowStyle={rowStyle}
-
-                          defaultSorted={deopdefaultSorted}
-                          // pagination={pagination}
-                          pagination={
-                            selectedTabbledata.length > 10
-                              ? paginationFactory()
-                              : null
-                          }
-                          bordered={false}
-                          condensed
-                           
-                        />
-     )}
-                      </div>
-                    )}
-                  </ToolkitProvider>
-                </>
-              }
-            />
-             
-        </>
-    )
+    </>
+  )
 }
 
 export default Products

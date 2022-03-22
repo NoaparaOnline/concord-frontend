@@ -1,14 +1,18 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { CompanyLogos } from "../components";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { getAllThana } from "../Store/Actions/staticActions";
+import { filterComponentData } from "../Utils/functions";
 
 const Careers = () => {
-  const {t}=useTranslation('common')
+  const component = useSelector((state) => state?.cmsReducer?.components);
+  const lang = useSelector((state) => state?.cmsReducer?.language);
+  const career_jobs = filterComponentData(component, "career_jobs", lang)
+  const { t } = useTranslation('common')
   const LinksBan = [
     {
       subLinkName: t('carrers.home_text'),
@@ -22,21 +26,21 @@ const Careers = () => {
       name: t('carrers.pos_1_text'),
       btnlink: "/careers-detail",
       namelink: "/careers-detail",
-      postdate:  t('carrers.date_1_text') ,
+      postdate: t('carrers.date_1_text'),
     },
     {
       id: 1,
       name: t('carrers.pos_2_text'),
       btnlink: "/careers-detail",
       namelink: "/careers-detail",
-      postdate:  t('carrers.date_2_text') ,
+      postdate: t('carrers.date_2_text'),
     },
     {
       id: 2,
       name: t('carrers.pos_3_text'),
       btnlink: "/careers-detail",
       namelink: "/careers-detail",
-      postdate: t('carrers.date_3_text') ,
+      postdate: t('carrers.date_3_text'),
     },
     {
       id: 3,
@@ -78,7 +82,7 @@ const Careers = () => {
             </span>
           </h3>
 
-          {CareersLinks.map((ob, index) => {
+          {career_jobs?.length < 1 ? CareersLinks.map((ob, index) => {
             return (
               <div key={index} className="card col-lg-12 mb-3">
                 <div className="card-body">
@@ -113,7 +117,7 @@ const Careers = () => {
                         }}
                       >
                         {t('carrers.apply_now')}
-                      
+
                       </div>
                     </Link>
                   </span>
@@ -127,6 +131,59 @@ const Careers = () => {
                       <i className="fa fa-calendar-check-o"></i>
                     </span>
                     <span style={{ color: "#0066b3" }}>{ob.postdate}</span>
+                  </span>
+                </div>
+              </div>
+            );
+          }) : career_jobs?.map((ob, index) => {
+            return (
+              <div key={index} className="card col-lg-12 mb-3">
+                <div className="card-body">
+                  <Link
+                    to={{
+                      pathname: ob?.link,
+                      state: { data: ob },
+                    }}
+                    style={{
+                      fontSize: "16px",
+                      color: "#0066b3",
+                      textDecoration: "none",
+                    }}
+                  >
+                    {ob?.name}
+                  </Link>
+
+                  <span className="d-flex justify-content-end">
+                    <Link
+                      to={{
+                        pathname: ob?.link,
+                        state: { data: ob },
+                      }}
+                      style={{ textDecoration: "none", color: "#fff" }}
+                    >
+                      <div
+                        className="btn btn-primary"
+                        style={{
+                          fontSize: "14px",
+                          backgroundColor: "#0066b3",
+                          borderRadius: "0px",
+                        }}
+                      >
+                        {ob?.button}
+
+                      </div>
+                    </Link>
+                  </span>
+                </div>
+                <div className="card-footer">
+                  <span
+                    to="#"
+                    style={{ fontSize: "14px", textDecoration: "none" }}
+                  >
+                    <span className="me-1">
+                      <i className="fa fa-calendar-check-o"></i>
+                    </span>
+                    <span style={{ color: "#0066b3" }}>{ob?.posted}</span>
                   </span>
                 </div>
               </div>
