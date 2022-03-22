@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./FlipCard.css";
 
-const FlipCard = (props) => {
+const FlipCardFirstTimeLaunch = (props) => {
   const [toggle, settoggle] = useState(true);
   const { card } = props;
   const { title, text1, text2, btn, innerComposition, id } = card;
@@ -10,6 +10,7 @@ const FlipCard = (props) => {
     const words = string.split(" ");
     return words[0].toLowerCase();
   };
+  console.log(card, "card");
   useEffect(() => {
     if (props?.api) {
       let imgs = [];
@@ -47,12 +48,11 @@ const FlipCard = (props) => {
                     className="card-title front-text text-white"
                     style={{ fontSize: "14px", fontWeight: "400" }}
                   >
-                    {card?.name
-                      ? card?.name
+                    {card?.subtitle
+                      ? card?.subtitle
                       : text1 != " "
                       ? text1
-                      : card?.subtitle
-                      ? card?.subtitle
+                      
                       : title}
                   </h6>
                   <h6
@@ -134,12 +134,11 @@ const FlipCard = (props) => {
                     className="card-title front-text text-white"
                     style={{ fontSize: "14px", fontWeight: "400" }}
                   >
-                    {card?.name
-                      ? card?.name
+                    {card?.subtitle
+                      ? card?.subtitle
                       : text1 != " "
                       ? text1
-                      : card?.subtitle
-                      ? card?.subtitle
+                      
                       : title}
                   </h6>
                   <h6
@@ -210,4 +209,4 @@ const FlipCard = (props) => {
   );
 };
 
-export default FlipCard;
+export default FlipCardFirstTimeLaunch;
