@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './FlipCard.css'
 
-const SingleCard = (props) => {
+const SingleCardFirstTimeLaunch = (props) => {
   const { card } = props;
   const { title, text1, text2, btn, innerComposition, id } = card;
   const currentpath = props?.location?.pathname;
@@ -32,7 +32,7 @@ const SingleCard = (props) => {
 
             </h5>
             <h6 className="card-title text-white">{card?.name ? card?.name : text1}</h6>
-            <h6 className="card-title text-white">{card?.name ? card?.name : text2}</h6>
+            <h6 className="card-title text-white">{card?.subtitle ? card?.subtitle : text2}</h6>
           </div>
           <img src={props?.api ? card?.image : card?.img ? card?.img[0]?.imgf : card?.imgf} className="card-img-top p-3" height="100%"
             width="100%" alt={currentpath === '/by-generic-name' ? innerComposition : title} />
@@ -61,4 +61,4 @@ const SingleCard = (props) => {
   )
 }
 
-export default SingleCard
+export default SingleCardFirstTimeLaunch

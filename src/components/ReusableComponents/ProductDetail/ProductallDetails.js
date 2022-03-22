@@ -258,7 +258,7 @@ const ProductallDetails = (props) => {
                   fontWeight: "600",
                 }}
               >
-                {viewData?.name ? viewData?.name : viewData?.innerMainHeading ? viewData?.innerMainHeading : viewData?.title}
+                {viewData?.name ? null : viewData?.innerMainHeading ? viewData?.innerMainHeading : viewData?.title}
               </h1>
               <h5
                 style={{
@@ -266,7 +266,7 @@ const ProductallDetails = (props) => {
                   fontWeight: "600",
                 }}
               >
-                {viewData?.subtitle ? viewData?.subtitle : viewData?.innerComposition}
+                {viewData?.subtitle ? null : viewData?.innerComposition}
               </h5>
 
               {viewData?.desc ? <div dangerouslySetInnerHTML={{ __html: viewData?.desc }} /> : viewData?.innerdata?.map((item) => {
