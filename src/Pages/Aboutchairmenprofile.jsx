@@ -1,23 +1,24 @@
 import React from "react";
-
 import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/parallax_contact.jpg";
 import DirectorImg from "../Statics/assets/chairman-profile.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 const Aboutchairmenprofile = () => {
+  const {t}=useTranslation('common')
   const DirectorInfo = {
-    name: "Md. Faizur Rahman",
+    name: t('about_chairmen_profile.director_info_name'),
   };
   const LinksBan = [
     {
-      subLinkName: "Home",
+      subLinkName: t('about_chairmen_profile.home_text'),
       subDash: "/",
       subLink: "/",
     },
     {
-      subLinkName: "About Us",
+      subLinkName: t('about_chairmen_profile.about_us_text'),
       subDash: "/",
       subLink: "/about",
     },
@@ -27,14 +28,14 @@ const Aboutchairmenprofile = () => {
     <>
     <Helmet>
         <title>
-        Chairmen Profile - Concord Pharma
+        {t('about_chairmen_profile.helmet.title_text')}
         </title>
       </Helmet>
     <div>
       <BannerWithText
         imgSrc={bannerimg}
-        heading={"Chairman Profile"}
-        subHeading={`CHAIRMAN PROFILE`}
+        heading={t('about_chairmen_profile.chairman_text')}
+        subHeading={t('about_chairmen_profile.chairman_text').toUpperCase()}
         backposit={'100% 25%'}
         backimg={`url(${bannerimg})`}
         LinksBan={LinksBan}
@@ -77,91 +78,43 @@ const Aboutchairmenprofile = () => {
               </h5>
               <div style={{lineHeight: '30px',
     color: '#666666'}} className="text-justify ">
-                Md. Faizur Rahman is the founder and Group Chairman of <strong> Noapara
-                Group</strong>, Bangladesh. Noapara Group is a Bangladeshi owned company
-                with a long history in the South East Asia realm. Right from the
-                beginning the company started with a strong focus on innovation
-                under the leadership of Mr. Rahman the group has made
-                significant progress by laying a strong foundation for ambitious
-                growth through new ventures, alliances and acquisitions.
+               {t('about_chairmen_profile.desc_1_text')} <strong> {t('about_chairmen_profile.desc_2_text')}</strong>, Bangladesh. Noapara Group is a Bangladeshi owned company
+               {t('about_chairmen_profile.desc_3_text')}
               </div>
               <div style={{lineHeight: '30px',
     color: '#666666'}} className="text-justify ">
-                He contemplates his company continued the drive for innovation,
-                finding new and unique ways to improve on existing solutions.
-                Mr. Rahman emphasized that innovation has been integral to the
-                success and growth for Noapara Group.
+               {t('about_chairmen_profile.desc_4_text')}
               </div>
               <div style={{lineHeight: '30px',
     color: '#666666'}} className="text-justify ">
-                In 1990, Noapara Traders purchased the raw materials of NPKS
-                fertilizer and producing known as “Bengal MisraSar” at South
-                Bengal Fertilizer Mills Ltd. producing international grade of
-                NPKS fertilizers at Noapara. Mr. Rahman also designated as the
-                <strong> 1st vice chairman of Bangladesh Fertilizer Association (BFA).</strong>
+               {t('about_chairmen_profile.desc_5_text')}
+                <strong>  {t('about_chairmen_profile.desc_6_text')}</strong>
               </div>
               <div style={{lineHeight: '30px',
     color: '#666666'}} className="text-justify ">
-                Being as an honorable chairman of a leading group of companies
-                he never fail to thank to those who joined with him in his
-                journey from his nascent stage to till date in creating the
-                group of companies. His business is now highly diversified from
-                imports to manufacturing. “Noapara Group” is now manufacturing
-                quality cement and using latest state of the art technology. In
-                Noapara Cement deserves to fulfill the needs of our country in
-                achieving affordable housing for all. Mr. Rahman also the
-                <strong> Treasurer of Bangladesh Cement Manufacturers Association
-                (BCMA)</strong>.His main motto is to enhance the development of our
-                nation in the field’s food, health and housing. Noapara Group
-                believes in giving back to the society and country through
-                various initiatives and corporate social service activities.
+                {t('about_chairmen_profile.desc_7_text')}
+                <strong> {t('about_chairmen_profile.desc_8_text')})</strong>.{t('about_chairmen_profile.desc_9_text')}
               </div>
               <div style={{lineHeight: '30px',
     color: '#666666'}} className="text-justify mb-4">
-                Bangladesh is densely populated country. Our nation’s facilities
-                in good quality seeds, crops storage facilities and ample supply
-                of good fertilizer is not enough. Noapara group’s aim and
-                mission is to fulfill this goal and achieve self-sufficiency in
-                the field of agricultural production of grains and help our
-                nation feed all our people.
+              {t('about_chairmen_profile.desc_10_text')}
               </div>
               <div style={{lineHeight: '30px',
     color: '#666666'}} className="text-justify mb-4">
-                In Bangladesh, Pharmaceutical sector is one of the core sector
-                which is contributing the second largest revenue to the
-                country’s economy. “CONCORD Pharmaceuticals Ltd.” is determined
-                to manufacture high quality health care products that improve
-                the quality of life of people.In this connection the company
-                works on the fields of diabetes and cardiac sectors. For the
-                first time in Bangladesh he launched DAPAZIN (Dapagliflozin)
-                especially for type to diabetes patients. Mr. Rahman believes in
-                “Better Medicine Better life” which contributes towards the
-                growth of a healthy Nation.
+               {t('about_chairmen_profile.desc_11_text')}
               </div>
               <div style={{lineHeight: '30px',
     color: '#666666'}} className="text-justify mb-4">
-                Under the leadership of Mr. Rahman, EW Villa Medica (a German
-                regenerative medicine center) comply to works with Bangladesh by
-                practicing a joint venture project stem cell treatment which is
-                perform a vital role in the history of modern health care
-                services.
+              {t('about_chairmen_profile.desc_12_text')}
               </div>
               <div style={{lineHeight: '30px',
     color: '#666666'}} className="text-justify mb-4">
-                Mr. Rahman believes that his three products- quality cement,
-                quality fertilizer NPKS and international quality medicine will
-                fulfill human’s three basic needs i.e affordable food, quality
-                housing and medicine. Besides, his companies imports food
-                grains, coal and others important fertilizers to meet the demand
-                of our nation.
+               {t('about_chairmen_profile.desc_13_text')}
               </div>
               <div style={{lineHeight: '30px',
     color: '#666666'}} className="text-justify mb-4">
-                He conferred a series of awards for his various types of work in
-                the socio-economic sectors some of themhe was awarded <strong> Business
-                Excellence Awards – 2014</strong>, Singapore. And also received <strong> Sofol
-                Khudro Uddyogta Somomanona Podok – 2014</strong>. In 2017 he received the
-                <strong> FOBANA Business power award</strong> at Florida, North America.
+               {t('about_chairmen_profile.desc_14_text')} <strong>{t('about_chairmen_profile.desc_15_text')}</strong>,{t('about_chairmen_profile.desc_16_text')}<strong> {t('about_chairmen_profile.desc_17_text')}</strong>. {t('about_chairmen_profile.desc_18_text')}
+                <strong> {t('about_chairmen_profile.desc_19_text')}</strong> {t('about_chairmen_profile.desc_20_text')}
               </div>
             </div>
           </div>

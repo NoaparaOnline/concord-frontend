@@ -36,6 +36,7 @@ import DashboardBtnList from '../../components/ReusableComponents/DashboardBtnLi
 import { getStocksGiftProduct, getStocksMedicineProduct, getStocksProduct } from '../../Store/Actions/deportmanagerActions';
 import { getSingleDistributionObjWithUid } from '../../Store/Actions/directorActions';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Distributionstocksdetails = (props) => {
     const {
@@ -46,7 +47,7 @@ const Distributionstocksdetails = (props) => {
         linkRoute
     } = props;
    const getsingledistributionobj = useSelector((state) => state?.director?.getsingledistributionobj);
-
+   const {t}=useTranslation('common')
     const dispatch = useDispatch();
     let getsingledistributionobjall = useSelector((state) => state?.director?.getsingledistributionobjall);
     let getsingledistributionobjmedicine = useSelector((state) => state?.director?.getsingledistributionobjmedicine);
@@ -74,19 +75,19 @@ const Distributionstocksdetails = (props) => {
       // Tabhandler Medicine And Gift
       const tabHandler = (item) => {
         setSelectedTab1(item);
-        if (item === "All") {
+        if (item === t('distribution_stocks_details.all_text')) {
           tabledataHandler(getsingledistributionobjall);
         }
-        else if (item === "Medicine") {
+        else if (item ===  t('distribution_stocks_details.medicine_text')) {
           tabledataHandler(getsingledistributionobjmedicine);
         }
-        else if (item === "Gift") {
+        else if (item === t('distribution_stocks_details.gift_text')) {
           tabledataHandler(getsingledistributionobjgift);
         }
       };
       // USE STATES 
     
-      const [selectedTab1, setSelectedTab1] = useState("All");
+      const [selectedTab1, setSelectedTab1] = useState( t('distribution_stocks_details.all_text'));
       const [selectedTabbledata, setSelectedTabbledata] = useState(getsingledistributionobjall);
     
 
@@ -94,15 +95,15 @@ const Distributionstocksdetails = (props) => {
     const DepomanagerStock = [
 
         
-        { dataField: "product.name", text: "Product Name", sort: true },
+        { dataField: "product.name", text: t('distribution_stocks_details.product_name_text')  , sort: true },
 
-        { dataField: "product.category.name", text: "Category Name", sort: true },
+        { dataField: "product.category.name", text:  t('distribution_stocks_details.cat_name') , sort: true },
         
-        { dataField: "product.formula", text: "Product Formula", sort: true },
+        { dataField: "product.formula", text: t('distribution_stocks_details.product_formula') , sort: true },
         
-        { dataField: "quantity", text: "Quantity", formatter: nullChecker, sort: true },
+        { dataField: "quantity", text: t('distribution_stocks_details.qty_text') , formatter: nullChecker, sort: true },
 
-        { dataField: "product.price", text: "Price", sort: true },
+        { dataField: "product.price", text: t('distribution_stocks_details.price_text') , sort: true },
 
 
 
@@ -115,18 +116,18 @@ const Distributionstocksdetails = (props) => {
     function nullChecker(cell) {
         return (
             <>
-                <div>{!cell ? "N/A" : cell}</div>
+                <div>{!cell ?  t('distribution_stocks_details.n_a')  : cell}</div>
             </>
         );
     }
 
     const { SearchBar } = Search;
 
-    const buttonname = ["All", "Medicine", "Gift"]
+    const buttonname = [t('distribution_stocks_details.all_text'), t('distribution_stocks_details.medicine_text'),  t('distribution_stocks_details.gift_text')]
     const loader = useSelector((state) => state?.logIn?.loader);
 
 
-    const emptyDataMessage = () => { return 'No Data to Display';}
+    const emptyDataMessage = () => { return t('distribution_stocks_details.no_data_to_display');}
     return (
         <>
             <NavbarDash
@@ -157,7 +158,7 @@ const Distributionstocksdetails = (props) => {
                               
                             }}
                           ></i>{" "}
-                          Back
+                          {t('distribution_stocks_details.back_text')} 
                         </span>
                       </Link>
                     </>
@@ -228,6 +229,7 @@ const Distributionstocksdetails = (props) => {
                                     />
                                     <SearchBar
                                         {...props.searchProps}
+                                        placeholder= {t('distribution_stocks_details.search_text')} 
                                         style={{
                                             padding: "0.375rem 2.5rem",
                                             borderRadius: "10px",

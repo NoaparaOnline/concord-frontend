@@ -13,12 +13,10 @@ import { useHistory } from "react-router";
 
 import Loader from "react-loader-spinner";
 import { Helmet } from "react-helmet";
-
-
-
-
+import { useTranslation } from "react-i18next";
 const Login = (props) => {
   const history = useHistory();
+  const {t}=useTranslation('common')
   const dispatch = useDispatch();
   const loader = useSelector((state) => state?.logIn?.loader);
   const onSubmit = async (data) => {
@@ -57,56 +55,38 @@ const Login = (props) => {
     props.onHide();
   };
 
-
-
-
-
-
-
-
-
   return (
     <>
     <Helmet>
-        <title>Concord Pharma</title>
+        <title>{t('login.helmet.title_text')}</title>
       </Helmet>
       <Modal show={props.show} onHide={props.onHide} centered size="sm">
-
         <Modal.Header>
-
-
           {props.showdiv ?
-            <span className="" style={{ fontWeight: "600", fontSize: '22px', color: '#0066b3' }}> Login  </span>
+            <span className="" style={{ fontWeight: "600", fontSize: '22px', color: '#0066b3' }}>  {t('login.login_text')}   </span>
             :
-            <span className="" style={{ fontWeight: "600", fontSize: '22px', color: '#0066b3' }}> Forgot Password </span>
+            <span className="" style={{ fontWeight: "600", fontSize: '22px', color: '#0066b3' }}>  {t('login.forgot_pass_text')}  </span>
           }
-
         </Modal.Header>
         <Modal.Body className="p-0">
-
-
-
           <div className="row ">
             <div className="col mb-5">
               <div className="row ">
-
-
                 {props.showdiv ?
                   <div>
-
                     <form onSubmit={handleSubmit(onSubmit)} style={{padding:'15px',height: '220px'}}>
                       <div className="row">
                         <div className="col-12">
-                          <span className="label-name-login">Email</span>
+                          <span className="label-name-login">{t('login.email_text')}</span>
                           {/* &nbsp; */}
                           <input
                             className="input-login-modal"
                             type="email"
-                            placeholder="Username/Email"
+                            placeholder= {t('login.user_name_email')}
                             {...register("email", {
                               required: {
                                 value: true,
-                                message: "this field is required field",
+                                message: t('login.field_req_text') ,
                               },
                             })}
                           />
@@ -119,16 +99,16 @@ const Login = (props) => {
                       </div>
                       <div className="row mb-1">
                         <div className="col-12">
-                          <span className="label-name-login">Password</span>
+                          <span className="label-name-login">{t('login.password_text')}</span>
                           {/* &nbsp; */}
                           <input
                             className="input-login-modal"
                             type="password"
-                            placeholder="Password"
+                            placeholder= {t('login.password_text')}
                             {...register("password", {
                               required: {
                                 value: true,
-                                message: "this field is required field",
+                                message: t('login.field_req_text'),
                               },
                             })}
                           />
@@ -141,7 +121,6 @@ const Login = (props) => {
                           )}
                         </div>
                       </div>
-
                       <div className="d-flex justify-content-center">
                       <button
                         type="submit"
@@ -152,7 +131,6 @@ const Login = (props) => {
                           fontSize: "13px",
                           fontWeight: "500",
                         }}
-
                       >
                         {loader ? 
                       <div className="d-flex justify-content-center">
@@ -161,45 +139,35 @@ const Login = (props) => {
                         type="ThreeDots"
                         color="#fff"
                       />
-                    </div> : "LOG IN"    
+                    </div> :  t('login.login_text').toUpperCase()   
                       }
                       </button>
                       </div>
-
                       <div className="">
                         <label
                           className="form-check-label"
                           htmlFor="gridCheck1"
                           style={{ fontSize: "12px" }}
                         >
-                          <Link onClick={() => props.setShowdiv(false)} to="#" style={{ textDecoration: 'none', color: '#0066b3' }}>Forgot Password ?</Link>
+                          <Link onClick={() => props.setShowdiv(false)} to="#" style={{ textDecoration: 'none', color: '#0066b3' }}>  {t('login.forgot_pass_text')+" ?"}</Link>
                         </label>
                       </div>
-
-
                     </form>
                   </div>
                   :
-
                   <div className="">
-
-
-
                     <form onSubmit={handleSubmit(onSubmitEmail)} style={{ padding: '15px', height: '170px' }}>
-                     
-                     
-                     
                     <div className="row">
                         <div className="col-12 mb-3">
-                          <span className="label-name-login">Email</span>
+                          <span className="label-name-login"> {t('login.email_text')}</span>
                           <input
                             className="input-login-modal"
                             type="email"
-                            placeholder="Enter Email For Verfication"
+                            placeholder=  {t('login.enter_email_for_verif')} 
                             {...register("email", {
                               required: {
                                 value: true,
-                                message: "this field is required field",
+                                message: t('login.field_req_text'),
                               },
                             })}
                           />
@@ -210,14 +178,10 @@ const Login = (props) => {
                           )}
                         </div>
                       </div>
-                     
-                     
-                     
-
                       <div className="d-flex justify-content-center">
                       <input
                         type="submit"
-                        value="SUBMIT"
+                        value= {t('login.submit_text').toUpperCase()} 
                         className="btn btn-block rounded-pill  mb-2 mx-auto"
                         style={{
                           width: "85%", textAlign: "center", color: "#fff",
@@ -228,10 +192,6 @@ const Login = (props) => {
 
                       />
                       </div>
-
-                     
-
-                      
                       <div className="">
                         <label
                           className="form-check-label "
@@ -240,19 +200,12 @@ const Login = (props) => {
                         >
                           <Link onClick={() => {
                             props.setShowdiv(true);
-                          }} to="#" style={{ textDecoration: 'none', color: '#0066b3' }}>Back To Login </Link>
+                          }} to="#" style={{ textDecoration: 'none', color: '#0066b3' }}> {t('login.back_to_log')} </Link>
                         </label>
                       </div>
                     </form>
                   </div>
-
-
                 }
-
-
-
-
-
               </div>
             </div>
           </div>

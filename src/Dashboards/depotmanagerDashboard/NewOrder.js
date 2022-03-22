@@ -16,6 +16,7 @@ import Loader from 'react-loader-spinner';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { getnewOrder, getSingleOrder, getSingleUID } from '../../Store/Actions/deportmanagerActions';
+import { useTranslation } from 'react-i18next';
 
 
 const NewOrder = (
@@ -28,6 +29,7 @@ const NewOrder = (
     }
 ) => {
     const dispatch = useDispatch();
+    const {t}=useTranslation('common')
     const { SearchBar } = Search;
     const loader = useSelector((state) => state?.logIn?.loader);
 
@@ -43,21 +45,21 @@ const NewOrder = (
 
     //NEW ORDER COLUMN HEADERS
     const DepomanagerNewOrder = [
-        { dataField: "order_id", text: "Orders ID", sort: true },
-        { dataField: "customer.name", text: "Customer Name", sort: true },
+        { dataField: "order_id", text: t('new_order.order_id'), sort: true },
+        { dataField: "customer.name", text:t('new_order.customer_name'), sort: true },
         // {dataField:(data) => moment('order_datetime').format("L")  ,text:'Customer Name',},
-        { dataField: "customer.market__street_address", text: "Market Address",  sort: true },
+        { dataField: "customer.market__street_address", text: t('new_order.market_address'),  sort: true },
         {
             dataField: "order_datetime",
-            text: "Date And Time",
+            text: t('new_order.date_time_text'),
             formatter: dateFormatter,
             sort: true
         },
-        { dataField: "payment_type", text: "Payment Type", sort: true },
+        { dataField: "payment_type", text: t('new_order.payment_type') , sort: true },
         {
             dataField: "delivery_status",
             formatter:capitalize,
-            text: "Delivery Status",
+            text: t('new_order.delivery_status') ,
             style: (cell, row) => {
                 if (cell === "pending") return { color: "#C0B627", fontWeight: "500" };
                 else if (cell === "cancelled" || cell === "declined")
@@ -76,7 +78,7 @@ const NewOrder = (
         },
         {
             dataField: "payment_status",
-            text: "Payment Status",
+            text: t('new_order.payment_status'),
             formatter:capitalize,
             style: (cell, row) => {
                 if (cell === "pending") return { color: "#C0B627", fontWeight: "500" };
@@ -94,7 +96,7 @@ const NewOrder = (
             },
             sort: true
         },
-        { dataField: "ordered_by.name", text: "Proceed By", sort: true },
+        { dataField: "ordered_by.name", text: t('new_order.proceed_by') , sort: true },
         { dataField: "customer", formatter: btnFormatterneworder, text: "" },
     ];
 
@@ -131,7 +133,7 @@ const NewOrder = (
           >
             {/* <button class="btn btn-secondary">Action</button> */}
             <span style={{ fontSize: "14px", fontWeight: "500" ,color:'#fff'}}> Actions </span>
-            <span class="sr-only">Toggle Dropdown</span>
+            <span class="sr-only">{t('new_order.toggle_dropdown')}</span>
           </button> 
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <li>
@@ -144,7 +146,7 @@ const NewOrder = (
                 }}
 
               >
-                &nbsp; Update Status
+                &nbsp;{t('new_order.update_status')}
               </Link>
 
             </li>
@@ -158,7 +160,7 @@ const NewOrder = (
                 }}
                 onClick={() => dispatch(getSingleOrder(row))}
               >
-                &nbsp;  View
+                &nbsp;  {t('new_order.view_btn_text')}
               </Link>
 
             </li>
@@ -169,13 +171,13 @@ const NewOrder = (
     );
   }
 
-  const emptyDataMessage = () => { return 'No Data to Display';}
+  const emptyDataMessage = () => { return t('new_order.no_data_to_display') ;}
     return (
         <>
             <NavbarDash
                 sidebarOpen={sidebarOpen}
                 openSidebar={openSidebar}
-                Heading="New Order"
+                Heading={t('new_order.new_order')} 
             />
 
 
@@ -200,6 +202,7 @@ const NewOrder = (
                                         style={{ fontSize: "15px" }}
                                     />
                                     <SearchBar
+                                    placeholder={t('new_order.search_text')}
                                         {...props.searchProps}
                                         style={{
                                             padding: "0.375rem 2.5rem",

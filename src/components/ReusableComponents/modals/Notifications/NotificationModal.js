@@ -5,9 +5,11 @@ import { seeAllNotification } from "../../../../Store/Actions/staticActions";
 import DashboardBtnList from "../../../ReUseableComponents/DashboardBtnList";
 import NotificationTab from "../../../ReUseableComponents/NotificationTab";
 import Loader from "react-loader-spinner";
+import { useTranslation } from "react-i18next";
 
 const NotificationModal = (props) => {
-  const [selectedTab, setSelectedTab] = useState("All Notifications");
+  const {t}=useTranslation('common')
+  const [selectedTab, setSelectedTab] =useState(t('notification.all_notifications'));
   const loading = useSelector((state) => state?.logIn?.loader);
 
   const allnotification = useSelector(
@@ -21,12 +23,12 @@ const NotificationModal = (props) => {
   );
   const dispatch = useDispatch();
   useEffect(() => {
-    setSelectedTab("All Notifications");
+    setSelectedTab(t('notification.all_notifications'));
   }, []);
 
   const tabHandler = async (item) => {
     setSelectedTab(item);
-    if(item === "Recent Notification"){
+    if(item === t('notification.recent_notifications')){
       const apiData = newnotification?.map(item => {
         return item?.id
       })
@@ -42,13 +44,13 @@ const NotificationModal = (props) => {
         centered
         onHide={() => {
           props?.onHide();
-          setSelectedTab("All Notifications");
+          setSelectedTab(t('notification.all_notifications'));
           // setnotificationData(notification);
         }}
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Notifications
+            {t('notification.notifications_text')}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body
@@ -56,7 +58,7 @@ const NotificationModal = (props) => {
         >
           <div className="row ">
             <div className="col-12">
-              {["All Notifications", "Recent Notification"].map((item, index) => (
+              {[t('notification.all_notifications'), t('notification.recent_notifications')].map((item, index) => (
                 <div
                   className="d-flex d-inline-flex col-6"
                   key={index + 1}
@@ -70,7 +72,7 @@ const NotificationModal = (props) => {
                         ? "dashboardBtnList-item-active py-2"
                         : "default-color-and-hover py-2"
                     }
-                    shownotification={item === "Recent Notification"}
+                    shownotification={item === t('notification.recent_notifications')}
                     notificationCount={notificationcount}
                   />
                 </div>
@@ -85,7 +87,7 @@ const NotificationModal = (props) => {
             ) : (
               <div>
                 {allnotification?.length > 0 &&
-                selectedTab === "All Notifications" ? (
+                selectedTab === t('notification.all_notifications') ? (
                   allnotification?.map((item, index) => (
                     <>
                       {item === undefined ? null : (
@@ -99,7 +101,7 @@ const NotificationModal = (props) => {
                     </>
                   ))
                 ) : newnotification?.length > 0 &&
-                  selectedTab === "Recent Notification" ? (
+                  selectedTab === t('notification.recent_notifications') ? (
                   newnotification?.map((item, index) => (
                     <>
                       {item === undefined ? null : (
@@ -120,7 +122,7 @@ const NotificationModal = (props) => {
                       className="light-Color-Para"
                       style={{ fontSize: "24px" }}
                     >
-                      no notification to show
+                      {t('notification.no_notifications_text')}
                     </span>
                   </div>
                 )}

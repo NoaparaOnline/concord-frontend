@@ -4,15 +4,17 @@ import bannerimg from "../Statics/assets/fac-QC-ban.jpg";
 import facrd from "../Statics/assets/fac-QC.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 const Facilities_quality = () => {
+  const {t}=useTranslation('common')
   const LinksBan = [
     {
-      subLinkName: "Home",
+      subLinkName: t('facilities_quality.home_text'),
       subDash: "/",
       subLink: "/",
     },
     {
-      subLinkName: "Facilities",
+      subLinkName: t('facilities_quality.facilities_text'),
       subDash: "/",
       subLink: "/facilities",
     },
@@ -21,12 +23,12 @@ const Facilities_quality = () => {
   return (
     <>
     <Helmet>
-        <title>Quality Control - Concord Pharma</title>
+        <title>{t('facilities_quality.helmet.title_text')}</title>
       </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
-        heading={"Quality Control"}
-        subHeading={`QUALITY CONTROL`}
+        heading={t('facilities_quality.quality_control_text')}
+        subHeading={t('facilities_quality.quality_control_text').toUpperCase()}
         LinksBan={LinksBan}
         
         backposit={'100% 54%'}
@@ -49,52 +51,33 @@ const Facilities_quality = () => {
             <div
               style={{ padding: "10px", lineHeight: "1.7em", fontSize: "17px" }}
             >
-              Our motto is “Better medicine better life”. Our quality control
-              laboratory is equipped with highly sophisticated equipments to
-              conform good laboratory practice guideline so as to guarantee
-              consistent product quality.
+            {t('facilities_quality.desc_text_1')}
               <br />
-              An excellent team of professionals having excellent knowledge &
-              concepts of quality systems and cGMP is working to ensure quality
-              assurance at each stage right from receiving of starting materials
-              to finished products to assure the highest international
-              standards. We ensure systems, facilities & process validations,
-              HVAC, clean room regulations, approval of raw, packaging &
-              finished goods and proper documentation of technical quality
-              parameters to serve best quality medicine for the nation.
+              
+              {t('facilities_quality.desc_text_2')}
             </div>
           </div>
         </div>
 
         <div className="productionbx">
           <h5 style={{ color: "#0066b3", fontSize: "24px" }}>
-            The System of Quality Control in Concord Pharmaceuticals ensures
-            that:
+          {t('facilities_quality.desc_text_3')}
           </h5>
           <ul>
             <li className="mt-3">
-              The Pharmaceutical Products are designed and developed in a way
-              that takes into account the requirements of Good Manufacturing
-              Practices (cGMP)
+            {t('facilities_quality.desc_text_4')}
             </li>
             <li className="mt-3">
-              Adequate arrangements are made for Manufacture, Supply and Use of
-              correct starting and packaging materials
+            {t('facilities_quality.desc_text_5')}
             </li>
             <li className="mt-3">
-              Adequate Controls on starting materials, Intermediate products and
-              Bulk Products. Calibrations and Validations are carried out.
+            {t('facilities_quality.desc_text_6')}
             </li>
             <li className="mt-3">
-              The Finished products are correctly processed and checked in
-              accordance with established procedures.
+            {t('facilities_quality.desc_text_7')}
             </li>
             <li className="mt-3">
-              The Products are not released for sale or supplied before
-              authorized persons have certified that each production batch has
-              been produced and controlled in accordance with the requirements
-              of the label claim and any other provisions relevant to
-              Production, Control and Release of products.
+            {t('facilities_quality.desc_text_8')}
             </li>
           </ul>
         </div>

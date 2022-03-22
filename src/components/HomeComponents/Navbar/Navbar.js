@@ -21,22 +21,22 @@ import ChangePassword from "../../ReusableComponents/modals/ChangePassword/Chang
 import SearchBar from "../../ReusableComponents/SearchComponent/SearchBar";
 import { ByTherapeutic } from "../ProductsData/productbytheraputic";
 import { FirstTime } from "../ProductsData/productsfirstimelaunch";
+import { useTranslation } from "react-i18next";
 //
 
 const Navbars = (props) => {
+  const { t, i18n } = useTranslation("common");
+  const [langtoggle, setLangtoggle] = useState("en");
   const history = useHistory();
 
-  const allarray = [ByTherapeutic,FirstTime]
+  const allarray = [ByTherapeutic, FirstTime];
   const AllmergeData = [];
-  allarray.map((item)=>{
-    return(
-      item.map((item1) =>{
-        AllmergeData.push(item1)
-      })
-    );
-  })
+  allarray.map((item) => {
+    return item.map((item1) => {
+      AllmergeData.push(item1);
+    });
+  });
 
-  
   const userRole = useSelector((state) => state?.logIn?.userRole);
   const dispatch = useDispatch();
   const logoutHandler = () => {
@@ -80,8 +80,8 @@ const Navbars = (props) => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top custom-nav " >
-        <div className="container" >
+      <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top custom-nav ">
+        <div className="container">
           <Link to="/">
             <img
               alt="logo"
@@ -102,34 +102,32 @@ const Navbars = (props) => {
             <span className="navbar-toggler-icon "></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent" >
-            <div className="ms-auto" >
-              <div className="row" >
-                <ul className="navbar-nav  justify-content-end text-uppercase fontsizefamily" >
-                  <li className="nav-item " >
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="ms-auto">
+              <div className="row">
+                <ul className="navbar-nav  justify-content-end text-uppercase fontsizefamily">
+                  <li className="nav-item ">
                     <NavLink
                       className="nav-link firstnav"
                       aria-current="page"
                       to="/sitemap"
                     >
-                      <span className="">Sitemap</span>
+                      <span className="">{t('header.site_map_text')}</span>
                       {/* <span className="custom_span_style"></span> */}
                     </NavLink>
                   </li>
-                  <li className="nav-item" >
+                  <li className="nav-item">
                     <NavLink
                       className="nav-link firstnav"
                       aria-current="page"
                       to="/careers"
                     >
-                      careers
+                      {t('header.careers_text')}
+                      
                     </NavLink>
                   </li>
                   <div className="col-sm-3">
-                    
-                    <SearchBar
-                    placeholder="Search" data={AllmergeData} 
-                    />
+                    <SearchBar placeholder=   {t('header.search_text')}  data={AllmergeData} />
                   </div>
 
                   {user ? (
@@ -166,7 +164,7 @@ const Navbars = (props) => {
                                   className="fa fa-id-card "
                                   style={{ fontSize: "13px" }}
                                 ></i>{" "}
-                                &nbsp;Dashboard
+                                &nbsp;  {t('header.dashboard_text')} 
                               </Link>
 
                               <Link
@@ -180,7 +178,7 @@ const Navbars = (props) => {
                                   className="fa fa-bell "
                                   style={{ fontSize: "13px" }}
                                 ></i>{" "}
-                                &nbsp;Notifications
+                                &nbsp;  {t('header.notifications_text')}
                               </Link>
 
                               {/* Change Password */}
@@ -195,7 +193,7 @@ const Navbars = (props) => {
                                   className="fa fa-key"
                                   style={{ fontSize: "13px" }}
                                 ></i>{" "}
-                                &nbsp;Change Password
+                                &nbsp;  {t('header.change_password_text')}
                               </Link>
 
                               <Link
@@ -207,7 +205,7 @@ const Navbars = (props) => {
                                   className="fa fa-sign-out "
                                   style={{ fontSize: "13px" }}
                                 ></i>
-                                &nbsp;Log Out
+                                &nbsp;  {t('header.logout_text')}
                               </Link>
                             </div>
                           </li>
@@ -229,7 +227,7 @@ const Navbars = (props) => {
                         aria-current="page"
                         to="#"
                       >
-                        login
+                         {t('header.login_text')}
                       </Link>
                     </li>
                   )}
@@ -261,7 +259,12 @@ const Navbars = (props) => {
                       style={{ listStyle: "none", background: "white" }}
                     >
                       <li>
-                        <Link className="dropdown-item conCapitalized " to="#">
+                        <div
+                          className="dropdown-item conCapitalized "
+                          onClick={() => {
+                            i18n.changeLanguage("en");
+                          }}
+                        >
                           <span>
                             {" "}
                             <img
@@ -269,12 +272,16 @@ const Navbars = (props) => {
                               alt="english"
                               style={{ width: "22px", marginRight: "10px" }}
                             />{" "}
-                            english
+                             {t('header.english_text')}
                           </span>
-                        </Link>
+                        </div>
                       </li>
                       <li>
-                        <Link className="dropdown-item conCapitalized" to="#">
+                        <div className="dropdown-item conCapitalized" 
+                        onClick={() => {
+                          i18n.changeLanguage("ar");
+                        }}
+                        >
                           <span>
                             {" "}
                             <img
@@ -282,12 +289,16 @@ const Navbars = (props) => {
                               alt="arabic"
                               style={{ width: "22px", marginRight: "10px" }}
                             />
-                            arabic{" "}
+                            {t('header.arabic_text')}  
                           </span>
-                        </Link>
+                        </div>
                       </li>
                       <li>
-                        <Link className="dropdown-item conCapitalized" to="#">
+                        <div className="dropdown-item conCapitalized"
+                        onClick={() => {
+                          i18n.changeLanguage("ban");
+                        }}
+                        >
                           <span>
                             {" "}
                             <img
@@ -295,9 +306,9 @@ const Navbars = (props) => {
                               alt="bengali"
                               style={{ width: "22px", marginRight: "10px" }}
                             />
-                            bengali
+                             {t('header.bengali_text')} 
                           </span>
-                        </Link>
+                        </div>
                       </li>
                     </ul>
                   </li>
@@ -314,7 +325,7 @@ const Navbars = (props) => {
                       exact
                       activeClassName="active"
                     >
-                      HOME
+                      {t('header.home_text')} 
                     </NavLink>
                   </li>
                   <li className="nav-item dropdown ">
@@ -328,7 +339,7 @@ const Navbars = (props) => {
                       data-bs-offset="10,20"
                       activeClassName="active"
                     >
-                      ABOUT-US
+                      {t('header.about_us_text')} 
                     </NavLink>
                     <ul
                       className="dropdown-menu "
@@ -349,7 +360,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/vision-mission"
                           >
-                            Vision & Mission
+                            {t('header.vision_mission_text')} 
                           </NavLink>
                         </li>
                         <li>
@@ -358,7 +369,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/health-associates"
                           >
-                            Health Associates{" "}
+                            {t('header.health_ass_text')}  
                           </Link>
                         </li>
                         <li>
@@ -367,7 +378,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/chairmen-profile"
                           >
-                            Chairman’s Profile{" "}
+                             {t('header.chairmans_profile')} 
                           </NavLink>
                         </li>
                         <li>
@@ -376,7 +387,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/message-from-chairmen"
                           >
-                            Message from Chairman
+                            {t('header.msg_frm_chair')} 
                           </NavLink>
                         </li>
                       </ul>
@@ -388,7 +399,7 @@ const Navbars = (props) => {
                       to="/global-operation"
                       activeClassName="active"
                     >
-                      global operation
+                       {t('header.global_operation')}
                     </NavLink>
                   </li>
 
@@ -402,7 +413,7 @@ const Navbars = (props) => {
                       aria-expanded="false"
                       activeClassName="active"
                     >
-                      Products
+                      {t('header.products_text')} 
                     </NavLink>
 
                     <ul
@@ -425,7 +436,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/by-trade-name"
                           >
-                            By trade name
+                          {t('header.by_trade_name')}   
                           </NavLink>
                         </li>
                         <li>
@@ -434,7 +445,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/by-generic-name"
                           >
-                            By generic name
+                          {t('header.by_generic_name')} 
                           </NavLink>
                         </li>
                         <li>
@@ -443,7 +454,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/by-therapeutic-class"
                           >
-                            By therapeutic class
+                          {t('header.by_therap_class')}   
                           </NavLink>
                         </li>
                         <li>
@@ -452,7 +463,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/first-time-launching"
                           >
-                            first time launching
+                       {t('header.first_time_launch')}      
                           </NavLink>
                         </li>
                       </ul>
@@ -468,7 +479,7 @@ const Navbars = (props) => {
                       aria-expanded="false"
                       activeClassName="active"
                     >
-                      Facilities
+                   {t('header.facilities_text')}  
                     </NavLink>
 
                     <ul
@@ -491,7 +502,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/research-and-development"
                           >
-                            Research and Development
+                         {t('header.reserch_and_develop')}  
                           </NavLink>
                         </li>
                         <li>
@@ -500,7 +511,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/product"
                           >
-                            Production
+                         {t('header.production_text')}   
                           </NavLink>
                         </li>
                         <li>
@@ -509,7 +520,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/quality"
                           >
-                            Quality Control
+                       {t('header.quality_control_text')}   
                           </NavLink>
                         </li>
                         <li>
@@ -518,7 +529,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/warhouse"
                           >
-                            Warehouse
+                          {t('header.warehouse_text')} 
                           </NavLink>
                         </li>
                         <li>
@@ -527,7 +538,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/our-distribution-network"
                           >
-                            Our distribution network
+                            {t('header.our_distribution_network')}
                           </NavLink>
                         </li>
                       </ul>
@@ -541,7 +552,7 @@ const Navbars = (props) => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Tele-Medicine
+                     {t('header.tele_medicine')}  
                     </a>
                     {/* <Link className="nav-link secnav" to="#" >
                       
@@ -557,7 +568,7 @@ const Navbars = (props) => {
                       aria-expanded="false"
                       activeClassName="active"
                     >
-                      media
+                      {t('header.media_text')}
                     </NavLink>
 
                     <ul
@@ -583,7 +594,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/video"
                           >
-                            video
+                          {t('header.video_text')}  
                           </Link>
                         </li>
                         <li>
@@ -592,7 +603,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/events"
                           >
-                            Events
+                           {t('header.events_text')}  
                           </NavLink>
                         </li>
                         {/* <li>
@@ -610,7 +621,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/social-media-post"
                           >
-                            social media post
+                           {t('header.social_media_post')}  
                           </NavLink>
                         </li>
                         <li>
@@ -619,7 +630,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/milestones"
                           >
-                            mile stones
+                           {t('header.mile_stones_text')} 
                           </NavLink>
                         </li>
                         <li>
@@ -628,7 +639,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="#"
                           >
-                            social responsibilities
+                           {t('header.social_resp_text')}  
                           </Link>
                         </li>
                       </ul>
@@ -644,7 +655,7 @@ const Navbars = (props) => {
                       aria-expanded="false"
                       activeClassName="active"
                     >
-                      contact
+                     {t('header.contact')} 
                     </NavLink>
 
                     <ul
@@ -667,7 +678,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/our-distribution-network"
                           >
-                            our distribution network
+                         {t('header.our_dist_net_text')}   
                           </NavLink>
                         </li>
                         <li>
@@ -676,7 +687,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/contactus"
                           >
-                            contact us
+                          {t('header.contact_us')}
                           </NavLink>
                         </li>
                       </ul>

@@ -7,21 +7,23 @@ import { toast } from "react-toastify";
 import { BASEURL } from "../services/HttpProvider";
 import { useHistory, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 const CareersInnerPage = (props) => {
+  const {t}=useTranslation('common')
   const history = useHistory();
   const { job_id } = useParams();
 
   const jobLevelList = [
-    {name: 'Executive'},
-    {name: 'Sr. Executive'},
-    {name: 'Assistant Manager'},
-    {name: 'Deputy Manager'},
-    {name: 'Manager'},
-    {name: 'Assistant General Manager'},
-    {name: 'General Manager'},
-    {name: 'Sales Manager'},
-    {name: 'National Sales Manager'},
+    {name: t('career_inner_page.name_text_1')},
+    {name: t('career_inner_page.name_text_2')},
+    {name: t('career_inner_page.name_text_3')},
+    {name: t('career_inner_page.name_text_4') },
+    {name: t('career_inner_page.name_text_5')},
+    {name: t('career_inner_page.name_text_6')},
+    {name: t('career_inner_page.name_text_7')},
+    {name: t('career_inner_page.name_text_8')},
+    {name: t('career_inner_page.name_text_9')},
   ]
 
 
@@ -40,7 +42,7 @@ const CareersInnerPage = (props) => {
     setdisableBtn(true);
     let formdata = new FormData();
     if (file === undefined || file === null) {
-      toast.error("Please upload Report");
+      toast.error(t('career_inner_page.upload_report'));
       return;
     } else {
       formdata.append("recipients", "hr@concordpharma-bd.com");
@@ -65,7 +67,7 @@ const CareersInnerPage = (props) => {
         }
       );
       if (res?.data?.response_code === 200) {
-        toast.success("Applied Successfully");
+        toast.success( t('career_inner_page.applied_success_text'));
         setdisableBtn(false);
         history.push('/careers')
       } else {
@@ -77,7 +79,7 @@ const CareersInnerPage = (props) => {
   return (
     <>
     <Helmet>
-        <title>Careers Detail - Concord Pharma</title>
+        <title> {t('career_inner_page.helmet.title_text')}</title>
       </Helmet>
       <div className="container">
         <div className="row d-flex justify-content-center">
@@ -90,16 +92,13 @@ const CareersInnerPage = (props) => {
             </div>
             <div className="row mb-3">
               <p className="px-3 text-justify">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry’s standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+              {t('career_inner_page.desc_text')}
               </p>
             </div>
             <div className="row mb-3">
               <div className="col">
                 <span style={{ color: "#0066b3", fontWeight: "600" }}>
-                  Apply Online
+                {t('career_inner_page.apply_online_text')}
                 </span>
               </div>
             </div>
@@ -108,7 +107,8 @@ const CareersInnerPage = (props) => {
                 <div className="row">
                   <div className="col-lg-3 my-2">
                     <label for="jobapp_full_name">
-                      Full Name
+                    {t('career_inner_page.full_name_text')}
+                  
                       <span
                         class="required"
                         style={{ color: "#f00", fontSize: "16px" }}
@@ -126,7 +126,7 @@ const CareersInnerPage = (props) => {
                       {...register("name", {
                         required: {
                           value: true,
-                          message: "this field is required field",
+                          message:t('career_inner_page.field_req_text'),
                         },
                       })}
                     />
@@ -140,7 +140,7 @@ const CareersInnerPage = (props) => {
                 <div className="row">
                   <div className="col-lg-3 my-2 ">
                     <label for="jobapp_full_name">
-                      Email
+                    {t('career_inner_page.email_text')}
                       <span
                         class="required"
                         required="required"
@@ -161,7 +161,7 @@ const CareersInnerPage = (props) => {
                       {...register("email", {
                         required: {
                           value: true,
-                          message: "this field is required field",
+                          message: t('career_inner_page.field_req_text'),
                         },
                       })}
                     />
@@ -175,7 +175,8 @@ const CareersInnerPage = (props) => {
                 <div className="row">
                   <div className="col-lg-3 my-2 ">
                     <label for="jobapp_full_name">
-                      Phone
+                    {t('career_inner_page.phone_text')}
+      
                       <span
                         class="required"
                         style={{ color: "#f00", fontSize: "16px" }}
@@ -192,11 +193,11 @@ const CareersInnerPage = (props) => {
                       id="jobapp_phone"
                       required="required"
                       autocomplete="off"
-                      placeholder="+880XXXXXXXX"
+                      placeholder= {t('career_inner_page.placeholder_phone')} 
                       {...register("phone", {
                         required: {
                           value: true,
-                          message: "this field is required field",
+                          message: t('career_inner_page.field_req_text') ,
                         },
                       })}
                     />
@@ -214,7 +215,8 @@ const CareersInnerPage = (props) => {
                   <div className="row">
                     <div className="col-lg-3 my-2 ">
                         <label for="jobapp_full_name">
-                          Interested Job Level
+                        {t('career_inner_page.interested_job_lvl')}
+                        
                         </label>
                       </div>
                       <div className="col-lg-9">
@@ -226,11 +228,11 @@ const CareersInnerPage = (props) => {
                             {...register("interested_job", {
                               required: {
                                 value: true,
-                                message: "This field is required field",
+                                message: t('career_inner_page.field_req_text'),
                               },
                             })}
                           >
-                            <option value="">Select Interested Job Level</option>
+                            <option value=""> {t('career_inner_page.opt_text_level')} </option>
                             {
                               jobLevelList.map((ob, index) => {
                               return <option value={ob.name}>{ob.name}</option>
@@ -250,7 +252,7 @@ const CareersInnerPage = (props) => {
                 <div className="row">
                 <div className="col-lg-3 my-3 ">
                     <label for="jobapp_full_name">
-                      Interested Area
+                    {t('career_inner_page.interested_area_text')}
                     </label>
                   </div>
                   <div className="col-lg-9">
@@ -262,11 +264,11 @@ const CareersInnerPage = (props) => {
                         {...register("interested_area", {
                           required: {
                             value: true,
-                            message: "This field is required field",
+                            message: t('career_inner_page.field_req_text') ,
                           },
                         })}
                       >
-                        <option value="">Select Interested Area</option>
+                        <option value=""> {t('career_inner_page.opt_1_text_area')}</option>
                         {
                           thanaList.map((ob, index) => {
                            return <option value={ob.name}>{ob.name}</option>
@@ -283,7 +285,7 @@ const CareersInnerPage = (props) => {
                 <div className="row">
                   <div className="col-lg-3 my-2 ">
                     <label for="jobapp_full_name">
-                      Attach Resume
+                    {t('career_inner_page.attach_resume')}
                       <span
                         class="required"
                         style={{ color: "#f00", fontSize: "16px" }}
@@ -318,7 +320,7 @@ const CareersInnerPage = (props) => {
                         color: "#FFF",
                         borderRadius: "0px",
                       }}
-                      value={"Submit"}
+                      value={ t('career_inner_page.submit_text')}
                       disabled={disableBtn}
                     />
                   </div>

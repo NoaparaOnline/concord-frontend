@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next';
 import Loader from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
 import DashboardMainCard from '../../components/ReusableComponents/DashboardMainCard/DashboardMainCard';
@@ -19,6 +20,7 @@ const Departmentheads = (
   const departmenthead = useSelector((state) => state?.director?.departmenthead);
 
   const dispatch = useDispatch();
+  const {t}=useTranslation('common')
 
   useEffect(() => {
     dispatch(getDepartmenthead());
@@ -47,10 +49,8 @@ const Departmentheads = (
          <NavbarDash
             sidebarOpen={sidebarOpen}
             openSidebar={openSidebar}
-            Heading="Department Head"
+            Heading={t('department_head.department_head_text')}
           />
-
-          
             <DashboardMainCard
               classnamewidth="96%"
 
@@ -72,7 +72,7 @@ const Departmentheads = (
                           borderRadius: "10px",
                           minWidth: "240px"
                         }}
-                        placeholder="Search"
+                        placeholder= {t('department_head.search_text')} 
                         onChange={(e) => searchItems3(e.target.value)}
                       />
                     </div>
@@ -95,7 +95,7 @@ const Departmentheads = (
                         <React.Fragment key={ob.id}>
                           <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
                             <DashCard
-                              datahead="Department Head"
+                              datahead={t('department_head.department_head_text')} 
                               dataname={ob.name}
                               datadesignation={ob.designation}
                               dataemail={ob.email}
@@ -110,7 +110,7 @@ const Departmentheads = (
                       <React.Fragment key={ob.id}>
                         <div className="col-xl-4 col-lg-4 col-lg-6 col-lg-6 col-md-6 col-sm-12 mb-4">
                           <DashCard
-                            datahead="Department Head"
+                            datahead={t('department_head.department_head_text')} 
                             dataname={ob.name}
                             datadesignation={ob.designation}
                             dataemail={ob.email}

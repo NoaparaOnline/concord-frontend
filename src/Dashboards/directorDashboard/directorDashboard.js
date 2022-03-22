@@ -28,11 +28,12 @@ import Notifications from "../../components/ReusableComponents/modals/Notificati
 import ChangePassword from "../../components/ReusableComponents/modals/ChangePassword/ChangePassword";
 import Distributionstocksdetails from "./Distributionstocksdetails";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 
 
 const DirectorDashboard = (props) => {
-
+ const {t}=useTranslation('common');
 
   // SORTED DATAFIELDS TABLE OF REACT-BOOTSTRAP-DATATABLES
   const deopdefaultSorted = [
@@ -103,16 +104,16 @@ const DirectorDashboard = (props) => {
 
  
   // Selected Buttons
-  const [selectedTab0, setSelectedTab0] = useState("All");
+  const [selectedTab0, setSelectedTab0] = useState(t('director_dashboard.all_text'));
 
 
 //  BUTTON TAB HANDLER FUNCTIONS
   const tabHandler0 = (item) => {
     setSelectedTab0(item);
 
-    if (item === "All") {
+    if (item === t('director_dashboard.all_text')) {
       // tabledataHandler(schedule);
-    } else if (item === "Regions") {
+    } else if (item === t('director_dashboard.region_text')) {
       // tabledataHandler(filterd);
     } 
   };
@@ -143,7 +144,7 @@ const DirectorDashboard = (props) => {
   return (
     <>
        <Helmet>
-        <title>Dashboard - Concord Pharma</title>
+        <title>{t('director_dashboard.helmet.title_text')}</title>
       </Helmet>
     <div className="sidecontainer" style={{ background: "#EFFBEF" }}>
       <Router>
@@ -206,7 +207,7 @@ const DirectorDashboard = (props) => {
              sidebarOpen={sidebarOpen}
              openSidebar={openSidebar}
              deopdefaultSorted={deopdefaultSorted}
-             Heading="Distribution Center Stock Details"
+             Heading={t('director_dashboard.dist_cent_sto_deta')}
              linkRoute="/director-dashboard/distributioncenter"
              {...props}
           />
@@ -220,7 +221,7 @@ const DirectorDashboard = (props) => {
                 Colr="#0066b3"
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #089DA4" }}
-                btnName="Home"
+                btnName=  {t('director_dashboard.home_text')}
                 disablelink={true}
                 classlogout={"sidebar__logout"}
                 onClick={homepage}
@@ -231,7 +232,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #089DA4" }}
                 btnroute=""
-                btnName="Reports"
+                btnName= {t('director_dashboard.reports_text')}
               />
               {/* <SiderbarBtn
                 imgbtn={icon2}
@@ -248,7 +249,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #7F2987" }}
                 btnroute="products"
-                btnName="Products"
+                btnName= {t('director_dashboard.products_text')}
               />
               <SiderbarBtn
                 imgbtn={icon4}
@@ -256,7 +257,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #4B8F8C" }}
                 btnroute="newlylaunched"
-                btnName="Newly Launched"
+                btnName= {t('director_dashboard.newly_launched')} 
               />
               <SiderbarBtn
                 imgbtn={icon5}
@@ -264,7 +265,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 btnroute="distributioncenter"
-                btnName="Distribution Center"
+                btnName={t('director_dashboard.dist_center')}
               />
 
               <SiderbarBtn
@@ -273,7 +274,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #07A04A" }}
                 btnroute="departmenthead"
-                btnName="Department Head"
+                btnName= {t('director_dashboard.dpt_head')}
               />
               <div className="mt-3">
               <NavLink
@@ -287,7 +288,7 @@ const DirectorDashboard = (props) => {
               >
               <li className="mb-2 ms-4">
                 <img src={icon111} alt="icon" width="36" height="36" />
-                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#DB2323", fontWeight: '700' }}>Notification</span>
+                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#DB2323", fontWeight: '700' }}>{t('director_dashboard.notification')}</span>
               </li>
             </NavLink>
             </div>
@@ -303,7 +304,7 @@ const DirectorDashboard = (props) => {
               >
               <li className="mb-2 ms-4">
                 <img src={icon112} alt="icon" width="36" height="36" />
-                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#6421FF", fontWeight: '700' }}>Change Password</span>
+                <span className="links_name" style={{ fontSize: '12px', padding: '10px', color: "#6421FF", fontWeight: '700' }}>{t('director_dashboard.change_password')}</span>
               </li>
             </NavLink>
             </div>
@@ -313,7 +314,7 @@ const DirectorDashboard = (props) => {
                 {...props}
                 borderSidebtn={{ borderRight: "6px solid #BB2026" }}
                 disablelink={true}
-                btnName="Logout"
+                btnName= {t('director_dashboard.logout_text')}
                 classlogout={"sidebar__logout"}
                 onClick={logouthandler}
               />
@@ -321,7 +322,7 @@ const DirectorDashboard = (props) => {
           }
           sidebarOpen={sidebarOpen}
           closeSidebar={closeSidebar}
-          Loca="Director"
+          Loca= {t('director_dashboard.director_text')}
           {...props}
         />
       </Router>

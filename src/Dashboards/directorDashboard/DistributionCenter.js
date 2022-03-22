@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next';
 import Loader from 'react-loader-spinner';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
@@ -12,7 +13,7 @@ import { getDistributioncenter, getSingleDistributionObj, getSingleDistributionO
 const DistributionCenter = (
   props
 ) => {
-
+  const {t}=useTranslation('common')
   const sidebarOpen = props?.sidebarOpen;
   const openSidebar = props?.openSidebar;
 
@@ -51,7 +52,7 @@ const DistributionCenter = (
       <NavbarDash
         sidebarOpen={sidebarOpen}
         openSidebar={openSidebar}
-        Heading="Distribution Center"
+        Heading={t('distribution_center.dist_center')}
       />
 
 
@@ -79,7 +80,7 @@ const DistributionCenter = (
                     
                     
                   }}
-                  placeholder="Search"
+                  placeholder={t('distribution_center.search_text')}
                   onChange={(e) => searchItems2(e.target.value)}
                 />
               </div>
@@ -268,7 +269,7 @@ const DistributionCenter = (
                             if(obdep?.is_primary)
                               {
                                 return (
-                                  `${obdep?.address.street_address === undefined ? "" : obdep?.address.street_address +','} ${obdep?.address.area === undefined ? "N/A" : obdep?.address.area +','} ${obdep?.address.province === undefined ? "" : obdep?.address.province +','} ${obdep?.address.city === undefined ? "" : obdep?.address.city } ` 
+                                  `${obdep?.address.street_address === undefined ? "" : obdep?.address.street_address +','} ${obdep?.address.area === undefined ? t('distribution_center.n_a') : obdep?.address.area +','} ${obdep?.address.province === undefined ? "" : obdep?.address.province +','} ${obdep?.address.city === undefined ? "" : obdep?.address.city } ` 
                                   );
                               }
                               else{

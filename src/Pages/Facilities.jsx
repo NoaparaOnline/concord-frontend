@@ -9,40 +9,41 @@ import facilitiescard3 from '../Statics/assets/facilities/fac3.png'
 import facilitiescard4 from '../Statics/assets/facilities/fac4.png'
 import facilitiescard5 from '../Statics/assets/facilities/fac5.png'
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 
 const Facilities = () => {
-
+ const {t}=useTranslation('common')
   // Zoomcards Map Data
   const facilitiescard = [
     {
       id: 0,
       imageURL: facilitiescard1,
-      text: "Research and Development",
+      text:t('facilities.research_and_development_text'),
       link: "/research-and-development",
     },
     {
       id: 1,
       imageURL: facilitiescard2,
-      text: "Production",
+      text: t('facilities.production_text'),
       link: "/product",
     },
     {
       id: 2,
       imageURL: facilitiescard3,
-      text: "Quality Control",
+      text: t('facilities.quality_control_text'),
       link: "/quality",
     },
     {
       id: 3,
       imageURL: facilitiescard4,
-      text: "Warehouse",
+      text: t('facilities.warehouse_text'),
       link: "/warhouse",
     },
     {
       id: 4,
       imageURL: facilitiescard5,
-      text: "Our Distribution Network",
+      text: t('facilities.distribution_text'),
       link: "/our-distribution-network",
     },
   ];
@@ -60,9 +61,9 @@ const Facilities = () => {
 
     <>
     <Helmet>
-        <title>Facilities - Concord Pharma</title>
+        <title>{t('facilities.helmet.title_text')}</title>
       </Helmet>
-      <BannerWithText imgSrc={bannerimg} heading={'Facilities'} subHeading={`FACILITIES`}
+      <BannerWithText imgSrc={bannerimg} heading={t('facilities.facilities_text')} subHeading={t('facilities.facilities_text').toUpperCase()}
         LinksBan={LinksBan}
         height={"400px"}
         
@@ -73,7 +74,7 @@ const Facilities = () => {
         fontsize={"60px"}
 
       />
-      <Heading heading={"Facilities"} />
+      <Heading heading={t('facilities.facilities_text')} />
 
 
       {/* Zoom Cards */}
