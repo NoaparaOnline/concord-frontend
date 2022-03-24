@@ -3,8 +3,14 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { filterComponentData } from "../../../Utils/functions";
 
 const Footer = () => {
+  const component = useSelector((state) => state?.cmsReducer?.components);
+  const lang = useSelector((state) => state?.cmsReducer?.language);
+  const contact_us_footer = filterComponentData(component, "contact_us_footer", lang)
+  console.log(contact_us_footer,"contact_us_international_business");
   const {t}=useTranslation('common')
   return (
 
@@ -189,19 +195,19 @@ const Footer = () => {
 
                   <ul className="list-unstyled">
                   <li className="">
-              <span className="Typograpy_lastblock_Span"> {t('footer.call_text')+":"}</span><a href="tel:++01991146559"   className="text-white"
-                  style={{textDecoration:'none'}}><span> {t('footer.phone_number_text')}</span></a> 
+              <span className="Typograpy_lastblock_Span"> {t('footer.call_text')+":"}</span><a href={contact_us_footer?.contact ? `tel:${contact_us_footer?.contact}` : "tel:++01991146559"}    className="text-white"
+                  style={{textDecoration:'none'}}><span> {contact_us_footer?.contact ? contact_us_footer?.contact: t('footer.phone_number_text')}</span></a> 
               </li>
               <li className="">
              
               <span className="Typograpy_lastblock_Span">  {t('footer.email_text')} </span> 
               <a
-                  href="mailto:info@concordpharma-bd.com"
+                  href={contact_us_footer?.email ? `mailto:${contact_us_footer?.email}` : "mailto:info@concordpharma-bd.com"}
                   className="text-white"
                   style={{textDecoration:'none'}}
                 >
-                  {t('footer.home_text')}
-                   info@concordpharma-bd.com
+                  {/* {t('footer.home_text')} */}
+                  {contact_us_footer?.email ? contact_us_footer?.email:  "info@concordpharma-bd.com"}
                 </a>
               </li>
               <li className="mb-2">
