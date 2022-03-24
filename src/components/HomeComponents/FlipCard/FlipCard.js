@@ -37,8 +37,8 @@ const FlipCard = (props) => {
                     className="card-title front-text text-white"
                     style={{ fontSize: "19px", fontWeight: "500" }}
                   >
-                    {currentpath === "/by-generic-name"
-                      ? card?.name
+                    {card?.title
+                      ? card?.title
                       : card?.name
                       ? card?.name
                       : title}
