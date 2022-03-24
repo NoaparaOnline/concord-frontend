@@ -11920,7 +11920,7 @@ export const ByTherapeutic = [
     ],
     btn: "Read More",
     btnlink: "/prod-details",
-    type: "tablet",
+    type: "Tablet",
   },
 
   {
