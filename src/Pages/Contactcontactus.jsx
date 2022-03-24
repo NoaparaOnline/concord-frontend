@@ -17,7 +17,7 @@ const Contact_contactus = () => {
   const contact_us_corporate_business = filterComponentData(component, "contact_us_corporate_business", lang)
   const contact_form_services = filterComponentData(component, "contact_form_services", lang)
   const contact_us_form_labels = filterComponentData(component, "contact_us_form_labels", lang)
-
+  console.log(contact_us_international_business, "contact_us_international_business");
 
 
   const dispatch = useDispatch();
@@ -164,7 +164,9 @@ const Contact_contactus = () => {
                     </div>
 
                     <div className="service-icon1">
-                      <i className="fa fa-map-marker" aria-hidden="true"></i>
+                      {/* <i className="fa fa-map-marker" aria-hidden="true"></i> */}
+                      <img src={item?.image} />
+
                     </div>
                   </div>
                 ))}
@@ -237,7 +239,8 @@ const Contact_contactus = () => {
                   </div>
 
                   <div className="service-icon1">
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
+                    {/* <i className="fa fa-map-marker" aria-hidden="true"></i> */}
+                    <img src={item?.image} />
                   </div>
                 </div>
               ))}
@@ -422,7 +425,7 @@ const Contact_contactus = () => {
                   style={{ fontWeight: "600", backgroundColor: "#0066b3" }}
                 >
                   <span>
-                    {contact_us_form_labels?.button ? contact_us_form_labels?.button :t('contact_contact_us.submit_btn')}
+                    {contact_us_form_labels?.button ? contact_us_form_labels?.button : t('contact_contact_us.submit_btn')}
                   </span>
                 </button>
               </form>

@@ -40,8 +40,8 @@ const FlipCard = (props) => {
                     {card?.title
                       ? card?.title
                       : card?.name
-                      ? card?.name
-                      : title}
+                        ? card?.name
+                        : title}
                   </h5>
                   <h6
                     className="card-title front-text text-white"
@@ -50,10 +50,10 @@ const FlipCard = (props) => {
                     {card?.name
                       ? card?.name
                       : text1 != " "
-                      ? text1
-                      : card?.subtitle
-                      ? card?.subtitle
-                      : title}
+                        ? text1
+                        : card?.subtitle
+                          ? card?.subtitle
+                          : title}
                   </h6>
                   <h6
                     className="card-title front-text text-white"
@@ -62,8 +62,8 @@ const FlipCard = (props) => {
                     {card?.text2
                       ? card?.text2
                       : card?.info
-                      ? card?.info
-                      : text2}
+                        ? card?.info
+                        : text2}
                   </h6>
                 </div>
                 {card?.img ? (
@@ -124,11 +124,11 @@ const FlipCard = (props) => {
                     className="card-title front-text text-white"
                     style={{ fontSize: "19px", fontWeight: "500" }}
                   >
-                    {currentpath === "/by-generic-name"
-                      ? card?.name
+                    {card?.title
+                      ? card?.title
                       : card?.name
-                      ? card?.name
-                      : title}
+                        ? card?.name
+                        : title}
                   </h5>
                   <h6
                     className="card-title front-text text-white"
@@ -137,10 +137,10 @@ const FlipCard = (props) => {
                     {card?.name
                       ? card?.name
                       : text1 != " "
-                      ? text1
-                      : card?.subtitle
-                      ? card?.subtitle
-                      : title}
+                        ? text1
+                        : card?.subtitle
+                          ? card?.subtitle
+                          : title}
                   </h6>
                   <h6
                     className="card-title front-text text-white"
@@ -149,8 +149,8 @@ const FlipCard = (props) => {
                     {card?.text2
                       ? card?.text2
                       : card?.info
-                      ? card?.info
-                      : text2}
+                        ? card?.info
+                        : text2}
                   </h6>
                 </div>
                 {card?.img ? (
