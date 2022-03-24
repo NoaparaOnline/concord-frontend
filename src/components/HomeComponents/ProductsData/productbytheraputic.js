@@ -1885,9 +1885,9 @@ export const ByTherapeutic = [
 
   {
     id: 11,
-    title: "Convit B  200 Syrup",
+    title: "Convit B 200 Syrup",
 
-    therapeutic_class: "vitamin",
+    therapeutic_class: "vitamin & minerals",
     text1: " ",
     text2: " ",
     imgf: convitb200fr,
@@ -2014,7 +2014,7 @@ export const ByTherapeutic = [
   {
     id: 12,
     title: "Convit Z 100 ml Syrup",
-    therapeutic_class: "vitamin",
+    therapeutic_class: "vitamin & minerals",
     text1: " ",
     text2: " ",
     imgf: convitz100fr,
@@ -2152,7 +2152,7 @@ export const ByTherapeutic = [
   {
     id: 13,
     title: "Convit Z 200 ml Syrup",
-    therapeutic_class: "vitamin",
+    therapeutic_class: "vitamin & minerals",
     text1: " ",
     text2: " ",
     imgf: convitz200fr,
@@ -2290,7 +2290,7 @@ export const ByTherapeutic = [
   {
     id: 14,
     title: "Conzi 100 ml Syrup",
-    therapeutic_class: "vitamin",
+    therapeutic_class: "vitamin & minerals",
     text1: " ",
     text2: " ",
     imgf: conzi100fr,
@@ -6321,7 +6321,7 @@ export const ByTherapeutic = [
   {
     id: 42,
     title: "Maxvit D 20000 Tablet",
-    therapeutic_class: "vitamin",
+    therapeutic_class: "vitamin & minerals",
 
     text1: " ",
     imgf: maxvitd20000fr,
@@ -6459,7 +6459,7 @@ export const ByTherapeutic = [
   {
     id: 43,
     title: "Maxvit D 40000 Tablet",
-    therapeutic_class: "vitamin",
+    therapeutic_class: "vitamin & minerals",
 
     text1: " ",
     text2: " ",
@@ -7011,7 +7011,7 @@ export const ByTherapeutic = [
   {
     id: 47,
     title: "Monocal D Box Tablet",
-    therapeutic_class: "vitamin",
+    therapeutic_class: "vitamin & minerals",
 
     text1: " ",
     text2: " ",
@@ -7139,7 +7139,7 @@ export const ByTherapeutic = [
   {
     id: 48,
     title: "Monocal D Pot Tablet",
-    therapeutic_class: "vitamin",
+    therapeutic_class: "vitamin & minerals",
 
     text1: " ",
     text2: " ",
@@ -7265,7 +7265,7 @@ export const ByTherapeutic = [
   {
     id: 49,
     title: "My Zinc Tablet",
-    therapeutic_class: "vitamin",
+    therapeutic_class: "vitamin & minerals",
 
     text1: " ",
     text2: " ",
