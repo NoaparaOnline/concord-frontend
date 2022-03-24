@@ -165,7 +165,7 @@ const Contact_contactus = () => {
 
                     <div className="service-icon1">
                       {/* <i className="fa fa-map-marker" aria-hidden="true"></i> */}
-                      <img src={item?.image} />
+                      <img src={item?.image} height="20" width="15"/>
 
                     </div>
                   </div>
@@ -240,7 +240,7 @@ const Contact_contactus = () => {
 
                   <div className="service-icon1">
                     {/* <i className="fa fa-map-marker" aria-hidden="true"></i> */}
-                    <img src={item?.image} />
+                    <img src={item?.image} height="25" width="15"/>
                   </div>
                 </div>
               ))}
