@@ -7,7 +7,7 @@ import ReactPaginate from "react-paginate";
 import { ByTherapeutic } from "../components/HomeComponents/ProductsData/productbytheraputic";
 import useMediaQuery from "../components/ReusableComponents/MediaQueryCustomHook";
 import { Helmet } from "react-helmet";
-import { filterComponentData } from "../Utils/functions";
+import { capitalize, filterComponentData } from "../Utils/functions";
 import { useSelector } from "react-redux";
 
 const Products_therapeutic = (props) => {
@@ -251,9 +251,9 @@ const Products_therapeutic = (props) => {
                         <option value="hand-sanitizer">
                           Hand Sanitizer & Anticeptic Agent
                         </option>
-                        <option value="vitamin">Vitamin & Minerals</option></> : therapeutic_class?.map((item) => (
+                        <option value="vitamin & minerals">Vitamin & Minerals</option></> : therapeutic_class?.map((item) => (
                           <option className="text-capitalize" value={item?.name}>
-                            {item?.name}
+                            {capitalize(item?.name)}
                           </option>
                         ))
                   }
@@ -345,7 +345,7 @@ const Products_therapeutic = (props) => {
                               value={item?.name}
                               onChange={() => filteredtype(item?.name)}
                             />
-                            <label htmlFor={item?.name}>{item?.name}</label>
+                            <label className="text-capitalize" htmlFor={item?.name}>{item?.name}</label>
                             <br />
                           </>
                         ))

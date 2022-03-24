@@ -10,7 +10,6 @@ const Footer = () => {
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
   const contact_us_footer = filterComponentData(component, "contact_us_footer", lang)
-  console.log(contact_us_footer,"contact_us_international_business");
   const {t}=useTranslation('common')
   return (
 
