@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Loader from "react-loader-spinner";
 import Select from "react-select";
 import moment from "moment";
-
 import CustomSelectInput from "../../components/ReusableComponents/CustomSelectInput";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -15,6 +14,8 @@ import {
   ViewChildSalesManagerManagerAction,
 } from "../../Store/Actions/directorActions";
 import { useTranslation } from "react-i18next";
+import Lightbox from "rhino-react-image-lightbox-rotate";
+import "react-image-lightbox/style.css";
 
 const PrescriptionReport = () => {
   const dispatch = useDispatch();
@@ -23,17 +24,15 @@ const PrescriptionReport = () => {
   const loadingSM = useSelector((state) => state?.director?.loadingSm);
   const [prescription, setPrescription] = useState([]);
   const loadingAM = useSelector((state) => state?.director?.loadingAm);
-
   const loadingRSM = useSelector((state) => state?.director?.loadingRsm);
   const loadingMPO = useSelector((state) => state?.director?.loadingMpo);
   const sm = useSelector((state) => state?.director?.salesManager);
-
-
+  const [photoIndex,setPhotoIndex] = useState(0);
+  const [show, setShow] = useState(false)
+  const [data, setData] = useState([])
   const rsm = useSelector((state) => state?.director?.rsm);
   const am = useSelector((state) => state?.director?.am);
   const mpo = useSelector((state) => state?.director?.mpo);
-
-
   const [from, setFrom] = useState();
   const [to, setTo] = useState();
   let convertFrom = moment(from).unix();
@@ -55,7 +54,6 @@ const PrescriptionReport = () => {
 
     setPrescription(res?.data?.response_data);
   };
-
   let areaManagerOption = [];
   am?.map((item) =>
     areaManagerOption?.push({
@@ -72,7 +70,6 @@ const PrescriptionReport = () => {
       key: item?.uid,
     })
   );
-
   let regionalSalesManagerOption = [];
   rsm?.map((item) =>
     regionalSalesManagerOption?.push({
@@ -107,7 +104,10 @@ const PrescriptionReport = () => {
     return dates;
   };
   let dateArray = enumerateDaysBetweenDates(from, to);
-
+  const handleClick = (item) => {
+    setData(item)
+    setShow(true)
+}
   return (
     <>
       <Row>
@@ -252,14 +252,14 @@ const PrescriptionReport = () => {
                         from !== undefined && to !== undefined ?
                             <div className='table-responsive' >
 
-                                <table style={{ tableLayout: 'fixed', width: '500px' ,marginTop:'15px'}}>
+                                <table style={{ tableLayout: 'fixed', width: '500px' ,marginTop:'15px', marginBottom: "50px"}}>
                                     {/* className='table-responsive' */}
                                     <thead>
                                         <tr>
                                             <td style={{ width: '120px', fontWeight: 'bold' }}> {t('prescription_report.name_text')}</td>
                                             {dateArray?.map((item) => {
                                                 return (
-                                                    <th style={{ width: '80px' }}>{item}</th>
+                                                    <th style={{ width: '140px' }}>{item}</th>
                                                 )
                                             })}
                                             <th style={{ width: '80px' }}>  {t('prescription_report.sum_text')}</th>
@@ -277,7 +277,15 @@ const PrescriptionReport = () => {
 
                                                     </td>
 
-                                                    {item?.prescription?.map((item_) => <td>{item_?.length}</td>)}
+                                                    {item?.prescription?.map((item_) => <td>{item_?.length > 0 ?
+
+<button className='btn btn-secondary' style={{ opacity: "0.5" }} onClick={() => handleClick(item_)}>{`${item_?.length}`}</button>
+
+: item_?.length
+
+
+
+}</td>)}
                                                     <td>{item?.sum}</td>
                                                 </tr>
                                             )
@@ -287,6 +295,22 @@ const PrescriptionReport = () => {
                                     </tbody>
                                 </table>
                             </div> : null}
+                            {show && (
+            <Lightbox
+              mainSrc={data[photoIndex]}
+              nextSrc={data[(photoIndex + 1) % data.length]}
+              prevSrc={data[(photoIndex + data.length - 1) % data.length]}
+              onCloseRequest={() => setShow(!show)}
+              onMovePrevRequest={() =>
+               
+                setPhotoIndex((photoIndex + data.length - 1) % data.length)
+               
+              }
+              onMoveNextRequest={() =>
+                setPhotoIndex((photoIndex + 1) % data.length)
+                }
+            />
+          )}
     </>
   );
 };
