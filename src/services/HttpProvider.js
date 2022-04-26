@@ -4,7 +4,7 @@ import { getToken, logout } from "../Utils/auth.util";
 // const BASE_URL = "prod link";
 // https://dmfr-backend.herokuapp.com/api/v1/
 // https://concord-backend-m1.herokuapp.com/
-export const BASEURL = "https://concordpharma-bd.com/api"
+export const BASEURL = "https://concordpharma-bd.com/api";
 // export const BASEURL = "https://concord-backend-m2.herokuapp.com/api";
 
 const BASE_URL = BASEURL;
@@ -20,7 +20,6 @@ export async function getApiRequestHeader() {
     "Content-Type": "application/json",
     "x-session-key": key,
     "x-session-type": type,
-    
   };
 }
 
@@ -49,10 +48,10 @@ export async function request({ method, url, data, headers }) {
       response?.data?.response_code === 401
     ) {
       toast.error(response?.data?.response_message);
-      setTimeout(() => {
-        logout();
-        window.location.href = "/";
-      }, 2000);
+      // setTimeout(() => {
+      //   logout();
+      //   window.location.href = "/";
+      // }, 2000);
     }
   } catch (error) {
     throw error.response;
@@ -88,7 +87,7 @@ export async function get(url, params, featureAndAction, config) {
   for (var key in params) {
     url = url + "" + params[key];
   }
-  return request({ method: "get", url, data:  featureAndAction , ...config });
+  return request({ method: "get", url, data: featureAndAction, ...config });
 }
 
 export async function del(url, params, config) {

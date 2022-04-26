@@ -18,7 +18,7 @@ const SERVICE_URLS = {
   getSchedules: "schedules/read",
   addSchedules: "schedules/create",
   SchedulesApprovalStatusChanges: "schedules/status",
-  getSM: 'users/read/sm',
+  getSM: "users/read/sm",
 
   // getdoctors: "doctors/read",
   // getcustomers: "customers/read",
@@ -31,13 +31,12 @@ const SERVICE_URLS = {
   // seeAllNotification: "notifications/read",
   seeAllNotification: "notifications/read?is_seen=1",
   getAllThana: "region-classifications/read-thanas",
-  childSm: 'fieldstaffs/childs/sm',
-  getdoctors: 'doctors/read',
+  childSm: "fieldstaffs/childs/sm",
+  getdoctors: "doctors/read",
 
   // CMS
-  readComponent: 'cms/components/read',
-  readLang: 'cms/languages/read',
-
+  readComponent: "cms/components/read",
+  readLang: "cms/languages/read",
 };
 
 const login = (data) =>
@@ -116,29 +115,43 @@ const getproductsall = () =>
   get(SERVICE_URLS.getproductsall, {}, { feature: featureConstants.static });
 
 const getproductsnew = () =>
-
   get(SERVICE_URLS.getproductsnew, {}, { feature: featureConstants.static });
 
 const getdepartmenthead = () =>
   get(SERVICE_URLS.getdepartmenthead, {}, { feature: featureConstants.static });
 
 const getdistributioncenter = () =>
-  get(SERVICE_URLS.getdistributioncenter, {}, { feature: featureConstants.static });
-
+  get(
+    SERVICE_URLS.getdistributioncenter,
+    {},
+    { feature: featureConstants.static }
+  );
 
 const getallNotification = () =>
-  get(SERVICE_URLS.getallNotification, {}, {
-    feature: featureConstants.static,
-  });
+  get(
+    SERVICE_URLS.getallNotification,
+    {},
+    {
+      feature: featureConstants.static,
+    }
+  );
 const seeAllNotification = () =>
-  get(SERVICE_URLS.seeAllNotification, {}, {
-    feature: featureConstants.static,
-  });
+  get(
+    SERVICE_URLS.seeAllNotification,
+    {},
+    {
+      feature: featureConstants.static,
+    }
+  );
 
 const getAllThana = () =>
-  get(SERVICE_URLS.getAllThana, {}, {
-    feature: featureConstants.static
-  });
+  get(
+    SERVICE_URLS.getAllThana,
+    {},
+    {
+      feature: featureConstants.static,
+    }
+  );
 
 const getSm = async () =>
   get(
@@ -158,14 +171,20 @@ const getChildSm = async () =>
   );
 
 const getstocksofSm = (uid) =>
-  get(SERVICE_URLS.getStocksMedicineProducts + `?child_uid=${uid}`, { feature: featureConstants.static });
+  get(SERVICE_URLS.getStocksMedicineProducts + `?child_uid=${uid}`, {
+    feature: featureConstants.static,
+  });
 const getsmdoctors = (uid) =>
-  get(SERVICE_URLS.getdoctors + `?child_uid=${uid}`, { feature: featureConstants.static });
+  get(SERVICE_URLS.getdoctors + `?child_uid=${uid}`, {
+    feature: featureConstants.static,
+  });
 //=========================
 
 // cms
-const ReadComponent = () => get(SERVICE_URLS.readComponent, {}, { feature: featureConstants.static })
-const ReadLang = () => get(SERVICE_URLS.readLang, {}, { feature: featureConstants.static })
+const ReadComponent = () =>
+  get(SERVICE_URLS.readComponent, {}, { feature: featureConstants.static });
+const ReadLang = () =>
+  get(SERVICE_URLS.readLang, {}, { feature: featureConstants.static });
 
 const apiServices = {
   // define variables
@@ -200,6 +219,6 @@ const apiServices = {
   getstocksofSm,
   // CMS
   ReadComponent,
-  ReadLang
+  ReadLang,
 };
 export default apiServices;
