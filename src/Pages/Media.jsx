@@ -17,6 +17,9 @@ const Media = () => {
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
   const media_card = filterComponentData(component, "media_card", lang)
+  const media_header = filterComponentData(component, "media_header", lang)
+  console.log(media_header, "media_header");
+
   const { t } = useTranslation('common')
   const mediacard = [
     {
@@ -79,7 +82,7 @@ const Media = () => {
         conmarpad={"mt-5 pt-5"}
         fontsize={"60px"}
       />
-      <Heading heading={t('media.media_text')} />
+      <Heading heading={media_header?.heading ? media_header?.heading : t('media.media_text')} />
 
 
 
@@ -97,7 +100,7 @@ const Media = () => {
           ) : media_card?.map((ob, index) => (
             <React.Fragment key={index}>
               <div className={index === 0 ? `col-lg-2 offset-lg-1 col-md-3 mt-4` : `col-lg-2 col-md-3 mt-4`}>
-                <ZoominCards abcard={ob} html={true}/>
+                <ZoominCards abcard={ob} html={true} />
               </div>
             </React.Fragment>
           )
