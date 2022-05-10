@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, FormLabel, FormGroup, Row } from "react-bootstrap";
+import { Col, FormLabel, FormGroup, Row, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "react-loader-spinner";
 import Select from "react-select";
@@ -19,7 +19,7 @@ import "react-image-lightbox/style.css";
 
 const PrescriptionReport = () => {
   const dispatch = useDispatch();
-  const {t}=useTranslation('common')
+  const { t } = useTranslation("common");
   const [loading, setLoading] = useState(false);
   const loadingSM = useSelector((state) => state?.director?.loadingSm);
   const [prescription, setPrescription] = useState([]);
@@ -27,9 +27,11 @@ const PrescriptionReport = () => {
   const loadingRSM = useSelector((state) => state?.director?.loadingRsm);
   const loadingMPO = useSelector((state) => state?.director?.loadingMpo);
   const sm = useSelector((state) => state?.director?.salesManager);
-  const [photoIndex,setPhotoIndex] = useState(0);
-  const [show, setShow] = useState(false)
-  const [data, setData] = useState([])
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [show, setShow] = useState(false);
+  const [data, setData] = useState([]);
+  const [child_uid, setChild_uid] = useState("");
+
   const rsm = useSelector((state) => state?.director?.rsm);
   const am = useSelector((state) => state?.director?.am);
   const mpo = useSelector((state) => state?.director?.mpo);
@@ -38,21 +40,37 @@ const PrescriptionReport = () => {
   let convertFrom = moment(from).unix();
   let convertTo = moment(to).unix();
   const getPrescriptionReport = async (id) => {
-    setLoading(true);
-    const authToken = JSON.parse(localStorage.getItem("tokenConcord"));
-    let res = await axios.get(
-      BASEURL +
-        `/reports/prescriptions?child_uid=${id}&from_date=${convertFrom}&to_date=${convertTo}`,
-      {
-        headers: {
-          "x-session-key": authToken?.key,
-          "x-session-type": authToken?.type,
-        },
-      }
-    );
-    setLoading(false);
-
-    setPrescription(res?.data?.response_data);
+    if (child_uid) {
+      setLoading(true);
+      const authToken = JSON.parse(localStorage.getItem("tokenConcord"));
+      let res = await axios.get(
+        BASEURL +
+          `/reports/prescriptions?child_uid=${id}&from_date=${convertFrom}&to_date=${convertTo}`,
+        {
+          headers: {
+            "x-session-key": authToken?.key,
+            "x-session-type": authToken?.type,
+          },
+        }
+      );
+      setLoading(false);
+      setPrescription(res?.data?.response_data);
+    } else {
+      setLoading(true);
+      const authToken = JSON.parse(localStorage.getItem("tokenConcord"));
+      let res = await axios.get(
+        BASEURL +
+          `/reports/prescriptions?from_date=${convertFrom}&to_date=${convertTo}`,
+        {
+          headers: {
+            "x-session-key": authToken?.key,
+            "x-session-type": authToken?.type,
+          },
+        }
+      );
+      setLoading(false);
+      setPrescription(res?.data?.response_data);
+    }
   };
   let areaManagerOption = [];
   am?.map((item) =>
@@ -87,11 +105,10 @@ const PrescriptionReport = () => {
     })
   );
 
- 
   useEffect(() => {
     dispatch(ViewChildSalesManagerManagerAction());
   }, [dispatch]);
-  let enumerateDaysBetweenDates = function (startDate, endDate) {
+  let enumerateDaysBetweenDates = function(startDate, endDate) {
     var dates = [];
 
     var currDate = moment(startDate).startOf("day");
@@ -105,15 +122,15 @@ const PrescriptionReport = () => {
   };
   let dateArray = enumerateDaysBetweenDates(from, to);
   const handleClick = (item) => {
-    setData(item)
-    setShow(true)
-}
+    setData(item);
+    setShow(true);
+  };
   return (
     <>
       <Row>
         <Col xxs="12">
           {/* <Breadcrumb heading="Doctors" match={match} /> */}
-          <h4>{t('prescription_report.presc_report_text')}</h4>
+          <h4>{t("prescription_report.presc_report_text")}</h4>
           <div
             style={{ border: "1px solid #000", width: "100%" }}
             className="mb-5"
@@ -122,7 +139,7 @@ const PrescriptionReport = () => {
       </Row>
       <Row className="mb-3">
         <Col lg={6}>
-          <FormLabel>{t('prescription_report.start_date')}</FormLabel>
+          <FormLabel>{t("prescription_report.start_date")}</FormLabel>
           <input
             type="date"
             className="input-login-modal"
@@ -131,7 +148,7 @@ const PrescriptionReport = () => {
           ></input>
         </Col>
         <Col lg={6}>
-          <FormLabel> {t('prescription_report.end_date')}</FormLabel>
+          <FormLabel> {t("prescription_report.end_date")}</FormLabel>
 
           <input
             type="date"
@@ -145,7 +162,10 @@ const PrescriptionReport = () => {
       <Row>
         <Col lg={6}>
           <FormGroup>
-            <FormLabel> {t('prescription_report.select_sales_manager')}</FormLabel>
+            <FormLabel>
+              {" "}
+              {t("prescription_report.select_sales_manager")}
+            </FormLabel>
             {loadingSM ? (
               <div className="">
                 <Loader height={18} width={18} type="Oval" color="#0066B3" />
@@ -160,7 +180,8 @@ const PrescriptionReport = () => {
                 name="form-field-name-gender"
                 onChange={async (val) => {
                   dispatch(getUsers(val.key, "rsm"));
-                  getPrescriptionReport(val?.key);
+                  // getPrescriptionReport(val?.key);
+                  setChild_uid(val?.key);
 
                   //   setTimeout(async() => {
                   //     await console.log(targets[0]?.start_date);
@@ -173,7 +194,10 @@ const PrescriptionReport = () => {
         </Col>
         <Col lg={6}>
           <FormGroup>
-            <FormLabel> {t('prescription_report.select_reg_sales_manager')}</FormLabel>
+            <FormLabel>
+              {" "}
+              {t("prescription_report.select_reg_sales_manager")}
+            </FormLabel>
             {loadingRSM ? (
               <div className="">
                 <Loader height={18} width={18} type="Oval" color="#0066B3" />
@@ -188,7 +212,8 @@ const PrescriptionReport = () => {
                 name="form-field-name-gender"
                 onChange={async (val) => {
                   dispatch(getUsers(val.key, "am"));
-                  getPrescriptionReport(val?.key);
+                  // getPrescriptionReport(val?.key);
+                  setChild_uid(val?.key);
                 }}
                 options={regionalSalesManagerOption}
               />
@@ -197,7 +222,10 @@ const PrescriptionReport = () => {
         </Col>
         <Col lg={6}>
           <FormGroup>
-            <FormLabel> {t('prescription_report.select_area_manager')}</FormLabel>
+            <FormLabel>
+              {" "}
+              {t("prescription_report.select_area_manager")}
+            </FormLabel>
             {loadingAM ? (
               <div className="">
                 <Loader height={18} width={18} type="Oval" color="#0066B3" />
@@ -212,7 +240,8 @@ const PrescriptionReport = () => {
                 name="form-field-name-gender"
                 onChange={async (val) => {
                   dispatch(getUsers(val.key, "mpo"));
-                  getPrescriptionReport(val?.key);
+                  // getPrescriptionReport(val?.key);
+                  setChild_uid(val?.key);
                 }}
                 options={areaManagerOption}
               />
@@ -221,7 +250,7 @@ const PrescriptionReport = () => {
         </Col>
         <Col lg={6}>
           <FormGroup>
-            <FormLabel> {t('prescription_report.select_mpo')}</FormLabel>
+            <FormLabel> {t("prescription_report.select_mpo")}</FormLabel>
             {loadingMPO ? (
               <div className="">
                 <Loader height={18} width={18} type="Oval" color="#0066B3" />
@@ -235,7 +264,8 @@ const PrescriptionReport = () => {
                 classNamePrefix="react-select"
                 name="form-field-name-gender"
                 onChange={(val) => {
-                  getPrescriptionReport(val?.key);
+                  // getPrescriptionReport(val?.key);
+                  setChild_uid(val?.key);
                 }}
                 options={mpoOption}
               />
@@ -244,73 +274,116 @@ const PrescriptionReport = () => {
         </Col>
       </Row>
 
+      <Row>
+        <Col lg={4}>
+          <Button
+            style={{ backgroundColor: "#0066b3" }}
+            disabled={
+              loadingSM || loadingRSM || loadingAM || loadingMPO ? true : false
+            }
+            className={`btn-shadow btn-multiple-state ${
+              loadingSM || loadingRSM || loadingAM || loadingMPO
+                ? "show-spinner"
+                : ""
+            }`}
+            onClick={() => getPrescriptionReport(child_uid)}
+          >
+            <span className="spinner d-inline-block">
+              <span className="bounce1" />
+              <span className="bounce2" />
+              <span className="bounce3" />
+            </span>
+            <span className="label">Generate Report</span>
+          </Button>
+        </Col>
+      </Row>
 
-      {loading ? <div className="d-flex justify-content-center mt-5">
-                        <Loader height={25} width={30} type="Bars" color="black" />
-                        &nbsp;  {t('prescription_report.gener_report_text')} 
-                    </div> :
-                        from !== undefined && to !== undefined ?
-                            <div className='table-responsive' >
+      {loading ? (
+        <div className="d-flex justify-content-center mt-5">
+          <Loader height={25} width={30} type="Bars" color="black" />
+          &nbsp; {t("prescription_report.gener_report_text")}
+        </div>
+      ) : from !== undefined && to !== undefined ? (
+        <div className="table-responsive">
+          <table
+            classname="report"
+            style={{
+              tableLayout: "fixed",
+              width: "500px",
+              marginTop: "15px",
+              marginBottom: "50px",
+            }}
+          >
+            {/* className='table-responsive' */}
+            <thead>
+              <tr>
+                <td style={{ width: "120px", fontWeight: "bold" }}>
+                  {" "}
+                  {t("prescription_report.name_text")}
+                </td>
+                {dateArray?.map((item) => {
+                  return <th style={{ width: "140px" }}>{item}</th>;
+                })}
+                <th style={{ width: "80px" }}>
+                  {" "}
+                  {t("prescription_report.sum_text")}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {prescription?.map((item) => {
+                return (
+                  <tr
+                    style={{
+                      backgroundColor:
+                        item?.user?.role === "mpo"
+                          ? "lightgray"
+                          : item?.user?.role === "rsm"
+                          ? "lightgoldenrodyellow"
+                          : item?.user?.role === "am"
+                          ? "lightskyblue"
+                          : item?.user?.role === "sm"
+                          ? "lightslategray"
+                          : null,
+                    }}
+                  >
+                    <td>{item?.user?.name}</td>
 
-                                <table style={{ tableLayout: 'fixed', width: '500px' ,marginTop:'15px', marginBottom: "50px"}}>
-                                    {/* className='table-responsive' */}
-                                    <thead>
-                                        <tr>
-                                            <td style={{ width: '120px', fontWeight: 'bold' }}> {t('prescription_report.name_text')}</td>
-                                            {dateArray?.map((item) => {
-                                                return (
-                                                    <th style={{ width: '140px' }}>{item}</th>
-                                                )
-                                            })}
-                                            <th style={{ width: '80px' }}>  {t('prescription_report.sum_text')}</th>
-
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {prescription?.map((item) => {
-
-                                            return (
-                                                <tr style={{backgroundColor:item?.user?.role === "mpo" ? 'lightgray' : item?.user?.role === "rsm" ? 'lightgoldenrodyellow' : item?.user?.role === "am" ? 'lightskyblue' : item?.user?.role === "sm" ? 'lightslategray':null}}>
-                                                    <td>
-                                                        {item?.user?.name}
-
-                                                    </td>
-
-                                                    {item?.prescription?.map((item_) => <td>{item_?.length > 0 ?
-
-<button className='btn btn-secondary' style={{ opacity: "0.5" }} onClick={() => handleClick(item_)}>{`${item_?.length}`}</button>
-
-: item_?.length
-
-
-
-}</td>)}
-                                                    <td>{item?.sum}</td>
-                                                </tr>
-                                            )
-                                        })}
-                                
-
-                                    </tbody>
-                                </table>
-                            </div> : null}
-                            {show && (
-            <Lightbox
-              mainSrc={data[photoIndex]}
-              nextSrc={data[(photoIndex + 1) % data.length]}
-              prevSrc={data[(photoIndex + data.length - 1) % data.length]}
-              onCloseRequest={() => setShow(!show)}
-              onMovePrevRequest={() =>
-               
-                setPhotoIndex((photoIndex + data.length - 1) % data.length)
-               
-              }
-              onMoveNextRequest={() =>
-                setPhotoIndex((photoIndex + 1) % data.length)
-                }
-            />
-          )}
+                    {item?.prescription?.map((item_) => (
+                      <td>
+                        {item_?.length > 0 ? (
+                          <button
+                            className="btn btn-secondary"
+                            style={{ opacity: "0.5" }}
+                            onClick={() => handleClick(item_)}
+                          >{`${item_?.length}`}</button>
+                        ) : (
+                          item_?.length
+                        )}
+                      </td>
+                    ))}
+                    <td>{item?.sum}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      ) : null}
+      {show && (
+        <Lightbox
+          mainSrc={data[photoIndex]}
+          nextSrc={data[(photoIndex + 1) % data.length]}
+          prevSrc={data[(photoIndex + data.length - 1) % data.length]}
+          onCloseRequest={() => setShow(!show)}
+          onMovePrevRequest={() =>
+            setPhotoIndex((photoIndex + data.length - 1) % data.length)
+          }
+          onMoveNextRequest={() =>
+            setPhotoIndex((photoIndex + 1) % data.length)
+          }
+        />
+      )}
     </>
   );
 };
