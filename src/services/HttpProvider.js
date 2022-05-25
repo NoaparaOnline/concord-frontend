@@ -4,10 +4,17 @@ import { getToken, logout } from "../Utils/auth.util";
 // const BASE_URL = "prod link";
 // https://dmfr-backend.herokuapp.com/api/v1/
 // https://concord-backend-m1.herokuapp.com/
-export const BASEURL = "https://concordpharma-bd.com/api";
-// export const BASEURL = "https://concord-backend-m2.herokuapp.com/api";
+let BASE_URL = ''
+const DEV_API_URL = "https://concord-backend-m2.herokuapp.com/api";
 
-const BASE_URL = BASEURL;
+const PROD_API_URL = "https://concordpharma-bd.com/api";
+const LOCAL_API_URL = "https://concordpharma-bd.com/api";
+if (window.location.origin === 'https://concordpharma-bd.com' || window.location.origin === 'https://www.concordpharma-bd.com' || window.location.origin === 'www.concordpharma-bd.com') BASE_URL = PROD_API_URL
+else if (window.location.origin === 'https://concord-web.herokuapp.com' || window.location.origin === 'https://www.concord-web.herokuapp.com/' || window.location.origin === 'www.concord-web.herokuapp.com/') BASE_URL = DEV_API_URL
+else BASE_URL = PROD_API_URL;
+
+export const BASEURL = BASE_URL
+
 // const BASE_URL = "https://concord-backend-m2.herokuapp.com/api";
 // const BASE_URL = "https://concord-backend-prod.herokuapp.com/api";
 
