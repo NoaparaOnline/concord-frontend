@@ -1,323 +1,355 @@
-import React from 'react'
-import { Col, FormLabel, FormGroup, Row } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
-import Loader from 'react-loader-spinner';
-import Select from 'react-select'
-import moment from 'moment';
+import React from "react";
+import { Col, FormLabel, FormGroup, Row, Button } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import Loader from "react-loader-spinner";
+import Select from "react-select";
+import moment from "moment";
 
-
-
-import CustomSelectInput from '../../components/ReusableComponents/CustomSelectInput';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import axios from 'axios';
-import { BASEURL } from '../../services/HttpProvider';
-import { getUsers, ViewChildSalesManagerManagerAction } from '../../Store/Actions/directorActions';
-import { useTranslation } from 'react-i18next';
+import CustomSelectInput from "../../components/ReusableComponents/CustomSelectInput";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
+import { BASEURL } from "../../services/HttpProvider";
+import {
+  getUsers,
+  ViewChildSalesManagerManagerAction,
+} from "../../Store/Actions/directorActions";
+import { useTranslation } from "react-i18next";
 
 const DCRReport = () => {
+  const dispatch = useDispatch();
+  const { t } = useTranslation("common");
+  const [loading, setLoading] = useState(false);
+  const loadingSM = useSelector((state) => state?.director?.loadingSm);
+  const [prescription, setPrescription] = useState([]);
+  const [child_uid, setChild_uid] = useState("");
 
-    const dispatch = useDispatch()
-    const {t}=useTranslation('common')
-    const [loading, setLoading] = useState(false)
-    const loadingSM = useSelector((state) => state?.director?.loadingSm);
-    const [prescription, setPrescription] = useState([])
-    const loadingAM = useSelector((state) => state?.director?.loadingAm);
-  
+  const loadingAM = useSelector((state) => state?.director?.loadingAm);
 
-    const loadingRSM = useSelector(
-        (state) => state?.director?.loadingRsm
-    );
-    const loadingMPO = useSelector(
-        (state) => state?.director?.loadingMpo
-    );
-    const sm = useSelector((state) => state?.director?.salesManager);
+  const loadingRSM = useSelector((state) => state?.director?.loadingRsm);
+  const loadingMPO = useSelector((state) => state?.director?.loadingMpo);
+  const sm = useSelector((state) => state?.director?.salesManager);
 
+  const rsm = useSelector((state) => state?.director?.rsm);
+  const am = useSelector((state) => state?.director?.am);
+  const mpo = useSelector((state) => state?.director?.mpo);
 
-    const rsm = useSelector((state) => state?.director?.rsm);
-    const am = useSelector((state) => state?.director?.am);
-    const mpo = useSelector((state) => state?.director?.mpo);
+  const [from, setFrom] = useState();
+  const [to, setTo] = useState();
+  let convertFrom = moment(from).unix();
+  let convertTo = moment(to).unix();
+  const getPrescriptionReport = async (id) => {
+    if (child_uid) {
+      setLoading(true);
+      const authToken = JSON.parse(localStorage.getItem("tokenConcord"));
+      let res = await axios.get(
+        BASEURL +
+          `/reports/dcrs?child_uid=${id}&from_date=${convertFrom}&to_date=${convertTo}`,
+        {
+          headers: {
+            "x-session-key": authToken?.key,
+            "x-session-type": authToken?.type,
+          },
+        }
+      );
+      setLoading(false);
 
+      setPrescription(res?.data?.response_data);
+    } else {
+      setLoading(true);
+      const authToken = JSON.parse(localStorage.getItem("tokenConcord"));
+      let res = await axios.get(
+        BASEURL + `/reports/dcrs?from_date=${convertFrom}&to_date=${convertTo}`,
+        {
+          headers: {
+            "x-session-key": authToken?.key,
+            "x-session-type": authToken?.type,
+          },
+        }
+      );
+      setLoading(false);
 
-    const [from, setFrom] = useState();
-    const [to, setTo] = useState();
-    let convertFrom = moment(from).unix();
-    let convertTo = moment(to).unix();
-    const getPrescriptionReport = async (id) => {
-        setLoading(true)
-        const authToken = JSON.parse(localStorage.getItem('tokenConcord'))
-        let res = await axios.get(BASEURL + `/reports/dcrs?child_uid=${id}&from_date=${convertFrom}&to_date=${convertTo}`, {
-            headers: {
-                'x-session-key': authToken?.key,
-                'x-session-type': authToken?.type
-            }
-        })
-        setLoading(false)
+      setPrescription(res?.data?.response_data);
+    }
+  };
 
-        setPrescription(res?.data?.response_data)
+  let areaManagerOption = [];
+  am?.map((item) =>
+    areaManagerOption?.push({
+      label: item?.name,
+      value: item?.name,
+      key: item?.uid,
+    })
+  );
+  let salesManagerOption = [];
+  sm?.map((item) =>
+    salesManagerOption?.push({
+      label: item?.name,
+      value: item?.name,
+      key: item?.uid,
+    })
+  );
 
+  let regionalSalesManagerOption = [];
+  rsm?.map((item) =>
+    regionalSalesManagerOption?.push({
+      label: item?.name,
+      value: item?.name,
+      key: item?.uid,
+    })
+  );
+  let mpoOption = [];
+  mpo?.map((item) =>
+    mpoOption?.push({
+      label: item?.name,
+      value: item?.name,
+      key: item?.uid,
+    })
+  );
+  useEffect(() => {
+    dispatch(ViewChildSalesManagerManagerAction());
+  }, [dispatch]);
+  let enumerateDaysBetweenDates = function(startDate, endDate) {
+    var dates = [];
+
+    var currDate = moment(startDate).startOf("day");
+    var lastDate = moment(endDate).startOf("day");
+
+    while (currDate.add(1, "days").diff(lastDate) <= 0) {
+      dates.push(currDate.clone().format("DD-MM-YY"));
     }
 
+    return dates;
+  };
+  let dateArray = enumerateDaysBetweenDates(from, to);
 
-    let areaManagerOption = [];
-    am?.map((item) =>
-        areaManagerOption?.push({
-            label: item?.name,
-            value: item?.name,
-            key: item?.uid,
-        })
-    );
-    let salesManagerOption = [];
-    sm?.map((item) =>
-        salesManagerOption?.push({
-        label: item?.name,
-        value: item?.name,
-        key: item?.uid,
-    })
-    );
+  return (
+    <>
+      <Row>
+        <Col xxs="12">
+          {/* <Breadcrumb heading="Doctors" match={match} /> */}
+          <h4>{t("dcr_report.dcr_report_text")}</h4>
+          <div
+            style={{ border: "1px solid #000", width: "100%" }}
+            className="mb-5"
+          />
+        </Col>
+      </Row>
+      <Row className="mb-3">
+        <Col lg={6}>
+          <FormLabel> {t("dcr_report.start_date")} </FormLabel>
 
-    let regionalSalesManagerOption = [];
-    rsm?.map((item) =>
-        regionalSalesManagerOption?.push({
-            label: item?.name,
-            value: item?.name,
-            key: item?.uid,
-        })
-    );
-    let mpoOption = [];
-    mpo?.map((item) =>
-        mpoOption?.push({
-            label: item?.name,
-            value: item?.name,
-            key: item?.uid,
-        })
-    );
-    useEffect(() => {
-        dispatch(ViewChildSalesManagerManagerAction());
-      }, [dispatch]);
-    let enumerateDaysBetweenDates = function (startDate, endDate) {
-        var dates = [];
+          <input
+            type="date"
+            className="input-login-modal"
+            value={from}
+            onChange={(e) => setFrom(e.target.value)}
+          ></input>
+        </Col>
+        <Col lg={6}>
+          <FormLabel> {t("dcr_report.end_date")}</FormLabel>
 
-        var currDate = moment(startDate).startOf('day');
-        var lastDate = moment(endDate).startOf('day');
+          <input
+            type="date"
+            className="input-login-modal"
+            value={to}
+            onChange={(e) => setTo(e.target.value)}
+          ></input>
+        </Col>
+      </Row>
 
-        while (currDate.add(1, 'days').diff(lastDate) <= 0) {
-            dates.push(currDate.clone().format('DD-MM-YY'));
-        }
+      <Row>
+        <Col lg={6}>
+          <FormGroup>
+            <FormLabel> {t("dcr_report.select_sales_manager")}</FormLabel>
+            {loadingSM ? (
+              <div className="">
+                <Loader height={18} width={18} type="Oval" color="#0066B3" />
+                &nbsp;
+              </div>
+            ) : (
+              <Select
+                required
+                components={{ FormGroup: CustomSelectInput }}
+                className="react-select "
+                classNamePrefix="react-select"
+                name="form-field-name-gender"
+                onChange={async (val) => {
+                  dispatch(getUsers(val.key, "rsm"));
+                  //   getPrescriptionReport(val?.key);
+                  setChild_uid(val.key);
 
-        return dates;
-    };
-    let dateArray = enumerateDaysBetweenDates(from, to)
+                  //   setTimeout(async() => {
+                  //     await console.log(targets[0]?.start_date);
+                  //   }, 3000);
+                }}
+                options={salesManagerOption}
+              />
+            )}
+          </FormGroup>
+        </Col>
+        <Col lg={6}>
+          <FormGroup>
+            <FormLabel> {t("dcr_report.select_reg_sales_manager")}</FormLabel>
+            {loadingRSM ? (
+              <div className="">
+                <Loader height={18} width={18} type="Oval" color="#0066B3" />
+                &nbsp;
+              </div>
+            ) : (
+              <Select
+                required
+                components={{ FormGroup: CustomSelectInput }}
+                className="react-select"
+                classNamePrefix="react-select"
+                name="form-field-name-gender"
+                onChange={async (val) => {
+                  dispatch(getUsers(val.key, "am"));
+                  //   getPrescriptionReport(val?.key);
+                  setChild_uid(val.key);
+                }}
+                options={regionalSalesManagerOption}
+              />
+            )}
+          </FormGroup>
+        </Col>
+        <Col lg={6}>
+          <FormGroup>
+            <FormLabel> {t("dcr_report.select_area_manager")}</FormLabel>
+            {loadingAM ? (
+              <div className="">
+                <Loader height={18} width={18} type="Oval" color="#0066B3" />
+                &nbsp;
+              </div>
+            ) : (
+              <Select
+                required
+                components={{ FormGroup: CustomSelectInput }}
+                className="react-select"
+                classNamePrefix="react-select"
+                name="form-field-name-gender"
+                onChange={async (val) => {
+                  dispatch(getUsers(val.key, "mpo"));
+                  //   getPrescriptionReport(val?.key);
+                  setChild_uid(val.key);
+                }}
+                options={areaManagerOption}
+              />
+            )}
+          </FormGroup>
+        </Col>
+        <Col lg={6}>
+          <FormGroup>
+            <FormLabel>{t("dcr_report.select_mpo")}</FormLabel>
+            {loadingMPO ? (
+              <div className="">
+                <Loader height={18} width={18} type="Oval" color="#0066B3" />
+                &nbsp;
+              </div>
+            ) : (
+              <Select
+                required
+                components={{ FormGroup: CustomSelectInput }}
+                className="react-select"
+                classNamePrefix="react-select"
+                name="form-field-name-gender"
+                onChange={(val) => {
+                  //   getPrescriptionReport(val?.key);
+                  setChild_uid(val.key);
+                }}
+                options={mpoOption}
+              />
+            )}
+          </FormGroup>
+        </Col>
+      </Row>
 
-    return (
-       <>
-       <Row >
-                        <Col xxs="12">
-                            {/* <Breadcrumb heading="Doctors" match={match} /> */}
-                            <h4>{t('dcr_report.dcr_report_text')}</h4>
-                            <div style={{border:'1px solid #000',width:'100%'}} className="mb-5" />
-                        </Col>
-                    </Row>
-                    <Row className="mb-3">
-                        <Col lg={6}>
-                        <FormLabel> {t('dcr_report.start_date')} </FormLabel>
+      <Row>
+        <Col lg={4}>
+          <Button
+            style={{ backgroundColor: "#0066b3" }}
+            disabled={
+              loadingSM || loadingRSM || loadingAM || loadingMPO ? true : false
+            }
+            className={`btn-shadow btn-multiple-state ${
+              loadingSM || loadingRSM || loadingAM || loadingMPO
+                ? "show-spinner"
+                : ""
+            }`}
+            onClick={() => getPrescriptionReport(child_uid)}
+          >
+            <span className="spinner d-inline-block">
+              <span className="bounce1" />
+              <span className="bounce2" />
+              <span className="bounce3" />
+            </span>
+            <span className="label">Generate Report</span>
+          </Button>
+        </Col>
+      </Row>
 
-                            <input
-                                type="date"
-                                className="input-login-modal"
-                                value={from}
-                                onChange={(e) => setFrom(e.target.value)}
-                            ></input>
-                        </Col>
-                        <Col lg={6}>
-                        <FormLabel> {t('dcr_report.end_date')}</FormLabel>
-                            
-                            <input
-                                type="date"
-                                className="input-login-modal"
-                                value={to}
-                                onChange={(e) => setTo(e.target.value)}
-                            ></input>
-                        </Col>
-                    </Row>
+      {loading ? (
+        <div className="d-flex justify-content-center mt-5">
+          <Loader height={25} width={30} type="Bars" color="black" />
+          &nbsp; {t("dcr_report.gener_report_text")}
+        </div>
+      ) : from !== undefined && to !== undefined ? (
+        <div className="table-responsive">
+          <table
+            classname="report"
+            style={{
+              tableLayout: "fixed",
+              width: "100%",
+              marginTop: "15px",
+            }}
+          >
+            {/* className='table-responsive' */}
+            <thead>
+              <tr>
+                <td style={{ width: "120px", fontWeight: "bold" }}>
+                  {" "}
+                  {t("dcr_report.name_text")}
+                </td>
+                {dateArray?.map((item) => {
+                  return <th style={{ width: "80px" }}>{item}</th>;
+                })}
+                <td style={{ width: "120px", fontWeight: "bold" }}>
+                  {" "}
+                  {t("dcr_report.sum_text")}{" "}
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              {prescription?.map((item) => {
+                return (
+                  <tr
+                    style={{
+                      backgroundColor:
+                        item?.user?.role === "mpo"
+                          ? "lightgray"
+                          : item?.user?.role === "rsm"
+                          ? "lightgoldenrodyellow"
+                          : item?.user?.role === "am"
+                          ? "lightskyblue"
+                          : item?.user?.role === "sm"
+                          ? "lightslategray"
+                          : null,
+                    }}
+                  >
+                    <td>{item?.user?.name}</td>
+                    {item?.dcr?.map((item_) => (
+                      <td>{item_}</td>
+                    ))}
+                    <td>{item?.sum}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      ) : null}
+    </>
+  );
+};
 
-                    <Row>
-                        <Col lg={6}>
-                            <FormGroup>
-                                <FormLabel> {t('dcr_report.select_sales_manager')}</FormLabel>
-                                {loadingSM ? (
-                                    <div className="">
-                                        <Loader
-                                            height={18}
-                                            width={18}
-                                            type="Oval"
-                                            color="#0066B3"
-                                        />
-                                        &nbsp;
-                                    </div>
-                                ) : (
-                                    <Select
-                                        required
-                                        components={{ FormGroup: CustomSelectInput }}
-                                        className="react-select "
-                                        classNamePrefix="react-select"
-                                        name="form-field-name-gender"
-                                        onChange={async (val) => {
-                                            dispatch(getUsers(val.key, 'rsm'));
-                                            getPrescriptionReport(val?.key)
-
-                                            //   setTimeout(async() => {
-                                            //     await console.log(targets[0]?.start_date);
-                                            //   }, 3000);
-                                        }}
-                                        options={salesManagerOption}
-                                    />
-                                )}
-                            </FormGroup>
-                        </Col>
-                        <Col lg={6}>
-                            <FormGroup>
-                                <FormLabel> {t('dcr_report.select_reg_sales_manager')}</FormLabel>
-                                {loadingRSM ? (
-                                    <div className="">
-                                        <Loader
-                                            height={18}
-                                            width={18}
-                                            type="Oval"
-                                            color="#0066B3"
-                                        />
-                                        &nbsp;
-                                    </div>
-                                ) : (
-                                    <Select
-                                        required
-                                        components={{ FormGroup: CustomSelectInput }}
-                                        className="react-select"
-                                        classNamePrefix="react-select"
-                                        name="form-field-name-gender"
-                                        onChange={async (val) => {
-                                            dispatch(getUsers(val.key, 'am'));
-                                            getPrescriptionReport(val?.key)
-
-
-                                        }}
-                                        options={regionalSalesManagerOption}
-                                    />
-                                )}
-                            </FormGroup>
-                        </Col>
-                        <Col lg={6}>
-                            <FormGroup>
-                                <FormLabel> {t('dcr_report.select_area_manager')}</FormLabel>
-                                {loadingAM ? (
-                                    <div className="">
-                                        <Loader
-                                            height={18}
-                                            width={18}
-                                            type="Oval"
-                                            color="#0066B3"
-                                        />
-                                        &nbsp;
-                                    </div>
-                                ) : (
-                                    <Select
-                                        required
-                                        components={{ FormGroup: CustomSelectInput }}
-                                        className="react-select"
-                                        classNamePrefix="react-select"
-                                        name="form-field-name-gender"
-                                        onChange={async (val) => {
-                                            dispatch(getUsers(val.key, 'mpo'));
-                                            getPrescriptionReport(val?.key)
-
-
-                                        }}
-                                        options={areaManagerOption}
-                                    />
-                                )}
-                            </FormGroup>
-                        </Col>
-                        <Col lg={6}>
-                            <FormGroup>
-                                <FormLabel>{t('dcr_report.select_mpo')}</FormLabel>
-                                {loadingMPO ? (
-                                    <div className="">
-                                        <Loader
-                                            height={18}
-                                            width={18}
-                                            type="Oval"
-                                            color="#0066B3"
-                                        />
-                                        &nbsp;
-                                    </div>
-                                ) : (
-                                    <Select
-                                        required
-                                        components={{ FormGroup: CustomSelectInput }}
-                                        className="react-select"
-                                        classNamePrefix="react-select"
-                                        name="form-field-name-gender"
-                                        onChange={(val) => {
-                                            getPrescriptionReport(val?.key)
-
-
-                                        }}
-                                        options={mpoOption}
-                                    />
-                                )}
-                            </FormGroup>
-                        </Col>
-
-                    </Row>
-
-
-
-                    {loading ? <div className="d-flex justify-content-center mt-5">
-                        <Loader height={25} width={30} type="Bars" color="black" />
-                        &nbsp; {t('dcr_report.gener_report_text')}  
-                    </div> :
-                        from !== undefined && to !== undefined ?
-                            <div className='table-responsive' >
-
-                                <table style={{ tableLayout: 'fixed', width: '500px', marginTop: '15px' }}>
-                                    {/* className='table-responsive' */}
-                                    <thead>
-                                        <tr>
-                                            <td style={{ width: '120px', fontWeight: 'bold' }}> {t('dcr_report.name_text')}</td>
-                                            {dateArray?.map((item) => {
-                                                return (
-                                                    <th style={{ width: '80px' }}>{item}</th>
-                                                )
-                                            })}
-                                            <td style={{ width: '120px', fontWeight: 'bold' }}> {t('dcr_report.sum_text')} </td>
-
-
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {prescription?.map((item) => {
-
-                                            return (
-                                                <tr style={{ backgroundColor: item?.user?.role === "mpo" ? 'lightgray' : item?.user?.role === "rsm" ? 'lightgoldenrodyellow' : item?.user?.role === "am" ? 'lightskyblue' : item?.user?.role === "sm" ? 'lightslategray' : null }}>
-                                                    <td>
-                                                        {item?.user?.name}
-
-                                                    </td>
-                                                    {item?.dcr?.map((item_) => <td>{item_}</td>)}
-                                                    <td>{item?.sum}</td>
-                                                </tr>
-                                            )
-                                        })}
-
-
-                                    </tbody>
-                                </table>
-                            </div> : null}
-
-       
-       </>
-    )
-}
-
-export default DCRReport
+export default DCRReport;
