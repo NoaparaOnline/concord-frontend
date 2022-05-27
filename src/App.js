@@ -54,6 +54,7 @@ import Abouthealthassociates from "./Pages/Abouthealthassociates";
 import MediaEvents from "./Pages/MediaEvents";
 import { isSupported } from "./Utils/functions";
 import { getCmscomponent, SelectedLanguage } from "./Store/Actions/cmsAction";
+import Media_socialresponsiblities from "./Pages/Mediasocialresponsiblities";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -375,7 +376,7 @@ function App() {
           </Route>
 
           <Route exact path="/social-responsiblities">
-            <Mediasocialresponsiblities />
+            <Media_socialresponsiblities />
           </Route>
 
           <Route exact path="/video">
