@@ -18,7 +18,6 @@ const Media = () => {
   const lang = useSelector((state) => state?.cmsReducer?.language);
   const media_card = filterComponentData(component, "media_card", lang)
   const media_header = filterComponentData(component, "media_header", lang)
-  console.log(media_header, "media_header");
 
   const { t } = useTranslation('common')
   const mediacard = [
@@ -50,7 +49,7 @@ const Media = () => {
       id: 4,
       imageURL: mediacard5,
       text: t('media.text_5'),
-      link: "#",
+      link: "/social-responsiblities",
     },
   ];
 
@@ -90,7 +89,7 @@ const Media = () => {
       <div className="mb-5">
         <div className="row">
 
-          {media_card?.length < 1 ? mediacard.map((ob, index) => (
+          {media_card?.length < 1 ? mediacard?.map((ob, index) => (
             <React.Fragment key={ob.id}>
               <div className={index === 0 ? `col-lg-2 offset-lg-1 col-md-3 mt-4` : `col-lg-2 col-md-3 mt-4`}>
                 <ZoominCards abcard={ob} />
