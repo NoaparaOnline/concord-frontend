@@ -1,16 +1,45 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { Heading } from '../components'
+import bannerimg from "../Statics/assets/mediasocialmediapost.jpg";
+
+import BannerWithText from '../components/ReusableComponents/BannerImgComponents/BannerImgComponents';
 import { filterComponentData } from '../Utils/functions';
+import { useTranslation } from 'react-i18next';
 // import './Milestones.css'
 const Media_socialresponsiblities = () => {
     const component = useSelector((state) => state?.cmsReducer?.components);
     const lang = useSelector((state) => state?.cmsReducer?.language);
     const social_media_responsibilities = filterComponentData(component, "social_media_responsibilities", lang)
     const social_responsibilities_heading = filterComponentData(component, "social_responsibilities_heading", lang)
-
+    const { t } = useTranslation('common');
+    const LinksBan = [
+        {
+          subLinkName: t('media_social_media.home_text'),
+          subDash: "/",
+          subLink: "/",
+        },
+        {
+          subLinkName: t('media_social_media.media_text'),
+          subDash: "/",
+          subLink: "/media",
+        },
+      ];
     return (
         <>
+            <BannerWithText
+                imgSrc={bannerimg}
+                heading={"Social Responsibilities"}
+                subHeading={"Social Responsibilities".toUpperCase()}
+                LinksBan={LinksBan}
+                height={"400px"}
+
+                backposit={'center right'}
+                backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
+                backgroundSize={"100% 400px"}
+                conmarpad={"mt-5 pt-5"}
+                fontsize={"60px"}
+            />
             {social_media_responsibilities?.length == 0 ?
                 <div className='container'>
                     <div className=" pt-3">
