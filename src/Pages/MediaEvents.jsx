@@ -95,7 +95,7 @@ export default function MediaEvents(props) {
                                     })}
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <Button className='' onClick={() => moreImages("AnnualConfrence2013")}>{t('media_events.view_more_text')}</Button>
+                                    <Button className='' onClick={() => moreImages("AnnualConference2013")}>{t('media_events.view_more_text')}</Button>
                                 </div>
 
                             </div>
@@ -116,14 +116,14 @@ export default function MediaEvents(props) {
                                     })}
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <Button className='' onClick={() => moreImages("AnnualConfrence2014")}>{t('media_events.view_more_text')}</Button>
+                                    <Button className='' onClick={() => moreImages("AnnualConference2014")}>{t('media_events.view_more_text')}</Button>
                                 </div>
                             </div>
 
                         </div>
                         <div className='row mt-5 mb-3 d-flex justify-content-between'>
                             <div className='col-lg-5 p-3' style={{ border: '2px solid lightblue', borderRadius: '15px' }}>
-                                <h4 className='text-center'>{t('media_events.event_3')}</h4>
+                                <h4 className='text-center'>{t('media_events.event_3')}</h4>eventName
                                 <div className='row'>
                                     {event3?.map((item, index) => {
                                         return (
@@ -148,7 +148,7 @@ export default function MediaEvents(props) {
                     <div className='container'>
                         <div className='row d-flex justify-content-between mt-5 mb-5'>
                             {media_events?.map((item, indx) => (
-                                <div className='col-lg-5 p-3' style={{ border: '2px solid lightblue', borderRadius: '15px' }}>
+                                <div className='col-lg-5 p-3' style={{ border: '2px solid lightblue', borderRadius: '15px',marginBottom:'20px' }}>
                                     <>
                                         <h4 className='text-center'>{item?.name}</h4>
                                         <div className='row'>
