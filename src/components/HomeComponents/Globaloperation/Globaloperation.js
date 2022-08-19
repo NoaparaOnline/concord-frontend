@@ -20,7 +20,7 @@ const Globaloperation = ({ service, globaloperation }) => {
               <h3 className="section-card-heading p-0" style={{ fontSize: isDesktoplg ? "" : "12px" }}>{service?.head4 ? service?.head4 : t("globaloperation.serving_text")}</h3>
             </div>
             <Link
-              to={service?.link ? service?.link : '/'}
+              to={service?.link ? service?.link : '/facilities'}
               className="btn btn-primary d-flex justify-content-center rounded-pill btn-section-card m-0 mt-2 "
               style={{ color: "#fff", backgroundColor: "#0066b3" }}
             >

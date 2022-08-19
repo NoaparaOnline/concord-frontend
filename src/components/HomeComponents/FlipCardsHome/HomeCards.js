@@ -7,7 +7,7 @@ import "./HomeCards.css";
 const HomeCards = ({ props, product }) => {
 
   return (
-    <div className="container  my-5 ">
+    <div className="container  my-5 " id="product-sec">
       <div className="cards Responsive_Margin_Screen  ">
         {product?.length < 1 ? <div className="row  ">
           {card.map((ob, index) => (

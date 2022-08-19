@@ -111,7 +111,7 @@ const DistributionCenter = (
                         <DashCard
                         
                         datahead={
-                          ob?.areas[0]?.parent?.name
+                          ob?.name
                         }
                         dataname={
                              

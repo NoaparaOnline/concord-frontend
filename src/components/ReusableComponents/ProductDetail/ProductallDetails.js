@@ -8,7 +8,6 @@ import { Helmet } from "react-helmet";
 import { ByTherapeutic } from "../../HomeComponents/ProductsData/productbytheraputic";
 
 const ProductallDetails = (props) => {
-
   const [showText, setShowText] = useState(false);
   const onClick = () => setShowText(true);
   const [show, setShow] = useState(false);
@@ -18,7 +17,6 @@ const ProductallDetails = (props) => {
     setShow(true);
   };
 
-
   const { id } = useParams();
 
   // let productdata = [];
@@ -27,13 +25,13 @@ const ProductallDetails = (props) => {
   //   id === item?.id ? productdata.push(item) : ""
   // );
 
-
-  const productdata = ByTherapeutic?.filter((item) => (
+  const productdata = ByTherapeutic?.filter((item) =>
     item?.id === Number(id) ? item : null
-  ))
+  );
 
-  const viewData = props?.location?.state?.data ? props?.location?.state?.data : productdata[0];
-
+  const viewData = props?.location?.state?.data
+    ? props?.location?.state?.data
+    : productdata[0];
 
   const LinksBan = [
     {
@@ -47,126 +45,143 @@ const ProductallDetails = (props) => {
       subLink: "/products",
     },
     {
-      subLinkName: viewData?.from === '/by-trade-name' ? 'By Trade Name' : viewData?.from === '/by-generic-name' ? 'By Generic Name' : viewData?.from === '/by-therapeutic-class' ? 'By Therapeutic Class' : viewData?.from === '/first-time-launching' ? 'First Time Launching' : '',
-      subDash: viewData?.from === '/by-trade-name' ? '/' : viewData?.from === '/by-generic-name' ? '/' : viewData?.from === '/by-therapeutic-class' ? '/' : viewData?.from === '/first-time-launching' ? '/' : '',
+      subLinkName:
+        viewData?.from === "/by-trade-name"
+          ? "By Trade Name"
+          : viewData?.from === "/by-generic-name"
+          ? "By Generic Name"
+          : viewData?.from === "/by-therapeutic-class"
+          ? "By Therapeutic Class"
+          : viewData?.from === "/first-time-launching"
+          ? "First Time Launching"
+          : "",
+      subDash:
+        viewData?.from === "/by-trade-name"
+          ? "/"
+          : viewData?.from === "/by-generic-name"
+          ? "/"
+          : viewData?.from === "/by-therapeutic-class"
+          ? "/"
+          : viewData?.from === "/first-time-launching"
+          ? "/"
+          : "",
       subLink: viewData?.from,
     },
   ];
 
-
   const Text = () => {
     return (
       <div>
-        {viewData?.desc2 ? <div dangerouslySetInnerHTML={{ __html: viewData?.desc2 }} /> : viewData?.moredesc ? <div dangerouslySetInnerHTML={{ __html: viewData?.moredesc }} /> : viewData?.descmore ? <div dangerouslySetInnerHTML={{ __html: viewData?.descmore }} /> : viewData?.innerdata1?.map((item) => {
-          return (
-            <>
-              <h1 style={{
-                fontSize: "20px",
-                color: "#232323",
-                fontWeight: "600",
-              }}>
-
-                {item?.innerHead}
-
-              </h1>
-              <p
-                style={{
-                  fontSize: "16px",
-                  color: "#565656",
-                  fontWeight: "400",
-                }}
-              >
-                {item?.innerData}
-
-              </p>
-
-
-              {item?.isinnerSub ? (
-                <>
-                  <h6 style={{
+        {viewData?.desc2 ? (
+          <div dangerouslySetInnerHTML={{ __html: viewData?.desc2 }} />
+        ) : viewData?.moredesc ? (
+          <div dangerouslySetInnerHTML={{ __html: viewData?.moredesc }} />
+        ) : viewData?.descmore ? (
+          <div dangerouslySetInnerHTML={{ __html: viewData?.descmore }} />
+        ) : (
+          viewData?.innerdata1?.map((item) => {
+            return (
+              <>
+                <h1
+                  style={{
+                    fontSize: "20px",
                     color: "#232323",
                     fontWeight: "600",
-                  }}>
+                  }}
+                >
+                  {item?.innerHead}
+                </h1>
+                <p
+                  style={{
+                    fontSize: "16px",
+                    color: "#565656",
+                    fontWeight: "400",
+                  }}
+                >
+                  {item?.innerData}
+                </p>
 
-                    {item?.innerSubHead}
+                {item?.isinnerSub ? (
+                  <>
+                    <h6
+                      style={{
+                        color: "#232323",
+                        fontWeight: "600",
+                      }}
+                    >
+                      {item?.innerSubHead}
+                    </h6>
+                    <p
+                      style={{
+                        fontSize: "16px",
+                        color: "#565656",
+                        fontWeight: "400",
+                      }}
+                    >
+                      {item?.innerSubData}
+                    </p>
+                    {/* 08 bytrade */}
+                    {item?.isSublist ? (
+                      <ul>
+                        {item?.listSubData?.map((item) => (
+                          <li>{item}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </>
+                ) : null}
+                {item?.isinnerSub1 ? (
+                  <>
+                    <h6
+                      style={{
+                        color: "#232323",
+                        fontWeight: "600",
+                      }}
+                    >
+                      {item?.innerSubHead1}
+                    </h6>
+                    <p
+                      style={{
+                        fontSize: "16px",
+                        color: "#565656",
+                        fontWeight: "400",
+                      }}
+                    >
+                      {item?.innerSubData1}
+                    </p>
+                    {item?.isSublist1 ? (
+                      <ul>
+                        {item?.listSubData1?.map((item) => (
+                          <li>{item}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </>
+                ) : null}
 
-                  </h6>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      color: "#565656",
-                      fontWeight: "400",
-                    }}
-                  >
-                    {item?.innerSubData}
+                {item?.istable ? (
+                  <TableCustomComponent
+                    tableHead={item?.table?.headers?.map((item) => item)}
+                    data={item?.table?.body?.map((item) => {
+                      return item;
+                    })}
+                  />
+                ) : null}
 
-                  </p>
-                  {/* 08 bytrade */}
-                  {item?.isSublist ? (
-                    <ul>
-                      {item?.listSubData?.map(item => <li>{item}</li>)}
-                    </ul>
-                  ) : null}
-                </>
-              ) : null}
-              {item?.isinnerSub1 ? (
-                <>
-                  <h6 style={{
-                    color: "#232323",
-                    fontWeight: "600",
-                  }}>
-
-                    {item?.innerSubHead1}
-
-                  </h6>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      color: "#565656",
-                      fontWeight: "400",
-                    }}
-                  >
-                    {item?.innerSubData1}
-
-                  </p>
-                  {item?.isSublist1 ? (
-                    <ul>
-                      {item?.listSubData1?.map(item => <li>{item}</li>)}
-                    </ul>
-                  ) : null}
-                </>
-              ) : null}
-
-
-              {item?.istable ? (
-                <TableCustomComponent
-                  tableHead={item?.table?.headers?.map((item) => item)}
-                  data={item?.table?.body?.map((item) => {
-                    return item;
-                  })}
-                />
-              ) : null}
-
-
-
-
-
-
-
-              {item?.islist ? (
-                <ul>
-                  {item?.listData?.map(item => <li>{item}</li>)}
-                </ul>
-              ) : null}
-
-
-            </>
-          )
-        })}
-
+                {item?.islist ? (
+                  <ul>
+                    {item?.listData?.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </>
+            );
+          })
+        )}
 
         <div>
-          {showText ?
+          {showText ? (
             <div className="d-flex flex-column justify-content-center">
               <div
                 onClick={onHide}
@@ -185,13 +200,11 @@ const ProductallDetails = (props) => {
                 <span style={{ fontSize: "14px" }}>Read Less</span>
               </div>
             </div>
-            : null
-          }
+          ) : null}
         </div>
       </div>
-    )
+    );
   };
-
 
   return (
     <>
@@ -200,7 +213,6 @@ const ProductallDetails = (props) => {
       </Helmet>
       <BannerWithText
         subHeading={viewData?.innerMainHeading}
-
         // backposit={'center right'}
         backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url()`}
         LinksBan={LinksBan}
@@ -209,11 +221,11 @@ const ProductallDetails = (props) => {
       />
 
       <div className="container mb-5">
-        <Link to={viewData?.from} style={{ textDecoration: "none" }}>
+        <a href="/#test" style={{ textDecoration: "none" }}>
           <span style={{ fontSize: "22px", color: "#565656" }}>
             <i className="fa fa-angle-left" aria-hidden="true"></i> Back
           </span>
-        </Link>
+        </a>
         <div className="row">
           {/* className="allborder" */}
 
@@ -231,7 +243,18 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-front d-flex justify-content-center align-items-center">
                     <div className="card " style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imgf) : viewData?.image ? viewData?.image : viewData?.imgf} width="100%" height="100%" />
+                        <img
+                          alt={viewData?.innerMainHeading}
+                          src={
+                            viewData?.img
+                              ? viewData?.img?.map((item) => item.imgf)
+                              : viewData?.image
+                              ? viewData?.image
+                              : viewData?.imgf
+                          }
+                          width="100%"
+                          height="100%"
+                        />
                       </div>
                     </div>
                   </div>
@@ -239,7 +262,18 @@ const ProductallDetails = (props) => {
                   <div className="flip-card-back d-flex justify-content-center align-items-center">
                     <div className="card" style={{ border: "none" }}>
                       <div className="card-body ">
-                        <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imge) : viewData?.flipedimage ? viewData?.flipedimage : viewData?.imge} width="100%" height="100%" />
+                        <img
+                          alt={viewData?.innerMainHeading}
+                          src={
+                            viewData?.img
+                              ? viewData?.img?.map((item) => item.imge)
+                              : viewData?.flipedimage
+                              ? viewData?.flipedimage
+                              : viewData?.imge
+                          }
+                          width="100%"
+                          height="100%"
+                        />
                       </div>
                     </div>
                   </div>
@@ -250,7 +284,6 @@ const ProductallDetails = (props) => {
 
           <div className="col-lg-8 ">
             <div className="productContentInfo">
-
               <h1
                 style={{
                   fontSize: "30px",
@@ -258,7 +291,11 @@ const ProductallDetails = (props) => {
                   fontWeight: "600",
                 }}
               >
-                {viewData?.name ? null : viewData?.innerMainHeading ? viewData?.innerMainHeading : viewData?.title}
+                {viewData?.name
+                  ? null
+                  : viewData?.innerMainHeading
+                  ? viewData?.innerMainHeading
+                  : viewData?.title}
               </h1>
               <h5
                 style={{
@@ -269,114 +306,114 @@ const ProductallDetails = (props) => {
                 {viewData?.subtitle ? null : viewData?.innerComposition}
               </h5>
 
-              {viewData?.desc ? <div dangerouslySetInnerHTML={{ __html: viewData?.desc }} /> : viewData?.innerdata?.map((item) => {
-                return (
-                  <>
-                    <h1 style={{
-                      fontSize: "20px",
-                      color: "#232323",
-                      fontWeight: "600",
-                    }}>
-
-                      {item?.innerHead}
-
-                    </h1>
-                    <p
-                      style={{
-                        fontSize: "16px",
-                        color: "#565656",
-                        fontWeight: "400",
-                      }}
-                    >
-                      {item?.innerData}
-
-                    </p>
-
-
-                    {item?.isinnerSub ? (
-                      <>
-                        <h1 style={{
+              {viewData?.desc ? (
+                <div dangerouslySetInnerHTML={{ __html: viewData?.desc }} />
+              ) : (
+                viewData?.innerdata?.map((item) => {
+                  return (
+                    <>
+                      <h1
+                        style={{
                           fontSize: "20px",
                           color: "#232323",
                           fontWeight: "600",
-                        }}>
+                        }}
+                      >
+                        {item?.innerHead}
+                      </h1>
+                      <p
+                        style={{
+                          fontSize: "16px",
+                          color: "#565656",
+                          fontWeight: "400",
+                        }}
+                      >
+                        {item?.innerData}
+                      </p>
 
-                          {item?.innerSubHead}
+                      {item?.isinnerSub ? (
+                        <>
+                          <h1
+                            style={{
+                              fontSize: "20px",
+                              color: "#232323",
+                              fontWeight: "600",
+                            }}
+                          >
+                            {item?.innerSubHead}
+                          </h1>
+                          <p
+                            style={{
+                              fontSize: "16px",
+                              color: "#565656",
+                              fontWeight: "400",
+                            }}
+                          >
+                            {item?.innerSubData}
+                          </p>
+                        </>
+                      ) : null}
+                      {item?.isinnerSub1 ? (
+                        <>
+                          <h1
+                            style={{
+                              fontSize: "20px",
+                              color: "#232323",
+                              fontWeight: "600",
+                            }}
+                          >
+                            {item?.innerSubHead1}
+                          </h1>
+                          <p
+                            style={{
+                              fontSize: "16px",
+                              color: "#565656",
+                              fontWeight: "400",
+                            }}
+                          >
+                            {item?.innerSubData1}
+                          </p>
+                        </>
+                      ) : null}
+                      {item?.istable ? (
+                        <TableCustomComponent
+                          tableHead={item?.table?.headers?.map((item) => item)}
+                          data={item?.table?.body?.map((item) => {
+                            return item;
+                          })}
+                        />
+                      ) : null}
 
-                        </h1>
-                        <p
-                          style={{
-                            fontSize: "16px",
-                            color: "#565656",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item?.innerSubData}
+                      {item?.isSublist ? (
+                        <ul>
+                          {item?.listSubData?.map((item) => (
+                            <li>{item}</li>
+                          ))}
+                        </ul>
+                      ) : null}
 
-                        </p>
-                      </>
-                    ) : null}
-                    {item?.isinnerSub1 ? (
-                      <>
-                        <h1 style={{
-                          fontSize: "20px",
-                          color: "#232323",
-                          fontWeight: "600",
-                        }}>
+                      {item?.isSublist1 ? (
+                        <ul>
+                          {item?.listSubData1?.map((item) => (
+                            <li>{item}</li>
+                          ))}
+                        </ul>
+                      ) : null}
 
-                          {item?.innerSubHead1}
-
-                        </h1>
-                        <p
-                          style={{
-                            fontSize: "16px",
-                            color: "#565656",
-                            fontWeight: "400",
-                          }}
-                        >
-                          {item?.innerSubData1}
-
-                        </p>
-                      </>
-                    ) : null}
-                    {item?.istable ? (
-                      <TableCustomComponent
-                        tableHead={item?.table?.headers?.map((item) => item)}
-                        data={item?.table?.body?.map((item) => {
-                          return item;
-                        })}
-                      />
-                    ) : null}
-
-
-                    {item?.isSublist ? (
-                      <ul>
-                        {item?.listSubData?.map(item => <li>{item}</li>)}
-                      </ul>
-                    ) : null}
-
-                    {item?.isSublist1 ? (
-                      <ul>
-                        {item?.listSubData1?.map(item => <li>{item}</li>)}
-                      </ul>
-                    ) : null}
-
-
-
-                    {item?.islist ? (
-                      <ul>
-                        {item?.listData?.map(item => <li>{item}</li>)}
-                      </ul>
-                    ) : null}
-                  </>
-                )
-              })}
-
-
-
+                      {item?.islist ? (
+                        <ul>
+                          {item?.listData?.map((item) => (
+                            <li>{item}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </>
+                  );
+                })
+              )}
             </div>
 
-            {!showText ?
+            {!showText ? (
               <div
                 onClick={onClick}
                 className="btn btn-primary me-auto pt-2 pb-2  "
@@ -393,9 +430,9 @@ const ProductallDetails = (props) => {
               >
                 <span style={{ fontSize: "14px" }}>Read More</span>
               </div>
-              :
+            ) : (
               ""
-            }
+            )}
           </div>
           {showText ? <Text /> : null}
         </div>
@@ -405,7 +442,16 @@ const ProductallDetails = (props) => {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <div className="allborder d-flex justify-content-center align-items-center">
-            <img alt={viewData?.innerMainHeading} src={viewData?.img ? viewData?.img?.map(item => item.imgf) : viewData?.image ? viewData?.image : viewData?.imgf} />
+            <img
+              alt={viewData?.innerMainHeading}
+              src={
+                viewData?.img
+                  ? viewData?.img?.map((item) => item.imgf)
+                  : viewData?.image
+                  ? viewData?.image
+                  : viewData?.imgf
+              }
+            />
           </div>
         </Modal.Body>
       </Modal>
