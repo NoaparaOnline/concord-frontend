@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import icon from '../../../Statics/assets/TabletsFrontBack/Acedol-Tabletfr.jpg'
 const DashboardTableCards = ({ob}) => {
     const {t}=useTranslation('common')
-
   return (
     <>
       <div
@@ -54,7 +53,7 @@ const DashboardTableCards = ({ob}) => {
                     <span style={{fontSize:'17px',fontWeight:'600',textTransform:'capitalize',color:'grey'}}> {t('director_products.product_added_by')}</span>
                 </div>
                 <div className="col-12">
-                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize'}}>{ob.created_by._cls ? ob.created_by._cls :t('director_products.n_a')}</span>
+                    <span style={{fontSize:'15px',fontWeight:'600',textTransform:'capitalize'}}>{ob?.created_by?.name ? ob?.created_by?.name :t('director_products.n_a')}</span>
                 </div>
              </div>
         </div>
