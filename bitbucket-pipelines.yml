@@ -9,7 +9,7 @@ pipelines:
             - node
           script:
             - export CI=false
-            - npm install
+            - npm install --force
             - npm run build
           artifacts:
             - build/**
