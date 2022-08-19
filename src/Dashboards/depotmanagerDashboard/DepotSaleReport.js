@@ -29,7 +29,6 @@ export default function DepotSaleReport(props) {
   const [uid, setUid] = useState("");
   const [prescription, setPrescription] = useState([]);
   const user = useSelector((state) => state?.logIn?.user);
-  console.log(user?.uid);
   // const staticdata = useSelector((state) => state?.orderReducer?.staticdata);
   // useEffect(() => {
   //   // dispatch(StaticDataGet());

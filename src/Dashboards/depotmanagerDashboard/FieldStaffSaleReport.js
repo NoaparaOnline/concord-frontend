@@ -20,7 +20,6 @@ import DashboardMainCard from "../../components/ReusableComponents/DashboardMain
 
 const FieldStaffSaleReport = (props) => {
   const CurrentProduct = useSelector((state) => state?.deport?.fielddata);
-  console.log(CurrentProduct, "Test CurrentProduct");
   const to = CurrentProduct?.to;
   const from = CurrentProduct?.from;
   const [loading, setLoading] = useState(false);
@@ -53,7 +52,6 @@ const FieldStaffSaleReport = (props) => {
   const TotalPrice = (idx) => {
     const sum = [];
     reportdata[idx]?.medicines.map((item) => sum?.push(item?.total_price));
-    console.log(sum, "Test Sum");
   };
 
   return (

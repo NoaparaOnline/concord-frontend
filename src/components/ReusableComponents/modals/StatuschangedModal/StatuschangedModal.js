@@ -18,8 +18,6 @@ const StatuschangedModal = (props) => {
     setDropdown1(productuid?.delivery_status)
     setDropdown2(productuid?.payment_status)
   }, [dispatch])
-  console.log(dropdown2, "dropdown2", dropdown1);
-  console.log(productuid, "productuid");
 
 
   const onSubmit = () => {

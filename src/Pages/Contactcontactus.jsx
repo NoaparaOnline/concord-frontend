@@ -17,7 +17,6 @@ const Contact_contactus = () => {
   const contact_us_corporate_business = filterComponentData(component, "contact_us_corporate_business", lang)
   const contact_form_services = filterComponentData(component, "contact_form_services", lang)
   const contact_us_form_labels = filterComponentData(component, "contact_us_form_labels", lang)
-  console.log(contact_us_international_business, "contact_us_international_business");
 
 
   const dispatch = useDispatch();
