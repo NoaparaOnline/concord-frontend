@@ -221,7 +221,7 @@ const ProductallDetails = (props) => {
       />
 
       <div className="container mb-5">
-        <a href="/#test" style={{ textDecoration: "none" }}>
+        <a href={viewData?.from === "/" ? '/#test' : viewData?.from} style={{ textDecoration: "none" }}>
           <span style={{ fontSize: "22px", color: "#565656" }}>
             <i className="fa fa-angle-left" aria-hidden="true"></i> Back
           </span>
