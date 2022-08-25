@@ -32,7 +32,6 @@ const ProductallDetails = (props) => {
   const viewData = props?.location?.state?.data
     ? props?.location?.state?.data
     : productdata[0];
-
   const LinksBan = [
     {
       subLinkName: "Home",
@@ -221,11 +220,27 @@ const ProductallDetails = (props) => {
       />
 
       <div className="container mb-5">
-        <a href={viewData?.from === "/" ? '/#test' : viewData?.from} style={{ textDecoration: "none" }}>
-          <span style={{ fontSize: "22px", color: "#565656" }}>
-            <i className="fa fa-angle-left" aria-hidden="true"></i> Back
-          </span>
-        </a>
+        {viewData?.from === "/" ? (
+          <a
+            href={viewData?.from === "/" ? "/#test" : viewData?.from}
+            style={{ textDecoration: "none" }}
+          >
+            <span style={{ fontSize: "22px", color: "#565656" }}>
+              <i className="fa fa-angle-left" aria-hidden="true"></i> Back
+            </span>
+          </a>
+        ) : (
+          <div
+            onClick={() =>
+              props.history.push(viewData?.from, { state: viewData?.category })
+            }
+            style={{ textDecoration: "none" }}
+          >
+            <span style={{ fontSize: "22px", color: "#565656" }}>
+              <i className="fa fa-angle-left" aria-hidden="true"></i> Back
+            </span>
+          </div>
+        )}
         <div className="row">
           {/* className="allborder" */}
 
