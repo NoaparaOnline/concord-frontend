@@ -232,7 +232,7 @@ const ProductallDetails = (props) => {
         ) : (
           <div
             onClick={() =>
-              props.history.push(viewData?.from, { state: viewData?.category })
+              props.history.push(viewData?.from, { state: viewData?.category,class:viewData?.therapeutic_class })
             }
             style={{ textDecoration: "none" }}
           >

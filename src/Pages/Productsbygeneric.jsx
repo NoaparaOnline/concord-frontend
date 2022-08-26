@@ -14,6 +14,7 @@ const Products_bygeneric = (props) => {
   const isDesktoplg = useMediaQuery('(min-width: 992px)');
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
+  const [toggleRender,setToggleRender] = useState(false)
 
   const product_categories = filterComponentData(component, "product_categories", lang)
   let pc = [...product_categories.slice(1, product_categories?.length)]
@@ -42,6 +43,7 @@ const Products_bygeneric = (props) => {
       if (type == "All") {
         setObj(ByTherapeutic)
         setPageNumber(0);
+        setToggleRender(true)
 
       }
       else if (type == "Syrup") {
@@ -49,6 +51,7 @@ const Products_bygeneric = (props) => {
           category.type === "Syrup")
         setObj(filterd);
         setPageNumber(0);
+        setToggleRender(true)
 
       }
       else if (type == "Tablet") {
@@ -56,6 +59,7 @@ const Products_bygeneric = (props) => {
           category.type === "Tablet")
         setObj(filterd);
         setPageNumber(0);
+        setToggleRender(true)
 
       }
       else if (type == "Capsule") {
@@ -63,6 +67,7 @@ const Products_bygeneric = (props) => {
           category.type === "Capsule")
         setObj(filterd);
         setPageNumber(0);
+        setToggleRender(true)
 
       }
       else if (type == "Hand Rub") {
@@ -70,6 +75,7 @@ const Products_bygeneric = (props) => {
           category.type == "Hand Rub")
         setObj(filterd);
         setPageNumber(0);
+        setToggleRender(true)
 
       }
       else if (type == "Injectables") {
@@ -77,6 +83,7 @@ const Products_bygeneric = (props) => {
           category.type == "Injectables")
         setObj(filterd);
         setPageNumber(0);
+        setToggleRender(true)
 
 
       }
@@ -85,6 +92,8 @@ const Products_bygeneric = (props) => {
       if (type == "All") {
         setObj(products)
         setPageNumber(0);
+        setToggleRender(true)
+
 
       }
       else if (type == "Syrup") {
@@ -92,6 +101,8 @@ const Products_bygeneric = (props) => {
           category.category == "Syrup")
         setObj(filterd);
         setPageNumber(0);
+        setToggleRender(true)
+
 
       }
       else if (type == "Tablet") {
@@ -99,6 +110,8 @@ const Products_bygeneric = (props) => {
           category.category == "Tablet")
         setObj(filterd);
         setPageNumber(0);
+        setToggleRender(true)
+
 
       }
       else if (type == "Capsule") {
@@ -106,6 +119,8 @@ const Products_bygeneric = (props) => {
           category.category == "Capsule")
         setObj(filterd);
         setPageNumber(0);
+        setToggleRender(true)
+
 
       }
       else if (type == "Hand Rub") {
@@ -113,6 +128,8 @@ const Products_bygeneric = (props) => {
           category.category == "Hand Rub")
         setObj(filterd);
         setPageNumber(0);
+        setToggleRender(true)
+
 
       }
       else if (type == "Injectables") {
@@ -120,13 +137,17 @@ const Products_bygeneric = (props) => {
           category.category == "Injectables")
         setObj(filterd);
         setPageNumber(0);
+        setToggleRender(true)
+
 
 
       }
     }
 
   }
-
+  useEffect(() => {
+    filteredtype(props?.location?.state?.state)
+  }, [toggleRender])
   const [selected, setSelected] = useState('5');
 
 
@@ -189,7 +210,9 @@ const Products_bygeneric = (props) => {
                     id="all"
                     name="product-category"
                     value="1"
-                    defaultChecked
+                    defaultChecked={
+                      props?.location?.state?.state === "All" ||  props?.location?.state?.state === undefined ? true : false
+                    }
 
                     onChange={() => filteredtype("All")}
                   />
@@ -204,6 +227,9 @@ const Products_bygeneric = (props) => {
                           id="injectables"
                           name="product-category"
                           value="2"
+                          defaultChecked={
+                            props?.location?.state?.state == "Injectables" ? true : false
+                          }
                           onChange={() => filteredtype("Injectables")}
                         />
                         <label htmlFor="injectables">Injectables</label>
@@ -214,6 +240,9 @@ const Products_bygeneric = (props) => {
                           id="syrup"
                           name="product-category"
                           value="3"
+                          defaultChecked={
+                            props?.location?.state?.state == "Syrup" ? true : false
+                          }
                           onChange={() => filteredtype("Syrup")}
                         />
                         <label htmlFor="syrup">Syrup</label>
@@ -224,6 +253,9 @@ const Products_bygeneric = (props) => {
                           id="tablet"
                           name="product-category"
                           value="4"
+                          defaultChecked={
+                            props?.location?.state?.state == "SyrTabletup" ? true : false
+                          }
                           onChange={() => filteredtype("Tablet")}
                         />
                         <label htmlFor="tablet">Tablet</label>
@@ -234,6 +266,9 @@ const Products_bygeneric = (props) => {
                           id="capsule"
                           name="product-category"
                           value="5"
+                          defaultChecked={
+                            props?.location?.state?.state == "Capsule" ? true : false
+                          }
                           onChange={() => filteredtype("Capsule")}
                         />
                         <label htmlFor="capsule">Capsule</label>
@@ -244,6 +279,9 @@ const Products_bygeneric = (props) => {
                           id="handrub"
                           name="product-category"
                           value="6"
+                          defaultChecked={
+                            props?.location?.state?.state == "Hand Rub" ? true : false
+                          }
                           onChange={() => filteredtype("Hand Rub")}
 
                         />
@@ -257,6 +295,9 @@ const Products_bygeneric = (props) => {
                             id="capsule"
                             name="product-category"
                             value={item?.name}
+                            defaultChecked={
+                              props?.location?.state?.state == item?.name ? true : false
+                            }
                             onChange={() => filteredtype(item?.name)}
                           />
                           <label htmlFor={item?.name}>{item?.name}</label>
