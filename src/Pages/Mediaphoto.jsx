@@ -112,7 +112,6 @@ import { useTranslation } from "react-i18next";
 const Media_photo = (props) => {
   const { t } = useTranslation('common')
   const eventName = props?.location?.state?.replaceAll(' ', '');
-  console.log(eventName,"eventName");
   const LinksBan = [
     {
       subLinkName: t('media_photo.home_text'),

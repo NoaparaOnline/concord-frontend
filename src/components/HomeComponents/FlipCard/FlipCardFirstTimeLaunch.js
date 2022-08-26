@@ -10,7 +10,6 @@ const FlipCardFirstTimeLaunch = (props) => {
     const words = string.split(" ");
     return words[0].toLowerCase();
   };
-  console.log(card, "card");
   useEffect(() => {
     if (props?.api) {
       let imgs = [];
