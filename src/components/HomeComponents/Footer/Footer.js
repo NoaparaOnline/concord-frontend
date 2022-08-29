@@ -127,7 +127,7 @@ const Footer = () => {
         </a>
       </li>
       <li className="list-inline-item">
-        <a href="#!" className="sbtn btn-large mx-1 text-white linkFoot" title="Twitter">
+        <a href="https://twitter.com/concord_ltd" target="_blank" className="sbtn btn-large mx-1 text-white linkFoot" title="Twitter">
           <i className="fa fa-twitter-square fa-2x" ></i>
         </a>
       </li>
