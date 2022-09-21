@@ -244,7 +244,7 @@ const ProductallDetails = (props) => {
         <div className="row">
           {/* className="allborder" */}
 
-          <div className="col-lg-4 allborder">
+          <div className="col-lg-12 allborder">
             <div
               onClick={() => {
                 handleShow();
@@ -297,7 +297,7 @@ const ProductallDetails = (props) => {
             </div>
           </div>
 
-          <div className="col-lg-8 ">
+          <div className="col-lg-12 ">
             <div className="productContentInfo">
               <h1
                 style={{
