@@ -32,7 +32,7 @@ export async function getApiRequestHeader() {
 
 const instance = axios.create({
   baseURL: BASE_URL,
-  timeout: 120000,
+  timeout: 180000,
   withCredentials: false,
 });
 
