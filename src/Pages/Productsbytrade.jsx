@@ -128,12 +128,14 @@ const Products_bytrade = (props) => {
         setPageNumber(0);
         setToggleRender(true)
 
-      }else{
-        setObj(ByTherapeutic);
-        setPageNumber(0);
-        setToggleRender(true)
-
       }
+      // { filter working properly after removing below check }
+      // else{
+      //   setObj(ByTherapeutic);
+      //   setPageNumber(0);
+      //   setToggleRender(true)
+
+      // }
     }
   };
   useEffect(() => {
