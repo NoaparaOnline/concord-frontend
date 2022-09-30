@@ -55,6 +55,8 @@ import MediaEvents from "./Pages/MediaEvents";
 import { isSupported } from "./Utils/functions";
 import { getCmscomponent, SelectedLanguage } from "./Store/Actions/cmsAction";
 import Media_socialresponsiblities from "./Pages/Mediasocialresponsiblities";
+import MediaJournal from "./Pages/MediaJournal";
+import MediaJournalGuide from "./Pages/MediaJournalGuide";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -382,6 +384,15 @@ function App() {
           <Route exact path="/video">
             <Mediavideo />
           </Route>
+
+          <Route exact path="/journal">
+            <MediaJournal/>
+          </Route>
+
+          <Route exact path="/journal-guide">
+            <MediaJournalGuide/>
+          </Route>
+
           <Route
             exact path="/events"
             render={(props) => <MediaEvents {...props} />}

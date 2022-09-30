@@ -134,7 +134,6 @@ const Products_bytrade = (props) => {
       //   setObj(ByTherapeutic);
       //   setPageNumber(0);
       //   setToggleRender(true)
-
       // }
     }
   };

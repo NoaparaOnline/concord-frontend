@@ -426,12 +426,28 @@
           "text_3":"Social Media Post",
           "text_4":"Milestones",
           "text_5":"Social Responsibilities",
+          "text_6":"Journal",
           "media_text":"Media",
           "home_text":"Home",
           "helmet":{
             "title_text":"Media - Concord Pharma"
          }  
       },
+      "journal":{
+         "text_1":"Video",
+         "text_2":"Events",
+         "text_3":"Social Media Post",
+         "text_4":"Milestones",
+         "text_5":"Social Responsibilities",
+         "text_6":"Journal",
+         "journal_text":"Journal",
+         "journal_text_guide":"Journal Guide",
+         "media_text":"Media",
+         "home_text":"Home",
+         "helmet":{
+           "title_text":"Journal - Concord Pharma"
+        }  
+     },
       "video":{
          "media_text":"Media",
           "home_text":"Home",
