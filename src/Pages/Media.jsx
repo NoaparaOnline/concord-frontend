@@ -16,8 +16,8 @@ import { filterComponentData } from "../Utils/functions";
 const Media = () => {
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
-  // const media_card = filterComponentData(component, "media_card", lang);
-  const media_card =[];
+  const media_card = filterComponentData(component, "media_card", lang);
+  // const media_card = [];
   const media_header = filterComponentData(component, "media_header", lang);
 
   const { t } = useTranslation("common");
@@ -100,7 +100,7 @@ const Media = () => {
                 <React.Fragment key={ob.id}>
                   <div
                     className={
-                      index === 0
+                      index === 0 || index % 5 == 0
                         ? `col-lg-2 offset-lg-1 col-md-3 mt-4`
                         : `col-lg-2 col-md-3 mt-4`
                     }
@@ -113,7 +113,7 @@ const Media = () => {
                 <React.Fragment key={index}>
                   <div
                     className={
-                      index === 0
+                      index === 0 || index % 5 == 0
                         ? `col-lg-2 offset-lg-1 col-md-3 mt-4`
                         : `col-lg-2 col-md-3 mt-4`
                     }
