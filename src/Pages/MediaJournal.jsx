@@ -7,67 +7,26 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { filterComponentData } from "../Utils/functions";
 import productGuide from "../Statics/assets/Journal/product-guide-th.jpg";
+import { Link, useHistory } from "react-router-dom";
 
-export default function MediaJournal(props) {
+const MediaJournal = ({ history }) => {
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
-  const media_events = filterComponentData(component, "media_events", lang);
+  const media_journal = filterComponentData(component, "media_journal", lang);
+
   const { t } = useTranslation("common");
   const LinksBan = [
     {
-      subLinkName: t("media_events.home_text"),
+      subLinkName: t("journal.home_text"),
       subDash: "/",
       subLink: "/",
     },
     {
-      subLinkName: t("media_events.media_text"),
+      subLinkName: t("journal.media_text"),
       subDash: "/",
       subLink: "/media",
     },
   ];
-  function importAll(data) {
-    let images = {};
-    data.keys().map((item, index) => {
-      images[item.replace("./", "")] = data(item);
-      return "";
-    });
-    return images;
-  }
-
-  const annualConfrence2013 = importAll(
-    require.context(
-      "../Statics/assets/Annualconfirence2013",
-      false,
-      /\.(png|jpe?g|svg|JPG)$/
-    )
-  );
-  const annualConfrence2014 = importAll(
-    require.context(
-      "../Statics/assets/Annualconfirence2014",
-      false,
-      /\.(png|jpe?g|svg|JPG)$/
-    )
-  );
-  const dapazinelunchingprogram = importAll(
-    require.context(
-      "../Statics/assets/Dapazinelunchingprogram",
-      false,
-      /\.(png|jpe?g|svg|JPG)$/
-    )
-  );
-
-  const imagesData1 = Object.keys(annualConfrence2013);
-  const imagesData2 = Object.keys(annualConfrence2014);
-  const imagesData3 = Object.keys(dapazinelunchingprogram);
-
-  const event1 = imagesData1?.slice(0, 6);
-  const event2 = imagesData2?.slice(0, 6);
-  const event3 = imagesData3?.slice(0, 6);
-
-  const moreImages = (text) => {
-    props?.history.push("/photo", text);
-  };
-
   return (
     <>
       <Helmet>
@@ -85,31 +44,39 @@ export default function MediaJournal(props) {
         conmarpad={"mt-5 pt-5"}
         fontsize={"60px"}
       />
-
-      <div className="container">
-        <div className="row my-5">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((value, index) => (
-            <div className="col-lg-3  ">
-              <img src={productGuide} alt="" width="100%" className="mt-3" />
-              <h4
-                style={{
-                  color: "white",
-                  position: "absolute",
-                  background: "green",
-                  bottom: "0",
-                  right: "10%",
-                  left: "10%",
-                  transform: "translate(0%, -5%)",
-                  padding: "2% 0 2% 20%",
-                }}
-                
-              >
-                product Guide
-              </h4>
+      {media_journal?.length < 1 ? (
+        <div className="container">
+          <div className="row my-5">
+            <div className="col-lg-3 product-guide-div-hover">
+              <Link to={"/journal-guide"}>
+                {" "}
+                <img src={productGuide} alt="" width="100%" className="mt-3" />
+                <button className="product-guide-btn">
+                  {t("journal.product_guide_btn")}
+                </button>
+              </Link>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="container">
+          <div className="row my-5">
+            {media_journal?.map((value, index) => (
+              <div key={index} className="col-lg-3 product-guide-div-hover">
+                {/* <Link to={"/journal-guide"}> */}{" "}
+                <img src={value?.image} alt="" width="100%" className="mt-3" />
+                <button
+                  onClick={() => history.push("/journal-guide", value)}
+                  className="product-guide-btn"
+                >
+                  {value?.button}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </>
   );
-}
+};
+export default MediaJournal;

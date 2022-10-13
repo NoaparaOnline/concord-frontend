@@ -60,13 +60,11 @@ import MediaJournalGuide from "./Pages/MediaJournalGuide";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
-
   // Get User From Local Storage
   const dispatch = useDispatch();
   const langs = useSelector((state) => state?.cmsReducer?.languages);
   const lang = useSelector((state) => state?.cmsReducer?.language);
   useEffect(() => {
-
     dispatch(getUser());
     // dispatch(SelectedLanguage("en-US"));
     dispatch(getCmscomponent());
@@ -75,45 +73,46 @@ function App() {
     // }
   }, [langs]);
   useEffect(() => {
-    localStorage.setItem("lang", "en-US")
+    localStorage.setItem("lang", "en-US");
 
     if ("serviceWorker" in navigator) {
       navigator?.serviceWorker
         .register("./firebase-messaging-sw.js")
-        .then(function (registration) {
+        .then(function(registration) {
           console.log("Registration successful, scope is:", registration.scope);
         })
-        .catch(function (err) {
+        .catch(function(err) {
           console.log("Service worker registration failed, error:", err);
         });
     }
 
     if ("Notification" in window) {
       Notification.requestPermission()
-        .then(async function () {
+        .then(async function() {
           // console.log(result);
           const token = await test?.getToken(messaging);
           localStorage.setItem("fcmConcord", token);
         })
-        .catch(function (err) {
+        .catch(function(err) {
           console.log("Unable to get permission to notify.", err);
         });
-
     }
 
     if (isSupported()) {
       navigator?.serviceWorker?.addEventListener("message", (message) => {
-        console.log(message, "message")
+        console.log(message, "message");
         if (!("Notification" in window)) {
           toast.error("This browser does not support desktop notification");
         } else if (Notification.permission === "granted") {
           const noti = new Notification(
             message?.data?.["firebase-messaging-msg-data"]?.notification?.title,
             {
-              icon: message?.data?.["firebase-messaging-msg-data"]?.notification
-                ?.image,
-              body: message?.data?.["firebase-messaging-msg-data"]?.notification
-                ?.body,
+              icon:
+                message?.data?.["firebase-messaging-msg-data"]?.notification
+                  ?.image,
+              body:
+                message?.data?.["firebase-messaging-msg-data"]?.notification
+                  ?.body,
               data: message?.data?.["firebase-messaging-msg-data"]?.data,
             }
           );
@@ -144,7 +143,6 @@ function App() {
       />
 
       <Router>
-
         <ScrollToTop />
         {/*          Root Page             */}
 
@@ -179,7 +177,6 @@ function App() {
             )
           }
         />
-
 
         {/* Resest Password */}
         {/* <Route path="/reset_password_link/uid=:uid/token=:token" render={(props)=>   <ResetPassword {...props}/>}/> */}
@@ -219,30 +216,18 @@ function App() {
           }
         />
 
-
-
         <Switch>
-
-
           {/*          Front Home Page             */}
-          <Route
-            exact path="/"
-            render={(props) => <Home {...props} />}
-          />
+          <Route exact path="/" render={(props) => <Home {...props} />} />
           {/* <Route exact path="/">
           <Home  />
         </Route> */}
 
-
           {/*          Home Page             */}
-          <Route
-            exact path="/home"
-            render={(props) => <Home {...props} />}
-          />
+          <Route exact path="/home" render={(props) => <Home {...props} />} />
           {/* <Route exact path="/home">
           <Home  />
         </Route> */}
-
 
           {/*          Main About Page             */}
 
@@ -319,8 +304,6 @@ function App() {
             <Contactcontactus />
           </Route>
 
-
-
           {/*          Facilities Page             */}
 
           <Route exact path="/facilities">
@@ -368,10 +351,10 @@ function App() {
           </Route>
 
           <Route
-            exact path="/photo"
+            exact
+            path="/photo"
             render={(props) => <Mediaphoto {...props} />}
           />
-
 
           <Route exact path="/social-media-post">
             <Mediasocialmedia />
@@ -385,16 +368,21 @@ function App() {
             <Mediavideo />
           </Route>
 
-          <Route exact path="/journal">
-            <MediaJournal/>
-          </Route>
-
-          <Route exact path="/journal-guide">
-            <MediaJournalGuide/>
-          </Route>
+          <Route
+            exact
+            path="/journal"
+            render={(props) => <MediaJournal {...props} />}
+          ></Route>
 
           <Route
-            exact path="/events"
+            exact
+            path="/journal-guide"
+            render={(props) => <MediaJournalGuide {...props} />}
+          ></Route>
+
+          <Route
+            exact
+            path="/events"
             render={(props) => <MediaEvents {...props} />}
           />
           {/* <Route exact path="/media/events">
@@ -409,28 +397,28 @@ function App() {
 
           {/*          Products Submenu Page          */}
           <Route
-            exact path="/by-generic-name"
+            exact
+            path="/by-generic-name"
             render={(props) => <Productsbygeneric {...props} />}
           />
 
-
           <Route
-            exact path="/by-trade-name"
+            exact
+            path="/by-trade-name"
             render={(props) => <Productsbytrade {...props} />}
           />
 
-
           <Route
-            exact path="/first-time-launching"
+            exact
+            path="/first-time-launching"
             render={(props) => <Productsfirsttime {...props} />}
           />
 
           <Route
-            exact path="/by-therapeutic-class"
+            exact
+            path="/by-therapeutic-class"
             render={(props) => <Productstherapeutic {...props} />}
           />
-
-
 
           {/*          Products Inner Pages         */}
 
@@ -454,8 +442,6 @@ function App() {
           />
         </Route> */}
           {/* All Inner Page */}
-
-
 
           <Route exact path="/acedol-tablet">
             <ProductsCardInnerPage />
@@ -485,7 +471,6 @@ function App() {
             <TeleMedicine />
           </Route>
 
-
           {/* 404 Page */}
           {/* <Route path="*">
             <Error404 />
@@ -494,13 +479,10 @@ function App() {
           <Route
             path="*"
             render={(props) =>
-              props.location.pathname !== "/reset-password" && (
-                <Error404 />
-              )
+              props.location.pathname !== "/reset-password" && <Error404 />
             }
           />
         </Switch>
-
 
         {/*          Footer             */}
 
@@ -511,8 +493,7 @@ function App() {
             props.location.pathname !== "/depotmanager-dashboard" &&
             props.location.pathname !== "/depotmanager-dashboard/" &&
             props.location.pathname !== "/director-dashboard" &&
-            props.location.pathname !== "/director-dashboard/"
-            && (
+            props.location.pathname !== "/director-dashboard/" && (
               //  && props.location.pathname !== '/reset-password'
               <Footer />
             )
@@ -525,8 +506,7 @@ function App() {
             props.location.pathname !== "/depotmanager-dashboard" &&
             props.location.pathname !== "/depotmanager-dashboard/" &&
             props.location.pathname !== "/director-dashboard" &&
-            props.location.pathname !== "/director-dashboard/"
-            && (
+            props.location.pathname !== "/director-dashboard/" && (
               //  && props.location.pathname !== '/reset-password'
               <Footer />
             )

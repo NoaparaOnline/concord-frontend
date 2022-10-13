@@ -7,11 +7,13 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { filterComponentData } from "../Utils/functions";
 import productGuide from "../Statics/assets/Journal/product-guide-th.jpg";
+import { useLocation } from "react-router-dom";
 
 export default function MediaJournalGuide(props) {
+  const location = useLocation();
+  let data = location?.state;
   const component = useSelector((state) => state?.cmsReducer?.components);
   const lang = useSelector((state) => state?.cmsReducer?.language);
-  const media_events = filterComponentData(component, "media_events", lang);
   const { t } = useTranslation("common");
   const LinksBan = [
     {
@@ -89,18 +91,13 @@ export default function MediaJournalGuide(props) {
       <div className="journal-product-guide">
         <div className="left-view" style={{ width: "15%" }}></div>
         <div className="mid-view mb-5" style={{ width: "50%" }}>
-          <h3>Product Guide</h3>
+          <h3>{data?.button}</h3>
           <div className="product-guide-details" style={{ width: "100%" }}>
             <div className="product-guide-img" style={{ width: "70%" }}>
-              <img src={productGuide} alt="" width="100%" />
+              <img src={data?.image} alt="" width="100%" />
             </div>
             <p className="product-guide-description ml-3">
-              Product guide is one of the special publications about Square's
-              products in the most convenient way. It contains the abridged
-              prescribing information of all products including the products of
-              Herbal & Nutraceuticals Ltd. We believe that with your suggestion
-              we would be able to keep on our endeavor to bring continual
-              improvement.
+              {data?.description ? data?.description : "---------------"}
             </p>
           </div>
         </div>
