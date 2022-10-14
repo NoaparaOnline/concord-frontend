@@ -622,7 +622,7 @@
       "health_ass_text": "Health Associates",
       "chairmans_profile": "Chairman’s Profile",
       "msg_frm_chair": "Message from Chairman",
-      "global_operation": "Gloabl Operation",
+      "global_operation": "Global Operation",
       "products_text": "Products",
       "by_trade_name": "By trade name",
       "by_generic_name": "By generic name",
@@ -641,6 +641,7 @@
       "social_media_post": "social media post",
       "mile_stones_text": "mile stones",
       "social_resp_text": "social responsibilities",
+      "journal_text": "Journal",
       "contact": "contact",
       "our_dist_net_text": "our distribution network",
       "contact_us": "contact us"

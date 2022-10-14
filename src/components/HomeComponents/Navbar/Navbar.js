@@ -22,7 +22,10 @@ import SearchBar from "../../ReusableComponents/SearchComponent/SearchBar";
 import { ByTherapeutic } from "../ProductsData/productbytheraputic";
 import { FirstTime } from "../ProductsData/productsfirstimelaunch";
 import { useTranslation } from "react-i18next";
-import { readLanguageAction, SelectedLanguage } from "../../../Store/Actions/cmsAction";
+import {
+  readLanguageAction,
+  SelectedLanguage,
+} from "../../../Store/Actions/cmsAction";
 import ReactFlagsSelect from "react-flags-select";
 //
 
@@ -38,59 +41,51 @@ const Navbars = (props) => {
   const [customlocal, setCustomlocal] = useState([]);
   const [customlabel, setCustomlabel] = useState();
 
-  let locvar = localStorage.getItem("lang") === null ? "US" : localStorage.getItem("lang").split('-')[1];
+  let locvar =
+    localStorage.getItem("lang") === null
+      ? "US"
+      : localStorage.getItem("lang").split("-")[1];
 
-  useEffect(() => {
-
-  }, [locvar])
-  const dispatch = useDispatch()
+  useEffect(() => {}, [locvar]);
+  const dispatch = useDispatch();
   useEffect(() => {
     // dispatch(SelectedLanguage("en-US"));
     dispatch(readLanguageAction());
-  }, [])
-
-
-
+  }, []);
 
   const getids = () => {
     let localcode = [];
     let localcodebef = [];
     lang?.map((item) => {
-
       const firword = item?.locale;
-      let id = firword.split('-')[1]
-      let id0 = firword.split(id)[0]
+      let id = firword.split("-")[1];
+      let id0 = firword.split(id)[0];
       localcode?.push(id);
       localcodebef?.push(id0);
-
     });
 
-    setLocal(localcode)
-    setCustomlocal(localcodebef)
-  }
+    setLocal(localcode);
+    setCustomlocal(localcodebef);
+  };
 
   const customlabels = () => {
     let locallabel = {};
     lang?.map((item) => {
-
       const firword = item?.locale;
-      let id = firword.split('-')[1]
+      let id = firword.split("-")[1];
       locallabel = {
         ...locallabel,
         [id]: item?.name,
       };
-
     });
 
-    setCustomlabel(locallabel)
-  }
-
-
+    setCustomlabel(locallabel);
+  };
 
   useEffect(() => {
     getids();
     customlabels();
-  }, [lang])
+  }, [lang]);
 
   const allarray = [ByTherapeutic, FirstTime];
   const AllmergeData = [];
@@ -174,7 +169,7 @@ const Navbars = (props) => {
                       aria-current="page"
                       to="/sitemap"
                     >
-                      <span className="">{t('header.site_map_text')}</span>
+                      <span className="">{t("header.site_map_text")}</span>
                       {/* <span className="custom_span_style"></span> */}
                     </NavLink>
                   </li>
@@ -184,12 +179,14 @@ const Navbars = (props) => {
                       aria-current="page"
                       to="/careers"
                     >
-                      {t('header.careers_text')}
-
+                      {t("header.careers_text")}
                     </NavLink>
                   </li>
                   <div className="col-sm-3">
-                    <SearchBar placeholder={t('header.search_text')} data={AllmergeData} />
+                    <SearchBar
+                      placeholder={t("header.search_text")}
+                      data={AllmergeData}
+                    />
                   </div>
 
                   {user ? (
@@ -220,13 +217,13 @@ const Navbars = (props) => {
                               <Link
                                 className="dropdown-item navmenu_custome_li"
                                 onClick={() => profileHandler()}
-                              // style={{ color:'#0066b3' ,fontWeight:'600' }}
+                                // style={{ color:'#0066b3' ,fontWeight:'600' }}
                               >
                                 <i
                                   className="fa fa-id-card "
                                   style={{ fontSize: "13px" }}
                                 ></i>{" "}
-                                &nbsp;  {t('header.dashboard_text')}
+                                &nbsp; {t("header.dashboard_text")}
                               </Link>
 
                               <Link
@@ -234,13 +231,13 @@ const Navbars = (props) => {
                                 onClick={() => {
                                   handleShow1();
                                 }}
-                              // style={{ color:'#0066b3' ,fontWeight:'600' }}
+                                // style={{ color:'#0066b3' ,fontWeight:'600' }}
                               >
                                 <i
                                   className="fa fa-bell "
                                   style={{ fontSize: "13px" }}
                                 ></i>{" "}
-                                &nbsp;  {t('header.notifications_text')}
+                                &nbsp; {t("header.notifications_text")}
                               </Link>
 
                               {/* Change Password */}
@@ -249,25 +246,25 @@ const Navbars = (props) => {
                                 onClick={() => {
                                   handleShow2();
                                 }}
-                              // style={{ color:'#0066b3' ,fontWeight:'600' }}
+                                // style={{ color:'#0066b3' ,fontWeight:'600' }}
                               >
                                 <i
                                   className="fa fa-key"
                                   style={{ fontSize: "13px" }}
                                 ></i>{" "}
-                                &nbsp;  {t('header.change_password_text')}
+                                &nbsp; {t("header.change_password_text")}
                               </Link>
 
                               <Link
                                 className="dropdown-item navmenu_custome_li"
                                 onClick={() => logoutHandler()}
-                              // style={{ color:'#0066b3' ,fontWeight:'600' }}
+                                // style={{ color:'#0066b3' ,fontWeight:'600' }}
                               >
                                 <i
                                   className="fa fa-sign-out "
                                   style={{ fontSize: "13px" }}
                                 ></i>
-                                &nbsp;  {t('header.logout_text')}
+                                &nbsp; {t("header.logout_text")}
                               </Link>
                             </div>
                           </li>
@@ -289,7 +286,7 @@ const Navbars = (props) => {
                         aria-current="page"
                         to="#"
                       >
-                        {t('header.login_text')}
+                        {t("header.login_text")}
                       </Link>
                     </li>
                   )}
@@ -301,11 +298,19 @@ const Navbars = (props) => {
                     selectedSize={13}
                     customLabels={customlabel}
                     onSelect={(code) => {
-
                       localStorage.removeItem("lang");
-                      dispatch(SelectedLanguage(lang.filter((item) => item?.locale.includes(code))[0]?.locale));
-                      localStorage.setItem("lang", lang.filter((item) => item?.locale.includes(code))[0]?.locale)
-                      setSelected(code)
+                      dispatch(
+                        SelectedLanguage(
+                          lang.filter((item) => item?.locale.includes(code))[0]
+                            ?.locale
+                        )
+                      );
+                      localStorage.setItem(
+                        "lang",
+                        lang.filter((item) => item?.locale.includes(code))[0]
+                          ?.locale
+                      );
+                      setSelected(code);
                     }}
                   />
                 </ul>
@@ -321,7 +326,7 @@ const Navbars = (props) => {
                       exact
                       activeClassName="active"
                     >
-                      {t('header.home_text')}
+                      {t("header.home_text")}
                     </NavLink>
                   </li>
                   <li className="nav-item dropdown ">
@@ -335,7 +340,7 @@ const Navbars = (props) => {
                       data-bs-offset="10,20"
                       activeClassName="active"
                     >
-                      {t('header.about_us_text')}
+                      {t("header.about_us_text")}
                     </NavLink>
                     <ul
                       className="dropdown-menu "
@@ -356,7 +361,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/vision-mission"
                           >
-                            {t('header.vision_mission_text')}
+                            {t("header.vision_mission_text")}
                           </NavLink>
                         </li>
                         <li>
@@ -365,7 +370,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/health-associates"
                           >
-                            {t('header.health_ass_text')}
+                            {t("header.health_ass_text")}
                           </Link>
                         </li>
                         <li>
@@ -374,7 +379,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/chairmen-profile"
                           >
-                            {t('header.chairmans_profile')}
+                            {t("header.chairmans_profile")}
                           </NavLink>
                         </li>
                         <li>
@@ -383,7 +388,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/message-from-chairmen"
                           >
-                            {t('header.msg_frm_chair')}
+                            {t("header.msg_frm_chair")}
                           </NavLink>
                         </li>
                       </ul>
@@ -395,7 +400,7 @@ const Navbars = (props) => {
                       to="/global-operation"
                       activeClassName="active"
                     >
-                      {t('header.global_operation')}
+                      {t("header.global_operation")}
                     </NavLink>
                   </li>
 
@@ -409,7 +414,7 @@ const Navbars = (props) => {
                       aria-expanded="false"
                       activeClassName="active"
                     >
-                      {t('header.products_text')}
+                      {t("header.products_text")}
                     </NavLink>
 
                     <ul
@@ -432,7 +437,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/by-trade-name"
                           >
-                            {t('header.by_trade_name')}
+                            {t("header.by_trade_name")}
                           </NavLink>
                         </li>
                         <li>
@@ -441,7 +446,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/by-generic-name"
                           >
-                            {t('header.by_generic_name')}
+                            {t("header.by_generic_name")}
                           </NavLink>
                         </li>
                         <li>
@@ -450,7 +455,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/by-therapeutic-class"
                           >
-                            {t('header.by_therap_class')}
+                            {t("header.by_therap_class")}
                           </NavLink>
                         </li>
                         <li>
@@ -459,7 +464,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/first-time-launching"
                           >
-                            {t('header.first_time_launch')}
+                            {t("header.first_time_launch")}
                           </NavLink>
                         </li>
                       </ul>
@@ -475,7 +480,7 @@ const Navbars = (props) => {
                       aria-expanded="false"
                       activeClassName="active"
                     >
-                      {t('header.facilities_text')}
+                      {t("header.facilities_text")}
                     </NavLink>
 
                     <ul
@@ -498,7 +503,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/research-and-development"
                           >
-                            {t('header.reserch_and_develop')}
+                            {t("header.reserch_and_develop")}
                           </NavLink>
                         </li>
                         <li>
@@ -507,7 +512,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/product"
                           >
-                            {t('header.production_text')}
+                            {t("header.production_text")}
                           </NavLink>
                         </li>
                         <li>
@@ -516,7 +521,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/quality"
                           >
-                            {t('header.quality_control_text')}
+                            {t("header.quality_control_text")}
                           </NavLink>
                         </li>
                         <li>
@@ -525,7 +530,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/warhouse"
                           >
-                            {t('header.warehouse_text')}
+                            {t("header.warehouse_text")}
                           </NavLink>
                         </li>
                         <li>
@@ -534,7 +539,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/our-distribution-network"
                           >
-                            {t('header.our_distribution_network')}
+                            {t("header.our_distribution_network")}
                           </NavLink>
                         </li>
                       </ul>
@@ -548,7 +553,7 @@ const Navbars = (props) => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {t('header.tele_medicine')}
+                      {t("header.tele_medicine")}
                     </a>
                     {/* <Link className="nav-link secnav" to="#" >
                       
@@ -564,7 +569,7 @@ const Navbars = (props) => {
                       aria-expanded="false"
                       activeClassName="active"
                     >
-                      {t('header.media_text')}
+                      {t("header.media_text")}
                     </NavLink>
 
                     <ul
@@ -590,7 +595,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/video"
                           >
-                            {t('header.video_text')}
+                            {t("header.video_text")}
                           </Link>
                         </li>
                         <li>
@@ -599,7 +604,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/events"
                           >
-                            {t('header.events_text')}
+                            {t("header.events_text")}
                           </NavLink>
                         </li>
                         {/* <li>
@@ -617,7 +622,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/social-media-post"
                           >
-                            {t('header.social_media_post')}
+                            {t("header.social_media_post")}
                           </NavLink>
                         </li>
                         <li>
@@ -626,7 +631,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/milestones"
                           >
-                            {t('header.mile_stones_text')}
+                            {t("header.mile_stones_text")}
                           </NavLink>
                         </li>
                         <li>
@@ -635,7 +640,16 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/social-responsiblities"
                           >
-                            {t('header.social_resp_text')}
+                            {t("header.social_resp_text")}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            style={{ fontSize: "13px", fontWeight: "500" }}
+                            className="dropdown-item navmenu_custome_li"
+                            to="/journal"
+                          >
+                            {t("header.journal_text")}
                           </Link>
                         </li>
                       </ul>
@@ -651,7 +665,7 @@ const Navbars = (props) => {
                       aria-expanded="false"
                       activeClassName="active"
                     >
-                      {t('header.contact')}
+                      {t("header.contact")}
                     </NavLink>
 
                     <ul
@@ -674,7 +688,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/our-distribution-network"
                           >
-                            {t('header.our_dist_net_text')}
+                            {t("header.our_dist_net_text")}
                           </NavLink>
                         </li>
                         <li>
@@ -683,7 +697,7 @@ const Navbars = (props) => {
                             className="dropdown-item navmenu_custome_li"
                             to="/contactus"
                           >
-                            {t('header.contact_us')}
+                            {t("header.contact_us")}
                           </NavLink>
                         </li>
                       </ul>

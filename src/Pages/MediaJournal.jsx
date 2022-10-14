@@ -63,7 +63,6 @@ const MediaJournal = ({ history }) => {
           <div className="row my-5">
             {media_journal?.map((value, index) => (
               <div key={index} className="col-lg-3 product-guide-div-hover">
-                {/* <Link to={"/journal-guide"}> */}{" "}
                 <img src={value?.image} alt="" width="100%" className="mt-3" />
                 <button
                   onClick={() => history.push("/journal-guide", value)}

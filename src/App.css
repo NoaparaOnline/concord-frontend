@@ -103,7 +103,25 @@ li {
   transition: 0.4s ease;
   filter: brightness(100%);
 }
+.product-guide-description {
+  text-align: justify;
+}
 
+.download-file {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+}
+.download-file button {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-weight: 500;
+}
+.download-file span {
+  margin-left: 2%;
+}
 @media (max-width: 575.98px) {
   .Responsive_Margin_Screen {
     margin: 30px;
