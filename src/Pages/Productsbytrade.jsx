@@ -19,7 +19,7 @@ const Products_bytrade = (props) => {
     "product_categories",
     lang
   );
-  const [toggleRender,setToggleRender] = useState(false)
+  const [toggleRender, setToggleRender] = useState(false);
   let pc = [...product_categories.slice(1, product_categories?.length)];
 
   const product_category_header = filterComponentData(
@@ -47,6 +47,7 @@ const Products_bytrade = (props) => {
   );
 
   const filteredtype = (type) => {
+    console.log(type);
     if (products?.length < 1) {
       if (type == "All") {
         setObj(ByTherapeutic);
@@ -81,7 +82,21 @@ const Products_bytrade = (props) => {
         );
         setPageNumber(0);
         setObj(filterd);
-      }else{
+      } else if (type == "First Time Product") {
+        const filterd = products?.filter(
+          (category) => category.category == "First Time Product"
+        );
+        setObj(filterd);
+        setPageNumber(0);
+        setToggleRender(true);
+      } else if (type == "Suspension") {
+        const filterd = products?.filter(
+          (category) => category.category == "Suspension"
+        );
+        setObj(filterd);
+        setPageNumber(0);
+        setToggleRender(true);
+      } else {
         setObj(ByTherapeutic);
         setPageNumber(0);
       }
@@ -95,54 +110,63 @@ const Products_bytrade = (props) => {
         );
         setObj(filterd);
         setPageNumber(0);
-        setToggleRender(true)
-
+        setToggleRender(true);
       } else if (type == "Tablet") {
         const filterd = products?.filter(
           (category) => category.category == "Tablet"
         );
         setObj(filterd);
         setPageNumber(0);
-        setToggleRender(true)
-
+        setToggleRender(true);
       } else if (type == "Capsule") {
         const filterd = products.filter(
           (category) => category.category == "Capsule"
         );
         setObj(filterd);
         setPageNumber(0);
-        setToggleRender(true)
-
+        setToggleRender(true);
       } else if (type == "Hand Rub") {
         const filterd = products?.filter(
           (category) => category.category == "Hand Rub"
         );
         setPageNumber(0);
         setObj(filterd);
-        setToggleRender(true)
+        setToggleRender(true);
       } else if (type == "Injectables") {
         const filterd = products?.filter(
           (category) => category.category == "Injectables"
         );
         setObj(filterd);
         setPageNumber(0);
-        setToggleRender(true)
-
+        setToggleRender(true);
+      } else if (type == "First Time Product") {
+        const filterd = products?.filter(
+          (category) => category.category == "First Time Product"
+        );
+        setObj(filterd);
+        setPageNumber(0);
+        setToggleRender(true);
+      } else if (type == "Suspension") {
+        const filterd = products?.filter(
+          (category) => category.category == "Suspension"
+        );
+        setObj(filterd);
+        setPageNumber(0);
+        setToggleRender(true);
       }
       // { filter working properly after removing below check }
       // else{
       //   setObj(ByTherapeutic);
       //   setPageNumber(0);
       //   setToggleRender(true)
-
       // }
       
     }
   };
   useEffect(() => {
-    filteredtype(props?.location?.state?.state)
-  }, [toggleRender])
-  
+    filteredtype(props?.location?.state?.state);
+  }, [toggleRender]);
+
   useEffect(() => {
     setObj(products?.length < 1 ? ByTherapeutic : products);
   }, [products?.length]);
@@ -208,7 +232,10 @@ const Products_bytrade = (props) => {
                     name="product-category"
                     value="1"
                     defaultChecked={
-                      props?.location?.state?.state === "All" ||  props?.location?.state?.state === undefined ? true : false
+                      props?.location?.state?.state === "All" ||
+                      props?.location?.state?.state === undefined
+                        ? true
+                        : false
                     }
                     onChange={() => filteredtype("All")}
                   />
@@ -223,7 +250,9 @@ const Products_bytrade = (props) => {
                         name="product-category"
                         value="2"
                         defaultChecked={
-                          props?.location?.state?.state == "Injectables" ? true : false
+                          props?.location?.state?.state == "Injectables"
+                            ? true
+                            : false
                         }
                         onChange={() => filteredtype("Injectables")}
                       />
@@ -236,7 +265,9 @@ const Products_bytrade = (props) => {
                         name="product-category"
                         value="3"
                         defaultChecked={
-                          props?.location?.state?.state == "Syrup" ? true : false
+                          props?.location?.state?.state == "Syrup"
+                            ? true
+                            : false
                         }
                         onChange={() => filteredtype("Syrup")}
                       />
@@ -249,7 +280,9 @@ const Products_bytrade = (props) => {
                         name="product-category"
                         value="4"
                         defaultChecked={
-                          props?.location?.state?.state == "SyrTabletup" ? true : false
+                          props?.location?.state?.state == "SyrTabletup"
+                            ? true
+                            : false
                         }
                         onChange={() => filteredtype("Tablet")}
                       />
@@ -262,7 +295,9 @@ const Products_bytrade = (props) => {
                         name="product-category"
                         value="5"
                         defaultChecked={
-                          props?.location?.state?.state == "Capsule" ? true : false
+                          props?.location?.state?.state == "Capsule"
+                            ? true
+                            : false
                         }
                         onChange={() => filteredtype("Capsule")}
                       />
@@ -275,11 +310,45 @@ const Products_bytrade = (props) => {
                         name="product-category"
                         value="6"
                         defaultChecked={
-                          props?.location?.state?.state == "Hand Rub" ? true : false
+                          props?.location?.state?.state == "Hand Rub"
+                            ? true
+                            : false
                         }
                         onChange={() => filteredtype("Hand Rub")}
                       />
                       <label htmlFor="handrub">Hand Rub</label>
+                      <br />
+                      <input
+                        className="me-2"
+                        type="radio"
+                        id="Firsttimeproduct"
+                        name="product-category"
+                        value="7"
+                        defaultChecked={
+                          props?.location?.state?.state == "First Time Product"
+                            ? true
+                            : false
+                        }
+                        onChange={() => filteredtype("First Time Product")}
+                      />
+                      <label htmlFor="firsttimeproduct">
+                        First Time Product
+                      </label>
+                      <br />
+                      <input
+                        className="me-2"
+                        type="radio"
+                        id="suspension"
+                        name="product-category"
+                        value="8"
+                        defaultChecked={
+                          props?.location?.state?.state == "Suspension"
+                            ? true
+                            : false
+                        }
+                        onChange={() => filteredtype("Suspension")}
+                      />
+                      <label htmlFor="suspension">Suspension</label>
                     </>
                   ) : (
                     pc?.map((item) => (
@@ -291,7 +360,9 @@ const Products_bytrade = (props) => {
                           name="product-category"
                           value={item?.name}
                           defaultChecked={
-                            props?.location?.state?.state == item?.name ? true : false
+                            props?.location?.state?.state == item?.name
+                              ? true
+                              : false
                           }
                           onChange={() => filteredtype(item?.name)}
                         />
