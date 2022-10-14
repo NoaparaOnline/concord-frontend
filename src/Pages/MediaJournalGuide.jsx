@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import { filterComponentData } from "../Utils/functions";
 import productGuide from "../Statics/assets/Journal/product-guide-th.jpg";
 import { useLocation } from "react-router-dom";
-import { FaDownload } from "react-icons/fa";
+// import { FaDownload } from "react-icons/fa";
 import fileDownload from "js-file-download";
 import axios from "axios";
 export default function MediaJournalGuide(props) {
