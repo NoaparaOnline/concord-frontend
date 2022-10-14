@@ -122,7 +122,7 @@ export default function MediaJournalGuide(props) {
           <div className="download-file ">
             {data?.url && (
               <i>
-                <FaDownload size={15} />{" "}
+                {/* <FaDownload size={15} />{" "} */}
                 <button
                   onClick={() =>
                     downloadFile(
