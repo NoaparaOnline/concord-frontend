@@ -79,12 +79,11 @@ li {
   color: white;
   position: absolute;
   background: green;
-  bottom: 0;
+  bottom: -5%;
   right: 10%;
   left: 10%;
   transform: translate(0%, -5%);
-  /* padding: 2% 0 2% 20%; */
-  padding: 2% 19%;
+  padding: 2% 0;
   align-items: center;
   outline: none;
   border: none;
@@ -114,10 +113,18 @@ li {
   align-items: center;
 }
 .download-file button {
-  outline: none;
-  border: none;
+  /* outline: none; */
+  border: 2px solid #0861a2;
+  border-radius: 4px;
+  /* border: none; */
   background: transparent;
   font-weight: 500;
+  color: #0861a2;
+}
+.download-file button:hover {
+  color: white;
+  background-color: #0861a2;
+  transition: 0.3s ease;
 }
 .download-file span {
   margin-left: 2%;
@@ -486,4 +493,13 @@ img {
 
 .tableSingleRow > td {
   padding: 15px 0px 15px 15px;
+}
+
+@media (max-width: 420px) {
+  .product-guide-description {
+    font-size: 11px;
+  }
+  .download-file span {
+    font-size: 13px;
+  }
 }

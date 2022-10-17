@@ -46,11 +46,17 @@ const MediaJournal = ({ history }) => {
       />
       {media_journal?.length < 1 ? (
         <div className="container">
-          <div className="row my-5">
-            <div className="col-lg-3 product-guide-div-hover">
+          <div className="row mt-2 mb-5">
+            <div className="col-lg-3 col-md-6 product-guide-div-hover mt-3">
               <Link to={"/journal-guide"}>
                 {" "}
-                <img src={productGuide} alt="" width="100%" className="mt-3" />
+                <img
+                  src={productGuide}
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  className="mt-3"
+                />
                 <button className="product-guide-btn">
                   {t("journal.product_guide_btn")}
                 </button>
@@ -60,10 +66,19 @@ const MediaJournal = ({ history }) => {
         </div>
       ) : (
         <div className="container">
-          <div className="row my-5">
+          <div className="row mt-2 mb-5">
             {media_journal?.map((value, index) => (
-              <div key={index} className="col-lg-3 product-guide-div-hover">
-                <img src={value?.image} alt="" width="100%" className="mt-3" />
+              <div
+                key={index}
+                className="col-lg-3 col-md-6 product-guide-div-hover mt-2 mb-3"
+              >
+                <img
+                  src={value?.image}
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  className="mt-3"
+                />
                 <button
                   onClick={() => history.push("/journal-guide", value)}
                   className="product-guide-btn"
