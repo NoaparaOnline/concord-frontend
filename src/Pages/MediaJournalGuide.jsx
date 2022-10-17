@@ -9,8 +9,9 @@ import { filterComponentData } from "../Utils/functions";
 import productGuide from "../Statics/assets/Journal/product-guide-th.jpg";
 import { useLocation } from "react-router-dom";
 // import { FaDownload } from "react-icons/fa";
-import fileDownload from "js-file-download";
+// import fileDownload from "js-file-download";
 import axios from "axios";
+import { saveAs } from "file-saver";
 export default function MediaJournalGuide(props) {
   const location = useLocation();
   let data = location?.state;
@@ -30,65 +31,38 @@ export default function MediaJournalGuide(props) {
       subLink: "/media",
     },
   ];
-  function importAll(data) {
-    let images = {};
-    data.keys().map((item, index) => {
-      images[item.replace("./", "")] = data(item);
-      return "";
-    });
-    return images;
-  }
 
-  const annualConfrence2013 = importAll(
-    require.context(
-      "../Statics/assets/Annualconfirence2013",
-      false,
-      /\.(png|jpe?g|svg|JPG)$/
-    )
-  );
-  const annualConfrence2014 = importAll(
-    require.context(
-      "../Statics/assets/Annualconfirence2014",
-      false,
-      /\.(png|jpe?g|svg|JPG)$/
-    )
-  );
-  const dapazinelunchingprogram = importAll(
-    require.context(
-      "../Statics/assets/Dapazinelunchingprogram",
-      false,
-      /\.(png|jpe?g|svg|JPG)$/
-    )
-  );
+  // const downloadFile = async (url) => {
+  //   try {
+  //     let response = await axios.get(url, {
+  //       responseType: "blob",
+  //       headers: {
+  //         "Content-Type": "application/x-www-form-urlencoded",
+  //         // "Access-Control-Allow-Origin": "*",
+  //       },
+  //     });
+  //     if (response?.data) {
+  //       fileDownload(response?.data, "download.png");
+  //       console.log("response.data", response.data);
+  //     }
+  //   } catch (e) {
+  //     console.log("ERROR FROM DOWNLOADING FILE", e);
+  //   }
+  // };
 
-  const imagesData1 = Object.keys(annualConfrence2013);
-  const imagesData2 = Object.keys(annualConfrence2014);
-  const imagesData3 = Object.keys(dapazinelunchingprogram);
-
-  const event1 = imagesData1?.slice(0, 6);
-  const event2 = imagesData2?.slice(0, 6);
-  const event3 = imagesData3?.slice(0, 6);
-
-  const moreImages = (text) => {
-    props?.history.push("/photo", text);
-  };
-
-  const downloadFile = async (url) => {
-    try {
-      let response = await axios.get(url, {
-        responseType: "blob",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          "Access-Control-Allow-Origin": "*",
-        },
-      });
-      if (response?.data) {
-        fileDownload(response?.data, "download.pdf");
-      }
-    } catch (e) {
-      console.log("ERROR FROM DOWNLOADING FILE", e);
+  const downloadImage = () => {
+    let extenstion = "";
+    let link = data?.url.split(".");
+    if (link[link.length - 1] == "pdf") {
+      extenstion = "download.pdf";
+    } else {
+      extenstion = "download.png";
     }
+    console.log("extenstion", extenstion);
+    // console.log(data?.url);
+    saveAs(data?.url, extenstion); // Put your image url here.
   };
+
   return (
     <>
       <Helmet>
@@ -108,10 +82,12 @@ export default function MediaJournalGuide(props) {
       />
 
       <div className="journal-product-guide">
-        <div className="left-view" style={{ width: "15%" }}></div>
-        <div className="mid-view mb-5" style={{ width: "60%" }}>
-          <h3>{data?.button}</h3>
-          <div className="product-guide-details" style={{ width: "100%" }}>
+        <div className="left-view" style={{ width: "5%" }}></div>
+        <div className="mid-view mb-5" style={{ width: "90%" }}>
+          <h3 style={{ color: "#0861a2" }} className="mb-5">
+            {data?.button}
+          </h3>
+          <div className="product-guide-details mb-4" style={{ width: "100%" }}>
             <img src={data?.image} alt="" width="30%" height="50%" />
             <p className="product-guide-description ml-3">
               {data?.description
@@ -125,11 +101,12 @@ export default function MediaJournalGuide(props) {
                 {/* <FaDownload size={15} />{" "} */}
                 <button
                   onClick={() =>
-                    downloadFile(
-                      data?.url
-                        ? data?.url
-                        : "https://resources.pulse.icc-cricket.com/photo-resources/2022/05/18/b4749da5-37a0-49c5-bdca-e5b0a353682c/TBT-Onsite-Banner-Image-V2.jpeg?width=860&height=420"
-                    )
+                    // downloadFile(
+                    //   data?.url
+                    //     ? "https://storage.googleapis.com/concordpharma-9d29f.appspot.com/CMSManagement/CMSCompoenent/content/cms-385aabc6-825d-42c4-aa8e-2ce3e7aa2425-1665755234.png"
+                    //     : "https://resources.pulse.icc-cricket.com/photo-resources/2022/05/18/b4749da5-37a0-49c5-bdca-e5b0a353682c/TBT-Onsite-Banner-Image-V2.jpeg?width=860&height=420"
+                    // )
+                    downloadImage()
                   }
                 >
                   Download
@@ -143,7 +120,7 @@ export default function MediaJournalGuide(props) {
             </span>
           </div>
         </div>
-        <div className="right-view" style={{ width: "15%" }}></div>
+        <div className="right-view" style={{ width: "5%" }}></div>
       </div>
     </>
   );

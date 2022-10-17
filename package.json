@@ -14,7 +14,6 @@
     "firebase": "^9.1.2",
     "font-awesome": "^4.7.0",
     "i18next": "^21.6.9",
-    "js-file-download": "^0.4.12",
     "moment": "^2.29.1",
     "prop-types": "^15.7.2",
     "query-string": "^7.0.1",
