@@ -703,6 +703,15 @@ const Navbars = (props) => {
                       </ul>
                     </ul>
                   </li>
+                  <li className="nav-item">
+                    <NavLink
+                      className="nav-link secnav"
+                      to="/complaint"
+                      activeClassName="active"
+                    >
+                      Complaint
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
             </div>

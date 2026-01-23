@@ -57,6 +57,7 @@ import { getCmscomponent, SelectedLanguage } from "./Store/Actions/cmsAction";
 import Media_socialresponsiblities from "./Pages/Mediasocialresponsiblities";
 import MediaJournal from "./Pages/MediaJournal";
 import MediaJournalGuide from "./Pages/MediaJournalGuide";
+import Complaint from "./Pages/Complaint";
 // import PublicRoute from './Routes/PublicRoute';
 
 function App() {
@@ -302,6 +303,12 @@ function App() {
 
           <Route exact path="/contactus">
             <Contactcontactus />
+          </Route>
+
+          {/*          Complaint Page             */}
+
+          <Route exact path="/complaint">
+            <Complaint />
           </Route>
 
           {/*          Facilities Page             */}
