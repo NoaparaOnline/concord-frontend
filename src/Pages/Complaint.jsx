@@ -125,12 +125,12 @@ const Complaint = () => {
   return (
     <>
       <Helmet>
-        <title>Market Complaint - Health Associates</title>
+        <title>Report a Complaint - Health Associates</title>
       </Helmet>
       <BannerWithText
         imgSrc={bannerimg}
-        heading="Market Complaint"
-        subHeading="MARKET COMPLAINT"
+        heading="Report a Complaint"
+        subHeading="REPORT A COMPLAINT"
         LinksBan={LinksBan}
         backposit={'center right'}
         backimg={`linear-gradient(rgba(20, 20, 19, 0.8), rgba(20, 20, 19, 0.6)),url(${bannerimg})`}
@@ -139,7 +139,7 @@ const Complaint = () => {
         conmarpad={"mt-5 pt-5"}
         fontsize={"60px"}
       />
-      <Heading heading="Market Complaint Form" />
+      <Heading heading="Report a Complaint" />
 
       <div className="container my-5">
         <div className="row justify-content-center">
