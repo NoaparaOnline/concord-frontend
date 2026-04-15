@@ -317,6 +317,23 @@ const response = await axios
     return response;
 };
 
+export const concordEmailApi = (data) => async (dispatch) => {
+  const response = await axios
+    .post("http://concordpharma-bd.com:40560/send_mail.php", new URLSearchParams({
+      subject: data?.subject,
+      body: data?.body,
+      form: data?.form || 'contact',
+    }))
+    .then(function (response) {
+      return response.data;
+    })
+    .catch(function (error) {
+      return error;
+    });
+
+  return response;
+};
+
 export const getSingleProductDataObj = (data) =>  (dispatch) => {
   dispatch({
     type: directorConstants.GET_SINGLE_PRODUCT_OBJ,

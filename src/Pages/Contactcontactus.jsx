@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { CompanyLogos } from "../components";
 import bannerimg from "../Statics/assets/contactusbanner.jpg";
 import BannerWithText from "../components/ReusableComponents/BannerImgComponents/BannerImgComponents";
-import { useDispatch, useSelector } from "react-redux";
-import { SendGridMailApi } from "../Store/Actions/directorActions";
+import { useSelector, useDispatch } from "react-redux";
+import { concordEmailApi } from "../Store/Actions/directorActions";
 import { toast } from "react-toastify";
 import { filterComponentData, validateEmail } from '../Utils/functions'
 import { useForm } from "react-hook-form";
@@ -43,40 +43,27 @@ const Contact_contactus = () => {
 
   const submitHandler = async (data) => {
     if (validateEmail(data.email)) {
-      const RecipentEmail = 'info@concordpharma-bd.com'
-      // const RecipentEmail ='shahzaibqadir7@gmail.com'
       const apiData = {
-        recipients: [RecipentEmail],
         subject: data?.dropsel,
-        body: `<p>Email enquiry from Contact-Us form Concord Pharma</p>
-          <strong>Name</strong> : ${data?.name}
-                        <br/>
-                        <strong>Email</strong> : ${data?.email}
-                        <br/>
-                        <strong>Number</strong> : ${data?.phone}
-                        <br/>
-                        <strong>Subject</strong> : ${data?.subject}
-                        <br/>
-                        <strong>Message</strong> : <span className="text-justify">${data?.message}</span>
-                        <br/>
-                        `,
+        body: `Email enquiry from Contact-Us form Concord Pharma\n` +
+          `Name: ${data?.name}\n` +
+          `Email: ${data?.email}\n` +
+          `Number: ${data?.phone}\n` +
+          `Subject: ${data?.subject}\n` +
+          `Message: ${data?.message}`,
       };
-      const res = await dispatch(SendGridMailApi(apiData));
+      const res = await dispatch(concordEmailApi(apiData));
       if (res?.response_code === 200) {
         setSuccess(true);
-        toast.info(t('contact_contact_us.email_sent'))
+        toast.info(t('contact_contact_us.email_sent'));
+      } else {
+        setSuccess(false);
+        toast.error(t('contact_contact_us.email_not_sent'));
       }
-      else {
-        setSuccess(false)
-        toast.error(t('contact_contact_us.email_not_sent'))
-      }
-
     }
     else {
       toast.error(t('contact_contact_us.invalid_email'))
     }
-
-
   };
 
   return (

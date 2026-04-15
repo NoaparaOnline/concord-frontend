@@ -5,9 +5,12 @@ import BannerWithText from '../components/ReusableComponents/BannerImgComponents
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'react-toastify';
+import { useDispatch } from 'react-redux';
+import { concordEmailApi } from '../Store/Actions/directorActions';
 
 const Complaint = () => {
   const { t } = useTranslation('common');
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     date: '',
     originatorName: '',
@@ -99,8 +102,31 @@ const Complaint = () => {
     }
 
     // Here you would typically send the data to your backend
-    console.log('Complaint submitted:', formData);
-    toast.success('Your complaint has been submitted successfully! We will contact you soon.');
+    const apiData = {
+      subject: 'Market Complaint',
+      body: `Date: ${formData.date}\n` +
+        `Originator Name: ${formData.originatorName}\n` +
+        `Originator Address: ${formData.originatorAddress}\n` +
+        `Originator Mobile: ${formData.originatorMobile}\n` +
+        `Originator Email: ${formData.originatorEmail}\n` +
+        `Customer Name: ${formData.customerName}\n` +
+        `Customer Address: ${formData.customerAddress}\n` +
+        `Customer Mobile: ${formData.customerMobile}\n` +
+        `Product Name: ${formData.productName}\n` +
+        `Batch No: ${formData.productBatchNo}\n` +
+        `Mfg Date: ${formData.productMfgDate}\n` +
+        `Exp Date: ${formData.productExpDate}\n` +
+        `Quantity Affected: ${formData.quantityAffected}\n` +
+        `Description: ${formData.description}`,
+      form: 'complain',
+    };
+    const res = await dispatch(concordEmailApi(apiData));
+    if (res?.response_code === 200) {
+      toast.success('Your complaint has been submitted successfully! We will contact you soon.');
+    } else {
+      toast.error('Failed to submit complaint. Please try again later.');
+      return;
+    }
 
     // Reset form (except date)
     const today = new Date().toISOString().split('T')[0];
