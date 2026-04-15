@@ -319,7 +319,7 @@ const response = await axios
 
 export const concordEmailApi = (data) => async (dispatch) => {
   const response = await axios
-    .post("http://concordpharma-bd.com:40560/send_mail.php", new URLSearchParams({
+    .post("https://concordpharma-bd.com/mailsender/send_mail.php", new URLSearchParams({
       subject: data?.subject,
       body: data?.body,
       form: data?.form || 'contact',
