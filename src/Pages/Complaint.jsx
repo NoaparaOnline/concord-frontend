@@ -49,7 +49,7 @@ const Complaint = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Required fields validation
